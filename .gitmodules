@@ -1,0 +1,3 @@
+[submodule "script/git-modules"]
+	path = script/git-modules
+	url = ../../../ssoft-tool/git-modules.git
