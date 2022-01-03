@@ -1,3 +1,6 @@
 [submodule "script/git-modules"]
 	path = script/git-modules
 	url = ../../../ssoft-tool/git-modules.git
+[submodule "project/qmake/features"]
+	path = project/qmake/features
+	url = ../../../ssoft-tool/qmake-features.git
