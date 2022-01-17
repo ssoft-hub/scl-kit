@@ -4,3 +4,6 @@
 [submodule "project/qmake/features"]
 	path = project/qmake/features
 	url = ../../../ssoft-tool/qmake-features.git
+[submodule "module/meta"]
+	path = module/meta
+	url = ../../module/meta.git
