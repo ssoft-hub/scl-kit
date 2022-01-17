@@ -10,3 +10,6 @@
 [submodule "module/feature"]
 	path = module/feature
 	url = ../../module/feature.git
+[submodule "module/utility"]
+	path = module/utility
+	url = git@gitlab.com:ssoft-scl/module/utility.git
