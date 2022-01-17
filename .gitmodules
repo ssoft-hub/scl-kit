@@ -7,3 +7,6 @@
 [submodule "module/meta"]
 	path = module/meta
 	url = ../../module/meta.git
+[submodule "module/feature"]
+	path = module/feature
+	url = ../../module/feature.git
