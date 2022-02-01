@@ -11,9 +11,9 @@ SUBDIRS *= \
     $${PWD}/project/qmake/features/pro/features.pro \
 
 SUBDIRS *= \
-    $${PWD}/project/qmake/modules.pro \
-    $${PWD}/project/qmake/examples.pro \
-    $${PWD}/project/qmake/tests.pro \
+    $${PWD}/project/qmake/module.pro \
+    $${PWD}/project/qmake/example.pro \
+    $${PWD}/project/qmake/test.pro \
 
 
 !load( include_files ) : error( Can not find feature \"include_files\" )
