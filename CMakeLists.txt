@@ -1,0 +1,20 @@
+cmake_minimum_required( VERSION 3.5 )
+
+project( ScL VERSION 0.1.0 )
+
+set( SCL_BASE_DIR ${PROJECT_SOURCE_DIR} )
+set( SCL_INCLUDE_DIR ${SCL_BASE_DIR}/include )
+
+# One place building
+set( COMPLEX_BASE_DIR ${PROJECT_SOURCE_DIR} )
+set( COMPLEX_TOOLCHAIN ${CMAKE_SYSTEM_NAME}-${CMAKE_CXX_COMPILER_ID}.${CMAKE_CXX_COMPILER_VERSION}-${CMAKE_SYSTEM_PROCESSOR} )
+set( COMPLEX_TARGET_DIR ${COMPLEX_BASE_DIR}/bin/${COMPLEX_TOOLCHAIN}/${CMAKE_BUILD_TYPE} )
+set( COMPLEX_BUILD_DIR ${COMPLEX_BASE_DIR}/build/${COMPLEX_TOOLCHAIN}/${CMAKE_BUILD_TYPE} )
+
+set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
+set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
+
+add_subdirectory( module/utility/project/cmake )
+add_subdirectory( module/meta/project/cmake )
+add_subdirectory( module/feature/project/cmake )
