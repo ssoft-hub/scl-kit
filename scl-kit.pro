@@ -15,10 +15,6 @@ SUBDIRS *= \
     $${PWD}/project/qmake/example.pro \
     $${PWD}/project/qmake/test.pro \
 
-
-!load( include_files ) : error( Can not find feature \"include_files\" )
-includeFiles( $${PWD}/include )
-
 OTHER_FILES *= \
     $${PWD}/.qmake.conf \
     $$files( $${PWD}/project/qmake/features/*.prf ) \
