@@ -21,7 +21,7 @@
 Для использования ScL достаточно загрузить проект из git репозитория со всеми подмодулями
 
 ```
-git clone --recurse-submodule git@gitlab.com:ssoft-scl/complex/scl-kit.git
+git clone --recurse-submodule git@gitlab.topaz-atcs.com:ScL/complex/scl-kit.git
 ```
 
 и подключить в свой проект корневую директорию с заголовочными файлами ScL [include](include).
