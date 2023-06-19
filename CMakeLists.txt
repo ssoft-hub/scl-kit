@@ -1,6 +1,9 @@
-cmake_minimum_required( VERSION 3.5 )
+cmake_minimum_required( VERSION 3.14 )
 
-project( ScL VERSION 0.1.0 )
+project( ScL
+    VERSION 0.1.0
+    DESCRIPTION "C++ Toolkit"
+    )
 
 set( SCL_BASE_DIR ${PROJECT_SOURCE_DIR} )
 set( SCL_INCLUDE_DIR ${SCL_BASE_DIR}/include )
@@ -14,6 +17,9 @@ set( COMPLEX_BUILD_DIR ${COMPLEX_BASE_DIR}/build/${COMPLEX_TOOLCHAIN}/${CMAKE_BU
 set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
 set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${COMPLEX_TARGET_DIR} )
+
+set( CMAKE_CXX_STANDARD 17 )
+set( CMAKE_CXX_STANDARD_REQUIRED ON )
 
 add_subdirectory( project/cmake/module )
 add_subdirectory( project/cmake/example )
