@@ -13,3 +13,6 @@
 [submodule "module/utility"]
 	path = module/utility
 	url = git@gitlab.com:ssoft-scl/module/utility.git
+[submodule "module/event"]
+	path = module/event
+	url = ../../module/event.git
