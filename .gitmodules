@@ -16,3 +16,6 @@
 [submodule "module/event"]
 	path = module/event
 	url = ../../module/event.git
+[submodule "module/scene"]
+	path = module/scene
+	url = ../../module/scene.git
