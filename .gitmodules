@@ -1,9 +1,9 @@
 [submodule "script/git-modules"]
 	path = script/git-modules
-	url = ../../../lemzsdk/git-modules.git
+	url = ../../../ssoft-tool/git-modules.git
 [submodule "project/qmake/features"]
 	path = project/qmake/features
-	url = ../../../lemzsdk/qmake-features.git
+	url = ../../../ssoft-tool/qmake-features.git
 [submodule "module/meta"]
 	path = module/meta
 	url = ../../module/meta.git
@@ -12,7 +12,7 @@
 	url = ../../module/feature.git
 [submodule "module/utility"]
 	path = module/utility
-	url = git@gitlab.com:ssoft-scl/module/utility.git
+	url = ../../module/utility.git
 [submodule "module/event"]
 	path = module/event
 	url = ../../module/event.git
