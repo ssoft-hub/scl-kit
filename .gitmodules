@@ -1,17 +1,17 @@
 [submodule "script/git-modules"]
-    path = script/git-modules
-    url = ../../../lemzsdk/git-modules.git
+	path = script/git-modules
+	url = ../../../ssoft-tool/git-modules.git
 [submodule "project/qmake/features"]
-    path = project/qmake/features
-    url = ../../../lemzsdk/qmake-features.git
+	path = project/qmake/features
+	url = ../../../ssoft-tool/qmake-features.git
 [submodule "module/meta"]
-    path = module/meta
-    url = ../../module/meta.git
+	path = module/meta
+	url = ../../module/meta.git
 [submodule "module/feature"]
-    path = module/feature
-    url = ../../module/feature.git
+	path = module/feature
+	url = ../../module/feature.git
 [submodule "module/utility"]
-    path = module/utility
+	path = module/utility
     url = ../../module/utility.git
 [submodule "module/event"]
     path = module/event
