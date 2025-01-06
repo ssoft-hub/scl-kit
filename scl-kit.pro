@@ -11,7 +11,9 @@ SUBDIRS *= \
     $${PWD}/project/qmake/features/pro/features.pro \
 
 SUBDIRS *= \
+    $${PWD}/project/qmake/3rdparty.pro \
     $${PWD}/project/qmake/module.pro \
+    $${PWD}/project/qmake/benchmark.pro \
     $${PWD}/project/qmake/example.pro \
     $${PWD}/project/qmake/test.pro \
 

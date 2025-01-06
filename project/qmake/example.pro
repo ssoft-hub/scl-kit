@@ -1,7 +1,5 @@
 TEMPLATE = subdirs
 
-CONFIG *= ordered
-
 SUBDIRS *= \
     $${PWD}/../../module/utility/project/qmake/example/scl-utility.pro \
     $${PWD}/../../module/meta/project/qmake/example/scl-meta.pro \

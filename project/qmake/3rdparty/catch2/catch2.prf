@@ -1,0 +1,5 @@
+INCLUDEPATH *= \
+    $${PWD}/../../../../3rdparty/catch2/src \
+
+DEPENDPATH *= \
+    $${PWD}/../../../../3rdparty/catch2/src \
