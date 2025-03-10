@@ -19,3 +19,9 @@
 [submodule "module/scene"]
 	path = module/scene
 	url = ../../module/scene.git
+[submodule "3rdparty/doctest"]
+	path = 3rdparty/doctest
+	url = git@github.com:doctest/doctest.git
+[submodule "3rdparty/catch2"]
+	path = 3rdparty/catch2
+	url = git@github.com:catchorg/Catch2.git
