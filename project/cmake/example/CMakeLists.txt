@@ -1,3 +1,3 @@
-cmake_minimum_required( VERSION 3.14 )
-
-add_subdirectory(${COMPLEX_BASE_DIR}/module/feature/project/cmake/example ${COMPLEX_BUILD_DIR}/module/feature/project/cmake/example )
+# Forward to per-module examples
+add_subdirectory(${CMAKE_SOURCE_DIR}/module/utility/project/cmake/example ${CMAKE_BINARY_DIR}/example/utility)
+add_subdirectory(${CMAKE_SOURCE_DIR}/module/meta/project/cmake/example    ${CMAKE_BINARY_DIR}/example/meta)

@@ -187,8 +187,8 @@ SortJavaStaticImport: Before          # Place 'static import' before regular imp
 # -----------------------------
 # Line breaks around operators
 # -----------------------------
-BreakBeforeBinaryOperators: NonAssignment  # Break BEFORE non-assignment operators (+, -, <<, |, ...)
-BreakBeforeTernaryOperators: true          # Break before '?' and ':' when wrapping ternary
+BreakBeforeBinaryOperators: None      # Break BEFORE non-assignment operators (+, -, <<, |, ...)
+BreakBeforeTernaryOperators: true     # Break before '?' and ':' when wrapping ternary
 
 # -----------------------------
 # Braced lists & bit-fields

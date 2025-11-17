@@ -1,0 +1,34 @@
+@PACKAGE_INIT@
+
+# Import exported targets for the SCL package
+include("${CMAKE_CURRENT_LIST_DIR}/SCLTargets.cmake")
+
+# -----------------------------
+# Components support
+# -----------------------------
+# Available components in this package:
+set(SCL_AVAILABLE_COMPONENTS utility meta)
+
+# Mark requested components as FOUND if their targets exist
+foreach(comp IN LISTS SCL_FIND_COMPONENTS)
+    if (comp STREQUAL "utility")
+        if (TARGET SCL::utility)
+            set(SCL_UTILITY_FOUND TRUE)
+        else()
+            set(SCL_UTILITY_FOUND FALSE)
+        endif()
+    elseif (comp STREQUAL "meta")
+        if (TARGET SCL::meta)
+            set(SCL_META_FOUND TRUE)
+        else()
+            set(SCL_META_FOUND FALSE)
+        endif()
+    else()
+        # Unknown component requested
+        set(SCL_${comp}_FOUND FALSE)
+    endif()
+endforeach()
+
+# Fail if REQUIRED components are missing
+include(CMakeFindDependencyMacro)
+check_required_components(SCL)
