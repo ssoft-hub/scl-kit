@@ -7,7 +7,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/SCLTargets.cmake")
 # Components support
 # -----------------------------
 # Available components in this package:
-set(SCL_AVAILABLE_COMPONENTS utility meta)
+set(SCL_AVAILABLE_COMPONENTS utility feature)
 
 # Mark requested components as FOUND if their targets exist
 foreach(comp IN LISTS SCL_FIND_COMPONENTS)
@@ -17,11 +17,11 @@ foreach(comp IN LISTS SCL_FIND_COMPONENTS)
         else()
             set(SCL_UTILITY_FOUND FALSE)
         endif()
-    elseif (comp STREQUAL "meta")
-        if (TARGET SCL::meta)
-            set(SCL_META_FOUND TRUE)
+    elseif (comp STREQUAL "feature")
+        if (TARGET SCL::feature)
+            set(SCL_FEATURE_FOUND TRUE)
         else()
-            set(SCL_META_FOUND FALSE)
+            set(SCL_FEATURE_FOUND FALSE)
         endif()
     else()
         # Unknown component requested

@@ -1,6 +1,7 @@
 # Reserved path
 /bin
 /build
+/.claude
 
 # C++ objects and libs
 *.d

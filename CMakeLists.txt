@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(SCL
+project(ScL
     VERSION 0.1.0
     LANGUAGES CXX
     DESCRIPTION "ScL C++ Toolkit"
@@ -96,7 +96,6 @@ endif()
 # -----------------------------
 add_subdirectory(project/cmake)
 
-
 # -----------------------------
 # Install / Export package
 # -----------------------------
@@ -107,7 +106,7 @@ if (SCL_INSTALL)
     if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.23")
         install(TARGETS
             scl-utility
-            scl-meta
+            scl-feature
             EXPORT SCLTargets
             # Install their FILE_SETs named HEADERS into include/
             FILE_SET HEADERS DESTINATION include
@@ -121,7 +120,7 @@ if (SCL_INSTALL)
                 PATTERN "*.h" PATTERN "*.hpp" PATTERN "*.hh" PATTERN "*.hxx" PATTERN "*.inl"
         )
         install(DIRECTORY
-            ${SCL_ROOT_DIR}/module/meta/include/
+            ${SCL_ROOT_DIR}/module/feature/include/
             DESTINATION include
             FILES_MATCHING
                 PATTERN "*.h" PATTERN "*.hpp" PATTERN "*.hh" PATTERN "*.hxx" PATTERN "*.inl"
@@ -129,23 +128,23 @@ if (SCL_INSTALL)
 
         # Export targets
         install(TARGETS
-            SCL_utility
-            SCL_meta
+            scl-utility
+            scl-feature
             EXPORT SCLTargets
         )
     endif()
 
-    # Exported targets with namespace SCL::
+    # Exported targets with namespace scl::
     install(EXPORT SCLTargets
-        NAMESPACE SCL::
-        DESTINATION lib/cmake/SCL
+        NAMESPACE scl::
+        DESTINATION lib/cmake/scl
     )
 
     # Package config files
     configure_package_config_file(
         ${SCL_ROOT_DIR}/project/cmake/SCLConfig.cmake.in
         ${CMAKE_CURRENT_BINARY_DIR}/SCLConfig.cmake
-        INSTALL_DESTINATION lib/cmake/SCL
+        INSTALL_DESTINATION lib/cmake/scl
     )
     write_basic_package_version_file(
         ${CMAKE_CURRENT_BINARY_DIR}/SCLConfigVersion.cmake
@@ -155,6 +154,6 @@ if (SCL_INSTALL)
     install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/SCLConfig.cmake
         ${CMAKE_CURRENT_BINARY_DIR}/SCLConfigVersion.cmake
-        DESTINATION lib/cmake/SCL
+        DESTINATION lib/cmake/scl
     )
 endif()

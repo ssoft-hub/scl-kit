@@ -4,9 +4,6 @@
 [submodule "project/qmake/features"]
 	path = project/qmake/features
 	url = ../../../ssoft-tool/qmake-features.git
-[submodule "module/meta"]
-	path = module/meta
-	url = ../../module/meta.git
 [submodule "module/feature"]
 	path = module/feature
 	url = ../../module/feature.git
@@ -22,9 +19,6 @@
 [submodule "3rdparty/doctest"]
 	path = 3rdparty/doctest
 	url = git@github.com:doctest/doctest.git
-[submodule "3rdparty/catch2"]
-	path = 3rdparty/catch2
-	url = git@github.com:catchorg/Catch2.git
 [submodule "3rdparty/googletest"]
 	path = 3rdparty/googletest
 	url = https://github.com/google/googletest.git

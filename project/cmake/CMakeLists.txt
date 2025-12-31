@@ -1,7 +1,7 @@
 # Central includes for third-party discovery and helper functions
 include(${CMAKE_CURRENT_LIST_DIR}/SCLDependencies.cmake)
 
-# Route to module definitions (utility, meta)
+# Route to module definitions
 add_subdirectory(${CMAKE_SOURCE_DIR}/project/cmake/module ${CMAKE_BINARY_DIR}/module)
 
 # Route to examples

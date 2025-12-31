@@ -289,7 +289,7 @@ QualifierOrder:                  # Custom order of qualifiers (used with Qualifi
 # -----------------------------
 # Comments & requires
 # -----------------------------
-ReflowComments: true             # Rewrap long // and /* */ comments to ColumnLimit
+ReflowComments: false            # Rewrap long // and /* */ comments to ColumnLimit
 RequiresClausePosition: OwnLine  # Place 'requires' on its own line
 RequiresExpressionIndentation: Keyword  # Indent requires-expression under the 'requires' keyword
 
