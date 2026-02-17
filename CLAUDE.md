@@ -77,7 +77,7 @@ Binaries: `bin/{TOOLCHAIN}/{CONFIG}/`
 - `module/scene/` — placeholder
 
 ## Key Architectural Notes
-- Header-only INTERFACE targets: `SCL::utility`, `SCL::feature`
+- Header-only INTERFACE targets: `scl::utility`, `scl::feature`
 - Tests auto-discovered from `module/*/test/` subdirectories
 - Examples auto-discovered from `module/*/example/` subdirectories
 - Git submodules for each module (separate repos)
