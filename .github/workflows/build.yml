@@ -1,0 +1,63 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: ['*']
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: GCC
+            os: ubuntu-latest
+            compiler: g++
+            cc: gcc
+          - name: Clang
+            os: ubuntu-latest
+            compiler: clang++
+            cc: clang
+          - name: MSVC
+            os: windows-latest
+            compiler: cl
+            cc: cl
+          - name: MinGW
+            os: windows-latest
+            compiler: g++
+            cc: gcc
+
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup MinGW
+        if: matrix.name == 'MinGW'
+        uses: egor-tensin/setup-mingw@v2
+        with:
+          platform: x64
+
+      - name: Setup MSVC
+        if: matrix.name == 'MSVC'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Configure
+        run: >
+          cmake -B build -S .
+          -DCMAKE_BUILD_TYPE=Debug
+          -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
+          -DCMAKE_C_COMPILER=${{ matrix.cc }}
+          -DSCL_BUILD_TESTS=ON
+          -DSCL_BUILD_EXAMPLES=ON
+
+      - name: Build
+        run: cmake --build build --config Debug
+
+      - name: Test
+        run: ctest --test-dir build --build-config Debug --output-on-failure

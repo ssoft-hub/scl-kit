@@ -1,0 +1,36 @@
+# Doxygen configuration for ScL Toolkit (all modules)
+# Used by Sphinx/Breathe — only XML output is needed.
+
+PROJECT_NAME           = "ScL Toolkit"
+PROJECT_NUMBER         = 0.1.0
+PROJECT_BRIEF          = "C++20 header-only toolkit"
+
+# Input: all module source directories
+INPUT                  = ../../module/utility/src \
+                         ../../module/feature/src \
+                         ../../module/event/src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.hh *.hxx
+
+# Extraction settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# Preprocessor
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+
+# Output: XML only (for Breathe), no HTML
+OUTPUT_DIRECTORY       = ../../docs/_doxygen
+GENERATE_HTML          = NO
+GENERATE_LATEX         = NO
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = YES
+
+# Quiet
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO

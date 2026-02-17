@@ -1,0 +1,71 @@
+stages: [build, docs, release]
+
+# ---------------------
+# Build & Test
+# ---------------------
+.build_template:
+  stage: build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+  script:
+    - cmake -B build -S .
+        -DCMAKE_BUILD_TYPE=Debug
+        -DCMAKE_CXX_COMPILER=$CXX_COMPILER
+        -DCMAKE_C_COMPILER=$C_COMPILER
+        -DSCL_BUILD_TESTS=ON
+        -DSCL_BUILD_EXAMPLES=ON
+    - cmake --build build --config Debug
+    - ctest --test-dir build --build-config Debug --output-on-failure
+
+build:gcc:
+  extends: .build_template
+  image: gcc:14
+  variables:
+    CXX_COMPILER: g++
+    C_COMPILER: gcc
+
+build:clang:
+  extends: .build_template
+  image: silkeh/clang:18
+  variables:
+    CXX_COMPILER: clang++
+    C_COMPILER: clang
+
+# ---------------------
+# Documentation
+# ---------------------
+pages:
+  stage: docs
+  image: python:3.12
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+    - apt-get update && apt-get install -y doxygen graphviz
+    - pip install sphinx breathe sphinx-rtd-theme
+  script:
+    - cd project/doxygen && doxygen Doxyfile && cd ../..
+    - sphinx-build -b html project/sphinx public
+  artifacts:
+    paths:
+      - public
+
+# ---------------------
+# Release
+# ---------------------
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/
+  script:
+    - echo "Creating release for $CI_COMMIT_TAG"
+  release:
+    tag_name: $CI_COMMIT_TAG
+    name: "Release $CI_COMMIT_TAG"
+    description: "Release $CI_COMMIT_TAG"

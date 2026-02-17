@@ -1,6 +1,6 @@
 @PACKAGE_INIT@
 
-# Import exported targets for the SCL package
+# Import exported targets for the ScL package
 include("${CMAKE_CURRENT_LIST_DIR}/SCLTargets.cmake")
 
 # -----------------------------
@@ -12,13 +12,13 @@ set(SCL_AVAILABLE_COMPONENTS utility feature)
 # Mark requested components as FOUND if their targets exist
 foreach(comp IN LISTS SCL_FIND_COMPONENTS)
     if (comp STREQUAL "utility")
-        if (TARGET SCL::utility)
+        if (TARGET scl::utility)
             set(SCL_UTILITY_FOUND TRUE)
         else()
             set(SCL_UTILITY_FOUND FALSE)
         endif()
     elseif (comp STREQUAL "feature")
-        if (TARGET SCL::feature)
+        if (TARGET scl::feature)
             set(SCL_FEATURE_FOUND TRUE)
         else()
             set(SCL_FEATURE_FOUND FALSE)
@@ -31,4 +31,4 @@ endforeach()
 
 # Fail if REQUIRED components are missing
 include(CMakeFindDependencyMacro)
-check_required_components(SCL)
+check_required_components(ScL)
