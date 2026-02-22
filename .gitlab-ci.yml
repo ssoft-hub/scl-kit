@@ -1,4 +1,4 @@
-stages: [build, docs, release]
+stages: [build, docs, mirror, release]
 
 # ---------------------
 # Build & Test
@@ -54,6 +54,34 @@ pages:
   artifacts:
     paths:
       - public
+
+# ---------------------
+# Mirror to GitHub
+# ---------------------
+mirror:github:
+  stage: mirror
+  image: python:3.12-slim
+  rules:
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG
+  variables:
+    GIT_STRATEGY: clone
+    GIT_DEPTH: 0
+    # URL prefix mapping: <gitlab-prefix>=<github-prefix>
+    GITHUB_URL_MAP: |
+      git@gitlab.com:ssoft-scl/module/=git@github.com:ssoft-hub/scl-
+      git@gitlab.com:ssoft-scl/complex/=git@github.com:ssoft-hub/
+      git@gitlab.com:ssoft-tool/=git@github.com:ssoft-hub/
+    # Submodule paths to remove from the GitHub mirror
+    GITHUB_REMOVE_SUBMODULES: |
+      script/git-modules
+    # Set in GitLab CI/CD project variables (Settings → CI/CD → Variables):
+    #   GITHUB_TOKEN       - GitHub PAT with Contents: Write (masked, group-level)
+    #   GITHUB_MIRROR_URL  - https://github.com/ssoft-hub/scl-kit.git
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq git
+  script:
+    - sh script/ci/mirror_github_transform.sh
 
 # ---------------------
 # Release
