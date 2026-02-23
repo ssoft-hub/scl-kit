@@ -1,12 +1,12 @@
-[submodule "module/feature"]
-	path = module/feature
-	url = ./scl-feature.git
-[submodule "module/utility"]
-	path = module/utility
-	url = ./scl/utility.git
-[submodule "3rdparty/doctest"]
-	path = 3rdparty/doctest
-	url = git@github.com:doctest/doctest.git
 [submodule "3rdparty/googletest"]
-	path = 3rdparty/googletest
-	url = https://github.com/google/googletest.git
+    path = 3rdparty/googletest
+    url = https://github.com/google/googletest.git
+[submodule "3rdparty/doctest"]
+    path = 3rdparty/doctest
+    url = https://github.com/doctest/doctest.git
+[submodule "module/utility"]
+    path = module/utility
+    url = ../scl-utility.git
+[submodule "module/feature"]
+    path = module/feature
+    url = ../scl-feature.git
