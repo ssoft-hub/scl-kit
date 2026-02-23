@@ -1,21 +1,9 @@
-[submodule "script/git-modules"]
-	path = script/git-modules
-	url = ../../../ssoft-tool/git-modules.git
-[submodule "project/qmake/features"]
-	path = project/qmake/features
-	url = ../../../ssoft-tool/qmake-features.git
 [submodule "module/feature"]
 	path = module/feature
-	url = ../../module/feature.git
+	url = ./scl-feature.git
 [submodule "module/utility"]
 	path = module/utility
-	url = ../../module/utility.git
-[submodule "module/event"]
-	path = module/event
-	url = ../../module/event.git
-[submodule "module/scene"]
-	path = module/scene
-	url = ../../module/scene.git
+	url = ./scl/utility.git
 [submodule "3rdparty/doctest"]
 	path = 3rdparty/doctest
 	url = git@github.com:doctest/doctest.git
