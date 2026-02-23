@@ -18,8 +18,8 @@ jobs:
             cc: gcc
           - name: Clang
             os: ubuntu-latest
-            compiler: clang++
-            cc: clang
+            compiler: clang++-21
+            cc: clang-21
           - name: MSVC
             os: windows-latest
             compiler: cl
@@ -42,6 +42,13 @@ jobs:
         uses: egor-tensin/setup-mingw@v2
         with:
           platform: x64
+          version: 12.2.0
+
+      - name: Setup Clang 21
+        if: matrix.name == 'Clang'
+        run: |
+          wget -qO- https://apt.llvm.org/llvm.sh | sudo bash -s 21
+          sudo apt-get install -y clang-21
 
       - name: Setup MSVC
         if: matrix.name == 'MSVC'
@@ -57,7 +64,10 @@ jobs:
           -DSCL_BUILD_EXAMPLES=ON
 
       - name: Build
-        run: cmake --build build --config Debug
+        shell: bash
+        run: |
+          ulimit -s unlimited 2>/dev/null || true
+          cmake --build build --config Debug
 
       - name: Test
         run: ctest --test-dir build --build-config Debug --output-on-failure

@@ -2,50 +2,47 @@ name: Documentation
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
+    tags: ['v*']
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
 
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y doxygen graphviz
-          pip install sphinx breathe sphinx-rtd-theme
+          pip install mkdocs mkdocs-material mkdoxy mike
 
-      - name: Generate Doxygen XML
-        working-directory: project/doxygen
-        run: doxygen Doxyfile
+      - name: Configure git
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git fetch origin gh-pages 2>/dev/null || true
 
-      - name: Build Sphinx site
-        run: sphinx-build -b html project/sphinx docs/_build/html
+      - name: Determine version
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            echo "MIKE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+            echo "MIKE_ALIAS=latest" >> $GITHUB_ENV
+          elif [[ "$GITHUB_REF" == refs/heads/main ]]; then
+            echo "MIKE_VERSION=main" >> $GITHUB_ENV
+            echo "MIKE_ALIAS=latest" >> $GITHUB_ENV
+          else
+            echo "MIKE_VERSION=dev" >> $GITHUB_ENV
+            echo "MIKE_ALIAS=" >> $GITHUB_ENV
+          fi
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/_build/html
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy with mike
+        run: |
+          mike deploy --push $MIKE_VERSION $MIKE_ALIAS
+          mike set-default --push latest 2>/dev/null || true

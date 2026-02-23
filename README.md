@@ -1,5 +1,10 @@
 # Инструментарий ScL
 
+[![GitLab Pipeline](https://gitlab.com/ssoft-scl/scl-kit/badges/main/pipeline.svg)](https://gitlab.com/ssoft-scl/scl-kit/-/pipelines)
+[![GitHub Build](https://github.com/ssoft-hub/scl-kit/actions/workflows/build.yml/badge.svg)](https://github.com/ssoft-hub/scl-kit/actions/workflows/build.yml)
+[![GitLab Pages](https://img.shields.io/badge/pages-gitlab-orange)](https://ssoft-scl.gitlab.io/scl-kit/)
+[![GitHub Pages](https://img.shields.io/badge/pages-github-blue)](https://ssoft-hub.github.io/scl-kit/)
+
 Инструментарий ScL предоставляет бесплатные решения для организации разработки на C++.
 
 Проект содержит набор библиотек C++ и других вспомогательных средств для формирования рабочего окружения для решения задач на C++. Лицензия ScL позволяет использовать инструментарий как в коммерческих, так и в некоммерческих целях и не требует указания авторства для бинарного использования.
