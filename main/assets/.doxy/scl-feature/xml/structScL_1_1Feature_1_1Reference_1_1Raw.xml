@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Reference_1_1Raw" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Reference::Raw</compoundname>
+    <includes refid="reference_2raw_8h" local="no">raw.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder" prot="public">ScL::Feature::Reference::Raw::Holder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования не владеющей ссылки на экземпляр значения. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="14" column="5" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="15" bodyend="118"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_c95cccd52aeb9cfbe30ebf02714dd6b9" kind="dir">
+    <compoundname>module/feature/src/scl/feature/reflection/std</compoundname>
+    <innerfile refid="list_8h">list.h</innerfile>
+    <innerfile refid="map_8h">map.h</innerfile>
+    <innerfile refid="pair_8h">pair.h</innerfile>
+    <innerfile refid="set_8h">set.h</innerfile>
+    <innerfile refid="string_8h">string.h</innerfile>
+    <innerfile refid="unordered__map_8h">unordered_map.h</innerfile>
+    <innerfile refid="unordered__set_8h">unordered_set.h</innerfile>
+    <innerfile refid="vector_8h">vector.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/reflection/std/"/>
+  </compounddef>
+</doxygen>

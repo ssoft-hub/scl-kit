@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="range_8h" kind="file" language="C++">
+    <compoundname>range.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="range__tool_8h" local="yes">range_tool.h</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="detail_2wrapper_8h" local="yes">module/feature/src/scl/feature/detail/wrapper.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>detail/holder_interface.h</label>
+        <link refid="holder__interface_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl/feature/access/value_guard.h</label>
+        <link refid="value__guard_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>scl/feature/access/wrapper_guard.h</label>
+        <link refid="wrapper__guard_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/range.h</label>
+        <link refid="range_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>range_tool.h</label>
+        <link refid="range__tool_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>scl/feature/trait.h</label>
+        <link refid="trait_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="9">
+        <label>scl/utility/type_traits.h</label>
+      </node>
+      <node id="10">
+        <label>type_traits</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h_source"/>
+      </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/cast.h</label>
+        <link refid="cast_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/feature/src/scl/feature/detail/property_reflection.h</label>
+        <link refid="property__reflection_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/range.h</label>
+        <link refid="range_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>module/feature/src/scl/feature/guard.h</label>
+        <link refid="guard_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>module/feature/src/scl/feature/reflection/std.h</label>
+        <link refid="std_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>module/feature/src/scl/feature/reflection/std/map.h</label>
+        <link refid="map_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>module/feature/src/scl/feature/reflection/std/pair.h</label>
+        <link refid="pair_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>module/feature/src/scl/feature/reflection/std/vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceScL">ScL</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature">ScL::Feature</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Detail">ScL::Feature::Detail</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="range_8h_1a638e01664a29fba6002addbad31248c0" prot="public" static="no">
+        <name>SCL_FEATURE_RANGE_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/range.h" line="3" column="9" bodyfile="module/feature/src/scl/feature/detail/range.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="range_8h_1acd0e98b2f469e6ef70ad99e541b6ccd1" prot="public" static="no">
+        <name>SCL_RANGE_METHOD_PROTOTYPE</name>
+        <param><defname>method</defname></param>
+        <param><defname>refer</defname></param>
+        <initializer>    template &lt;typename _Type, typename _Tool, typename = ::std::enable_if_t&lt;true&gt; &gt;           \
+    inline decltype(auto) method(<ref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" kindref="compound">::ScL::Feature::Detail::Wrapper</ref>&lt;_Type, _Tool&gt; refer value)   \
+    {                                                                                         \
+        using RangeWrapperRefer = <ref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" kindref="compound">::ScL::Feature::Detail::Wrapper</ref>&lt;_Type, _Tool&gt; refer;        \
+        using RangeRefer = decltype(*&amp;::std::declval&lt;RangeWrapperRefer&gt;());                   \
+        using IteratorType = decltype(::std::method(::std::declval&lt;RangeRefer&gt;()));           \
+        using IteratorWrapper = <ref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" kindref="compound">::ScL::Feature::Detail::Wrapper</ref>&lt;IteratorType,                 \
+            ::ScL::Feature::Detail::Guard::RangeTool&lt;RangeWrapperRefer&gt; &gt;;                    \
+        return IteratorWrapper(value, [](RangeRefer range) { return ::std::method(range); }); \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/range.h" line="22" column="9" bodyfile="module/feature/src/scl/feature/detail/range.h" bodystart="22" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="define" id="range_8h_1ac4f76ebf61d187325429aaba22cb7cbd" prot="public" static="no">
+        <name>SCL_RANGE_METHOD</name>
+        <param><defname>method</defname></param>
+        <initializer>    SCL_RANGE_METHOD_PROTOTYPE(method, &amp;&amp;)                \
+    SCL_RANGE_METHOD_PROTOTYPE(method, const &amp;&amp;)          \
+    SCL_RANGE_METHOD_PROTOTYPE(method, volatile &amp;&amp;)       \
+    SCL_RANGE_METHOD_PROTOTYPE(method, const volatile &amp;&amp;) \
+    SCL_RANGE_METHOD_PROTOTYPE(method, &amp;)                 \
+    SCL_RANGE_METHOD_PROTOTYPE(method, const &amp;)           \
+    SCL_RANGE_METHOD_PROTOTYPE(method, volatile &amp;)        \
+    SCL_RANGE_METHOD_PROTOTYPE(method, const volatile &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/range.h" line="34" column="9" bodyfile="module/feature/src/scl/feature/detail/range.h" bodystart="34" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_FEATURE_RANGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_FEATURE_RANGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//&lt;<sp/>The<sp/>range<sp/>global<sp/>methods<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;range_tool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Inplace<sp/>{<sp/>struct<sp/>Default;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Wrapper;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>::std::begin,<sp/>::std::cbegin,<sp/>::std::end,<sp/>::std::cend,<sp/>::std::size,<sp/>::std::ssize,<sp/>::std::data,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>::std::cdata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>::std::ranges::begin,<sp/>::std::ranges::cbegin,<sp/>::std::ranges::end,<sp/>::std::ranges::cend,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>::std::ranges::size,<sp/>::std::ranges::ssize,<sp/>::std::ranges::data,<sp/>::std::ranges::cdata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_Type,<sp/>typename<sp/>_Tool,<sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;true&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>decltype(auto)<sp/>method(::ScL::Feature::Detail::Wrapper&lt;_Type,<sp/>_Tool&gt;<sp/>refer<sp/>value)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RangeWrapperRefer<sp/>=<sp/>::ScL::Feature::Detail::Wrapper&lt;_Type,<sp/>_Tool&gt;<sp/>refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RangeRefer<sp/>=<sp/>decltype(*&amp;::std::declval&lt;RangeWrapperRefer&gt;());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>IteratorType<sp/>=<sp/>decltype(::std::method(::std::declval&lt;RangeRefer&gt;()));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>IteratorWrapper<sp/>=<sp/>::ScL::Feature::Detail::Wrapper&lt;IteratorType,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::ScL::Feature::Detail::Guard::RangeTool&lt;RangeWrapperRefer&gt;<sp/>&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>IteratorWrapper(value,<sp/>[](RangeRefer<sp/>range)<sp/>{<sp/>return<sp/>::std::method(range);<sp/>});<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_RANGE_METHOD(method)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>const<sp/>volatile<sp/>&amp;&amp;)<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD_PROTOTYPE(method,<sp/>const<sp/>volatile<sp/>&amp;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(begin)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(cbegin)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(end)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(cend)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(size)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(ssize)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(data)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(csize)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>std</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace<sp/>std<sp/>{<sp/>namespace<sp/>ranges</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>begin<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>cbegin<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>end<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>cend<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>size<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>ssize<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>data<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SCL_RANGE_METHOD(<sp/>csize<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/detail/range.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceScL" kind="namespace" language="C++">
+    <compoundname>ScL</compoundname>
+    <innernamespace refid="namespaceScL_1_1Feature">ScL::Feature</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="shared__mutex_8h_1a57a50925e1c7da8bbc6798706a37b90d" prot="public" static="no">
+        <type>::ScL::Feature::Detail::SharedMutex</type>
+        <definition>using ScL::SharedMutex = typedef ::ScL::Feature::Detail::SharedMutex</definition>
+        <argsstring></argsstring>
+        <name>SharedMutex</name>
+        <qualifiedname>ScL::SharedMutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" line="15" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="trait_8h_1a2142aff57f9719ae72a8edaaf1d6e0c4" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Type</type>
+          </param>
+          <param>
+            <type>typename _Refer</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::forward_like_t&lt; _Refer, _Type &gt;</type>
+        <definition>using ScL::SimilarRefer = typedef typename ::scl::forward_like_t&lt;_Refer, _Type&gt;</definition>
+        <argsstring></argsstring>
+        <name>SimilarRefer</name>
+        <qualifiedname>ScL::SimilarRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="13" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/detail/holder_interface.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

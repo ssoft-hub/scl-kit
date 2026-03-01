@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceScL_1_1Feature_1_1ThreadSafe" kind="namespace" language="C++">
+    <compoundname>ScL::Feature::ThreadSafe</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" prot="public">ScL::Feature::ThreadSafe::Lock</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking" prot="public">ScL::Feature::ThreadSafe::Locking</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4" prot="public">ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01const_01__Holder_01_4" prot="public">ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, const _Holder &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1std_1_1atomic_3_01bool_01_4_00_01__Holder_01_4" prot="public">ScL::Feature::ThreadSafe::Locking&lt; ::std::atomic&lt; bool &gt;, _Holder &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1std_1_1mutex_00_01__Holder_01_4" prot="public">ScL::Feature::ThreadSafe::Locking&lt; ::std::mutex, _Holder &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1std_1_1recursive__mutex_00_01__Holder_01_4" prot="public">ScL::Feature::ThreadSafe::Locking&lt; ::std::recursive_mutex, _Holder &gt;</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="atomic_8h_1ad24aa47fdcaf38ab8689a9894a192a29" prot="public" static="no">
+        <type><ref refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" kindref="compound">::ScL::Feature::ThreadSafe::Lock</ref>&lt; ::std::atomic&lt; bool &gt; &gt;</type>
+        <definition>using ScL::Feature::ThreadSafe::Atomic = typedef ::ScL::Feature::ThreadSafe::Lock&lt; ::std::atomic&lt;bool&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>Atomic</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Atomic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/atomic.h" line="35" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/atomic.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="mutex_8h_1a605b5612ba410a729bcd69e9b55f751e" prot="public" static="no">
+        <type><ref refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" kindref="compound">::ScL::Feature::ThreadSafe::Lock</ref>&lt; ::std::mutex &gt;</type>
+        <definition>using ScL::Feature::ThreadSafe::Mutex = typedef ::ScL::Feature::ThreadSafe::Lock&lt; ::std::mutex&gt;</definition>
+        <argsstring></argsstring>
+        <name>Mutex</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Mutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/mutex.h" line="32" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/mutex.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="recursive__mutex_8h_1a25e047a78bca6cdd92ce7692ba7c3230" prot="public" static="no">
+        <type><ref refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" kindref="compound">::ScL::Feature::ThreadSafe::Lock</ref>&lt; ::std::recursive_mutex &gt;</type>
+        <definition>using ScL::Feature::ThreadSafe::RecursiveMutex = typedef ::ScL::Feature::ThreadSafe::Lock&lt; ::std::recursive_mutex&gt;</definition>
+        <argsstring></argsstring>
+        <name>RecursiveMutex</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::RecursiveMutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/recursive_mutex.h" line="32" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/recursive_mutex.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="shared__mutex_8h_1aede93fc1468b232d6c2448cf90cf5bcc" prot="public" static="no">
+        <type><ref refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" kindref="compound">::ScL::Feature::ThreadSafe::Lock</ref>&lt; ::ScL::SharedMutex &gt;</type>
+        <definition>using ScL::Feature::ThreadSafe::SharedMutex = typedef ::ScL::Feature::ThreadSafe::Lock&lt; ::ScL::SharedMutex &gt;</definition>
+        <argsstring></argsstring>
+        <name>SharedMutex</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::SharedMutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" line="65" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/atomic.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

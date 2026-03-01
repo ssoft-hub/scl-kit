@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::Operator::WrapperCaseHelper</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Left</type>
+      </param>
+      <param>
+        <type>typename _Right</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1a48b39302c17e86ef94ca56129ec4f399" prot="public" static="no">
+        <type>::std::decay_t&lt; _Left &gt;</type>
+        <definition>using ScL::Feature::Detail::Operator::WrapperCaseHelper&lt; _Left, _Right &gt;::Left =  ::std::decay_t&lt;_Left&gt;</definition>
+        <argsstring></argsstring>
+        <name>Left</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::WrapperCaseHelper::Left</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="28" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1a224792223103f06ba866a4f07a4fb400" prot="public" static="no">
+        <type>::std::decay_t&lt; _Right &gt;</type>
+        <definition>using ScL::Feature::Detail::Operator::WrapperCaseHelper&lt; _Left, _Right &gt;::Right =  ::std::decay_t&lt;_Right&gt;</definition>
+        <argsstring></argsstring>
+        <name>Right</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::WrapperCaseHelper::Right</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="29" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1ada13dd78617f8c2ed2bdd13f19589e32" prot="public" static="no">
+        <type>::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt; Left &gt;() &amp;&amp;::ScL::Feature::isWrapper&lt; Right &gt;(), BothWrapperCase, ::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt; Left &gt;(), LeftWrapperCase, ::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt; Right &gt;(), RightWrapperCase, NoneWrapperCase &gt; &gt; &gt;</type>
+        <definition>using ScL::Feature::Detail::Operator::WrapperCaseHelper&lt; _Left, _Right &gt;::Type =  ::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt;Left&gt;() &amp;&amp; ::ScL::Feature::isWrapper&lt;Right&gt;(), BothWrapperCase, ::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt;Left&gt;(), LeftWrapperCase, ::std::conditional_t&lt; ::ScL::Feature::isWrapper&lt;Right&gt;(), RightWrapperCase, NoneWrapperCase&gt; &gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::WrapperCaseHelper::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="30" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/result_switch.h" line="26" column="5" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="27" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1a48b39302c17e86ef94ca56129ec4f399" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::WrapperCaseHelper</scope><name>Left</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1a224792223103f06ba866a4f07a4fb400" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::WrapperCaseHelper</scope><name>Right</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1WrapperCaseHelper_1ada13dd78617f8c2ed2bdd13f19589e32" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::WrapperCaseHelper</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

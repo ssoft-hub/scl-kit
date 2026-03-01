@@ -1,0 +1,840 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceScL_1_1Feature" kind="namespace" language="C++">
+    <compoundname>ScL::Feature</compoundname>
+    <innerclass refid="classScL_1_1Feature_1_1HolderGuard" prot="public">ScL::Feature::HolderGuard</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1IsSimilar" prot="public">ScL::Feature::IsSimilar</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther" prot="public">ScL::Feature::IsThisSpecifierCompatibleWithOther</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1MixIn" prot="public">ScL::Feature::MixIn</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ToolAdditionMixIn" prot="public">ScL::Feature::ToolAdditionMixIn</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ToolAdditionMixIn_3_01_1_1ScL_1_1Feature_1_1Detail_1_1Wrapper_3_01__Type_6cfab06cb1cd1940993f4e80a3ff83c5" prot="public">ScL::Feature::ToolAdditionMixIn&lt; ::ScL::Feature::Detail::Wrapper&lt; _Type, ::ScL::Feature::Implicit::Raw &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ToolAdditionMixIn_3_01_1_1ScL_1_1Feature_1_1Detail_1_1Wrapper_3_01__Value7a1112ed2b930a9a1fc842c6d9900d2f" prot="public">ScL::Feature::ToolAdditionMixIn&lt; ::ScL::Feature::Detail::Wrapper&lt; _Value, ::ScL::Feature::Inplace::Optional &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ToolReflectionMixIn" prot="public">ScL::Feature::ToolReflectionMixIn</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ToolReflectionMixIn_3_01Self___00_01SelfHolder___00_01Inplace_1_1Optional_01_4" prot="public">ScL::Feature::ToolReflectionMixIn&lt; Self_, SelfHolder_, Inplace::Optional &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValuePointer" prot="public">ScL::Feature::ValuePointer</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn" prot="public">ScL::Feature::ValueReflectionMixIn</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1list_3_2a15bc1b6910c556e20aaae45e5878f9" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::list&lt; Value_, Allocator_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1map_3_03cf8a409b943a3eb2f0c22737a2d0db6" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::map&lt; Key_, Value_, Compare_, Allocator_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1pair_3_6f0f36137750831dbaefc786efb2a94b" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::pair&lt; First_, Second_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1set_3_0ae7f8e06af09c1d8922f84f285812668" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::set&lt; Key_, Compare_, Allocator_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1string_01_4" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::string &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1unorderce5da27a0b183997bc94d2982759f266" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::unordered_map&lt; Key_, Value_, Hash_, Pred_, Allocator_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1unorder51e6608c1855f0f1f53f495c010a4032" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::unordered_set&lt; Key_, Hash_, Pred_, Allocator_ &gt; &gt;</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1vector_1178f9481a24b8e98a651db6b7f18a56" prot="public">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::vector&lt; Value_, Allocator_ &gt; &gt;</innerclass>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Detail">ScL::Feature::Detail</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Guard">ScL::Feature::Guard</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Heap">ScL::Feature::Heap</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Implicit">ScL::Feature::Implicit</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Inplace">ScL::Feature::Inplace</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Insplace">ScL::Feature::Insplace</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Reference">ScL::Feature::Reference</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1ThreadSafe">ScL::Feature::ThreadSafe</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Tool">ScL::Feature::Tool</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1abe225f13d610bb62bca434c955aa79c9" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Refer</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::ScL::Feature::Detail::ValueGuardHelper&lt; _Refer &gt;::Type</type>
+        <definition>using ScL::Feature::ValueGuard = typedef typename ::ScL::Feature::Detail::ValueGuardHelper&lt;_Refer&gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>ValueGuard</name>
+        <qualifiedname>ScL::Feature::ValueGuard</qualifiedname>
+        <briefdescription>
+<para>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_guard.h" line="29" column="5" bodyfile="module/feature/src/scl/feature/access/value_guard.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a8921af2294e19308a82d7adfc4f99bf6" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Refer_</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::ScL::Feature::Detail::ValueLockHelper&lt; Refer_ &gt;::Type</type>
+        <definition>using ScL::Feature::ValueLock = typedef typename ::ScL::Feature::Detail::ValueLockHelper&lt;Refer_&gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>ValueLock</name>
+        <qualifiedname>ScL::Feature::ValueLock</qualifiedname>
+        <briefdescription>
+<para>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="29" column="5" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a42721990c9cd265f52794acfde7a32ab" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Refer</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::ScL::Feature::Detail::WrapperGuardHelper&lt; _Refer &gt;::Type</type>
+        <definition>using ScL::Feature::WrapperGuard = typedef typename ::ScL::Feature::Detail::WrapperGuardHelper&lt;_Refer&gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>WrapperGuard</name>
+        <qualifiedname>ScL::Feature::WrapperGuard</qualifiedname>
+        <briefdescription>
+<para>This type activates a feature for the wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/wrapper_guard.h" line="28" column="5" bodyfile="module/feature/src/scl/feature/access/wrapper_guard.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a2e401d4880d939bf7b55ccfe6d8c86bf" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Refer</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::ScL::Feature::Detail::WrapperLockHelper&lt; _Refer &gt;::Type</type>
+        <definition>using ScL::Feature::WrapperLock = typedef typename ::ScL::Feature::Detail::WrapperLockHelper&lt;_Refer&gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>WrapperLock</name>
+        <qualifiedname>ScL::Feature::WrapperLock</qualifiedname>
+        <briefdescription>
+<para>This type activates a feature for the wrapped value when the lock method is called, and deactivates a feature when the unlock method is called or it is destroyed. This type does nothing for non wrapped values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/wrapper_lock.h" line="29" column="5" bodyfile="module/feature/src/scl/feature/access/wrapper_lock.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a60c8c85ed57821512ea2dacbb4a72c40" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1Detail_1_1IsWrapper" kindref="compound">::ScL::Feature::Detail::IsWrapper</ref>&lt; ::std::remove_cv_t&lt; _Test &gt; &gt;</type>
+        <definition>using ScL::Feature::IsWrapper = typedef ::ScL::Feature::Detail::IsWrapper&lt; ::std::remove_cv_t&lt;_Test&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>IsWrapper</name>
+        <qualifiedname>ScL::Feature::IsWrapper</qualifiedname>
+        <briefdescription>
+<para>Признак того, что тип является Wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="43" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a84c56a84d20f6c55e30c5ab26fef9f9b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceScL_1_1Feature_1a60c8c85ed57821512ea2dacbb4a72c40" kindref="member">::ScL::Feature::IsWrapper</ref>&lt; _Test &gt;</type>
+        <definition>using ScL::Feature::is_wrapper = typedef ::ScL::Feature::IsWrapper&lt;_Test&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_wrapper</name>
+        <qualifiedname>ScL::Feature::is_wrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="52" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1af47f5c648eee592781dadaf61d127753" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="namespaceScL_1_1Feature_1a60c8c85ed57821512ea2dacbb4a72c40" kindref="member">::ScL::Feature::IsWrapper</ref>&lt; _Test &gt;::type</type>
+        <definition>using ScL::Feature::is_wrapper_t = typedef typename ::ScL::Feature::IsWrapper&lt;_Test&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_wrapper_t</name>
+        <qualifiedname>ScL::Feature::is_wrapper_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="54" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a97115c3b8a2f4a946c5819ad01565deb" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithOther" kindref="compound">::ScL::Feature::Detail::IsThisCompatibleWithOther</ref>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</type>
+        <definition>using ScL::Feature::IsThisCompatibleWithOther = typedef ::ScL::Feature::Detail::IsThisCompatibleWithOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>IsThisCompatibleWithOther</name>
+        <qualifiedname>ScL::Feature::IsThisCompatibleWithOther</qualifiedname>
+        <briefdescription>
+<para>Признак совместимости типов. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="85" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a8ef04c423ca7aea3a3fc1f9162dedc96" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceScL_1_1Feature_1a97115c3b8a2f4a946c5819ad01565deb" kindref="member">::ScL::Feature::IsThisCompatibleWithOther</ref>&lt; _Test, _Other &gt;</type>
+        <definition>using ScL::Feature::is_this_compatible_with_other = typedef ::ScL::Feature::IsThisCompatibleWithOther&lt;_Test, _Other&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_other</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_other</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="96" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a8879bea8e206b40cc5e215274f58c290" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="namespaceScL_1_1Feature_1a97115c3b8a2f4a946c5819ad01565deb" kindref="member">::ScL::Feature::IsThisCompatibleWithOther</ref>&lt; _Test, _Other &gt;::type</type>
+        <definition>using ScL::Feature::is_this_compatible_with_other_t = typedef typename ::ScL::Feature::IsThisCompatibleWithOther&lt; _Test, _Other&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_other_t</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_other_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="98" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1adba3a4b9a405d99ee0f5121601e3ebd5" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithPartOfOther" kindref="compound">::ScL::Feature::Detail::IsThisCompatibleWithPartOfOther</ref>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</type>
+        <definition>using ScL::Feature::IsThisCompatibleWithPartOfOther = typedef ::ScL::Feature::Detail::IsThisCompatibleWithPartOfOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>IsThisCompatibleWithPartOfOther</name>
+        <qualifiedname>ScL::Feature::IsThisCompatibleWithPartOfOther</qualifiedname>
+        <briefdescription>
+<para>Признак совместимости типа с вложенным типом другого. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="143" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1aa2a4d9e44a414e99f5ae75ff4f42bb33" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceScL_1_1Feature_1adba3a4b9a405d99ee0f5121601e3ebd5" kindref="member">::ScL::Feature::IsThisCompatibleWithPartOfOther</ref>&lt; _Test, _Other &gt;</type>
+        <definition>using ScL::Feature::is_this_compatible_with_part_of_other = typedef ::ScL::Feature::IsThisCompatibleWithPartOfOther&lt; _Test, _Other&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_part_of_other</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_part_of_other</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="154" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1abbb0ed21eec824444e174d7d9536bcc5" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="namespaceScL_1_1Feature_1adba3a4b9a405d99ee0f5121601e3ebd5" kindref="member">::ScL::Feature::IsThisCompatibleWithPartOfOther</ref>&lt; _Test, _Other &gt;::type</type>
+        <definition>using ScL::Feature::is_this_compatible_with_part_of_other_t = typedef typename ::ScL::Feature::IsThisCompatibleWithPartOfOther&lt;_Test, _Other&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_part_of_other_t</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_part_of_other_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="158" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a1904f017a4129c37192ff479f16b0084" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1Detail_1_1IsPartOfThisCompatibleWithOther" kindref="compound">::ScL::Feature::Detail::IsPartOfThisCompatibleWithOther</ref>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</type>
+        <definition>using ScL::Feature::IsPartOfThisCompatibleWithOther = typedef ::ScL::Feature::Detail::IsPartOfThisCompatibleWithOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>IsPartOfThisCompatibleWithOther</name>
+        <qualifiedname>ScL::Feature::IsPartOfThisCompatibleWithOther</qualifiedname>
+        <briefdescription>
+<para>Признак совместимости вложенного типа с другим. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="200" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a474fdb91e4dc3f7b31c97625322427bb" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceScL_1_1Feature_1a1904f017a4129c37192ff479f16b0084" kindref="member">::ScL::Feature::IsPartOfThisCompatibleWithOther</ref>&lt; _Test, _Other &gt;</type>
+        <definition>using ScL::Feature::is_part_of_this_compatible_with_other = typedef ::ScL::Feature::IsPartOfThisCompatibleWithOther&lt; _Test, _Other&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_part_of_this_compatible_with_other</name>
+        <qualifiedname>ScL::Feature::is_part_of_this_compatible_with_other</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="211" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1aa899d2813542e4c5f728c164ebc62bab" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="namespaceScL_1_1Feature_1a1904f017a4129c37192ff479f16b0084" kindref="member">::ScL::Feature::IsPartOfThisCompatibleWithOther</ref>&lt; _Test, _Other &gt;::type</type>
+        <definition>using ScL::Feature::is_part_of_this_compatible_with_other_t = typedef typename ::ScL::Feature::IsPartOfThisCompatibleWithOther&lt;_Test, _Other&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_part_of_this_compatible_with_other_t</name>
+        <qualifiedname>ScL::Feature::is_part_of_this_compatible_with_other_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="215" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1ae13b2ef35352b7c51e8112b3aa5bc96f" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1IsSimilar" kindref="compound">::ScL::Feature::IsSimilar</ref>&lt; _Test, _Other &gt;</type>
+        <definition>using ScL::Feature::is_similar = typedef ::ScL::Feature::IsSimilar&lt;_Test, _Other&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_similar</name>
+        <qualifiedname>ScL::Feature::is_similar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="248" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a36168d96c249a4739bcac21a3f9eba50" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structScL_1_1Feature_1_1IsSimilar" kindref="compound">::ScL::Feature::IsSimilar</ref>&lt; _Test, _Other &gt;::type</type>
+        <definition>using ScL::Feature::is_similar_t = typedef typename ::ScL::Feature::IsSimilar&lt;_Test, _Other&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_similar_t</name>
+        <qualifiedname>ScL::Feature::is_similar_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="250" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a8c98c02ad7391fd472c9968ccbe01eb1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther" kindref="compound">::ScL::Feature::IsThisSpecifierCompatibleWithOther</ref>&lt; _Test, _Other &gt;</type>
+        <definition>using ScL::Feature::is_this_specifier_compatible_with_other = typedef ::ScL::Feature::IsThisSpecifierCompatibleWithOther&lt;_Test, _Other&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_this_specifier_compatible_with_other</name>
+        <qualifiedname>ScL::Feature::is_this_specifier_compatible_with_other</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="276" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1a198fd56e5c39475ab1a1f15f968136df" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther" kindref="compound">::ScL::Feature::IsThisSpecifierCompatibleWithOther</ref>&lt; _Test, _Other &gt;::type</type>
+        <definition>using ScL::Feature::is_this_specifier_compatible_with_other_t = typedef typename ::ScL::Feature::IsThisSpecifierCompatibleWithOther&lt;_Test, _Other&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>is_this_specifier_compatible_with_other_t</name>
+        <qualifiedname>ScL::Feature::is_this_specifier_compatible_with_other_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="279" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceScL_1_1Feature_1ac0f4db29398a9de09fc3615bcc8c2501" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Value</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>_Tools</declname>
+            <defname>_Tools</defname>
+          </param>
+        </templateparamlist>
+        <type>typename ::ScL::Feature::Detail::WrapperSimplifyHelper&lt; typename ::ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tools... &gt;::Type &gt;::Type</type>
+        <definition>using ScL::Feature::Wrapper = typedef typename ::ScL::Feature::Detail::WrapperSimplifyHelper&lt; typename ::ScL::Feature::Detail::MultiToolHelper&lt;_Value, _Tools...&gt;::Type&gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>Wrapper</name>
+        <qualifiedname>ScL::Feature::Wrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper.h" line="88" column="5" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1a9531766989603b3283dc8095dbdc052b" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_wrapper_v</definition>
+        <argsstring></argsstring>
+        <name>is_wrapper_v</name>
+        <qualifiedname>ScL::Feature::is_wrapper_v</qualifiedname>
+        <initializer>= <ref refid="namespaceScL_1_1Feature_1a60c8c85ed57821512ea2dacbb4a72c40" kindref="member">::ScL::Feature::IsWrapper</ref>&lt;_Test&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="56" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1ac126ceae7cdf9c4ac14a6a6d3e83813d" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_this_compatible_with_other_v</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_other_v</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_other_v</qualifiedname>
+        <initializer>= <ref refid="namespaceScL_1_1Feature_1a97115c3b8a2f4a946c5819ad01565deb" kindref="member">::ScL::Feature::IsThisCompatibleWithOther</ref>&lt;_Test,
+            _Other&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="103" column="9" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1ac3816f9e65ed831c0e0ae2dbb0fe386f" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_this_compatible_with_part_of_other_v</definition>
+        <argsstring></argsstring>
+        <name>is_this_compatible_with_part_of_other_v</name>
+        <qualifiedname>ScL::Feature::is_this_compatible_with_part_of_other_v</qualifiedname>
+        <initializer>= <ref refid="namespaceScL_1_1Feature_1adba3a4b9a405d99ee0f5121601e3ebd5" kindref="member">::ScL::Feature::IsThisCompatibleWithPartOfOther</ref>&lt;
+            _Test,
+            _Other&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="162" column="9" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1a15828b4f98e3e2daa1c9495dc4204d7e" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_part_of_this_compatible_with_other_v</definition>
+        <argsstring></argsstring>
+        <name>is_part_of_this_compatible_with_other_v</name>
+        <qualifiedname>ScL::Feature::is_part_of_this_compatible_with_other_v</qualifiedname>
+        <initializer>= <ref refid="namespaceScL_1_1Feature_1a1904f017a4129c37192ff479f16b0084" kindref="member">::ScL::Feature::IsPartOfThisCompatibleWithOther</ref>&lt;
+            _Test,
+            _Other&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="219" column="9" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1a5ccd81a271a18ea606873d0215d9d347" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_similar_v</definition>
+        <argsstring></argsstring>
+        <name>is_similar_v</name>
+        <qualifiedname>ScL::Feature::is_similar_v</qualifiedname>
+        <initializer>= <ref refid="structScL_1_1Feature_1_1IsSimilar" kindref="compound">::ScL::Feature::IsSimilar</ref>&lt;_Test, _Other&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="252" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceScL_1_1Feature_1a9d51c4966f5f38ee2093253336271142" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::is_this_specifier_compatible_with_other_v</definition>
+        <argsstring></argsstring>
+        <name>is_this_specifier_compatible_with_other_v</name>
+        <qualifiedname>ScL::Feature::is_this_specifier_compatible_with_other_v</qualifiedname>
+        <initializer>=
+        <ref refid="structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther" kindref="compound">::ScL::Feature::IsThisSpecifierCompatibleWithOther</ref>&lt;_Test, _Other&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="282" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1ad368f066eebe436deaf46e4f06507e07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ConceptNonWrapper</type>
+            <declname>Type_</declname>
+            <defname>Type_</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ScL::Feature::cast</definition>
+        <argsstring>(Type_ &amp;&amp;value) -&gt; ::std::enable_if_t&lt;!::ScL::Feature::isWrapper&lt;::std::remove_reference_t&lt; Type_ &gt; &gt;(), Type_ &amp;&amp; &gt;</argsstring>
+        <name>cast</name>
+        <qualifiedname>ScL::Feature::cast</qualifiedname>
+        <param>
+          <type>Type_ &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/cast.h" line="75" column="17" bodyfile="module/feature/src/scl/feature/cast.h" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a1e3b8479b94f7fffd37527453cd792bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ConceptWrapper</type>
+            <declname>Wrapper_</declname>
+            <defname>Wrapper_</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ScL::Feature::cast</definition>
+        <argsstring>(Wrapper_ &amp;&amp;wrapper) -&gt; ::std::enable_if_t&lt;::ScL::Feature::isWrapper&lt;::std::remove_reference_t&lt; Wrapper_ &gt; &gt;(), ::ScL::Feature::Detail::Caster&lt; Wrapper_ &amp;&amp; &gt; &gt;</argsstring>
+        <name>cast</name>
+        <qualifiedname>ScL::Feature::cast</qualifiedname>
+        <param>
+          <type>Wrapper_ &amp;&amp;</type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/cast.h" line="83" column="17" bodyfile="module/feature/src/scl/feature/cast.h" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a02b44537041c6994a1bd32442dbac6f1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type_</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) ScL::Feature::guarded</definition>
+        <argsstring>(Type_ &amp;&amp;value) noexcept</argsstring>
+        <name>guarded</name>
+        <qualifiedname>ScL::Feature::guarded</qualifiedname>
+        <param>
+          <type>Type_ &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/guard.h" line="13" column="21" bodyfile="module/feature/src/scl/feature/guard.h" bodystart="13" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a35bd79e5cfcf8e2be56a34ebecba3af5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>isWrapper</name>
+        <qualifiedname>ScL::Feature::isWrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="46" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1ab98f2661b8cd0b87920d746cfd7ab74f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isThisCompatibleWithOther</definition>
+        <argsstring>()</argsstring>
+        <name>isThisCompatibleWithOther</name>
+        <qualifiedname>ScL::Feature::isThisCompatibleWithOther</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="90" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1ac6db67406eefb853c94804e747eea735" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isThisCompatibleWithPartOfOther</definition>
+        <argsstring>()</argsstring>
+        <name>isThisCompatibleWithPartOfOther</name>
+        <qualifiedname>ScL::Feature::isThisCompatibleWithPartOfOther</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="148" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a9a4babdd5f44660918b07506b7616768" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isPartOfThisCompatibleWithOther</definition>
+        <argsstring>()</argsstring>
+        <name>isPartOfThisCompatibleWithOther</name>
+        <qualifiedname>ScL::Feature::isPartOfThisCompatibleWithOther</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="205" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a78d9569fa4a48d31fe6b172295105087" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isSimilar</definition>
+        <argsstring>()</argsstring>
+        <name>isSimilar</name>
+        <qualifiedname>ScL::Feature::isSimilar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="242" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceScL_1_1Feature_1a07082a31431b8f29aa728806c0e272c7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _Test</type>
+          </param>
+          <param>
+            <type>typename _Other</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool ScL::Feature::isThisSpecifierCompatibleWithOther</definition>
+        <argsstring>()</argsstring>
+        <name>isThisSpecifierCompatibleWithOther</name>
+        <qualifiedname>ScL::Feature::isThisSpecifierCompatibleWithOther</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/trait.h" line="270" column="27" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="270" bodyend="273"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This is definition of Wrapper type. No tool duplicates are guarantee. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/detail/holder_interface.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

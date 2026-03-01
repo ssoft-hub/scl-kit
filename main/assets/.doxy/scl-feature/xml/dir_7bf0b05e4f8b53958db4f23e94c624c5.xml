@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_7bf0b05e4f8b53958db4f23e94c624c5" kind="dir">
+    <compoundname>module/feature/src/scl/feature/tool/inplace</compoundname>
+    <innerfile refid="debug_8h">debug.h</innerfile>
+    <innerfile refid="default_8h">default.h</innerfile>
+    <innerfile refid="optional_8h">optional.h</innerfile>
+    <innerfile refid="typedef_8h">typedef.h</innerfile>
+    <innerfile refid="uninitialized_8h">uninitialized.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/"/>
+  </compounddef>
+</doxygen>

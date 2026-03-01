@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::ThreadSafe::Lock::Holder</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Value</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a821526d2003afa9f37378c10a0e143c6" prot="public" static="no">
+        <type>Holder&lt; _Value &gt;</type>
+        <definition>using ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::ThisType =  Holder&lt;_Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="26" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a8aa59864eb01f36f2c1f76f1fe953da2" prot="public" static="no">
+        <type>_Value</type>
+        <definition>using ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Value =  _Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="27" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aa137d149d0842ee719bd2e5677a21d3d" prot="public" static="no">
+        <type>_Lock</type>
+        <definition>using ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::LockType =  _Lock</definition>
+        <argsstring></argsstring>
+        <name>LockType</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::LockType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="28" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a5f14f946cc7362822c69ebec961c1d40" prot="public" static="no" mutable="yes">
+        <type>LockType</type>
+        <definition>LockType ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::m_lock</definition>
+        <argsstring></argsstring>
+        <name>m_lock</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::m_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="30" column="30" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a81ebed5bbd5a93fca246873f9f6a8543" prot="public" static="no" mutable="no">
+        <type>Value</type>
+        <definition>Value ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::m_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="31" column="19" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1adba9212a334ed50b0c73c28635b6719e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>_Arguments</declname>
+            <defname>_Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(_Arguments &amp;&amp;... arguments)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>_Arguments &amp;&amp;...</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="34" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a70554726c030655d8b8b029f933008e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="39" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab5f4268de83a800192e01d6737b60c75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="47" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="47" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aa9dc4b6a432510be7c8d32275964b49c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="55" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a2fdd5ce3c45229342b636e6a9ffaa8c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="63" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ae4f483d99a74883251d39bc063826cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="71" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1afd9ab0c031b4b233d1c5be5d42fa1cae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="79" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a3529255f5f7135ba57417283ed415727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="87" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aeb44e349b92448a522245b06768a5afb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="95" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="95" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a5c69c90da70ad9f203cc4f6519695182" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="104" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="104" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab8f90db1db4973b9506ebb58bf8ce2e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="113" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1acc5be8d6e16f465be38ee4fc2b2a1ae8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="123" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a0ebfd1a6339f20b6d5cc894187eb5cf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;&amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="133" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="133" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a07c3ff1bf95f035efaccd19439076c6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="143" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="143" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a7f61920492185a49bf53ac9e3e58bd01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="152" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="152" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a602879bd066c9e7082abb2d70d5efa55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="161" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="161" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a141be6a27c22d92170000db9d4cc16f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;other)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="171" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="171" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1abb3b8d65709691fadfc3ffc36c3229d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::~Holder</definition>
+        <argsstring>()</argsstring>
+        <name>~Holder</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::~Holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="180" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="180" bodyend="184"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab30cf47a243c9a1e234c9d3ed03abf60" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::guard</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>guard</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::guard</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+<para>Guard internal value of Holder for any king of referencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="188" column="35" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a4cca045dec95ee737072ef63d61a59e6" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::unguard</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>unguard</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::unguard</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+<para>Unguard internal value of Holder for any king of referencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="198" column="35" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="198" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1acd1cc21d3580f715ab115433e9db7bdb" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::ThreadSafe::Lock&lt; _Lock &gt;::Holder&lt; _Value &gt;::value</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>value</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Lock::Holder::value</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+<para>Access to internal value of Holder for any king of referencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="208" column="39" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="208" bodyend="213"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="24" column="9" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="25" bodyend="214"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab30cf47a243c9a1e234c9d3ed03abf60" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>guard</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1adba9212a334ed50b0c73c28635b6719e" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a70554726c030655d8b8b029f933008e2" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab5f4268de83a800192e01d6737b60c75" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aa9dc4b6a432510be7c8d32275964b49c" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a2fdd5ce3c45229342b636e6a9ffaa8c7" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ae4f483d99a74883251d39bc063826cfa" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1afd9ab0c031b4b233d1c5be5d42fa1cae" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a3529255f5f7135ba57417283ed415727" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aeb44e349b92448a522245b06768a5afb" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a5c69c90da70ad9f203cc4f6519695182" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1ab8f90db1db4973b9506ebb58bf8ce2e8" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1acc5be8d6e16f465be38ee4fc2b2a1ae8" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a0ebfd1a6339f20b6d5cc894187eb5cf8" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a07c3ff1bf95f035efaccd19439076c6e" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a7f61920492185a49bf53ac9e3e58bd01" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a602879bd066c9e7082abb2d70d5efa55" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a141be6a27c22d92170000db9d4cc16f2" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1aa137d149d0842ee719bd2e5677a21d3d" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>LockType</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a5f14f946cc7362822c69ebec961c1d40" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>m_lock</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a81ebed5bbd5a93fca246873f9f6a8543" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>m_value</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a821526d2003afa9f37378c10a0e143c6" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>ThisType</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a4cca045dec95ee737072ef63d61a59e6" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>unguard</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1a8aa59864eb01f36f2c1f76f1fe953da2" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1acd1cc21d3580f715ab115433e9db7bdb" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>value</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder_1abb3b8d65709691fadfc3ffc36c3229d4" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Lock::Holder</scope><name>~Holder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

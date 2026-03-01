@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1ThreadSafe_1_1Lock" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::ThreadSafe::Lock</compoundname>
+    <includes refid="lock_8h" local="no">lock.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1ThreadSafe_1_1Lock_1_1Holder" prot="public">ScL::Feature::ThreadSafe::Lock::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Lock</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования значения &quot;по месту&quot; с добавлением объекта блокировки _Lock типа. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/lock.h" line="21" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/lock.h" bodystart="22" bodyend="215"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

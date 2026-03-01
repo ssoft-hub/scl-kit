@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Holder</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4_1aeea7ff91c8af0d205cb63a792a68b75d" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _LockRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;::lock</definition>
+        <argsstring>(_LockRefer &amp;&amp;lock)</argsstring>
+        <name>lock</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;::lock</qualifiedname>
+        <param>
+          <type>_LockRefer &amp;&amp;</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" line="30" column="31" bodyfile="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4_1afe79fe54e336d3738d89264426868a29" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _LockRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;::unlock</definition>
+        <argsstring>(_LockRefer &amp;&amp;lock)</argsstring>
+        <name>unlock</name>
+        <qualifiedname>ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;::unlock</qualifiedname>
+        <param>
+          <type>_LockRefer &amp;&amp;</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" line="37" column="31" bodyfile="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" bodystart="37" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" line="27" column="5" bodyfile="module/feature/src/scl/feature/tool/thread_safe/shared_mutex.h" bodystart="28" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4_1aeea7ff91c8af0d205cb63a792a68b75d" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;</scope><name>lock</name></member>
+      <member refid="structScL_1_1Feature_1_1ThreadSafe_1_1Locking_3_01_1_1ScL_1_1SharedMutex_00_01__Holder_01_4_1afe79fe54e336d3738d89264426868a29" prot="public" virt="non-virtual"><scope>ScL::Feature::ThreadSafe::Locking&lt; ::ScL::SharedMutex, _Holder &gt;</scope><name>unlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

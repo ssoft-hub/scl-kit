@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_70c1ec0daadfbed979152c48a97b4cf5" kind="dir">
+    <compoundname>module/feature/src/scl/feature/access/detail</compoundname>
+    <innerfile refid="holder__interface_8h">holder_interface.h</innerfile>
+    <innerfile refid="refer__pointer_8h">refer_pointer.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/detail/"/>
+  </compounddef>
+</doxygen>

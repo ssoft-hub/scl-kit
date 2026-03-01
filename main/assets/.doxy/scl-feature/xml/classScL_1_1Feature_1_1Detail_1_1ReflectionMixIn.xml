@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::ReflectionMixIn</compoundname>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1MixIn" prot="public" virt="non-virtual">ScL::Feature::MixIn&lt; Wrapper&lt; _Value, _Tool &gt;, _Tool::template Holder&lt; _Value &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Value___00_01Tool___01_4_01_4" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Value_, Tool_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01W5a0e1d18b783c603199f72ab8c74124b" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; &amp;&amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wba506355ce7dfdf70d7fe385493e0095" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; &amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wfc67ee2d94ed38f75cab4538ddb0f17b" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const &amp;&amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wa2332c91015e93f520c91b915df40bd9" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const &amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wbc8757e4d768af8e1ef3532abb714905" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const volatile &amp;&amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01W538b71101f282ecccbf912988138d56e" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const volatile &amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01W19fbdd4dbd665cce44dda72566f1a32c" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const volatile, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01W4207aef47568f5b08e54621f5b0c31b6" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; const, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wa3d0670ed0681550f784a74c411b0246" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; volatile &amp;&amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01W8327d33b47b0652b8e26a6daa1b9df28" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; volatile &amp;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wbf0ae61e25d90635a1bb1da93733e391" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt; volatile, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wefad6e3010ca5489694bf37207e7436d" prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt;, Tool1_ &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1MixIn" prot="public" virt="non-virtual">ScL::Feature::MixIn&lt; Self_, SelfHolder_ &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename Self_</type>
+      </param>
+      <param>
+        <type>typename SelfHolder_</type>
+      </param>
+      <param>
+        <type>typename Value_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/mixin.h" line="10" column="5" bodyfile="module/feature/src/scl/feature/mixin.h" bodystart="11" bodyend="11"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1ValueLockSwitch_3_01NonWrappedCase_00_01Refer___01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::ValueLockSwitch&lt; NonWrappedCase, Refer_ &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Refer_</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1ValueLockSwitch_3_01NonWrappedCase_00_01Refer___01_4_1a816acd8e8db89b51191dbf5527d44c02" prot="public" static="no">
+        <type><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped" kindref="compound">::ScL::Feature::Detail::ValueLockForNonWrapped</ref>&lt; Refer_ &gt;</type>
+        <definition>using ScL::Feature::Detail::ValueLockSwitch&lt; NonWrappedCase, Refer_ &gt;::Type =  ::ScL::Feature::Detail::ValueLockForNonWrapped&lt;Refer_&gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockSwitch&lt; NonWrappedCase, Refer_ &gt;::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="210" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/value_lock.h" line="208" column="5" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="209" bodyend="211"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1ValueLockSwitch_3_01NonWrappedCase_00_01Refer___01_4_1a816acd8e8db89b51191dbf5527d44c02" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockSwitch&lt; NonWrappedCase, Refer_ &gt;</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

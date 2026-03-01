@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1HolderGuard" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::HolderGuard</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _HolderRefer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1HolderGuard_1ae0ca43a9ca855bbd5657e424d789b720" prot="private" static="no">
+        <type>HolderGuard&lt; _HolderRefer &gt;</type>
+        <definition>using ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::ThisType =  HolderGuard&lt;_HolderRefer&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::HolderGuard::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="15" column="9" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1HolderGuard_1adf47e560725fd5677d84db32f4225d9e" prot="public" static="no">
+        <type>_HolderRefer</type>
+        <definition>using ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderRefer =  _HolderRefer</definition>
+        <argsstring></argsstring>
+        <name>HolderRefer</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="18" column="9" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1HolderGuard_1abfcff3245687c126708201e978e6d0c9" prot="public" static="no">
+        <type>::std::decay_t&lt; HolderRefer &gt;</type>
+        <definition>using ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::Holder =  ::std::decay_t&lt;HolderRefer&gt;</definition>
+        <argsstring></argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::HolderGuard::Holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="19" column="9" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScL_1_1Feature_1_1HolderGuard_1a0a9b878a26f66d9b1f05535c44307e1f" prot="private" static="no" mutable="no">
+        <type>HolderRefer</type>
+        <definition>HolderRefer ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::m_holder</definition>
+        <argsstring></argsstring>
+        <name>m_holder</name>
+        <qualifiedname>ScL::Feature::HolderGuard::m_holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="25" column="21" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1add47cac277b11d0129cbd8648a97a105" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType &amp;&amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="28" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1a95a2c3e8cf7c3033423438c7f4a7178a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType const &amp;&amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType const &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="29" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1afadbc7e37093158b8a55dd0390f57766" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType volatile &amp;&amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="30" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1a37252bf8a553d4eca0bcc1c72b22c845" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType const volatile &amp;&amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="31" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1a23ba98e9e3b3d2917026dab13ab85a7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType &amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="32" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1aa544d777464daa4f4544101474f5e4b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType const &amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="33" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1a911ec241ac04f59ece1fb275fac24c38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType volatile &amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="34" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1ac0d9401b304d2f630c45ae84398d8d6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(ThisType const volatile &amp;)=delete</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="35" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1ab477452f42b1abf2155f4c19b7575d79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::HolderGuard</definition>
+        <argsstring>(HolderRefer holder)</argsstring>
+        <name>HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::HolderGuard</qualifiedname>
+        <param>
+          <type>HolderRefer</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="38" column="9" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1HolderGuard_1ab9c34d9ce50bb9e449d1a0dc2b11e198" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::HolderGuard&lt; _HolderRefer &gt;::~HolderGuard</definition>
+        <argsstring>()</argsstring>
+        <name>~HolderGuard</name>
+        <qualifiedname>ScL::Feature::HolderGuard::~HolderGuard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/holder_guard.h" line="45" column="9" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="45" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/holder_guard.h" line="13" column="5" bodyfile="module/feature/src/scl/feature/access/holder_guard.h" bodystart="14" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1abfcff3245687c126708201e978e6d0c9" prot="public" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>Holder</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1add47cac277b11d0129cbd8648a97a105" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1a95a2c3e8cf7c3033423438c7f4a7178a" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1afadbc7e37093158b8a55dd0390f57766" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1a37252bf8a553d4eca0bcc1c72b22c845" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1a23ba98e9e3b3d2917026dab13ab85a7f" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1aa544d777464daa4f4544101474f5e4b5" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1a911ec241ac04f59ece1fb275fac24c38" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1ac0d9401b304d2f630c45ae84398d8d6c" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1ab477452f42b1abf2155f4c19b7575d79" prot="public" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderGuard</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1adf47e560725fd5677d84db32f4225d9e" prot="public" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>HolderRefer</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1a0a9b878a26f66d9b1f05535c44307e1f" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>m_holder</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1ae0ca43a9ca855bbd5657e424d789b720" prot="private" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>ThisType</name></member>
+      <member refid="classScL_1_1Feature_1_1HolderGuard_1ab9c34d9ce50bb9e449d1a0dc2b11e198" prot="public" virt="non-virtual"><scope>ScL::Feature::HolderGuard</scope><name>~HolderGuard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

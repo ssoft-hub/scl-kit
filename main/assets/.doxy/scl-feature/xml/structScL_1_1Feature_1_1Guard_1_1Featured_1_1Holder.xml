@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Guard::Featured::Holder</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Value</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1aee1fe2a62f54947774d4e5168c868134" prot="public" static="no">
+        <type>Holder&lt; _Value &gt;</type>
+        <definition>using ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::ThisType =  Holder&lt;_Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="18" column="13" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1af6b417d40359b7200712be61b75caaad" prot="public" static="no">
+        <type>_Value</type>
+        <definition>using ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::Value =  _Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="19" column="13" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1adf14ca1593ece66f0c5be722c7fa864d" prot="public" static="no">
+        <type><ref refid="namespaceScL_1_1Feature_1abe225f13d610bb62bca434c955aa79c9" kindref="member">::ScL::Feature::ValueGuard</ref>&lt; WrapperRefer &gt;</type>
+        <definition>using ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::ValueGuard =  ::ScL::Feature::ValueGuard&lt;WrapperRefer&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueGuard</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::ValueGuard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="20" column="13" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a29c4ce2e441c144075d9ba9e505c8063" prot="public" static="no" mutable="no">
+        <type>ValueGuard</type>
+        <definition>ValueGuard ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::m_value_guard</definition>
+        <argsstring></argsstring>
+        <name>m_value_guard</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::m_value_guard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="22" column="24" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a9782fb7a05bb9f90de76f1331596eb87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(WrapperRefer refer)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::Holder</qualifiedname>
+        <param>
+          <type>WrapperRefer</type>
+          <declname>refer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="24" column="13" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a533789c76cfbdc71ec007da547719025" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>::std::enable_if_t&lt;                    ::std::is_same&lt;ThisType, ::std::decay_t&lt;_HolderRefer&gt; &gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::Holder&lt; _Value &gt;::value</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>value</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::Holder::value</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+<para>Access to internal value of Holder for any king of referencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="32" column="39" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="32" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="16" column="9" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="17" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a9782fb7a05bb9f90de76f1331596eb87" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a29c4ce2e441c144075d9ba9e505c8063" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>m_value_guard</name></member>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1aee1fe2a62f54947774d4e5168c868134" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>ThisType</name></member>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1af6b417d40359b7200712be61b75caaad" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1a533789c76cfbdc71ec007da547719025" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>value</name></member>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder_1adf14ca1593ece66f0c5be722c7fa864d" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured::Holder</scope><name>ValueGuard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

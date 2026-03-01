@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::ValueLockForNonWrapped</compoundname>
+    <includes refid="value__lock_8h" local="no">value_lock.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Refer_</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a49cf5a02fe33cc1018b7dd12f406ae6c" prot="private" static="no">
+        <type><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped" kindref="compound">ValueLockForNonWrapped</ref>&lt; Refer_ &gt;</type>
+        <definition>using ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ThisType =  ValueLockForNonWrapped&lt;Refer_&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="41" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a36ca9ad88454e632b9538ce96ef97e16" prot="public" static="no">
+        <type>Refer_</type>
+        <definition>using ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::Refer =  Refer_</definition>
+        <argsstring></argsstring>
+        <name>Refer</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::Refer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="44" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a6510d0c8dde8a3d441029a1e40bc9ec5" prot="public" static="no">
+        <type><ref refid="namespaceScL_1_1Feature_1a2e401d4880d939bf7b55ccfe6d8c86bf" kindref="member">::ScL::Feature::WrapperLock</ref>&lt; Refer_ &gt;</type>
+        <definition>using ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::WrapperLock =  ::ScL::Feature::WrapperLock&lt;Refer_&gt;</definition>
+        <argsstring></argsstring>
+        <name>WrapperLock</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::WrapperLock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="45" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1abd21c7fe19fa2507705ec071f5618612" prot="public" static="no">
+        <type>typename WrapperLock::ValueAccess</type>
+        <definition>using ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ValueAccess =  typename WrapperLock::ValueAccess</definition>
+        <argsstring></argsstring>
+        <name>ValueAccess</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ValueAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="47" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a66ddbac23189a36b8cd9290cbd0a82eb" prot="public" static="no">
+        <type>typename WrapperLock::PointerAccess</type>
+        <definition>using ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::PointerAccess =  typename WrapperLock::PointerAccess</definition>
+        <argsstring></argsstring>
+        <name>PointerAccess</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::PointerAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="48" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1ae8061b84dabd9a7bd3169f114a0f90df" prot="private" static="no" mutable="no">
+        <type>WrapperLock</type>
+        <definition>WrapperLock ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::m_wrapper_lock</definition>
+        <argsstring></argsstring>
+        <name>m_wrapper_lock</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::m_wrapper_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="56" column="21" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a57af26313c03ccddaefd4f0374fa8883" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ValueLockForNonWrapped</definition>
+        <argsstring>(ThisType const &amp;other)=delete</argsstring>
+        <name>ValueLockForNonWrapped</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ValueLockForNonWrapped</qualifiedname>
+        <param>
+          <type><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped" kindref="compound">ThisType</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="59" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1ad681034bacd689f66a7eafc0e0594d1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ValueLockForNonWrapped</definition>
+        <argsstring>(ThisType &amp;&amp;other)=delete</argsstring>
+        <name>ValueLockForNonWrapped</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ValueLockForNonWrapped</qualifiedname>
+        <param>
+          <type><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped" kindref="compound">ThisType</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="60" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a23d41ad620c76f48795a1472d322d13f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ValueLockForNonWrapped</definition>
+        <argsstring>(Refer refer)</argsstring>
+        <name>ValueLockForNonWrapped</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ValueLockForNonWrapped</qualifiedname>
+        <param>
+          <type>Refer</type>
+          <declname>refer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="63" column="19" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a00a8f3fd6dd038eee3d0e7c98e4a1605" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::ValueLockForNonWrapped</definition>
+        <argsstring>(WrapperLock &amp;&amp;other)</argsstring>
+        <name>ValueLockForNonWrapped</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::ValueLockForNonWrapped</qualifiedname>
+        <param>
+          <type>WrapperLock &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="67" column="19" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1aae23e4c445ba395a264651b641b39b14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::~ValueLockForNonWrapped</definition>
+        <argsstring>()</argsstring>
+        <name>~ValueLockForNonWrapped</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::~ValueLockForNonWrapped</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="71" column="9" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a75d446243ebbf8ffbff744f08783f7c2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr void</type>
+        <definition>constexpr void ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::lock</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>lock</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="73" column="24" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a3a9b31b66d08091e75ddba0332df92b1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr void</type>
+        <definition>constexpr void ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::unlock</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>unlock</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::unlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="75" column="24" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a61e6ac8facd615f1e14abdf751bc2628" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type_</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::lockFor</definition>
+        <argsstring>() -&gt; ::std::enable_if_t&lt;::std::is_same_v&lt; Refer_, Type_ &gt;, void &gt;</argsstring>
+        <name>lockFor</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::lockFor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="78" column="24" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="78" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a7f6e41f2c58b3aa5d621a7ad14216e30" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr ValueAccess</type>
+        <definition>constexpr ValueAccess ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::valueAccess</definition>
+        <argsstring>() const</argsstring>
+        <name>valueAccess</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::valueAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="81" column="31" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1af8b8d65238b7cc3fad3134f858766700" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr PointerAccess</type>
+        <definition>constexpr PointerAccess ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::pointerAccess</definition>
+        <argsstring>() const</argsstring>
+        <name>pointerAccess</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::pointerAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="83" column="33" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a15db94d4e0667dd88d8e4bdfb4a1e9e1" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type_</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto ScL::Feature::Detail::ValueLockForNonWrapped&lt; Refer_ &gt;::valueAccessFor</definition>
+        <argsstring>() const noexcept -&gt; ::std::enable_if_t&lt;::std::is_same_v&lt; Refer_, Type_ &gt;, Type_ &gt;</argsstring>
+        <name>valueAccessFor</name>
+        <qualifiedname>ScL::Feature::Detail::ValueLockForNonWrapped::valueAccessFor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/value_lock.h" line="86" column="24" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="86" bodyend="90"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This is the WrapperLock specialization for non wrapped value. It does nothing around a value. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/value_lock.h" line="39" column="5" bodyfile="module/feature/src/scl/feature/access/value_lock.h" bodystart="40" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a75d446243ebbf8ffbff744f08783f7c2" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>lock</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a61e6ac8facd615f1e14abdf751bc2628" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>lockFor</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1ae8061b84dabd9a7bd3169f114a0f90df" prot="private" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>m_wrapper_lock</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a66ddbac23189a36b8cd9290cbd0a82eb" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>PointerAccess</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1af8b8d65238b7cc3fad3134f858766700" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>pointerAccess</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a36ca9ad88454e632b9538ce96ef97e16" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>Refer</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a49cf5a02fe33cc1018b7dd12f406ae6c" prot="private" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ThisType</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a3a9b31b66d08091e75ddba0332df92b1" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>unlock</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1abd21c7fe19fa2507705ec071f5618612" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ValueAccess</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a7f6e41f2c58b3aa5d621a7ad14216e30" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>valueAccess</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a15db94d4e0667dd88d8e4bdfb4a1e9e1" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>valueAccessFor</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a57af26313c03ccddaefd4f0374fa8883" prot="private" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ValueLockForNonWrapped</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1ad681034bacd689f66a7eafc0e0594d1b" prot="private" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ValueLockForNonWrapped</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a23d41ad620c76f48795a1472d322d13f" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ValueLockForNonWrapped</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a00a8f3fd6dd038eee3d0e7c98e4a1605" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>ValueLockForNonWrapped</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1a6510d0c8dde8a3d441029a1e40bc9ec5" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>WrapperLock</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1ValueLockForNonWrapped_1aae23e4c445ba395a264651b641b39b14" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::ValueLockForNonWrapped</scope><name>~ValueLockForNonWrapped</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

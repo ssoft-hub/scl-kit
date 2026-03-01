@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Reference::Raw::Holder</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Value</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a1aa1582455a17fe504cff0d4ba4db8ab" prot="public" static="no">
+        <type>Holder&lt; _Value &gt;</type>
+        <definition>using ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::ThisType =  Holder&lt;_Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="19" column="13" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a03e76d91ee94e2fbd20e76e0c740585c" prot="public" static="no">
+        <type>_Value</type>
+        <definition>using ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Value =  _Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="20" column="13" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a53b03b8efd87b90abef68c2232f47a06" prot="public" static="no">
+        <type>Value *</type>
+        <definition>using ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::ValuePtr =  Value *</definition>
+        <argsstring></argsstring>
+        <name>ValuePtr</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::ValuePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="21" column="13" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1abbfb9cc5900142103cd4a5ac8bce661f" prot="public" static="no" mutable="no">
+        <type>ValuePtr</type>
+        <definition>ValuePtr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::m_value_ptr</definition>
+        <argsstring></argsstring>
+        <name>m_value_ptr</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::m_value_ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="23" column="22" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1af58adcd6e941ba6ca9ae8d9249ae82ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Value &amp;&amp;other)=delete</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Value &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="25" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a06487b3f9bf56f0a44a9c408da7108d9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Value &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Value &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="27" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1afcb2e5296b09855afac2bb6af476b9e5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="31" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a2597e1a5d7b2bf768329a4e9d724bf40" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="35" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1afbb3969bf580cc563623b5a7e14d84ee" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="39" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab2d661f077b769883c7a122dffdb11d9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="43" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae6559f4b9f22925b30894b413f4f9c7c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="47" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a3286950e46ad4edef6edc1e552b97c0d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="51" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae9caf9818a2bf56aad3c85ccc2b9cafa" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="55" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ac90df3b1fe56342026cae3af680c7172" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="59" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a4de4f214ccb1c6817e93ed6bd578feed" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="64" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae302958e2e0d254c89683dcc3a8cb4c9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="70" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ac4526f1e82c014c43cb693b33efb9822" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="76" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a0a43e58f79259bb5a2e1560ba121564e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;&amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="82" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab2f0898ad5418a0e4ac6d64aca203945" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="88" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a1f86ec0b88bb6774e972faec88cd68a8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="93" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1acb050e3300ffc9911a22854c03d0f43d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="98" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab16ae906e105fdffd9154c1de1fa157c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;other) noexcept</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="103" column="23" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="103" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a6e889041aeab62831174f8a8fdff3ccd" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::Reference::Raw::Holder&lt; _Value &gt;::value</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder) noexcept</argsstring>
+        <name>value</name>
+        <qualifiedname>ScL::Feature::Reference::Raw::Holder::value</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to internal value of Holder for any king of referencies. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="111" column="39" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="111" bodyend="116"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/reference/raw.h" line="17" column="9" bodyfile="module/feature/src/scl/feature/tool/reference/raw.h" bodystart="18" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1af58adcd6e941ba6ca9ae8d9249ae82ea" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a06487b3f9bf56f0a44a9c408da7108d9" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1afcb2e5296b09855afac2bb6af476b9e5" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a2597e1a5d7b2bf768329a4e9d724bf40" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1afbb3969bf580cc563623b5a7e14d84ee" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab2d661f077b769883c7a122dffdb11d9" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae6559f4b9f22925b30894b413f4f9c7c" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a3286950e46ad4edef6edc1e552b97c0d" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae9caf9818a2bf56aad3c85ccc2b9cafa" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ac90df3b1fe56342026cae3af680c7172" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a4de4f214ccb1c6817e93ed6bd578feed" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ae302958e2e0d254c89683dcc3a8cb4c9" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ac4526f1e82c014c43cb693b33efb9822" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a0a43e58f79259bb5a2e1560ba121564e" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab2f0898ad5418a0e4ac6d64aca203945" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a1f86ec0b88bb6774e972faec88cd68a8" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1acb050e3300ffc9911a22854c03d0f43d" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1ab16ae906e105fdffd9154c1de1fa157c" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1abbfb9cc5900142103cd4a5ac8bce661f" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>m_value_ptr</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a1aa1582455a17fe504cff0d4ba4db8ab" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>ThisType</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a03e76d91ee94e2fbd20e76e0c740585c" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a6e889041aeab62831174f8a8fdff3ccd" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>value</name></member>
+      <member refid="structScL_1_1Feature_1_1Reference_1_1Raw_1_1Holder_1a53b03b8efd87b90abef68c2232f47a06" prot="public" virt="non-virtual"><scope>ScL::Feature::Reference::Raw::Holder</scope><name>ValuePtr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__utility__meta" kind="group">
+    <compoundname>scl_utility_meta</compoundname>
+    <title>ScL Meta Infos</title>
+    <innerfile refid="enum_8h">enum.h</innerfile>
+    <innerfile refid="symbol_8h">symbol.h</innerfile>
+    <innerfile refid="type_8h">type.h</innerfile>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>auto</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</type>
+        <definition>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view scl::enum_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>enum_name</name>
+        <qualifiedname>scl::enum_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the qualified string name of an enum member at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value whose name needs to be extracted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing the qualified name of the enum member.</para>
+</simplesect>
+Extracts the enum member name from the function signature. On MSVC, it automatically removes the &apos;enum &apos; prefix for consistency.</para>
+<para><simplesect kind="note"><para>The result usually includes the enum type name (e.g., &quot;Color::Red&quot;) depending on how the enum was defined and the compiler used.</para>
+</simplesect>
+<programlisting><codeline><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Color<sp/>{<sp/>Red<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::enum_name&lt;Color::Red&gt;();<sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>&quot;Color::Red&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/enum.h" line="84" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="84" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>auto</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</type>
+        <definition>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view scl::enum_short_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>enum_short_name</name>
+        <qualifiedname>scl::enum_short_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the short string name of an enum member at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing only the member name (e.g., &quot;Red&quot;).</para>
+</simplesect>
+This is a convenience wrapper that takes the result of <ref refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kindref="member">scl::enum_name&lt;V&gt;()</ref> and strips all type and namespace qualifiers.</para>
+<para><programlisting><codeline><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gfx<sp/>{<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Mode<sp/>{<sp/>Fast<sp/>};<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::enum_short_name&lt;gfx::Mode::Fast&gt;();<sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>&quot;Fast&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/enum.h" line="116" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="116" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>auto</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr ::std::string_view</type>
+        <definition>constexpr ::std::string_view scl::symbol_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>symbol_name</name>
+        <qualifiedname>scl::symbol_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the qualified string name of a symbol at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the symbol (global function, class method, or data member). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing the qualified name of the symbol.</para>
+</simplesect>
+This function extracts the symbol name from the decorated signature and performs aggressive cleanup of compiler-specific artifacts such as:<itemizedlist>
+<listitem><para>Address operators (&apos;&amp;&apos;)</para>
+</listitem><listitem><para>Parentheses used for grouping (common on MSVC for global variables)</para>
+</listitem><listitem><para>Leading and trailing whitespace</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Processor<sp/>{<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run()<sp/>{}<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::symbol_name&lt;&amp;Processor::run&gt;();<sp/></highlight><highlight class="comment">//<sp/>&quot;Processor::run&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>global_var<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>var_name<sp/>=<sp/>::scl::symbol_name&lt;&amp;global_var&gt;();<sp/></highlight><highlight class="comment">//<sp/>&quot;global_var&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/symbol.h" line="105" column="34" bodyfile="module/utility/src/scl/utility/meta/symbol.h" bodystart="105" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>auto</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr ::std::string_view</type>
+        <definition>constexpr ::std::string_view scl::symbol_short_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>symbol_short_name</name>
+        <qualifiedname>scl::symbol_short_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the short string name of a symbol at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the symbol. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing only the symbol identifier (e.g., &quot;run&quot;).</para>
+</simplesect>
+Strips all namespace and class qualifiers from the result of <ref refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kindref="member">scl::symbol_name&lt;S&gt;()</ref>. Ideal for reflection-like tasks where only the member name is required.</para>
+<para><programlisting><codeline><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">sys<sp/>{<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Clock<sp/>{<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tick()<sp/>{}<sp/>};<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::symbol_short_name&lt;sys::Clock::tick&gt;();<sp/></highlight><highlight class="comment">//<sp/>&quot;tick&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/symbol.h" line="145" column="34" bodyfile="module/utility/src/scl/utility/meta/symbol.h" bodystart="145" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto scl::type_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>type_name</name>
+        <qualifiedname>scl::type_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the string name of the template type T at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type whose name needs to be extracted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing the human-readable name of the type.</para>
+</simplesect>
+This function uses compiler-specific macros (<computeroutput>__FUNCSIG__</computeroutput> on MSVC and <computeroutput>__PRETTY_FUNCTION__</computeroutput> on GCC/Clang) to extract the type name from the decorated function signature. The result is evaluated at compile-time.</para>
+<para><simplesect kind="note"><para>On MSVC, the output includes &apos;struct &apos;, &apos;class &apos;, &apos;union &apos; keywords as part of the type name (e.g., &quot;struct MyType&quot; instead of &quot;MyType&quot;). This differs from GCC/Clang which omit these keywords.</para>
+</simplesect>
+<programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyType<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::type_name&lt;MyType&gt;();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>MSVC:<sp/>Returns<sp/>&quot;struct<sp/>MyType&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>GCC/Clang:<sp/>Returns<sp/>&quot;MyType&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>int_name<sp/>=<sp/>::scl::type_name&lt;int&gt;();<sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>&quot;int&quot;<sp/>on<sp/>all<sp/>compilers</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/type.h" line="118" column="20" bodyfile="module/utility/src/scl/utility/meta/type.h" bodystart="118" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto scl::type_short_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>type_short_name</name>
+        <qualifiedname>scl::type_short_name</qualifiedname>
+        <briefdescription>
+<para>Retrieves the short name of the template type T at compile-time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type whose name needs to be extracted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ::std::string_view containing the name of the type without namespaces, class qualifiers, or template arguments.</para>
+</simplesect>
+This function first extracts the full name using <ref refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kindref="member">scl::type_name&lt;T&gt;()</ref>, then strips all leading namespace and class scopes by finding the last &apos;::&apos; delimiter, and finally removes template arguments by cutting off everything from &apos;&lt;&apos; onwards.</para>
+<para><programlisting><codeline><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">app::core<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Task<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>full<sp/>=<sp/>::scl::type_name&lt;app::core::Task&lt;int&gt;&gt;();<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;app::core::Task&lt;int&gt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::type_short_name&lt;app::core::Task&lt;int&gt;&gt;();<sp/></highlight><highlight class="comment">//<sp/>&quot;Task&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/meta/type.h" line="150" column="20" bodyfile="module/utility/src/scl/utility/meta/type.h" bodystart="150" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Meta-level utilities for C++. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

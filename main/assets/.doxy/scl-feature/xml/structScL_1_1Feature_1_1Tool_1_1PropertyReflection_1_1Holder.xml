@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Tool::PropertyReflection::Holder</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Value_</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a69c292515390dfa01000c3affbaf5068" prot="public" static="no">
+        <type>Holder&lt; Value_ &gt;</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::ThisType =  Holder&lt;Value_&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="19" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1abe3104ba69a618077b7a582a70d8c1d1" prot="public" static="no">
+        <type>Value_</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::Value =  Value_</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="20" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ae6a5e1ab6cffaf30534529dd36705404" prot="public" static="no">
+        <type>WrapperHolder_</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::WrapperHolder =  WrapperHolder_</definition>
+        <argsstring></argsstring>
+        <name>WrapperHolder</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::WrapperHolder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="22" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a6ffb672075e7b8ee6596d3d28974ce6c" prot="public" static="no">
+        <type>typename WrapperHolder::Value</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::WrappedValue =  typename WrapperHolder::Value</definition>
+        <argsstring></argsstring>
+        <name>WrappedValue</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::WrappedValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="23" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a497195539b56ac4b8d07308c32d5f96b" prot="public" static="no">
+        <type>::std::remove_reference_t&lt; Value &gt;</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::Type =  ::std::remove_reference_t&lt;Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="24" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a45c44381be7fc2ce7c878f6d97e53afd" prot="public" static="no">
+        <type>::std::remove_reference_t&lt; WrappedValue &gt;</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::WrappedType =  ::std::remove_reference_t&lt;WrappedValue&gt;</definition>
+        <argsstring></argsstring>
+        <name>WrappedType</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::WrappedType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="25" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a310543ecaa306c1febffa09099e406c3" prot="public" static="no">
+        <type>WrapperHolder *</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::WrapperHolderPointer =  WrapperHolder *</definition>
+        <argsstring></argsstring>
+        <name>WrapperHolderPointer</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::WrapperHolderPointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="26" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a0bbbec06f9cfa276a384e38c9fd3ea0c" prot="public" static="no">
+        <type>Type WrappedType::*</type>
+        <definition>using ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::Property =  Type WrappedType::*</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::Property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="27" column="13" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ace5b26c524f290521072a4bf2dde0be9" prot="public" static="no" mutable="no">
+        <type>WrapperHolderPointer</type>
+        <definition>WrapperHolderPointer ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::m_holder</definition>
+        <argsstring></argsstring>
+        <name>m_holder</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::m_holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="29" column="34" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ac608b799b6661b8f2b785020cd128d31" prot="public" static="no" mutable="no">
+        <type>Property</type>
+        <definition>Property ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::m_property</definition>
+        <argsstring></argsstring>
+        <name>m_property</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::m_property</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="30" column="22" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1aefdd0e49e90d97cafec834e228f0ca33" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::Holder</definition>
+        <argsstring>(WrapperHolderPointer holder, Property property)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::Holder</qualifiedname>
+        <param>
+          <type>WrapperHolderPointer</type>
+          <declname>holder</declname>
+        </param>
+        <param>
+          <type>Property</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="32" column="23" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a9389c5ff812973fe5e7fd414147c5d28" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::guard</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>guard</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::guard</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="38" column="35" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a0495e07c418c4edccdc64cd2ff599ad2" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::unguard</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>unguard</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::unguard</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="48" column="35" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a3af0596c5afd7d2f12ead6b7484739cc" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::baseValue</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>baseValue</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::baseValue</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="58" column="39" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a9c7f3c8cbb5c058ead9e0a2e4546de94" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::Tool::PropertyReflection&lt; WrapperHolder_ &gt;::Holder&lt; Value_ &gt;::value</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>value</name>
+        <qualifiedname>ScL::Feature::Tool::PropertyReflection::Holder::value</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="68" column="39" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="68" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="17" column="9" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="18" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a3af0596c5afd7d2f12ead6b7484739cc" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>baseValue</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a9389c5ff812973fe5e7fd414147c5d28" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>guard</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1aefdd0e49e90d97cafec834e228f0ca33" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ace5b26c524f290521072a4bf2dde0be9" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>m_holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ac608b799b6661b8f2b785020cd128d31" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>m_property</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a0bbbec06f9cfa276a384e38c9fd3ea0c" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>Property</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a69c292515390dfa01000c3affbaf5068" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>ThisType</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a497195539b56ac4b8d07308c32d5f96b" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>Type</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a0495e07c418c4edccdc64cd2ff599ad2" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>unguard</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1abe3104ba69a618077b7a582a70d8c1d1" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a9c7f3c8cbb5c058ead9e0a2e4546de94" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>value</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a45c44381be7fc2ce7c878f6d97e53afd" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>WrappedType</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a6ffb672075e7b8ee6596d3d28974ce6c" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>WrappedValue</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1ae6a5e1ab6cffaf30534529dd36705404" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>WrapperHolder</name></member>
+      <member refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder_1a310543ecaa306c1febffa09099e406c3" prot="public" virt="non-virtual"><scope>ScL::Feature::Tool::PropertyReflection::Holder</scope><name>WrapperHolderPointer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1WrapperSimplifyHelper" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::WrapperSimplifyHelper</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Type</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1WrapperSimplifyHelper_1a5390675217a8dc7d405c4e5f5bb2bb23" prot="public" static="no">
+        <type>_Type</type>
+        <definition>using ScL::Feature::Detail::WrapperSimplifyHelper&lt; _Type &gt;::Type =  _Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::WrapperSimplifyHelper::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper.h" line="62" column="9" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/wrapper.h" line="60" column="5" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="61" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1WrapperSimplifyHelper_1a5390675217a8dc7d405c4e5f5bb2bb23" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::WrapperSimplifyHelper</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

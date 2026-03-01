@@ -1,0 +1,134 @@
+
+
+# File type.h
+
+[**File List**](files.md) **>** [**meta**](dir_85c7392cbdcb0ae852d6674ea46dde19.md) **>** [**type.h**](type_8h.md)
+
+[Go to the documentation of this file](type_8h.md)
+
+
+```C++
+#pragma once
+
+#include <string_view>
+
+struct p8qim3n2a_t
+{};
+
+namespace scl::detail
+{
+    // Helper to find the last "::" that is NOT inside angle brackets
+    constexpr auto find_last_scope_operator(::std::string_view str) noexcept
+    {
+        auto last_pos = ::std::string_view::npos;
+        int bracket_depth = 0;
+
+        for (::std::size_t i = 0; i < str.size(); ++i)
+            if (str[i] == '<')
+                ++bracket_depth;
+            else if (str[i] == '>')
+                --bracket_depth;
+            else if (bracket_depth == 0 && str[i] == ':' && i + 1 < str.size() && str[i + 1] == ':')
+                last_pos = i;
+
+        return last_pos;
+    }
+
+    template <typename T>
+    constexpr ::std::string_view type_name_pattern_text() noexcept
+    {
+#if defined(_MSC_VER) && !defined(__clang__)
+        return __FUNCSIG__;
+#else
+        return __PRETTY_FUNCTION__;
+#endif
+    }
+
+#if defined(_MSC_VER) && !defined(__clang__)
+    // MSVC-specific extraction using angle brackets
+    // Format: "ReturnType __cdecl FunctionName<TYPE>(void)"
+    // We need to find the last < before >(void) pattern
+    constexpr ::std::size_t type_name_pattern_prefix_length() noexcept
+    {
+        constexpr auto text = type_name_pattern_text<p8qim3n2a_t>();
+        // Find the closing pattern >( first
+        constexpr auto close_pattern = text.rfind(">(");
+        if constexpr (close_pattern == ::std::string_view::npos)
+            return 0;
+        // Find the last < before the closing pattern
+        constexpr auto before_close = text.substr(0, close_pattern);
+        constexpr auto open_bracket = before_close.find_last_of('<');
+        return (open_bracket != ::std::string_view::npos) ? open_bracket + 1 : 0;
+    }
+
+    constexpr ::std::size_t type_name_pattern_suffix_length() noexcept
+    {
+        constexpr auto text = type_name_pattern_text<p8qim3n2a_t>();
+        // Find the closing > followed by (void) pattern
+        constexpr auto close_pattern = text.rfind(">(");
+        return (close_pattern != ::std::string_view::npos) ? text.length() - close_pattern : 0;
+    }
+#else
+    // GCC/Clang/Clang-on-MSVC: use marker search
+    constexpr auto type_name_pattern_prefix_length() noexcept
+    {
+        constexpr auto prefix_length = type_name_pattern_text<p8qim3n2a_t>().find("p8qim3n2a_t");
+        return prefix_length;
+    }
+
+    constexpr auto type_name_pattern_suffix_length() noexcept
+    {
+        constexpr auto suffix = type_name_pattern_text<p8qim3n2a_t>().length() -
+            type_name_pattern_prefix_length() - ::std::string_view("p8qim3n2a_t").length();
+        return suffix;
+    }
+#endif
+
+} // namespace scl::detail
+
+namespace scl
+{
+    template <typename T>
+    constexpr auto type_name() noexcept
+    {
+        constexpr auto pattern_text = detail::type_name_pattern_text<T>();
+        constexpr auto prefix_length = detail::type_name_pattern_prefix_length();
+        constexpr auto suffix_length = detail::type_name_pattern_suffix_length();
+
+        static_assert(!pattern_text.empty());
+
+        constexpr auto text_length = pattern_text.length() - prefix_length - suffix_length;
+        return pattern_text.substr(prefix_length, text_length);
+    }
+
+    template <typename T>
+    constexpr auto type_short_name() noexcept
+    {
+        constexpr auto result = type_name<T>();
+
+        // Find the last "::" that is NOT inside template arguments (angle brackets)
+        constexpr auto last_scope_pos = detail::find_last_scope_operator(result);
+
+        constexpr auto after_scope =
+            (last_scope_pos != ::std::string_view::npos) ? result.substr(last_scope_pos + 2) : result;
+
+        // Remove struct/class/union prefix from short name
+        constexpr auto without_prefix = after_scope.starts_with("struct ") ? after_scope.substr(7)
+            : after_scope.starts_with("class ")                            ? after_scope.substr(6)
+            : after_scope.starts_with("union ")                            ? after_scope.substr(6)
+            : after_scope.starts_with("enum ")
+            ? after_scope.substr(5)
+            : after_scope;
+
+        // Remove template arguments (everything from '<' onwards)
+        constexpr auto template_start = without_prefix.find('<');
+        if constexpr (template_start != ::std::string_view::npos)
+            return without_prefix.substr(0, template_start);
+        else
+            return without_prefix;
+    }
+
+} // namespace scl
+```
+
+

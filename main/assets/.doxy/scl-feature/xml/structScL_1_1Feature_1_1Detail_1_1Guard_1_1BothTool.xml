@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::Guard::BothTool</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1_1Holder" prot="public">ScL::Feature::Detail::Guard::BothTool::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Invokable</type>
+      </param>
+      <param>
+        <type>typename _LeftWrapperRefer</type>
+      </param>
+      <param>
+        <type>typename _RightWrapperRefer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1af7cda7096ccc8b3ef65afbeb97e13b8d" prot="public" static="no">
+        <type>_Invokable</type>
+        <definition>using ScL::Feature::Detail::Guard::BothTool&lt; _Invokable, _LeftWrapperRefer, _RightWrapperRefer &gt;::Invokable =  _Invokable</definition>
+        <argsstring></argsstring>
+        <name>Invokable</name>
+        <qualifiedname>ScL::Feature::Detail::Guard::BothTool::Invokable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator_tool.h" line="118" column="9" bodyfile="module/feature/src/scl/feature/detail/operator_tool.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1adbd41554ae72b7d3acc66de41514a6f6" prot="public" static="no">
+        <type>_LeftWrapperRefer</type>
+        <definition>using ScL::Feature::Detail::Guard::BothTool&lt; _Invokable, _LeftWrapperRefer, _RightWrapperRefer &gt;::LeftWrapperRefer =  _LeftWrapperRefer</definition>
+        <argsstring></argsstring>
+        <name>LeftWrapperRefer</name>
+        <qualifiedname>ScL::Feature::Detail::Guard::BothTool::LeftWrapperRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator_tool.h" line="119" column="9" bodyfile="module/feature/src/scl/feature/detail/operator_tool.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1a80fec3f4db0218b4efb3057e8d7a1860" prot="public" static="no">
+        <type>_RightWrapperRefer</type>
+        <definition>using ScL::Feature::Detail::Guard::BothTool&lt; _Invokable, _LeftWrapperRefer, _RightWrapperRefer &gt;::RightWrapperRefer =  _RightWrapperRefer</definition>
+        <argsstring></argsstring>
+        <name>RightWrapperRefer</name>
+        <qualifiedname>ScL::Feature::Detail::Guard::BothTool::RightWrapperRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator_tool.h" line="120" column="9" bodyfile="module/feature/src/scl/feature/detail/operator_tool.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/operator_tool.h" line="116" column="5" bodyfile="module/feature/src/scl/feature/detail/operator_tool.h" bodystart="117" bodyend="170"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1af7cda7096ccc8b3ef65afbeb97e13b8d" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Guard::BothTool</scope><name>Invokable</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1adbd41554ae72b7d3acc66de41514a6f6" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Guard::BothTool</scope><name>LeftWrapperRefer</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool_1a80fec3f4db0218b4efb3057e8d7a1860" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Guard::BothTool</scope><name>RightWrapperRefer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Detail_1_1CastingMixIn_3_01Self___00_01Wrapper_3_01Value___00_01Tool___01_4_01_4" kind="class" language="C++" prot="private">
+    <compoundname>ScL::Feature::Detail::CastingMixIn&lt; Self_, Wrapper&lt; Value_, Tool_ &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::conditional_t&lt; !::ScL::Feature::Detail::HolderInterface::doesUnguardStaticMethodExist&lt; Tool_::template Holder&lt; Value_ &gt;, Tool_::template Holder&lt; Value_ &gt; &amp; &gt;() &amp;&amp;::std::is_same_v&lt; Value_ &amp;, ::std::remove_cv_t&lt;::std::remove_reference_t&lt; Value_ &gt; &gt; &amp; &gt;, CastingLValue&lt; Self_, Value_ &gt;, CastingLValueEmpty&lt; Self_, Value_ &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::conditional_t&lt; !::ScL::Feature::Detail::HolderInterface::doesUnguardStaticMethodExist&lt; Tool_::template Holder&lt; Value_ &gt;, Tool_::template Holder&lt; Value_ &gt; const &amp; &gt;() &amp;&amp;::std::is_same_v&lt; Value_ const &amp;, ::std::remove_cv_t&lt;::std::remove_reference_t&lt; Value_ &gt; &gt; const &amp; &gt;, CastingLValueConst&lt; Self_, Value_ &gt;, CastingLValueConstEmpty&lt; Self_, Value_ &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::conditional_t&lt; !::ScL::Feature::Detail::HolderInterface::doesUnguardStaticMethodExist&lt; Tool_::template Holder&lt; Value_ &gt;, Tool_::template Holder&lt; Value_ &gt; &amp;&amp; &gt;() &amp;&amp;::std::is_same_v&lt; Value_ &amp;&amp;, ::std::remove_cv_t&lt;::std::remove_reference_t&lt; Value_ &gt; &gt; &amp;&amp; &gt;, CastingRValue&lt; Self_, Value_ &gt;, CastingRValueEmpty&lt; Self_, Value_ &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::conditional_t&lt; !::ScL::Feature::Detail::HolderInterface::doesUnguardStaticMethodExist&lt; Tool_::template Holder&lt; Value_ &gt;, Tool_::template Holder&lt; Value_ &gt; const &amp;&amp; &gt;() &amp;&amp;::std::is_same_v&lt; Value_ const &amp;&amp;, ::std::remove_cv_t&lt;::std::remove_reference_t&lt; Value_ &gt; &gt; const &amp;&amp; &gt;, CastingRValueConst&lt; Self_, Value_ &gt;, CastingRValueConstEmpty&lt; Self_, Value_ &gt; &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename Self_</type>
+      </param>
+      <param>
+        <type>typename Value_</type>
+      </param>
+      <param>
+        <type>typename Tool_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/wrapper.h" line="400" column="5" bodyfile="module/feature/src/scl/feature/detail/wrapper.h" bodystart="466" bodyend="466"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

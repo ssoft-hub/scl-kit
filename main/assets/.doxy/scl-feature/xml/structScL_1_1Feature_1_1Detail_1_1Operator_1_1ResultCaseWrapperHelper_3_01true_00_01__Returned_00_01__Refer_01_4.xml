@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Returned</type>
+      </param>
+      <param>
+        <type>typename _Refer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a2079aacb89764e45f87cac57b3ed7443" prot="public" static="no">
+        <type>_Returned</type>
+        <definition>using ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Returned =  _Returned</definition>
+        <argsstring></argsstring>
+        <name>Returned</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Returned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="76" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a6a1601584457e6ee6e8e92adaf21b908" prot="public" static="no">
+        <type>::std::decay_t&lt; Returned &gt;</type>
+        <definition>using ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Wrapper =  ::std::decay_t&lt;Returned&gt;</definition>
+        <argsstring></argsstring>
+        <name>Wrapper</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Wrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="77" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a9e25509842350e407b404a663f93ec87" prot="public" static="no">
+        <type>typename Wrapper::Value</type>
+        <definition>using ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Value =  typename Wrapper::Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="79" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1ac0c06b7682538fc31b6b1db8ef61e7bd" prot="public" static="no">
+        <type>::std::conditional_t&lt; ::std::is_reference&lt; Value &gt;::value, ::ScL::Feature::Detail::Operator::BlockedCase, ::ScL::Feature::Detail::Operator::BlockedCase &gt;</type>
+        <definition>using ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Type =  ::std::conditional_t&lt; ::std::is_reference&lt;Value&gt;::value, ::ScL::Feature::Detail::Operator::BlockedCase, ::ScL::Feature::Detail::Operator::BlockedCase&gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/result_switch.h" line="81" column="9" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/result_switch.h" line="74" column="5" bodyfile="module/feature/src/scl/feature/detail/result_switch.h" bodystart="75" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a2079aacb89764e45f87cac57b3ed7443" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;</scope><name>Returned</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1ac0c06b7682538fc31b6b1db8ef61e7bd" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;</scope><name>Type</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a9e25509842350e407b404a663f93ec87" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1ResultCaseWrapperHelper_3_01true_00_01__Returned_00_01__Refer_01_4_1a6a1601584457e6ee6e8e92adaf21b908" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::Operator::ResultCaseWrapperHelper&lt; true, _Returned, _Refer &gt;</scope><name>Wrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

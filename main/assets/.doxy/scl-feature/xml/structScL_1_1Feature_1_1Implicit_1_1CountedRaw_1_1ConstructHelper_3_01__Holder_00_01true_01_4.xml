@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Holder</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1acc71137718daa2ba9f952f8ec60ceb31" prot="public" static="no">
+        <type>typename _Holder::Access</type>
+        <definition>using ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::ConstructHelper&lt; _Holder, true &gt;::Access =  typename _Holder::Access</definition>
+        <argsstring></argsstring>
+        <name>Access</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;::Access</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="75" column="13" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1a9082fd622f22e88d44b05b08f18678e7" prot="public" static="no">
+        <type>typename _Holder::CountedPointer</type>
+        <definition>using ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::ConstructHelper&lt; _Holder, true &gt;::CountedPointer =  typename _Holder::CountedPointer</definition>
+        <argsstring></argsstring>
+        <name>CountedPointer</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;::CountedPointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="76" column="13" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1ad99995a6978596c0dbb270aea29a34ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>_Arguments</declname>
+            <defname>_Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>CountedPointer</type>
+        <definition>static CountedPointer ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::ConstructHelper&lt; _Holder, true &gt;::makePointer</definition>
+        <argsstring>(_Arguments &amp;&amp;...)</argsstring>
+        <name>makePointer</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;::makePointer</qualifiedname>
+        <param>
+          <type>_Arguments &amp;&amp;</type>
+          <declname>...</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="79" column="35" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1a30a80b9a5b806a4927708500781a87fc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Access</type>
+        <definition>static Access ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::ConstructHelper&lt; _Holder, true &gt;::access</definition>
+        <argsstring>(CountedPointer)</argsstring>
+        <name>access</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;::access</qualifiedname>
+        <param>
+          <type>CountedPointer</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="84" column="27" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="73" column="9" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="74" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1acc71137718daa2ba9f952f8ec60ceb31" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</scope><name>Access</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1a30a80b9a5b806a4927708500781a87fc" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</scope><name>access</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1a9082fd622f22e88d44b05b08f18678e7" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</scope><name>CountedPointer</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4_1ad99995a6978596c0dbb270aea29a34ee" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</scope><name>makePointer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

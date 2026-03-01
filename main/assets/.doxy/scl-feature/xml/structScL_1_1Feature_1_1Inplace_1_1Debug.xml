@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Inplace_1_1Debug" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Debug</compoundname>
+    <includes refid="debug_8h" local="no">debug.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Inplace_1_1Debug_1_1Holder" prot="public">ScL::Feature::Inplace::Debug::Holder</innerclass>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Debug_1a549bf141f3498cf9c556227cbbf8cb9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ScL::Feature::Inplace::Debug::outText</definition>
+        <argsstring>(char const *text)</argsstring>
+        <name>outText</name>
+        <qualifiedname>ScL::Feature::Inplace::Debug::outText</qualifiedname>
+        <param>
+          <type>char const *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/debug.h" line="54" column="21" bodyfile="module/feature/src/scl/feature/tool/inplace/debug.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования значения &quot;по месту&quot;. Определение &quot;по месту&quot; означает, что для значения не используется специальное размещение в куче и оно является неотъемлемой частью пространства имен, в котором это значение определено. Отличается от <ref refid="structScL_1_1Feature_1_1Inplace_1_1Default" kindref="compound">ScL::Feature::Inplace::Default</ref> наличием отладочного вывода в ::std::cout. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/debug.h" line="52" column="5" bodyfile="module/feature/src/scl/feature/tool/inplace/debug.h" bodystart="53" bodyend="257"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Debug_1a549bf141f3498cf9c556227cbbf8cb9d" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Debug</scope><name>outText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

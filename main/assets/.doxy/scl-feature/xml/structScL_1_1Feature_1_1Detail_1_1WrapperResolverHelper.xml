@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::WrapperResolverHelper</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _LeftWrapper</type>
+      </param>
+      <param>
+        <type>typename _RightRefer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a17f9e66f985d5f31a8076e8f3cc612dd" prot="public" static="no">
+        <type>_LeftWrapper</type>
+        <definition>using ScL::Feature::Detail::WrapperResolverHelper&lt; _LeftWrapper, _RightRefer &gt;::LeftWrapper =  _LeftWrapper</definition>
+        <argsstring></argsstring>
+        <name>LeftWrapper</name>
+        <qualifiedname>ScL::Feature::Detail::WrapperResolverHelper::LeftWrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="61" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a4d26ad62cf44750c32c5029e7b17333a" prot="public" static="no">
+        <type>_RightRefer</type>
+        <definition>using ScL::Feature::Detail::WrapperResolverHelper&lt; _LeftWrapper, _RightRefer &gt;::RightRefer =  _RightRefer</definition>
+        <argsstring></argsstring>
+        <name>RightRefer</name>
+        <qualifiedname>ScL::Feature::Detail::WrapperResolverHelper::RightRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="62" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a15aac1a0392a17bba994faae603833c7" prot="public" static="no">
+        <type>::std::remove_reference_t&lt; _RightRefer &gt;</type>
+        <definition>using ScL::Feature::Detail::WrapperResolverHelper&lt; _LeftWrapper, _RightRefer &gt;::RightWrapper =  ::std::remove_reference_t&lt;_RightRefer&gt;</definition>
+        <argsstring></argsstring>
+        <name>RightWrapper</name>
+        <qualifiedname>ScL::Feature::Detail::WrapperResolverHelper::RightWrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="63" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a93053fdd9ea285af5ab14eb3117be072" prot="public" static="no">
+        <type>::std::conditional_t&lt; <ref refid="namespaceScL_1_1Feature_1a97115c3b8a2f4a946c5819ad01565deb" kindref="member">::ScL::Feature::IsThisCompatibleWithOther</ref>&lt; RightWrapper, LeftWrapper &gt;::value, <ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::RightCompatibleWithLeftWrapperResolver</ref>&lt; LeftWrapper, RightRefer &gt;, ::std::conditional_t&lt; <ref refid="namespaceScL_1_1Feature_1adba3a4b9a405d99ee0f5121601e3ebd5" kindref="member">::ScL::Feature::IsThisCompatibleWithPartOfOther</ref>&lt; RightWrapper, LeftWrapper &gt;::value, <ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</ref>&lt; LeftWrapper, RightRefer &gt;, ::std::conditional_t&lt; <ref refid="namespaceScL_1_1Feature_1a1904f017a4129c37192ff479f16b0084" kindref="member">::ScL::Feature::IsPartOfThisCompatibleWithOther</ref>&lt; RightWrapper, LeftWrapper &gt;::value, <ref refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::PartOfRightCompatibleWithLeftWrapperResolver</ref>&lt; LeftWrapper, RightRefer &gt;, <ref refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" kindref="compound">::ScL::Feature::Detail::ValueWrapperResolver</ref>&lt; LeftWrapper, RightRefer &gt; &gt; &gt; &gt;</type>
+        <definition>using ScL::Feature::Detail::WrapperResolverHelper&lt; _LeftWrapper, _RightRefer &gt;::Type =  ::std::conditional_t&lt; ::ScL::Feature::IsThisCompatibleWithOther&lt;RightWrapper, LeftWrapper&gt;::value, ::ScL::Feature::Detail::RightCompatibleWithLeftWrapperResolver&lt;LeftWrapper, RightRefer&gt;, ::std::conditional_t&lt; ::ScL::Feature::IsThisCompatibleWithPartOfOther&lt;RightWrapper, LeftWrapper&gt;::value, ::ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt;LeftWrapper, RightRefer&gt;, ::std::conditional_t&lt; ::ScL::Feature::IsPartOfThisCompatibleWithOther&lt;RightWrapper, LeftWrapper&gt;::value, ::ScL::Feature::Detail::PartOfRightCompatibleWithLeftWrapperResolver&lt;LeftWrapper, RightRefer&gt;, ::ScL::Feature::Detail::ValueWrapperResolver&lt;LeftWrapper, RightRefer&gt; &gt; &gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::WrapperResolverHelper::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="65" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/resolver.h" line="59" column="5" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="60" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a17f9e66f985d5f31a8076e8f3cc612dd" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::WrapperResolverHelper</scope><name>LeftWrapper</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a4d26ad62cf44750c32c5029e7b17333a" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::WrapperResolverHelper</scope><name>RightRefer</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a15aac1a0392a17bba994faae603833c7" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::WrapperResolverHelper</scope><name>RightWrapper</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper_1a93053fdd9ea285af5ab14eb3117be072" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::WrapperResolverHelper</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

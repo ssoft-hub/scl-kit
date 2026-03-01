@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_096185a65b7ad433db0580fac5802b6f" kind="dir">
+    <compoundname>module/feature/src/scl/feature/tool/implicit</compoundname>
+    <innerfile refid="implicit_2raw_8h">raw.h</innerfile>
+    <innerfile refid="implicit_2shared_8h">shared.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/implicit/"/>
+  </compounddef>
+</doxygen>

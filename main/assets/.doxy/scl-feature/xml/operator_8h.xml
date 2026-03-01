@@ -1,0 +1,1160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="operator_8h" kind="file" language="C++">
+    <compoundname>operator.h</compoundname>
+    <includes refid="binary__operator_8h" local="yes">binary_operator.h</includes>
+    <includes refid="unary__operator_8h" local="yes">unary_operator.h</includes>
+    <includes refid="holder__guard_8h" local="no">scl/feature/access/holder_guard.h</includes>
+    <includes refid="value__pointer_8h" local="no">scl/feature/access/value_pointer.h</includes>
+    <includes local="no">scl/utility/preprocessor.h</includes>
+    <includedby refid="detail_2wrapper_8h" local="yes">module/feature/src/scl/feature/detail/wrapper.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>detail/holder_interface.h</label>
+        <link refid="holder__interface_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>scl/feature/access/holder_guard.h</label>
+        <link refid="holder__guard_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>value_guard.h</label>
+        <link refid="value__guard_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>scl/feature/access/value_pointer.h</label>
+        <link refid="value__pointer_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl/feature/access/wrapper_guard.h</label>
+        <link refid="wrapper__guard_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>binary_operator.h</label>
+        <link refid="binary__operator_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/operator.h</label>
+        <link refid="operator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>operator_tool.h</label>
+        <link refid="operator__tool_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>result_switch.h</label>
+        <link refid="result__switch_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>unary_operator.h</label>
+        <link refid="unary__operator_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scl/feature/mixin.h</label>
+        <link refid="mixin_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>scl/feature/tool/inplace/default.h</label>
+        <link refid="default_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scl/feature/trait.h</label>
+        <link refid="trait_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="14">
+        <label>scl/utility/preprocessor.h</label>
+      </node>
+      <node id="8">
+        <label>scl/utility/type_traits.h</label>
+      </node>
+      <node id="19">
+        <label>scl/utility/type_traits/detection/operator.h</label>
+      </node>
+      <node id="9">
+        <label>type_traits</label>
+      </node>
+      <node id="10">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h_source"/>
+      </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/cast.h</label>
+        <link refid="cast_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/operator.h</label>
+        <link refid="operator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/feature/src/scl/feature/detail/property_reflection.h</label>
+        <link refid="property__reflection_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>module/feature/src/scl/feature/guard.h</label>
+        <link refid="guard_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>module/feature/src/scl/feature/reflection/std.h</label>
+        <link refid="std_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>module/feature/src/scl/feature/reflection/std/map.h</label>
+        <link refid="map_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>module/feature/src/scl/feature/reflection/std/pair.h</label>
+        <link refid="pair_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>module/feature/src/scl/feature/reflection/std/vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="operator_8h_1ab32954be747df44a3f7b2d5f8f3fb2ec" prot="public" static="no">
+        <name>SCL_FEATURE_OPERATOR_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="3" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a8719c8492612e2295b46e574349705d4" prot="public" static="no">
+        <name>SCL_GLOBAL_BINARY_OPERATOR_SPECIALIZATION</name>
+        <param><defname>Invokable</defname></param>
+        <initializer>    namespace ScL::Feature::Detail::Operator::Binary                                          \
+    {                                                                                         \
+        template &lt;&gt;                                                                           \
+        struct Invokable##Operator&lt;Global::Invokable##Case&gt;                                   \
+        {                                                                                     \
+            template &lt;typename _Left, typename _Right&gt;                                        \
+            static decltype(auto) invoke(_Left &amp;&amp; left, _Right &amp;&amp; right)                      \
+            {                                                                                 \
+                using LeftRefer = _Left &amp;&amp;;                                                   \
+                using RightRefer = _Right &amp;&amp;;                                                 \
+                return ::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer, \
+                    RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(left),                      \
+                    ::std::forward&lt;RightRefer&gt;(right));                                       \
+            }                                                                                 \
+        };                                                                                    \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="65" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="65" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a7ff9ae730f1ba02c365d52c7f3b8529f" prot="public" static="no">
+        <name>SCL_GLOBAL_BINARY_OPERATOR</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_GLOBAL_BINARY_OPERATOR_SPECIALIZATION(Invokable)                                          \
+    template &lt;typename _Left,                                                                     \
+        typename _Right,                                                                          \
+        typename = ::std::enable_if_t&lt;!::ScL::Feature::isWrapper&lt; ::std::decay_t&lt;_Left&gt; &gt;()       \
+            &amp;&amp; ::ScL::Feature::isWrapper&lt; ::std::decay_t&lt;_Right&gt; &gt;()                              \
+            &amp;&amp; ::ScL::Feature::Detail::Operator::Binary::does##Invokable##OperatorExist&lt;_Left &amp;&amp;, \
+                ::ScL::SimilarRefer&lt;typename ::std::decay_t&lt;_Right&gt;::Value, _Right &amp;&amp;&gt; &gt;()&gt; &gt;     \
+    constexpr decltype(auto) operator symbol(_Left &amp;&amp; left, _Right &amp;&amp; right)                      \
+    {                                                                                             \
+        using LeftRefer = _Left &amp;&amp;;                                                               \
+        using RightRefer = _Right &amp;&amp;;                                                             \
+        return ::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,             \
+            RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(left),                                  \
+            ::std::forward&lt;RightRefer&gt;(right));                                                   \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="83" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="83" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a67c99c112abf1d06ac6841b8e0949d3f" prot="public" static="no">
+        <name>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>other_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    /*template &lt; typename ... _Arguments,                                                    \ \
+        typename = ::std::enable_if_t&lt; sizeof...( _Arguments ) == 0                          \ \
+            &amp;&amp; ::ScL::Feature::Detail::Operator::Binary::does ## Invokable ## OperatorExist&lt; \ \
+       ThisType this_refer, ThisType other_refer &gt;() &gt; &gt;*/                                     \
+    constexpr decltype(auto) operator symbol(ThisType other_refer right) this_refer            \
+    {                                                                                          \
+        using LeftRefer = ThisType this_refer;                                                 \
+        using RightRefer = ThisType other_refer;                                               \
+        return ::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,          \
+            RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(*this),                              \
+            ::std::forward&lt;RightRefer&gt;(right));                                                \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="100" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="100" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1aa30af535aefc4e5d85f37c59d9ec7acb" prot="public" static="no">
+        <name>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    template &lt;typename _Right,                                                        \
+        typename = ::std::enable_if_t&lt;                                                \
+            ::ScL::Feature::Detail::Operator::Binary::does##Invokable##OperatorExist&lt; \
+                ThisType this_refer,                                                  \
+                _Right &amp;&amp;&gt;()&gt; &gt;                                                       \
+    constexpr decltype(auto) operator symbol(_Right &amp;&amp; right) this_refer              \
+    {                                                                                 \
+        using LeftRefer = ThisType this_refer;                                        \
+        using RightRefer = _Right &amp;&amp;;                                                 \
+        return ::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer, \
+            RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(*this),                     \
+            ::std::forward&lt;RightRefer&gt;(right));                                       \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="114" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="111" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a87040411d47a833a5ba103babc2af986" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    template &lt;typename _Argument,                                                         \
+        typename = ::std::enable_if_t&lt;                                                    \
+            ::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;      \
+                Value this_refer,                                                         \
+                _Argument &amp;&amp;&gt;()&gt; &gt;                                                        \
+    constexpr decltype(auto) operator symbol(_Argument &amp;&amp; argument) this_refer            \
+    {                                                                                     \
+        using ThisRefer = ThisType this_refer;                                            \
+        return ::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer,      \
+            _Argument &amp;&amp;&gt;::invoke(::std::forward&lt;ThisRefer&gt;(*this),                       \
+            ::std::forward&lt;_Argument &amp;&amp;&gt;(argument));                                      \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="129" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="126" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a10fb29aedd0720145cd8bd1e7022995b" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    template &lt;typename... _Arguments,                                                      \
+        typename = ::std::enable_if_t&lt;                                                     \
+            ::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;       \
+                Value this_refer,                                                          \
+                _Arguments &amp;&amp;...&gt;()&gt; &gt;                                                     \
+    constexpr decltype(auto) operator symbol(_Arguments &amp;&amp;... arguments) this_refer        \
+    {                                                                                      \
+        using ThisRefer = ThisType this_refer;                                             \
+        return ::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer,       \
+            _Arguments &amp;&amp;...&gt;::invoke(::std::forward&lt;ThisRefer&gt;(*this),                    \
+            ::std::forward&lt;_Arguments &amp;&amp;&gt;(arguments)...);                                  \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="143" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="140" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a4b49dcd617d30113e894e277ab25fcd1" prot="public" static="no">
+        <name>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    template &lt;typename... _Arguments,                                                         \
+        typename = ::std::enable_if_t&lt;sizeof...(_Arguments) == 0                              \
+            &amp;&amp; ::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;       \
+                Value this_refer,                                                             \
+                _Arguments &amp;&amp;...&gt;()&gt; &gt;                                                        \
+    constexpr decltype(auto) operator symbol() this_refer                                     \
+    {                                                                                         \
+        using ThisRefer = ThisType this_refer;                                                \
+        return ::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer&gt;::invoke( \
+            ::std::forward&lt;ThisRefer&gt;(*this));                                                \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="157" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="154" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1ac8d4119cda3ecbc128a848b716150fb3" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    template &lt;typename... _Arguments,                                                         \
+        typename = ::std::enable_if_t&lt;sizeof...(_Arguments) == 0                              \
+            &amp;&amp; ::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;       \
+                Value this_refer,                                                             \
+                _Arguments &amp;&amp;...&gt;()&gt; &gt;                                                        \
+    constexpr decltype(auto) operator symbol(int) this_refer                                  \
+    {                                                                                         \
+        using ThisRefer = ThisType this_refer;                                                \
+        return ::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer&gt;::invoke( \
+            ::std::forward&lt;ThisRefer&gt;(*this));                                                \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="170" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="167" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1aec593b8ee3bf60c7f3f739de9b99106c" prot="public" static="no">
+        <name>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <initializer>    template &lt;typename... _Arguments, typename = ::std::enable_if_t&lt;sizeof...(_Arguments) == 0&gt; &gt; \
+    constexpr <ref refid="classScL_1_1Feature_1_1ValuePointer" kindref="compound">::ScL::Feature::ValuePointer</ref>&lt;ThisType this_refer&gt; operator symbol() this_refer      \
+    {                                                                                             \
+        return <ref refid="classScL_1_1Feature_1_1ValuePointer" kindref="compound">::ScL::Feature::ValuePointer</ref>&lt;ThisType this_refer&gt;(                                 \
+            ::std::forward&lt;ThisType this_refer&gt;(*this));                                          \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="183" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="180" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a9610ca95182fb9e602c9c1054370dbd1" prot="public" static="no">
+        <name>SCL_DEREFERENCE_OPERATOR_PROTOTYPE</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>this_refer</defname></param>
+        <initializer>    template &lt;typename... _Arguments, typename = ::std::enable_if_t&lt;sizeof...(_Arguments) == 0&gt; &gt; \
+    constexpr <ref refid="classScL_1_1Feature_1_1ValuePointer" kindref="compound">::ScL::Feature::ValuePointer</ref>&lt;ThisType this_refer&gt; operator symbol() this_refer      \
+    {                                                                                             \
+        return <ref refid="classScL_1_1Feature_1_1ValuePointer" kindref="compound">::ScL::Feature::ValuePointer</ref>&lt;ThisType this_refer&gt;(                                 \
+            ::std::forward&lt;ThisType this_refer&gt;(*this));                                          \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="191" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a500abe02574a5b1219c6a86387ab7772" prot="public" static="no">
+        <name>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE</name>
+        <param><defname>other_refer</defname></param>
+        <initializer>    constexpr Wrapper(ThisType other_refer other)                                           \
+        : m_holder{::ScL::Feature::Detail::WrapperResolver&lt;ThisType, ThisType other_refer&gt;{ \
+              ::std::forward&lt;ThisType other_refer&gt;(other)}                                  \
+                  .resolve()}                                                               \
+    {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="199" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="196" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a81f5fa828a69c9f529c358268c20594e" prot="public" static="no">
+        <name>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE_V2</name>
+        <param><defname>other_refer</defname></param>
+        <initializer>    template &lt;typename... _Arguments,                                                       \
+        typename = ::std::enable_if_t&lt;sizeof...(_Arguments) == 0                            \
+            &amp;&amp; ::std::is_constructible&lt;ThisType, ThisType other_refer&gt;::value&gt; &gt;            \
+    constexpr Wrapper(ThisType other_refer other)                                           \
+        : m_holder(::ScL::Feature::Detail::WrapperResolver&lt;ThisType, ThisType other_refer&gt;( \
+              ::std::forward&lt;ThisType other_refer&gt;(other))                                  \
+                  .resolve())                                                               \
+    {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="206" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="203" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a2202c19bf2e8128c2be2bdc71128ea0a" prot="public" static="no">
+        <name>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE</name>
+        <param><defname>other_refer</defname></param>
+        <initializer>    template &lt;typename _OtherValue, typename _OtherTool&gt;                           \
+    constexpr Wrapper(Wrapper&lt;_OtherValue, _OtherTool&gt; other_refer other)          \
+        : m_holder{::ScL::Feature::Detail::WrapperResolver&lt;ThisType,               \
+              Wrapper&lt;_OtherValue, _OtherTool&gt; other_refer&gt;{                       \
+              ::std::forward&lt;Wrapper&lt;_OtherValue, _OtherTool&gt; other_refer&gt;(other)} \
+                  .resolve()}                                                      \
+    {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="216" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="213" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a45ff088827e7951d7dcd1e5296cd3c66" prot="public" static="no">
+        <name>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER</name>
+        <initializer>    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(&amp;&amp;)                \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const &amp;&amp;)          \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(volatile &amp;&amp;)       \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const volatile &amp;&amp;) \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(&amp;)                 \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const &amp;)           \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(volatile &amp;)        \
+    SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const volatile &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="225" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="222" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a5a26e1d5caf986ca43a273b461cbb16b" prot="public" static="no">
+        <name>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER</name>
+        <initializer>    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(&amp;&amp;)                \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const &amp;&amp;)          \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(volatile &amp;&amp;)       \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const volatile &amp;&amp;) \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(&amp;)                 \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const &amp;)           \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(volatile &amp;)        \
+    SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const volatile &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="235" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="232" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1ae8f8aed4fb9242afc495bc186d86b11b" prot="public" static="no">
+        <name>SCL_ADDRESS_OF_OPERATOR</name>
+        <param><defname>symbol</defname></param>
+        <initializer>    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;&amp;)                \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;&amp;)          \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;&amp;)       \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;&amp;) \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;)                 \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;)           \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;)        \
+    SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="245" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="242" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1ace36267c887a82171a14b4b241012be2" prot="public" static="no">
+        <name>SCL_DEREFERENCE_OPERATOR</name>
+        <param><defname>symbol</defname></param>
+        <initializer>    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;&amp;)                \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;&amp;)          \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;&amp;)       \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;&amp;) \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;)                 \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;)           \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;)        \
+    SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="255" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="252" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1aefbbf7e1794df239e58d077169df0caa" prot="public" static="no">
+        <name>SCL_PREFIX_UNARY_OPERATOR</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;&amp;, Invokable)                \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;&amp;, Invokable)          \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;&amp;, Invokable)       \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;&amp;, Invokable) \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), &amp;, Invokable)                 \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const &amp;, Invokable)           \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), volatile &amp;, Invokable)        \
+    SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol), const volatile &amp;, Invokable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="265" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="262" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1aae27890dd29de1de405d653e4e3eaaa3" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENT</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol), &amp;&amp;, Invokable)         \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol), const &amp;&amp;, Invokable)   \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(                                            \
+        SCL_FORWARD(symbol), volatile &amp;&amp;, Invokable)                                               \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(                                            \
+        SCL_FORWARD(symbol), const volatile &amp;&amp;, Invokable)                                         \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol), &amp;, Invokable)          \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol), const &amp;, Invokable)    \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol), volatile &amp;, Invokable) \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(                                            \
+        SCL_FORWARD(symbol), const volatile &amp;, Invokable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="275" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="272" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a85a01c2f70059d8d15996ae08196609f" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol), &amp;&amp;, Invokable)       \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol), const &amp;&amp;, Invokable) \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(                                          \
+        SCL_FORWARD(symbol), volatile &amp;&amp;, Invokable)                                              \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(                                          \
+        SCL_FORWARD(symbol), const volatile &amp;&amp;, Invokable)                                        \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol), &amp;, Invokable)        \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol), const &amp;, Invokable)  \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(                                          \
+        SCL_FORWARD(symbol), volatile &amp;, Invokable)                                               \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(                                          \
+        SCL_FORWARD(symbol), const volatile &amp;, Invokable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="288" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="285" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a930ad30f29b93e2880afdcf5b271bd7e" prot="public" static="no">
+        <name>SCL_POSTFIX_UNARY_OPERATOR_WITH_INT</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), &amp;&amp;, Invokable)          \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), const &amp;&amp;, Invokable)    \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), volatile &amp;&amp;, Invokable) \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(                                             \
+        SCL_FORWARD(symbol), const volatile &amp;&amp;, Invokable)                                     \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), &amp;, Invokable)           \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), const &amp;, Invokable)     \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), volatile &amp;, Invokable)  \
+    SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol), const volatile &amp;, Invokable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="302" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="299" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a8159ee44f16f03e6e2d06df154811fa5" prot="public" static="no">
+        <name>SCL_BINARY_OPERATOR_FOR_ANY</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <initializer>    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), &amp;&amp;, Invokable)                \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), const &amp;&amp;, Invokable)          \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), volatile &amp;&amp;, Invokable)       \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), const volatile &amp;&amp;, Invokable) \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), &amp;, Invokable)                 \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), const &amp;, Invokable)           \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), volatile &amp;, Invokable)        \
+    SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol), const volatile &amp;, Invokable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="313" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="310" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="define" id="operator_8h_1a77288b5a2d79a4e2fc0a47f07aad77be" prot="public" static="no">
+        <name>SCL_ASSIGNMENT_OPERATOR_FOR_THIS</name>
+        <param><defname>symbol</defname></param>
+        <param><defname>Invokable</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/operator.h" line="329" column="9" bodyfile="module/feature/src/scl/feature/detail/operator.h" bodystart="326" bodyend="336"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_FEATURE_OPERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_FEATURE_OPERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;binary_operator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;unary_operator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/access/holder_guard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/access/value_pointer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/utility/preprocessor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(&amp;,<sp/>AddressOf,<sp/>address_of)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(*,<sp/>Indirection,<sp/>indirection)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS_IMPLEMENTAION(-&gt;*,<sp/>MemberIndirection,<sp/>arrow_to_pointer)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(SCL_FORWARD(,<sp/>),<sp/>Comma,<sp/>comma)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS_IMPLEMENTAION([],<sp/>SquareBrackets,<sp/>subscript)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS_IMPLEMENTAION((),<sp/>RoundBrackets,<sp/>call)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(+,<sp/>PrefixPlus,<sp/>unary_plus)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(-,<sp/>PrefixMinus,<sp/>unary_minus)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(++,<sp/>PrefixPlusPlus,<sp/>prefix_increment)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(--,<sp/>PrefixMinusMinus,<sp/>prefix_decrement)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(~,<sp/>PrefixBitwiseNot,<sp/>bitwise_not)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION(!,<sp/>PrefixLogicalNot,<sp/>logical_not)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">SCL_POSTFIX_UNARY_OPERATOR_IMPLEMENTAION(++,<sp/>PostfixPlusPlus,<sp/>postfix_increment)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">SCL_POSTFIX_UNARY_OPERATOR_IMPLEMENTAION(--,<sp/>PostfixMinusMinus,<sp/>postfix_decrement)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(==,<sp/>Equal,<sp/>equal_to)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(!=,<sp/>NotEqual,<sp/>not_equal_to)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&lt;,<sp/>Less,<sp/>less)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&lt;=,<sp/>LessOrEqual,<sp/>less_equal)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&gt;,<sp/>Greater,<sp/>greater)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&gt;=,<sp/>GreaterOrEqual,<sp/>greater_equal)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(*,<sp/>Multiply,<sp/>multiply)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(/,<sp/>Divide,<sp/>divide)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(%,<sp/>Modulo,<sp/>modulo)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(+,<sp/>Addition,<sp/>plus)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(-,<sp/>Subtraction,<sp/>minus)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&lt;&lt;,<sp/>LeftShift,<sp/>left_shift)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&gt;&gt;,<sp/>RightShift,<sp/>right_shift)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&amp;,<sp/>BitwiseAnd,<sp/>bitwise_and)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(|,<sp/>BitwiseOr,<sp/>bitwise_or)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(^,<sp/>BitwiseXor,<sp/>bitwise_xor)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&amp;&amp;,<sp/>LogicalAnd,<sp/>logical_and)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(||,<sp/>LogicalOr,<sp/>logical_or)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(=,<sp/>Assignment,<sp/>assign)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(*=,<sp/>MultiplyAssignment,<sp/>multiply_assign)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(/=,<sp/>DivideAssignment,<sp/>divide_assign)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(%=,<sp/>ModuloAssignment,<sp/>modulo_assign)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(+=,<sp/>AdditionAssignment,<sp/>plus_assign)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(-=,<sp/>SubtractionAssignment,<sp/>minus_assign)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&lt;&lt;=,<sp/>LeftShiftAssignment,<sp/>left_shift_assign)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&gt;&gt;=,<sp/>RightShiftAssignment,<sp/>right_shift_assign)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(&amp;=,<sp/>BitwiseAndAssignment,<sp/>bitwise_and_assign)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(|=,<sp/>BitwiseOrAssignment,<sp/>bitwise_or_assign)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">SCL_BINARY_OPERATOR_IMPLEMENTAION(^=,<sp/>BitwiseXorAssignment,<sp/>bitwise_xor_assign)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_GLOBAL_BINARY_OPERATOR_SPECIALIZATION(Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>namespace<sp/>ScL::Feature::Detail::Operator::Binary<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>Invokable##Operator&lt;Global::Invokable##Case&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_Left,<sp/>typename<sp/>_Right&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>decltype(auto)<sp/>invoke(_Left<sp/>&amp;&amp;<sp/>left,<sp/>_Right<sp/>&amp;&amp;<sp/>right)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>LeftRefer<sp/>=<sp/>_Left<sp/>&amp;&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RightRefer<sp/>=<sp/>_Right<sp/>&amp;&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(left),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;RightRefer&gt;(right));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_GLOBAL_BINARY_OPERATOR(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_GLOBAL_BINARY_OPERATOR_SPECIALIZATION(Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_Left,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>_Right,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;!::ScL::Feature::isWrapper&lt;<sp/>::std::decay_t&lt;_Left&gt;<sp/>&gt;()<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::ScL::Feature::isWrapper&lt;<sp/>::std::decay_t&lt;_Right&gt;<sp/>&gt;()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::ScL::Feature::Detail::Operator::Binary::does##Invokable##OperatorExist&lt;_Left<sp/>&amp;&amp;,<sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::ScL::SimilarRefer&lt;typename<sp/>::std::decay_t&lt;_Right&gt;::Value,<sp/>_Right<sp/>&amp;&amp;&gt;<sp/>&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(_Left<sp/>&amp;&amp;<sp/>left,<sp/>_Right<sp/>&amp;&amp;<sp/>right)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>LeftRefer<sp/>=<sp/>_Left<sp/>&amp;&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RightRefer<sp/>=<sp/>_Right<sp/>&amp;&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(left),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;RightRefer&gt;(right));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(symbol,<sp/>this_refer,<sp/>other_refer,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*template<sp/>&lt;<sp/>typename<sp/>...<sp/>_Arguments,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;<sp/>sizeof...(<sp/>_Arguments<sp/>)<sp/>==<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::ScL::Feature::Detail::Operator::Binary::does<sp/>##<sp/>Invokable<sp/>##<sp/>OperatorExist&lt;<sp/>\<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ThisType<sp/>this_refer,<sp/>ThisType<sp/>other_refer<sp/>&gt;()<sp/>&gt;<sp/>&gt;*/</highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(ThisType<sp/>other_refer<sp/>right)<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>LeftRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RightRefer<sp/>=<sp/>ThisType<sp/>other_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(*this),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;RightRefer&gt;(right));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(symbol,<sp/>this_refer,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_Right,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::ScL::Feature::Detail::Operator::Binary::does##Invokable##OperatorExist&lt;<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ThisType<sp/>this_refer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Right<sp/>&amp;&amp;&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(_Right<sp/>&amp;&amp;<sp/>right)<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>LeftRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>RightRefer<sp/>=<sp/>_Right<sp/>&amp;&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Binary::Invokable##Helper&lt;LeftRefer,<sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;::invoke(::std::forward&lt;LeftRefer&gt;(*this),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;RightRefer&gt;(right));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(symbol,<sp/>this_refer,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_Argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Value<sp/>this_refer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Argument<sp/>&amp;&amp;&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(_Argument<sp/>&amp;&amp;<sp/>argument)<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>ThisRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer,<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Argument<sp/>&amp;&amp;&gt;::invoke(::std::forward&lt;ThisRefer&gt;(*this),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;_Argument<sp/>&amp;&amp;&gt;(argument));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(symbol,<sp/>this_refer,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Value<sp/>this_refer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Arguments<sp/>&amp;&amp;...&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(_Arguments<sp/>&amp;&amp;...<sp/>arguments)<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>ThisRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Arguments<sp/>&amp;&amp;...&gt;::invoke(::std::forward&lt;ThisRefer&gt;(*this),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;_Arguments<sp/>&amp;&amp;&gt;(arguments)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(symbol,<sp/>this_refer,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;sizeof...(_Arguments)<sp/>==<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Value<sp/>this_refer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Arguments<sp/>&amp;&amp;...&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol()<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>ThisRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer&gt;::invoke(<sp/>\</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisRefer&gt;(*this));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(symbol,<sp/>this_refer,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="172"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;sizeof...(_Arguments)<sp/>==<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::ScL::Feature::Detail::Operator::Unary::does##Invokable##OperatorExist&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Value<sp/>this_refer,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Arguments<sp/>&amp;&amp;...&gt;()&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>operator<sp/>symbol(int)<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>ThisRefer<sp/>=<sp/>ThisType<sp/>this_refer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::Operator::Unary::Invokable##Helper&lt;ThisRefer&gt;::invoke(<sp/>\</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisRefer&gt;(*this));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(symbol,<sp/>this_refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;sizeof...(_Arguments)<sp/>==<sp/>0&gt;<sp/>&gt;<sp/>\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>::ScL::Feature::ValuePointer&lt;ThisType<sp/>this_refer&gt;<sp/>operator<sp/>symbol()<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::ValuePointer&lt;ThisType<sp/>this_refer&gt;(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisType<sp/>this_refer&gt;(*this));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(symbol,<sp/>this_refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;sizeof...(_Arguments)<sp/>==<sp/>0&gt;<sp/>&gt;<sp/>\</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>::ScL::Feature::ValuePointer&lt;ThisType<sp/>this_refer&gt;<sp/>operator<sp/>symbol()<sp/>this_refer<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::ValuePointer&lt;ThisType<sp/>this_refer&gt;(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisType<sp/>this_refer&gt;(*this));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(other_refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>Wrapper(ThisType<sp/>other_refer<sp/>other)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="201"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_holder{::ScL::Feature::Detail::WrapperResolver&lt;ThisType,<sp/>ThisType<sp/>other_refer&gt;{<sp/>\</highlight></codeline>
+<codeline lineno="202"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisType<sp/>other_refer&gt;(other)}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.resolve()}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE_V2(other_refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>_Arguments,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>=<sp/>::std::enable_if_t&lt;sizeof...(_Arguments)<sp/>==<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::std::is_constructible&lt;ThisType,<sp/>ThisType<sp/>other_refer&gt;::value&gt;<sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="210"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>Wrapper(ThisType<sp/>other_refer<sp/>other)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_holder(::ScL::Feature::Detail::WrapperResolver&lt;ThisType,<sp/>ThisType<sp/>other_refer&gt;(<sp/>\</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;ThisType<sp/>other_refer&gt;(other))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.resolve())<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="214"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(other_refer)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>_OtherValue,<sp/>typename<sp/>_OtherTool&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>Wrapper(Wrapper&lt;_OtherValue,<sp/>_OtherTool&gt;<sp/>other_refer<sp/>other)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_holder{::ScL::Feature::Detail::WrapperResolver&lt;ThisType,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wrapper&lt;_OtherValue,<sp/>_OtherTool&gt;<sp/>other_refer&gt;{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;Wrapper&lt;_OtherValue,<sp/>_OtherTool&gt;<sp/>other_refer&gt;(other)}<sp/>\</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.resolve()}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="227"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const<sp/>volatile<sp/>&amp;&amp;)<sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_THIS_WRAPPER_PROTOTYPE(const<sp/>volatile<sp/>&amp;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const<sp/>volatile<sp/>&amp;&amp;)<sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_CONSTRUCTOR_FOR_OTHER_WRAPPER_PROTOTYPE(const<sp/>volatile<sp/>&amp;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_ADDRESS_OF_OPERATOR(symbol)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="249"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;)<sp/>\</highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_ADDRESS_OF_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEREFERENCE_OPERATOR(symbol)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="258"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;)<sp/>\</highlight></codeline>
+<codeline lineno="260"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_DEREFERENCE_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_PREFIX_UNARY_OPERATOR(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="266"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="272"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="273"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_PREFIX_UNARY_OPERATOR_PROTOTYPE(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENT(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="278"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="279"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="281"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="282"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="283"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENT(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="286"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="291"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="292"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="294"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="295"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="296"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="297"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="298"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="299"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_ARGUMENTS(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="300"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_POSTFIX_UNARY_OPERATOR_WITH_INT(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="304"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="306"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="307"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="310"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="311"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_POSTFIX_UNARY_OPERATOR_PROTOTYPE_WITH_INT(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_BINARY_OPERATOR_FOR_ANY(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="314"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="315"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="316"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="317"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="318"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="320"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="321"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_ANY(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="324"><highlight class="comment"><sp/>*<sp/>NOTE:<sp/>Закомментирована<sp/>реализация<sp/>из-за<sp/>проблем<sp/>со<sp/>сборкой<sp/>::std::map&lt;<sp/>Wrapper,<sp/>Value<sp/>&gt;</highlight></codeline>
+<codeline lineno="325"><highlight class="comment"><sp/>*<sp/>Для<sp/>оператора<sp/>присвоения<sp/>&apos;=&apos;<sp/>константный<sp/>экземпляр<sp/>слева<sp/>является<sp/>экзотикой,</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/>*<sp/>поэтому<sp/>такое<sp/>решение<sp/>может<sp/>быть<sp/>хоть<sp/>как-то<sp/>оправдано.</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_ASSIGNMENT_OPERATOR_FOR_THIS(symbol,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="330"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="331"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="332"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="333"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="334"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="335"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="336"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="337"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="338"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(<sp/>SCL_FORWARD(symbol),<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="339"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="340"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="341"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="342"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)\</highlight></codeline>
+<codeline lineno="343"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="344"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="345"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="346"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="347"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="348"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="349"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="350"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="351"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="352"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="353"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="354"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="355"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="356"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="357"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="358"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="359"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="360"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="361"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="362"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="363"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="364"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="365"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="366"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="367"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="368"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="369"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="370"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="371"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="372"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="373"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="374"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="375"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="376"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="377"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="378"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="379"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="380"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="381"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="382"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="383"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="384"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="385"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>&amp;,<sp/>Invokable)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="386"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="387"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="388"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>volatile<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="389"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="390"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>const<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="391"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="392"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="393"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="394"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>const<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="395"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="396"><highlight class="comment"><sp/><sp/><sp/><sp/>SCL_BINARY_OPERATOR_PROTOTYPE_FOR_THIS(SCL_FORWARD(symbol),<sp/>const<sp/>volatile<sp/>&amp;,<sp/>const<sp/>volatile<sp/>&amp;,<sp/>Invokable)<sp/>\</highlight></codeline>
+<codeline lineno="397"><highlight class="comment">*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SCL_PREFIX_UNARY_OPERATOR_IMPLEMENTAION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SCL_POSTFIX_UNARY_OPERATOR_IMPLEMENTAION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENT_IMPLEMENTAION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SCL_POSTFIX_UNARY_OPERATOR_WITH_ARGUMENTS_IMPLEMENTAION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SCL_BINARY_OPERATOR_IMPLEMENTAION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/detail/operator.h"/>
+  </compounddef>
+</doxygen>

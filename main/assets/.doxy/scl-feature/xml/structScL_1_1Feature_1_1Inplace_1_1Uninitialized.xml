@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Inplace_1_1Uninitialized" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Uninitialized</compoundname>
+    <includes refid="uninitialized_8h" local="no">uninitialized.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Inplace_1_1Uninitialized_1_1Holder" prot="public">ScL::Feature::Inplace::Uninitialized::Holder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования значения &quot;по месту&quot;, которое в случае POD типов по умолчанию не инициализировано (содержит мусор). </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/uninitialized.h" line="15" column="5" bodyfile="module/feature/src/scl/feature/tool/inplace/uninitialized.h" bodystart="16" bodyend="38"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

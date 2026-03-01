@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_8a2b411b9706713697d4c9ec9050a0f3" kind="dir">
+    <compoundname>module/feature/src/scl/feature/tool/thread_safe</compoundname>
+    <innerdir refid="dir_9e2643970d322ab98f0c971a04cf35ed">module/feature/src/scl/feature/tool/thread_safe/private</innerdir>
+    <innerfile refid="atomic_8h">atomic.h</innerfile>
+    <innerfile refid="lock_8h">lock.h</innerfile>
+    <innerfile refid="mutex_8h">mutex.h</innerfile>
+    <innerfile refid="recursive__mutex_8h">recursive_mutex.h</innerfile>
+    <innerfile refid="shared__mutex_8h">shared_mutex.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/"/>
+  </compounddef>
+</doxygen>

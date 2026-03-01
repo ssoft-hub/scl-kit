@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="tool_8h" kind="file" language="C++">
+    <compoundname>tool.h</compoundname>
+    <includes refid="tool_2guard_8h" local="no">scl/feature/tool/guard.h</includes>
+    <includes refid="heap_8h" local="no">scl/feature/tool/heap.h</includes>
+    <includes refid="implicit_8h" local="no">scl/feature/tool/implicit.h</includes>
+    <includes refid="inplace_8h" local="no">scl/feature/tool/inplace.h</includes>
+    <includes refid="reference_8h" local="no">scl/feature/tool/reference.h</includes>
+    <includes refid="thread__safe_8h" local="no">scl/feature/tool/thread_safe.h</includes>
+    <includedby refid="feature_8h" local="no">module/feature/src/scl/feature.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>detail/holder_interface.h</label>
+        <link refid="holder__interface_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>scl/feature/access/holder_guard.h</label>
+        <link refid="holder__guard_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>scl/feature/access/value_guard.h</label>
+        <link refid="value__guard_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl/feature/access/wrapper_guard.h</label>
+        <link refid="wrapper__guard_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>scl/feature/mixin.h</label>
+        <link refid="mixin_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/tool.h</label>
+        <link refid="tool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/tool/guard.h</label>
+        <link refid="tool_2guard_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl/feature/tool/guard/featured.h</label>
+        <link refid="featured_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scl/feature/tool/heap.h</label>
+        <link refid="heap_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scl/feature/tool/heap/raw.h</label>
+        <link refid="heap_2raw_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>scl/feature/tool/heap/shared.h</label>
+        <link refid="heap_2shared_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>scl/feature/tool/heap/unique.h</label>
+        <link refid="unique_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>scl/feature/tool/implicit.h</label>
+        <link refid="implicit_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>scl/feature/tool/implicit/raw.h</label>
+        <link refid="implicit_2raw_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>scl/feature/tool/implicit/shared.h</label>
+        <link refid="implicit_2shared_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>scl/feature/tool/inplace.h</label>
+        <link refid="inplace_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>scl/feature/tool/inplace/debug.h</label>
+        <link refid="debug_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>scl/feature/tool/inplace/default.h</label>
+        <link refid="default_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>scl/feature/tool/inplace/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>scl/feature/tool/inplace/typedef.h</label>
+        <link refid="typedef_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>scl/feature/tool/inplace/uninitialized.h</label>
+        <link refid="uninitialized_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>scl/feature/tool/reference.h</label>
+        <link refid="reference_8h_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>scl/feature/tool/reference/raw.h</label>
+        <link refid="reference_2raw_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>scl/feature/tool/thread_safe.h</label>
+        <link refid="thread__safe_8h_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>scl/feature/tool/thread_safe/atomic.h</label>
+        <link refid="atomic_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>scl/feature/tool/thread_safe/lock.h</label>
+        <link refid="lock_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>scl/feature/tool/thread_safe/mutex.h</label>
+        <link refid="mutex_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>private/shared_mutex.h</label>
+        <link refid="private_2shared__mutex_8h_source"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>scl/feature/tool/thread_safe/recursive_mutex.h</label>
+        <link refid="recursive__mutex_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>scl/feature/tool/thread_safe/shared_mutex.h</label>
+        <link refid="shared__mutex_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scl/feature/trait.h</label>
+        <link refid="trait_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>atomic</label>
+      </node>
+      <node id="44">
+        <label>condition_variable</label>
+      </node>
+      <node id="20">
+        <label>cstddef</label>
+      </node>
+      <node id="21">
+        <label>cstdint</label>
+      </node>
+      <node id="30">
+        <label>exception</label>
+      </node>
+      <node id="27">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>memory</label>
+      </node>
+      <node id="40">
+        <label>mutex</label>
+      </node>
+      <node id="26">
+        <label>scl/utility/preprocessor.h</label>
+      </node>
+      <node id="8">
+        <label>scl/utility/type_traits.h</label>
+      </node>
+      <node id="31">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>type_traits</label>
+      </node>
+      <node id="10">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h_source"/>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/tool.h</label>
+        <link refid="tool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/guard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/heap.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/implicit.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/inplace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/reference.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/thread_safe.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/tool.h"/>
+  </compounddef>
+</doxygen>

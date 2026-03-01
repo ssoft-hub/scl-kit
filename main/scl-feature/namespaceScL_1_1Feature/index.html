@@ -1,0 +1,1378 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++20 header-only toolkit">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Namespace ScL::Feature - ScL Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#namespace-sclfeature" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ScL Toolkit" class="md-header__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ScL Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Namespace ScL::Feature
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ScL Toolkit" class="md-nav__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ScL Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Types Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-ispartofthiscompatiblewithother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef IsPartOfThisCompatibleWithOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-isthiscompatiblewithother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef IsThisCompatibleWithOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-isthiscompatiblewithpartofother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef IsThisCompatibleWithPartOfOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-iswrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef IsWrapper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-valueguard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef ValueGuard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-valuelock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef ValueLock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef Wrapper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapperguard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef WrapperGuard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapperlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef WrapperLock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_part_of_this_compatible_with_other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_part_of_this_compatible_with_other
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_part_of_this_compatible_with_other_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_part_of_this_compatible_with_other_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_similar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_similar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_similar_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_similar_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_compatible_with_other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_compatible_with_other
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_compatible_with_other_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_compatible_with_other_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_compatible_with_part_of_other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_compatible_with_part_of_other
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_compatible_with_part_of_other_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_compatible_with_part_of_other_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_specifier_compatible_with_other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_specifier_compatible_with_other
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_this_specifier_compatible_with_other_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_this_specifier_compatible_with_other_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_wrapper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-is_wrapper_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef is_wrapper_t
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Attributes Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_part_of_this_compatible_with_other_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_part_of_this_compatible_with_other_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_similar_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_similar_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_this_compatible_with_other_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_this_compatible_with_other_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_this_compatible_with_part_of_other_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_this_compatible_with_part_of_other_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_this_specifier_compatible_with_other_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_this_specifier_compatible_with_other_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_wrapper_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_wrapper_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function cast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-cast_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function cast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-guarded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function guarded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ispartofthiscompatiblewithother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isPartOfThisCompatibleWithOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-issimilar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isSimilar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isthiscompatiblewithother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isThisCompatibleWithOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isthiscompatiblewithpartofother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isThisCompatibleWithPartOfOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isthisspecifiercompatiblewithother" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isThisSpecifierCompatibleWithOther
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-iswrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function isWrapper
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="namespace-sclfeature">Namespace ScL::Feature</h1>
+<p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="../namespaceScL/"><strong>ScL</strong></a> <strong>&gt;</strong> <a href="./"><strong>Feature</strong></a></p>
+<p><em>This is definition of Wrapper type. No tool duplicates are guarantee.</em> </p>
+<h2 id="namespaces">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Detail/"><strong>Detail</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Guard/"><strong>Guard</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Heap/"><strong>Heap</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Implicit/"><strong>Implicit</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Inplace/"><strong>Inplace</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Insplace/"><strong>Insplace</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Reference/"><strong>Reference</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1ThreadSafe/"><strong>ThreadSafe</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceScL_1_1Feature_1_1Tool/"><strong>Tool</strong></a> <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1HolderGuard/"><strong>HolderGuard</strong></a> &lt;typename _HolderRefer&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structScL_1_1Feature_1_1IsSimilar/"><strong>IsSimilar</strong></a> &lt;typename _Test, typename _Other&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther/"><strong>IsThisSpecifierCompatibleWithOther</strong></a> &lt;typename _Test, typename _Other&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1MixIn/"><strong>MixIn</strong></a> &lt;typename Self_, typename SelfHolder_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ToolAdditionMixIn/"><strong>ToolAdditionMixIn</strong></a> &lt;typename Self_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ToolAdditionMixIn_3_01_1_1ScL_1_1Feature_1_1Detail_1_1Wrapper_3_01__Type_6cfab06cb1cd1940993f4e80a3ff83c5/"><strong>ToolAdditionMixIn&lt; ::ScL::Feature::Detail::Wrapper&lt; _Type, ::ScL::Feature::Implicit::Raw &gt; &gt;</strong></a> &lt;typename _Type&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ToolAdditionMixIn_3_01_1_1ScL_1_1Feature_1_1Detail_1_1Wrapper_3_01__Value7a1112ed2b930a9a1fc842c6d9900d2f/"><strong>ToolAdditionMixIn&lt; ::ScL::Feature::Detail::Wrapper&lt; _Value, ::ScL::Feature::Inplace::Optional &gt; &gt;</strong></a> &lt;typename _Value&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ToolReflectionMixIn/"><strong>ToolReflectionMixIn</strong></a> &lt;typename Self_, typename SelfHolder_, typename Value_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ToolReflectionMixIn_3_01Self___00_01SelfHolder___00_01Inplace_1_1Optional_01_4/"><strong>ToolReflectionMixIn&lt; Self_, SelfHolder_, Inplace::Optional &gt;</strong></a> &lt;typename Self_, typename SelfHolder_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValuePointer/"><strong>ValuePointer</strong></a> &lt;typename _WrapperRefer&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn/"><strong>ValueReflectionMixIn</strong></a> &lt;typename Self_, typename SelfHolder_, typename Value_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1list_3_2a15bc1b6910c556e20aaae45e5878f9/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::list&lt; Value_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Value_, typename Allocator_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1map_3_03cf8a409b943a3eb2f0c22737a2d0db6/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::map&lt; Key_, Value_, Compare_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Key_, typename Value_, typename Compare_, typename Allocator_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1pair_3_6f0f36137750831dbaefc786efb2a94b/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::pair&lt; First_, Second_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename First_, typename Second_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1set_3_0ae7f8e06af09c1d8922f84f285812668/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::set&lt; Key_, Compare_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Key_, typename Compare_, typename Allocator_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1string_01_4/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::string &gt;</strong></a> &lt;typename Self_, typename SelfHolder_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1unorderce5da27a0b183997bc94d2982759f266/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::unordered_map&lt; Key_, Value_, Hash_, Pred_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Key_, typename Value_, typename Hash_, typename Pred_, typename Allocator_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1unorder51e6608c1855f0f1f53f495c010a4032/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::unordered_set&lt; Key_, Hash_, Pred_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Key_, typename Hash_, typename Pred_, typename Allocator_&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1vector_1178f9481a24b8e98a651db6b7f18a56/"><strong>ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::vector&lt; Value_, Allocator_ &gt; &gt;</strong></a> &lt;typename Self_, typename SelfHolder_, typename Value_, typename Allocator_&gt;<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types">Public Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1Detail_1_1IsPartOfThisCompatibleWithOther/"><strong>::ScL::Feature::Detail::IsPartOfThisCompatibleWithOther</strong></a>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</td>
+<td style="text-align: left;"><a href="#typedef-ispartofthiscompatiblewithother"><strong>IsPartOfThisCompatibleWithOther</strong></a>  <br><em>Признак совместимости вложенного типа с другим.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithOther/"><strong>::ScL::Feature::Detail::IsThisCompatibleWithOther</strong></a>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</td>
+<td style="text-align: left;"><a href="#typedef-isthiscompatiblewithother"><strong>IsThisCompatibleWithOther</strong></a>  <br><em>Признак совместимости типов.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithPartOfOther/"><strong>::ScL::Feature::Detail::IsThisCompatibleWithPartOfOther</strong></a>&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;</td>
+<td style="text-align: left;"><a href="#typedef-isthiscompatiblewithpartofother"><strong>IsThisCompatibleWithPartOfOther</strong></a>  <br><em>Признак совместимости типа с вложенным типом другого.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1Detail_1_1IsWrapper/"><strong>::ScL::Feature::Detail::IsWrapper</strong></a>&lt; ::std::remove_cv_t&lt; _Test &gt; &gt;</td>
+<td style="text-align: left;"><a href="#typedef-iswrapper"><strong>IsWrapper</strong></a>  <br><em>Признак того, что тип является Wrapper.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename ::ScL::Feature::Detail::ValueGuardHelper&lt; _Refer &gt;::Type</td>
+<td style="text-align: left;"><a href="#typedef-valueguard"><strong>ValueGuard</strong></a>  <br><em>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename ::ScL::Feature::Detail::ValueLockHelper&lt; Refer_ &gt;::Type</td>
+<td style="text-align: left;"><a href="#typedef-valuelock"><strong>ValueLock</strong></a>  <br><em>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename ::ScL::Feature::Detail::WrapperSimplifyHelper&lt; typename ::ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tools... &gt;::Type &gt;::Type</td>
+<td style="text-align: left;"><a href="#typedef-wrapper"><strong>Wrapper</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename ::ScL::Feature::Detail::WrapperGuardHelper&lt; _Refer &gt;::Type</td>
+<td style="text-align: left;"><a href="#typedef-wrapperguard"><strong>WrapperGuard</strong></a>  <br><em>This type activates a feature for the wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename ::ScL::Feature::Detail::WrapperLockHelper&lt; _Refer &gt;::Type</td>
+<td style="text-align: left;"><a href="#typedef-wrapperlock"><strong>WrapperLock</strong></a>  <br><em>This type activates a feature for the wrapped value when the lock method is called, and deactivates a feature when the unlock method is called or it is destroyed. This type does nothing for non wrapped values.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="./#typedef-ispartofthiscompatiblewithother"><strong>::ScL::Feature::IsPartOfThisCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_part_of_this_compatible_with_other"><strong>is_part_of_this_compatible_with_other</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="./#typedef-ispartofthiscompatiblewithother"><strong>::ScL::Feature::IsPartOfThisCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_part_of_this_compatible_with_other_t"><strong>is_part_of_this_compatible_with_other_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1IsSimilar/"><strong>::ScL::Feature::IsSimilar</strong></a>&lt; _Test, _Other &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_similar"><strong>is_similar</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="../structScL_1_1Feature_1_1IsSimilar/"><strong>::ScL::Feature::IsSimilar</strong></a>&lt; _Test, _Other &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_similar_t"><strong>is_similar_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="./#typedef-isthiscompatiblewithother"><strong>::ScL::Feature::IsThisCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_this_compatible_with_other"><strong>is_this_compatible_with_other</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="./#typedef-isthiscompatiblewithother"><strong>::ScL::Feature::IsThisCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_this_compatible_with_other_t"><strong>is_this_compatible_with_other_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="./#typedef-isthiscompatiblewithpartofother"><strong>::ScL::Feature::IsThisCompatibleWithPartOfOther</strong></a>&lt; _Test, _Other &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_this_compatible_with_part_of_other"><strong>is_this_compatible_with_part_of_other</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="./#typedef-isthiscompatiblewithpartofother"><strong>::ScL::Feature::IsThisCompatibleWithPartOfOther</strong></a>&lt; _Test, _Other &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_this_compatible_with_part_of_other_t"><strong>is_this_compatible_with_part_of_other_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="../structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther/"><strong>::ScL::Feature::IsThisSpecifierCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_this_specifier_compatible_with_other"><strong>is_this_specifier_compatible_with_other</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="../structScL_1_1Feature_1_1IsThisSpecifierCompatibleWithOther/"><strong>::ScL::Feature::IsThisSpecifierCompatibleWithOther</strong></a>&lt; _Test, _Other &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_this_specifier_compatible_with_other_t"><strong>is_this_specifier_compatible_with_other_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef <a href="./#typedef-iswrapper"><strong>::ScL::Feature::IsWrapper</strong></a>&lt; _Test &gt;</td>
+<td style="text-align: left;"><a href="#typedef-is_wrapper"><strong>is_wrapper</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef typename <a href="./#typedef-iswrapper"><strong>::ScL::Feature::IsWrapper</strong></a>&lt; _Test &gt;::type</td>
+<td style="text-align: left;"><a href="#typedef-is_wrapper_t"><strong>is_wrapper_t</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_part_of_this_compatible_with_other_v"><strong>is_part_of_this_compatible_with_other_v</strong></a>   = <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_similar_v"><strong>is_similar_v</strong></a>   = <code>[**::ScL::Feature::IsSimilar**](structScL_1_1Feature_1_1IsSimilar.md)&amp;lt;\_Test, \_Other&amp;gt;::value</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_this_compatible_with_other_v"><strong>is_this_compatible_with_other_v</strong></a>   = <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_this_compatible_with_part_of_other_v"><strong>is_this_compatible_with_part_of_other_v</strong></a>   = <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_this_specifier_compatible_with_other_v"><strong>is_this_specifier_compatible_with_other_v</strong></a>   = <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: left;"><a href="#variable-is_wrapper_v"><strong>is_wrapper_v</strong></a>   = <code>[**::ScL::Feature::IsWrapper**](namespaceScL_1_1Feature.md#typedef-iswrapper)&amp;lt;\_Test&amp;gt;::value</code><br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">auto</td>
+<td style="text-align: left;"><a href="#function-cast"><strong>cast</strong></a> (Type_ &amp;&amp; value) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">auto</td>
+<td style="text-align: left;"><a href="#function-cast"><strong>cast</strong></a> (Wrapper_ &amp;&amp; wrapper) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">decltype(auto)</td>
+<td style="text-align: left;"><a href="#function-guarded"><strong>guarded</strong></a> (Type_ &amp;&amp; value) noexcept<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-ispartofthiscompatiblewithother"><strong>isPartOfThisCompatibleWithOther</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-issimilar"><strong>isSimilar</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-isthiscompatiblewithother"><strong>isThisCompatibleWithOther</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-isthiscompatiblewithpartofother"><strong>isThisCompatibleWithPartOfOther</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-isthisspecifiercompatiblewithother"><strong>isThisSpecifierCompatibleWithOther</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#function-iswrapper"><strong>isWrapper</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types-documentation">Public Types Documentation</h2>
+<h3 id="typedef-ispartofthiscompatiblewithother">typedef IsPartOfThisCompatibleWithOther</h3>
+<p><em>Признак совместимости вложенного типа с другим.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::IsPartOfThisCompatibleWithOther = typedef ::ScL::Feature::Detail::IsPartOfThisCompatibleWithOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-isthiscompatiblewithother">typedef IsThisCompatibleWithOther</h3>
+<p><em>Признак совместимости типов.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::IsThisCompatibleWithOther = typedef ::ScL::Feature::Detail::IsThisCompatibleWithOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-isthiscompatiblewithpartofother">typedef IsThisCompatibleWithPartOfOther</h3>
+<p><em>Признак совместимости типа с вложенным типом другого.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::IsThisCompatibleWithPartOfOther = typedef ::ScL::Feature::Detail::IsThisCompatibleWithPartOfOther&lt; ::std::remove_cv_t&lt;_Test&gt;, ::std::remove_cv_t&lt;_Other&gt; &gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-iswrapper">typedef IsWrapper</h3>
+<p><em>Признак того, что тип является Wrapper.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::IsWrapper = typedef ::ScL::Feature::Detail::IsWrapper&lt; ::std::remove_cv_t&lt;_Test&gt; &gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-valueguard">typedef ValueGuard</h3>
+<p><em>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::ValueGuard = typedef typename ::ScL::Feature::Detail::ValueGuardHelper&lt;_Refer&gt;::Type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-valuelock">typedef ValueLock</h3>
+<p><em>This type activates all features for the multi wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::ValueLock = typedef typename ::ScL::Feature::Detail::ValueLockHelper&lt;Refer_&gt;::Type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapper">typedef Wrapper</h3>
+<pre><code class="language-C++">using ScL::Feature::Wrapper = typedef typename ::ScL::Feature::Detail::WrapperSimplifyHelper&lt; typename ::ScL::Feature::Detail::MultiToolHelper&lt;_Value, _Tools...&gt;::Type&gt;::Type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapperguard">typedef WrapperGuard</h3>
+<p><em>This type activates a feature for the wrapped value when it is constructed, and deactivates a feature when it is destroyed. This type does nothing for non wrapped values.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::WrapperGuard = typedef typename ::ScL::Feature::Detail::WrapperGuardHelper&lt;_Refer&gt;::Type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapperlock">typedef WrapperLock</h3>
+<p><em>This type activates a feature for the wrapped value when the lock method is called, and deactivates a feature when the unlock method is called or it is destroyed. This type does nothing for non wrapped values.</em> </p>
+<pre><code class="language-C++">using ScL::Feature::WrapperLock = typedef typename ::ScL::Feature::Detail::WrapperLockHelper&lt;_Refer&gt;::Type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_part_of_this_compatible_with_other">typedef is_part_of_this_compatible_with_other</h3>
+<pre><code class="language-C++">using ScL::Feature::is_part_of_this_compatible_with_other = typedef ::ScL::Feature::IsPartOfThisCompatibleWithOther&lt; _Test, _Other&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_part_of_this_compatible_with_other_t">typedef is_part_of_this_compatible_with_other_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_part_of_this_compatible_with_other_t = typedef typename ::ScL::Feature::IsPartOfThisCompatibleWithOther&lt;_Test, _Other&gt;::type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_similar">typedef is_similar</h3>
+<pre><code class="language-C++">using ScL::Feature::is_similar = typedef ::ScL::Feature::IsSimilar&lt;_Test, _Other&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_similar_t">typedef is_similar_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_similar_t = typedef typename ::ScL::Feature::IsSimilar&lt;_Test, _Other&gt;::type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_compatible_with_other">typedef is_this_compatible_with_other</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_compatible_with_other = typedef ::ScL::Feature::IsThisCompatibleWithOther&lt;_Test, _Other&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_compatible_with_other_t">typedef is_this_compatible_with_other_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_compatible_with_other_t = typedef typename ::ScL::Feature::IsThisCompatibleWithOther&lt; _Test, _Other&gt;::type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_compatible_with_part_of_other">typedef is_this_compatible_with_part_of_other</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_compatible_with_part_of_other = typedef ::ScL::Feature::IsThisCompatibleWithPartOfOther&lt; _Test, _Other&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_compatible_with_part_of_other_t">typedef is_this_compatible_with_part_of_other_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_compatible_with_part_of_other_t = typedef typename ::ScL::Feature::IsThisCompatibleWithPartOfOther&lt;_Test, _Other&gt;::type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_specifier_compatible_with_other">typedef is_this_specifier_compatible_with_other</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_specifier_compatible_with_other = typedef ::ScL::Feature::IsThisSpecifierCompatibleWithOther&lt;_Test, _Other&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_this_specifier_compatible_with_other_t">typedef is_this_specifier_compatible_with_other_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_this_specifier_compatible_with_other_t = typedef typename ::ScL::Feature::IsThisSpecifierCompatibleWithOther&lt;_Test, _Other&gt;::type;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_wrapper">typedef is_wrapper</h3>
+<pre><code class="language-C++">using ScL::Feature::is_wrapper = typedef ::ScL::Feature::IsWrapper&lt;_Test&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-is_wrapper_t">typedef is_wrapper_t</h3>
+<pre><code class="language-C++">using ScL::Feature::is_wrapper_t = typedef typename ::ScL::Feature::IsWrapper&lt;_Test&gt;::type;
+</code></pre>
+<hr>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-is_part_of_this_compatible_with_other_v">variable is_part_of_this_compatible_with_other_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_part_of_this_compatible_with_other_v;
+</code></pre>
+<hr>
+
+<h3 id="variable-is_similar_v">variable is_similar_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_similar_v;
+</code></pre>
+<hr>
+
+<h3 id="variable-is_this_compatible_with_other_v">variable is_this_compatible_with_other_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_this_compatible_with_other_v;
+</code></pre>
+<hr>
+
+<h3 id="variable-is_this_compatible_with_part_of_other_v">variable is_this_compatible_with_part_of_other_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_this_compatible_with_part_of_other_v;
+</code></pre>
+<hr>
+
+<h3 id="variable-is_this_specifier_compatible_with_other_v">variable is_this_specifier_compatible_with_other_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_this_specifier_compatible_with_other_v;
+</code></pre>
+<hr>
+
+<h3 id="variable-is_wrapper_v">variable is_wrapper_v</h3>
+<pre><code class="language-C++">constexpr auto ScL::Feature::is_wrapper_v;
+</code></pre>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-cast">function cast</h3>
+<pre><code class="language-C++">template&lt;ConceptNonWrapper Type_&gt;
+inline auto ScL::Feature::cast (
+    Type_ &amp;&amp; value
+) 
+</code></pre>
+<hr>
+
+<h3 id="function-cast_1">function cast</h3>
+<pre><code class="language-C++">template&lt;ConceptWrapper Wrapper_&gt;
+inline auto ScL::Feature::cast (
+    Wrapper_ &amp;&amp; wrapper
+) 
+</code></pre>
+<hr>
+
+<h3 id="function-guarded">function guarded</h3>
+<pre><code class="language-C++">template&lt;typename Type_&gt;
+inline decltype(auto) ScL::Feature::guarded (
+    Type_ &amp;&amp; value
+) noexcept
+</code></pre>
+<hr>
+
+<h3 id="function-ispartofthiscompatiblewithother">function isPartOfThisCompatibleWithOther</h3>
+<pre><code class="language-C++">template&lt;typename _Test, typename _Other&gt;
+inline constexpr bool ScL::Feature::isPartOfThisCompatibleWithOther () 
+</code></pre>
+<hr>
+
+<h3 id="function-issimilar">function isSimilar</h3>
+<pre><code class="language-C++">template&lt;typename _Test, typename _Other&gt;
+inline constexpr bool ScL::Feature::isSimilar () 
+</code></pre>
+<hr>
+
+<h3 id="function-isthiscompatiblewithother">function isThisCompatibleWithOther</h3>
+<pre><code class="language-C++">template&lt;typename _Test, typename _Other&gt;
+inline constexpr bool ScL::Feature::isThisCompatibleWithOther () 
+</code></pre>
+<hr>
+
+<h3 id="function-isthiscompatiblewithpartofother">function isThisCompatibleWithPartOfOther</h3>
+<pre><code class="language-C++">template&lt;typename _Test, typename _Other&gt;
+inline constexpr bool ScL::Feature::isThisCompatibleWithPartOfOther () 
+</code></pre>
+<hr>
+
+<h3 id="function-isthisspecifiercompatiblewithother">function isThisSpecifierCompatibleWithOther</h3>
+<pre><code class="language-C++">template&lt;typename _Test, typename _Other&gt;
+inline constexpr bool ScL::Feature::isThisSpecifierCompatibleWithOther () 
+</code></pre>
+<hr>
+
+<h3 id="function-iswrapper">function isWrapper</h3>
+<pre><code class="language-C++">template&lt;typename _Test&gt;
+inline constexpr bool ScL::Feature::isWrapper () 
+</code></pre>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/access/detail/holder_interface.h</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

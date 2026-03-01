@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Inplace_1_1Default" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Default</compoundname>
+    <includes refid="default_8h" local="no">default.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Inplace_1_1Default_1_1Holder" prot="public">ScL::Feature::Inplace::Default::Holder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования экземпляра значения &quot;по месту&quot;. Определение &quot;по месту&quot; означает, что для значения не используется динамическое размещение в "куче и оно является неотъемлемой частью области видимости, в котором этот экземпляр значения определен. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/default.h" line="15" column="5" bodyfile="module/feature/src/scl/feature/tool/inplace/default.h" bodystart="16" bodyend="132"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

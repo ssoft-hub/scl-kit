@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Optional::BadOptionalAccess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1aef707f712c4f1b171ad02bc026282e18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Inplace::Optional::BadOptionalAccess::BadOptionalAccess</definition>
+        <argsstring>()</argsstring>
+        <name>BadOptionalAccess</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::BadOptionalAccess::BadOptionalAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="26" column="13" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1ad2b7d6a3ef0f50e88067955b1fee6ca1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ScL::Feature::Inplace::Optional::BadOptionalAccess::~BadOptionalAccess</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~BadOptionalAccess</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::BadOptionalAccess::~BadOptionalAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="28" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1a3dd5199a84213861ac3dd37c52730e15" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>char const *</type>
+        <definition>char const  * ScL::Feature::Inplace::Optional::BadOptionalAccess::what</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>what</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::BadOptionalAccess::what</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="30" column="25" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="23" column="9" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="24" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1aef707f712c4f1b171ad02bc026282e18" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::BadOptionalAccess</scope><name>BadOptionalAccess</name></member>
+      <member refid="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1a3dd5199a84213861ac3dd37c52730e15" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::BadOptionalAccess</scope><name>what</name></member>
+      <member refid="classScL_1_1Feature_1_1Inplace_1_1Optional_1_1BadOptionalAccess_1ad2b7d6a3ef0f50e88067955b1fee6ca1" prot="public" virt="virtual"><scope>ScL::Feature::Inplace::Optional::BadOptionalAccess</scope><name>~BadOptionalAccess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

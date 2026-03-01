@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Guard_1_1Featured" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Guard::Featured</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Guard_1_1Featured_1_1Holder" prot="public">ScL::Feature::Guard::Featured::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Wrapper</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Guard_1_1Featured_1acd57d3102c4cb908f61f5d4bd7113d57" prot="public" static="no">
+        <type>_Wrapper</type>
+        <definition>using ScL::Feature::Guard::Featured&lt; _Wrapper &gt;::WrapperRefer =  _Wrapper</definition>
+        <argsstring></argsstring>
+        <name>WrapperRefer</name>
+        <qualifiedname>ScL::Feature::Guard::Featured::WrapperRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="13" column="9" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/guard/featured.h" line="11" column="5" bodyfile="module/feature/src/scl/feature/tool/guard/featured.h" bodystart="12" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Guard_1_1Featured_1acd57d3102c4cb908f61f5d4bd7113d57" prot="public" virt="non-virtual"><scope>ScL::Feature::Guard::Featured</scope><name>WrapperRefer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

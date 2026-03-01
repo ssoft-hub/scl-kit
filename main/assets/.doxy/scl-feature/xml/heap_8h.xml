@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="heap_8h" kind="file" language="C++">
+    <compoundname>heap.h</compoundname>
+    <includes refid="heap_2raw_8h" local="no">scl/feature/tool/heap/raw.h</includes>
+    <includes refid="heap_2shared_8h" local="no">scl/feature/tool/heap/shared.h</includes>
+    <includes refid="unique_8h" local="no">scl/feature/tool/heap/unique.h</includes>
+    <includedby refid="tool_8h" local="no">module/feature/src/scl/feature/tool.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>detail/holder_interface.h</label>
+        <link refid="holder__interface_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl/feature/access/holder_guard.h</label>
+        <link refid="holder__guard_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/tool/heap.h</label>
+        <link refid="heap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/tool/heap/raw.h</label>
+        <link refid="heap_2raw_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>scl/feature/tool/heap/shared.h</label>
+        <link refid="heap_2shared_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scl/feature/tool/heap/unique.h</label>
+        <link refid="unique_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl/feature/trait.h</label>
+        <link refid="trait_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>scl/utility/type_traits.h</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h_source"/>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/tool.h</label>
+        <link refid="tool_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/tool/heap.h</label>
+        <link refid="heap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/heap/raw.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/heap/shared.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/tool/heap/unique.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/tool/heap.h"/>
+  </compounddef>
+</doxygen>

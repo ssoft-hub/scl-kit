@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1GuardHelper" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::GuardHelper</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _HolderRefer</type>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>has_method</declname>
+        <defname>has_method</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/detail/holder_interface.h" line="51" column="5" bodyfile="module/feature/src/scl/feature/access/detail/holder_interface.h" bodystart="51" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

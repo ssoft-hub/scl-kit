@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1MixIn" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::MixIn</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::ToolAdditionMixIn&lt; Self_ &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::Detail::CastingMixIn&lt; Self_, Self_ &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Self_ &gt;</basecompoundref>
+    <derivedcompoundref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" prot="public" virt="non-virtual">ScL::Feature::Detail::Wrapper&lt; _Value, _Tool &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename Self_</type>
+      </param>
+      <param>
+        <type>typename SelfHolder_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ScL::Feature::Detail::Wrapper&lt; _Value, _Tool &gt;</label>
+        <link refid="classScL_1_1Feature_1_1Detail_1_1Wrapper"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ScL::Feature::MixIn&lt; Self_, SelfHolder_ &gt;</label>
+      </node>
+    </inheritancegraph>
+    <location file="module/feature/src/scl/feature/mixin.h" line="39" column="5" bodyfile="module/feature/src/scl/feature/mixin.h" bodystart="43" bodyend="46"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

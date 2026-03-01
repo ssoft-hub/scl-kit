@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Tool_1_1PropertyReflection" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Tool::PropertyReflection</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Tool_1_1PropertyReflection_1_1Holder" prot="public">ScL::Feature::Tool::PropertyReflection::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename WrapperHolder_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/property_reflection.h" line="14" column="5" bodyfile="module/feature/src/scl/feature/detail/property_reflection.h" bodystart="15" bodyend="77"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

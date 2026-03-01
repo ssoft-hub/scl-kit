@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Detail_1_1ReflectionMixIn_3_01Self___00_01SelfHolder___00_01Wrapper_3_01Wefad6e3010ca5489694bf37207e7436d" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Wrapper&lt; Value_, Tool_ &gt;, Tool1_ &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::Detail::ReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Value_, Tool_ &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, Wrapper&lt; Value_, Tool_ &gt; &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ScL::Feature::ToolReflectionMixIn&lt; Self_, SelfHolder_, Tool_ &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename Self_</type>
+      </param>
+      <param>
+        <type>typename SelfHolder_</type>
+      </param>
+      <param>
+        <type>typename Value_</type>
+      </param>
+      <param>
+        <type>typename Tool_</type>
+      </param>
+      <param>
+        <type>typename Tool1_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/wrapper.h" line="214" column="5" bodyfile="module/feature/src/scl/feature/detail/wrapper.h" bodystart="218" bodyend="221"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1UnguardHelper_3_01__HolderRefer_00_01true_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::UnguardHelper&lt; _HolderRefer, true &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _HolderRefer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Detail_1_1UnguardHelper_3_01__HolderRefer_00_01true_01_4_1a4991e550eeedf236b22c23a00cb2c574" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr void</type>
+        <definition>static constexpr void ScL::Feature::Detail::UnguardHelper&lt; _HolderRefer, true &gt;::unguard</definition>
+        <argsstring>(_HolderRefer holder)</argsstring>
+        <name>unguard</name>
+        <qualifiedname>ScL::Feature::Detail::UnguardHelper&lt; _HolderRefer, true &gt;::unguard</qualifiedname>
+        <param>
+          <type>_HolderRefer</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/access/detail/holder_interface.h" line="93" column="31" bodyfile="module/feature/src/scl/feature/access/detail/holder_interface.h" bodystart="93" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/access/detail/holder_interface.h" line="88" column="5" bodyfile="module/feature/src/scl/feature/access/detail/holder_interface.h" bodystart="89" bodyend="98"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1UnguardHelper_3_01__HolderRefer_00_01true_01_4_1a4991e550eeedf236b22c23a00cb2c574" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::UnguardHelper&lt; _HolderRefer, true &gt;</scope><name>unguard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

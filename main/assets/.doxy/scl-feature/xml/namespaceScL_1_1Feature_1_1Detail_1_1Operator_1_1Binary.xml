@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceScL_1_1Feature_1_1Detail_1_1Operator_1_1Binary" kind="namespace" language="C++">
+    <compoundname>ScL::Feature::Detail::Operator::Binary</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1Binary_1_1HolderHasNoOperatorCase" prot="public">ScL::Feature::Detail::Operator::Binary::HolderHasNoOperatorCase</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Operator_1_1Binary_1_1HolderHasOperatorCase" prot="public">ScL::Feature::Detail::Operator::Binary::HolderHasOperatorCase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/binary_operator.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

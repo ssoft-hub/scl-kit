@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="resolver_8h" kind="file" language="C++">
+    <compoundname>resolver.h</compoundname>
+    <includes refid="value__guard_8h" local="no">scl/feature/access/value_guard.h</includes>
+    <includes refid="wrapper__guard_8h" local="no">scl/feature/access/wrapper_guard.h</includes>
+    <includes refid="trait_8h" local="no">scl/feature/trait.h</includes>
+    <includes local="no">scl/utility/type_traits.h</includes>
+    <includedby refid="detail_2wrapper_8h" local="yes">module/feature/src/scl/feature/detail/wrapper.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>detail/holder_interface.h</label>
+        <link refid="holder__interface_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/access/value_guard.h</label>
+        <link refid="value__guard_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl/feature/access/wrapper_guard.h</label>
+        <link refid="wrapper__guard_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/resolver.h</label>
+        <link refid="resolver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl/feature/trait.h</label>
+        <link refid="trait_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>scl/utility/type_traits.h</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h_source"/>
+      </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/cast.h</label>
+        <link refid="cast_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/feature/src/scl/feature/detail/property_reflection.h</label>
+        <link refid="property__reflection_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/detail/resolver.h</label>
+        <link refid="resolver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>module/feature/src/scl/feature/guard.h</label>
+        <link refid="guard_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>module/feature/src/scl/feature/reflection/std.h</label>
+        <link refid="std_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>module/feature/src/scl/feature/reflection/std/map.h</label>
+        <link refid="map_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>module/feature/src/scl/feature/reflection/std/pair.h</label>
+        <link refid="pair_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>module/feature/src/scl/feature/reflection/std/vector.h</label>
+        <link refid="vector_8h_source"/>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1WrapperResolverHelper" prot="public">ScL::Feature::Detail::WrapperResolverHelper</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" prot="public">ScL::Feature::Detail::RightCompatibleWithLeftWrapperResolver</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" prot="public">ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" prot="public">ScL::Feature::Detail::PartOfRightCompatibleWithLeftWrapperResolver</innerclass>
+    <innerclass refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" prot="public">ScL::Feature::Detail::ValueWrapperResolver</innerclass>
+    <innernamespace refid="namespaceScL">ScL</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature">ScL::Feature</innernamespace>
+    <innernamespace refid="namespaceScL_1_1Feature_1_1Detail">ScL::Feature::Detail</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="resolver_8h_1ab741044de4e461891775ec4fd23724d5" prot="public" static="no">
+        <name>SCL_WRAPPER_RESOLVER_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="3" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_WRAPPER_RESOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_WRAPPER_RESOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/access/value_guard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/access/wrapper_guard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/trait.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/utility/type_traits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">WrapperResolverHelper;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">WrapperResolver<sp/>=<sp/>typename<sp/>::ScL::Feature::Detail::WrapperResolverHelper&lt;_LeftWrapper,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_RightRefer&gt;::Type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RightCompatibleWithLeftWrapperResolver;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RightCompatibleWithPartOfLeftWrapperResolver;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PartOfRightCompatibleWithLeftWrapperResolver;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ValueWrapperResolver;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>NOTE:<sp/>Можно<sp/>было<sp/>бы<sp/>реализовать<sp/>случай<sp/>преобразования<sp/>одного<sp/>вида<sp/>Holder</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>в<sp/>другой<sp/>с<sp/>помощью<sp/>WrapperConvertResolver.<sp/>Однако<sp/>это<sp/>нарушит<sp/>инкапсуляцию</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>Holder<sp/>и<sp/>позволит<sp/>получить<sp/>доступ<sp/>к<sp/>его<sp/>внутреннему<sp/>содержимому,</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>что<sp/>в<sp/>свою<sp/>очередь<sp/>может<sp/>изменить<sp/>ожидаемое<sp/>поведение.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">WrapperResolverHelper</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">LeftWrapper<sp/>=<sp/>_LeftWrapper;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightRefer<sp/>=<sp/>_RightRefer;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightWrapper<sp/>=<sp/>::std::remove_reference_t&lt;_RightRefer&gt;;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Type<sp/>=<sp/>::std::conditional_t&lt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithOther" kindref="compound">::ScL::Feature::IsThisCompatibleWithOther&lt;RightWrapper, LeftWrapper&gt;::value</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::RightCompatibleWithLeftWrapperResolver&lt;LeftWrapper, RightRefer&gt;</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithPartOfOther" kindref="compound">::ScL::Feature::IsThisCompatibleWithPartOfOther&lt;RightWrapper, LeftWrapper&gt;::value</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</ref>&lt;LeftWrapper,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;<sp/><ref refid="structScL_1_1Feature_1_1Detail_1_1IsPartOfThisCompatibleWithOther" kindref="compound">::ScL::Feature::IsPartOfThisCompatibleWithOther</ref>&lt;RightWrapper,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LeftWrapper&gt;::value,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" kindref="compound">::ScL::Feature::Detail::PartOfRightCompatibleWithLeftWrapperResolver</ref>&lt;LeftWrapper,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer&gt;,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" kindref="compound">::ScL::Feature::Detail::ValueWrapperResolver&lt;LeftWrapper, RightRefer&gt;</ref><sp/>&gt;<sp/>&gt;<sp/>&gt;;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="86" refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" kindref="compound">RightCompatibleWithLeftWrapperResolver</ref></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">LeftWrapper<sp/>=<sp/>_LeftWrapper;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightRefer<sp/>=<sp/>_RightRefer;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightWrapper<sp/>=<sp/>::std::remove_reference_t&lt;RightRefer&gt;;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightHolder<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RightWrapper::Holder;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightHolderRefer<sp/>=<sp/>::ScL::SimilarRefer&lt;RightHolder,<sp/>RightRefer&gt;;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AccessRefer<sp/>=<sp/>RightHolderRefer;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer<sp/>m_right_refer;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithLeftWrapperResolver" kindref="compound">RightCompatibleWithLeftWrapperResolver</ref>(RightRefer<sp/>Right)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_right_refer(::std::forward&lt;RightRefer&gt;(Right))</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccessRefer<sp/>resolve()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="105"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::ScL::Feature::Detail::wrapperHolder&lt;RightRefer&gt;(</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;RightRefer&gt;(m_right_refer));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="118" refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" kindref="compound">RightCompatibleWithPartOfLeftWrapperResolver</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">LeftWrapper<sp/>=<sp/>_LeftWrapper;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightRefer<sp/>=<sp/>_RightRefer;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AccessRefer<sp/>=<sp/>RightRefer;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightRefer<sp/>m_right_refer;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" kindref="compound">RightCompatibleWithPartOfLeftWrapperResolver</ref>(RightRefer<sp/>right)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_right_refer(::std::forward&lt;RightRefer&gt;(right))</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccessRefer<sp/>resolve()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/>return<sp/>::std::forward&lt;AccessRefer&gt;(m_right_refer);<sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="143" refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" kindref="compound">PartOfRightCompatibleWithLeftWrapperResolver</ref></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">LeftWrapper<sp/>=<sp/>_LeftWrapper;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightRefer<sp/>=<sp/>_RightRefer;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightWrapperGuard<sp/>=<sp/><ref refid="namespaceScL_1_1Feature_1a42721990c9cd265f52794acfde7a32ab" kindref="member">::ScL::Feature::WrapperGuard&lt;RightRefer&gt;</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightWrapper<sp/>=<sp/>::std::remove_reference_t&lt;RightRefer&gt;;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightValue<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RightWrapper::Value;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightValueRefer<sp/>=<sp/>::ScL::SimilarRefer&lt;RightValue,<sp/>RightRefer&gt;;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">NextResolver<sp/>=<sp/>::ScL::Feature::Detail::WrapperResolver&lt;LeftWrapper,<sp/>RightValueRefer&gt;;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AccessRefer<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>NextResolver::AccessRefer;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::ScL::Feature::isWrapper&lt;LeftWrapper&gt;(),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>template<sp/>parameter<sp/>_LeftWrapper<sp/>must<sp/>to<sp/>be<sp/>a<sp/>Wrapper<sp/>type!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_reference&lt;RightRefer&gt;::value,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>template<sp/>parameter<sp/>_RightRefer<sp/>must<sp/>to<sp/>be<sp/>a<sp/>reference<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::ScL::Feature::isWrapper&lt;RightWrapper&gt;(),</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>template<sp/>parameter<sp/>_RightRefer<sp/>must<sp/>to<sp/>be<sp/>a<sp/>Wrapper<sp/>type<sp/>reference!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>static_assert(<sp/>::ScL::Feature::isSimilar&lt;<sp/>RightRefer,<sp/>RightValueRefer<sp/>&gt;(),<sp/>&quot;The</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RightRefer<sp/>and<sp/>RightValueRefer<sp/>must<sp/>to<sp/>be<sp/>similar<sp/>types!&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightWrapperGuard<sp/>m_wrapper_guard;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NextResolver<sp/>m_next_resolver;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1PartOfRightCompatibleWithLeftWrapperResolver" kindref="compound">PartOfRightCompatibleWithLeftWrapperResolver</ref>(RightRefer<sp/>right)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_wrapper_guard(::std::forward&lt;RightRefer&gt;(right))</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>m_next_resolver(::std::forward&lt;RightValueRefer&gt;(m_wrapper_guard.wrapperAccess()))</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccessRefer<sp/>resolve()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="175"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::std::forward&lt;AccessRefer&gt;(m_next_resolver.resolve());</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceScL_1_1Feature_1_1Detail" kindref="compound">ScL::Feature::Detail</ref></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_LeftWrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>_RightRefer&gt;</highlight></codeline>
+<codeline lineno="187" refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" kindref="compound">ValueWrapperResolver</ref></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">LeftWrapper<sp/>=<sp/>_LeftWrapper;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightRefer<sp/>=<sp/>_RightRefer;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RightValueGuard<sp/>=<sp/><ref refid="namespaceScL_1_1Feature_1abe225f13d610bb62bca434c955aa79c9" kindref="member">::ScL::Feature::ValueGuard&lt;RightRefer&gt;</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AccessRefer<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RightValueGuard::ValueRefer;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::ScL::Feature::isWrapper&lt;LeftWrapper&gt;(),</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>template<sp/>parameter<sp/>_LeftWrapper<sp/>must<sp/>to<sp/>be<sp/>a<sp/>wrapper!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_reference&lt;RightRefer&gt;::value,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>template<sp/>parameter<sp/>_RightRefer<sp/>must<sp/>to<sp/>be<sp/>a<sp/>reference<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_reference&lt;AccessRefer&gt;::value,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>AccessRefer<sp/>must<sp/>to<sp/>be<sp/>a<sp/>reference<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RightValueGuard<sp/>m_value_guard;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScL_1_1Feature_1_1Detail_1_1ValueWrapperResolver" kindref="compound">ValueWrapperResolver</ref>(RightRefer<sp/>right)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_value_guard(::std::forward&lt;RightRefer&gt;(right))</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccessRefer<sp/>resolve()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="211"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::std::forward&lt;AccessRefer&gt;(m_value_guard.valueAccess());</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ScL::Feature::Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/detail/resolver.h"/>
+  </compounddef>
+</doxygen>

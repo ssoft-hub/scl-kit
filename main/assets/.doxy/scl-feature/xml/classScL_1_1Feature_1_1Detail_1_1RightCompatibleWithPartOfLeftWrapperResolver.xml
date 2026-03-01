@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</compoundname>
+    <includes refid="resolver_8h" local="no">resolver.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename _LeftWrapper</type>
+      </param>
+      <param>
+        <type>typename _RightRefer</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a617489bfd4cdac7249da7431d5225d5d" prot="public" static="no">
+        <type>_LeftWrapper</type>
+        <definition>using ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::LeftWrapper =  _LeftWrapper</definition>
+        <argsstring></argsstring>
+        <name>LeftWrapper</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::LeftWrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="121" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a93a1c8597e5eb25c6b8716e18eced6f2" prot="public" static="no">
+        <type>_RightRefer</type>
+        <definition>using ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::RightRefer =  _RightRefer</definition>
+        <argsstring></argsstring>
+        <name>RightRefer</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::RightRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="122" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1aec6e448db74d3f09bfc47a2f79b01294" prot="public" static="no">
+        <type>RightRefer</type>
+        <definition>using ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::AccessRefer =  RightRefer</definition>
+        <argsstring></argsstring>
+        <name>AccessRefer</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::AccessRefer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="123" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1acf6736007581cad9978a2ec8dbdd95da" prot="private" static="no" mutable="no">
+        <type>RightRefer</type>
+        <definition>RightRefer ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::m_right_refer</definition>
+        <argsstring></argsstring>
+        <name>m_right_refer</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::m_right_refer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="126" column="20" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a3a7e8d67330ece39cf36a63abfefa3d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::RightCompatibleWithPartOfLeftWrapperResolver</definition>
+        <argsstring>(RightRefer right)</argsstring>
+        <name>RightCompatibleWithPartOfLeftWrapperResolver</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::RightCompatibleWithPartOfLeftWrapperResolver</qualifiedname>
+        <param>
+          <type>RightRefer</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="129" column="9" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a2283df4fab0f117bb91cf4a81a551a77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>AccessRefer</type>
+        <definition>AccessRefer ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver&lt; _LeftWrapper, _RightRefer &gt;::resolve</definition>
+        <argsstring>() const</argsstring>
+        <name>resolve</name>
+        <qualifiedname>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver::resolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/detail/resolver.h" line="133" column="21" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Используется, если _Right совместим c вложенной частью _LeftWrapper. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/resolver.h" line="118" column="5" bodyfile="module/feature/src/scl/feature/detail/resolver.h" bodystart="119" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1aec6e448db74d3f09bfc47a2f79b01294" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>AccessRefer</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a617489bfd4cdac7249da7431d5225d5d" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>LeftWrapper</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1acf6736007581cad9978a2ec8dbdd95da" prot="private" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>m_right_refer</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a2283df4fab0f117bb91cf4a81a551a77" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>resolve</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a3a7e8d67330ece39cf36a63abfefa3d8" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>RightCompatibleWithPartOfLeftWrapperResolver</name></member>
+      <member refid="classScL_1_1Feature_1_1Detail_1_1RightCompatibleWithPartOfLeftWrapperResolver_1a93a1c8597e5eb25c6b8716e18eced6f2" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::RightCompatibleWithPartOfLeftWrapperResolver</scope><name>RightRefer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

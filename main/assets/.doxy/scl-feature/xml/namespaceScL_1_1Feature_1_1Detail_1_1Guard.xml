@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceScL_1_1Feature_1_1Detail_1_1Guard" kind="namespace" language="C++">
+    <compoundname>ScL::Feature::Detail::Guard</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1BothTool" prot="public">ScL::Feature::Detail::Guard::BothTool</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1LeftTool" prot="public">ScL::Feature::Detail::Guard::LeftTool</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1RangeTool" prot="public">ScL::Feature::Detail::Guard::RangeTool</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Detail_1_1Guard_1_1RightTool" prot="public">ScL::Feature::Detail::Guard::RightTool</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/operator_tool.h" line="12" column="1"/>
+  </compounddef>
+</doxygen>

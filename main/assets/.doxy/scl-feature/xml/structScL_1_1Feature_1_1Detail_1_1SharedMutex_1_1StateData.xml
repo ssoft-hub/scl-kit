@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData" kind="struct" language="C++" prot="private">
+    <compoundname>ScL::Feature::Detail::SharedMutex::StateData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1af9ffcfab072f197eb73e66375027285a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned ScL::Feature::Detail::SharedMutex::StateData::m_shared_count</definition>
+        <argsstring></argsstring>
+        <name>m_shared_count</name>
+        <qualifiedname>ScL::Feature::Detail::SharedMutex::StateData::m_shared_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="18" column="22" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1aebd95550ce4708be5425f304468790ad" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ScL::Feature::Detail::SharedMutex::StateData::m_exclusive</definition>
+        <argsstring></argsstring>
+        <name>m_exclusive</name>
+        <qualifiedname>ScL::Feature::Detail::SharedMutex::StateData::m_exclusive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="19" column="18" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1a61f3716fd1d4c8313910d0b938b2d7b3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ScL::Feature::Detail::SharedMutex::StateData::m_upgrade</definition>
+        <argsstring></argsstring>
+        <name>m_upgrade</name>
+        <qualifiedname>ScL::Feature::Detail::SharedMutex::StateData::m_upgrade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="20" column="18" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1ab48d82d196954a0efc69dbbd8170c96e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ScL::Feature::Detail::SharedMutex::StateData::m_exclusive_waiting_blocked</definition>
+        <argsstring></argsstring>
+        <name>m_exclusive_waiting_blocked</name>
+        <qualifiedname>ScL::Feature::Detail::SharedMutex::StateData::m_exclusive_waiting_blocked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="21" column="18" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1ab90b53144e9287d719f8bee35a6c4f91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Detail::SharedMutex::StateData::StateData</definition>
+        <argsstring>()</argsstring>
+        <name>StateData</name>
+        <qualifiedname>ScL::Feature::Detail::SharedMutex::StateData::StateData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="23" column="13" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="23" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" line="16" column="9" bodyfile="module/feature/src/scl/feature/tool/thread_safe/private/shared_mutex.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1aebd95550ce4708be5425f304468790ad" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::SharedMutex::StateData</scope><name>m_exclusive</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1ab48d82d196954a0efc69dbbd8170c96e" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::SharedMutex::StateData</scope><name>m_exclusive_waiting_blocked</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1af9ffcfab072f197eb73e66375027285a" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::SharedMutex::StateData</scope><name>m_shared_count</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1a61f3716fd1d4c8313910d0b938b2d7b3" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::SharedMutex::StateData</scope><name>m_upgrade</name></member>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1SharedMutex_1_1StateData_1ab90b53144e9287d719f8bee35a6c4f91" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::SharedMutex::StateData</scope><name>StateData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

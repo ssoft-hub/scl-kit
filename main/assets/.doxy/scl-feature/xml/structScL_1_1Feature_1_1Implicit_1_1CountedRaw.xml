@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Implicit::CountedRaw</compoundname>
+    <includes refid="implicit_2raw_8h" local="no">raw.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1BaseCounted" prot="public">ScL::Feature::Implicit::CountedRaw::BaseCounted</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper" prot="public">ScL::Feature::Implicit::CountedRaw::ConstructHelper</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01false_01_4" prot="public">ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, false &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1ConstructHelper_3_01__Holder_00_01true_01_4" prot="public">ScL::Feature::Implicit::CountedRaw::ConstructHelper&lt; _Holder, true &gt;</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1Counted" prot="public">ScL::Feature::Implicit::CountedRaw::Counted</innerclass>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1_1Holder" prot="public">ScL::Feature::Implicit::CountedRaw::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Counter</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a257f1687e5dd1fcddddbf9d3b67d2592" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _WrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::isEmpty</definition>
+        <argsstring>(_WrapperRefer &amp;&amp;wrapper) noexcept</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::isEmpty</qualifiedname>
+        <param>
+          <type>_WrapperRefer &amp;&amp;</type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="351" column="21" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="351" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a8f6b5ad2c9d8b89279231d34f58d8fd8" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _WrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>typename::std::decay_t&lt; _WrapperRefer &gt;::TypeId</type>
+        <definition>static typename::std::decay_t&lt; _WrapperRefer &gt;::TypeId ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::typeId</definition>
+        <argsstring>(_WrapperRefer &amp;&amp;wrapper) noexcept</argsstring>
+        <name>typeId</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::typeId</qualifiedname>
+        <param>
+          <type>_WrapperRefer &amp;&amp;</type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="358" column="49" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="358" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1aa1802860048859f5cdf800cd3c10e3e1" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _TestWrapper</type>
+          </param>
+          <param>
+            <type>typename _WrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::isA</definition>
+        <argsstring>(_WrapperRefer &amp;&amp;wrapper) noexcept</argsstring>
+        <name>isA</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::isA</qualifiedname>
+        <param>
+          <type>_WrapperRefer &amp;&amp;</type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="368" column="21" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="368" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1ae0b792b462d300fdd7d52ddddba8f7d9" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _TestWrapper</type>
+          </param>
+          <param>
+            <type>typename _WrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>static bool ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::isKindOf</definition>
+        <argsstring>(_WrapperRefer &amp;&amp;wrapper) noexcept</argsstring>
+        <name>isKindOf</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::isKindOf</qualifiedname>
+        <param>
+          <type>_WrapperRefer &amp;&amp;</type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="381" column="21" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="381" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a746c7d84858de4a8de4539ba6c3554a6" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _LeftWrapper</type>
+          </param>
+          <param>
+            <type>typename _RightWrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>static decltype(auto) ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::staticCast</definition>
+        <argsstring>(_RightWrapperRefer &amp;&amp;right) noexcept</argsstring>
+        <name>staticCast</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::staticCast</qualifiedname>
+        <param>
+          <type>_RightWrapperRefer &amp;&amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="393" column="25" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="393" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a56c84c8738088a3bff4789e5d375fe6b" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _LeftWrapper</type>
+          </param>
+          <param>
+            <type>typename _RightWrapperRefer</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>static decltype(auto) ScL::Feature::Implicit::CountedRaw&lt; _Counter &gt;::dynamicCast</definition>
+        <argsstring>(_RightWrapperRefer &amp;&amp;right) noexcept</argsstring>
+        <name>dynamicCast</name>
+        <qualifiedname>ScL::Feature::Implicit::CountedRaw::dynamicCast</qualifiedname>
+        <param>
+          <type>_RightWrapperRefer &amp;&amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="415" column="25" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="415" bodyend="437"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования значения в &quot;куче&quot; на основе raw указателя. Реализует технику ленивых вычислений, когда копирование экземпляра значения происходит только в момент доступа к неконстантному экземпляру. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/implicit/raw.h" line="24" column="5" bodyfile="module/feature/src/scl/feature/tool/implicit/raw.h" bodystart="25" bodyend="438"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a56c84c8738088a3bff4789e5d375fe6b" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>dynamicCast</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1aa1802860048859f5cdf800cd3c10e3e1" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>isA</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a257f1687e5dd1fcddddbf9d3b67d2592" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>isEmpty</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1ae0b792b462d300fdd7d52ddddba8f7d9" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>isKindOf</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a746c7d84858de4a8de4539ba6c3554a6" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>staticCast</name></member>
+      <member refid="structScL_1_1Feature_1_1Implicit_1_1CountedRaw_1a8f6b5ad2c9d8b89279231d34f58d8fd8" prot="public" virt="non-virtual"><scope>ScL::Feature::Implicit::CountedRaw</scope><name>typeId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

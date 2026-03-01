@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1MultiToolHelper_3_01__Value_00_01__Tool_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tool &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename _Value</type>
+      </param>
+      <param>
+        <type>typename _Tool</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Detail_1_1MultiToolHelper_3_01__Value_00_01__Tool_01_4_1ab2ff2362df52cfaa17576c7024fff9e5" prot="public" static="no">
+        <type><ref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" kindref="compound">::ScL::Feature::Detail::Wrapper</ref>&lt; _Value, _Tool &gt;</type>
+        <definition>using ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tool &gt;::Type =  ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tool &gt;::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper.h" line="34" column="9" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/wrapper.h" line="32" column="5" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="33" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Detail_1_1MultiToolHelper_3_01__Value_00_01__Tool_01_4_1ab2ff2362df52cfaa17576c7024fff9e5" prot="public" virt="non-virtual"><scope>ScL::Feature::Detail::MultiToolHelper&lt; _Value, _Tool &gt;</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

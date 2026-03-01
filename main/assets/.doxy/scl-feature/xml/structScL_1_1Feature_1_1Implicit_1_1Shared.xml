@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Implicit_1_1Shared" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Implicit::Shared</compoundname>
+    <includes refid="implicit_2shared_8h" local="no">shared.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Implicit_1_1Shared_1_1Holder" prot="public">ScL::Feature::Implicit::Shared::Holder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования неявно обобщенного значения на основе умного указателя ::std::shared_ptr. Реализует технику ленивых вычислений, когда копирование экземпляра значения происходит только в момент доступа к неконстантному экземпляру. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/implicit/shared.h" line="21" column="5" bodyfile="module/feature/src/scl/feature/tool/implicit/shared.h" bodystart="22" bodyend="131"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

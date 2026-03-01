@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Optional::Holder</compoundname>
+    <innerclass refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1_1Empty" prot="public">ScL::Feature::Inplace::Optional::Holder::Empty</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Value</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a000f0050411621d0cedb2b0e42fe70fb" prot="public" static="no">
+        <type>Holder&lt; _Value &gt;</type>
+        <definition>using ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::ThisType =  Holder&lt;_Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::ThisType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="36" column="13" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a6f10c7c9f9097181f626b4ef9a7a8ff6" prot="public" static="no">
+        <type>_Value</type>
+        <definition>using ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Value =  _Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="37" column="13" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ad22816d4e296445fdbda705d0ddfb1a5" prot="public" static="no" mutable="no">
+        <type>Empty</type>
+        <definition>Empty ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::m_empty</definition>
+        <argsstring></argsstring>
+        <name>m_empty</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::m_empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="44" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ac74380e3f04c06b1f8843e24f2b484d3" prot="public" static="no" mutable="no">
+        <type>Value</type>
+        <definition>Value ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::m_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="45" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a9a9c1aac0b6f5d1bce401a23d9ce6c02" prot="public" static="no" mutable="no">
+        <type>union ScL::Feature::Inplace::Optional::Holder</type>
+        <definition>union ScL::Feature::Inplace::Optional::Holder ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="46" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afaa54ac906dfe0cfd63de278e50b7d1f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::m_is_exists</definition>
+        <argsstring></argsstring>
+        <name>m_is_exists</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::m_is_exists</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="48" column="18" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a4161af2d34345b9d9734add46d53e6b8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>()</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="50" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a61159ca3d867e6f5e77afbd31095ebc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>_Arguments</declname>
+            <defname>_Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(_Arguments &amp;&amp;... arguments)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>_Arguments &amp;&amp;...</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="53" column="13" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a4c00e3b01c8a79c86e1fb4ba1bf0a652" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="58" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="58" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a14832afb35308019c53e48cfdaebaeb5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value const &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="68" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a901cd0371678d9d8680c952a64b7feb9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value volatile &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="74" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="74" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afba1e828208ceee9f7e3f84f1631cb60" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value const volatile &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="84" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ad9736f2af3c59e71b450d46463713be7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="90" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a0859c2a89b40a22cf9c6cfef670f44a0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value const &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="96" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a1266ef022493a5f16555e52bbe69d39e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType volatile &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value volatile &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="102" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1aff74a2860647d02cf1512af5be7e7fb5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(ThisType const volatile &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, Value const volatile &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>ThisType const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="108" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a215fd8d98c33c820fc0fdaa56333c3e3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="115" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="115" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a117e9a36530b34c460182368adbaea81" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue const &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="126" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="126" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1acc2f5099be22b2c6a8574b2a39992419" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue volatile &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="133" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="133" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a333860e55db164af5c5bc5b59291be1f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;&amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue const volatile &amp;&amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="144" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="144" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a2df31e67f77f701a9b772a69a4cb9fa1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="152" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="152" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a7fa24e0d2f3b0d9fb285672f18f086a0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue const &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="159" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a507ad6fe9e6c7985fba38dd6fc80ba7b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; volatile &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue volatile &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="166" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a248a491882dfd3491bf3d8c6f957dcff" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _OtherValue</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::Holder</definition>
+        <argsstring>(Holder&lt; _OtherValue &gt; const volatile &amp;other) noexcept(::std::is_nothrow_constructible_v&lt; Value, _OtherValue const volatile &amp; &gt;)</argsstring>
+        <name>Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::Holder</qualifiedname>
+        <param>
+          <type>Holder&lt; _OtherValue &gt; const volatile &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="173" column="23" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="173" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afb55b59e675a94c35694ee568378c325" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::~Holder</definition>
+        <argsstring>()</argsstring>
+        <name>~Holder</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::~Holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="179" column="13" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a2d5bca3903193dead6e051e088bac530" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>_Arguments</declname>
+            <defname>_Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::construct</definition>
+        <argsstring>(_Arguments &amp;&amp;... _arguments) noexcept(::std::is_nothrow_constructible_v&lt; Value, _Arguments &amp;&amp;... &gt;) -&gt; ::std::enable_if_t&lt;::std::is_constructible_v&lt; Value, _Arguments... &gt;, void &gt;</argsstring>
+        <name>construct</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::construct</qualifiedname>
+        <param>
+          <type>_Arguments &amp;&amp;...</type>
+          <declname>_arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="182" column="18" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="182" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a16ac76597bf6c056d0f1f914728297b1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::reset</definition>
+        <argsstring>() noexcept(::std::is_nothrow_destructible_v&lt; Value &gt;) -&gt; ::std::enable_if_t&lt;::std::is_destructible_v&lt; Value &gt;, void &gt;</argsstring>
+        <name>reset</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="199" column="18" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="199" bodyend="207"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a66b25f4e6f425c3c49b798c81be0cbd3" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _HolderRefer</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>static constexpr decltype(auto) ScL::Feature::Inplace::Optional::Holder&lt; _Value &gt;::value</definition>
+        <argsstring>(_HolderRefer &amp;&amp;holder)</argsstring>
+        <name>value</name>
+        <qualifiedname>ScL::Feature::Inplace::Optional::Holder::value</qualifiedname>
+        <param>
+          <type>_HolderRefer &amp;&amp;</type>
+          <declname>holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access to internal value of Holder for any king of referencies. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="213" column="39" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="213" bodyend="220"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/optional.h" line="34" column="9" bodyfile="module/feature/src/scl/feature/tool/inplace/optional.h" bodystart="35" bodyend="221"/>
+    <listofallmembers>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a2d5bca3903193dead6e051e088bac530" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>construct</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a4161af2d34345b9d9734add46d53e6b8" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a61159ca3d867e6f5e77afbd31095ebc0" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a4c00e3b01c8a79c86e1fb4ba1bf0a652" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a14832afb35308019c53e48cfdaebaeb5" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a901cd0371678d9d8680c952a64b7feb9" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afba1e828208ceee9f7e3f84f1631cb60" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ad9736f2af3c59e71b450d46463713be7" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a0859c2a89b40a22cf9c6cfef670f44a0" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a1266ef022493a5f16555e52bbe69d39e" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1aff74a2860647d02cf1512af5be7e7fb5" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a215fd8d98c33c820fc0fdaa56333c3e3" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a117e9a36530b34c460182368adbaea81" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1acc2f5099be22b2c6a8574b2a39992419" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a333860e55db164af5c5bc5b59291be1f" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a2df31e67f77f701a9b772a69a4cb9fa1" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a7fa24e0d2f3b0d9fb285672f18f086a0" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a507ad6fe9e6c7985fba38dd6fc80ba7b" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a248a491882dfd3491bf3d8c6f957dcff" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Holder</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ad22816d4e296445fdbda705d0ddfb1a5" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>m_empty</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afaa54ac906dfe0cfd63de278e50b7d1f" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>m_is_exists</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1ac74380e3f04c06b1f8843e24f2b484d3" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>m_value</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a16ac76597bf6c056d0f1f914728297b1" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>reset</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a000f0050411621d0cedb2b0e42fe70fb" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>ThisType</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a6f10c7c9f9097181f626b4ef9a7a8ff6" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>Value</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1a66b25f4e6f425c3c49b798c81be0cbd3" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>value</name></member>
+      <member refid="structScL_1_1Feature_1_1Inplace_1_1Optional_1_1Holder_1afb55b59e675a94c35694ee568378c325" prot="public" virt="non-virtual"><scope>ScL::Feature::Inplace::Optional::Holder</scope><name>~Holder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

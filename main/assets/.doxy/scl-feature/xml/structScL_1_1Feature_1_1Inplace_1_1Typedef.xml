@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Inplace_1_1Typedef" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Inplace::Typedef</compoundname>
+    <includes refid="typedef_8h" local="no">typedef.h</includes>
+    <innerclass refid="structScL_1_1Feature_1_1Inplace_1_1Typedef_1_1Holder" prot="public">ScL::Feature::Inplace::Typedef::Holder</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename _Tag</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Инструмент для формирования экземпляра значения &quot;по месту&quot; и реализации механизма Strong <ref refid="structScL_1_1Feature_1_1Inplace_1_1Typedef" kindref="compound">Typedef</ref>. Определение &quot;по месту&quot; означает, что для значения не используется динамическое размещение в "куче и оно является неотъемлемой частью области видимости, в котором этот экземпляр значения определен. </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/tool/inplace/typedef.h" line="17" column="5" bodyfile="module/feature/src/scl/feature/tool/inplace/typedef.h" bodystart="18" bodyend="117"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

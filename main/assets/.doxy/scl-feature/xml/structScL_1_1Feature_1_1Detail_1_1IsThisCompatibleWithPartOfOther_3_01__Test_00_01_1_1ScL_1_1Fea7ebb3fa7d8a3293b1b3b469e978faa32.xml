@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structScL_1_1Feature_1_1Detail_1_1IsThisCompatibleWithPartOfOther_3_01__Test_00_01_1_1ScL_1_1Fea7ebb3fa7d8a3293b1b3b469e978faa32" kind="struct" language="C++" prot="public">
+    <compoundname>ScL::Feature::Detail::IsThisCompatibleWithPartOfOther&lt; _Test, ::ScL::Feature::Detail::Wrapper&lt; _Other, _OtherTool &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::integral_constant&lt; bool, ::ScL::Feature::IsThisCompatibleWithOther&lt; ::std::remove_cv_t&lt; _Test &gt;, ::std::remove_cv_t&lt; _Other &gt; &gt;::value &gt;</basecompoundref>
+    <includes refid="trait_8h" local="no">trait.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename _Test</type>
+      </param>
+      <param>
+        <type>typename _Other</type>
+      </param>
+      <param>
+        <type>typename _OtherTool</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Тип является частью <ref refid="classScL_1_1Feature_1_1Detail_1_1Wrapper" kindref="compound">Wrapper</ref>, если он совместим с любой его вложенной частью </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/trait.h" line="117" column="5" bodyfile="module/feature/src/scl/feature/trait.h" bodystart="122" bodyend="122"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

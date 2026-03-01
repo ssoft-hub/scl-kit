@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScL_1_1Feature_1_1ValueReflectionMixIn_3_01Self___00_01SelfHolder___00_01_1_1std_1_1vector_1178f9481a24b8e98a651db6b7f18a56" kind="class" language="C++" prot="public">
+    <compoundname>ScL::Feature::ValueReflectionMixIn&lt; Self_, SelfHolder_, ::std::vector&lt; Value_, Allocator_ &gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Self_</type>
+      </param>
+      <param>
+        <type>typename SelfHolder_</type>
+      </param>
+      <param>
+        <type>typename Value_</type>
+      </param>
+      <param>
+        <type>typename Allocator_</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/reflection/std/vector.h" line="12" column="5" bodyfile="module/feature/src/scl/feature/reflection/std/vector.h" bodystart="13" bodyend="65"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
