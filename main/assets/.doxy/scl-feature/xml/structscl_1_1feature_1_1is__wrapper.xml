@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1feature_1_1is__wrapper" kind="struct" language="C++" prot="public">
+    <compoundname>scl::feature::is_wrapper</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">scl::feature::detail::is_wrapper&lt;::std::remove_cv_t&lt; T &gt; &gt;</basecompoundref>
+    <includes refid="type__traits_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">T</ref></type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Checks whether <computeroutput>T</computeroutput> is a <computeroutput>wrapper</computeroutput> specialization. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>cv-qualifiers are stripped before the check.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(!is_wrapper&lt;int&gt;::value);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">is_wrapper&lt;wrapper&lt;int&gt;</ref>&gt;<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::value</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">is_wrapper&lt;wrapper&lt;int&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&gt;<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::value</ref>);<sp/><sp/></highlight><highlight class="comment">//<sp/>cv<sp/>stripped</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/type_traits/wrapper.h" line="35" column="5" bodyfile="module/feature/src/scl/feature/type_traits/wrapper.h" bodystart="36" bodyend="36"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

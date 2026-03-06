@@ -8,13 +8,12 @@
 
 
 ```C++
-#include <scl/feature/cast.h>
-#include <scl/feature/guard.h>
-#include <scl/feature/mixin.h>
-#include <scl/feature/reflection.h>
-#include <scl/feature/tool.h>
-#include <scl/feature/trait.h>
+#pragma once
+
+#include <scl/feature/concepts.h>
+#include <scl/feature/type_traits.h>
 #include <scl/feature/wrapper.h>
+
 ```
 
 

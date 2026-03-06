@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__type__traits" kind="group">
+    <compoundname>scl_feature_type_traits</compoundname>
+    <title>ScL Feature Type Traits</title>
+    <innerclass refid="structscl_1_1feature_1_1is__wrapper" prot="public">scl::feature::is_wrapper</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool scl::feature::is_wrapper_v</definition>
+        <argsstring></argsstring>
+        <name>is_wrapper_v</name>
+        <qualifiedname>scl::feature::is_wrapper_v</qualifiedname>
+        <initializer>= is_wrapper&lt;T&gt;::value</initializer>
+        <briefdescription>
+<para>Helper variable template for <computeroutput><ref refid="structscl_1_1feature_1_1is__wrapper" kindref="compound">is_wrapper</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(!<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">is_wrapper_v&lt;int&gt;</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">is_wrapper_v&lt;wrapper&lt;int&gt;</ref>&gt;);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/type_traits/wrapper.h" line="50" column="27" bodyfile="module/feature/src/scl/feature/type_traits/wrapper.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Type-level utilities for ScL Feature metaprogramming. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

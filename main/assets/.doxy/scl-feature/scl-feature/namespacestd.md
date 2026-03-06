@@ -77,5 +77,5 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `module/feature/src/scl/feature/detail/range.h`
+The documentation for this class was generated from the following file `[generated]`
 

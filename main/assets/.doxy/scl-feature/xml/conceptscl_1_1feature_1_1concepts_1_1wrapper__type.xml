@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptscl_1_1feature_1_1concepts_1_1wrapper__type" kind="concept">
+    <compoundname>scl::feature::concepts::wrapper_type</compoundname>
+    <includes refid="concepts_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename T&gt;
+concept <ref refid="conceptscl_1_1feature_1_1concepts_1_1wrapper__type" kindref="compound">scl::feature::concepts::wrapper_type</ref> =  <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;T&gt;    </initializer>
+    <briefdescription>
+<para>Satisfied when <computeroutput>T</computeroutput> is a <computeroutput>wrapper</computeroutput> specialization. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/>wrapper_type&lt;wrapper&lt;int&gt;&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!wrapper_type&lt;int&gt;);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h" line="19" column="5"/>
+  </compounddef>
+</doxygen>

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -293,99 +293,41 @@
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../wrapper_8h/"><strong>wrapper.h</strong></a></p>
 <p><a href="../wrapper_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
-#ifndef SCL_FUTURE_WRAPPER_H
-#define SCL_FUTURE_WRAPPER_H
 
-#ifdef _MSC_VER
-#pragma warning(disable: 4521 4522)
-#endif
+#include &lt;scl/feature/detail/wrapper.h&gt;
+#include &lt;scl/feature/inplace/plain.h&gt;
 
-namespace ScL::Feature::Inplace
+#include &lt;type_traits&gt;
+
+namespace scl::feature::detail
 {
-    struct Default;
-} // namespace ScL::Feature::Inplace
+    template &lt;typename State, template &lt;typename&gt; class... Executor&gt;
+    struct wrapper_fold
+    {
+        using type = State;
+    };
 
-namespace ScL::Feature::Detail
+    template &lt;typename State, template &lt;typename&gt; class Executor, template &lt;typename&gt; class... Rest&gt;
+    struct wrapper_fold&lt;State, Executor, Rest...&gt;
+    {
+        using type = typename wrapper_fold&lt;::scl::feature::detail::wrapper&lt;State, Executor&gt;, Rest...&gt;::type;
+    };
+
+    template &lt;typename Value, template &lt;typename&gt; class Executor, template &lt;typename&gt; class... Rest&gt;
+    struct wrapper_fold&lt;::scl::feature::detail::wrapper&lt;Value, Executor&gt;, Executor, Rest...&gt;
+    {
+        using type = typename wrapper_fold&lt;::scl::feature::detail::wrapper&lt;Value, Executor&gt;, Rest...&gt;::type;
+    };
+} // namespace scl::feature::detail
+
+namespace scl
 {
-    template &lt;typename, typename&gt;
-    class Wrapper;
-} // namespace ScL::Feature::Detail
+    template &lt;typename Value, template &lt;typename&gt; class... Executors&gt;
+    using wrapper = ::std::conditional_t&lt;sizeof...(Executors) == 0,
+        typename ::scl::feature::detail::wrapper_fold&lt;Value, ::scl::feature::inplace::plain&gt;::type,
+        typename ::scl::feature::detail::wrapper_fold&lt;Value, Executors...&gt;::type&gt;;
+} // namespace scl
 
-namespace ScL::Feature::Detail
-{
-    template &lt;typename _Value, typename... _Tools&gt;
-    struct MultiToolHelper;
-
-    template &lt;typename _Value&gt;
-    struct MultiToolHelper&lt;_Value&gt;
-    {
-        using Type = typename MultiToolHelper&lt;_Value, ::ScL::Feature::Inplace::Default&gt;::Type;
-    };
-
-    template &lt;typename _Value, typename _Tool&gt;
-    struct MultiToolHelper&lt;_Value, _Tool&gt;
-    {
-        using Type = ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;;
-    };
-
-    template &lt;typename _Value, typename _Tool&gt;
-    struct MultiToolHelper&lt; ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt; &gt;
-    {
-        using Type = ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;;
-    };
-
-    template &lt;typename _Value, typename _Tool, typename... _Tools&gt;
-    struct MultiToolHelper&lt;_Value, _Tool, _Tools...&gt;
-    {
-        using Type = typename MultiToolHelper&lt; ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;,
-            _Tools...&gt;::Type;
-    };
-
-    template &lt;typename _Value, typename _Tool, typename... _Tools&gt;
-    struct MultiToolHelper&lt;_Value, _Tool, _Tool, _Tools...&gt;
-    {
-        using Type = typename MultiToolHelper&lt;_Value, _Tool, _Tools...&gt;::Type;
-    };
-} // namespace ScL::Feature::Detail
-
-namespace ScL::Feature::Detail
-{
-    template &lt;typename _Type&gt;
-    struct WrapperSimplifyHelper
-    {
-        using Type = _Type;
-    };
-
-    template &lt;typename _Value, typename _Tool, typename _OtherTool&gt;
-    struct WrapperSimplifyHelper&lt;
-        ::ScL::Feature::Detail::Wrapper&lt; ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;,
-            _OtherTool&gt; &gt;
-    {
-        using Type = ::ScL::Feature::Detail::Wrapper&lt;
-            typename WrapperSimplifyHelper&lt; ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt; &gt;::Type,
-            _OtherTool&gt;;
-    };
-
-    template &lt;typename _Value, typename _Tool&gt;
-    struct WrapperSimplifyHelper&lt;
-        ::ScL::Feature::Detail::Wrapper&lt; ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt;, _Tool&gt; &gt;
-    {
-        using Type = typename WrapperSimplifyHelper&lt;
-            ::ScL::Feature::Detail::Wrapper&lt;_Value, _Tool&gt; &gt;::Type;
-    };
-} // namespace ScL::Feature::Detail
-
-namespace ScL::Feature
-{
-    template &lt;typename _Value, typename... _Tools&gt;
-    using Wrapper = typename ::ScL::Feature::Detail::WrapperSimplifyHelper&lt;
-        typename ::ScL::Feature::Detail::MultiToolHelper&lt;_Value, _Tools...&gt;::Type&gt;::Type;
-} // namespace ScL::Feature
-
-// ::ScL::Feature::Wrapper must be defined before includes.
-#include &quot;detail/wrapper.h&quot;
-
-#endif
 </code></pre>
 
 

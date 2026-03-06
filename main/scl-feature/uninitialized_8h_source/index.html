@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -290,42 +290,24 @@
 
 
 <h1 id="file-uninitializedh">File uninitialized.h</h1>
-<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_0db53c02b814272e3ba3b8732fb26ebe/"><strong>tool</strong></a> <strong>&gt;</strong> <a href="../dir_7bf0b05e4f8b53958db4f23e94c624c5/"><strong>inplace</strong></a> <strong>&gt;</strong> <a href="../uninitialized_8h/"><strong>uninitialized.h</strong></a></p>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_a84fae2e5328daedf40681be880e8335/"><strong>inplace</strong></a> <strong>&gt;</strong> <a href="../uninitialized_8h/"><strong>uninitialized.h</strong></a></p>
 <p><a href="../uninitialized_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
-#ifndef SCL_WRAPPER_TOOL_INPLACE_UNINITIALIZED_H
-#define SCL_WRAPPER_TOOL_INPLACE_UNINITIALIZED_H
 
-#include &lt;scl/utility/type_traits.h&gt;
+#include &lt;cstddef&gt;
 
-#include &lt;utility&gt;
-
-namespace ScL::Feature::Inplace
+namespace scl::feature::inplace
 {
-    struct Uninitialized
+    template &lt;typename Value&gt;
+    class uninitialized
     {
-        template &lt;typename _Value&gt;
-        struct Holder
-        {
-            using ThisType = Holder&lt;_Value&gt;;
-            using Value = _Value;
+    public:
+        using value_type = Value;
 
-            Value m_value;
-
-            constexpr Holder() {}
-
-            template &lt;typename _HolderRefer&gt;
-            static constexpr decltype(auto) value(_HolderRefer &amp;&amp; holder)
-            {
-                using HolderRefer = _HolderRefer &amp;&amp;;
-                using ValueRefer = ::ScL::SimilarRefer&lt;Value, HolderRefer&gt;;
-                return ::std::forward&lt;ValueRefer&gt;(holder.m_value);
-            }
-        };
+    private:
+        alignas(Value)::std::byte m_storage[sizeof(Value)]; // NOLINT(*-avoid-c-arrays)
     };
-} // namespace ScL::Feature::Inplace
-
-#endif
+} // namespace scl::feature::inplace
 </code></pre>
 
 

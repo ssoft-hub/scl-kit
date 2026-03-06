@@ -2,16 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_b3eb4ac5eceab19e0dcca8b4c96aaf20" kind="dir">
     <compoundname>module/feature/src/scl/feature/detail</compoundname>
-    <innerfile refid="binary__operator_8h">binary_operator.h</innerfile>
-    <innerfile refid="method__reflection_8h">method_reflection.h</innerfile>
-    <innerfile refid="operator_8h">operator.h</innerfile>
-    <innerfile refid="operator__tool_8h">operator_tool.h</innerfile>
-    <innerfile refid="property__reflection_8h">property_reflection.h</innerfile>
-    <innerfile refid="range_8h">range.h</innerfile>
-    <innerfile refid="range__tool_8h">range_tool.h</innerfile>
-    <innerfile refid="resolver_8h">resolver.h</innerfile>
-    <innerfile refid="result__switch_8h">result_switch.h</innerfile>
-    <innerfile refid="unary__operator_8h">unary_operator.h</innerfile>
     <innerfile refid="detail_2wrapper_8h">wrapper.h</innerfile>
     <briefdescription>
     </briefdescription>
