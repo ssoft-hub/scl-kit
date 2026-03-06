@@ -53,9 +53,6 @@ Binaries: `bin/{TOOLCHAIN}/{CONFIG}/`
 - MinGW: `bin/Windows-GNU.13.1.0-x64/Debug/`
 - MSVC: `bin/Windows-MSVC.19.32.31328.0-x64/Debug/`
 
-## Known build issue
-`gtest_discover_tests` fails for MinGW builds because it tries to run the exe at build time without MinGW DLLs in PATH. Tests themselves work fine — run them via `script/claude/run_tests.bat`.
-
 ## Test Naming Convention
 - `*gtest.cpp` — GoogleTest (linked with `GTest::gtest_main`)
 - `*doctest.cpp` — doctest

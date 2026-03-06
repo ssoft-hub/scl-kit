@@ -2,6 +2,7 @@
 /bin
 /build
 /.claude
+/.vscode
 
 # C++ objects and libs
 *.d
