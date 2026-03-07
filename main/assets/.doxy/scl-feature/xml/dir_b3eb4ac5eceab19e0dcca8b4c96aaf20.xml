@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b3eb4ac5eceab19e0dcca8b4c96aaf20" kind="dir">
+    <compoundname>module/feature/src/scl/feature/detail</compoundname>
+    <innerfile refid="detail_2wrapper_8h">wrapper.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/detail/"/>
+  </compounddef>
+</doxygen>

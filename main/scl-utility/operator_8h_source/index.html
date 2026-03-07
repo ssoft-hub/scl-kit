@@ -1,0 +1,1396 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++20 header-only toolkit">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>File operator.h - ScL Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-operatorh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ScL Toolkit" class="md-header__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ScL Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File operator.h
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ScL Toolkit" class="md-nav__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ScL Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="file-operatorh">File operator.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_7ae4f81ae30c9db8975b98cdcb7060a6/"><strong>detection</strong></a> <strong>&gt;</strong> <a href="../operator_8h/"><strong>operator.h</strong></a></p>
+<p><a href="../operator_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">
+#pragma once
+
+#include &lt;scl/utility/preprocessor/forward.h&gt;
+#include &lt;scl/utility/type_traits/detection.h&gt;
+#include &lt;scl/utility/type_traits/member_like.h&gt;
+
+#ifndef DOXYGEN
+
+#define SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION(op, name)                                                                \
+    namespace scl                                                                                                        \
+    {                                                                                                                    \
+        template &lt;typename Type, typename... Arguments&gt;                                                                  \
+        using name##_member_operation =                                                                                  \
+            decltype(::std::declval&lt;Type&gt;().operator op  (::std::declval&lt;Arguments&gt;()...));                          \
+        template &lt;typename... Arguments&gt;                                                                                 \
+        inline constexpr auto has_##name##_member_v =                                                                    \
+            ::scl::is_detected_v&lt;name##_member_operation, Arguments...&gt;;                                                 \
+        template &lt;typename... Arguments&gt;                                                                                 \
+        using name##_member_t = ::scl::detected_t&lt;name##_member_operation, Arguments...&gt;;                                \
+    }                                                                                                                    \
+    namespace scl                                                                                                        \
+    {                                                                                                                    \
+        template &lt;typename Type, typename... Arguments&gt;                                                                  \
+        using name##_member_exact_operation = decltype((::std::declval&lt;Type&gt;().*                                         \
+            static_cast&lt;::scl::member_function_like_t&lt;Type, name##_member_operation&lt;Type, Arguments...&gt;(Arguments...)&gt;&gt;( \
+                &amp;::std::remove_cvref_t&lt;Type&gt;::operator op ))(::std::declval&lt;Arguments&gt;()...));                       \
+        template &lt;typename... Arguments&gt;                                                                                 \
+        inline constexpr auto has_##name##_member_exact_v =                                                              \
+            ::scl::is_detected_v&lt;name##_member_exact_operation, Arguments...&gt;;                                           \
+        template &lt;typename... Arguments&gt;                                                                                 \
+        using name##_member_exact_t = ::scl::detected_t&lt;name##_member_exact_operation, Arguments...&gt;;                    \
+    }
+
+#define SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(op, name)                                         \
+    namespace scl                                                                                    \
+    {                                                                                                \
+        template &lt;typename Type&gt;                                                                     \
+        using name##_operation = decltype(op  ::std::declval&lt;Type&gt;());                           \
+        template &lt;typename... Arguments&gt;                                                             \
+        inline constexpr auto has_##name##_v = ::scl::is_detected_v&lt;name##_operation, Arguments...&gt;; \
+        template &lt;typename... Arguments&gt;                                                             \
+        using name##_t = ::scl::detected_t&lt;name##_operation, Arguments...&gt;;                          \
+    }                                                                                                \
+    SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION(SCL_FORWARD(op), name)
+
+#define SCL_DETAIL_POSTFIX_UNARY_OPERATOR_DETECTION(op, name)                                              \
+    namespace scl                                                                                          \
+    {                                                                                                      \
+        template &lt;typename Type&gt;                                                                           \
+        using name##_operation = decltype(::std::declval&lt;Type&gt;() op );                                 \
+        template &lt;typename... Arguments&gt;                                                                   \
+        inline constexpr auto has_##name##_v = ::scl::is_detected_v&lt;name##_operation, Arguments...&gt;;       \
+        template &lt;typename... Arguments&gt;                                                                   \
+        using name##_t = ::scl::detected_t&lt;name##_operation, Arguments...&gt;;                                \
+    }                                                                                                      \
+    namespace scl                                                                                          \
+    {                                                                                                      \
+        template &lt;typename Type&gt;                                                                           \
+        using name##_member_operation =                                                                    \
+            decltype(::std::declval&lt;Type&gt;().operator op  (::std::declval&lt;int&gt;()));                     \
+        template &lt;typename Type&gt;                                                                           \
+        inline constexpr auto has_##name##_member_v = ::scl::is_detected_v&lt;name##_member_operation, Type&gt;; \
+        template &lt;typename Type&gt;                                                                           \
+        using name##_member_t = ::scl::detected_t&lt;name##_member_operation, Type&gt;;                          \
+    }                                                                                                      \
+    namespace scl                                                                                          \
+    {                                                                                                      \
+        template &lt;typename Type&gt;                                                                           \
+        using name##_member_exact_operation = decltype((::std::declval&lt;Type&gt;().*                           \
+            static_cast&lt;::scl::member_function_like_t&lt;Type, name##_member_operation&lt;Type&gt;(int)&gt;&gt;(          \
+                &amp;::std::remove_cvref_t&lt;Type&gt;::operator op ))(::std::declval&lt;int&gt;()));                  \
+        template &lt;typename Type&gt;                                                                           \
+        inline constexpr auto has_##name##_member_exact_v =                                                \
+            ::scl::is_detected_v&lt;name##_member_exact_operation, Type&gt;;                                     \
+        template &lt;typename Type&gt;                                                                           \
+        using name##_member_exact_t = ::scl::detected_t&lt;name##_member_exact_operation, Type&gt;;              \
+    }
+
+#define SCL_DETAIL_BINARY_OPERATOR_DETECTION(op, name)                                               \
+    namespace scl                                                                                    \
+    {                                                                                                \
+        template &lt;typename Left, typename Right&gt;                                                     \
+        using name##_operation = decltype(::std::declval&lt;Left&gt;() op  ::std::declval&lt;Right&gt;());   \
+        template &lt;typename... Arguments&gt;                                                             \
+        inline constexpr auto has_##name##_v = ::scl::is_detected_v&lt;name##_operation, Arguments...&gt;; \
+        template &lt;typename... Arguments&gt;                                                             \
+        using name##_t = ::scl::detected_t&lt;name##_operation, Arguments...&gt;;                          \
+    }                                                                                                \
+    SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION(SCL_FORWARD(op), name)
+
+#define SCL_DETAIL_ARROW_OPERATOR_DETECTION(op, name)                                                \
+    namespace scl                                                                                    \
+    {                                                                                                \
+        template &lt;typename Type, typename... Arguments&gt;                                              \
+        using name##_operation =                                                                     \
+            decltype(::std::declval&lt;Type&gt;().operator op  (::std::declval&lt;Arguments&gt;()...));      \
+        template &lt;typename... Arguments&gt;                                                             \
+        inline constexpr auto has_##name##_v = ::scl::is_detected_v&lt;name##_operation, Arguments...&gt;; \
+        template &lt;typename... Arguments&gt;                                                             \
+        using name##_t = ::scl::detected_t&lt;name##_operation, Arguments...&gt;;                          \
+    }                                                                                                \
+    SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION(SCL_FORWARD(op), name)
+
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(&amp;, address_of)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(*, indirection)
+SCL_DETAIL_ARROW_OPERATOR_DETECTION(-&gt;*, arrow_to_pointer)
+SCL_DETAIL_ARROW_OPERATOR_DETECTION(-&gt;, arrow)
+// cppcheck-suppress syntaxError
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(SCL_FORWARD(, ), comma)
+
+namespace scl
+{
+    template &lt;typename Type, typename Argument&gt;
+    using subscript_operation = decltype(::std::declval&lt;Type&gt;()[::std::declval&lt;Argument&gt;()]);
+    template &lt;typename... Arguments&gt;
+    inline constexpr auto has_subscript_v = ::scl::is_detected_v&lt;subscript_operation, Arguments...&gt;;
+    template &lt;typename... Arguments&gt;
+    using subscript_t = ::scl::detected_t&lt;subscript_operation, Arguments...&gt;;
+} // namespace scl
+SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION([], subscript)
+
+namespace scl
+{
+    template &lt;typename Type, typename... Arguments&gt;
+    using call_operation = decltype(::std::declval&lt;Type&gt;()(::std::declval&lt;Arguments&gt;()...));
+    template &lt;typename... Arguments&gt;
+    inline constexpr auto has_call_v = ::scl::is_detected_v&lt;call_operation, Arguments...&gt;;
+    template &lt;typename... Arguments&gt;
+    using call_t = ::scl::detected_t&lt;call_operation, Arguments...&gt;;
+} // namespace scl
+SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION((), call)
+
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(+, unary_plus)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(-, unary_minus)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(++, prefix_increment)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(--, prefix_decrement)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(~, bitwise_not)
+SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION(!, logical_not)
+
+SCL_DETAIL_POSTFIX_UNARY_OPERATOR_DETECTION(++, postfix_increment) // NOLINT(bugprone-macro-repeated-side-effects)
+SCL_DETAIL_POSTFIX_UNARY_OPERATOR_DETECTION(--, postfix_decrement) // NOLINT(bugprone-macro-repeated-side-effects)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(==, equal_to)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(!=, not_equal_to)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&lt;, less)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&lt;=, less_equal)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&gt;, greater)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&gt;=, greater_equal)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(*, multiply)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(/, divide)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(%, modulo)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(+, plus)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(-, minus)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&lt;&lt;, left_shift)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&gt;&gt;, right_shift)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&amp;, bitwise_and)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(|, bitwise_or)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(^, bitwise_xor)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&amp;&amp;, logical_and)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(||, logical_or)
+
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(=, assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(*=, multiply_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(/=, divide_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(%=, modulo_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(+=, plus_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(-=, minus_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&lt;&lt;=, left_shift_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&gt;&gt;=, right_shift_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(&amp;=, bitwise_and_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(|=, bitwise_or_assign)
+SCL_DETAIL_BINARY_OPERATOR_DETECTION(^=, bitwise_xor_assign)
+
+#undef SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION
+#undef SCL_DETAIL_POSTFIX_UNARY_OPERATOR_DETECTION
+#undef SCL_DETAIL_BINARY_OPERATOR_DETECTION
+#undef SCL_DETAIL_ARROW_OPERATOR_DETECTION
+#undef SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION
+
+#elif defined(DOXYGEN)
+
+namespace scl
+{
+    // ============================================================================
+    // PREFIX UNARY OPERATORS: &amp;, *, +, -, ++, --, ~, !
+    // ============================================================================
+
+    template &lt;typename Type&gt;
+    using address_of_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_address_of_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using address_of_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using address_of_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_address_of_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using address_of_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using address_of_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_address_of_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using address_of_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using indirection_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_indirection_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using indirection_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using indirection_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_indirection_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using indirection_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using indirection_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_indirection_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using indirection_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using unary_plus_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_unary_plus_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using unary_plus_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using unary_plus_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_unary_plus_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using unary_plus_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using unary_plus_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_unary_plus_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using unary_plus_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using unary_minus_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_unary_minus_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using unary_minus_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using unary_minus_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_unary_minus_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using unary_minus_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using unary_minus_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_unary_minus_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using unary_minus_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using prefix_increment_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_prefix_increment_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using prefix_increment_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using prefix_increment_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_prefix_increment_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using prefix_increment_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using prefix_increment_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_prefix_increment_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using prefix_increment_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using prefix_decrement_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_prefix_decrement_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using prefix_decrement_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using prefix_decrement_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_prefix_decrement_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using prefix_decrement_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using prefix_decrement_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_prefix_decrement_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using prefix_decrement_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using bitwise_not_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_bitwise_not_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using bitwise_not_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using bitwise_not_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_bitwise_not_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using bitwise_not_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using bitwise_not_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_bitwise_not_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using bitwise_not_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using logical_not_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_logical_not_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using logical_not_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using logical_not_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_logical_not_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using logical_not_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using logical_not_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_logical_not_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using logical_not_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // POSTFIX UNARY OPERATORS: ++, -- (postfix)
+    // ============================================================================
+
+    template &lt;typename Type&gt;
+    using postfix_increment_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_increment_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_increment_t = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_increment_member_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_increment_member_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_increment_member_t = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_increment_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_increment_member_exact_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_increment_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type&gt;
+    using postfix_decrement_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_decrement_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_decrement_t = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_decrement_member_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_decrement_member_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_decrement_member_t = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_decrement_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type&gt;
+    inline constexpr bool has_postfix_decrement_member_exact_v = /* implementation defined */;
+    template &lt;typename Type&gt;
+    using postfix_decrement_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // BINARY COMPARISON OPERATORS: ==, !=, &lt;, &lt;=, &gt;, &gt;=
+    // ============================================================================
+
+    template &lt;typename Left, typename Right&gt;
+    using equal_to_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_equal_to_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using equal_to_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using equal_to_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_equal_to_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using equal_to_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using equal_to_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_equal_to_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using equal_to_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using not_equal_to_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_not_equal_to_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using not_equal_to_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using not_equal_to_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_not_equal_to_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using not_equal_to_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using not_equal_to_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_not_equal_to_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using not_equal_to_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using less_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_less_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using less_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_less_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_less_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using less_equal_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_less_equal_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using less_equal_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_equal_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_less_equal_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_equal_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_equal_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_less_equal_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using less_equal_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using greater_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_greater_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using greater_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_greater_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_greater_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using greater_equal_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_greater_equal_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using greater_equal_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_equal_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_greater_equal_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_equal_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_equal_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_greater_equal_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using greater_equal_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // BINARY ARITHMETIC &amp; BITWISE: *, /, %, +, -, &lt;&lt;, &gt;&gt;, &amp;, |, ^
+    // ============================================================================
+
+    template &lt;typename Left, typename Right&gt;
+    using multiply_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_multiply_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using multiply_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_multiply_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_multiply_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using divide_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_divide_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using divide_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_divide_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_divide_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using modulo_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_modulo_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using modulo_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_modulo_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_modulo_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using plus_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_plus_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using plus_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_plus_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_plus_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using minus_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_minus_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using minus_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_minus_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_minus_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using left_shift_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_left_shift_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using left_shift_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_left_shift_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_left_shift_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using right_shift_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_right_shift_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using right_shift_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_right_shift_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_right_shift_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_and_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_and_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_and_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_and_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_and_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_or_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_or_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_or_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_or_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_or_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_xor_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_xor_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_xor_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_xor_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_xor_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // LOGICAL BINARY: &amp;&amp;, ||
+    // ============================================================================
+
+    template &lt;typename Left, typename Right&gt;
+    using logical_and_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_logical_and_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using logical_and_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_and_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_logical_and_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_and_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_and_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_logical_and_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_and_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using logical_or_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_logical_or_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using logical_or_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_or_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_logical_or_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_or_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_or_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_logical_or_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using logical_or_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // ASSIGNMENT OPERATORS: =, +=, -=, *=, /=, %=, &lt;&lt;=, &gt;&gt;=, &amp;=, |=, ^=
+    // ============================================================================
+
+    template &lt;typename Left, typename Right&gt;
+    using assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using plus_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_plus_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using plus_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_plus_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_plus_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using plus_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using minus_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_minus_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using minus_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_minus_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_minus_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using minus_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using multiply_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_multiply_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using multiply_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_multiply_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_multiply_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using multiply_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using divide_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_divide_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using divide_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_divide_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_divide_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using divide_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using modulo_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_modulo_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using modulo_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_modulo_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_modulo_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using modulo_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using left_shift_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_left_shift_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using left_shift_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_left_shift_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_left_shift_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using left_shift_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using right_shift_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_right_shift_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using right_shift_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_right_shift_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_right_shift_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using right_shift_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_and_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_and_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_and_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_and_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_and_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_and_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_or_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_or_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_or_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_or_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_or_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_or_assign_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_xor_assign_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_bitwise_xor_assign_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using bitwise_xor_assign_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_assign_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_xor_assign_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_assign_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_assign_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_bitwise_xor_assign_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using bitwise_xor_assign_member_exact_t = /* implementation defined */;
+
+    // ============================================================================
+    // SPECIAL OPERATORS: -&gt;*, -&gt;, ,, [], ()
+    // ============================================================================
+
+    template &lt;typename Type, typename... Arguments&gt;
+    using arrow_to_pointer_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_arrow_to_pointer_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using arrow_to_pointer_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using arrow_to_pointer_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_arrow_to_pointer_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using arrow_to_pointer_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type, typename... Arguments&gt;
+    using arrow_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_arrow_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using arrow_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using arrow_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_arrow_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using arrow_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Left, typename Right&gt;
+    using comma_operation = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    inline constexpr bool has_comma_v = /* implementation defined */;
+    template &lt;typename Left, typename Right&gt;
+    using comma_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using comma_member_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_comma_member_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using comma_member_t = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using comma_member_exact_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_comma_member_exact_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using comma_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type, typename Argument&gt;
+    using subscript_operation = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    inline constexpr bool has_subscript_v = /* implementation defined */;
+    template &lt;typename Type, typename Argument&gt;
+    using subscript_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using subscript_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_subscript_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using subscript_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using subscript_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_subscript_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using subscript_member_exact_t = /* implementation defined */;
+
+    template &lt;typename Type, typename... Arguments&gt;
+    using call_operation = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    inline constexpr bool has_call_v = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using call_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using call_member_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_call_member_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using call_member_t = /* implementation defined */;
+    template &lt;typename Type, typename... Arguments&gt;
+    using call_member_exact_operation = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    inline constexpr bool has_call_member_exact_v = /* implementation defined */;
+    template &lt;typename... Arguments&gt;
+    using call_member_exact_t = /* implementation defined */;
+
+
+} // namespace scl
+
+#endif // DOXYGEN
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

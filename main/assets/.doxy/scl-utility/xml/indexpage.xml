@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>ScL.Utility</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1intro">
+<title>Overview</title>
+<para>ScL.Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.</para>
+</sect1>
+<sect1 id="index_1start">
+<title>Quick start</title>
+<para>Include the umbrella header and link against the CMake target: <programlisting filename=".cmake"><codeline><highlight class="normal">target_link_libraries(your_target<sp/>PRIVATE<sp/>scl::utility)</highlight></codeline>
+</programlisting> <programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;<ref refid="utility_8h" kindref="compound">scl/utility.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(scl::type_name&lt;int&gt;()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;int&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1features">
+<title>Features</title>
+<para><itemizedlist>
+<listitem><para><bold>Meta</bold> (<ref refid="group__scl__utility__meta" kindref="compound">ScL Meta Infos</ref>) — compile-time type, enum, and symbol name extraction without RTTI.</para>
+</listitem><listitem><para><bold>Preprocessor</bold> (<ref refid="group__scl__utility__preprocessor" kindref="compound">ScL Preprocessor Utilities (C++)</ref>) — macro utilities including token forwarding (SCL_FORWARD) and a compile-time counter (SCL_COUNTER_VALUE / SCL_COUNTER_NEXT).</para>
+</listitem><listitem><para><bold>Type traits</bold> (<ref refid="group__scl__utility__type__traits" kindref="compound">ScL Type Traits</ref>) — detection idiom, forward_like, member pointer decomposition, and overload_cast. </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility.h"/>
+  </compounddef>
+</doxygen>

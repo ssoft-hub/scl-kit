@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscl_1_1feature_1_1inplace_1_1plain" kind="class" language="C++" prot="public">
+    <compoundname>scl::feature::inplace::plain</compoundname>
+    <includes refid="plain_8h" local="no">plain.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" prot="public" static="no">
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+        <definition>using scl::feature::inplace::plain&lt; Value &gt;::value_type =  Value</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>scl::feature::inplace::plain::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="23" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" prot="private" static="no" mutable="no">
+        <type>value_type</type>
+        <definition>value_type scl::feature::inplace::plain&lt; Value &gt;::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <qualifiedname>scl::feature::inplace::plain::m_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="32" column="20" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">constexpr</ref></type>
+        <definition>constexpr scl::feature::inplace::plain&lt; Value &gt;::plain</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>plain</name>
+        <qualifiedname>scl::feature::inplace::plain::plain</qualifiedname>
+        <param>
+          <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Args</ref> &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="27" column="28" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Executor that proxies calls directly to the held value with no overhead. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores <computeroutput>Value</computeroutput> in-place without indirection or additional wrapping. Serves as the default executor when none is specified.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped value type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">wrapper&lt;int, feature::inplace::plain&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{42};</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/inplace/plain.h" line="20" column="5" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="21" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" prot="private" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>m_value</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>plain</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

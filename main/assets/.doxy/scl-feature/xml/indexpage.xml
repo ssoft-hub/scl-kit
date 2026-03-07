@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>ScL Feature</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1intro">
+<title>Overview</title>
+<para>ScL Feature is a header-only C++20 module providing a composable wrapper type that adds orthogonal features to any user-defined type without modifying it. It is part of the ScL Toolkit.</para>
+</sect1>
+<sect1 id="index_1start">
+<title>Quick start</title>
+<para>Include the umbrella header and link against the CMake target: <programlisting filename=".cmake"><codeline><highlight class="normal">target_link_libraries(your_target<sp/>PRIVATE<sp/>scl::feature)</highlight></codeline>
+</programlisting> <programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;<ref refid="feature_8h" kindref="compound">scl/feature.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">scl::feature::wrapper&lt;int&gt;</ref><sp/>w{42};</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1features">
+<title>Features</title>
+<para><itemizedlist>
+<listitem><para><bold>Wrapper</bold> — <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">scl::feature::wrapper&lt;Value, Tools...&gt;</ref></computeroutput>, a composable adapter with orthogonal tool-based features.</para>
+</listitem><listitem><para><bold>Type traits</bold> (<ref refid="group__scl__feature__type__traits" kindref="compound">ScL Feature Type Traits</ref>) — <computeroutput>is_wrapper</computeroutput> and related metaprogramming utilities.</para>
+</listitem><listitem><para><bold>Concepts</bold> (<ref refid="group__scl__feature__concepts" kindref="compound">ScL Feature Concepts</ref>) — C++20 concepts such as <computeroutput>concepts::wrapper_type</computeroutput>. </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__wrapper" kind="group">
+    <compoundname>scl_feature_wrapper</compoundname>
+    <title>ScL Wrapper</title>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Value</type>
+          </param>
+          <param>
+            <type>template&lt; typename &gt; class...</type>
+            <declname>Executors</declname>
+            <defname>Executors</defname>
+          </param>
+        </templateparamlist>
+        <type>::std::conditional_t&lt; sizeof...(Executors)==0, typename ::scl::feature::detail::wrapper_fold&lt; Value, <ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">::scl::feature::inplace::plain</ref> &gt;::type, typename ::scl::feature::detail::wrapper_fold&lt; Value, Executors... &gt;::type &gt;</type>
+        <definition>using scl::wrapper = typedef ::std::conditional_t&lt;sizeof...(Executors) == 0, typename ::scl::feature::detail::wrapper_fold&lt;Value, ::scl::feature::inplace::plain&gt;::type, typename ::scl::feature::detail::wrapper_fold&lt;Value, Executors...&gt;::type&gt;</definition>
+        <argsstring></argsstring>
+        <name>wrapper</name>
+        <qualifiedname>scl::wrapper</qualifiedname>
+        <briefdescription>
+<para>Composable proxy wrapper that delegates to <computeroutput>Value</computeroutput> through executors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each executor is a class template <computeroutput>E</computeroutput> such that <computeroutput>E&lt;Value&gt;</computeroutput> proxies method calls and may add cross-cutting behaviour (e.g. COW, thread safety, deferred invocation). Executors are composed left-to-right; adjacent duplicates in the list are collapsed. Defaults to <computeroutput><ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">feature::inplace::plain</ref></computeroutput> — a zero-overhead direct proxy — when no executor is specified.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped value type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Executors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zero or more executor class templates.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kindref="member">wrapper&lt;int&gt;</ref><sp/>a{42};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>feature::inplace::plain<sp/>(default)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">wrapper&lt;int,<sp/>feature::inplace::plain&gt;<sp/>b{42};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>explicit<sp/>plain</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">wrapper&lt;int,<sp/>feature::inplace::uninitialized&gt;<sp/>c{};<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>deferred<sp/>construction</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper.h" line="67" column="5" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Composable value wrapper with pluggable executor strategy. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A <computeroutput>wrapper&lt;Value, Executors...&gt;</computeroutput> proxies method calls to the held <computeroutput>Value</computeroutput> through a chain of <emphasis>executors</emphasis>. Each executor is a class template that can transparently add cross-cutting properties such as copy-on-write semantics, thread safety, or deferred invocation without modifying the wrapped type. Multiple executors are composed via left-fold; adjacent duplicates are collapsed automatically. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

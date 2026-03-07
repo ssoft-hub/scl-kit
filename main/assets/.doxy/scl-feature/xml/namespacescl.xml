@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl" kind="namespace" language="C++">
+    <compoundname>scl</compoundname>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <sectiondef kind="typedef">
+      <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Root namespace of the ScL project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

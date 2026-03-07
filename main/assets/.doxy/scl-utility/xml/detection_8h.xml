@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="detection_8h" kind="file" language="C++">
+    <compoundname>detection.h</compoundname>
+    <includes local="no">type_traits</includes>
+    <includedby refid="type__traits_8h" local="no">module/utility/src/scl/utility/type_traits.h</includedby>
+    <includedby refid="function_8h" local="no">module/utility/src/scl/utility/type_traits/detection/function.h</includedby>
+    <includedby refid="method_8h" local="no">module/utility/src/scl/utility/type_traits/detection/method.h</includedby>
+    <includedby refid="operator_8h" local="no">module/utility/src/scl/utility/type_traits/detection/operator.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/utility/src/scl/utility/type_traits/detection.h</label>
+        <link refid="detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/type_traits.h</label>
+        <link refid="type__traits_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/type_traits/detection.h</label>
+        <link refid="detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>module/utility/src/scl/utility/type_traits/detection/function.h</label>
+        <link refid="function_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>module/utility/src/scl/utility/type_traits/detection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/utility/src/scl/utility/type_traits/detection/operator.h</label>
+        <link refid="operator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <briefdescription>
+<para>Implementation of C++ Standard Proposal N4502 - Detection Idiom. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4502.pdf">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4502.pdf</ulink></para>
+</simplesect>
+This header provides utilities for detecting the validity of expressions at compile-time using SFINAE techniques. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scl::detail</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Default,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>AlwaysVoid,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detector</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">value_t<sp/>=<sp/>::std::false_type;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">type<sp/>=<sp/>Default;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Default,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detector&lt;Default,<sp/>::std::void_t&lt;Operation&lt;Arguments...&gt;&gt;,<sp/>Operation,<sp/>Arguments...&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">value_t<sp/>=<sp/>::std::true_type;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">type<sp/>=<sp/>Operation&lt;Arguments...&gt;;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl" kindref="compound">scl</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="72" refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kindref="member">is_detected</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>detail::detector&lt;void,<sp/>void,<sp/>Operation,<sp/>Arguments...&gt;::value_t;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="85" refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kindref="member">is_detected_v</ref><sp/>=<sp/><ref refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kindref="member">is_detected</ref>&lt;Operation,<sp/>Arguments...&gt;::value;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="98" refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">detected_t</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>detail::detector&lt;void,<sp/>void,<sp/>Operation,<sp/>Arguments...&gt;::type;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Default,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="111" refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kindref="member">detected_or</ref><sp/>=<sp/>detail::detector&lt;Default,<sp/>void,<sp/>Operation,<sp/>Arguments...&gt;;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Default,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="125" refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kindref="member">detected_or_t</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kindref="member">detected_or</ref>&lt;Default,<sp/>Operation,<sp/>Arguments...&gt;::type;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="139" refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kindref="member">is_detected_exact</ref><sp/>=<sp/>::std::is_same&lt;Expected,<sp/><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">detected_t</ref>&lt;Operation,<sp/>Arguments...&gt;&gt;;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="149" refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kindref="member">is_detected_exact_v</ref><sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kindref="member">is_detected_exact</ref>&lt;Expected,<sp/>Operation,<sp/>Arguments...&gt;::value;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>To,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="163" refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kindref="member">is_detected_convertible</ref><sp/>=<sp/>::std::is_convertible&lt;<ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">detected_t</ref>&lt;Operation,<sp/>Arguments...&gt;,<sp/>To&gt;;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>To,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Operation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="173" refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kindref="member">is_detected_convertible_v</ref><sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kindref="member">is_detected_convertible</ref>&lt;To,<sp/>Operation,<sp/>Arguments...&gt;::value;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/type_traits/detection.h"/>
+  </compounddef>
+</doxygen>

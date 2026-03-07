@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl_1_1feature_1_1inplace" kind="namespace" language="C++">
+    <compoundname>scl::feature::inplace</compoundname>
+    <innerclass refid="classscl_1_1feature_1_1inplace_1_1plain" prot="public">scl::feature::inplace::plain</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1inplace_1_1uninitialized" prot="public">scl::feature::inplace::uninitialized</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/inplace/plain.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

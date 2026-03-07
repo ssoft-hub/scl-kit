@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__utility__preprocessor" kind="group">
+    <compoundname>scl_utility_preprocessor</compoundname>
+    <title>ScL Preprocessor Utilities (C++)</title>
+    <innerfile refid="counter_8h">counter.h</innerfile>
+    <innerfile refid="forward_8h">forward.h</innerfile>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" prot="public" static="no">
+        <name>SCL_COUNTER_VALUE</name>
+        <param><defname>Tag</defname></param>
+        <briefdescription>
+<para>Reads the current value of a compile-time counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro constructs the counter&apos;s value by checking for <computeroutput>crumb</computeroutput> overloads for each bit from 0 to 31. It chains <computeroutput>SCL_COUNTER_CRUMB</computeroutput> calls, where each call resolves to the most specific <computeroutput>crumb</computeroutput> function available for its rank.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the counter. Can be a template type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <computeroutput>constexpr</computeroutput> value of type <computeroutput>std::uint_fast32_t</computeroutput>.</para>
+</simplesect>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">TemplateTag<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>SCL_FORWARD<sp/>macro<sp/>is<sp/>crucial<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tpl_val_0<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(TemplateTag&lt;int&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(tpl_val_0<sp/>==<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" kindref="member">SCL_COUNTER_NEXT</ref>(TemplateTag&lt;int&gt;)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tpl_val_1<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(TemplateTag&lt;int&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(tpl_val_1<sp/>==<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>different<sp/>specialization<sp/>of<sp/>the<sp/>same<sp/>template<sp/>tag<sp/>should<sp/>be<sp/>a<sp/>different<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tpl_val_float_0<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(TemplateTag&lt;float&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(tpl_val_float_0<sp/>==<sp/>0);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/preprocessor/counter.h" line="98" column="9" bodyfile="module/utility/src/scl/utility/preprocessor/counter.h" bodystart="98" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" prot="public" static="no">
+        <name>SCL_COUNTER_NEXT</name>
+        <param><defname>Tag</defname></param>
+        <initializer>    namespace scl::preprocessor::detail                                                                \
+    {                                                                                                  \
+        constexpr counter&lt;<ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(Tag)) + 1&gt; crumb(Tag,                          \
+            counter&lt;(<ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(Tag)) + 1) &amp; ~<ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(Tag))&gt;, \
+            counter&lt;(<ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(Tag)) + 1) &amp; <ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(Tag))&gt;)  \
+        {                                                                                              \
+            return {};                                                                                 \
+        }                                                                                              \
+    }</initializer>
+        <briefdescription>
+<para>Increments a compile-time counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro defines a new <computeroutput>crumb</computeroutput> function overload in the <computeroutput>scl</computeroutput> namespace. This new function is a better match for overload resolution for a specific bit-rank, effectively &quot;setting&quot; that bit and incrementing the counter&apos;s value for subsequent reads via <computeroutput>SCL_COUNTER_VALUE</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the counter to increment. Can be a template type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyCounterTag1<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>counter<sp/>starts<sp/>at<sp/>0<sp/>before<sp/>any<sp/>increments</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val1_0<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(MyCounterTag1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(val1_0,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" kindref="member">SCL_COUNTER_NEXT</ref>(MyCounterTag1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val1_1<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(MyCounterTag1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(val1_1,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" kindref="member">SCL_COUNTER_NEXT</ref>(MyCounterTag1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val1_2<sp/>=<sp/><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref>(MyCounterTag1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(val1_2,<sp/>2);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/preprocessor/counter.h" line="162" column="9" bodyfile="module/utility/src/scl/utility/preprocessor/counter.h" bodystart="162" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" prot="public" static="no">
+        <name>SCL_FORWARD</name>
+        <param><defname>...</defname></param>
+        <initializer>__VA_ARGS__</initializer>
+        <briefdescription>
+<para>Identity macro that forwards variadic arguments unchanged and can force expansion of nested macros. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro simply expands to its variadic arguments. It is useful when:<itemizedlist>
+<listitem><para>You need to forward comma-separated tokens as-is into another macro, function call, or template parameter list.</para>
+</listitem><listitem><para>You want to force expansion in macro chaining scenarios where another macro yields comma-separated tokens.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic tokens to forward unchanged.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>This macro does not add parentheses or alter tokenization; it only forwards tokens.</para>
+</listitem><listitem><para>It is safe to use in both C and C++ code. In C++ contexts, it is commonly used with template parameter packs and function calls.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Example<sp/>1:<sp/>Forwarding<sp/>arguments<sp/>to<sp/>a<sp/>function<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALL(fn,<sp/>...)<sp/>fn(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>add(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/>b;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>CALL(add,<sp/><ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(1,<sp/>2));<sp/></highlight><highlight class="comment">//<sp/>expands<sp/>to<sp/>add(1,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>2:<sp/>Forcing<sp/>expansion<sp/>for<sp/>template<sp/>parameter<sp/>lists</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASIC_TYPES<sp/>int,<sp/>long,<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">type_list<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">tl<sp/>=<sp/>type_list&lt;<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(BASIC_TYPES)&gt;;<sp/></highlight><highlight class="comment">//<sp/>expands<sp/>to<sp/>type_list&lt;int,<sp/>long,<sp/>double&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>3:<sp/>Chaining<sp/>macros<sp/>that<sp/>produce<sp/>comma-separated<sp/>tokens</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAKE_PAIR(a,<sp/>b)<sp/>a,<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>std::pair&lt;<ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(MAKE_PAIR(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">))&gt;{1,<sp/>2.0};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>4:<sp/>Forwarding<sp/>arguments<sp/>through<sp/>another<sp/>macro<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORWARD_TO_EMPLACE(obj,<sp/>...)<sp/>obj.emplace_back(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">std::vector&lt;std::pair&lt;int,<sp/>std::string&gt;&gt;<sp/>v;</highlight></codeline>
+<codeline><highlight class="normal">FORWARD_TO_EMPLACE(v,<sp/><ref refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kindref="member">SCL_FORWARD</ref>(42,<sp/></highlight><highlight class="stringliteral">&quot;answer&quot;</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//<sp/>emplace_back(42,<sp/>&quot;answer&quot;)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="warning"><para><itemizedlist>
+<listitem><para>Be mindful of operator precedence; if you need grouping, use parentheses in the call sites.</para>
+</listitem><listitem><para>Since macros are global, avoid generic names to reduce collision risk (SCL_ prefix is used for this reason). </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/preprocessor/forward.h" line="63" column="9" bodyfile="module/utility/src/scl/utility/preprocessor/forward.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Helper macros for the C/C++ preprocessor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Utilities for macro expansion and safe forwarding of tokens.</para>
+</listitem><listitem><para>Building blocks for more complex preprocessor metaprogramming patterns.</para>
+</listitem><listitem><para>Designed to be portable and minimal. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

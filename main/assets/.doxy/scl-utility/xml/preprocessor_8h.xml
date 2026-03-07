@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="preprocessor_8h" kind="file" language="C++">
+    <compoundname>preprocessor.h</compoundname>
+    <includes refid="counter_8h" local="no">scl/utility/preprocessor/counter.h</includes>
+    <includes refid="forward_8h" local="no">scl/utility/preprocessor/forward.h</includes>
+    <includedby refid="utility_8h" local="no">module/utility/src/scl/utility.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/utility/src/scl/utility/preprocessor.h</label>
+        <link refid="preprocessor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/utility/preprocessor/counter.h</label>
+        <link refid="counter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl/utility/preprocessor/forward.h</label>
+        <link refid="forward_8h"/>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/preprocessor.h</label>
+        <link refid="preprocessor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>ScL preprocessor utilities for C++. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header aggregates all ScL preprocessor utilities. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="counter_8h" kindref="compound">scl/utility/preprocessor/counter.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="forward_8h" kindref="compound">scl/utility/preprocessor/forward.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>group<sp/>scl_utility_preprocessor</highlight>    </programlisting>
+    <location file="module/utility/src/scl/utility/preprocessor.h"/>
+  </compounddef>
+</doxygen>

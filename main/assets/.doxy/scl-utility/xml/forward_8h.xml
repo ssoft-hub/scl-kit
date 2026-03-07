@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="forward_8h" kind="file" language="C++">
+    <compoundname>forward.h</compoundname>
+    <includedby refid="preprocessor_8h" local="no">module/utility/src/scl/utility/preprocessor.h</includedby>
+    <includedby refid="counter_8h" local="no">module/utility/src/scl/utility/preprocessor/counter.h</includedby>
+    <includedby refid="operator_8h" local="no">module/utility/src/scl/utility/type_traits/detection/operator.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/preprocessor.h</label>
+        <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>module/utility/src/scl/utility/preprocessor/counter.h</label>
+        <link refid="counter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/preprocessor/forward.h</label>
+        <link refid="forward_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/utility/src/scl/utility/type_traits.h</label>
+        <link refid="type__traits_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>module/utility/src/scl/utility/type_traits/detection/operator.h</label>
+        <link refid="operator_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <member refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kind="define"><name>SCL_FORWARD</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Provides a utility macro for forcing the expansion of other macros. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides small helper macros for token forwarding and macro expansion in C++ codebases. These macros operate at preprocessing time and do not introduce runtime overhead. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_FORWARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_FORWARD(...)<sp/>__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/preprocessor/forward.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fa8d125dcaa64c120bbbc8d1167944b9" kind="dir">
+    <compoundname>module/feature/src/scl/feature</compoundname>
+    <innerdir refid="dir_f37dd920b215c7d361cd7dbe8578ca36">module/feature/src/scl/feature/concepts</innerdir>
+    <innerdir refid="dir_b3eb4ac5eceab19e0dcca8b4c96aaf20">module/feature/src/scl/feature/detail</innerdir>
+    <innerdir refid="dir_a84fae2e5328daedf40681be880e8335">module/feature/src/scl/feature/inplace</innerdir>
+    <innerdir refid="dir_910e174fc0e8c8ed40843bba5172f2f4">module/feature/src/scl/feature/type_traits</innerdir>
+    <innerfile refid="concepts_8h">concepts.h</innerfile>
+    <innerfile refid="type__traits_8h">type_traits.h</innerfile>
+    <innerfile refid="wrapper_8h">wrapper.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/"/>
+  </compounddef>
+</doxygen>

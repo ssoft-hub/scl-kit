@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl_1_1feature" kind="namespace" language="C++">
+    <compoundname>scl::feature</compoundname>
+    <innerclass refid="structscl_1_1feature_1_1is__wrapper" prot="public">scl::feature::is_wrapper</innerclass>
+    <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
+    <sectiondef kind="var">
+      <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Namespace of the ScL Feature module. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature.h" line="18" column="1"/>
+  </compounddef>
+</doxygen>

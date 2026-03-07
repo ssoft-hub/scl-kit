@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_76f6b7cf5a6cf438d50211f1abeeaae6" kind="dir">
+    <compoundname>module/utility/src/scl/utility</compoundname>
+    <innerdir refid="dir_85c7392cbdcb0ae852d6674ea46dde19">module/utility/src/scl/utility/meta</innerdir>
+    <innerdir refid="dir_a3b1215870dd7b05435314af8f203f78">module/utility/src/scl/utility/preprocessor</innerdir>
+    <innerdir refid="dir_ee84acd7aed8e5e3b0eed877408f2d18">module/utility/src/scl/utility/type_traits</innerdir>
+    <innerfile refid="meta_8h">meta.h</innerfile>
+    <innerfile refid="preprocessor_8h">preprocessor.h</innerfile>
+    <innerfile refid="type__traits_8h">type_traits.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/"/>
+  </compounddef>
+</doxygen>

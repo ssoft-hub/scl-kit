@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscl_1_1feature_1_1inplace_1_1uninitialized" kind="class" language="C++" prot="public">
+    <compoundname>scl::feature::inplace::uninitialized</compoundname>
+    <includes refid="uninitialized_8h" local="no">uninitialized.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" prot="public" static="no">
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+        <definition>using scl::feature::inplace::uninitialized&lt; Value &gt;::value_type =  Value</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>scl::feature::inplace::uninitialized::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="23" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscl_1_1feature_1_1inplace_1_1uninitialized_1a0588937c0c833b5e007a1759b61a0980" prot="private" static="no" mutable="no">
+        <type>::std::byte</type>
+        <definition>::std::byte scl::feature::inplace::uninitialized&lt; Value &gt;::m_storage[sizeof(Value)]</definition>
+        <argsstring>[sizeof(Value)]</argsstring>
+        <name>m_storage</name>
+        <qualifiedname>scl::feature::inplace::uninitialized::m_storage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="26" column="28" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Executor that holds <computeroutput>Value</computeroutput> in uninitialized aligned storage. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides correctly sized and aligned storage without constructing or destroying the object automatically, enabling deferred initialization.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped value type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">wrapper&lt;int, feature::inplace::uninitialized&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{};</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="20" column="5" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="21" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a0588937c0c833b5e007a1759b61a0980" prot="private" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>m_storage</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

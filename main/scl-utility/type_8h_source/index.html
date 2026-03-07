@@ -1,0 +1,473 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++20 header-only toolkit">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>File type.h - ScL Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-typeh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ScL Toolkit" class="md-header__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ScL Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File type.h
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ScL Toolkit" class="md-nav__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ScL Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="file-typeh">File type.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_85c7392cbdcb0ae852d6674ea46dde19/"><strong>meta</strong></a> <strong>&gt;</strong> <a href="../type_8h/"><strong>type.h</strong></a></p>
+<p><a href="../type_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">#pragma once
+
+#include &lt;string_view&gt;
+
+struct p8qim3n2a_t
+{};
+
+namespace scl::detail
+{
+    // Helper to find the last &quot;::&quot; that is NOT inside angle brackets
+    constexpr auto find_last_scope_operator(::std::string_view str) noexcept
+    {
+        auto last_pos = ::std::string_view::npos;
+        int bracket_depth = 0;
+
+        for (::std::size_t i = 0; i &lt; str.size(); ++i)
+            if (str[i] == '&lt;')
+                ++bracket_depth;
+            else if (str[i] == '&gt;')
+                --bracket_depth;
+            else if (bracket_depth == 0 &amp;&amp; str[i] == ':' &amp;&amp; i + 1 &lt; str.size() &amp;&amp; str[i + 1] == ':')
+                last_pos = i;
+
+        return last_pos;
+    }
+
+    template &lt;typename T&gt;
+    constexpr ::std::string_view type_name_pattern_text() noexcept
+    {
+#if defined(_MSC_VER) &amp;&amp; !defined(__clang__)
+        return __FUNCSIG__;
+#else
+        return __PRETTY_FUNCTION__;
+#endif
+    }
+
+#if defined(_MSC_VER) &amp;&amp; !defined(__clang__)
+    // MSVC-specific extraction using angle brackets
+    // Format: &quot;ReturnType __cdecl FunctionName&lt;TYPE&gt;(void)&quot;
+    // We need to find the last &lt; before &gt;(void) pattern
+    constexpr ::std::size_t type_name_pattern_prefix_length() noexcept
+    {
+        constexpr auto text = type_name_pattern_text&lt;p8qim3n2a_t&gt;();
+        // Find the closing pattern &gt;( first
+        constexpr auto close_pattern = text.rfind(&quot;&gt;(&quot;);
+        if constexpr (close_pattern == ::std::string_view::npos)
+            return 0;
+        // Find the last &lt; before the closing pattern
+        constexpr auto before_close = text.substr(0, close_pattern);
+        constexpr auto open_bracket = before_close.find_last_of('&lt;');
+        return (open_bracket != ::std::string_view::npos) ? open_bracket + 1 : 0;
+    }
+
+    constexpr ::std::size_t type_name_pattern_suffix_length() noexcept
+    {
+        constexpr auto text = type_name_pattern_text&lt;p8qim3n2a_t&gt;();
+        // Find the closing &gt; followed by (void) pattern
+        constexpr auto close_pattern = text.rfind(&quot;&gt;(&quot;);
+        return (close_pattern != ::std::string_view::npos) ? text.length() - close_pattern : 0;
+    }
+#else
+    // GCC/Clang/Clang-on-MSVC: use marker search
+    constexpr auto type_name_pattern_prefix_length() noexcept
+    {
+        constexpr auto prefix_length = type_name_pattern_text&lt;p8qim3n2a_t&gt;().find(&quot;p8qim3n2a_t&quot;);
+        return prefix_length;
+    }
+
+    constexpr auto type_name_pattern_suffix_length() noexcept
+    {
+        constexpr auto suffix = type_name_pattern_text&lt;p8qim3n2a_t&gt;().length() -
+            type_name_pattern_prefix_length() - ::std::string_view(&quot;p8qim3n2a_t&quot;).length();
+        return suffix;
+    }
+#endif
+
+} // namespace scl::detail
+
+namespace scl
+{
+    template &lt;typename T&gt;
+    constexpr auto type_name() noexcept
+    {
+        constexpr auto pattern_text = detail::type_name_pattern_text&lt;T&gt;();
+        constexpr auto prefix_length = detail::type_name_pattern_prefix_length();
+        constexpr auto suffix_length = detail::type_name_pattern_suffix_length();
+
+        static_assert(!pattern_text.empty());
+
+        constexpr auto text_length = pattern_text.length() - prefix_length - suffix_length;
+        return pattern_text.substr(prefix_length, text_length);
+    }
+
+    template &lt;typename T&gt;
+    constexpr auto type_short_name() noexcept
+    {
+        constexpr auto result = type_name&lt;T&gt;();
+
+        // Find the last &quot;::&quot; that is NOT inside template arguments (angle brackets)
+        constexpr auto last_scope_pos = detail::find_last_scope_operator(result);
+
+        constexpr auto after_scope =
+            (last_scope_pos != ::std::string_view::npos) ? result.substr(last_scope_pos + 2) : result;
+
+        // Remove struct/class/union prefix from short name
+        constexpr auto without_prefix = after_scope.starts_with(&quot;struct &quot;) ? after_scope.substr(7)
+            : after_scope.starts_with(&quot;class &quot;)                            ? after_scope.substr(6)
+            : after_scope.starts_with(&quot;union &quot;)                            ? after_scope.substr(6)
+            : after_scope.starts_with(&quot;enum &quot;)
+            ? after_scope.substr(5)
+            : after_scope;
+
+        // Remove template arguments (everything from '&lt;' onwards)
+        constexpr auto template_start = without_prefix.find('&lt;');
+        if constexpr (template_start != ::std::string_view::npos)
+            return without_prefix.substr(0, template_start);
+        else
+            return without_prefix;
+    }
+
+} // namespace scl
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
