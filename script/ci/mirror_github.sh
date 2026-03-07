@@ -31,5 +31,6 @@ git fetch --all --tags --prune
 git remote remove github 2>/dev/null || true
 git remote add github "$GITHUB_AUTH_URL"
 git push github 'refs/remotes/origin/*:refs/heads/*' --force --prune
+git push github ':refs/heads/pages' 2>/dev/null || true   # pages is GitLab-only
 git push github ':refs/heads/HEAD' 2>/dev/null || true
 git push github --tags --prune
