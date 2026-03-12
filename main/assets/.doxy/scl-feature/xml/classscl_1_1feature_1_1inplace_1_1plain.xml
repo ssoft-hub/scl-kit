@@ -5,12 +5,28 @@
     <includes refid="plain_8h" local="no">plain.h</includes>
     <templateparamlist>
       <param>
-        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> Value</type>
       </param>
     </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" prot="private" static="no">
+        <type><ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">plain</ref>&lt; Value &gt;</type>
+        <definition>using scl::feature::inplace::plain&lt; Value &gt;::self_type =  plain&lt;Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>self_type</name>
+        <qualifiedname>scl::feature::inplace::plain::self_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="26" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" prot="public" static="no">
-        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Value</ref></type>
+        <type>Value</type>
         <definition>using scl::feature::inplace::plain&lt; Value &gt;::value_type =  Value</definition>
         <argsstring></argsstring>
         <name>value_type</name>
@@ -21,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="23" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="23" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="29" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="29" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -37,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="32" column="20" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="32" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="53" column="20" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -64,7 +80,73 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="27" column="28" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="27" bodyend="29"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="33" column="28" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Self</ref></type>
+          </param>
+          <param>
+            <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Func</ref></type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">constexpr</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">decltype</ref>(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">auto</ref>)</type>
+        <definition>static constexpr decltype(auto) scl::feature::inplace::plain&lt; Value &gt;::execute</definition>
+        <argsstring>(Self &amp;&amp;self, Func &amp;&amp;func, Args &amp;&amp;... args)</argsstring>
+        <name>execute</name>
+        <qualifiedname>scl::feature::inplace::plain::execute</qualifiedname>
+        <param>
+          <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Self</ref> &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Func</ref> &amp;&amp;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Args</ref> &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>(::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt; &amp;&amp; ::std::invocable&lt;Func, Args &amp;&amp; ...&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="39" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Self</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">constexpr</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">decltype</ref>(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">auto</ref>)</type>
+        <definition>static constexpr decltype(auto) scl::feature::inplace::plain&lt; Value &gt;::value</definition>
+        <argsstring>(Self &amp;&amp;self)</argsstring>
+        <name>value</name>
+        <qualifiedname>scl::feature::inplace::plain::value</qualifiedname>
+        <param>
+          <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Self</ref> &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+    <requiresclause>::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="46" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="46" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -84,10 +166,13 @@
 <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">wrapper&lt;int, feature::inplace::plain&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{42};</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/inplace/plain.h" line="20" column="5" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="21" bodyend="33"/>
+    <location file="module/feature/src/scl/feature/inplace/plain.h" line="24" column="5" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="25" bodyend="54"/>
     <listofallmembers>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>execute</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" prot="private" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>m_value</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>plain</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" prot="private" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>self_type</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>value</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>value_type</name></member>
     </listofallmembers>
   </compounddef>

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -292,13 +292,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
+  <a href="#public-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Classes
+        Public Types
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Types Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper_guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef wrapper_guard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -341,7 +369,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="classes">Classes</h2>
+<h2 id="public-types">Public Types</h2>
 <table>
 <thead>
 <tr>
@@ -351,11 +379,28 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">struct</td>
-<td style="text-align: left;"><a href="../structscl_1_1feature_1_1is__wrapper/"><strong>is_wrapper</strong></a> &lt;<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>T</strong></a>&gt;<br><em>Checks whether</em> <code>T</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></td>
+<td style="text-align: right;">typedef detail::wrapper_guard&lt; <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Refer</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>::scl::feature::is_wrapper_v</strong></a>&lt;::std::remove_cvref_t&lt; <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Refer</strong></a> &gt; &gt; ? detail::wrapper_guard_case::Wrapper :detail::wrapper_guard_case::Value &gt;</td>
+<td style="text-align: left;"><a href="#typedef-wrapper_guard"><strong>wrapper_guard</strong></a>  <br><em>RAII guard providing access to the value held by a wrapper or a plain reference.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-types-documentation">Public Types Documentation</h2>
+<h3 id="typedef-wrapper_guard">typedef wrapper_guard</h3>
+<p><em>RAII guard providing access to the value held by a wrapper or a plain reference.</em> </p>
+<pre><code class="language-C++">using scl::feature::wrapper_guard = typedef detail::wrapper_guard&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? detail::wrapper_guard_case::Wrapper : detail::wrapper_guard_case::Value&gt;;
+</code></pre>
+<p>For wrapper types calls <code>guard()</code> on the executor at construction and <code>unguard()</code> at destruction (both are no-ops if the executor does not define them). Exposes <code>value()</code> to reach the stored value with the same cv- and ref-qualifiers as the incoming reference.</p>
+<p>For non-wrapper types simply holds the reference; no guard/unguard is performed.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Refer</code> Reference type — either <code>wrapper&lt;V,E&gt;</code> cv-ref or a plain value cv-ref.</li>
+</ul>
+<pre><code class="language-C++">wrapper&lt;int, feature::inplace::plain&gt; w{42};
+feature::wrapper_guard&lt;decltype(w) &amp;&gt; g{w};
+// g.value() == 42
+</code></pre>
+<hr>
+
 <hr />
 <p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature.h</code></p>
 

@@ -2,6 +2,11 @@
 # Namespace Members
 
 
-Nothing related to **Namespace Members** found.
+
+## w
+
+* **wrapper\_guard** ([**scl::feature**](namespacescl_1_1feature.md))
+
+
 
 

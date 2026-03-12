@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -294,13 +294,19 @@
 <p><a href="../plain_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;concepts&gt;
+#include &lt;functional&gt;
 #include &lt;utility&gt;
+
+#include &lt;scl/utility/type_traits/forward_like.h&gt;
 
 namespace scl::feature::inplace
 {
     template &lt;typename Value&gt;
     class plain
     {
+        using self_type = plain&lt;Value&gt;;
+
     public:
         using value_type = Value;
 
@@ -309,6 +315,21 @@ namespace scl::feature::inplace
         constexpr explicit plain(Args &amp;&amp;... args)
             : m_value{::std::forward&lt;Args&gt;(args)...}
         {}
+
+    public:
+        template &lt;typename Self, typename Func, typename... Args&gt;
+        static constexpr decltype(auto) execute(Self &amp;&amp; self, Func &amp;&amp; func, Args &amp;&amp;... args)
+            requires(::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt; &amp;&amp; ::std::invocable&lt;Func, Args &amp;&amp; ...&gt;)
+        {
+            return ::std::invoke(::std::forward&lt;Func&gt;(func), ::std::forward&lt;Args&gt;(args)...);
+        }
+
+        template &lt;typename Self&gt;
+        static constexpr decltype(auto) value(Self &amp;&amp; self)
+            requires ::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt;
+        {
+            return ::scl::forward_like&lt;Self&gt;(self.m_value);
+        }
 
     private:
         value_type m_value;

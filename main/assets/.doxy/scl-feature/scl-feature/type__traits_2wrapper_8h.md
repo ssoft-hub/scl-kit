@@ -33,11 +33,6 @@
 | namespace | [**feature**](namespacescl_1_1feature.md) <br>_Namespace of the ScL Feature module._  |
 
 
-## Classes
-
-| Type | Name |
-| ---: | :--- |
-| struct | [**is\_wrapper**](structscl_1_1feature_1_1is__wrapper.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**T**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Checks whether_ `T` _is a_`wrapper` _specialization._ |
 
 
 

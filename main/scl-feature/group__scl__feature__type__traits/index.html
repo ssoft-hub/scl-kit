@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -281,17 +281,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Classes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#public-attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -313,6 +302,39 @@
   
     <nav class="md-nav" aria-label="Public Attributes Documentation">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_compatible_with_part_of_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_compatible_with_part_of_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_compatible_with_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_compatible_with_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_part_compatible_with_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_part_compatible_with_v
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#variable-is_wrapper_v" class="md-nav__link">
@@ -350,21 +372,6 @@
 <h1 id="group-scl_feature_type_traits">Group scl_feature_type_traits</h1>
 <p><a href="../modules/"><strong>Modules</strong></a> <strong>&gt;</strong> <a href="./"><strong>scl_feature_type_traits</strong></a></p>
 <p><em>Type-level utilities for ScL Feature metaprogramming.</em> </p>
-<h2 id="classes">Classes</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">struct</td>
-<td style="text-align: left;"><a href="../structscl_1_1feature_1_1is__wrapper/"><strong>scl::feature::is_wrapper</strong></a> &lt;<a href="./#variable-is_wrapper_v"><strong>typename</strong></a> <a href="./#variable-is_wrapper_v"><strong>T</strong></a>&gt;<br><em>Checks whether</em> <code>T</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></td>
-</tr>
-</tbody>
-</table>
 <h2 id="public-attributes">Public Attributes</h2>
 <table>
 <thead>
@@ -376,21 +383,101 @@
 <tbody>
 <tr>
 <td style="text-align: right;">constexpr bool</td>
-<td style="text-align: left;"><a href="#variable-is_wrapper_v"><strong>is_wrapper_v</strong></a>   = <code>is\_wrapper&amp;lt;T&amp;gt;::value</code><br><em>Helper variable template for</em> <code>is_wrapper</code> <em>.</em></td>
+<td style="text-align: left;"><a href="#variable-is_compatible_with_part_of_v"><strong>is_compatible_with_part_of_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_compatible_with_v"><strong>is_compatible_with_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Test</code> <em>is compatible with (usable in place of)</em><code>Expected</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_part_compatible_with_v"><strong>is_part_compatible_with_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_wrapper_v"><strong>is_wrapper_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Type</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-is_wrapper_v">variable is_wrapper_v</h3>
-<p><em>Helper variable template for</em> <code>is_wrapper</code> <em>.</em></p>
-<pre><code>constexpr bool scl::feature::is_wrapper_v;
+<h3 id="variable-is_compatible_with_part_of_v">variable is_compatible_with_part_of_v</h3>
+<p><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></p>
+<pre><code>constexpr bool scl::feature::is_compatible_with_part_of_v;
 </code></pre>
+<p>Peels layers off <code>Expected</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Test</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-qualifiers are stripped from both arguments before the check.</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
-<li><code>T</code> Type to check.</li>
+<li><code>Expected</code> Outer wrapper whose contents are inspected. </li>
+<li><code>Test</code> Wrapper to match against.</li>
+</ul>
+<pre><code>using W   = wrapper&lt;int,                     feature::inplace::plain&gt;;
+using WW  = wrapper&lt;W,                       feature::inplace::plain&gt;;
+using WWW = wrapper&lt;WW,                      feature::inplace::plain&gt;;
+
+static_assert( is_compatible_with_part_of_v&lt;WW,  W&gt;);   // WW's inner value IS W
+static_assert( is_compatible_with_part_of_v&lt;WWW, W&gt;);   // two levels deep
+static_assert(!is_compatible_with_part_of_v&lt;W,  WW&gt;);   // W does not contain WW
+static_assert(!is_compatible_with_part_of_v&lt;int, W&gt;);   // Expected not a wrapper
+static_assert(!is_compatible_with_part_of_v&lt;W, int&gt;);   // Test not a wrapper
+</code></pre>
+<hr>
+
+<h3 id="variable-is_compatible_with_v">variable is_compatible_with_v</h3>
+<p><em>Checks whether</em> <code>Test</code> <em>is compatible with (usable in place of)</em><code>Expected</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_compatible_with_v;
+</code></pre>
+<p>For non-wrapper types the check is: <code>Test</code> is the same type as <code>Expected</code>, or <code>Test</code> is publicly derived from <code>Expected</code>. For <code>wrapper</code> specializations that share the same template-template argument the check is applied recursively to their value types. cv-qualifiers are stripped from both arguments before the check.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Expected</code> Target type. </li>
+<li><code>Test</code> Type to verify compatibility of.</li>
+</ul>
+<pre><code>using P1 = wrapper&lt;int,    feature::inplace::plain&gt;;
+using P2 = wrapper&lt;double, feature::inplace::plain&gt;;
+using U1 = wrapper&lt;int,    feature::inplace::uninitialized&gt;;
+
+static_assert( is_compatible_with_v&lt;P1, P1&gt;);    // identical types
+static_assert(!is_compatible_with_v&lt;P1, P2&gt;);    // incompatible value types
+static_assert(!is_compatible_with_v&lt;P1, U1&gt;);    // different template param
+static_assert(!is_compatible_with_v&lt;int, P1&gt;);   // non-wrapper vs wrapper
+static_assert( is_compatible_with_v&lt;int, int&gt;);  // same non-wrapper type
+</code></pre>
+<hr>
+
+<h3 id="variable-is_part_compatible_with_v">variable is_part_compatible_with_v</h3>
+<p><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></p>
+<pre><code>constexpr bool scl::feature::is_part_compatible_with_v;
+</code></pre>
+<p>Peels layers off <code>Test</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Expected</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-qualifiers are stripped from both arguments before the check.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Expected</code> Wrapper to match against. </li>
+<li><code>Test</code> Outer wrapper whose contents are inspected.</li>
+</ul>
+<pre><code>using W   = wrapper&lt;int,                     feature::inplace::plain&gt;;
+using WW  = wrapper&lt;W,                       feature::inplace::plain&gt;;
+using WWW = wrapper&lt;WW,                      feature::inplace::plain&gt;;
+
+static_assert( is_part_compatible_with_v&lt;W,  WW&gt;);    // WW's inner value IS W
+static_assert( is_part_compatible_with_v&lt;W,  WWW&gt;);   // two levels deep
+static_assert(!is_part_compatible_with_v&lt;WW, W&gt;);     // W does not contain WW
+static_assert(!is_part_compatible_with_v&lt;int, W&gt;);    // Expected not a wrapper
+static_assert(!is_part_compatible_with_v&lt;W, int&gt;);    // Test not a wrapper
+</code></pre>
+<hr>
+
+<h3 id="variable-is_wrapper_v">variable is_wrapper_v</h3>
+<p><em>Checks whether</em> <code>Type</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></p>
+<pre><code>constexpr bool scl::feature::is_wrapper_v;
+</code></pre>
+<p>cv-qualifiers on <code>Type</code> are stripped before the check.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Type</code> Type to check.</li>
 </ul>
 <pre><code>static_assert(!is_wrapper_v&lt;int&gt;);
 static_assert( is_wrapper_v&lt;wrapper&lt;int&gt;&gt;);
+static_assert( is_wrapper_v&lt;wrapper&lt;int&gt; const&gt;);  // cv stripped
 </code></pre>
 <hr>
 

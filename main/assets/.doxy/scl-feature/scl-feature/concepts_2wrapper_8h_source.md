@@ -14,8 +14,17 @@
 
 namespace scl::feature::concepts
 {
-    template <typename T>
-    concept wrapper_type = ::scl::feature::is_wrapper_v<T>;
+    template <typename Type>
+    concept wrapper = ::scl::feature::is_wrapper_v<Type>;
+
+    template <typename Expected, typename Type>
+    concept compatible_with = ::scl::feature::is_compatible_with_v<Expected, Type>;
+
+    template <typename Expected, typename Type>
+    concept compatible_with_part_of = ::scl::feature::is_compatible_with_part_of_v<Expected, Type>;
+
+    template <typename Expected, typename Type>
+    concept part_compatible_with = ::scl::feature::is_part_compatible_with_v<Expected, Type>;
 } // namespace scl::feature::concepts
 ```
 

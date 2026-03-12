@@ -1,33 +1,53 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
-  <compound refid="structscl_1_1feature_1_1is__wrapper" kind="struct"><name>scl::feature::is_wrapper</name>
-  </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1plain" kind="class"><name>scl::feature::inplace::plain</name>
+    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" kind="typedef"><name>value_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" kind="variable"><name>m_value</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" kind="function"><name>plain</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" kind="function"><name>execute</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" kind="function"><name>value</name></member>
   </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1uninitialized" kind="class"><name>scl::feature::inplace::uninitialized</name>
+    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1aa9257586cc156f36696a286dd78db642" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" kind="typedef"><name>value_type</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a0588937c0c833b5e007a1759b61a0980" kind="variable"><name>m_storage</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1abc28e8132b80f4ff55e34cda76dc0ad3" kind="variable"><name>m_storage</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a3611a72d709414265b1097ade90b342d" kind="function"><name>execute</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" kind="function"><name>value</name></member>
   </compound>
-  <compound refid="conceptscl_1_1feature_1_1concepts_1_1wrapper__type" kind="concept"><name>scl::feature::concepts::wrapper_type</name>
+  <compound refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with" kind="concept"><name>scl::feature::concepts::compatible_with</name>
+  </compound>
+  <compound refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kind="concept"><name>scl::feature::concepts::compatible_with_part_of</name>
+  </compound>
+  <compound refid="conceptscl_1_1feature_1_1concepts_1_1part__compatible__with" kind="concept"><name>scl::feature::concepts::part_compatible_with</name>
+  </compound>
+  <compound refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" kind="concept"><name>scl::feature::concepts::wrapper</name>
   </compound>
   <compound refid="namespacescl" kind="namespace"><name>scl</name>
     <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
   </compound>
   <compound refid="namespacescl_1_1feature" kind="namespace"><name>scl::feature</name>
+    <member refid="namespacescl_1_1feature_1af561f1d55ca58f5fcefb6c8f25e801bc" kind="typedef"><name>wrapper_guard</name></member>
     <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
+    <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
+    <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
+    <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
   </compound>
   <compound refid="namespacescl_1_1feature_1_1concepts" kind="namespace"><name>scl::feature::concepts</name>
   </compound>
   <compound refid="namespacescl_1_1feature_1_1inplace" kind="namespace"><name>scl::feature::inplace</name>
   </compound>
-  <compound refid="namespacestd" kind="namespace"><name>std</name>
-  </compound>
   <compound refid="feature_8h" kind="file"><name>feature.h</name>
   </compound>
   <compound refid="concepts_8h" kind="file"><name>concepts.h</name>
+  </compound>
+  <compound refid="executor__access_8h" kind="file"><name>executor_access.h</name>
+  </compound>
+  <compound refid="wrapper__constructor__resolver_8h" kind="file"><name>wrapper_constructor_resolver.h</name>
+  </compound>
+  <compound refid="detail_2wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
+  </compound>
+  <compound refid="wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
   </compound>
   <compound refid="plain_8h" kind="file"><name>plain.h</name>
   </compound>
@@ -47,6 +67,9 @@
   </compound>
   <compound refid="group__scl__feature__type__traits" kind="group"><name>scl_feature_type_traits</name>
     <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
+    <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
+    <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
+    <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
   </compound>
   <compound refid="group__scl__feature__wrapper" kind="group"><name>scl_feature_wrapper</name>
     <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>

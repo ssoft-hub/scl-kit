@@ -10,7 +10,11 @@
 
 
 
+* `#include <concepts>`
 * `#include <cstddef>`
+* `#include <functional>`
+* `#include <utility>`
+* `#include <scl/utility/type_traits/forward_like.h>`
 
 
 
@@ -37,7 +41,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**uninitialized**](classscl_1_1feature_1_1inplace_1_1uninitialized.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Executor that holds_ `Value` _in uninitialized aligned storage._ |
+| class | [**uninitialized**](classscl_1_1feature_1_1inplace_1_1uninitialized.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) Value&gt;<br>_Executor that holds_ `Value` _in uninitialized aligned storage._ |
 
 
 

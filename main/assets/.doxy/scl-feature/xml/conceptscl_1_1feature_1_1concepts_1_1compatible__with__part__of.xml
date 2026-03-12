@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kind="concept">
+    <compoundname>scl::feature::concepts::compatible_with_part_of</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Expected</type>
+      </param>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename Expected, typename Type&gt;
+concept scl::feature::concepts::compatible_with_part_of =  <ref refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kindref="member">::scl::feature::is_compatible_with_part_of_v</ref>&lt;Expected, Type&gt;    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h" line="25" column="5"/>
+  </compounddef>
+</doxygen>

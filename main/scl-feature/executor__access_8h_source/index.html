@@ -17,11 +17,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Namespace std - ScL Toolkit</title>
+        <title>File executor_access.h - ScL Toolkit</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#namespace-std" class="md-skip">
+        <a href="#file-executor_accessh" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Namespace std
+              File executor_access.h
             
           </span>
         </div>
@@ -289,10 +289,29 @@
 
 
 
-<h1 id="namespace-std">Namespace std</h1>
-<p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="./"><strong>std</strong></a></p>
-<hr />
-<p>The documentation for this class was generated from the following file <code>[generated]</code></p>
+<h1 id="file-executor_accessh">File executor_access.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_b3eb4ac5eceab19e0dcca8b4c96aaf20/"><strong>detail</strong></a> <strong>&gt;</strong> <a href="../executor__access_8h/"><strong>executor_access.h</strong></a></p>
+<p><a href="../executor__access_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">#pragma once
+
+#include &lt;scl/feature/type_traits/wrapper.h&gt;
+#include &lt;scl/utility/type_traits/forward_like.h&gt;
+
+#include &lt;type_traits&gt;
+
+namespace scl::feature::detail
+{
+    struct executor_access
+    {
+        template &lt;typename WrapperRefer&gt;
+            requires ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;WrapperRefer&gt;&gt;
+        static constexpr decltype(auto) get(WrapperRefer &amp;&amp; w) noexcept
+        {
+            return ::scl::forward_like&lt;WrapperRefer&gt;(w.m_executor);
+        }
+    };
+} // namespace scl::feature::detail
+</code></pre>
 
 
 

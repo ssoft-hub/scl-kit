@@ -2,7 +2,7 @@
 
 # Class scl::feature::inplace::plain
 
-**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;**
+**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) Value&gt;**
 
 
 
@@ -34,7 +34,7 @@ _Executor that proxies calls directly to the held value with no overhead._ [More
 
 | Type | Name |
 | ---: | :--- |
-| typedef [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**value\_type**](#typedef-value_type)  <br> |
+| typedef Value | [**value\_type**](#typedef-value_type)  <br> |
 
 
 
@@ -62,6 +62,12 @@ _Executor that proxies calls directly to the held value with no overhead._ [More
 |  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**plain**](#function-plain) ([**Args**](group__scl__feature__type__traits.md#variable-is_wrapper_v) &&... args) <br> |
 
 
+## Public Static Functions
+
+| Type | Name |
+| ---: | :--- |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_wrapper_v)([**auto**](group__scl__feature__type__traits.md#variable-is_wrapper_v)) | [**execute**](#function-execute) ([**Self**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && self, [**Func**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && func, [**Args**](group__scl__feature__type__traits.md#variable-is_wrapper_v) &&... args) <br> |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_wrapper_v)([**auto**](group__scl__feature__type__traits.md#variable-is_wrapper_v)) | [**value**](#function-value) ([**Self**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && self) <br> |
 
 
 
@@ -135,6 +141,42 @@ using scl::feature::inplace::plain< Value >::value_type =  Value;
 template<typename... Args>
 inline explicit constexpr feature::inplace::plain::plain (
     Args &&... args
+) 
+```
+
+
+
+
+<hr>
+## Public Static Functions Documentation
+
+
+
+
+### function execute 
+
+```C++
+template<typename  Self, typename  Func, typename... Args>
+static inline constexpr  decltype ( auto ) feature::inplace::plain::execute (
+    Self && self,
+    Func && func,
+    Args &&... args
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function value 
+
+```C++
+template<typename  Self>
+static inline constexpr  decltype ( auto ) feature::inplace::plain::value (
+    Self && self
 ) 
 ```
 

@@ -37,7 +37,7 @@ scl::feature::wrapper<int> w{42};
 
 * **Wrapper** — `scl::feature::wrapper<Value, Tools...>`, a composable adapter with orthogonal tool-based features.
 * **Type traits** ([**ScL Feature Type Traits**](group__scl__feature__type__traits.md)) — `is_wrapper` and related metaprogramming utilities.
-* **Concepts** ([**ScL Feature Concepts**](group__scl__feature__concepts.md)) — C++20 concepts such as `concepts::wrapper_type`. 
+* **Concepts** ([**ScL Feature Concepts**](group__scl__feature__concepts.md)) — C++20 concepts such as `concepts::wrapper`. 
 
 
 

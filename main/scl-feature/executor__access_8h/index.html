@@ -17,11 +17,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Struct scl::feature::is_wrapper - ScL Toolkit</title>
+        <title>File executor_access.h - ScL Toolkit</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#struct-sclfeatureis_wrapper" class="md-skip">
+        <a href="#file-executor_accessh" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Struct scl::feature::is_wrapper
+              File executor_access.h
             
           </span>
         </div>
@@ -281,10 +281,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#detailed-description" class="md-nav__link">
+  <a href="#namespaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Detailed Description
+        Namespaces
       
     </span>
   </a>
@@ -308,26 +308,35 @@
 
 
 
-<h1 id="struct-sclfeatureis_wrapper">Struct scl::feature::is_wrapper</h1>
-<p><strong>template &lt;<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>T</strong></a>&gt;</strong></p>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="./"><strong>is_wrapper</strong></a></p>
-<p><em>Checks whether</em> <code>T</code> <em>is a</em><code>wrapper</code> <em>specialization.</em><a href="#detailed-description">More...</a></p>
+<h1 id="file-executor_accessh">File executor_access.h</h1>
+<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_b3eb4ac5eceab19e0dcca8b4c96aaf20/"><strong>detail</strong></a> <strong>&gt;</strong> <a href="./"><strong>executor_access.h</strong></a></p>
+<p><a href="../executor__access_8h_source/">Go to the source code of this file</a></p>
 <ul>
-<li><code>#include &lt;wrapper.h&gt;</code></li>
+<li><code>#include &lt;scl/feature/type_traits/wrapper.h&gt;</code></li>
+<li><code>#include &lt;scl/utility/type_traits/forward_like.h&gt;</code></li>
+<li><code>#include &lt;type_traits&gt;</code></li>
 </ul>
-<p>Inherits the following classes: scl::feature::detail::is_wrapper&lt;::std::remove_cv_t&lt; T &gt; &gt;</p>
-<h2 id="detailed-description">Detailed Description</h2>
-<p>cv-qualifiers are stripped before the check.</p>
-<p><strong>Template parameters:</strong></p>
-<ul>
-<li><code>T</code> Type to check.</li>
-</ul>
-<pre><code class="language-C++">static_assert(!is_wrapper&lt;int&gt;::value);
-static_assert( is_wrapper&lt;wrapper&lt;int&gt;&gt;::value);
-static_assert( is_wrapper&lt;wrapper&lt;int&gt; const&gt;::value);  // cv stripped
-</code></pre>
+<h2 id="namespaces">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacescl/"><strong>scl</strong></a> <br><em>Root namespace of the ScL project.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <br><em>Namespace of the ScL Feature module.</em></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/type_traits/wrapper.h</code></p>
+<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/detail/executor_access.h</code></p>
 
 
 

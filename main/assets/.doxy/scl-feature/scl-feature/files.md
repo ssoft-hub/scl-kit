@@ -14,7 +14,10 @@ Here is a list of all files with brief descriptions:
                     * **dir** [**concepts**](dir_f37dd920b215c7d361cd7dbe8578ca36.md)     
                         * **file** [**wrapper.h**](concepts_2wrapper_8h.md)     
                     * **dir** [**detail**](dir_b3eb4ac5eceab19e0dcca8b4c96aaf20.md)     
+                        * **file** [**executor\_access.h**](executor__access_8h.md)     
                         * **file** [**wrapper.h**](detail_2wrapper_8h.md)     
+                        * **file** [**wrapper\_constructor\_resolver.h**](wrapper__constructor__resolver_8h.md)     
+                        * **file** [**wrapper\_guard.h**](detail_2wrapper__guard_8h.md)     
                     * **dir** [**inplace**](dir_a84fae2e5328daedf40681be880e8335.md)     
                         * **file** [**plain.h**](plain_8h.md)     
                         * **file** [**uninitialized.h**](uninitialized_8h.md)     
@@ -22,4 +25,5 @@ Here is a list of all files with brief descriptions:
                         * **file** [**wrapper.h**](type__traits_2wrapper_8h.md)     
                     * **file** [**type\_traits.h**](type__traits_8h.md) _ScL Feature type traits._ 
                     * **file** [**wrapper.h**](wrapper_8h.md)     
+                    * **file** [**wrapper\_guard.h**](wrapper__guard_8h.md)     
 

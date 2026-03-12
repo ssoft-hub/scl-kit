@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -294,18 +294,42 @@
 <p><a href="../uninitialized_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;concepts&gt;
 #include &lt;cstddef&gt;
+#include &lt;functional&gt;
+#include &lt;utility&gt;
+
+#include &lt;scl/utility/type_traits/forward_like.h&gt;
 
 namespace scl::feature::inplace
 {
     template &lt;typename Value&gt;
     class uninitialized
     {
+        using self_type = uninitialized&lt;Value&gt;;
+
     public:
         using value_type = Value;
 
+    public:
+        template &lt;typename Self, typename Func, typename... Args&gt;
+        static constexpr decltype(auto) execute(Self &amp;&amp; self, Func &amp;&amp; func, Args &amp;&amp;... args)
+            requires(::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt; &amp;&amp; ::std::invocable&lt;Func, Args &amp;&amp; ...&gt;)
+        {
+            return ::std::invoke(::std::forward&lt;Func&gt;(func), ::std::forward&lt;Args&gt;(args)...);
+        }
+
+        template &lt;typename Self&gt;
+        static constexpr decltype(auto) value(Self &amp;&amp; self)
+            requires ::std::same_as&lt;::std::remove_cvref_t&lt;Self&gt;, self_type&gt;
+        {
+            // reinterpret_cast&lt;value_type*&gt; for raw storage access;
+            // const correctness is restored by forward_like&lt;Self&gt;.
+            return ::scl::forward_like&lt;Self&gt;(*reinterpret_cast&lt;value_type *&gt;(self.m_storage)); // NOLINT(*-reinterpret-cast)
+        }
+
     private:
-        alignas(Value)::std::byte m_storage[sizeof(Value)]; // NOLINT(*-avoid-c-arrays)
+        alignas(value_type)::std::byte m_storage[sizeof(value_type)]; // NOLINT(*-avoid-c-arrays)
     };
 } // namespace scl::feature::inplace
 </code></pre>

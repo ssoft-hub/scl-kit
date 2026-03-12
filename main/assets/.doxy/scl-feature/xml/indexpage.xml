@@ -23,7 +23,7 @@
 <para><itemizedlist>
 <listitem><para><bold>Wrapper</bold> — <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">scl::feature::wrapper&lt;Value, Tools...&gt;</ref></computeroutput>, a composable adapter with orthogonal tool-based features.</para>
 </listitem><listitem><para><bold>Type traits</bold> (<ref refid="group__scl__feature__type__traits" kindref="compound">ScL Feature Type Traits</ref>) — <computeroutput>is_wrapper</computeroutput> and related metaprogramming utilities.</para>
-</listitem><listitem><para><bold>Concepts</bold> (<ref refid="group__scl__feature__concepts" kindref="compound">ScL Feature Concepts</ref>) — C++20 concepts such as <computeroutput>concepts::wrapper_type</computeroutput>. </para>
+</listitem><listitem><para><bold>Concepts</bold> (<ref refid="group__scl__feature__concepts" kindref="compound">ScL Feature Concepts</ref>) — C++20 concepts such as <computeroutput>concepts::wrapper</computeroutput>. </para>
 </listitem></itemizedlist>
 </para>
 </sect1>

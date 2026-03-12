@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -298,8 +298,17 @@
 
 namespace scl::feature::concepts
 {
-    template &lt;typename T&gt;
-    concept wrapper_type = ::scl::feature::is_wrapper_v&lt;T&gt;;
+    template &lt;typename Type&gt;
+    concept wrapper = ::scl::feature::is_wrapper_v&lt;Type&gt;;
+
+    template &lt;typename Expected, typename Type&gt;
+    concept compatible_with = ::scl::feature::is_compatible_with_v&lt;Expected, Type&gt;;
+
+    template &lt;typename Expected, typename Type&gt;
+    concept compatible_with_part_of = ::scl::feature::is_compatible_with_part_of_v&lt;Expected, Type&gt;;
+
+    template &lt;typename Expected, typename Type&gt;
+    concept part_compatible_with = ::scl::feature::is_part_compatible_with_v&lt;Expected, Type&gt;;
 } // namespace scl::feature::concepts
 </code></pre>
 

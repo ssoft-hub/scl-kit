@@ -9,6 +9,7 @@
     <innerfile refid="concepts_8h">concepts.h</innerfile>
     <innerfile refid="type__traits_8h">type_traits.h</innerfile>
     <innerfile refid="wrapper_8h">wrapper.h</innerfile>
+    <innerfile refid="wrapper__guard_8h">wrapper_guard.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

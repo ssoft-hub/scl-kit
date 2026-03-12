@@ -29,6 +29,8 @@ namespace scl::feature::detail
 
     private:
         executor_type m_executor;
+
+        friend struct executor_access;
     };
 } // namespace scl::feature::detail
 ```

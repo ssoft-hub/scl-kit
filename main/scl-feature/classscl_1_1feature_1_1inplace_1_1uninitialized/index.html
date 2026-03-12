@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -292,6 +292,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -330,6 +341,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function value
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -348,7 +398,7 @@
 
 
 <h1 id="class-sclfeatureinplaceuninitialized">Class scl::feature::inplace::uninitialized</h1>
-<p><strong>template &lt;<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Value</strong></a>&gt;</strong></p>
+<p><strong>template &lt;<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>typename</strong></a> Value&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1feature_1_1inplace/"><strong>inplace</strong></a> <strong>&gt;</strong> <a href="./"><strong>uninitialized</strong></a></p>
 <p><em>Executor that holds</em> <code>Value</code> <em>in uninitialized aligned storage.</em><a href="#detailed-description">More...</a></p>
 <ul>
@@ -364,8 +414,27 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">typedef <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Value</strong></a></td>
+<td style="text-align: right;">typedef Value</td>
 <td style="text-align: left;"><a href="#typedef-value_type"><strong>value_type</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions">Public Static Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>constexpr</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>decltype</strong></a>(<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>auto</strong></a>)</td>
+<td style="text-align: left;"><a href="#function-execute"><strong>execute</strong></a> (<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Self</strong></a> &amp;&amp; self, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Func</strong></a> &amp;&amp; func, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Args</strong></a> &amp;&amp;... args) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>constexpr</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>decltype</strong></a>(<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>auto</strong></a>)</td>
+<td style="text-align: left;"><a href="#function-value"><strong>value</strong></a> (<a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>Self</strong></a> &amp;&amp; self) <br></td>
 </tr>
 </tbody>
 </table>
@@ -380,6 +449,24 @@
 <h2 id="public-types-documentation">Public Types Documentation</h2>
 <h3 id="typedef-value_type">typedef value_type</h3>
 <pre><code class="language-C++">using scl::feature::inplace::uninitialized&lt; Value &gt;::value_type =  Value;
+</code></pre>
+<hr>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
+<h3 id="function-execute">function execute</h3>
+<pre><code class="language-C++">template&lt;typename  Self, typename  Func, typename... Args&gt;
+static inline constexpr  decltype ( auto ) feature::inplace::uninitialized::execute (
+    Self &amp;&amp; self,
+    Func &amp;&amp; func,
+    Args &amp;&amp;... args
+) 
+</code></pre>
+<hr>
+
+<h3 id="function-value">function value</h3>
+<pre><code class="language-C++">template&lt;typename  Self&gt;
+static inline constexpr  decltype ( auto ) feature::inplace::uninitialized::value (
+    Self &amp;&amp; self
+) 
 </code></pre>
 <hr>
 
