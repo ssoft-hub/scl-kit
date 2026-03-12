@@ -1,0 +1,5 @@
+sphinx>=8.0
+furo>=2024.0
+myst-parser>=4.0
+breathe>=4.35
+pagefind[extended]>=1.1

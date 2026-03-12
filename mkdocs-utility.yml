@@ -1,7 +1,6 @@
-site_name: ScL Toolkit
-site_description: C++20 header-only toolkit
-docs_dir: doc/mkdocs
-site_dir: public
+site_name: SCL.Utility
+docs_dir: doc/mkdocs-utility
+site_dir: site/utility
 
 theme:
   name: material
@@ -15,7 +14,6 @@ theme:
 extra:
   version:
     provider: mike
-    default: latest
 
 plugins:
   - search
@@ -26,18 +24,6 @@ plugins:
           full-doc: True
           doxy-cfg:
             PROJECT_NAME: SCL.Utility
-            RECURSIVE: "YES"
-            FILE_PATTERNS: "*.h *.hpp *.hh"
-            EXTRACT_ALL: "NO"
-            HIDE_UNDOC_MEMBERS: "YES"
-            HIDE_UNDOC_CLASSES: "YES"
-            HIDE_UNDOC_NAMESPACES: "YES"
-            EXCLUDE_PATTERNS: "*/detail/*"
-        scl-feature:
-          src-dirs: module/feature/src
-          full-doc: True
-          doxy-cfg:
-            PROJECT_NAME: SCL.Feature
             RECURSIVE: "YES"
             FILE_PATTERNS: "*.h *.hpp *.hh"
             EXTRACT_ALL: "NO"

@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y doxygen graphviz
-          pip install mkdocs mkdocs-material mkdoxy mike
+          pip install -r requirements-docs.txt
 
       - name: Configure git
         run: |
@@ -29,20 +29,13 @@ jobs:
           git config user.name "GitHub Actions"
           git fetch origin gh-pages 2>/dev/null || true
 
-      - name: Determine version
+      - name: Fetch submodule tags and full history
         run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
-            echo "MIKE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-            echo "MIKE_ALIAS=latest" >> $GITHUB_ENV
-          elif [[ "$GITHUB_REF" == refs/heads/main ]]; then
-            echo "MIKE_VERSION=main" >> $GITHUB_ENV
-            echo "MIKE_ALIAS=latest" >> $GITHUB_ENV
-          else
-            echo "MIKE_VERSION=dev" >> $GITHUB_ENV
-            echo "MIKE_ALIAS=" >> $GITHUB_ENV
-          fi
+          git submodule foreach '
+            git fetch --unshallow 2>/dev/null || true
+            git fetch --tags
+          '
 
-      - name: Deploy with mike
+      - name: Deploy unified Sphinx docs
         run: |
-          mike deploy --push $MIKE_VERSION $MIKE_ALIAS
-          mike set-default --push latest 2>/dev/null || true
+          sh script/ci/deploy_sphinx_docs.sh gh-pages
