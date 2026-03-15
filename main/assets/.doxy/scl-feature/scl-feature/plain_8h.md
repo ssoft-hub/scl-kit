@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) Value&gt;<br>_Executor that proxies calls directly to the held value with no overhead._  |
+| class | [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Executor that proxies calls directly to the held value with no overhead._  |
 
 
 
@@ -90,7 +90,44 @@
 
 
 
+## Macros
 
+| Type | Name |
+| ---: | :--- |
+| define  | [**SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF**](plain_8h.md#define-scl_executor_constructor_for_self)  `/* multi line expression */`<br> |
+| define  | [**SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF\_PROTOTYPE**](plain_8h.md#define-scl_executor_constructor_for_self_prototype) (cv\_ref) `/* multi line expression */`<br> |
+
+## Macro Definition Documentation
+
+
+
+
+
+### define SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF 
+
+```C++
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF\_PROTOTYPE 
+
+```C++
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE (
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
 
 ------------------------------
 The documentation for this class was generated from the following file `module/feature/src/scl/feature/inplace/plain.h`

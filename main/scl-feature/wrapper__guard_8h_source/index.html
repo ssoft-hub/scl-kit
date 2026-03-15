@@ -304,8 +304,8 @@ namespace scl::feature
     template &lt;typename Refer&gt;
     using wrapper_guard = detail::wrapper_guard&lt;Refer,
         ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt;
-            ? detail::wrapper_guard_case::Wrapper
-            : detail::wrapper_guard_case::Value&gt;;
+            ? detail::wrapper_guard_case::wrapper
+            : detail::wrapper_guard_case::value&gt;;
 } // namespace scl::feature
 </code></pre>
 

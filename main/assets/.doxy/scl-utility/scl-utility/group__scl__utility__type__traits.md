@@ -230,7 +230,7 @@ using scl::forward_like_t = typedef ::scl::detail::add_reference_like_t<Base, ::
 
 Semantics:
 * CV-qualifiers: Applies `const` and `volatile` from `Base` onto `remove_reference_t<Type>`. (i.e. union of qualifiers, not replacement)
-* Reference: Applies reference category of `Base` (if any). If `Base` is lvalue ref, result is lvalue ref; if rvalue ref, rvalue ref; else no reference. Reference is omitted for void.
+* Reference: If `Base` is lvalue ref, result is lvalue ref; otherwise rvalue ref. The result is always a reference (matching ::std::forward\_like). Reference is omitted for void.
 
 
 
@@ -244,9 +244,9 @@ Semantics:
 ```
 using P0 = forward_like_t<int const &, double>            // double const &
 using P1 = forward_like_t<int &&, float const>            // float const &&
-using P2 = forward_like_t<int volatile, char>             // char volatile
+using P2 = forward_like_t<int volatile, char>             // char volatile &&
 using P3 = forward_like_t<int const volatile &, short>    // short const volatile &
-using P4 = forward_like_t<int, double&&>                  // double
+using P4 = forward_like_t<int, double&&>                  // double &&
 ```
  
 

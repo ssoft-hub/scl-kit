@@ -37,7 +37,7 @@ _Namespace of the ScL Feature module._
 
 | Type | Name |
 | ---: | :--- |
-| typedef detail::wrapper\_guard&lt; [**Refer**](group__scl__feature__type__traits.md#variable-is_wrapper_v), [**::scl::feature::is\_wrapper\_v**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&lt;::std::remove\_cvref\_t&lt; [**Refer**](group__scl__feature__type__traits.md#variable-is_wrapper_v) &gt; &gt; ? detail::wrapper\_guard\_case::Wrapper :detail::wrapper\_guard\_case::Value &gt; | [**wrapper\_guard**](#typedef-wrapper_guard)  <br>_RAII guard providing access to the value held by a wrapper or a plain reference._  |
+| typedef detail::wrapper\_guard&lt; [**Refer**](group__scl__feature__type__traits.md#variable-is_wrapper_v), [**::scl::feature::is\_wrapper\_v**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&lt;::std::remove\_cvref\_t&lt; [**Refer**](group__scl__feature__type__traits.md#variable-is_wrapper_v) &gt; &gt; ? detail::wrapper\_guard\_case::wrapper :detail::wrapper\_guard\_case::value &gt; | [**wrapper\_guard**](#typedef-wrapper_guard)  <br>_RAII guard providing access to the value held by a wrapper or a plain reference._  |
 
 
 
@@ -95,7 +95,7 @@ _Namespace of the ScL Feature module._
 
 _RAII guard providing access to the value held by a wrapper or a plain reference._ 
 ```C++
-using scl::feature::wrapper_guard = typedef detail::wrapper_guard<Refer, ::scl::feature::is_wrapper_v<::std::remove_cvref_t<Refer> > ? detail::wrapper_guard_case::Wrapper : detail::wrapper_guard_case::Value>;
+using scl::feature::wrapper_guard = typedef detail::wrapper_guard<Refer, ::scl::feature::is_wrapper_v<::std::remove_cvref_t<Refer> > ? detail::wrapper_guard_case::wrapper : detail::wrapper_guard_case::value>;
 ```
 
 

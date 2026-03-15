@@ -2,7 +2,7 @@
 
 # Class scl::feature::inplace::uninitialized
 
-**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) Value&gt;**
+**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;**
 
 
 
@@ -34,7 +34,7 @@ _Executor that holds_ `Value` _in uninitialized aligned storage._[More...](#deta
 
 | Type | Name |
 | ---: | :--- |
-| typedef Value | [**value\_type**](#typedef-value_type)  <br> |
+| typedef [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**value\_type**](#typedef-value_type)  <br> |
 
 
 

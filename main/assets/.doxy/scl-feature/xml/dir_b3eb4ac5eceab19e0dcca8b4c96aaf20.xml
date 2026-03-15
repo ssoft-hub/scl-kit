@@ -5,6 +5,7 @@
     <innerfile refid="executor__access_8h">executor_access.h</innerfile>
     <innerfile refid="detail_2wrapper_8h">wrapper.h</innerfile>
     <innerfile refid="wrapper__constructor__resolver_8h">wrapper_constructor_resolver.h</innerfile>
+    <innerfile refid="wrapper__constructors_8h">wrapper_constructors.h</innerfile>
     <innerfile refid="detail_2wrapper__guard_8h">wrapper_guard.h</innerfile>
     <briefdescription>
     </briefdescription>

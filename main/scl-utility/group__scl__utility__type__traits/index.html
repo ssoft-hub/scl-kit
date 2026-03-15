@@ -809,14 +809,14 @@
 </ul>
 <p>Semantics:
 * CV-qualifiers: Applies <code>const</code> and <code>volatile</code> from <code>Base</code> onto <code>remove_reference_t&lt;Type&gt;</code>. (i.e. union of qualifiers, not replacement)
-* Reference: Applies reference category of <code>Base</code> (if any). If <code>Base</code> is lvalue ref, result is lvalue ref; if rvalue ref, rvalue ref; else no reference. Reference is omitted for void.</p>
+* Reference: If <code>Base</code> is lvalue ref, result is lvalue ref; otherwise rvalue ref. The result is always a reference (matching ::std::forward_like). Reference is omitted for void.</p>
 <p>**
 **</p>
 <pre><code>using P0 = forward_like_t&lt;int const &amp;, double&gt;            // double const &amp;
 using P1 = forward_like_t&lt;int &amp;&amp;, float const&gt;            // float const &amp;&amp;
-using P2 = forward_like_t&lt;int volatile, char&gt;             // char volatile
+using P2 = forward_like_t&lt;int volatile, char&gt;             // char volatile &amp;&amp;
 using P3 = forward_like_t&lt;int const volatile &amp;, short&gt;    // short const volatile &amp;
-using P4 = forward_like_t&lt;int, double&amp;&amp;&gt;                  // double
+using P4 = forward_like_t&lt;int, double&amp;&amp;&gt;                  // double &amp;&amp;
 </code></pre>
 <hr>
 

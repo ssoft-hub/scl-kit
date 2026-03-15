@@ -23,7 +23,7 @@ namespace scl::feature::detail
             requires ::scl::feature::is_wrapper_v<::std::remove_cvref_t<WrapperRefer>>
         static constexpr decltype(auto) get(WrapperRefer && w) noexcept
         {
-            return ::scl::forward_like<WrapperRefer>(w.m_executor);
+            return ::scl::forward_like<WrapperRefer>(w.m_executor); // NOLINT(cppcoreguidelines-missing-std-forward)
         }
     };
 } // namespace scl::feature::detail

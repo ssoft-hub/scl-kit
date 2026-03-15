@@ -28,14 +28,13 @@ namespace scl::detail
     template <typename From, typename To>
     using add_cv_from_t = add_const_from_t<From, add_volatile_from_t<From, To>>;
 
-    // Copy ref from From onto To: if From is &, add &, if && add &&, else no reference.
-    //s Don't add reference to void.
+    // Copy ref from From onto To: lvalue ref → &, otherwise (rvalue ref or non-reference) → &&.
+    // Matches std::forward_like semantics: the result is always a reference.
+    // Don't add reference to void.
     template <typename From, typename To>
     using add_reference_like_t = ::std::conditional_t<::std::is_lvalue_reference_v<From>,
         ::std::conditional_t<::std::is_void_v<To>, To, ::std::add_lvalue_reference_t<To>>,
-        ::std::conditional_t<::std::is_rvalue_reference_v<From>,
-            ::std::conditional_t<::std::is_void_v<To>, To, ::std::add_rvalue_reference_t<To>>,
-            To>>;
+        ::std::conditional_t<::std::is_void_v<To>, To, ::std::add_rvalue_reference_t<To>>>;
 
 } // namespace scl::detail
 

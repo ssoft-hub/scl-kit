@@ -294,16 +294,27 @@
 <p><a href="../detail_2wrapper_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;scl/feature/detail/wrapper_constructor_resolver.h&gt;
+#include &lt;scl/feature/detail/wrapper_constructors.h&gt;
+
 #include &lt;utility&gt;
 
 namespace scl::feature::detail
 {
+    // NOLINTNEXTLINE(cppcoreguidelines-special-member-functions)
     template &lt;typename Value, template &lt;typename&gt; class Executor&gt;
     class wrapper
     {
+        using self_type = wrapper&lt;Value, Executor&gt;;
+
     public:
         using value_type = Value;
         using executor_type = Executor&lt;value_type&gt;;
+
+    private:
+        executor_type m_executor;
+
+        friend struct executor_access;
 
     public:
         template &lt;typename... Args&gt;
@@ -311,10 +322,10 @@ namespace scl::feature::detail
             : m_executor{::std::forward&lt;Args&gt;(args)...}
         {}
 
-    private:
-        executor_type m_executor;
-
-        friend struct executor_access;
+        // clang-format off
+        SCL_WRAPPER_CONSTRUCTOR_FOR_SELF // NOLINT(performance-noexcept-move-constructor)
+        SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER
+        // clang-format on
     };
 } // namespace scl::feature::detail
 </code></pre>

@@ -5,14 +5,14 @@
     <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
     <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="namespacescl_1_1feature_1af561f1d55ca58f5fcefb6c8f25e801bc" prot="public" static="no">
+      <memberdef kind="typedef" id="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename Refer</type>
           </param>
         </templateparamlist>
-        <type>detail::wrapper_guard&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref>, <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;::std::remove_cvref_t&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref> &gt; &gt; ? detail::wrapper_guard_case::Wrapper :detail::wrapper_guard_case::Value &gt;</type>
-        <definition>using scl::feature::wrapper_guard = typedef detail::wrapper_guard&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? detail::wrapper_guard_case::Wrapper : detail::wrapper_guard_case::Value&gt;</definition>
+        <type>detail::wrapper_guard&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref>, <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;::std::remove_cvref_t&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref> &gt; &gt; ? detail::wrapper_guard_case::wrapper :detail::wrapper_guard_case::value &gt;</type>
+        <definition>using scl::feature::wrapper_guard = typedef detail::wrapper_guard&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? detail::wrapper_guard_case::wrapper : detail::wrapper_guard_case::value&gt;</definition>
         <argsstring></argsstring>
         <name>wrapper_guard</name>
         <qualifiedname>scl::feature::wrapper_guard</qualifiedname>
@@ -32,7 +32,7 @@
 </parameteritem>
 </parameterlist>
 <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kindref="member">wrapper&lt;int, feature::inplace::plain&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{42};</highlight></codeline>
-<codeline><highlight class="normal"><ref refid="namespacescl_1_1feature_1af561f1d55ca58f5fcefb6c8f25e801bc" kindref="member">feature::wrapper_guard</ref>&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>)<sp/>&amp;&gt;<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">g</ref>{<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" kindref="member">feature::wrapper_guard</ref>&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>)<sp/>&amp;&gt;<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">g</ref>{<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>g.value()<sp/>==<sp/>42</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>

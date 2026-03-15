@@ -310,7 +310,7 @@ namespace scl::feature::detail
         requires ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;RightRefer&gt;&gt;
     class guarded_wrapper_constructor_resolver
     {
-        using guard_type = wrapper_guard&lt;RightRefer, wrapper_guard_case::Wrapper&gt;;
+        using guard_type = wrapper_guard&lt;RightRefer, wrapper_guard_case::wrapper&gt;;
         using inner_refer_t = decltype(::std::declval&lt;guard_type &amp;&gt;().value());
         using inner_resolver_t = wrapper_constructor_resolver&lt;LeftWrapper, inner_refer_t&gt;;
 
@@ -338,7 +338,11 @@ namespace scl::feature::detail
             : m_right{::std::forward&lt;RightRefer&gt;(right)}
         {}
 
-        constexpr decltype(auto) resolve()
+        constexpr wrapper_constructor_resolver(wrapper_constructor_resolver &amp;) = default;
+        constexpr wrapper_constructor_resolver(wrapper_constructor_resolver &amp;&amp;) = default;
+        constexpr wrapper_constructor_resolver(wrapper_constructor_resolver const &amp;) = default;
+
+        constexpr decltype(auto) resolve() // NOLINT(bugprone-branch-clone)
         {
             if constexpr (::scl::feature::is_compatible_with_v&lt;left_type, right_type&gt;)
             {
@@ -352,11 +356,38 @@ namespace scl::feature::detail
             }
             else if constexpr (::scl::feature::is_wrapper_v&lt;right_type&gt;)
             {
-                // strategy 3: right is any other wrapper — guard it and recurse on its inner value;
-                // covers both is_part_compatible_with_v and fully incompatible wrapper cases
-                return guarded_wrapper_constructor_resolver&lt;left_type, RightRefer&gt;{
-                    ::std::forward&lt;RightRefer&gt;(m_right)}
-                    .resolve();
+                // strategy 3: right is a wrapper — peel one layer and recurse
+                using right_executor = typename right_type::executor_type;
+                using right_executor_refer = ::scl::forward_like_t&lt;RightRefer, right_executor&gt;;
+
+                constexpr bool has_unguard = requires(right_executor_refer e) {
+                    right_executor::template unguard&lt;right_executor_refer&gt;(e);
+                };
+
+                if constexpr (has_unguard)
+                {
+                    // unguard exists — need RAII wrapper_guard for guard/unguard bracketing
+                    return guarded_wrapper_constructor_resolver&lt;left_type, RightRefer&gt;{
+                        ::std::forward&lt;RightRefer&gt;(m_right)}
+                        .resolve();
+                }
+                else
+                {
+                    // no unguard — no RAII needed; call guard if present, then access value directly
+                    decltype(auto) executor =
+                        executor_access::get(::std::forward&lt;RightRefer&gt;(m_right));
+
+                    if constexpr (requires { right_executor::template guard&lt;right_executor_refer&gt;(executor); })
+                        right_executor::template guard&lt;right_executor_refer&gt;(executor);
+
+                    decltype(auto) inner =
+                        right_executor::template value&lt;right_executor_refer&gt;(
+                            ::std::forward&lt;decltype(executor)&gt;(executor));
+
+                    return wrapper_constructor_resolver&lt;left_type, decltype(inner)&gt;{
+                        ::std::forward&lt;decltype(inner)&gt;(inner)}
+                        .resolve();
+                }
             }
             else
             {

@@ -307,7 +307,7 @@ namespace scl::feature::detail
             requires ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;WrapperRefer&gt;&gt;
         static constexpr decltype(auto) get(WrapperRefer &amp;&amp; w) noexcept
         {
-            return ::scl::forward_like&lt;WrapperRefer&gt;(w.m_executor);
+            return ::scl::forward_like&lt;WrapperRefer&gt;(w.m_executor); // NOLINT(cppcoreguidelines-missing-std-forward)
         }
     };
 } // namespace scl::feature::detail

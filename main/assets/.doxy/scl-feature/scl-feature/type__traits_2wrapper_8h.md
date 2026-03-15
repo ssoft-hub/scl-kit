@@ -10,7 +10,6 @@
 
 
 
-* `#include <scl/feature/detail/wrapper.h>`
 * `#include <type_traits>`
 
 

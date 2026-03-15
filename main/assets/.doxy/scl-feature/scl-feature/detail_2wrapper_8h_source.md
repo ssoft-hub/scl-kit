@@ -10,16 +10,27 @@
 ```C++
 #pragma once
 
+#include <scl/feature/detail/wrapper_constructor_resolver.h>
+#include <scl/feature/detail/wrapper_constructors.h>
+
 #include <utility>
 
 namespace scl::feature::detail
 {
+    // NOLINTNEXTLINE(cppcoreguidelines-special-member-functions)
     template <typename Value, template <typename> class Executor>
     class wrapper
     {
+        using self_type = wrapper<Value, Executor>;
+
     public:
         using value_type = Value;
         using executor_type = Executor<value_type>;
+
+    private:
+        executor_type m_executor;
+
+        friend struct executor_access;
 
     public:
         template <typename... Args>
@@ -27,10 +38,10 @@ namespace scl::feature::detail
             : m_executor{::std::forward<Args>(args)...}
         {}
 
-    private:
-        executor_type m_executor;
-
-        friend struct executor_access;
+        // clang-format off
+        SCL_WRAPPER_CONSTRUCTOR_FOR_SELF // NOLINT(performance-noexcept-move-constructor)
+        SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER
+        // clang-format on
     };
 } // namespace scl::feature::detail
 ```

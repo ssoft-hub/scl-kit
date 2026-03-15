@@ -27,7 +27,7 @@
     <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
   </compound>
   <compound refid="namespacescl_1_1feature" kind="namespace"><name>scl::feature</name>
-    <member refid="namespacescl_1_1feature_1af561f1d55ca58f5fcefb6c8f25e801bc" kind="typedef"><name>wrapper_guard</name></member>
+    <member refid="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" kind="typedef"><name>wrapper_guard</name></member>
     <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
     <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
     <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
@@ -45,11 +45,18 @@
   </compound>
   <compound refid="wrapper__constructor__resolver_8h" kind="file"><name>wrapper_constructor_resolver.h</name>
   </compound>
+  <compound refid="wrapper__constructors_8h" kind="file"><name>wrapper_constructors.h</name>
+    <member refid="wrapper__constructors_8h_1aeeeab7d56d9c7d86d382861542718e5f" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
+    <member refid="wrapper__constructors_8h_1a0555636e430e52a07f1a518b2aafdc0e" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF</name></member>
+    <member refid="wrapper__constructors_8h_1a4bb4f5a733d47d7890abb48ca7b7ea1e" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER</name></member>
+  </compound>
   <compound refid="detail_2wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
   </compound>
   <compound refid="wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
   </compound>
   <compound refid="plain_8h" kind="file"><name>plain.h</name>
+    <member refid="plain_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
+    <member refid="plain_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
   </compound>
   <compound refid="uninitialized_8h" kind="file"><name>uninitialized.h</name>
   </compound>

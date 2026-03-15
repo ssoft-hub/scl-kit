@@ -16,6 +16,23 @@
 
 #include <scl/utility/type_traits/forward_like.h>
 
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(cv_ref)                \
+    constexpr explicit plain(self_type cv_ref other) noexcept(             \
+        ::std::is_nothrow_constructible_v<value_type, value_type cv_ref>)  \
+        requires(::std::constructible_from<value_type, value_type cv_ref>) \
+        : m_value{::std::forward<value_type cv_ref>(other.m_value)}        \
+    {}
+
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF                         \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(&)                \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const &)          \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(volatile &)       \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const volatile &) \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(&&)               \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const &&)         \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(volatile &&)      \
+    SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const volatile &&)
+
 namespace scl::feature::inplace
 {
     template <typename Value>
@@ -31,6 +48,8 @@ namespace scl::feature::inplace
         constexpr explicit plain(Args &&... args)
             : m_value{::std::forward<Args>(args)...}
         {}
+
+        SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF
 
     public:
         template <typename Self, typename Func, typename... Args>
@@ -51,6 +70,9 @@ namespace scl::feature::inplace
         value_type m_value;
     };
 } // namespace scl::feature::inplace
+
+#undef SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF
+#undef SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE
 ```
 
 

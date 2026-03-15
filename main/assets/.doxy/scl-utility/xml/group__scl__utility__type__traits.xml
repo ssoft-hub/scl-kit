@@ -370,21 +370,21 @@ Provides nested type &apos;type&apos; which is either Operation&lt;Arguments...&
 </parameterlist>
 Semantics:<itemizedlist>
 <listitem><para>CV-qualifiers: Applies <computeroutput>const</computeroutput> and <computeroutput>volatile</computeroutput> from <computeroutput>Base</computeroutput> onto <computeroutput>remove_reference_t&lt;Type&gt;</computeroutput>. (i.e. union of qualifiers, not replacement)</para>
-</listitem><listitem><para>Reference: Applies reference category of <computeroutput>Base</computeroutput> (if any). If <computeroutput>Base</computeroutput> is lvalue ref, result is lvalue ref; if rvalue ref, rvalue ref; else no reference. Reference is omitted for void.</para>
+</listitem><listitem><para>Reference: If <computeroutput>Base</computeroutput> is lvalue ref, result is lvalue ref; otherwise rvalue ref. The result is always a reference (matching ::std::forward_like). Reference is omitted for void.</para>
 </listitem></itemizedlist>
 </para>
 <para><simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int const &amp;, double&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>const<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int &amp;&amp;, float const&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>const<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int volatile, char&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>char<sp/>volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int volatile, char&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>char<sp/>volatile<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P3<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int const volatile &amp;, short&gt;</ref><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>short<sp/>const<sp/>volatile<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P4<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int, double&amp;&amp;&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P4<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int, double&amp;&amp;&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>&amp;&amp;</highlight></codeline>
 </programlisting> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="68" column="5" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="69" bodyend="-1"/>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="67" column="5" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" prot="public" static="no">
         <templateparamlist>
@@ -763,7 +763,7 @@ Semantics:<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="80" column="24" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="80" bodyend="83"/>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="79" column="24" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="79" bodyend="82"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="define">

@@ -294,9 +294,13 @@
 <p><a href="../type__traits_2wrapper_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
-#include &lt;scl/feature/detail/wrapper.h&gt;
-
 #include &lt;type_traits&gt;
+
+namespace scl::feature::detail
+{
+    template &lt;typename, template &lt;typename&gt; class&gt;
+    class wrapper;
+} // namespace scl::feature::detail
 
 namespace scl::feature
 {

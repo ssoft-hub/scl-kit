@@ -10,9 +10,13 @@
 ```C++
 #pragma once
 
-#include <scl/feature/detail/wrapper.h>
-
 #include <type_traits>
+
+namespace scl::feature::detail
+{
+    template <typename, template <typename> class>
+    class wrapper;
+} // namespace scl::feature::detail
 
 namespace scl::feature
 {

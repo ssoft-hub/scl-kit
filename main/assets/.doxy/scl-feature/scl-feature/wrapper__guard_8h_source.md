@@ -20,8 +20,8 @@ namespace scl::feature
     template <typename Refer>
     using wrapper_guard = detail::wrapper_guard<Refer,
         ::scl::feature::is_wrapper_v<::std::remove_cvref_t<Refer>>
-            ? detail::wrapper_guard_case::Wrapper
-            : detail::wrapper_guard_case::Value>;
+            ? detail::wrapper_guard_case::wrapper
+            : detail::wrapper_guard_case::value>;
 } // namespace scl::feature
 ```
 

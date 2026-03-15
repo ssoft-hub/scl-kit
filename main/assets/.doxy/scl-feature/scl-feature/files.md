@@ -17,6 +17,7 @@ Here is a list of all files with brief descriptions:
                         * **file** [**executor\_access.h**](executor__access_8h.md)     
                         * **file** [**wrapper.h**](detail_2wrapper_8h.md)     
                         * **file** [**wrapper\_constructor\_resolver.h**](wrapper__constructor__resolver_8h.md)     
+                        * **file** [**wrapper\_constructors.h**](wrapper__constructors_8h.md)     
                         * **file** [**wrapper\_guard.h**](detail_2wrapper__guard_8h.md)     
                     * **dir** [**inplace**](dir_a84fae2e5328daedf40681be880e8335.md)     
                         * **file** [**plain.h**](plain_8h.md)     
