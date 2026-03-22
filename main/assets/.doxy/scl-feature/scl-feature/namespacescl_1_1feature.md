@@ -31,6 +31,11 @@ _Namespace of the ScL Feature module._
 | namespace | [**inplace**](namespacescl_1_1feature_1_1inplace.md) <br> |
 
 
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| struct | [**executor\_trait**](structscl_1_1feature_1_1executor__trait.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**T**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Trait that provides access to the executor inside a wrapper._  |
 
 
 ## Public Types

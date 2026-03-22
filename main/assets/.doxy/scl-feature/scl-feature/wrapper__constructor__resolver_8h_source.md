@@ -76,9 +76,10 @@ namespace scl::feature::detail
                 using right_executor = typename right_type::executor_type;
                 using right_executor_refer = ::scl::forward_like_t<RightRefer, right_executor>;
 
-                constexpr bool has_unguard = requires(right_executor_refer e) {
-                    right_executor::template unguard<right_executor_refer>(e);
-                };
+                constexpr bool has_unguard =
+                    requires(right_executor_refer e) {
+                        right_executor::template unguard<right_executor_refer>(e);
+                    };
 
                 if constexpr (has_unguard)
                 {
@@ -90,15 +91,14 @@ namespace scl::feature::detail
                 else
                 {
                     // no unguard — no RAII needed; call guard if present, then access value directly
-                    decltype(auto) executor =
-                        executor_access::get(::std::forward<RightRefer>(m_right));
+                    decltype(auto) executor = executor_access::get(::std::forward<RightRefer>(m_right));
 
-                    if constexpr (requires { right_executor::template guard<right_executor_refer>(executor); })
+                    if constexpr (
+                        requires { right_executor::template guard<right_executor_refer>(executor); })
                         right_executor::template guard<right_executor_refer>(executor);
 
-                    decltype(auto) inner =
-                        right_executor::template value<right_executor_refer>(
-                            ::std::forward<decltype(executor)>(executor));
+                    decltype(auto) inner = right_executor::template value<right_executor_refer>(
+                        ::std::forward<decltype(executor)>(executor));
 
                     return wrapper_constructor_resolver<left_type, decltype(inner)>{
                         ::std::forward<decltype(inner)>(inner)}

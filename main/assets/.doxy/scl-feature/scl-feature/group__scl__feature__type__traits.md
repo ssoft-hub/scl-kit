@@ -25,6 +25,11 @@ _Type-level utilities for ScL Feature metaprogramming._
 
 
 
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| struct | [**scl::feature::executor\_trait**](structscl_1_1feature_1_1executor__trait.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**T**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Trait that provides access to the executor inside a wrapper._  |
 
 
 

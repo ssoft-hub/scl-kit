@@ -1,0 +1,680 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="C++20 header-only toolkit">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>File method.h - ScL Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-methodh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ScL Toolkit" class="md-header__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ScL Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File method.h
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ScL Toolkit" class="md-nav__button md-logo" aria-label="ScL Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ScL Toolkit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macro-definition-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Definition Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macro Definition Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_executor_type_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_EXECUTOR_TYPE_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_reflect_method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_REFLECT_METHOD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_reflect_method_base_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_REFLECT_METHOD_BASE_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_reflect_method_helper_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_REFLECT_METHOD_HELPER_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_reflect_template_method_base_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_REFLECT_TEMPLATE_METHOD_BASE_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_value_access_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_VALUE_ACCESS_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_value_declval_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_VALUE_DECLVAL_
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="file-methodh">File method.h</h1>
+<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_262f3534dca743723347393893d6556e/"><strong>reflection</strong></a> <strong>&gt;</strong> <a href="./"><strong>method.h</strong></a></p>
+<p><a href="../method_8h_source/">Go to the source code of this file</a></p>
+<p><em>Compile-time method reflection macros for wrapper types.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;scl/feature/reflection/type.h&gt;</code></li>
+<li><code>#include &lt;scl/feature/type_traits/executor.h&gt;</code></li>
+<li><code>#include &lt;scl/feature/type_traits/has_qualified_method.h&gt;</code></li>
+<li><code>#include &lt;scl/utility/preprocessor/forward.h&gt;</code></li>
+<li><code>#include &lt;type_traits&gt;</code></li>
+<li><code>#include &lt;utility&gt;</code></li>
+</ul>
+<h2 id="macros">Macros</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_executor_type_"><strong>SCL_EXECUTOR_TYPE_</strong></a>  <code>S\_c\_L\_executor\_type\_</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method"><strong>SCL_REFLECT_METHOD</strong></a> (METHOD) <code>/* multi line expression */</code><br><em>Generates proxy methods that reflect</em> <code>METHOD</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method_base_"><strong>SCL_REFLECT_METHOD_BASE_</strong></a> (METHOD, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method_helper_"><strong>SCL_REFLECT_METHOD_HELPER_</strong></a> (METHOD, CALLER, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_template_method_base_"><strong>SCL_REFLECT_TEMPLATE_METHOD_BASE_</strong></a> (METHOD, CALLER, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_value_access_"><strong>SCL_VALUE_ACCESS_</strong></a> (QUALIFIERS) <code>/* multi line expression */</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_value_declval_"><strong>SCL_VALUE_DECLVAL_</strong></a> (QUALIFIERS) <code>SCL\_EXECUTOR\_TYPE\_::value(::std::declval&amp;lt;SCL\_EXECUTOR\_TYPE\_ QUALIFIERS&amp;gt;())</code><br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>Provides macros to automatically generate proxy methods that forward calls from a wrapper class to the held object through an executor, preserving cv-ref qualifiers exactly.</p>
+<p>The executor is located at runtime via <code>scl::feature::executor_trait</code>, which must be specialized for each wrapper type.</p>
+<p>**
+**</p>
+<ul>
+<li>Declare the wrapper type with <code>SCL_REFLECT_TYPE(Type,Member)</code> (after the executor member declaration).</li>
+<li>Specialize <code>scl::feature::executor_trait</code> for the wrapper type.</li>
+<li>The executor type must provide a static <code>value(exec)</code> method that returns a reference to the wrapped object.</li>
+</ul>
+<p>**
+**</p>
+<pre><code class="language-C++">struct MyWrapper;
+template &lt;&gt;
+struct scl::feature::executor_trait&lt;MyWrapper&gt; {
+    template &lt;typename Self&gt;
+    static constexpr decltype(auto) executor(Self &amp;&amp; self)
+    { return ::scl::forward_like&lt;Self&gt;(self.m_exec); }
+};
+struct MyWrapper {
+    Executor m_exec;
+    SCL_REFLECT_TYPE(MyWrapper, m_exec);
+
+    SCL_REFLECT_METHOD(foo)
+    SCL_REFLECT_METHOD(bar)
+};
+</code></pre>
+<h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
+<h3 id="define-scl_executor_type_">define SCL_EXECUTOR_TYPE_</h3>
+<pre><code class="language-C++">#define SCL_EXECUTOR_TYPE_ `S_c_L_executor_type_`
+</code></pre>
+<hr>
+
+<h3 id="define-scl_reflect_method">define SCL_REFLECT_METHOD</h3>
+<p><em>Generates proxy methods that reflect</em> <code>METHOD</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></p>
+<pre><code class="language-C++">#define SCL_REFLECT_METHOD (
+    METHOD
+) `/* multi line expression */`
+</code></pre>
+<p>For each of the 8 cv-ref qualifiers (<code>&amp;</code>, <code>&amp;&amp;</code>, <code>const&amp;</code>, <code>const&amp;&amp;</code>, <code>volatile&amp;</code>, <code>volatile&amp;&amp;</code>, <code>const</code> <code>volatile&amp;</code>, <code>const</code> <code>volatile&amp;&amp;</code>) two overloads are generated:
+* one with <strong>deduced</strong> template arguments — <code>template&lt;typename</code>... A_r_g_s__&gt;
+* one with <strong>explicit</strong> template arguments — <code>template&lt;typename\</code> P_a_r_a_m__,\ typename... P_a_r_a_m_s__,\ typename... A_r_g_s__&gt;</p>
+<p>This gives 16 overloads in total (2 × 8).</p>
+<p>**
+**</p>
+<p>The executor is obtained at runtime via <code>scl::feature::executor_trait &lt;WrapperType&gt;::executor(self)</code>. The default trait returns <code>self.m_executor</code>. Specialize the trait for types that store the executor differently.</p>
+<p>The wrapped value is then obtained by calling <code>Executor::value(executor_ref)</code>.</p>
+<p>**
+**</p>
+<p>Each overload is constrained by two <code>requires</code> clauses:
+* The wrapped object's <code>METHOD</code> must be callable with the given arguments for the particular cv-ref qualification.
+* <code>SCL_HAS_QUALIFIED_METHOD</code> must confirm that the wrapped object has a <strong>dedicated</strong> overload for that qualifier (not an implicit cv-widening fallback). This prevents, for example, a <code>const&amp;</code> proxy from being generated when only a mutable <code>&amp;</code> overload exists on the target.</p>
+<p>**
+**</p>
+<p>Because <code>SCL_HAS_QUALIFIED_METHOD</code> relies on return-type discrimination, overloads of the target method with different cv-ref qualifiers <strong>must</strong> return different types. If two overloads return the same type, the macro will produce a false negative. </p>
+<pre><code class="language-C++">struct Good {
+    short get() &amp;;       // short ≠ int → distinguishable
+    int   get() const &amp;;
+};
+struct Bad {
+    int get() &amp;;         // int == int → macro cannot distinguish
+    int get() const &amp;;
+};
+</code></pre>
+<p>**
+**</p>
+<p>If <code>METHOD</code> is a template on the wrapped object (e.g. <code>template&lt;typename\</code> T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: <code>wrapper.convert&lt;double&gt;</code>().</p>
+<p>Internally this is handled by a helper struct (<code>METHOD_S_c_L_caller_</code>) generated inside the enclosing class. The struct wraps the <code>.template `METHOD&lt;`...&amp;gt; call inside a static function template whose object parameter (`O_b_j___`) is dependent. This ensures that the `template` keyword appears only in a **dependent** context, so the compiler defers name lookup to instantiation time. Without this indirection,</code>.template <code>foo&lt;</code>...&gt; on a <strong>non-dependent</strong> type where <code>foo</code> is not a template would be a hard parse error (not SFINAE), even inside a <code>requires</code> expression.</p>
+<p>When <code>METHOD</code> is <strong>not</strong> a template, the helper struct's <code>call</code> function fails to instantiate (SFINAE via trailing return type), the <code>requires</code> clause evaluates to <code>false</code>, and the explicit-template-args overload is silently discarded.</p>
+<p>**
+**</p>
+<pre><code class="language-C++">struct Target {
+    short get() &amp;;
+    int   get() const &amp;;
+    float get() &amp;&amp;;
+
+    template &lt;typename T&gt;
+    T convert() const &amp;;
+};
+
+struct MyWrapper;
+template &lt;&gt;
+struct scl::feature::executor_trait&lt;MyWrapper&gt; {
+    template &lt;typename Self&gt;
+    static constexpr decltype(auto) executor(Self &amp;&amp; self)
+    { return ::scl::forward_like&lt;Self&gt;(self.m_executor); }
+};
+struct MyWrapper {
+    ::scl::feature::inplace::plain&lt;Target&gt; m_executor;
+    SCL_REFLECT_TYPE(MyWrapper, m_executor);
+
+    explicit MyWrapper(int v) : m_executor{v} {}
+
+    SCL_REFLECT_METHOD(get)      // 16 overloads, constrained to &amp;, const&amp;, &amp;&amp;
+    SCL_REFLECT_METHOD(convert)  // 16 overloads, only const&amp; survives constraints
+};
+
+MyWrapper w{42};
+w.get();                // calls Target::get() &amp;  → short(42)
+
+MyWrapper const cw{42};
+cw.get();               // calls Target::get() const &amp;  → int(92)
+
+MyWrapper{42}.get();    // calls Target::get() &amp;&amp;  → float(142)
+
+cw.convert&lt;double&gt;();   // calls Target::convert&lt;double&gt;() const &amp;  → 42.0
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>METHOD</code> Unqualified method name (plain identifier).</li>
+</ul>
+<p><strong>See also:</strong> <a href="../type_8h/#define-scl_reflect_type"><strong>SCL_REFLECT_TYPE</strong></a> </p>
+<p><strong>See also:</strong> <a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> </p>
+<hr>
+
+<h3 id="define-scl_reflect_method_base_">define SCL_REFLECT_METHOD_BASE_</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_METHOD_BASE_ (
+    METHOD,
+    QUALIFIERS
+) `/* multi line expression */`
+</code></pre>
+<hr>
+
+<h3 id="define-scl_reflect_method_helper_">define SCL_REFLECT_METHOD_HELPER_</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_METHOD_HELPER_ (
+    METHOD,
+    CALLER,
+    QUALIFIERS
+) `/* multi line expression */`
+</code></pre>
+<hr>
+
+<h3 id="define-scl_reflect_template_method_base_">define SCL_REFLECT_TEMPLATE_METHOD_BASE_</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_TEMPLATE_METHOD_BASE_ (
+    METHOD,
+    CALLER,
+    QUALIFIERS
+) `/* multi line expression */`
+</code></pre>
+<hr>
+
+<h3 id="define-scl_value_access_">define SCL_VALUE_ACCESS_</h3>
+<pre><code class="language-C++">#define SCL_VALUE_ACCESS_ (
+    QUALIFIERS
+) `/* multi line expression */`
+</code></pre>
+<hr>
+
+<h3 id="define-scl_value_declval_">define SCL_VALUE_DECLVAL_</h3>
+<pre><code class="language-C++">#define SCL_VALUE_DECLVAL_ (
+    QUALIFIERS
+) `SCL_EXECUTOR_TYPE_::value(::std::declval&lt;SCL_EXECUTOR_TYPE_ QUALIFIERS&gt;())`
+</code></pre>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/reflection/method.h</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

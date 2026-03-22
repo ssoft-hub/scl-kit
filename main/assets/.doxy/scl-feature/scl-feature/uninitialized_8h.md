@@ -91,7 +91,44 @@
 
 
 
+## Macros
 
+| Type | Name |
+| ---: | :--- |
+| define  | [**SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF**](uninitialized_8h.md#define-scl_executor_constructor_for_self)  `/* multi line expression */`<br> |
+| define  | [**SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF\_PROTOTYPE**](uninitialized_8h.md#define-scl_executor_constructor_for_self_prototype) (cv\_ref) `/* multi line expression */`<br> |
+
+## Macro Definition Documentation
+
+
+
+
+
+### define SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF 
+
+```C++
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_EXECUTOR\_CONSTRUCTOR\_FOR\_SELF\_PROTOTYPE 
+
+```C++
+#define SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE (
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
 
 ------------------------------
 The documentation for this class was generated from the following file `module/feature/src/scl/feature/inplace/uninitialized.h`

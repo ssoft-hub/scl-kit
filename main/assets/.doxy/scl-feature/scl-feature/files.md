@@ -22,7 +22,12 @@ Here is a list of all files with brief descriptions:
                     * **dir** [**inplace**](dir_a84fae2e5328daedf40681be880e8335.md)     
                         * **file** [**plain.h**](plain_8h.md)     
                         * **file** [**uninitialized.h**](uninitialized_8h.md)     
+                    * **dir** [**reflection**](dir_262f3534dca743723347393893d6556e.md)     
+                        * **file** [**method.h**](method_8h.md) _Compile-time method reflection macros for wrapper types._     
+                        * **file** [**type.h**](type_8h.md) _Macro for declaring the wrapper type used by reflection macros._     
                     * **dir** [**type\_traits**](dir_910e174fc0e8c8ed40843bba5172f2f4.md)     
+                        * **file** [**executor.h**](executor_8h.md) _Customization point for locating the executor inside a wrapper type._     
+                        * **file** [**has\_qualified\_method.h**](has__qualified__method_8h.md) _Compile-time predicate macro for cv-ref qualifier detection._     
                         * **file** [**wrapper.h**](type__traits_2wrapper_8h.md)     
                     * **file** [**type\_traits.h**](type__traits_8h.md) _ScL Feature type traits._ 
                     * **file** [**wrapper.h**](wrapper_8h.md)     

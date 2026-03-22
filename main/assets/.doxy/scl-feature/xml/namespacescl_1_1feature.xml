@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacescl_1_1feature" kind="namespace" language="C++">
     <compoundname>scl::feature</compoundname>
+    <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
     <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
     <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
     <sectiondef kind="typedef">

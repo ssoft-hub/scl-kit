@@ -5,6 +5,7 @@
     <innerdir refid="dir_f37dd920b215c7d361cd7dbe8578ca36">module/feature/src/scl/feature/concepts</innerdir>
     <innerdir refid="dir_b3eb4ac5eceab19e0dcca8b4c96aaf20">module/feature/src/scl/feature/detail</innerdir>
     <innerdir refid="dir_a84fae2e5328daedf40681be880e8335">module/feature/src/scl/feature/inplace</innerdir>
+    <innerdir refid="dir_262f3534dca743723347393893d6556e">module/feature/src/scl/feature/reflection</innerdir>
     <innerdir refid="dir_910e174fc0e8c8ed40843bba5172f2f4">module/feature/src/scl/feature/type_traits</innerdir>
     <innerfile refid="concepts_8h">concepts.h</innerfile>
     <innerfile refid="type__traits_8h">type_traits.h</innerfile>

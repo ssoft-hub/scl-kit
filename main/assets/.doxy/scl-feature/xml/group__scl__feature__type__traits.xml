@@ -3,6 +3,7 @@
   <compounddef id="group__scl__feature__type__traits" kind="group">
     <compoundname>scl_feature_type_traits</compoundname>
     <title>ScL Feature Type Traits</title>
+    <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
     <sectiondef kind="var">
       <memberdef kind="variable" id="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" prot="public" static="no" constexpr="yes" mutable="no">
         <templateparamlist>

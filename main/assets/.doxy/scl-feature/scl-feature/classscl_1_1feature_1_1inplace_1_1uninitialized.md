@@ -55,6 +55,11 @@ _Executor that holds_ `Value` _in uninitialized aligned storage._[More...](#deta
 
 
 
+## Public Functions
+
+| Type | Name |
+| ---: | :--- |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**uninitialized**](#function-uninitialized) () noexcept<br> |
 
 
 ## Public Static Functions
@@ -119,6 +124,21 @@ wrapper<int, feature::inplace::uninitialized> w{};
 
 ```C++
 using scl::feature::inplace::uninitialized< Value >::value_type =  Value;
+```
+
+
+
+
+<hr>
+## Public Functions Documentation
+
+
+
+
+### function uninitialized 
+
+```C++
+constexpr feature::inplace::uninitialized::uninitialized () noexcept
 ```
 
 

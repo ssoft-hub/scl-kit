@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="27" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="27" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="44" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="30" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="30" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="47" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="47" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -53,7 +53,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="50" column="28" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="50" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="72" column="28" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1uninitialized_1a1ac77992dd927bff8a5611207d7213ca" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">constexpr</ref></type>
+        <definition>constexpr scl::feature::inplace::uninitialized&lt; Value &gt;::uninitialized</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>uninitialized</name>
+        <qualifiedname>scl::feature::inplace::uninitialized::uninitialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="50" column="19"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -95,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="34" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="34" bodyend="38"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="56" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="56" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -119,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="41" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="41" bodyend="47"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="63" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="63" bodyend="69"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -139,11 +155,12 @@
 <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">wrapper&lt;int, feature::inplace::uninitialized&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{};</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="25" column="5" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="26" bodyend="51"/>
+    <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="42" column="5" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="43" bodyend="73"/>
     <listofallmembers>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a3611a72d709414265b1097ade90b342d" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>execute</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1abc28e8132b80f4ff55e34cda76dc0ad3" prot="private" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>m_storage</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1aa9257586cc156f36696a286dd78db642" prot="private" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>self_type</name></member>
+      <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a1ac77992dd927bff8a5611207d7213ca" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>uninitialized</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>value</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>value_type</name></member>
     </listofallmembers>

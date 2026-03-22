@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structscl_1_1feature_1_1executor__trait" kind="struct"><name>scl::feature::executor_trait</name>
+  </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1plain" kind="class"><name>scl::feature::inplace::plain</name>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" kind="typedef"><name>value_type</name></member>
@@ -12,6 +14,7 @@
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1aa9257586cc156f36696a286dd78db642" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" kind="typedef"><name>value_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1abc28e8132b80f4ff55e34cda76dc0ad3" kind="variable"><name>m_storage</name></member>
+    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a1ac77992dd927bff8a5611207d7213ca" kind="function"><name>uninitialized</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a3611a72d709414265b1097ade90b342d" kind="function"><name>execute</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" kind="function"><name>value</name></member>
   </compound>
@@ -59,8 +62,29 @@
     <member refid="plain_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
   </compound>
   <compound refid="uninitialized_8h" kind="file"><name>uninitialized.h</name>
+    <member refid="uninitialized_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
+    <member refid="uninitialized_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
+  </compound>
+  <compound refid="method_8h" kind="file"><name>method.h</name>
+    <member refid="method_8h_1a4755076b8d36106eae8a4d5cca97c2b2" kind="define"><name>SCL_EXECUTOR_TYPE_</name></member>
+    <member refid="method_8h_1a9e151f4d05fa867183fd7385488ddc32" kind="define"><name>SCL_VALUE_DECLVAL_</name></member>
+    <member refid="method_8h_1a633e2dc74e4a5cea4909f58bd39fab4d" kind="define"><name>SCL_VALUE_ACCESS_</name></member>
+    <member refid="method_8h_1a476e4840f12b584bdcedcb9ceb55da21" kind="define"><name>SCL_REFLECT_METHOD_BASE_</name></member>
+    <member refid="method_8h_1aef2c311e670283915183875607059a34" kind="define"><name>SCL_REFLECT_TEMPLATE_METHOD_BASE_</name></member>
+    <member refid="method_8h_1addb1501e8a9fb6338f193d48db409230" kind="define"><name>SCL_REFLECT_METHOD_HELPER_</name></member>
+    <member refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" kind="define"><name>SCL_REFLECT_METHOD</name></member>
+  </compound>
+  <compound refid="type_8h" kind="file"><name>type.h</name>
+    <member refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kind="define"><name>SCL_REFLECT_TYPE</name></member>
   </compound>
   <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
+  </compound>
+  <compound refid="executor_8h" kind="file"><name>executor.h</name>
+  </compound>
+  <compound refid="has__qualified__method_8h" kind="file"><name>has_qualified_method.h</name>
+    <member refid="has__qualified__method_8h_1a4c0a059aafa2e29e92e8fd5a934d7c50" kind="define"><name>SCL_HQM_CALL_</name></member>
+    <member refid="has__qualified__method_8h_1a5082420fc0212bf8748b4bbf4cdcd4b9" kind="define"><name>SCL_HQM_SAME_</name></member>
+    <member refid="has__qualified__method_8h_1acf5f2897e5d23b40a8a8f0e6b71781f8" kind="define"><name>SCL_HAS_QUALIFIED_METHOD</name></member>
   </compound>
   <compound refid="concepts_2wrapper_8h" kind="file"><name>wrapper.h</name>
   </compound>
@@ -92,6 +116,8 @@
   <compound refid="dir_a84fae2e5328daedf40681be880e8335" kind="dir"><name>module/feature/src/scl/feature/inplace</name>
   </compound>
   <compound refid="dir_a7b0466279106ea0b8f86f609f621680" kind="dir"><name>module</name>
+  </compound>
+  <compound refid="dir_262f3534dca743723347393893d6556e" kind="dir"><name>module/feature/src/scl/feature/reflection</name>
   </compound>
   <compound refid="dir_3cb8c5947ec40e9fe62f293d8773d742" kind="dir"><name>module/feature/src/scl</name>
   </compound>
