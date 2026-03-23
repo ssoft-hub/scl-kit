@@ -3,14 +3,10 @@
   <compounddef id="namespacescl" kind="namespace" language="C++">
     <compoundname>scl</compoundname>
     <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
-    <sectiondef kind="typedef">
-      <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
-    </sectiondef>
     <briefdescription>
-<para>Root namespace of the ScL project. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature.h" line="13" column="1"/>
+    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="22" column="1"/>
   </compounddef>
 </doxygen>

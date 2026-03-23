@@ -8,7 +8,7 @@
 
 
 
-_Root namespace of the ScL project._ 
+
 
 
 
@@ -27,7 +27,7 @@ _Root namespace of the ScL project._
 
 | Type | Name |
 | ---: | :--- |
-| namespace | [**feature**](namespacescl_1_1feature.md) <br>_Namespace of the ScL Feature module._  |
+| namespace | [**feature**](namespacescl_1_1feature.md) <br> |
 
 
 
@@ -82,5 +82,5 @@ _Root namespace of the ScL project._
 
 
 ------------------------------
-The documentation for this class was generated from the following file `module/feature/src/scl/feature.h`
+The documentation for this class was generated from the following file `module/feature/src/scl/feature/type_traits/executor.h`
 

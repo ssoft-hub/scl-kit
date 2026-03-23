@@ -2,68 +2,9 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="structscl_1_1feature_1_1executor__trait" kind="struct"><name>scl::feature::executor_trait</name>
   </compound>
-  <compound refid="classscl_1_1feature_1_1inplace_1_1plain" kind="class"><name>scl::feature::inplace::plain</name>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" kind="typedef"><name>self_type</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" kind="typedef"><name>value_type</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" kind="variable"><name>m_value</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" kind="function"><name>plain</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" kind="function"><name>execute</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" kind="function"><name>value</name></member>
-  </compound>
-  <compound refid="classscl_1_1feature_1_1inplace_1_1uninitialized" kind="class"><name>scl::feature::inplace::uninitialized</name>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1aa9257586cc156f36696a286dd78db642" kind="typedef"><name>self_type</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a21d71f113dce6945f49a85ef3b83b375" kind="typedef"><name>value_type</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1abc28e8132b80f4ff55e34cda76dc0ad3" kind="variable"><name>m_storage</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a1ac77992dd927bff8a5611207d7213ca" kind="function"><name>uninitialized</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a3611a72d709414265b1097ade90b342d" kind="function"><name>execute</name></member>
-    <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" kind="function"><name>value</name></member>
-  </compound>
-  <compound refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with" kind="concept"><name>scl::feature::concepts::compatible_with</name>
-  </compound>
-  <compound refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kind="concept"><name>scl::feature::concepts::compatible_with_part_of</name>
-  </compound>
-  <compound refid="conceptscl_1_1feature_1_1concepts_1_1part__compatible__with" kind="concept"><name>scl::feature::concepts::part_compatible_with</name>
-  </compound>
-  <compound refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" kind="concept"><name>scl::feature::concepts::wrapper</name>
-  </compound>
   <compound refid="namespacescl" kind="namespace"><name>scl</name>
-    <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
   </compound>
   <compound refid="namespacescl_1_1feature" kind="namespace"><name>scl::feature</name>
-    <member refid="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" kind="typedef"><name>wrapper_guard</name></member>
-    <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
-    <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
-    <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
-    <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
-  </compound>
-  <compound refid="namespacescl_1_1feature_1_1concepts" kind="namespace"><name>scl::feature::concepts</name>
-  </compound>
-  <compound refid="namespacescl_1_1feature_1_1inplace" kind="namespace"><name>scl::feature::inplace</name>
-  </compound>
-  <compound refid="feature_8h" kind="file"><name>feature.h</name>
-  </compound>
-  <compound refid="concepts_8h" kind="file"><name>concepts.h</name>
-  </compound>
-  <compound refid="executor__access_8h" kind="file"><name>executor_access.h</name>
-  </compound>
-  <compound refid="wrapper__constructor__resolver_8h" kind="file"><name>wrapper_constructor_resolver.h</name>
-  </compound>
-  <compound refid="wrapper__constructors_8h" kind="file"><name>wrapper_constructors.h</name>
-    <member refid="wrapper__constructors_8h_1aeeeab7d56d9c7d86d382861542718e5f" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
-    <member refid="wrapper__constructors_8h_1a0555636e430e52a07f1a518b2aafdc0e" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF</name></member>
-    <member refid="wrapper__constructors_8h_1a4bb4f5a733d47d7890abb48ca7b7ea1e" kind="define"><name>SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER</name></member>
-  </compound>
-  <compound refid="detail_2wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
-  </compound>
-  <compound refid="wrapper__guard_8h" kind="file"><name>wrapper_guard.h</name>
-  </compound>
-  <compound refid="plain_8h" kind="file"><name>plain.h</name>
-    <member refid="plain_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
-    <member refid="plain_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
-  </compound>
-  <compound refid="uninitialized_8h" kind="file"><name>uninitialized.h</name>
-    <member refid="uninitialized_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
-    <member refid="uninitialized_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
   </compound>
   <compound refid="method_8h" kind="file"><name>method.h</name>
     <member refid="method_8h_1a4755076b8d36106eae8a4d5cca97c2b2" kind="define"><name>SCL_EXECUTOR_TYPE_</name></member>
@@ -77,8 +18,6 @@
   <compound refid="type_8h" kind="file"><name>type.h</name>
     <member refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kind="define"><name>SCL_REFLECT_TYPE</name></member>
   </compound>
-  <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
-  </compound>
   <compound refid="executor_8h" kind="file"><name>executor.h</name>
   </compound>
   <compound refid="has__qualified__method_8h" kind="file"><name>has_qualified_method.h</name>
@@ -86,34 +25,9 @@
     <member refid="has__qualified__method_8h_1a5082420fc0212bf8748b4bbf4cdcd4b9" kind="define"><name>SCL_HQM_SAME_</name></member>
     <member refid="has__qualified__method_8h_1acf5f2897e5d23b40a8a8f0e6b71781f8" kind="define"><name>SCL_HAS_QUALIFIED_METHOD</name></member>
   </compound>
-  <compound refid="concepts_2wrapper_8h" kind="file"><name>wrapper.h</name>
-  </compound>
-  <compound refid="detail_2wrapper_8h" kind="file"><name>wrapper.h</name>
-  </compound>
-  <compound refid="type__traits_2wrapper_8h" kind="file"><name>wrapper.h</name>
-  </compound>
-  <compound refid="wrapper_8h" kind="file"><name>wrapper.h</name>
-  </compound>
-  <compound refid="group__scl__feature__concepts" kind="group"><name>scl_feature_concepts</name>
-  </compound>
-  <compound refid="group__scl__feature__type__traits" kind="group"><name>scl_feature_type_traits</name>
-    <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
-    <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
-    <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
-    <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
-  </compound>
-  <compound refid="group__scl__feature__wrapper" kind="group"><name>scl_feature_wrapper</name>
-    <member refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kind="typedef"><name>wrapper</name></member>
-  </compound>
-  <compound refid="dir_f37dd920b215c7d361cd7dbe8578ca36" kind="dir"><name>module/feature/src/scl/feature/concepts</name>
-  </compound>
-  <compound refid="dir_b3eb4ac5eceab19e0dcca8b4c96aaf20" kind="dir"><name>module/feature/src/scl/feature/detail</name>
-  </compound>
   <compound refid="dir_0353163fedb9ed52d00571e05b9d7425" kind="dir"><name>module/feature</name>
   </compound>
   <compound refid="dir_fa8d125dcaa64c120bbbc8d1167944b9" kind="dir"><name>module/feature/src/scl/feature</name>
-  </compound>
-  <compound refid="dir_a84fae2e5328daedf40681be880e8335" kind="dir"><name>module/feature/src/scl/feature/inplace</name>
   </compound>
   <compound refid="dir_a7b0466279106ea0b8f86f609f621680" kind="dir"><name>module</name>
   </compound>
@@ -124,7 +38,5 @@
   <compound refid="dir_128cb90ac92ab15b1b3598556d036c00" kind="dir"><name>module/feature/src</name>
   </compound>
   <compound refid="dir_910e174fc0e8c8ed40843bba5172f2f4" kind="dir"><name>module/feature/src/scl/feature/type_traits</name>
-  </compound>
-  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

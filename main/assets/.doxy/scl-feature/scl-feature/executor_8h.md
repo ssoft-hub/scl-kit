@@ -27,8 +27,8 @@ _Customization point for locating the executor inside a wrapper type._ [More...]
 
 | Type | Name |
 | ---: | :--- |
-| namespace | [**scl**](namespacescl.md) <br>_Root namespace of the ScL project._  |
-| namespace | [**feature**](namespacescl_1_1feature.md) <br>_Namespace of the ScL Feature module._  |
+| namespace | [**scl**](namespacescl.md) <br> |
+| namespace | [**feature**](namespacescl_1_1feature.md) <br> |
 
 
 

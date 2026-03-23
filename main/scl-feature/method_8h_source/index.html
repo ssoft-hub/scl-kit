@@ -303,73 +303,61 @@
 #include &lt;type_traits&gt;
 #include &lt;utility&gt;
 
-// clang-format off
-
 #define SCL_EXECUTOR_TYPE_ S_c_L_executor_type_
 
-#define SCL_VALUE_DECLVAL_(QUALIFIERS)                                                             \
+#define SCL_VALUE_DECLVAL_(QUALIFIERS) \
     SCL_EXECUTOR_TYPE_::value(::std::declval&lt;SCL_EXECUTOR_TYPE_ QUALIFIERS&gt;())
 
-#define SCL_VALUE_ACCESS_(QUALIFIERS)                                                              \
-    SCL_EXECUTOR_TYPE_::value(                                                                     \
-        ::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor(                                     \
-            ::std::forward&lt;S_c_L_type_ QUALIFIERS&gt;(*this)))
+#define SCL_VALUE_ACCESS_(QUALIFIERS)                                                \
+    SCL_EXECUTOR_TYPE_::value(::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor( \
+        ::std::forward&lt;S_c_L_type_ QUALIFIERS&gt;(*this)))
 
-#define SCL_REFLECT_METHOD_BASE_(METHOD, QUALIFIERS)                                               \
-    requires requires {                                                                            \
-        SCL_VALUE_DECLVAL_(QUALIFIERS).METHOD(::std::declval&lt;A_r_g_s__&gt;()...);                     \
-    } &amp;&amp;                                                                                           \
-    METHOD##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL_(QUALIFIERS)), A_r_g_s__...&gt;                   \
-    {                                                                                              \
-        return SCL_VALUE_ACCESS_(QUALIFIERS)                                                       \
-            .METHOD(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                      \
+#define SCL_REFLECT_METHOD_BASE_(METHOD, QUALIFIERS)                                                \
+    requires requires { SCL_VALUE_DECLVAL_(QUALIFIERS).METHOD(::std::declval&lt;A_r_g_s__&gt;()...); } &amp;&amp; \
+        METHOD##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL_(QUALIFIERS)), A_r_g_s__...&gt;               \
+    {                                                                                               \
+        return SCL_VALUE_ACCESS_(QUALIFIERS).METHOD(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);       \
     }
 
-#define SCL_REFLECT_TEMPLATE_METHOD_BASE_(METHOD, CALLER, QUALIFIERS)                              \
-    requires requires {                                                                            \
-        CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(                                      \
-            SCL_VALUE_DECLVAL_(QUALIFIERS),                                                        \
-            ::std::declval&lt;A_r_g_s__&gt;()...);                                                       \
-    }                                                                                              \
-    {                                                                                              \
-        return CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(                               \
-            SCL_VALUE_ACCESS_(QUALIFIERS),                                                         \
-            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                              \
+#define SCL_REFLECT_TEMPLATE_METHOD_BASE_(METHOD, CALLER, QUALIFIERS)                                 \
+    requires requires {                                                                               \
+                 CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL_(QUALIFIERS), \
+                     ::std::declval&lt;A_r_g_s__&gt;()...);                                                 \
+             } {                                                                                      \
+        return CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS_(QUALIFIERS),    \
+            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                                 \
     }
 
-#define SCL_REFLECT_METHOD_HELPER_(METHOD, CALLER, QUALIFIERS)                                     \
-    template &lt;typename... A_r_g_s__&gt;                                                               \
-    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS                          \
-        SCL_REFLECT_METHOD_BASE_(METHOD, SCL_FORWARD(QUALIFIERS))                                  \
-    template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt;              \
-    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS                          \
-        SCL_REFLECT_TEMPLATE_METHOD_BASE_(                                                         \
-            SCL_FORWARD(METHOD), CALLER, SCL_FORWARD(QUALIFIERS))
+#define SCL_REFLECT_METHOD_HELPER_(METHOD, CALLER, QUALIFIERS)                                                     \
+    template &lt;typename... A_r_g_s__&gt;                                                                               \
+    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS SCL_REFLECT_METHOD_BASE_(METHOD,         \
+        SCL_FORWARD(QUALIFIERS)) template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt; \
+    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS                                          \
+        SCL_REFLECT_TEMPLATE_METHOD_BASE_(SCL_FORWARD(METHOD), CALLER, SCL_FORWARD(QUALIFIERS))
 
-#define SCL_REFLECT_METHOD(METHOD)                                                                                 \
-    struct METHOD##_S_c_L_caller_ {                                                                                \
-        template &lt;typename P_a_r_a_m___, typename... P_a_r_a_m_s___, typename O_b_j___, typename... A_r_g_s___&gt;    \
-        static constexpr auto call(O_b_j___ &amp;&amp; o_b_j___, A_r_g_s___ &amp;&amp;... a_r_g_s___)                              \
-            -&gt; decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(       \
-                   ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))                                                     \
-        {                                                                                                          \
-            return ::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(            \
-                ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);                                                        \
-        }                                                                                                          \
-    };                                                                                                             \
-    template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                                                         \
-    static constexpr bool METHOD##_S_c_L_quals_ =                                                                  \
-        SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(METHOD), S_c_L_V___, S_c_L_A___...);                                     \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;)                                     \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;&amp;)                                    \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;)                               \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;&amp;)                              \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;)                            \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;&amp;)                           \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const volatile &amp;)                      \
+#define SCL_REFLECT_METHOD(METHOD)                                                                              \
+    struct METHOD##_S_c_L_caller_                                                                               \
+    {                                                                                                           \
+        template &lt;typename P_a_r_a_m___, typename... P_a_r_a_m_s___, typename O_b_j___, typename... A_r_g_s___&gt; \
+        static constexpr auto call(O_b_j___ &amp;&amp; o_b_j___, A_r_g_s___ &amp;&amp;... a_r_g_s___)                           \
+            -&gt; decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(    \
+                ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))                                                     \
+        {                                                                                                       \
+            return ::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(         \
+                ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);                                                     \
+        }                                                                                                       \
+    };                                                                                                          \
+    template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                                                      \
+    static constexpr bool METHOD##_S_c_L_quals_ = SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(METHOD),                 \
+        S_c_L_V___, S_c_L_A___...);                                                                             \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;)                                  \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;&amp;)                                 \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;)                            \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;&amp;)                           \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;)                         \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;&amp;)                        \
+    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const volatile &amp;)                   \
     SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const volatile &amp;&amp;)
-
-// clang-format on
 </code></pre>
 
 

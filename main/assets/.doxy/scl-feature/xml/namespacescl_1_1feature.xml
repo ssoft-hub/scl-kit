@@ -3,56 +3,10 @@
   <compounddef id="namespacescl_1_1feature" kind="namespace" language="C++">
     <compoundname>scl::feature</compoundname>
     <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
-    <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
-    <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
-    <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" prot="public" static="no">
-        <templateparamlist>
-          <param>
-            <type>typename Refer</type>
-          </param>
-        </templateparamlist>
-        <type>detail::wrapper_guard&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref>, <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;::std::remove_cvref_t&lt; <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Refer</ref> &gt; &gt; ? detail::wrapper_guard_case::wrapper :detail::wrapper_guard_case::value &gt;</type>
-        <definition>using scl::feature::wrapper_guard = typedef detail::wrapper_guard&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? detail::wrapper_guard_case::wrapper : detail::wrapper_guard_case::value&gt;</definition>
-        <argsstring></argsstring>
-        <name>wrapper_guard</name>
-        <qualifiedname>scl::feature::wrapper_guard</qualifiedname>
-        <briefdescription>
-<para>RAII guard providing access to the value held by a wrapper or a plain reference. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>For wrapper types calls <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">guard()</ref></computeroutput> on the executor at construction and <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">unguard()</ref></computeroutput> at destruction (both are no-ops if the executor does not define them). Exposes <computeroutput>value()</computeroutput> to reach the stored value with the same cv- and ref-qualifiers as the incoming reference.</para>
-<para>For non-wrapper types simply holds the reference; no guard/unguard is performed.</para>
-<para><parameterlist kind="templateparam"><parameteritem>
-<parameternamelist>
-<parametername>Refer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Reference type — either <computeroutput>wrapper&lt;V,E&gt;</computeroutput> cv-ref or a plain value cv-ref.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__wrapper_1gab893c8447e47ae9e198372c9e400ce42" kindref="member">wrapper&lt;int, feature::inplace::plain&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>{42};</highlight></codeline>
-<codeline><highlight class="normal"><ref refid="namespacescl_1_1feature_1a088060d7ea723be9b297f36a539d1926" kindref="member">feature::wrapper_guard</ref>&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>)<sp/>&amp;&gt;<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">g</ref>{<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">w</ref>};</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>g.value()<sp/>==<sp/>42</highlight></codeline>
-</programlisting> </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="module/feature/src/scl/feature/wrapper_guard.h" line="29" column="5" bodyfile="module/feature/src/scl/feature/wrapper_guard.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="var">
-      <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
-      <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
-      <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
-      <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
-    </sectiondef>
     <briefdescription>
-<para>Namespace of the ScL Feature module. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature.h" line="18" column="1"/>
+    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="22" column="1"/>
   </compounddef>
 </doxygen>

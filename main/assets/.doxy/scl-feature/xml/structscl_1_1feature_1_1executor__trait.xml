@@ -4,14 +4,14 @@
     <compoundname>scl::feature::executor_trait</compoundname>
     <templateparamlist>
       <param>
-        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">T</ref></type>
+        <type>typename T</type>
       </param>
     </templateparamlist>
     <briefdescription>
 <para>Trait that provides access to the executor inside a wrapper. </para>
     </briefdescription>
     <detaileddescription>
-<para>No default implementation. Each wrapper type must provide a specialization with a static <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">executor(Self&amp;&amp;)</ref></computeroutput> method that returns a reference to the executor, preserving cv-ref qualifiers.</para>
+<para>No default implementation. Each wrapper type must provide a specialization with a static <computeroutput>executor(Self&amp;&amp;)</computeroutput> method that returns a reference to the executor, preserving cv-ref qualifiers.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
 <parametername>T</parametername>

@@ -2,11 +2,6 @@
 # Namespace Member Typedefs
 
 
-
-## w
-
-* **wrapper\_guard** ([**scl::feature**](namespacescl_1_1feature.md))
-
-
+Nothing related to **Namespace Member Typedefs** found.
 
 
