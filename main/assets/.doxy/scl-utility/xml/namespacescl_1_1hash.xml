@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl_1_1hash" kind="namespace" language="C++">
+    <compoundname>scl::hash</compoundname>
+    <innerclass refid="structscl_1_1hash_1_1djb2__hasher" prot="public">scl::hash::djb2_hasher</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1fnv1a__hasher" prot="public">scl::hash::fnv1a_hasher</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1jenkins__ota__hasher" prot="public">scl::hash::jenkins_ota_hasher</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1key" prot="public">scl::hash::key</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1sdbm__hasher" prot="public">scl::hash::sdbm_hasher</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1siphash__hasher" prot="public">scl::hash::siphash_hasher</innerclass>
+    <innerclass refid="structscl_1_1hash_1_1siphash__key" prot="public">scl::hash::siphash_key</innerclass>
+    <innernamespace refid="namespacescl_1_1hash_1_1concepts">scl::hash::concepts</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="siphash_8h_1ab979dd272fd5c019680e8693a53609d8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="structscl_1_1hash_1_1siphash__key" kindref="compound">siphash_key</ref></type>
+        <definition>constexpr siphash_key scl::hash::siphash_default_key</definition>
+        <argsstring></argsstring>
+        <name>siphash_default_key</name>
+        <qualifiedname>scl::hash::siphash_default_key</qualifiedname>
+        <initializer>{
+        .k0 = 0x0706050403020100ull, 
+        .k1 = 0x0f0e0d0c0b0a0908ull  
+    }</initializer>
+        <briefdescription>
+<para>Default key for non-security-sensitive use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are the standard test-vector key bytes from the SipHash paper (Aumasson &amp; Bernstein, 2012): bytes 0x00–0x0f in little-endian order. <bold>Do not use this key where hash-flooding resistance is required.</bold> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/siphash.h" line="53" column="34" bodyfile="module/utility/src/scl/utility/hash/siphash.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t</type>
+        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t scl::hash::djb2</definition>
+        <argsstring>(Range const &amp;range, ::std::uint64_t h=5381ull)</argsstring>
+        <name>djb2</name>
+        <qualifiedname>scl::hash::djb2</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>::std::uint64_t</type>
+          <declname>h</declname>
+          <defval>5381ull</defval>
+        </param>
+        <briefdescription>
+<para>Computes a djb2a 64-bit hash over an arbitrary byte range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the XOR variant of Daniel J. Bernstein&apos;s djb2 hash (sometimes written as djb2a or &quot;xor&quot; variant). For each element <computeroutput>c:</computeroutput> <programlisting><codeline><highlight class="normal">h<sp/>=<sp/>h<sp/>*<sp/>33<sp/>^<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>equivalently:<sp/>h<sp/>=<sp/>((h<sp/>&lt;&lt;<sp/>5)<sp/>+<sp/>h)<sp/>^<sp/>c</highlight></codeline>
+</programlisting></para>
+<para>djb2a differs from plain djb2 (which uses <computeroutput>+</computeroutput> instead of <computeroutput>^</computeroutput>) in that the XOR step provides better avalanche behaviour for similar inputs.</para>
+<para>The function is <computeroutput>constexpr</computeroutput>, allowing compile-time hash computation.</para>
+<para><simplesect kind="note"><para><bold>Chaining:</bold> pass the result of a previous call as <computeroutput>h:</computeroutput> <programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" kindref="member">scl::hash::djb2</ref>(first_range);</highlight></codeline>
+<codeline><highlight class="normal">h<sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" kindref="member">scl::hash::djb2</ref>(second_range,<sp/>h);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any type satisfying <computeroutput>std::ranges::range</computeroutput> whose elements are convertible to <computeroutput>std::uint8_t</computeroutput> — e.g. a string literal, <computeroutput>std::string_view</computeroutput>, <computeroutput>std::string</computeroutput>, <computeroutput>std::span&lt;std::byte&gt;</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input range to hash. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial hash value. Defaults to the traditional djb2 seed <computeroutput>5381</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>64-bit djb2a digest of the input range.</para>
+</simplesect>
+<simplesect kind="par"><title>Compile-time example</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" kindref="member">scl::hash::djb2</ref>(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(h<sp/>!=<sp/>0);</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/djb2.h" line="50" column="31" bodyfile="module/utility/src/scl/utility/hash/djb2.h" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t</type>
+        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t scl::hash::fnv1a</definition>
+        <argsstring>(Range const &amp;range, ::std::uint64_t h=14695981039346656037ull)</argsstring>
+        <name>fnv1a</name>
+        <qualifiedname>scl::hash::fnv1a</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>::std::uint64_t</type>
+          <declname>h</declname>
+          <defval>14695981039346656037ull</defval>
+        </param>
+        <briefdescription>
+<para>Computes an FNV-1a 64-bit hash over an arbitrary byte range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the FNV-1a variant of the Fowler-Noll-Vo non-cryptographic hash algorithm with 64-bit width. For each element <computeroutput>c</computeroutput> in the range, the algorithm applies: <programlisting><codeline><highlight class="normal">h<sp/>^=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c);</highlight></codeline>
+<codeline><highlight class="normal">h<sp/>*=<sp/>FNV_prime;<sp/><sp/></highlight><highlight class="comment">//<sp/>1099511628211</highlight></codeline>
+</programlisting></para>
+<para>The function is <computeroutput>constexpr</computeroutput>, allowing compile-time hash computation.</para>
+<para><simplesect kind="note"><para><bold>Chaining:</bold> pass the result of a previous call as <computeroutput>h</computeroutput> to hash several ranges into a single digest: <programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" kindref="member">scl::hash::fnv1a</ref>(first_range);</highlight></codeline>
+<codeline><highlight class="normal">h<sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" kindref="member">scl::hash::fnv1a</ref>(second_range,<sp/>h);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any type satisfying <computeroutput>std::ranges::range</computeroutput> whose elements are convertible to <computeroutput>std::uint8_t</computeroutput> — e.g. a string literal, <computeroutput>std::string_view</computeroutput>, <computeroutput>std::string</computeroutput>, <computeroutput>std::span&lt;std::byte&gt;</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input range to hash. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial hash value (offset basis). Defaults to the standard FNV-1a 64-bit offset basis <computeroutput>14695981039346656037</computeroutput> (<computeroutput>0xcbf29ce484222325</computeroutput>). An empty range leaves <computeroutput>h</computeroutput> unchanged and returns it as-is. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>64-bit FNV-1a digest of the input range.</para>
+</simplesect>
+<simplesect kind="par"><title>Compile-time example</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" kindref="member">scl::hash::fnv1a</ref>(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(h<sp/>!=<sp/>0);</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/fnv1a.h" line="51" column="31" bodyfile="module/utility/src/scl/utility/hash/fnv1a.h" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="jenkins__ota_8h_1a819caefdd73be259038eaacf3b2fb1ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint32_t</type>
+        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint32_t scl::hash::jenkins_ota</definition>
+        <argsstring>(Range const &amp;range)</argsstring>
+        <name>jenkins_ota</name>
+        <qualifiedname>scl::hash::jenkins_ota</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+<para>Computes a Jenkins one-at-a-time (OTA) 32-bit hash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements Bob Jenkins&apos; one-at-a-time hash algorithm. Each byte is mixed into the accumulator with bit-shifts and XOR operations, followed by a finalization step that ensures full avalanche: <programlisting><codeline><highlight class="comment">//<sp/>Per-byte<sp/>mixing:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">h<sp/>+=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c);</highlight></codeline>
+<codeline><highlight class="normal">h<sp/>+=<sp/>h<sp/>&lt;&lt;<sp/>10;</highlight></codeline>
+<codeline><highlight class="normal">h<sp/>^=<sp/>h<sp/>&gt;&gt;<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Finalization:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">h<sp/>+=<sp/>h<sp/>&lt;&lt;<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">h<sp/>^=<sp/>h<sp/>&gt;&gt;<sp/>11;</highlight></codeline>
+<codeline><highlight class="normal">h<sp/>+=<sp/>h<sp/>&lt;&lt;<sp/>15;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="note"><para>Jenkins OAT is a <bold>32-bit</bold> algorithm by definition. It returns <computeroutput>std::uint32_t</computeroutput>, unlike the 64-bit algorithms in this module. Use <ref refid="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" kindref="member">scl::hash::fnv1a</ref> or <ref refid="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" kindref="member">scl::hash::djb2</ref> when a 64-bit digest is required.</para>
+</simplesect>
+The function is <computeroutput>constexpr</computeroutput>, allowing compile-time hash computation.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any type satisfying <computeroutput>std::ranges::range</computeroutput> whose elements are convertible to <computeroutput>std::uint8_t</computeroutput> — e.g. a string literal, <computeroutput>std::string_view</computeroutput>, <computeroutput>std::string</computeroutput>, <computeroutput>std::span&lt;std::byte&gt;</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input range to hash. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+</simplesect>
+<simplesect kind="return"><para>32-bit Jenkins OAT digest of the input range.</para>
+</simplesect>
+<simplesect kind="par"><title>Compile-time example</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="jenkins__ota_8h_1a819caefdd73be259038eaacf3b2fb1ab" kindref="member">scl::hash::jenkins_ota</ref>(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(h<sp/>!=<sp/>0);</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/jenkins_ota.h" line="52" column="31" bodyfile="module/utility/src/scl/utility/hash/jenkins_ota.h" bodystart="52" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="sdbm_8h_1ac49961f320741e81b44da462386bfce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t</type>
+        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t scl::hash::sdbm</definition>
+        <argsstring>(Range const &amp;range, ::std::uint64_t h=0ull)</argsstring>
+        <name>sdbm</name>
+        <qualifiedname>scl::hash::sdbm</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>::std::uint64_t</type>
+          <declname>h</declname>
+          <defval>0ull</defval>
+        </param>
+        <briefdescription>
+<para>Computes an SDBM 64-bit hash over an arbitrary byte range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the SDBM hash algorithm (originating from the sdbm database library). For each element <computeroutput>c:</computeroutput> <programlisting><codeline><highlight class="normal">h<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint8_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c)<sp/>+<sp/>(h<sp/>&lt;&lt;<sp/>6)<sp/>+<sp/>(h<sp/>&lt;&lt;<sp/>16)<sp/>-<sp/>h;</highlight></codeline>
+</programlisting></para>
+<para>SDBM is known for good distribution across short keys and is widely used in database and compiler applications.</para>
+<para>The function is <computeroutput>constexpr</computeroutput>, allowing compile-time hash computation.</para>
+<para><simplesect kind="note"><para><bold>Chaining:</bold> pass the result of a previous call as <computeroutput>h:</computeroutput> <programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="sdbm_8h_1ac49961f320741e81b44da462386bfce3" kindref="member">scl::hash::sdbm</ref>(first_range);</highlight></codeline>
+<codeline><highlight class="normal">h<sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="sdbm_8h_1ac49961f320741e81b44da462386bfce3" kindref="member">scl::hash::sdbm</ref>(second_range,<sp/>h);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any type satisfying <computeroutput>std::ranges::range</computeroutput> whose elements are convertible to <computeroutput>std::uint8_t</computeroutput> — e.g. a string literal, <computeroutput>std::string_view</computeroutput>, <computeroutput>std::string</computeroutput>, <computeroutput>std::span&lt;std::byte&gt;</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input range to hash. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial hash value. Defaults to <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>64-bit SDBM digest of the input range.</para>
+</simplesect>
+<simplesect kind="par"><title>Compile-time example</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/><ref refid="sdbm_8h_1ac49961f320741e81b44da462386bfce3" kindref="member">scl::hash::sdbm</ref>(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(h<sp/>!=<sp/>0);</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="48" column="31" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="siphash_8h_1a792b21598016c4400a9c5d930a5082e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t</type>
+        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt;constexpr ::std::uint64_t scl::hash::siphash</definition>
+        <argsstring>(Range const &amp;range, siphash_key const key=siphash_default_key)</argsstring>
+        <name>siphash</name>
+        <qualifiedname>scl::hash::siphash</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type><ref refid="structscl_1_1hash_1_1siphash__key" kindref="compound">siphash_key</ref> const</type>
+          <declname>key</declname>
+          <defval><ref refid="siphash_8h_1ab979dd272fd5c019680e8693a53609d8" kindref="member">siphash_default_key</ref></defval>
+        </param>
+        <briefdescription>
+<para>Computes a SipHash-2-4 64-bit hash over an arbitrary byte range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>SipHash-2-4 (2 compression rounds, 4 finalization rounds) is a fast, short-input hash with a 128-bit secret key. It was designed by Jean-Philippe Aumasson and Daniel J. Bernstein specifically to replace ad-hoc string hash functions in hash tables, providing both good distribution and resistance to hash-flooding attacks.</para>
+<para>It is used as the default string hash in Python (≥ 3.4), Rust, Ruby, and Perl.</para>
+<para>The algorithm processes input in 8-byte (64-bit) little-endian blocks: <programlisting><codeline><highlight class="comment">//<sp/>Compression<sp/>(c<sp/>=<sp/>2<sp/>rounds<sp/>per<sp/>block):</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">v3<sp/>^=<sp/>block;</highlight></codeline>
+<codeline><highlight class="normal">SipRound<sp/>×<sp/>2;</highlight></codeline>
+<codeline><highlight class="normal">v0<sp/>^=<sp/>block;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Finalization<sp/>(d<sp/>=<sp/>4<sp/>rounds):</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">v2<sp/>^=<sp/>0xff;</highlight></codeline>
+<codeline><highlight class="normal">SipRound<sp/>×<sp/>4;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v0<sp/>^<sp/>v1<sp/>^<sp/>v2<sp/>^<sp/>v3;</highlight></codeline>
+</programlisting></para>
+<para>The function is <computeroutput>constexpr</computeroutput>, allowing compile-time hash computation.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any type satisfying <computeroutput>std::ranges::range</computeroutput> whose elements are convertible to <computeroutput>std::uint8_t</computeroutput> — e.g. a string literal, <computeroutput>std::string_view</computeroutput>, <computeroutput>std::string</computeroutput>, <computeroutput>std::span&lt;std::byte&gt;</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input range to hash. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>128-bit secret key. Defaults to <ref refid="siphash_8h_1ab979dd272fd5c019680e8693a53609d8" kindref="member">siphash_default_key</ref>. For security-sensitive use, provide a randomly generated key. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>64-bit SipHash-2-4 digest.</para>
+</simplesect>
+<simplesect kind="par"><title>Compile-time example</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1siphash__key" kindref="compound">scl::hash::siphash_key</ref><sp/>my_key{0xdeadbeefcafeull,<sp/>0xabad1deaull};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>h<sp/>=<sp/>scl::hash::siphash(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">,<sp/>my_key);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(h<sp/>!=<sp/>0);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<simplesect kind="see"><para><ulink url="https://www.131002.net/siphash/">https://www.131002.net/siphash/</ulink> — original paper and reference vectors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/siphash.h" line="103" column="31" bodyfile="module/utility/src/scl/utility/hash/siphash.h" bodystart="103" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/djb2.h" line="11" column="1"/>
+  </compounddef>
+</doxygen>

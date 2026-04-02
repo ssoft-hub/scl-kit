@@ -315,17 +315,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-scl_executor_type_" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        define SCL_EXECUTOR_TYPE_
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#define-scl_reflect_method" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -337,10 +326,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_reflect_method_base_" class="md-nav__link">
+  <a href="#define-scl_reflect_method_base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_REFLECT_METHOD_BASE_
+        define SCL_REFLECT_METHOD_BASE
       
     </span>
   </a>
@@ -348,10 +337,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_reflect_method_helper_" class="md-nav__link">
+  <a href="#define-scl_reflect_method_helper" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_REFLECT_METHOD_HELPER_
+        define SCL_REFLECT_METHOD_HELPER
       
     </span>
   </a>
@@ -359,10 +348,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_reflect_template_method_base_" class="md-nav__link">
+  <a href="#define-scl_reflect_template_method_base" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_REFLECT_TEMPLATE_METHOD_BASE_
+        define SCL_REFLECT_TEMPLATE_METHOD_BASE
       
     </span>
   </a>
@@ -370,10 +359,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_value_access_" class="md-nav__link">
+  <a href="#define-scl_value_access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_VALUE_ACCESS_
+        define SCL_VALUE_ACCESS
       
     </span>
   </a>
@@ -381,10 +370,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_value_declval_" class="md-nav__link">
+  <a href="#define-scl_value_declval" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_VALUE_DECLVAL_
+        define SCL_VALUE_DECLVAL
       
     </span>
   </a>
@@ -436,31 +425,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_executor_type_"><strong>SCL_EXECUTOR_TYPE_</strong></a>  <code>S\_c\_L\_executor\_type\_</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method"><strong>SCL_REFLECT_METHOD</strong></a> (method) <code>/* multi line expression */</code><br><em>Generates proxy methods that reflect</em> <code>method</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_reflect_method"><strong>SCL_REFLECT_METHOD</strong></a> (METHOD) <code>/* multi line expression */</code><br><em>Generates proxy methods that reflect</em> <code>METHOD</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method_base"><strong>SCL_REFLECT_METHOD_BASE</strong></a> (method, cv_ref) <code>/* multi line expression */</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_reflect_method_base_"><strong>SCL_REFLECT_METHOD_BASE_</strong></a> (METHOD, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_method_helper"><strong>SCL_REFLECT_METHOD_HELPER</strong></a> (method, CALLER, cv_ref) <code>/* multi line expression */</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_reflect_method_helper_"><strong>SCL_REFLECT_METHOD_HELPER_</strong></a> (METHOD, CALLER, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_template_method_base"><strong>SCL_REFLECT_TEMPLATE_METHOD_BASE</strong></a> (method, CALLER, cv_ref) <code>/* multi line expression */</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_reflect_template_method_base_"><strong>SCL_REFLECT_TEMPLATE_METHOD_BASE_</strong></a> (METHOD, CALLER, QUALIFIERS) <code>/* multi line expression */</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_value_access"><strong>SCL_VALUE_ACCESS</strong></a> (cv_ref) <code>/* multi line expression */</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_value_access_"><strong>SCL_VALUE_ACCESS_</strong></a> (QUALIFIERS) <code>/* multi line expression */</code><br></td>
-</tr>
-<tr>
-<td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_value_declval_"><strong>SCL_VALUE_DECLVAL_</strong></a> (QUALIFIERS) <code>SCL\_EXECUTOR\_TYPE\_::value(::std::declval&amp;lt;SCL\_EXECUTOR\_TYPE\_ QUALIFIERS&amp;gt;())</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_value_declval"><strong>SCL_VALUE_DECLVAL</strong></a> (cv_ref) <code>S\_c\_L\_executor\_type\_::value(::std::declval&amp;lt;S\_c\_L\_executor\_type\_ cv\_ref&amp;gt;())</code><br></td>
 </tr>
 </tbody>
 </table>
@@ -492,15 +477,10 @@ struct MyWrapper {
 };
 </code></pre>
 <h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
-<h3 id="define-scl_executor_type_">define SCL_EXECUTOR_TYPE_</h3>
-<pre><code class="language-C++">#define SCL_EXECUTOR_TYPE_ `S_c_L_executor_type_`
-</code></pre>
-<hr>
-
 <h3 id="define-scl_reflect_method">define SCL_REFLECT_METHOD</h3>
-<p><em>Generates proxy methods that reflect</em> <code>METHOD</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></p>
+<p><em>Generates proxy methods that reflect</em> <code>method</code> <em>from the wrapped object through the executor, for all 8 cv-ref qualifier combinations.</em></p>
 <pre><code class="language-C++">#define SCL_REFLECT_METHOD (
-    METHOD
+    method
 ) `/* multi line expression */`
 </code></pre>
 <p>For each of the 8 cv-ref qualifiers (<code>&amp;</code>, <code>&amp;&amp;</code>, <code>const&amp;</code>, <code>const&amp;&amp;</code>, <code>volatile&amp;</code>, <code>volatile&amp;&amp;</code>, <code>const</code> <code>volatile&amp;</code>, <code>const</code> <code>volatile&amp;&amp;</code>) two overloads are generated:
@@ -514,7 +494,7 @@ struct MyWrapper {
 <p>**
 **</p>
 <p>Each overload is constrained by two <code>requires</code> clauses:
-* The wrapped object's <code>METHOD</code> must be callable with the given arguments for the particular cv-ref qualification.
+* The wrapped object's <code>method</code> must be callable with the given arguments for the particular cv-ref qualification.
 * <code>SCL_HAS_QUALIFIED_METHOD</code> must confirm that the wrapped object has a <strong>dedicated</strong> overload for that qualifier (not an implicit cv-widening fallback). This prevents, for example, a <code>const&amp;</code> proxy from being generated when only a mutable <code>&amp;</code> overload exists on the target.</p>
 <p>**
 **</p>
@@ -530,9 +510,9 @@ struct Bad {
 </code></pre>
 <p>**
 **</p>
-<p>If <code>METHOD</code> is a template on the wrapped object (e.g. <code>template&lt;typename\</code> T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: <code>wrapper.convert&lt;double&gt;</code>().</p>
-<p>Internally this is handled by a helper struct (<code>METHOD_S_c_L_caller_</code>) generated inside the enclosing class. The struct wraps the <code>.template `METHOD&lt;`...&amp;gt; call inside a static function template whose object parameter (`O_b_j___`) is dependent. This ensures that the `template` keyword appears only in a **dependent** context, so the compiler defers name lookup to instantiation time. Without this indirection,</code>.template <code>foo&lt;</code>...&gt; on a <strong>non-dependent</strong> type where <code>foo</code> is not a template would be a hard parse error (not SFINAE), even inside a <code>requires</code> expression.</p>
-<p>When <code>METHOD</code> is <strong>not</strong> a template, the helper struct's <code>call</code> function fails to instantiate (SFINAE via trailing return type), the <code>requires</code> clause evaluates to <code>false</code>, and the explicit-template-args overload is silently discarded.</p>
+<p>If <code>method</code> is a template on the wrapped object (e.g. <code>template&lt;typename\</code> T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: <code>wrapper.convert&lt;double&gt;</code>().</p>
+<p>Internally this is handled by a helper struct (<code>METHOD_S_c_L_caller_</code>) generated inside the enclosing class. The struct wraps the <code>.template `method&lt;`...&amp;gt; call inside a static function template whose object parameter (`O_b_j___`) is dependent. This ensures that the `template` keyword appears only in a **dependent** context, so the compiler defers name lookup to instantiation time. Without this indirection,</code>.template <code>foo&lt;</code>...&gt; on a <strong>non-dependent</strong> type where <code>foo</code> is not a template would be a hard parse error (not SFINAE), even inside a <code>requires</code> expression.</p>
+<p>When <code>method</code> is <strong>not</strong> a template, the helper struct's <code>call</code> function fails to instantiate (SFINAE via trailing return type), the <code>requires</code> clause evaluates to <code>false</code>, and the explicit-template-args overload is silently discarded.</p>
 <p>**
 **</p>
 <pre><code class="language-C++">struct Target {
@@ -573,49 +553,49 @@ cw.convert&lt;double&gt;();   // calls Target::convert&lt;double&gt;() const &am
 </code></pre>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>METHOD</code> Unqualified method name (plain identifier).</li>
+<li><code>method</code> Unqualified method name (plain identifier).</li>
 </ul>
 <p><strong>See also:</strong> <a href="../type_8h/#define-scl_reflect_type"><strong>SCL_REFLECT_TYPE</strong></a> </p>
 <p><strong>See also:</strong> <a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> </p>
 <hr>
 
-<h3 id="define-scl_reflect_method_base_">define SCL_REFLECT_METHOD_BASE_</h3>
-<pre><code class="language-C++">#define SCL_REFLECT_METHOD_BASE_ (
-    METHOD,
-    QUALIFIERS
+<h3 id="define-scl_reflect_method_base">define SCL_REFLECT_METHOD_BASE</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_METHOD_BASE (
+    method,
+    cv_ref
 ) `/* multi line expression */`
 </code></pre>
 <hr>
 
-<h3 id="define-scl_reflect_method_helper_">define SCL_REFLECT_METHOD_HELPER_</h3>
-<pre><code class="language-C++">#define SCL_REFLECT_METHOD_HELPER_ (
-    METHOD,
+<h3 id="define-scl_reflect_method_helper">define SCL_REFLECT_METHOD_HELPER</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_METHOD_HELPER (
+    method,
     CALLER,
-    QUALIFIERS
+    cv_ref
 ) `/* multi line expression */`
 </code></pre>
 <hr>
 
-<h3 id="define-scl_reflect_template_method_base_">define SCL_REFLECT_TEMPLATE_METHOD_BASE_</h3>
-<pre><code class="language-C++">#define SCL_REFLECT_TEMPLATE_METHOD_BASE_ (
-    METHOD,
+<h3 id="define-scl_reflect_template_method_base">define SCL_REFLECT_TEMPLATE_METHOD_BASE</h3>
+<pre><code class="language-C++">#define SCL_REFLECT_TEMPLATE_METHOD_BASE (
+    method,
     CALLER,
-    QUALIFIERS
+    cv_ref
 ) `/* multi line expression */`
 </code></pre>
 <hr>
 
-<h3 id="define-scl_value_access_">define SCL_VALUE_ACCESS_</h3>
-<pre><code class="language-C++">#define SCL_VALUE_ACCESS_ (
-    QUALIFIERS
+<h3 id="define-scl_value_access">define SCL_VALUE_ACCESS</h3>
+<pre><code class="language-C++">#define SCL_VALUE_ACCESS (
+    cv_ref
 ) `/* multi line expression */`
 </code></pre>
 <hr>
 
-<h3 id="define-scl_value_declval_">define SCL_VALUE_DECLVAL_</h3>
-<pre><code class="language-C++">#define SCL_VALUE_DECLVAL_ (
-    QUALIFIERS
-) `SCL_EXECUTOR_TYPE_::value(::std::declval&lt;SCL_EXECUTOR_TYPE_ QUALIFIERS&gt;())`
+<h3 id="define-scl_value_declval">define SCL_VALUE_DECLVAL</h3>
+<pre><code class="language-C++">#define SCL_VALUE_DECLVAL (
+    cv_ref
+) `S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_ cv_ref&gt;())`
 </code></pre>
 <hr>
 

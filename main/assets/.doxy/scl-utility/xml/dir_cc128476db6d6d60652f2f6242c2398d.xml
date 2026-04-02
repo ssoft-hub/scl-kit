@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_cc128476db6d6d60652f2f6242c2398d" kind="dir">
+    <compoundname>module/utility/src/scl/utility/hash</compoundname>
+    <innerfile refid="djb2_8h">djb2.h</innerfile>
+    <innerfile refid="fnv1a_8h">fnv1a.h</innerfile>
+    <innerfile refid="jenkins__ota_8h">jenkins_ota.h</innerfile>
+    <innerfile refid="key_8h">key.h</innerfile>
+    <innerfile refid="sdbm_8h">sdbm.h</innerfile>
+    <innerfile refid="siphash_8h">siphash.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/"/>
+  </compounddef>
+</doxygen>

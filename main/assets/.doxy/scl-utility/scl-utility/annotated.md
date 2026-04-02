@@ -6,5 +6,16 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
 
 * **struct** [**p8qim3n2a\_t**](structp8qim3n2a__t.md) 
 * **namespace** [**scl**](namespacescl.md) _Root namespace of ScL project._     
+    * **namespace** [**hash**](namespacescl_1_1hash.md)     
+        * **namespace** [**concepts**](namespacescl_1_1hash_1_1concepts.md) 
+        * **struct** [**djb2\_hasher**](structscl_1_1hash_1_1djb2__hasher.md) _Callable wrapper around_ [_**djb2**_](namespacescl_1_1hash.md#function-djb2) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._    
+        * **struct** [**fnv1a\_hasher**](structscl_1_1hash_1_1fnv1a__hasher.md) _Callable wrapper around_ [_**fnv1a**_](namespacescl_1_1hash.md#function-fnv1a) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._    
+        * **struct** [**jenkins\_ota\_hasher**](structscl_1_1hash_1_1jenkins__ota__hasher.md) _Callable wrapper around_ [_**jenkins\_ota**_](namespacescl_1_1hash.md#function-jenkins_ota) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._    
+        * **struct** [**key**](structscl_1_1hash_1_1key.md) _Strongly-typed FNV-1a hash digest parameterized by a hash function._     
+        * **struct** [**sdbm\_hasher**](structscl_1_1hash_1_1sdbm__hasher.md) _Callable wrapper around_ [_**sdbm**_](namespacescl_1_1hash.md#function-sdbm) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._    
+        * **struct** [**siphash\_hasher**](structscl_1_1hash_1_1siphash__hasher.md) _Callable wrapper around_ [_**siphash**_](namespacescl_1_1hash.md#function-siphash) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._    
+        * **struct** [**siphash\_key**](structscl_1_1hash_1_1siphash__key.md) _128-bit secret key for SipHash._     
     * **namespace** [**preprocessor**](namespacescl_1_1preprocessor.md) 
+* **namespace** [**std**](namespacestd.md)     
+    * **struct** [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4.md) `std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._    
 

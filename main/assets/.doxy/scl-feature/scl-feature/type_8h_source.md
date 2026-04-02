@@ -15,9 +15,9 @@
 
 // clang-format off
 
-#define SCL_REFLECT_TYPE(TYPE, MEMBER)                                                             \
-    using S_c_L_type_ = TYPE;                                                                      \
-    using S_c_L_executor_type_ = ::std::remove_cvref_t<decltype(MEMBER)>
+#define SCL_REFLECT_TYPE(Type, Member)                                                             \
+    using S_c_L_type_ = Type;                                                                      \
+    using S_c_L_executor_type_ = ::std::remove_cvref_t<decltype(Member)>
 
 // clang-format on
 ```

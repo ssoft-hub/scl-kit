@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kind="concept">
+    <compoundname>scl::feature::concepts::compatible_with_part_of</compoundname>
+    <includes refid="concepts_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Expected</type>
+      </param>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename Expected, typename Type&gt;
+concept <ref refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kindref="compound">scl::feature::concepts::compatible_with_part_of</ref> =  <ref refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kindref="member">::scl::feature::is_compatible_with_part_of_v</ref>&lt;Expected, Type&gt;    </initializer>
+    <briefdescription>
+<para>Satisfied when <computeroutput>Type</computeroutput> is compatible with a part of <computeroutput>Expected</computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><computeroutput>Type</computeroutput> (a wrapper) is compatible with a nested layer of <computeroutput>Expected</computeroutput>, meaning <computeroutput>Expected</computeroutput> can be constructed with <computeroutput>Type</computeroutput> as its value argument.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The target wrapper type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source type to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">W<sp/><sp/>=<sp/>wrapper&lt;int,<sp/>plain&gt;;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">WW<sp/>=<sp/>wrapper&lt;W,<sp/><sp/><sp/>plain&gt;;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/>compatible_with_part_of&lt;WW,<sp/>W&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!compatible_with_part_of&lt;W,<sp/><sp/>WW&gt;);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h" line="58" column="5"/>
+  </compounddef>
+</doxygen>

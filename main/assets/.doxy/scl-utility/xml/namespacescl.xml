@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacescl" kind="namespace" language="C++">
     <compoundname>scl</compoundname>
+    <innernamespace refid="namespacescl_1_1hash">scl::hash</innernamespace>
     <innernamespace refid="namespacescl_1_1preprocessor">scl::preprocessor</innernamespace>
     <sectiondef kind="typedef">
       <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>

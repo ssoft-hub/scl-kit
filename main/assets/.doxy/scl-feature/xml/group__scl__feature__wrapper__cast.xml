@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__wrapper__cast" kind="group">
+    <compoundname>scl_feature_wrapper_cast</compoundname>
+    <title>ScL Wrapper Cast</title>
+    <briefdescription>
+<para>Lazy-locking cast utility for wrapper and plain value references. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><computeroutput>scl::wrapper_cast()</computeroutput> returns a <computeroutput>wrapper_caster&lt;Refer&gt;</computeroutput> proxy that captures references to every executor in the wrapper chain without acquiring any guard. Guards are activated <bold>lazily</bold>, only at the moment the proxy is converted to the desired target type.</para>
+<para>This allows generic code to cast uniformly through wrapper chains: non-wrapper types are passed through as-is via a no-op overload. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

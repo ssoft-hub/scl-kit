@@ -315,10 +315,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_hqm_call_" class="md-nav__link">
+  <a href="#define-scl_hqm_call" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_HQM_CALL_
+        define SCL_HQM_CALL
       
     </span>
   </a>
@@ -326,10 +326,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-scl_hqm_same_" class="md-nav__link">
+  <a href="#define-scl_hqm_same" class="md-nav__link">
     <span class="md-ellipsis">
       
-        define SCL_HQM_SAME_
+        define SCL_HQM_SAME
       
     </span>
   </a>
@@ -377,24 +377,24 @@
 <tbody>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_has_qualified_method"><strong>SCL_HAS_QUALIFIED_METHOD</strong></a> (METHOD, TYPE, ...) <br><em>Compile-time predicate: checks whether</em> <code>TYPE</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>METHOD</code> <em>whose cv-ref qualifiers exactly match those of</em><code>TYPE</code> <em>.</em></td>
+<td style="text-align: left;"><a href="./#define-scl_has_qualified_method"><strong>SCL_HAS_QUALIFIED_METHOD</strong></a> (method, Type, ...) <br><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_hqm_call_"><strong>SCL_HQM_CALL_</strong></a> (METHOD, Q) <code>::std::declval&amp;lt;Obj Q&amp;gt;().METHOD(::std::declval&amp;lt;Args\_\_&amp;gt;()...)</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_hqm_call"><strong>SCL_HQM_CALL</strong></a> (method, quals) <code>::std::declval&amp;lt;Obj quals&amp;gt;().method(::std::declval&amp;lt;S\_c\_L\_Args\_&amp;gt;()...)</code><br></td>
 </tr>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_hqm_same_"><strong>SCL_HQM_SAME_</strong></a> (METHOD, Q1, Q2) <code>::std::is\_same\_v&amp;lt;decltype(SCL\_HQM\_CALL\_(METHOD, Q1)), decltype(SCL\_HQM\_CALL\_(METHOD, Q2))&amp;gt;</code><br></td>
+<td style="text-align: left;"><a href="./#define-scl_hqm_same"><strong>SCL_HQM_SAME</strong></a> (method, left_quals, right_quals) <code>::std::is\_same\_v&amp;lt;decltype(SCL\_HQM\_CALL(method, left\_quals)), decltype(SCL\_HQM\_CALL(method, right\_quals))&amp;gt;</code><br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
 <h3 id="define-scl_has_qualified_method">define SCL_HAS_QUALIFIED_METHOD</h3>
-<p><em>Compile-time predicate: checks whether</em> <code>TYPE</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>METHOD</code> <em>whose cv-ref qualifiers exactly match those of</em><code>TYPE</code> <em>.</em></p>
+<p><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></p>
 <pre><code class="language-C++">#define SCL_HAS_QUALIFIED_METHOD (
-    METHOD,
-    TYPE,
+    method,
+    Type,
     ...
 ) 
 </code></pre>
@@ -451,26 +451,26 @@ static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &amp;&amp;));
 </code></pre>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>METHOD</code> Unqualified method name (may contain <code>template</code> keyword for explicit template arguments). </li>
-<li><code>TYPE</code> A cv-ref qualified type, e.g. <code>const</code> MyClass &amp;. </li>
+<li><code>method</code> Unqualified method name (may contain <code>template</code> keyword for explicit template arguments). </li>
+<li><code>Type</code> A cv-ref qualified type, e.g. <code>const</code> MyClass &amp;. </li>
 <li><code>...</code> Parameter types for the method call (may be empty). </li>
 </ul>
 <hr>
 
-<h3 id="define-scl_hqm_call_">define SCL_HQM_CALL_</h3>
-<pre><code class="language-C++">#define SCL_HQM_CALL_ (
-    METHOD,
-    Q
-) `::std::declval&lt;Obj Q&gt;().METHOD(::std::declval&lt;Args__&gt;()...)`
+<h3 id="define-scl_hqm_call">define SCL_HQM_CALL</h3>
+<pre><code class="language-C++">#define SCL_HQM_CALL (
+    method,
+    quals
+) `::std::declval&lt;Obj quals&gt;().method(::std::declval&lt;S_c_L_Args_&gt;()...)`
 </code></pre>
 <hr>
 
-<h3 id="define-scl_hqm_same_">define SCL_HQM_SAME_</h3>
-<pre><code class="language-C++">#define SCL_HQM_SAME_ (
-    METHOD,
-    Q1,
-    Q2
-) `::std::is_same_v&lt;decltype(SCL_HQM_CALL_(METHOD, Q1)), decltype(SCL_HQM_CALL_(METHOD, Q2))&gt;`
+<h3 id="define-scl_hqm_same">define SCL_HQM_SAME</h3>
+<pre><code class="language-C++">#define SCL_HQM_SAME (
+    method,
+    left_quals,
+    right_quals
+) `::std::is_same_v&lt;decltype(SCL_HQM_CALL(method, left_quals)), decltype(SCL_HQM_CALL(method, right_quals))&gt;`
 </code></pre>
 <hr>
 

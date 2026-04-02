@@ -9,7 +9,15 @@ Here is a list of all files with brief descriptions:
         * **dir** [**src**](dir_ab13fdfb8e4c1ff98b437eee9f69d35c.md)     
             * **dir** [**scl**](dir_ca45970a26780365ec2accbdb8d8d4fe.md)     
                 * **dir** [**utility**](dir_76f6b7cf5a6cf438d50211f1abeeaae6.md)     
+                    * **file** [**hash.h**](hash_8h.md) _ScL non-cryptographic hash utilities._ 
                     * **file** [**meta.h**](meta_8h.md) _ScL meta infos for C++._ 
+                    * **dir** [**hash**](dir_cc128476db6d6d60652f2f6242c2398d.md)     
+                        * **file** [**djb2.h**](djb2_8h.md) _djb2a — Daniel J. Bernstein's hash (XOR variant), 64-bit._     
+                        * **file** [**fnv1a.h**](fnv1a_8h.md) _FNV-1a (Fowler-Noll-Vo, variant 1a) 64-bit hash algorithm._     
+                        * **file** [**jenkins\_ota.h**](jenkins__ota_8h.md) _Jenkins one-at-a-time (OTA) hash algorithm, 32-bit._     
+                        * **file** [**key.h**](key_8h.md) _Strongly-typed hash digest parameterized by a hash function._     
+                        * **file** [**sdbm.h**](sdbm_8h.md) _SDBM hash algorithm, 64-bit._     
+                        * **file** [**siphash.h**](siphash_8h.md) _SipHash-2-4: 64-bit keyed hash designed for string hashing in hash tables._     
                     * **dir** [**meta**](dir_85c7392cbdcb0ae852d6674ea46dde19.md)     
                         * **file** [**enum.h**](enum_8h.md) _Compile-time enumeration introspection utilities (C++20)._     
                         * **file** [**symbol.h**](symbol_8h.md) _Compile-time symbol (function, method, property) name extraction (C++20)._     

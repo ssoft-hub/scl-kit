@@ -5,6 +5,10 @@
 Here is a list of all modules:
 
 
+* [**ScL Hash Utilities**](group__scl__utility__hash.md) _Non-cryptographic compile-time hash functions and digest types._ 
+
+
+
 * [**ScL Meta Infos**](group__scl__utility__meta.md) _Meta-level utilities for C++._ 
     
 

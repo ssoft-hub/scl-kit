@@ -291,6 +291,139 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Types Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-value_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef value_lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef wrapper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper_caster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef wrapper_caster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper_guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef wrapper_guard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-wrapper_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typedef wrapper_lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-wrapper_cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function wrapper_cast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-wrapper_cast_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function wrapper_cast
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -310,6 +443,7 @@
 
 <h1 id="namespace-scl">Namespace scl</h1>
 <p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="./"><strong>scl</strong></a></p>
+<p><em>Root namespace of the ScL project.</em> </p>
 <h2 id="namespaces">Namespaces</h2>
 <table>
 <thead>
@@ -321,12 +455,104 @@
 <tbody>
 <tr>
 <td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <br></td>
+<td style="text-align: left;"><a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <br><em>Namespace of the ScL Feature module.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-types">Public Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">typedef ::scl::feature::detail::value_lock&lt; Refer, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>::scl::feature::is_wrapper_v</strong></a>&lt;::std::remove_cvref_t&lt; Refer &gt; &gt; ? ::scl::feature::detail::value_lock_case::wrapper :::scl::feature::detail::value_lock_case::value &gt;</td>
+<td style="text-align: left;"><a href="#typedef-value_lock"><strong>value_lock</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef ::std::conditional_t&lt; sizeof...(Executors)==0, typename ::scl::feature::detail::wrapper_fold&lt; Value, <a href="../classscl_1_1feature_1_1inplace_1_1plain/"><strong>::scl::feature::inplace::plain</strong></a> &gt;::type, typename ::scl::feature::detail::wrapper_fold&lt; Value, Executors... &gt;::type &gt;</td>
+<td style="text-align: left;"><a href="#typedef-wrapper"><strong>wrapper</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef ::scl::feature::detail::wrapper_caster&lt; Refer &gt;</td>
+<td style="text-align: left;"><a href="#typedef-wrapper_caster"><strong>wrapper_caster</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef ::scl::feature::detail::wrapper_guard&lt; Refer, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>::scl::feature::is_wrapper_v</strong></a>&lt;::std::remove_cvref_t&lt; Refer &gt; &gt; ? ::scl::feature::detail::wrapper_guard_case::wrapper :::scl::feature::detail::wrapper_guard_case::value &gt;</td>
+<td style="text-align: left;"><a href="#typedef-wrapper_guard"><strong>wrapper_guard</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef ::scl::feature::detail::wrapper_lock&lt; Refer, <a href="../group__scl__feature__type__traits/#variable-is_wrapper_v"><strong>::scl::feature::is_wrapper_v</strong></a>&lt;::std::remove_cvref_t&lt; Refer &gt; &gt; ? ::scl::feature::detail::wrapper_lock_case::wrapper :::scl::feature::detail::wrapper_lock_case::value &gt;</td>
+<td style="text-align: left;"><a href="#typedef-wrapper_lock"><strong>wrapper_lock</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">constexpr decltype(auto)</td>
+<td style="text-align: left;"><a href="#function-wrapper_cast"><strong>wrapper_cast</strong></a> (Wrapper &amp;&amp; w) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr decltype(auto)</td>
+<td style="text-align: left;"><a href="#function-wrapper_cast"><strong>wrapper_cast</strong></a> (Value &amp;&amp; v) noexcept<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types-documentation">Public Types Documentation</h2>
+<h3 id="typedef-value_lock">typedef value_lock</h3>
+<pre><code class="language-C++">using scl::value_lock = typedef ::scl::feature::detail::value_lock&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? ::scl::feature::detail::value_lock_case::wrapper : ::scl::feature::detail::value_lock_case::value&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapper">typedef wrapper</h3>
+<pre><code class="language-C++">using scl::wrapper = typedef ::std::conditional_t&lt;sizeof...(Executors) == 0, typename ::scl::feature::detail::wrapper_fold&lt;Value, ::scl::feature::inplace::plain&gt;::type, typename ::scl::feature::detail::wrapper_fold&lt;Value, Executors...&gt;::type&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapper_caster">typedef wrapper_caster</h3>
+<pre><code class="language-C++">using scl::wrapper_caster = typedef ::scl::feature::detail::wrapper_caster&lt;Refer&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapper_guard">typedef wrapper_guard</h3>
+<pre><code class="language-C++">using scl::wrapper_guard = typedef ::scl::feature::detail::wrapper_guard&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? ::scl::feature::detail::wrapper_guard_case::wrapper : ::scl::feature::detail::wrapper_guard_case::value&gt;;
+</code></pre>
+<hr>
+
+<h3 id="typedef-wrapper_lock">typedef wrapper_lock</h3>
+<pre><code class="language-C++">using scl::wrapper_lock = typedef ::scl::feature::detail::wrapper_lock&lt;Refer, ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt; &gt; ? ::scl::feature::detail::wrapper_lock_case::wrapper : ::scl::feature::detail::wrapper_lock_case::value&gt;;
+</code></pre>
+<hr>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-wrapper_cast">function wrapper_cast</h3>
+<pre><code class="language-C++">template&lt;typename Wrapper&gt;
+constexpr decltype(auto) scl::wrapper_cast (
+    Wrapper &amp;&amp; w
+) 
+</code></pre>
+<hr>
+
+<h3 id="function-wrapper_cast_1">function wrapper_cast</h3>
+<pre><code class="language-C++">template&lt;typename Value&gt;
+constexpr decltype(auto) scl::wrapper_cast (
+    Value &amp;&amp; v
+) noexcept
+</code></pre>
+<hr>
+
 <hr />
-<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/type_traits/executor.h</code></p>
+<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature.h</code></p>
 
 
 

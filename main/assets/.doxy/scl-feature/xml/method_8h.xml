@@ -54,50 +54,39 @@
       </node>
     </incdepgraph>
     <sectiondef kind="define">
-      <memberdef kind="define" id="method_8h_1a4755076b8d36106eae8a4d5cca97c2b2" prot="public" static="no">
-        <name>SCL_EXECUTOR_TYPE_</name>
-        <initializer>S_c_L_executor_type_</initializer>
+      <memberdef kind="define" id="method_8h_1a7f70bf8f117f86c10709529c46fa0eac" prot="public" static="no">
+        <name>SCL_VALUE_DECLVAL</name>
+        <param><defname>cv_ref</defname></param>
+        <initializer>    S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_ cv_ref&gt;())</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="48" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="48" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="53" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="53" bodyend="54"/>
       </memberdef>
-      <memberdef kind="define" id="method_8h_1a9e151f4d05fa867183fd7385488ddc32" prot="public" static="no">
-        <name>SCL_VALUE_DECLVAL_</name>
-        <param><defname>QUALIFIERS</defname></param>
-        <initializer>    SCL_EXECUTOR_TYPE_::value(::std::declval&lt;SCL_EXECUTOR_TYPE_ QUALIFIERS&gt;())</initializer>
+      <memberdef kind="define" id="method_8h_1a644978629452315a127e366d0199dace" prot="public" static="no">
+        <name>SCL_VALUE_ACCESS</name>
+        <param><defname>cv_ref</defname></param>
+        <initializer>    S_c_L_executor_type_::value(<ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">::scl::feature::executor_trait</ref>&lt;S_c_L_type_&gt;::executor( \
+        ::std::forward&lt;S_c_L_type_ cv_ref&gt;(*this)))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="57" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="57" bodyend="58"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="64" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="64" bodyend="66"/>
       </memberdef>
-      <memberdef kind="define" id="method_8h_1a633e2dc74e4a5cea4909f58bd39fab4d" prot="public" static="no">
-        <name>SCL_VALUE_ACCESS_</name>
-        <param><defname>QUALIFIERS</defname></param>
-        <initializer>    SCL_EXECUTOR_TYPE_::value(<ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">::scl::feature::executor_trait</ref>&lt;S_c_L_type_&gt;::executor( \
-        ::std::forward&lt;S_c_L_type_ QUALIFIERS&gt;(*this)))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="68" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="68" bodyend="70"/>
-      </memberdef>
-      <memberdef kind="define" id="method_8h_1a476e4840f12b584bdcedcb9ceb55da21" prot="public" static="no">
-        <name>SCL_REFLECT_METHOD_BASE_</name>
-        <param><defname>METHOD</defname></param>
-        <param><defname>QUALIFIERS</defname></param>
-        <initializer>    requires requires { SCL_VALUE_DECLVAL_(QUALIFIERS).METHOD(::std::declval&lt;A_r_g_s__&gt;()...); } &amp;&amp; \
-        METHOD##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL_(QUALIFIERS)), A_r_g_s__...&gt;               \
-    {                                                                                               \
-        return SCL_VALUE_ACCESS_(QUALIFIERS).METHOD(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);       \
+      <memberdef kind="define" id="method_8h_1ad4f647ae3b444f3dfbfdfe2495ebfdbc" prot="public" static="no">
+        <name>SCL_REFLECT_METHOD_BASE</name>
+        <param><defname>method</defname></param>
+        <param><defname>cv_ref</defname></param>
+        <initializer>    requires requires { SCL_VALUE_DECLVAL(cv_ref).method(::std::declval&lt;A_r_g_s__&gt;()...); } &amp;&amp; \
+        method##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL(cv_ref)), A_r_g_s__...&gt;               \
+    {                                                                                          \
+        return SCL_VALUE_ACCESS(cv_ref).method(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);       \
     }</initializer>
         <briefdescription>
         </briefdescription>
@@ -105,19 +94,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="74" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="74" bodyend="79"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="70" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="70" bodyend="75"/>
       </memberdef>
-      <memberdef kind="define" id="method_8h_1aef2c311e670283915183875607059a34" prot="public" static="no">
-        <name>SCL_REFLECT_TEMPLATE_METHOD_BASE_</name>
-        <param><defname>METHOD</defname></param>
+      <memberdef kind="define" id="method_8h_1a8f709c5e1202a4d13352c0e8006dbf62" prot="public" static="no">
+        <name>SCL_REFLECT_TEMPLATE_METHOD_BASE</name>
+        <param><defname>method</defname></param>
         <param><defname>CALLER</defname></param>
-        <param><defname>QUALIFIERS</defname></param>
-        <initializer>    requires requires {                                                                               \
-                 CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL_(QUALIFIERS), \
-                     ::std::declval&lt;A_r_g_s__&gt;()...);                                                 \
-             } {                                                                                      \
-        return CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS_(QUALIFIERS),    \
-            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                                 \
+        <param><defname>cv_ref</defname></param>
+        <initializer>    requires requires {                                                                          \
+                 CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL(cv_ref), \
+                     ::std::declval&lt;A_r_g_s__&gt;()...);                                            \
+             } {                                                                                 \
+        return CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS(cv_ref),    \
+            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                            \
     }</initializer>
         <briefdescription>
         </briefdescription>
@@ -125,53 +114,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="94" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="94" bodyend="101"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="90" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="90" bodyend="97"/>
       </memberdef>
-      <memberdef kind="define" id="method_8h_1addb1501e8a9fb6338f193d48db409230" prot="public" static="no">
-        <name>SCL_REFLECT_METHOD_HELPER_</name>
-        <param><defname>METHOD</defname></param>
+      <memberdef kind="define" id="method_8h_1acab591bd520aa48fe6c63c096dd7bdc6" prot="public" static="no">
+        <name>SCL_REFLECT_METHOD_HELPER</name>
+        <param><defname>method</defname></param>
         <param><defname>CALLER</defname></param>
-        <param><defname>QUALIFIERS</defname></param>
-        <initializer>    template &lt;typename... A_r_g_s__&gt;                                                                               \
-    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS SCL_REFLECT_METHOD_BASE_(METHOD,         \
-        SCL_FORWARD(QUALIFIERS)) template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt; \
-    constexpr decltype(auto) METHOD(A_r_g_s__ &amp;&amp;... a_r_g_s__) QUALIFIERS                                          \
-        SCL_REFLECT_TEMPLATE_METHOD_BASE_(SCL_FORWARD(METHOD), CALLER, SCL_FORWARD(QUALIFIERS))</initializer>
+        <param><defname>cv_ref</defname></param>
+        <initializer>    template &lt;typename... A_r_g_s__&gt;                                                                           \
+    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__) cv_ref SCL_REFLECT_METHOD_BASE(method,          \
+        SCL_FORWARD(cv_ref)) template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt; \
+    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__)                                                 \
+        cv_ref SCL_REFLECT_TEMPLATE_METHOD_BASE(SCL_FORWARD(method), CALLER, SCL_FORWARD(cv_ref))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="106" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="106" bodyend="111"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="102" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="102" bodyend="107"/>
       </memberdef>
-      <memberdef kind="define" id="method_8h_1a9405dee2e19e1262f22b870610d75ffe" prot="public" static="no">
+      <memberdef kind="define" id="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" prot="public" static="no">
         <name>SCL_REFLECT_METHOD</name>
-        <param><defname>METHOD</defname></param>
-        <initializer>    struct METHOD##_S_c_L_caller_                                                                               \
+        <param><defname>method</defname></param>
+        <initializer>    struct method##_S_c_L_caller_                                                                               \
     {                                                                                                           \
         template &lt;typename P_a_r_a_m___, typename... P_a_r_a_m_s___, typename O_b_j___, typename... A_r_g_s___&gt; \
         static constexpr auto call(O_b_j___ &amp;&amp; o_b_j___, A_r_g_s___ &amp;&amp;... a_r_g_s___)                           \
-            -&gt; decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(    \
+            -&gt; decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template method&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(    \
                 ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))                                                     \
         {                                                                                                       \
-            return ::std::forward&lt;O_b_j___&gt;(o_b_j___).template METHOD&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(         \
+            return ::std::forward&lt;O_b_j___&gt;(o_b_j___).template method&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(         \
                 ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);                                                     \
         }                                                                                                       \
     };                                                                                                          \
     template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                                                      \
-    static constexpr bool METHOD##_S_c_L_quals_ = <ref refid="has__qualified__method_8h_1acf5f2897e5d23b40a8a8f0e6b71781f8" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(SCL_FORWARD(METHOD),                 \
+    static constexpr bool method##_S_c_L_quals_ = <ref refid="has__qualified__method_8h_1affc992f5435cddcb5e4da82a61cf75e0" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(SCL_FORWARD(method),                 \
         S_c_L_V___, S_c_L_A___...);                                                                             \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;)                                  \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, &amp;&amp;)                                 \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;)                            \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const &amp;&amp;)                           \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;)                         \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, volatile &amp;&amp;)                        \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const volatile &amp;)                   \
-    SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD), METHOD##_S_c_L_caller_, const volatile &amp;&amp;)</initializer>
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;)                                   \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;&amp;)                                  \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;)                             \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;&amp;)                            \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;)                          \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;&amp;)                         \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const volatile &amp;)                    \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const volatile &amp;&amp;)</initializer>
         <briefdescription>
-<para>Generates proxy methods that reflect <computeroutput>METHOD</computeroutput> from the wrapped object through the executor, for all 8 cv-ref qualifier combinations. </para>
+<para>Generates proxy methods that reflect <computeroutput>method</computeroutput> from the wrapped object through the executor, for all 8 cv-ref qualifier combinations. </para>
         </briefdescription>
         <detaileddescription>
 <para>For each of the 8 cv-ref qualifiers (<computeroutput>&amp;</computeroutput>, <computeroutput>&amp;&amp;</computeroutput>, <computeroutput>const&amp;</computeroutput>, <computeroutput>const&amp;&amp;</computeroutput>, <computeroutput>volatile&amp;</computeroutput>, <computeroutput>volatile&amp;&amp;</computeroutput>, <computeroutput>const</computeroutput> <computeroutput>volatile&amp;</computeroutput>, <computeroutput>const</computeroutput> <computeroutput>volatile&amp;&amp;</computeroutput>) two overloads are generated:<itemizedlist>
@@ -184,7 +173,7 @@
 </simplesect>
 The wrapped value is then obtained by calling <computeroutput>Executor::value(executor_ref)</computeroutput>.</para>
 <para><simplesect kind="par"><title>Constraint — callability</title><para>Each overload is constrained by two <computeroutput>requires</computeroutput> clauses:<orderedlist>
-<listitem><para>The wrapped object&apos;s <computeroutput>METHOD</computeroutput> must be callable with the given arguments for the particular cv-ref qualification.</para>
+<listitem><para>The wrapped object&apos;s <computeroutput>method</computeroutput> must be callable with the given arguments for the particular cv-ref qualification.</para>
 </listitem><listitem><para><computeroutput>SCL_HAS_QUALIFIED_METHOD</computeroutput> must confirm that the wrapped object has a <bold>dedicated</bold> overload for that qualifier (not an implicit cv-widening fallback). This prevents, for example, a <computeroutput>const&amp;</computeroutput> proxy from being generated when only a mutable <computeroutput>&amp;</computeroutput> overload exists on the target.</para>
 </listitem></orderedlist>
 </para>
@@ -199,10 +188,10 @@ The wrapped value is then obtained by calling <computeroutput>Executor::value(ex
 <codeline><highlight class="normal">};</highlight></codeline>
 </programlisting></para>
 </simplesect>
-<simplesect kind="par"><title>Template methods</title><para>If <computeroutput>METHOD</computeroutput> is a template on the wrapped object (e.g. <computeroutput>template&lt;typename\</computeroutput> T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: <computeroutput>wrapper.convert&lt;double&gt;</computeroutput>().</para>
+<simplesect kind="par"><title>Template methods</title><para>If <computeroutput>method</computeroutput> is a template on the wrapped object (e.g. <computeroutput>template&lt;typename\</computeroutput> T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: <computeroutput>wrapper.convert&lt;double&gt;</computeroutput>().</para>
 </simplesect>
-Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_caller_</computeroutput>) generated inside the enclosing class. The struct wraps the <computeroutput></computeroutput>.template <computeroutput>METHOD&lt;</computeroutput>...&gt; call inside a static function template whose object parameter (<computeroutput>O_b_j___</computeroutput>) is dependent. This ensures that the <computeroutput>template</computeroutput> keyword appears only in a <bold>dependent</bold> context, so the compiler defers name lookup to instantiation time. Without this indirection, <computeroutput></computeroutput>.template <computeroutput>foo&lt;</computeroutput>...&gt; on a <bold>non-dependent</bold> type where <computeroutput>foo</computeroutput> is not a template would be a hard parse error (not SFINAE), even inside a <computeroutput>requires</computeroutput> expression.</para>
-<para>When <computeroutput>METHOD</computeroutput> is <bold>not</bold> a template, the helper struct&apos;s <computeroutput>call</computeroutput> function fails to instantiate (SFINAE via trailing return type), the <computeroutput>requires</computeroutput> clause evaluates to <computeroutput>false</computeroutput>, and the explicit-template-args overload is silently discarded.</para>
+Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_caller_</computeroutput>) generated inside the enclosing class. The struct wraps the <computeroutput></computeroutput>.template <computeroutput>method&lt;</computeroutput>...&gt; call inside a static function template whose object parameter (<computeroutput>O_b_j___</computeroutput>) is dependent. This ensures that the <computeroutput>template</computeroutput> keyword appears only in a <bold>dependent</bold> context, so the compiler defers name lookup to instantiation time. Without this indirection, <computeroutput></computeroutput>.template <computeroutput>foo&lt;</computeroutput>...&gt; on a <bold>non-dependent</bold> type where <computeroutput>foo</computeroutput> is not a template would be a hard parse error (not SFINAE), even inside a <computeroutput>requires</computeroutput> expression.</para>
+<para>When <computeroutput>method</computeroutput> is <bold>not</bold> a template, the helper struct&apos;s <computeroutput>call</computeroutput> function fails to instantiate (SFINAE via trailing return type), the <computeroutput>requires</computeroutput> clause evaluates to <computeroutput>false</computeroutput>, and the explicit-template-args overload is silently discarded.</para>
 <para><simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Target<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>get()<sp/>&amp;;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>get()<sp/>const<sp/>&amp;;</highlight></codeline>
@@ -214,19 +203,19 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">struct<sp/>MyWrapper;</highlight></codeline>
 <codeline><highlight class="normal">template<sp/>&lt;&gt;</highlight></codeline>
-<codeline><highlight class="normal">struct<sp/>scl::feature::executor_trait&lt;MyWrapper&gt;<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/><ref refid="namespacescl" kindref="compound">scl</ref>::feature::executor_trait&lt;MyWrapper&gt;<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Self&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/>executor(Self<sp/>&amp;&amp;<sp/>self)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>return<sp/>::scl::forward_like&lt;Self&gt;(self.m_executor);<sp/>}</highlight></codeline>
 <codeline><highlight class="normal">};</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyWrapper<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>::scl::feature::inplace::plain&lt;Target&gt;<sp/>m_executor;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_executor);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">::scl::feature::inplace::plain&lt;Target&gt;</ref><sp/>m_executor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_executor);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/>MyWrapper(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>:<sp/>m_executor{v}<sp/>{}</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" kindref="member">SCL_REFLECT_METHOD</ref>(get)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16<sp/>overloads,<sp/>constrained<sp/>to<sp/>&amp;,<sp/>const&amp;,<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" kindref="member">SCL_REFLECT_METHOD</ref>(convert)<sp/><sp/></highlight><highlight class="comment">//<sp/>16<sp/>overloads,<sp/>only<sp/>const&amp;<sp/>survives<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD</ref>(get)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16<sp/>overloads,<sp/>constrained<sp/>to<sp/>&amp;,<sp/>const&amp;,<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD</ref>(convert)<sp/><sp/></highlight><highlight class="comment">//<sp/>16<sp/>overloads,<sp/>only<sp/>const&amp;<sp/>survives<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">MyWrapper<sp/>w{42};</highlight></codeline>
@@ -242,14 +231,14 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>METHOD</parametername>
+<parametername>method</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Unqualified method name (plain identifier).</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kindref="member">SCL_REFLECT_TYPE</ref> </para>
+<simplesect kind="see"><para><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE</ref> </para>
 </simplesect>
 <simplesect kind="see"><para><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref> </para>
 </simplesect>
@@ -257,7 +246,7 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/method.h" line="227" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="227" bodyend="249"/>
+        <location file="module/feature/src/scl/feature/reflection/method.h" line="223" column="9" bodyfile="module/feature/src/scl/feature/reflection/method.h" bodystart="223" bodyend="245"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -267,7 +256,7 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
 <para>Provides macros to automatically generate proxy methods that forward calls from a wrapper class to the held object through an executor, preserving cv-ref qualifiers exactly.</para>
 <para>The executor is located at runtime via <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput>, which must be specialized for each wrapper type.</para>
 <para><simplesect kind="par"><title>Requirements on the enclosing class</title><para><orderedlist>
-<listitem><para>Declare the wrapper type with <computeroutput><ref refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kindref="member">SCL_REFLECT_TYPE(Type,Member)</ref></computeroutput> (after the executor member declaration).</para>
+<listitem><para>Declare the wrapper type with <computeroutput><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE(Type,Member)</ref></computeroutput> (after the executor member declaration).</para>
 </listitem><listitem><para>Specialize <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput> for the wrapper type.</para>
 </listitem><listitem><para>The executor type must provide a static <computeroutput>value(exec)</computeroutput> method that returns a reference to the wrapped object.</para>
 </listitem></orderedlist>
@@ -275,17 +264,17 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
 </simplesect>
 <simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyWrapper;</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref>&lt;MyWrapper&gt;<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref>&lt;<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">MyWrapper</ref>&gt;<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Self&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/>executor(Self<sp/>&amp;&amp;<sp/>self)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>return<sp/>::scl::forward_like&lt;Self&gt;(self.m_exec);<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/>executor(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">Self</ref><sp/>&amp;&amp;<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">self</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>return<sp/>::scl::forward_like&lt;Self&gt;(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">self</ref>.m_exec);<sp/>}</highlight></codeline>
 <codeline><highlight class="normal">};</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyWrapper<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Executor<sp/>m_exec;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1a0cb24551273b34e0ec3df47dd35020ab" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_exec);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_exec);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" kindref="member">SCL_REFLECT_METHOD</ref>(foo)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" kindref="member">SCL_REFLECT_METHOD</ref>(bar)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD</ref>(foo)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD</ref>(bar)</highlight></codeline>
 <codeline><highlight class="normal">};</highlight></codeline>
 </programlisting> </para>
 </simplesect>
@@ -303,61 +292,59 @@ Internally this is handled by a helper struct (<computeroutput>METHOD_S_c_L_call
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor">#define<sp/>SCL_EXECUTOR_TYPE_<sp/>S_c_L_executor_type_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="preprocessor">#define<sp/>SCL_VALUE_DECLVAL_(QUALIFIERS)<sp/>\</highlight></codeline>
-<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_EXECUTOR_TYPE_::value(::std::declval&lt;SCL_EXECUTOR_TYPE_<sp/>QUALIFIERS&gt;())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="preprocessor">#define<sp/>SCL_VALUE_ACCESS_(QUALIFIERS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_EXECUTOR_TYPE_::value(::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor(<sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;S_c_L_type_<sp/>QUALIFIERS&gt;(*this)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD_BASE_(METHOD,<sp/>QUALIFIERS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>requires<sp/>requires<sp/>{<sp/>SCL_VALUE_DECLVAL_(QUALIFIERS).METHOD(::std::declval&lt;A_r_g_s__&gt;()...);<sp/>}<sp/>&amp;&amp;<sp/>\</highlight></codeline>
-<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>METHOD##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL_(QUALIFIERS)),<sp/>A_r_g_s__...&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>SCL_VALUE_ACCESS_(QUALIFIERS).METHOD(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_TEMPLATE_METHOD_BASE_(METHOD,<sp/>CALLER,<sp/>QUALIFIERS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>requires<sp/>requires<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CALLER::template<sp/>call&lt;P_a_r_a_m__,<sp/>P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL_(QUALIFIERS),<sp/>\</highlight></codeline>
-<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::declval&lt;A_r_g_s__&gt;()...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>CALLER::template<sp/>call&lt;P_a_r_a_m__,<sp/>P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS_(QUALIFIERS),<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD_HELPER_(METHOD,<sp/>CALLER,<sp/>QUALIFIERS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>A_r_g_s__&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>METHOD(A_r_g_s__<sp/>&amp;&amp;...<sp/>a_r_g_s__)<sp/>QUALIFIERS<sp/>SCL_REFLECT_METHOD_BASE_(METHOD,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(QUALIFIERS))<sp/>template<sp/>&lt;typename<sp/>P_a_r_a_m__,<sp/>typename...<sp/>P_a_r_a_m_s__,<sp/>typename...<sp/>A_r_g_s__&gt;<sp/>\</highlight></codeline>
-<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>METHOD(A_r_g_s__<sp/>&amp;&amp;...<sp/>a_r_g_s__)<sp/>QUALIFIERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_REFLECT_TEMPLATE_METHOD_BASE_(SCL_FORWARD(METHOD),<sp/>CALLER,<sp/>SCL_FORWARD(QUALIFIERS))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227" refid="method_8h_1a9405dee2e19e1262f22b870610d75ffe" refkind="member"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD(METHOD)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>struct<sp/>METHOD##_S_c_L_caller_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>P_a_r_a_m___,<sp/>typename...<sp/>P_a_r_a_m_s___,<sp/>typename<sp/>O_b_j___,<sp/>typename...<sp/>A_r_g_s___&gt;<sp/>\</highlight></codeline>
-<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>auto<sp/>call(O_b_j___<sp/>&amp;&amp;<sp/>o_b_j___,<sp/>A_r_g_s___<sp/>&amp;&amp;...<sp/>a_r_g_s___)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template<sp/>METHOD&lt;P_a_r_a_m___,<sp/>P_a_r_a_m_s___...&gt;(<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="234"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::std::forward&lt;O_b_j___&gt;(o_b_j___).template<sp/>METHOD&lt;P_a_r_a_m___,<sp/>P_a_r_a_m_s___...&gt;(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>S_c_L_V___,<sp/>typename...<sp/>S_c_L_A___&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>bool<sp/>METHOD##_S_c_L_quals_<sp/>=<sp/>SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(METHOD),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>S_c_L_V___,<sp/>S_c_L_A___...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="248"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>const<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="249"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER_(SCL_FORWARD(METHOD),<sp/>METHOD##_S_c_L_caller_,<sp/>const<sp/>volatile<sp/>&amp;&amp;)</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#define<sp/>SCL_VALUE_DECLVAL(cv_ref)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_<sp/>cv_ref&gt;())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor">#define<sp/>SCL_VALUE_ACCESS(cv_ref)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>S_c_L_executor_type_::value(::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor(<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;S_c_L_type_<sp/>cv_ref&gt;(*this)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD_BASE(method,<sp/>cv_ref)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>requires<sp/>requires<sp/>{<sp/>SCL_VALUE_DECLVAL(cv_ref).method(::std::declval&lt;A_r_g_s__&gt;()...);<sp/>}<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL(cv_ref)),<sp/>A_r_g_s__...&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>SCL_VALUE_ACCESS(cv_ref).method(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_TEMPLATE_METHOD_BASE(method,<sp/>CALLER,<sp/>cv_ref)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>requires<sp/>requires<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CALLER::template<sp/>call&lt;P_a_r_a_m__,<sp/>P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL(cv_ref),<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::declval&lt;A_r_g_s__&gt;()...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>CALLER::template<sp/>call&lt;P_a_r_a_m__,<sp/>P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS(cv_ref),<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD_HELPER(method,<sp/>CALLER,<sp/>cv_ref)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>A_r_g_s__&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>method(A_r_g_s__<sp/>&amp;&amp;...<sp/>a_r_g_s__)<sp/>cv_ref<sp/>SCL_REFLECT_METHOD_BASE(method,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_FORWARD(cv_ref))<sp/>template<sp/>&lt;typename<sp/>P_a_r_a_m__,<sp/>typename...<sp/>P_a_r_a_m_s__,<sp/>typename...<sp/>A_r_g_s__&gt;<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>decltype(auto)<sp/>method(A_r_g_s__<sp/>&amp;&amp;...<sp/>a_r_g_s__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv_ref<sp/>SCL_REFLECT_TEMPLATE_METHOD_BASE(SCL_FORWARD(method),<sp/>CALLER,<sp/>SCL_FORWARD(cv_ref))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" refkind="member"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_METHOD(method)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>struct<sp/>method##_S_c_L_caller_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="225"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>P_a_r_a_m___,<sp/>typename...<sp/>P_a_r_a_m_s___,<sp/>typename<sp/>O_b_j___,<sp/>typename...<sp/>A_r_g_s___&gt;<sp/>\</highlight></codeline>
+<codeline lineno="227"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>auto<sp/>call(O_b_j___<sp/>&amp;&amp;<sp/>o_b_j___,<sp/>A_r_g_s___<sp/>&amp;&amp;...<sp/>a_r_g_s___)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template<sp/>method&lt;P_a_r_a_m___,<sp/>P_a_r_a_m_s___...&gt;(<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::std::forward&lt;O_b_j___&gt;(o_b_j___).template<sp/>method&lt;P_a_r_a_m___,<sp/>P_a_r_a_m_s___...&gt;(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="234"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>S_c_L_V___,<sp/>typename...<sp/>S_c_L_A___&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>bool<sp/>method##_S_c_L_quals_<sp/>=<sp/>SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(method),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>S_c_L_V___,<sp/>S_c_L_A___...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>const<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>const<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>volatile<sp/>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>const<sp/>volatile<sp/>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method),<sp/>method##_S_c_L_caller_,<sp/>const<sp/>volatile<sp/>&amp;&amp;)</highlight></codeline>
     </programlisting>
     <location file="module/feature/src/scl/feature/reflection/method.h"/>
   </compounddef>

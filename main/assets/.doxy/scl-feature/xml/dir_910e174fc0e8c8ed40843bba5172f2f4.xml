@@ -4,6 +4,7 @@
     <compoundname>module/feature/src/scl/feature/type_traits</compoundname>
     <innerfile refid="executor_8h">executor.h</innerfile>
     <innerfile refid="has__qualified__method_8h">has_qualified_method.h</innerfile>
+    <innerfile refid="type__traits_2wrapper_8h">wrapper.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

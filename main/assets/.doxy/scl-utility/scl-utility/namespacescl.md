@@ -27,6 +27,7 @@ _Root namespace of ScL project._
 
 | Type | Name |
 | ---: | :--- |
+| namespace | [**hash**](namespacescl_1_1hash.md) <br> |
 | namespace | [**preprocessor**](namespacescl_1_1preprocessor.md) <br> |
 
 

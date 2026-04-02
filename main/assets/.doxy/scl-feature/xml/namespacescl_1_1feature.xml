@@ -3,10 +3,19 @@
   <compounddef id="namespacescl_1_1feature" kind="namespace" language="C++">
     <compoundname>scl::feature</compoundname>
     <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
+    <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
+    <sectiondef kind="var">
+      <member refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kind="variable"><name>is_wrapper_v</name></member>
+      <member refid="group__scl__feature__type__traits_1gaaf37d54661f1f79920b8d49f84211649" kind="variable"><name>is_compatible_with_v</name></member>
+      <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
+      <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
+    </sectiondef>
     <briefdescription>
+<para>Namespace of the ScL Feature module. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="22" column="1"/>
+    <location file="module/feature/src/scl/feature.h" line="22" column="1"/>
   </compounddef>
 </doxygen>

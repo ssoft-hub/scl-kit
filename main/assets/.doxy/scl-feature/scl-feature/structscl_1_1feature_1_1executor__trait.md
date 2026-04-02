@@ -2,11 +2,11 @@
 
 # Struct scl::feature::executor\_trait
 
-**template &lt;typename T&gt;**
+**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**T**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;**
 
 
 
-[**ClassList**](annotated.md) **>** [**scl**](namespacescl.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**executor\_trait**](structscl_1_1feature_1_1executor__trait.md)
+[**ClassList**](annotated.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**executor\_trait**](structscl_1_1feature_1_1executor__trait.md)
 
 
 

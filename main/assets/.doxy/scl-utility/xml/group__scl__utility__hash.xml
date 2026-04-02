@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__utility__hash" kind="group">
+    <compoundname>scl_utility_hash</compoundname>
+    <title>ScL Hash Utilities</title>
+    <briefdescription>
+<para>Non-cryptographic compile-time hash functions and digest types. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -80,9 +80,9 @@ _Compile-time predicate macro for cv-ref qualifier detection._
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**SCL\_HAS\_QUALIFIED\_METHOD**](has__qualified__method_8h.md#define-scl_has_qualified_method) (METHOD, TYPE, ...) <br>_Compile-time predicate: checks whether_ `TYPE` _has a_**dedicated** _overload of_`METHOD` _whose cv-ref qualifiers exactly match those of_`TYPE` _._ |
-| define  | [**SCL\_HQM\_CALL\_**](has__qualified__method_8h.md#define-scl_hqm_call_) (METHOD, Q) `::std::declval&lt;Obj Q&gt;().METHOD(::std::declval&lt;Args\_\_&gt;()...)`<br> |
-| define  | [**SCL\_HQM\_SAME\_**](has__qualified__method_8h.md#define-scl_hqm_same_) (METHOD, Q1, Q2) `::std::is\_same\_v&lt;decltype(SCL\_HQM\_CALL\_(METHOD, Q1)), decltype(SCL\_HQM\_CALL\_(METHOD, Q2))&gt;`<br> |
+| define  | [**SCL\_HAS\_QUALIFIED\_METHOD**](has__qualified__method_8h.md#define-scl_has_qualified_method) (method, Type, ...) <br>_Compile-time predicate: checks whether_ `Type` _has a_**dedicated** _overload of_`method` _whose cv-ref qualifiers exactly match those of_`Type` _._ |
+| define  | [**SCL\_HQM\_CALL**](has__qualified__method_8h.md#define-scl_hqm_call) (method, quals) `::std::declval&lt;Obj quals&gt;().method(::std::declval&lt;S\_c\_L\_Args\_&gt;()...)`<br> |
+| define  | [**SCL\_HQM\_SAME**](has__qualified__method_8h.md#define-scl_hqm_same) (method, left\_quals, right\_quals) `::std::is\_same\_v&lt;decltype(SCL\_HQM\_CALL(method, left\_quals)), decltype(SCL\_HQM\_CALL(method, right\_quals))&gt;`<br> |
 
 ## Macro Definition Documentation
 
@@ -92,11 +92,11 @@ _Compile-time predicate macro for cv-ref qualifier detection._
 
 ### define SCL\_HAS\_QUALIFIED\_METHOD 
 
-_Compile-time predicate: checks whether_ `TYPE` _has a_**dedicated** _overload of_`METHOD` _whose cv-ref qualifiers exactly match those of_`TYPE` _._
+_Compile-time predicate: checks whether_ `Type` _has a_**dedicated** _overload of_`method` _whose cv-ref qualifiers exactly match those of_`Type` _._
 ```C++
 #define SCL_HAS_QUALIFIED_METHOD (
-    METHOD,
-    TYPE,
+    method,
+    Type,
     ...
 ) 
 ```
@@ -205,8 +205,8 @@ static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &&));
 **Parameters:**
 
 
-* `METHOD` Unqualified method name (may contain `template` keyword for explicit template arguments). 
-* `TYPE` A cv-ref qualified type, e.g. `const` MyClass &. 
+* `method` Unqualified method name (may contain `template` keyword for explicit template arguments). 
+* `Type` A cv-ref qualified type, e.g. `const` MyClass &. 
 * `...` Parameter types for the method call (may be empty). 
 
 
@@ -218,13 +218,13 @@ static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &&));
 
 
 
-### define SCL\_HQM\_CALL\_ 
+### define SCL\_HQM\_CALL 
 
 ```C++
-#define SCL_HQM_CALL_ (
-    METHOD,
-    Q
-) `::std::declval<Obj Q>().METHOD(::std::declval<Args__>()...)`
+#define SCL_HQM_CALL (
+    method,
+    quals
+) `::std::declval<Obj quals>().method(::std::declval<S_c_L_Args_>()...)`
 ```
 
 
@@ -234,14 +234,14 @@ static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &&));
 
 
 
-### define SCL\_HQM\_SAME\_ 
+### define SCL\_HQM\_SAME 
 
 ```C++
-#define SCL_HQM_SAME_ (
-    METHOD,
-    Q1,
-    Q2
-) `::std::is_same_v<decltype(SCL_HQM_CALL_(METHOD, Q1)), decltype(SCL_HQM_CALL_(METHOD, Q2))>`
+#define SCL_HQM_SAME (
+    method,
+    left_quals,
+    right_quals
+) `::std::is_same_v<decltype(SCL_HQM_CALL(method, left_quals)), decltype(SCL_HQM_CALL(method, right_quals))>`
 ```
 
 

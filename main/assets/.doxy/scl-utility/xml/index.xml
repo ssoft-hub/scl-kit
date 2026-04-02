@@ -1,6 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structscl_1_1hash_1_1djb2__hasher" kind="struct"><name>scl::hash::djb2_hasher</name>
+    <member refid="structscl_1_1hash_1_1djb2__hasher_1aa261776e4ef47334a60bcfb8c2dc64f5" kind="typedef"><name>result_type</name></member>
+    <member refid="structscl_1_1hash_1_1djb2__hasher_1a42ef6f3f94f45f123ff9bbe8e73d9017" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1fnv1a__hasher" kind="struct"><name>scl::hash::fnv1a_hasher</name>
+    <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a3a0bee0e7a75155fa26caac74de1e04e" kind="typedef"><name>result_type</name></member>
+    <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a3c816ba7e87d79e38e134ea0751a9d2c" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" kind="struct"><name>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</name>
+    <member refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1jenkins__ota__hasher" kind="struct"><name>scl::hash::jenkins_ota_hasher</name>
+    <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1aab1a29620eeb1632b54c4994d2aeca95" kind="typedef"><name>result_type</name></member>
+    <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1af14a30e5082be2095bf981fd99390b22" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1key" kind="struct"><name>scl::hash::key</name>
+    <member refid="structscl_1_1hash_1_1key_1a1b3c9595487df01e24a494da09ed1c13" kind="typedef"><name>hasher_type</name></member>
+    <member refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kind="typedef"><name>value_type</name></member>
+    <member refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kind="variable"><name>value</name></member>
+    <member refid="structscl_1_1hash_1_1key_1afc6110964513f363a9f2ba1315647010" kind="function"><name>key</name></member>
+    <member refid="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" kind="function"><name>operator value_type</name></member>
+    <member refid="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" kind="friend"><name>operator&lt;=&gt;</name></member>
+  </compound>
   <compound refid="structp8qim3n2a__t" kind="struct"><name>p8qim3n2a_t</name>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1sdbm__hasher" kind="struct"><name>scl::hash::sdbm_hasher</name>
+    <member refid="structscl_1_1hash_1_1sdbm__hasher_1a2f9e63aef90cd412d9b08df22449ef4d" kind="typedef"><name>result_type</name></member>
+    <member refid="structscl_1_1hash_1_1sdbm__hasher_1af5b312d289c657b77df6a7dcda3d7770" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1siphash__hasher" kind="struct"><name>scl::hash::siphash_hasher</name>
+    <member refid="structscl_1_1hash_1_1siphash__hasher_1a4d627afc36f451e38261077afceae2fc" kind="typedef"><name>result_type</name></member>
+    <member refid="structscl_1_1hash_1_1siphash__hasher_1a8b520cff19f3ed4ea569c57b3d2cdf39" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structscl_1_1hash_1_1siphash__key" kind="struct"><name>scl::hash::siphash_key</name>
+    <member refid="structscl_1_1hash_1_1siphash__key_1ae4c4f18c636557c82de76eeec4725c68" kind="variable"><name>k0</name></member>
+    <member refid="structscl_1_1hash_1_1siphash__key_1a3730dc9270acc26008ec8a500b608ad4" kind="variable"><name>k1</name></member>
+  </compound>
+  <compound refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher" kind="concept"><name>scl::hash::concepts::byte_hasher</name>
   </compound>
   <compound refid="namespacescl" kind="namespace"><name>scl</name>
     <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
@@ -31,9 +68,35 @@
     <member refid="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" kind="function"><name>type_short_name</name></member>
     <member refid="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
   </compound>
+  <compound refid="namespacescl_1_1hash" kind="namespace"><name>scl::hash</name>
+    <member refid="siphash_8h_1ab979dd272fd5c019680e8693a53609d8" kind="variable"><name>siphash_default_key</name></member>
+    <member refid="djb2_8h_1ae8f95b7858017fb3f828eaf71bec5929" kind="function"><name>djb2</name></member>
+    <member refid="fnv1a_8h_1a0aa9ebec86f43231c4afa4f28f614b7c" kind="function"><name>fnv1a</name></member>
+    <member refid="jenkins__ota_8h_1a819caefdd73be259038eaacf3b2fb1ab" kind="function"><name>jenkins_ota</name></member>
+    <member refid="sdbm_8h_1ac49961f320741e81b44da462386bfce3" kind="function"><name>sdbm</name></member>
+    <member refid="siphash_8h_1a792b21598016c4400a9c5d930a5082e8" kind="function"><name>siphash</name></member>
+  </compound>
+  <compound refid="namespacescl_1_1hash_1_1concepts" kind="namespace"><name>scl::hash::concepts</name>
+  </compound>
   <compound refid="namespacescl_1_1preprocessor" kind="namespace"><name>scl::preprocessor</name>
   </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
   <compound refid="utility_8h" kind="file"><name>utility.h</name>
+  </compound>
+  <compound refid="hash_8h" kind="file"><name>hash.h</name>
+  </compound>
+  <compound refid="djb2_8h" kind="file"><name>djb2.h</name>
+  </compound>
+  <compound refid="fnv1a_8h" kind="file"><name>fnv1a.h</name>
+  </compound>
+  <compound refid="jenkins__ota_8h" kind="file"><name>jenkins_ota.h</name>
+  </compound>
+  <compound refid="key_8h" kind="file"><name>key.h</name>
+  </compound>
+  <compound refid="sdbm_8h" kind="file"><name>sdbm.h</name>
+  </compound>
+  <compound refid="siphash_8h" kind="file"><name>siphash.h</name>
   </compound>
   <compound refid="meta_8h" kind="file"><name>meta.h</name>
   </compound>
@@ -79,6 +142,8 @@
   </compound>
   <compound refid="overload__cast_8h" kind="file"><name>overload_cast.h</name>
   </compound>
+  <compound refid="group__scl__utility__hash" kind="group"><name>scl_utility_hash</name>
+  </compound>
   <compound refid="group__scl__utility__meta" kind="group"><name>scl_utility_meta</name>
     <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
     <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
@@ -112,6 +177,8 @@
     <member refid="group__scl__utility__type__traits_1gaf16fc9819f8128b3998f11ea9de989b3" kind="define"><name>SCL_METHOD_DETECTION</name></member>
   </compound>
   <compound refid="dir_7ae4f81ae30c9db8975b98cdcb7060a6" kind="dir"><name>module/utility/src/scl/utility/type_traits/detection</name>
+  </compound>
+  <compound refid="dir_cc128476db6d6d60652f2f6242c2398d" kind="dir"><name>module/utility/src/scl/utility/hash</name>
   </compound>
   <compound refid="dir_85c7392cbdcb0ae852d6674ea46dde19" kind="dir"><name>module/utility/src/scl/utility/meta</name>
   </compound>
