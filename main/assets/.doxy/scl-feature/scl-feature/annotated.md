@@ -11,4 +11,5 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **namespace** [**inplace**](namespacescl_1_1feature_1_1inplace.md)     
             * **class** [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md) _Executor that proxies calls directly to the held value with no overhead._     
             * **class** [**uninitialized**](classscl_1_1feature_1_1inplace_1_1uninitialized.md) _Executor that holds_ `Value` _in uninitialized aligned storage._    
+* **namespace** [**std**](namespacestd.md) 
 

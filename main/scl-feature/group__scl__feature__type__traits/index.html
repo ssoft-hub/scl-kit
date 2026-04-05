@@ -315,6 +315,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#variable-has_execute_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_execute_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_guard_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_guard_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_unguard_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_unguard_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_value_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_value_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variable-is_compatible_with_part_of_v" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -337,10 +381,54 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variable-is_convertible_from_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_convertible_from_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_executor_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_executor_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_guard_noexcept_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_guard_noexcept_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variable-is_part_compatible_with_v" class="md-nav__link">
     <span class="md-ellipsis">
       
         variable is_part_compatible_with_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_unguard_noexcept_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_unguard_noexcept_v
       
     </span>
   </a>
@@ -394,7 +482,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">struct</td>
-<td style="text-align: left;"><a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> &lt;<a href="./#variable-is_wrapper_v"><strong>typename</strong></a> <a href="./#variable-is_wrapper_v"><strong>T</strong></a>&gt;<br><em>Trait that provides access to the executor inside a wrapper.</em></td>
+<td style="text-align: left;"><a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> &lt;<a href="./#variable-is_executor_v"><strong>typename</strong></a> <a href="./#variable-is_executor_v"><strong>T</strong></a>&gt;<br><em>Trait that provides access to the executor inside a wrapper.</em></td>
 </tr>
 </tbody>
 </table>
@@ -409,6 +497,22 @@
 <tbody>
 <tr>
 <td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_execute_v"><strong>has_execute_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>execute()</code> <em>method whose first parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_guard_v"><strong>has_guard_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>guard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_unguard_v"><strong>has_unguard_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>unguard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_value_v"><strong>has_value_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>value()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
 <td style="text-align: left;"><a href="#variable-is_compatible_with_part_of_v"><strong>is_compatible_with_part_of_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></td>
 </tr>
 <tr>
@@ -417,7 +521,23 @@
 </tr>
 <tr>
 <td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_convertible_from_v"><strong>is_convertible_from_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Target</code> <em>is convertible from</em><code>Refer</code> <em>directly or through any level of the wrapper chain.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_executor_v"><strong>is_executor_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>Type</code> <em>satisfies the executor interface.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_guard_noexcept_v"><strong>is_guard_noexcept_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType::guard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
 <td style="text-align: left;"><a href="#variable-is_part_compatible_with_v"><strong>is_part_compatible_with_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_unguard_noexcept_v"><strong>is_unguard_noexcept_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType::unguard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">constexpr bool</td>
@@ -426,11 +546,61 @@
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-has_execute_v">variable has_execute_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>execute()</code> <em>method whose first parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_execute_v;
+</code></pre>
+<p>The callable parameter is probed as <code>void(*&amp;)</code>() (lvalue-reference to function pointer) so that template argument deduction for <code>Func&amp;&amp;</code> collapses to an lvalue reference and the cast target type matches exactly. This enforces exact matching on the executor argument while remaining compatible with the universal-reference callable parameter required by the executor interface.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_guard_v">variable has_guard_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>guard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_guard_v;
+</code></pre>
+<p>Detection uses a function-pointer cast, which enforces exact parameter matching — both template (via deduction from cast target) and non-template overloads are supported, but implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) are rejected.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_unguard_v">variable has_unguard_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>unguard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_unguard_v;
+</code></pre>
+<p>Detection uses a function-pointer cast, which enforces exact parameter matching — both template (via deduction from cast target) and non-template overloads are supported, but implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) are rejected.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type.  </li>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_value_v">variable has_value_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>value()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_value_v;
+</code></pre>
+<p>Detection uses a function-pointer cast: the return type is deduced from a trial call, then <code>&amp;ExecutorType::value</code> is cast to that exact pointer type. This rejects implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) while correctly handling both template and non-template overloads.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
 <h3 id="variable-is_compatible_with_part_of_v">variable is_compatible_with_part_of_v</h3>
 <p><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></p>
 <pre><code>constexpr bool scl::feature::is_compatible_with_part_of_v;
 </code></pre>
-<p>Peels layers off <code>Expected</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Test</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-qualifiers are stripped from both arguments before the check.</p>
+<p>Peels layers off <code>Expected</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Test</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>Expected</code> Outer wrapper whose contents are inspected. </li>
@@ -452,7 +622,7 @@ static_assert(!is_compatible_with_part_of_v&lt;W, int&gt;);   // Test not a wrap
 <p><em>Checks whether</em> <code>Test</code> <em>is compatible with (usable in place of)</em><code>Expected</code> <em>.</em></p>
 <pre><code>constexpr bool scl::feature::is_compatible_with_v;
 </code></pre>
-<p>For non-wrapper types the check is: <code>Test</code> is the same type as <code>Expected</code>, or <code>Test</code> is publicly derived from <code>Expected</code>. For <code>wrapper</code> specializations that share the same template-template argument the check is applied recursively to their value types. cv-qualifiers are stripped from both arguments before the check.</p>
+<p>For non-wrapper types the check is: <code>Test</code> is the same type as <code>Expected</code>, or <code>Test</code> is publicly derived from <code>Expected</code>. For <code>wrapper</code> specializations that share the same template-template argument the check is applied recursively to their value types. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>Expected</code> Target type. </li>
@@ -462,19 +632,79 @@ static_assert(!is_compatible_with_part_of_v&lt;W, int&gt;);   // Test not a wrap
 using P2 = wrapper&lt;double, feature::inplace::plain&gt;;
 using U1 = wrapper&lt;int,    feature::inplace::uninitialized&gt;;
 
-static_assert( is_compatible_with_v&lt;P1, P1&gt;);    // identical types
-static_assert(!is_compatible_with_v&lt;P1, P2&gt;);    // incompatible value types
-static_assert(!is_compatible_with_v&lt;P1, U1&gt;);    // different template param
-static_assert(!is_compatible_with_v&lt;int, P1&gt;);   // non-wrapper vs wrapper
-static_assert( is_compatible_with_v&lt;int, int&gt;);  // same non-wrapper type
+static_assert( is_compatible_with_v&lt;P1, P1&gt;);         // identical types
+static_assert( is_compatible_with_v&lt;P1, P1 const &amp;&gt;); // cv-ref stripped
+static_assert(!is_compatible_with_v&lt;P1, P2&gt;);         // incompatible value types
+static_assert(!is_compatible_with_v&lt;P1, U1&gt;);         // different template param
+static_assert(!is_compatible_with_v&lt;int, P1&gt;);        // non-wrapper vs wrapper
+static_assert( is_compatible_with_v&lt;int, int&gt;);       // same non-wrapper type
 </code></pre>
+<hr>
+
+<h3 id="variable-is_convertible_from_v">variable is_convertible_from_v</h3>
+<p><em>Checks whether</em> <code>Target</code> <em>is convertible from</em><code>Refer</code> <em>directly or through any level of the wrapper chain.</em></p>
+<pre><code>constexpr bool scl::feature::is_convertible_from_v;
+</code></pre>
+<p>Extends <code>std::is_convertible</code> to wrapper chains:
+* base case: <code>Refer</code> is directly convertible to <code>Target</code>, or
+* recursive case: <code>Refer</code> is a wrapper and <code>Target</code> is convertible from the inner value reference type.</p>
+<p>This is the condition under which <code>value_lock&lt;Refer&gt;::lock_for&lt;Target&gt;()</code> and <code>value_lock&lt;Refer&gt;::value_as&lt;Target&gt;()</code> are well-formed.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Target</code> The desired reference type (cv-ref qualified). </li>
+<li><code>Refer</code> The starting reference type (outermost wrapper or plain value). </li>
+</ul>
+<hr>
+
+<h3 id="variable-is_executor_v">variable is_executor_v</h3>
+<p><code>true</code> <em>if</em><code>Type</code> <em>satisfies the executor interface.</em></p>
+<pre><code>constexpr bool scl::feature::is_executor_v;
+</code></pre>
+<p>The check requires that the following static methods are callable for the three primary value categories (<code>Type&amp;</code>, <code>Type&amp;&amp;</code>, <code>Type</code> const&amp;):</p>
+<ul>
+<li><code>Type::value(Self&amp;&amp;)</code> — returns a reference to the held value.</li>
+<li><code>Type::execute(Self&amp;&amp;, Func&amp;&amp;)</code> — invokes a callable in the executor's context; checked with a zero-argument <code>void(*)</code>().</li>
+</ul>
+<p>Optional methods (<code>guard</code>, <code>unguard</code>) are not part of this check. Non-class types (e.g. <code>void</code>, scalars) always yield <code>false</code>. cv-ref qualifiers on <code>Type</code> are stripped before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Type</code> Type to check (cv-ref qualifiers are stripped).</li>
+</ul>
+<p><strong>See also:</strong> scl::feature::concepts::executor</p>
+<pre><code>static_assert( is_executor_v&lt;feature::inplace::plain&lt;int&gt;&gt;);
+static_assert( is_executor_v&lt;feature::inplace::plain&lt;int&gt; const&gt;);  // cv-ref stripped
+static_assert(!is_executor_v&lt;int&gt;);
+static_assert(!is_executor_v&lt;void&gt;);
+
+template &lt;typename T&gt;
+struct MyExecutor {
+    using value_type = T;
+    T m_value{};
+    template &lt;typename Self, typename Func&gt;
+    static constexpr decltype(auto) execute(Self&amp;&amp;, Func&amp;&amp; f) { return f(); }
+    template &lt;typename Self&gt;
+    static constexpr decltype(auto) value(Self&amp;&amp; self) { return forward_like&lt;Self&gt;(self.m_value); }
+};
+static_assert(is_executor_v&lt;MyExecutor&lt;int&gt;&gt;);
+</code></pre>
+<hr>
+
+<h3 id="variable-is_guard_noexcept_v">variable is_guard_noexcept_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType::guard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_guard_noexcept_v;
+</code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
 <hr>
 
 <h3 id="variable-is_part_compatible_with_v">variable is_part_compatible_with_v</h3>
 <p><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></p>
 <pre><code>constexpr bool scl::feature::is_part_compatible_with_v;
 </code></pre>
-<p>Peels layers off <code>Test</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Expected</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-qualifiers are stripped from both arguments before the check.</p>
+<p>Peels layers off <code>Test</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Expected</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>Expected</code> Wrapper to match against. </li>
@@ -492,18 +722,29 @@ static_assert(!is_part_compatible_with_v&lt;W, int&gt;);    // Test not a wrappe
 </code></pre>
 <hr>
 
+<h3 id="variable-is_unguard_noexcept_v">variable is_unguard_noexcept_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType::unguard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_unguard_noexcept_v;
+</code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
 <h3 id="variable-is_wrapper_v">variable is_wrapper_v</h3>
 <p><em>Checks whether</em> <code>Type</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></p>
 <pre><code>constexpr bool scl::feature::is_wrapper_v;
 </code></pre>
-<p>cv-qualifiers on <code>Type</code> are stripped before the check.</p>
+<p>cv-ref qualifiers on <code>Type</code> are stripped before the check (<code>remove_cvref_t</code>).</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>Type</code> Type to check.</li>
 </ul>
 <pre><code>static_assert(!is_wrapper_v&lt;int&gt;);
-static_assert( is_wrapper_v&lt;wrapper&lt;int&gt;&gt;);
-static_assert( is_wrapper_v&lt;wrapper&lt;int&gt; const&gt;);  // cv stripped
+static_assert( is_wrapper_v&lt;wrapper&lt;int, feature::inplace::plain&gt;&gt;);
+static_assert( is_wrapper_v&lt;wrapper&lt;int, feature::inplace::plain&gt; const&gt;);  // cv-ref stripped
 </code></pre>
 <hr>
 

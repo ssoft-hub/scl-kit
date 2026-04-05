@@ -294,10 +294,8 @@
 <p><a href="../executor__access_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
-#include &lt;scl/feature/type_traits/wrapper.h&gt;
+#include &lt;scl/feature/concepts/wrapper.h&gt;
 #include &lt;scl/utility/type_traits/forward_like.h&gt;
-
-#include &lt;type_traits&gt;
 
 namespace scl::feature::detail
 {
@@ -305,8 +303,8 @@ namespace scl::feature::detail
     {
         // NOLINTBEGIN(cppcoreguidelines-missing-std-forward)
         template &lt;typename Wrapper&gt;
-            requires ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Wrapper&gt;&gt;
         static constexpr decltype(auto) get(Wrapper &amp;&amp; w) noexcept
+            requires ::scl::feature::concepts::wrapper&lt;Wrapper&gt;
         {
             return ::scl::forward_like&lt;Wrapper&gt;(w.m_executor);
         }

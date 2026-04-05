@@ -12,10 +12,9 @@
 
 #ifndef DOXYGEN
 
+#include <scl/feature/concepts/wrapper.h>
 #include <scl/feature/detail/wrapper_cast.h>
-#include <scl/feature/type_traits/wrapper.h>
 
-#include <type_traits>
 #include <utility>
 
 namespace scl
@@ -23,21 +22,13 @@ namespace scl
     template <typename Refer>
     using wrapper_caster = ::scl::feature::detail::wrapper_caster<Refer>;
 
-    template <typename Wrapper>
+    template <typename Type>
     [[nodiscard]]
-    constexpr decltype(auto) wrapper_cast(Wrapper && w)
-        requires ::scl::feature::is_wrapper_v<::std::remove_cvref_t<Wrapper>>
+    constexpr decltype(auto) wrapper_cast(Type && w) noexcept
     {
-        return ::scl::wrapper_caster<Wrapper &&>{::std::forward<Wrapper>(w)};
+        return ::scl::wrapper_caster<Type &&>{::std::forward<Type>(w)};
     }
 
-    template <typename Value>
-    [[nodiscard]]
-    constexpr decltype(auto) wrapper_cast(Value && v) noexcept
-        requires(!::scl::feature::is_wrapper_v<::std::remove_cvref_t<Value>>)
-    {
-        return ::std::forward<Value>(v);
-    }
 } // namespace scl
 
 #else // DOXYGEN
@@ -45,7 +36,7 @@ namespace scl
 namespace scl
 {
     template <typename Refer>
-    class wrapper_caster
+    class [[nodiscard]] wrapper_caster
     {
     public:
         wrapper_caster(wrapper_caster &&) = delete;
@@ -57,10 +48,13 @@ namespace scl
 
         ~wrapper_caster();
 
+        [[nodiscard]]
         operator Refer() &&;
 
         template <typename T>
-        T get() &&;
+        [[nodiscard]]
+        T to() &&
+            requires ::scl::feature::concepts::convertible_from<T, Refer>;
     };
 
     template <typename Wrapper>

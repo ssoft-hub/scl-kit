@@ -2,7 +2,7 @@
 
 # Struct scl::feature::executor\_trait
 
-**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**T**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;**
+**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**T**](group__scl__feature__type__traits.md#variable-is_executor_v)&gt;**
 
 
 

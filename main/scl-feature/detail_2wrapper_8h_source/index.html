@@ -294,6 +294,7 @@
 <p><a href="../detail_2wrapper_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;scl/feature/concepts/executor.h&gt;
 #include &lt;scl/feature/detail/wrapper_constructor_resolver.h&gt;
 #include &lt;scl/feature/detail/wrapper_constructors.h&gt;
 
@@ -303,6 +304,7 @@ namespace scl::feature::detail
 {
     // NOLINTBEGIN(cppcoreguidelines-special-member-functions)
     template &lt;typename Value, template &lt;typename&gt; class Executor&gt;
+        requires ::scl::feature::concepts::executor&lt;Executor&lt;Value&gt;&gt;
     class wrapper
     {
         using self_type = wrapper&lt;Value, Executor&gt;;
@@ -312,6 +314,7 @@ namespace scl::feature::detail
         using executor_type = Executor&lt;value_type&gt;;
 
     private:
+        [[no_unique_address]]
         executor_type m_executor;
 
         friend struct executor_access;

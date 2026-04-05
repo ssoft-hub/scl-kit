@@ -348,7 +348,7 @@ namespace scl::feature::inplace
         {
             // reinterpret_cast&lt;value_type*&gt; for raw storage access;
             // const correctness is restored by forward_like&lt;Self&gt;.
-            return ::scl::forward_like&lt;Self&gt;(*reinterpret_cast&lt;value_type *&gt;(self.m_storage)); // NOLINT(*-reinterpret-cast)
+            return reinterpret_cast&lt;::scl::forward_like_t&lt;Self, value_type&gt;&gt;(*self.m_storage); // NOLINT(*-reinterpret-cast)
         }
 
     private:

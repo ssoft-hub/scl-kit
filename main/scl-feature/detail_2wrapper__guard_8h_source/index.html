@@ -294,7 +294,9 @@
 <p><a href="../detail_2wrapper__guard_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;scl/feature/concepts/wrapper.h&gt;
 #include &lt;scl/feature/detail/executor_access.h&gt;
+#include &lt;scl/feature/type_traits/executor.h&gt;
 #include &lt;scl/feature/type_traits/wrapper.h&gt;
 #include &lt;scl/utility/type_traits/forward_like.h&gt;
 
@@ -309,7 +311,8 @@ namespace scl::feature::detail
         wrapper = true,
     };
 
-    template &lt;typename Refer, wrapper_guard_case Case&gt;
+    template &lt;typename Refer,
+        wrapper_guard_case Case = ::scl::feature::is_wrapper_v&lt;Refer&gt; ? wrapper_guard_case::wrapper : wrapper_guard_case::value&gt;
         requires ::std::is_reference_v&lt;Refer&gt;
     class wrapper_guard;
 
@@ -328,15 +331,18 @@ namespace scl::feature::detail
             : m_value{::std::forward&lt;Refer&gt;(v)}
         {}
 
-        constexpr decltype(auto) value() const noexcept { return ::std::forward&lt;Refer&gt;(m_value); }
+        [[nodiscard]]
+        constexpr decltype(auto) value() const noexcept
+        {
+            return ::std::forward&lt;Refer&gt;(m_value);
+        }
 
     private:
         Refer m_value;
     };
 
-    template &lt;typename WrapperRefer&gt;
-        requires ::std::is_reference_v&lt;WrapperRefer&gt; &amp;&amp;
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;WrapperRefer&gt;&gt;
+    template &lt;concepts::wrapper WrapperRefer&gt;
+        requires ::std::is_reference_v&lt;WrapperRefer&gt;
     class wrapper_guard&lt;WrapperRefer, wrapper_guard_case::wrapper&gt;
     {
         using wrapper_type = ::std::remove_cvref_t&lt;WrapperRefer&gt;;
@@ -350,18 +356,20 @@ namespace scl::feature::detail
         wrapper_guard &amp; operator=(wrapper_guard const &amp;) = delete;
 
         constexpr explicit wrapper_guard(WrapperRefer w)
+            noexcept(::scl::feature::is_guard_noexcept_v&lt;executor_type, executor_refer&gt;)
             : m_executor{executor_access::get(::std::forward&lt;WrapperRefer&gt;(w))}
         {
-            if constexpr (requires { executor_type::template guard&lt;executor_refer&gt;(m_executor); })
-                executor_type::template guard&lt;executor_refer&gt;(m_executor);
+            if constexpr (::scl::feature::has_guard_v&lt;executor_type, executor_refer&gt;)
+                executor_type::guard(::std::forward&lt;executor_refer&gt;(m_executor));
         }
 
-        constexpr ~wrapper_guard()
+        constexpr ~wrapper_guard() noexcept(::scl::feature::is_unguard_noexcept_v&lt;executor_type, executor_refer&gt;)
         {
-            if constexpr (requires { executor_type::template unguard&lt;executor_refer&gt;(m_executor); })
-                executor_type::template unguard&lt;executor_refer&gt;(m_executor);
+            if constexpr (::scl::feature::has_unguard_v&lt;executor_type, executor_refer&gt;)
+                executor_type::unguard(::std::forward&lt;executor_refer&gt;(m_executor));
         }
 
+        [[nodiscard]]
         constexpr decltype(auto) value() const noexcept
             requires requires {
                          executor_type::template value&lt;executor_refer&gt;(::std::declval&lt;executor_refer&gt;());

@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+#include <scl/feature/concepts/executor.h>
 #include <scl/feature/concepts/wrapper.h>
 
 ```

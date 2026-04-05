@@ -274,36 +274,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Namespaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detailed Description
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -320,46 +290,81 @@
 
 
 <h1 id="file-executorh">File executor.h</h1>
-<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_910e174fc0e8c8ed40843bba5172f2f4/"><strong>type_traits</strong></a> <strong>&gt;</strong> <a href="./"><strong>executor.h</strong></a></p>
-<p><a href="../executor_8h_source/">Go to the source code of this file</a></p>
-<p><em>Customization point for locating the executor inside a wrapper type.</em> <a href="#detailed-description">More...</a></p>
-<h2 id="namespaces">Namespaces</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespacescl/"><strong>scl</strong></a> <br><em>Root namespace of the ScL project.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <br><em>Namespace of the ScL Feature module.</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="detailed-description">Detailed Description</h2>
-<p><code>executor_trait</code> maps a wrapper type to its executor member. There is no default implementation — specialize for each wrapper type: </p>
-<pre><code class="language-C++">template &lt;&gt;
-struct scl::feature::executor_trait&lt;MyWrapper&gt;
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_910e174fc0e8c8ed40843bba5172f2f4/"><strong>type_traits</strong></a> <strong>&gt;</strong> <a href="../type__traits_2executor_8h/"><strong>executor.h</strong></a></p>
+<p><a href="../type__traits_2executor_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">#pragma once
+
+#include &lt;type_traits&gt;
+#include &lt;utility&gt;
+
+
+namespace scl::feature
 {
-    template &lt;typename Self&gt;
-    static constexpr decltype(auto) executor(Self &amp;&amp; self)
+    template &lt;typename T&gt;
+    struct executor_trait;
+
+    // -------------------------------------------------------------------------
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool has_value_v =
+        requires {
+            static_cast&lt;decltype(ExecutorType::value(::std::declval&lt;ExecutorRefer&gt;())) (*)(ExecutorRefer)&gt;(
+                &amp;ExecutorType::value);
+        };
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool has_execute_v =
+        requires {
+            static_cast&lt;decltype(ExecutorType::execute(::std::declval&lt;ExecutorRefer&gt;(),
+                ::std::declval&lt;void (*&amp;)()&gt;())) (*)(ExecutorRefer, void (*&amp;)())&gt;(&amp;ExecutorType::execute);
+        };
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool has_guard_v =
+        requires { static_cast&lt;void (*)(ExecutorRefer)&gt;(&amp;ExecutorType::guard); };
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool has_unguard_v =
+        requires { static_cast&lt;void (*)(ExecutorRefer)&gt;(&amp;ExecutorType::unguard); };
+
+    // -------------------------------------------------------------------------
+
+    namespace detail
     {
-        return ::scl::forward_like&lt;Self&gt;(self.m_impl);
-    }
-};
+        template &lt;typename Type&gt;
+        inline constexpr bool has_executor_minimal_interface_v = []() constexpr -&gt; bool {
+            if constexpr (::std::is_class_v&lt;Type&gt;)
+                return has_value_v&lt;Type, Type &amp;&gt; &amp;&amp; has_value_v&lt;Type, Type &amp;&amp;&gt; &amp;&amp;
+                    has_value_v&lt;Type, Type const &amp;&gt; &amp;&amp; has_execute_v&lt;Type, Type &amp;&gt; &amp;&amp;
+                    has_execute_v&lt;Type, Type &amp;&amp;&gt; &amp;&amp; has_execute_v&lt;Type, Type const &amp;&gt;;
+            return false;
+        }();
+    } // namespace detail
+
+    // -------------------------------------------------------------------------
+
+    template &lt;typename Type&gt;
+    inline constexpr bool is_executor_v = ::std::is_same_v&lt;::std::remove_cvref_t&lt;Type&gt;, Type&gt;
+        ? detail::has_executor_minimal_interface_v&lt;Type&gt;
+        : is_executor_v&lt;::std::remove_cvref_t&lt;Type&gt;&gt;;
+
+    // -------------------------------------------------------------------------
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool is_guard_noexcept_v = []() constexpr -&gt; bool {
+        if constexpr (has_guard_v&lt;ExecutorType, ExecutorRefer&gt;)
+            return noexcept(ExecutorType::guard(::std::declval&lt;ExecutorRefer&gt;()));
+        return true;
+    }();
+
+    template &lt;typename ExecutorType, typename ExecutorRefer&gt;
+    inline constexpr bool is_unguard_noexcept_v = []() constexpr -&gt; bool {
+        if constexpr (has_unguard_v&lt;ExecutorType, ExecutorRefer&gt;)
+            return noexcept(ExecutorType::unguard(::std::declval&lt;ExecutorRefer&gt;()));
+        return true;
+    }();
+} // namespace scl::feature
 </code></pre>
-<p><strong>Template parameters:</strong></p>
-<ul>
-<li><code>T</code> The wrapper type (cv-ref stripped). </li>
-</ul>
-<hr />
-<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/type_traits/executor.h</code></p>
 
 
 

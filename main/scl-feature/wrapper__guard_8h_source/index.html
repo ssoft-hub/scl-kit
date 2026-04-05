@@ -299,15 +299,10 @@
 #include &lt;scl/feature/detail/wrapper_guard.h&gt;
 #include &lt;scl/feature/type_traits/wrapper.h&gt;
 
-#include &lt;type_traits&gt;
-
 namespace scl
 {
     template &lt;typename Refer&gt;
-    using wrapper_guard = ::scl::feature::detail::wrapper_guard&lt;Refer,
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt;
-            ? ::scl::feature::detail::wrapper_guard_case::wrapper
-            : ::scl::feature::detail::wrapper_guard_case::value&gt;;
+    using wrapper_guard = ::scl::feature::detail::wrapper_guard&lt;Refer&gt;;
 } // namespace scl
 
 #else // DOXYGEN
@@ -327,6 +322,7 @@ namespace scl
 
         ~wrapper_guard();
 
+        [[nodiscard]]
         decltype(auto) value() const noexcept;
     };
 

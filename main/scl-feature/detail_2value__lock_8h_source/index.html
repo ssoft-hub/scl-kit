@@ -294,11 +294,9 @@
 <p><a href="../detail_2value__lock_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;scl/feature/concepts/wrapper.h&gt;
 #include &lt;scl/feature/detail/wrapper_lock.h&gt;
-#include &lt;scl/feature/type_traits/wrapper.h&gt;
 #include &lt;scl/utility/type_traits/forward_like.h&gt;
-
-#include &lt;type_traits&gt;
 
 namespace scl::feature::detail
 {
@@ -308,7 +306,8 @@ namespace scl::feature::detail
         wrapper = true,
     };
 
-    template &lt;typename Refer, value_lock_case Case&gt;
+    template &lt;typename Refer,
+        value_lock_case Case = ::scl::feature::is_wrapper_v&lt;Refer&gt; ? value_lock_case::wrapper : value_lock_case::value&gt;
         requires ::std::is_reference_v&lt;Refer&gt;
     class value_lock;
 
@@ -332,13 +331,14 @@ namespace scl::feature::detail
         {}
 
         template &lt;typename Target&gt;
-            requires ::std::is_same_v&lt;Target, Refer&gt;
         constexpr void lock_for() noexcept
+            requires ::std::convertible_to&lt;Refer, Target&gt;
         {}
 
         template &lt;typename Target&gt;
-            requires ::std::is_same_v&lt;Target, Refer&gt;
-        constexpr Target value_as() const noexcept
+        [[nodiscard]]
+        constexpr Target value_as() noexcept(::std::is_nothrow_convertible_v&lt;Refer, Target&gt;)
+            requires ::std::convertible_to&lt;Refer, Target&gt;
         {
             return ::std::forward&lt;Refer&gt;(m_ref);
         }
@@ -351,9 +351,8 @@ namespace scl::feature::detail
     // Wrapper specialisation — recursive lazy lock through the wrapper chain.
     // -------------------------------------------------------------------------
 
-    template &lt;typename WrapperRefer&gt;
-        requires ::std::is_reference_v&lt;WrapperRefer&gt; &amp;&amp;
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;WrapperRefer&gt;&gt;
+    template &lt;concepts::wrapper WrapperRefer&gt;
+        requires ::std::is_reference_v&lt;WrapperRefer&gt;
     class value_lock&lt;WrapperRefer, value_lock_case::wrapper&gt;
     {
         using wrapper_type = ::std::remove_cvref_t&lt;WrapperRefer&gt;;
@@ -362,7 +361,7 @@ namespace scl::feature::detail
 
         using outer_lock_type = ::scl::feature::detail::wrapper_lock&lt;WrapperRefer, wrapper_lock_case::wrapper&gt;;
         using inner_lock_type = ::scl::feature::detail::value_lock&lt;value_refer,
-            ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;value_refer&gt;&gt; ? value_lock_case::wrapper : value_lock_case::value&gt;;
+            ::scl::feature::is_wrapper_v&lt;value_refer&gt; ? value_lock_case::wrapper : value_lock_case::value&gt;;
 
     public:
         value_lock(value_lock &amp;&amp;) = delete;
@@ -370,7 +369,7 @@ namespace scl::feature::detail
         value_lock &amp; operator=(value_lock &amp;&amp;) = delete;
         value_lock &amp; operator=(value_lock const &amp;) = delete;
 
-        constexpr explicit value_lock(WrapperRefer ref)
+        constexpr explicit value_lock(WrapperRefer ref) noexcept(construct_noexcept())
             : m_outer_lock{::std::forward&lt;WrapperRefer&gt;(ref)}
             , m_inner_lock{m_outer_lock.value()}
         {}
@@ -378,9 +377,10 @@ namespace scl::feature::detail
         constexpr ~value_lock() = default;
 
         template &lt;typename Target&gt;
-        constexpr void lock_for()
+        constexpr void lock_for() noexcept(lock_for_noexcept&lt;Target&gt;())
+            requires ::scl::feature::concepts::convertible_from&lt;Target, WrapperRefer&gt;
         {
-            if constexpr (!::std::is_same_v&lt;WrapperRefer, Target&gt;)
+            if constexpr (!::std::is_convertible_v&lt;WrapperRefer, Target&gt;)
             {
                 m_outer_lock.lock();
                 m_inner_lock.template lock_for&lt;Target&gt;();
@@ -388,15 +388,43 @@ namespace scl::feature::detail
         }
 
         template &lt;typename Target&gt;
-        constexpr Target value_as() const
+        [[nodiscard]]
+        constexpr Target value_as() noexcept(value_as_noexcept&lt;Target&gt;())
+            requires ::scl::feature::concepts::convertible_from&lt;Target, WrapperRefer&gt;
         {
-            if constexpr (::std::is_same_v&lt;WrapperRefer, Target&gt;)
-                return m_outer_lock.wrapper_value();
-            else
+            if constexpr (!::std::is_convertible_v&lt;WrapperRefer, Target&gt;)
                 return m_inner_lock.template value_as&lt;Target&gt;();
+            else
+                return m_outer_lock.wrapper_value();
         }
 
     private:
+        static constexpr bool construct_noexcept() noexcept
+        {
+            return noexcept(outer_lock_type{::std::declval&lt;WrapperRefer&gt;()}) &amp;&amp;
+                noexcept(::std::declval&lt;outer_lock_type &amp;&gt;().value()) &amp;&amp;
+                noexcept(inner_lock_type{::std::declval&lt;outer_lock_type &amp;&gt;().value()});
+        }
+
+        template &lt;typename Target&gt;
+        static constexpr bool lock_for_noexcept() noexcept
+        {
+            if constexpr (::std::is_convertible_v&lt;WrapperRefer, Target&gt;)
+                return true;
+            else
+                return noexcept(::std::declval&lt;outer_lock_type &amp;&gt;().lock()) &amp;&amp;
+                    noexcept(::std::declval&lt;inner_lock_type &amp;&gt;().template lock_for&lt;Target&gt;());
+        }
+
+        template &lt;typename Target&gt;
+        static constexpr bool value_as_noexcept() noexcept
+        {
+            if constexpr (::std::is_convertible_v&lt;WrapperRefer, Target&gt;)
+                return noexcept(::std::declval&lt;outer_lock_type &amp;&gt;().wrapper_value());
+            else
+                return noexcept(::std::declval&lt;inner_lock_type &amp;&gt;().template value_as&lt;Target&gt;());
+        }
+
         outer_lock_type m_outer_lock;
         inner_lock_type m_inner_lock;
     };

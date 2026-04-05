@@ -294,6 +294,7 @@
 <p><a href="../detail_2wrapper__cast_8h/">Go to the documentation of this file</a></p>
 <pre><code class="language-C++">#pragma once
 
+#include &lt;scl/feature/concepts/wrapper.h&gt;
 #include &lt;scl/feature/detail/value_lock.h&gt;
 #include &lt;scl/feature/type_traits/wrapper.h&gt;
 #include &lt;scl/utility/type_traits/forward_like.h&gt;
@@ -319,8 +320,7 @@ namespace scl::feature::detail
 
     template &lt;typename Caster,
         typename Refer,
-        wrapper_cast_case Case =
-            ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt; ? wrapper_cast_case::wrapper : wrapper_cast_case::value&gt;
+        wrapper_cast_case Case = ::scl::feature::is_wrapper_v&lt;Refer&gt; ? wrapper_cast_case::wrapper : wrapper_cast_case::value&gt;
         requires ::std::is_reference_v&lt;Refer&gt;
     class cast_mixin;
 
@@ -330,21 +330,25 @@ namespace scl::feature::detail
     class cast_mixin&lt;Caster, Refer, wrapper_cast_case::value&gt;
     {
     public:
-        operator Refer() &amp;&amp; { return static_cast&lt;Caster &amp;&amp;&gt;(*this).template get&lt;Refer&gt;(); }
+        [[nodiscard]]
+        operator Refer() &amp;&amp; noexcept(noexcept(::std::declval&lt;Caster &amp;&amp;&gt;().template to&lt;Refer&gt;()))
+        {
+            return static_cast&lt;Caster &amp;&amp;&gt;(*this).template to&lt;Refer&gt;();
+        }
     };
 
     // Wrapper level: one operator for the wrapper reference itself plus
     // inherited operators for every inner level via recursive base.
-    template &lt;typename Caster, typename WrapperRefer&gt;
-        requires ::std::is_reference_v&lt;WrapperRefer&gt; &amp;&amp;
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;WrapperRefer&gt;&gt;
+    template &lt;typename Caster, concepts::wrapper WrapperRefer&gt;
+        requires ::std::is_reference_v&lt;WrapperRefer&gt;
     class cast_mixin&lt;Caster, WrapperRefer, wrapper_cast_case::wrapper&gt;
         : public cast_mixin&lt;Caster, ::scl::forward_like_t&lt;WrapperRefer, typename ::std::remove_cvref_t&lt;WrapperRefer&gt;::value_type&gt;&gt;
     {
     public:
-        operator WrapperRefer() &amp;&amp;
+        [[nodiscard]]
+        operator WrapperRefer() &amp;&amp; noexcept(noexcept(::std::declval&lt;Caster &amp;&amp;&gt;().template to&lt;WrapperRefer&gt;()))
         {
-            return static_cast&lt;Caster &amp;&amp;&gt;(*this).template get&lt;WrapperRefer&gt;();
+            return static_cast&lt;Caster &amp;&amp;&gt;(*this).template to&lt;WrapperRefer&gt;();
         }
     };
 
@@ -352,7 +356,7 @@ namespace scl::feature::detail
     // wrapper_caster — lazy-locking proxy returned by wrapper_cast().
     //
     // Constructs a value_lock (all executor references stored, no guard yet).
-    // Each implicit conversion operator (provided by cast_mixin) calls get&lt;T&gt;()
+    // Each implicit conversion operator (provided by cast_mixin) calls to&lt;T&gt;()
     // which activates the necessary guards just before returning the value.
     //
     // All conversions are &amp;&amp;-qualified: the caster must be used as an rvalue.
@@ -364,7 +368,7 @@ namespace scl::feature::detail
     class [[nodiscard]] wrapper_caster : public cast_mixin&lt;wrapper_caster&lt;Refer&gt;, Refer&gt;
     {
         using lock_type = ::scl::feature::detail::value_lock&lt;Refer,
-            ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt; ? value_lock_case::wrapper : value_lock_case::value&gt;;
+            ::scl::feature::is_wrapper_v&lt;Refer&gt; ? value_lock_case::wrapper : value_lock_case::value&gt;;
 
     public:
         wrapper_caster(wrapper_caster &amp;&amp;) = delete;
@@ -373,15 +377,18 @@ namespace scl::feature::detail
         wrapper_caster &amp; operator=(wrapper_caster const &amp;) = delete;
         ~wrapper_caster() = default;
 
-        constexpr explicit wrapper_caster(Refer ref)
+        constexpr explicit wrapper_caster(Refer ref) noexcept
             : m_lock{::std::forward&lt;Refer&gt;(ref)}
         {}
 
-        template &lt;typename T&gt;
-        T get() &amp;&amp;
+        template &lt;typename Type&gt;
+            requires ::scl::feature::concepts::convertible_from&lt;Type, Refer&gt;
+        [[nodiscard]]
+        Type to() &amp;&amp; noexcept(noexcept(::std::declval&lt;lock_type &amp;&gt;().template lock_for&lt;Type&gt;()) &amp;&amp;
+            noexcept(::std::declval&lt;lock_type &amp;&gt;().template value_as&lt;Type&gt;()))
         {
-            m_lock.template lock_for&lt;T&gt;();
-            return m_lock.template value_as&lt;T&gt;();
+            m_lock.template lock_for&lt;Type&gt;();
+            return m_lock.template value_as&lt;Type&gt;();
         }
 
     private:

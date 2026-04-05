@@ -10,9 +10,8 @@
 
 
 
-* `#include <scl/feature/type_traits/wrapper.h>`
+* `#include <scl/feature/concepts/wrapper.h>`
 * `#include <scl/utility/type_traits/forward_like.h>`
-* `#include <type_traits>`
 
 
 

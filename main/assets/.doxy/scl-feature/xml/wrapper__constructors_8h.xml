@@ -82,14 +82,13 @@
       </memberdef>
       <memberdef kind="define" id="wrapper__constructors_8h_1a4bb4f5a733d47d7890abb48ca7b7ea1e" prot="public" static="no">
         <name>SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER</name>
-        <initializer>    template &lt;typename Other&gt;                                                                                   \
-    constexpr wrapper(Other &amp;&amp; other) noexcept(                                                                 \
-        noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve()))                \
-        requires(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;::std::remove_cvref_t&lt;Other&gt;&gt; &amp;&amp;                                  \
-            !::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;, self_type&gt; &amp;&amp;                                         \
-            ::std::constructible_from&lt;executor_type,                                                            \
-                decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve())&gt;)       \
-        : m_executor{wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()} \
+        <initializer>    template &lt;typename Other&gt;                                                                                       \
+    constexpr wrapper(Other &amp;&amp; other) noexcept(                                                                     \
+        noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve()))                    \
+        requires(<ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v</ref>&lt;Other&gt; &amp;&amp; !::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;, self_type&gt; &amp;&amp; \
+            ::std::constructible_from&lt;executor_type,                                                                \
+                decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve())&gt;)           \
+        : m_executor{wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()}     \
     {}</initializer>
         <briefdescription>
         </briefdescription>
@@ -97,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/detail/wrapper_constructors.h" line="42" column="9" bodyfile="module/feature/src/scl/feature/detail/wrapper_constructors.h" bodystart="42" bodyend="51"/>
+        <location file="module/feature/src/scl/feature/detail/wrapper_constructors.h" line="42" column="9" bodyfile="module/feature/src/scl/feature/detail/wrapper_constructors.h" bodystart="42" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -129,16 +128,15 @@
 <codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const<sp/>volatile<sp/>&amp;&amp;)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="comment">//<sp/>cppcheck-suppress<sp/>noExplicitConstructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>Other&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>wrapper(Other<sp/>&amp;&amp;<sp/>other)<sp/>noexcept(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;&gt;().resolve()))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires(::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Other&gt;&gt;<sp/>&amp;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;,<sp/>self_type&gt;<sp/>&amp;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::constructible_from&lt;executor_type,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;&gt;().resolve())&gt;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_executor{wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()}<sp/>\</highlight></codeline>
-<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>Other&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>wrapper(Other<sp/>&amp;&amp;<sp/>other)<sp/>noexcept(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;&gt;().resolve()))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires(::scl::feature::is_wrapper_v&lt;Other&gt;<sp/>&amp;&amp;<sp/>!::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;,<sp/>self_type&gt;<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::constructible_from&lt;executor_type,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;&gt;().resolve())&gt;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_executor{wrapper_constructor_resolver&lt;self_type,<sp/>Other<sp/>&amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()}<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
     </programlisting>
     <location file="module/feature/src/scl/feature/detail/wrapper_constructors.h"/>
   </compounddef>

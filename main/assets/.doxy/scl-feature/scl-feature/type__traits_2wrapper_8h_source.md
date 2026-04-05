@@ -10,19 +10,24 @@
 ```C++
 #pragma once
 
+#include <scl/feature/concepts/executor.h>
+#include <scl/utility/type_traits/forward_like.h>
+
 #include <type_traits>
 
 namespace scl::feature::detail
 {
-    template <typename, template <typename> class>
+    template <typename Value, template <typename> class Executor>
+        requires ::scl::feature::concepts::executor<Executor<Value>>
     class wrapper;
 } // namespace scl::feature::detail
 
 namespace scl::feature
 {
     template <typename Type>
-    inline constexpr bool is_wrapper_v =
-        ::std::is_same_v<::std::remove_cv_t<Type>, Type> ? false : is_wrapper_v<::std::remove_cv_t<Type>>;
+    inline constexpr bool is_wrapper_v = ::std::is_same_v<::std::remove_cvref_t<Type>, Type>
+        ? false
+        : is_wrapper_v<::std::remove_cvref_t<Type>>;
 
     template <typename Type, template <typename> class Executor>
     inline constexpr bool is_wrapper_v<::scl::feature::detail::wrapper<Type, Executor>> = true;
@@ -31,10 +36,10 @@ namespace scl::feature
 
     template <typename Expected, typename Test>
     inline constexpr bool is_compatible_with_v =
-        (::std::is_same_v<::std::remove_cv_t<Expected>, Expected> &&
-            ::std::is_same_v<::std::remove_cv_t<Test>, Test>)
+        (::std::is_same_v<::std::remove_cvref_t<Expected>, Expected> &&
+            ::std::is_same_v<::std::remove_cvref_t<Test>, Test>)
         ? (::std::is_same_v<Expected, Test> || ::std::is_base_of_v<Expected, Test>)
-        : is_compatible_with_v<::std::remove_cv_t<Expected>, ::std::remove_cv_t<Test>>;
+        : is_compatible_with_v<::std::remove_cvref_t<Expected>, ::std::remove_cvref_t<Test>>;
 
     template <typename Expected, typename Test, template <typename> class Executor>
     inline constexpr bool is_compatible_with_v<::scl::feature::detail::wrapper<Expected, Executor>,
@@ -44,34 +49,68 @@ namespace scl::feature
 
     template <typename Expected, typename Test>
     inline constexpr bool is_compatible_with_part_of_v =
-        (::std::is_same_v<::std::remove_cv_t<Expected>, Expected> &&
-            ::std::is_same_v<::std::remove_cv_t<Test>, Test>)
+        (::std::is_same_v<::std::remove_cvref_t<Expected>, Expected> &&
+            ::std::is_same_v<::std::remove_cvref_t<Test>, Test>)
         ? false
-        : is_compatible_with_part_of_v<::std::remove_cv_t<Expected>, ::std::remove_cv_t<Test>>;
+        : is_compatible_with_part_of_v<::std::remove_cvref_t<Expected>, ::std::remove_cvref_t<Test>>;
 
     template <typename ExpectedValue, template <typename> class ExpectedExecutor, typename TestValue, template <typename> class TestExecutor>
     inline constexpr bool is_compatible_with_part_of_v<::scl::feature::detail::wrapper<ExpectedValue, ExpectedExecutor>,
         ::scl::feature::detail::wrapper<TestValue, TestExecutor>> =
-        is_compatible_with_v<::std::remove_cv_t<ExpectedValue>, ::scl::feature::detail::wrapper<TestValue, TestExecutor>> ||
-        is_compatible_with_part_of_v<::std::remove_cv_t<ExpectedValue>,
+        is_compatible_with_v<::std::remove_cvref_t<ExpectedValue>,
+            ::scl::feature::detail::wrapper<TestValue, TestExecutor>> ||
+        is_compatible_with_part_of_v<::std::remove_cvref_t<ExpectedValue>,
             ::scl::feature::detail::wrapper<TestValue, TestExecutor>>;
 
     // -------------------------------------------------------------------------
 
     template <typename Expected, typename Test>
     inline constexpr bool is_part_compatible_with_v =
-        (::std::is_same_v<::std::remove_cv_t<Expected>, Expected> &&
-            ::std::is_same_v<::std::remove_cv_t<Test>, Test>)
+        (::std::is_same_v<::std::remove_cvref_t<Expected>, Expected> &&
+            ::std::is_same_v<::std::remove_cvref_t<Test>, Test>)
         ? false
-        : is_part_compatible_with_v<::std::remove_cv_t<Expected>, ::std::remove_cv_t<Test>>;
+        : is_part_compatible_with_v<::std::remove_cvref_t<Expected>, ::std::remove_cvref_t<Test>>;
 
     template <typename ExpectedValue, template <typename> class ExpectedExecutor, typename TestValue, template <typename> class TestExecutor>
     inline constexpr bool is_part_compatible_with_v<::scl::feature::detail::wrapper<ExpectedValue, ExpectedExecutor>,
         ::scl::feature::detail::wrapper<TestValue, TestExecutor>> =
         is_compatible_with_v<::scl::feature::detail::wrapper<ExpectedValue, ExpectedExecutor>,
-            ::std::remove_cv_t<TestValue>> ||
+            ::std::remove_cvref_t<TestValue>> ||
         is_part_compatible_with_v<::scl::feature::detail::wrapper<ExpectedValue, ExpectedExecutor>,
-            ::std::remove_cv_t<TestValue>>;
+            ::std::remove_cvref_t<TestValue>>;
+
+    // -------------------------------------------------------------------------
+
+    namespace detail
+    {
+        enum class convertible_from_case : bool
+        {
+            value = false,
+            wrapper = true,
+        };
+
+        template <typename Target,
+            typename Refer,
+            convertible_from_case Case =
+                ::scl::feature::is_wrapper_v<Refer> ? convertible_from_case::wrapper : convertible_from_case::value>
+        struct is_convertible_from_impl;
+
+        template <typename Target, typename Refer>
+        struct is_convertible_from_impl<Target, Refer, convertible_from_case::value>
+            : ::std::bool_constant<::std::is_convertible_v<Refer, Target>>
+        {};
+
+        template <typename Target, typename WrapperRefer>
+        struct is_convertible_from_impl<Target, WrapperRefer, convertible_from_case::wrapper>
+            : ::std::bool_constant<::std::is_convertible_v<WrapperRefer, Target> ||
+                  is_convertible_from_impl<Target,
+                      ::scl::forward_like_t<WrapperRefer, typename ::std::remove_cvref_t<WrapperRefer>::value_type>>::value>
+        {};
+    } // namespace detail
+
+    template <typename Target, typename Refer>
+    inline constexpr bool is_convertible_from_v =
+        ::scl::feature::detail::is_convertible_from_impl<Target, Refer>::value;
 
 } // namespace scl::feature
 ```

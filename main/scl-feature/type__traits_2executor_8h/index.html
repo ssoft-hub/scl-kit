@@ -274,6 +274,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -290,17 +320,74 @@
 
 
 <h1 id="file-executorh">File executor.h</h1>
-<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_910e174fc0e8c8ed40843bba5172f2f4/"><strong>type_traits</strong></a> <strong>&gt;</strong> <a href="../executor_8h/"><strong>executor.h</strong></a></p>
-<p><a href="../executor_8h/">Go to the documentation of this file</a></p>
-<pre><code class="language-C++">#pragma once
-
-
-namespace scl::feature
-{
-    template &lt;typename T&gt;
-    struct executor_trait;
-} // namespace scl::feature
-</code></pre>
+<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_910e174fc0e8c8ed40843bba5172f2f4/"><strong>type_traits</strong></a> <strong>&gt;</strong> <a href="./"><strong>executor.h</strong></a></p>
+<p><a href="../type__traits_2executor_8h_source/">Go to the source code of this file</a></p>
+<p><em>Executor type traits: interface detection and noexcept helpers.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;type_traits&gt;</code></li>
+<li><code>#include &lt;utility&gt;</code></li>
+</ul>
+<h2 id="namespaces">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacescl/"><strong>scl</strong></a> <br><em>Root namespace of the ScL project.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <br><em>Namespace of the ScL Feature module.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>An <em>executor</em> is a class template that implements the strategy used by <code>scl::wrapper</code> to store and access its value. The required interface is:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static value(Self&amp;&amp;)</code></td>
+<td>Returns a reference to the held value.</td>
+</tr>
+<tr>
+<td><code>static execute(Self&amp;&amp;, Func&amp;&amp;...)</code></td>
+<td>Invokes <code>func</code> in the executor's context.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional methods recognized by the framework:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static guard(Self&amp;&amp;)</code></td>
+<td>Acquires any guard (e.g., mutex lock).</td>
+</tr>
+<tr>
+<td><code>static unguard(Self&amp;&amp;)</code></td>
+<td>Releases the guard acquired by <code>guard()</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><code>is_executor_v</code> detects whether a type satisfies this interface. <code>executor_trait</code> is a separate reflection customization point used by <code>SCL_REFLECT_METHOD</code> to locate the executor at runtime. </p>
+<hr />
+<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/type_traits/executor.h</code></p>
 
 
 

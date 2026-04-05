@@ -10,7 +10,9 @@
 ```C++
 #pragma once
 
+#include <scl/feature/concepts/wrapper.h>
 #include <scl/feature/detail/executor_access.h>
+#include <scl/feature/type_traits/executor.h>
 #include <scl/feature/type_traits/wrapper.h>
 #include <scl/utility/type_traits/forward_like.h>
 
@@ -25,7 +27,8 @@ namespace scl::feature::detail
         wrapper = true,
     };
 
-    template <typename Refer, wrapper_lock_case Case>
+    template <typename Refer,
+        wrapper_lock_case Case = ::scl::feature::is_wrapper_v<Refer> ? wrapper_lock_case::wrapper : wrapper_lock_case::value>
         requires ::std::is_reference_v<Refer>
     class wrapper_lock;
 
@@ -52,7 +55,11 @@ namespace scl::feature::detail
 
         constexpr void unlock() noexcept {}
 
-        constexpr Refer value() const noexcept { return ::std::forward<Refer>(m_ref); }
+        [[nodiscard]]
+        constexpr Refer value() const noexcept
+        {
+            return ::std::forward<Refer>(m_ref);
+        }
 
     private:
         Refer m_ref;
@@ -62,9 +69,8 @@ namespace scl::feature::detail
     // Wrapper specialisation — lazy guard: lock()/unlock() call guard()/unguard().
     // -------------------------------------------------------------------------
 
-    template <typename WrapperRefer>
-        requires ::std::is_reference_v<WrapperRefer> &&
-        ::scl::feature::is_wrapper_v<::std::remove_cvref_t<WrapperRefer>>
+    template <concepts::wrapper WrapperRefer>
+        requires ::std::is_reference_v<WrapperRefer>
     class wrapper_lock<WrapperRefer, wrapper_lock_case::wrapper>
     {
         using wrapper_type = ::std::remove_cvref_t<WrapperRefer>;
@@ -83,28 +89,34 @@ namespace scl::feature::detail
             : m_ref{::std::forward<WrapperRefer>(ref)}
         {}
 
-        constexpr ~wrapper_lock() { unlock(); }
+        constexpr ~wrapper_lock() noexcept(::scl::feature::is_unguard_noexcept_v<executor_type, executor_refer>)
+        {
+            unlock();
+        }
 
-        constexpr void lock()
+        constexpr void
+        lock() noexcept(::scl::feature::is_guard_noexcept_v<executor_type, executor_refer>)
         {
             if (!::std::exchange(m_locked, true))
-                if constexpr (requires { executor_type::template guard<executor_refer>(executor()); })
-                    executor_type::template guard<executor_refer>(executor());
+                if constexpr (::scl::feature::has_guard_v<executor_type, executor_refer>)
+                    executor_type::guard(executor());
         }
 
-        constexpr void unlock()
+        constexpr void
+        unlock() noexcept(::scl::feature::is_unguard_noexcept_v<executor_type, executor_refer>)
         {
             if (::std::exchange(m_locked, false))
-                if constexpr (
-                    requires { executor_type::template unguard<executor_refer>(executor()); })
-                    executor_type::template unguard<executor_refer>(executor());
+                if constexpr (::scl::feature::has_unguard_v<executor_type, executor_refer>)
+                    executor_type::unguard(executor());
         }
 
+        [[nodiscard]]
         constexpr WrapperRefer wrapper_value() const noexcept
         {
             return ::std::forward<WrapperRefer>(m_ref);
         }
 
+        [[nodiscard]]
         constexpr value_refer value() const noexcept(noexcept(
             executor_type::template value<executor_refer>(::std::declval<executor_refer>())))
             requires requires {
@@ -115,6 +127,7 @@ namespace scl::feature::detail
         }
 
     private:
+        [[nodiscard]]
         constexpr executor_refer executor() const noexcept
         {
             return executor_access::get(::std::forward<WrapperRefer>(m_ref));

@@ -299,15 +299,10 @@
 #include &lt;scl/feature/detail/wrapper_lock.h&gt;
 #include &lt;scl/feature/type_traits/wrapper.h&gt;
 
-#include &lt;type_traits&gt;
-
 namespace scl
 {
     template &lt;typename Refer&gt;
-    using wrapper_lock = ::scl::feature::detail::wrapper_lock&lt;Refer,
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt;
-            ? ::scl::feature::detail::wrapper_lock_case::wrapper
-            : ::scl::feature::detail::wrapper_lock_case::value&gt;;
+    using wrapper_lock = ::scl::feature::detail::wrapper_lock&lt;Refer&gt;;
 } // namespace scl
 
 #else // DOXYGEN
@@ -331,8 +326,10 @@ namespace scl
 
         void unlock();
 
+        [[nodiscard]]
         Refer wrapper_value() const noexcept;
 
+        [[nodiscard]]
         decltype(auto) value() const noexcept;
     };
 

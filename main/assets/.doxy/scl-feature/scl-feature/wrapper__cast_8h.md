@@ -10,9 +10,8 @@
 
 
 
+* `#include <scl/feature/concepts/wrapper.h>`
 * `#include <scl/feature/detail/wrapper_cast.h>`
-* `#include <scl/feature/type_traits/wrapper.h>`
-* `#include <type_traits>`
 * `#include <utility>`
 
 

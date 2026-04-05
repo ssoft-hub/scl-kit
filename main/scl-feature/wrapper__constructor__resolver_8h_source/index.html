@@ -307,7 +307,7 @@ namespace scl::feature::detail
     class wrapper_constructor_resolver;
 
     template &lt;typename LeftWrapper, typename RightRefer&gt;
-        requires ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;RightRefer&gt;&gt;
+        requires ::scl::feature::is_wrapper_v&lt;RightRefer&gt;
     class guarded_wrapper_constructor_resolver
     {
         using guard_type = ::scl::wrapper_guard&lt;RightRefer&gt;;
@@ -357,10 +357,7 @@ namespace scl::feature::detail
                 using right_executor = typename right_type::executor_type;
                 using right_executor_refer = ::scl::forward_like_t&lt;RightRefer, right_executor&gt;;
 
-                constexpr bool has_unguard =
-                    requires(right_executor_refer e) {
-                        right_executor::template unguard&lt;right_executor_refer&gt;(e);
-                    };
+                constexpr bool has_unguard = ::scl::feature::has_unguard_v&lt;right_executor, right_executor_refer&gt;;
 
                 if constexpr (has_unguard)
                 {
@@ -376,9 +373,8 @@ namespace scl::feature::detail
                     // there is nothing to release; call guard() if present, then read value.
                     decltype(auto) executor = executor_access::get(::std::forward&lt;RightRefer&gt;(m_right));
 
-                    if constexpr (
-                        requires { right_executor::template guard&lt;right_executor_refer&gt;(executor); })
-                        right_executor::template guard&lt;right_executor_refer&gt;(executor);
+                    if constexpr (::scl::feature::has_guard_v&lt;right_executor, right_executor_refer&gt;)
+                        right_executor::guard(::std::forward&lt;right_executor_refer&gt;(executor));
 
                     decltype(auto) inner = right_executor::template value&lt;right_executor_refer&gt;(
                         ::std::forward&lt;decltype(executor)&gt;(executor));

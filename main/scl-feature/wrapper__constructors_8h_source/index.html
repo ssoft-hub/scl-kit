@@ -316,15 +316,14 @@
     SCL_WRAPPER_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const volatile &amp;&amp;)
 
 // cppcheck-suppress noExplicitConstructor
-#define SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER                                                                       \
-    template &lt;typename Other&gt;                                                                                   \
-    constexpr wrapper(Other &amp;&amp; other) noexcept(                                                                 \
-        noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve()))                \
-        requires(::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Other&gt;&gt; &amp;&amp;                                  \
-            !::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;, self_type&gt; &amp;&amp;                                         \
-            ::std::constructible_from&lt;executor_type,                                                            \
-                decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve())&gt;)       \
-        : m_executor{wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()} \
+#define SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER                                                                           \
+    template &lt;typename Other&gt;                                                                                       \
+    constexpr wrapper(Other &amp;&amp; other) noexcept(                                                                     \
+        noexcept(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve()))                    \
+        requires(::scl::feature::is_wrapper_v&lt;Other&gt; &amp;&amp; !::std::same_as&lt;::std::remove_cvref_t&lt;Other&gt;, self_type&gt; &amp;&amp; \
+            ::std::constructible_from&lt;executor_type,                                                                \
+                decltype(::std::declval&lt;wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;&gt;().resolve())&gt;)           \
+        : m_executor{wrapper_constructor_resolver&lt;self_type, Other &amp;&amp;&gt;{::std::forward&lt;Other&gt;(other)}.resolve()}     \
     {}
 </code></pre>
 

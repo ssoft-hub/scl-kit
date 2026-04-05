@@ -4,7 +4,7 @@
     <compoundname>scl::feature::executor_trait</compoundname>
     <templateparamlist>
       <param>
-        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">T</ref></type>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">T</ref></type>
       </param>
     </templateparamlist>
     <briefdescription>
@@ -23,7 +23,7 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="33" column="5" bodyfile="module/feature/src/scl/feature/type_traits/executor.h" bodystart="33" bodyend="-1"/>
+    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="39" column="5" bodyfile="module/feature/src/scl/feature/type_traits/executor.h" bodystart="39" bodyend="-1"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

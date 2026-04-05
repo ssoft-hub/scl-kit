@@ -25,6 +25,9 @@ namespace scl::feature::concepts
 
     template <typename Expected, typename Type>
     concept part_compatible_with = ::scl::feature::is_part_compatible_with_v<Expected, Type>;
+
+    template <typename Target, typename Refer>
+    concept convertible_from = ::scl::feature::is_convertible_from_v<Target, Refer>;
 } // namespace scl::feature::concepts
 ```
 

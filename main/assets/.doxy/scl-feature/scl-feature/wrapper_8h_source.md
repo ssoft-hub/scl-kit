@@ -82,10 +82,9 @@ namespace scl
         constexpr wrapper(wrapper const volatile && other)
             requires ::std::constructible_from<executor_type, executor_type const volatile &&>;
 
-        template <typename Other>
+        template <concepts::wrapper Other>
         constexpr wrapper(Other && other)
-            requires(::scl::feature::is_wrapper_v<::std::remove_cvref_t<Other>> &&
-                !::std::same_as<::std::remove_cvref_t<Other>, wrapper> &&
+            requires(!::std::same_as<::std::remove_cvref_t<Other>, wrapper> &&
                 ::std::constructible_from<executor_type,
                     decltype(wrapper_constructor_resolver<wrapper, Other &&>{other}.resolve())>);
     };

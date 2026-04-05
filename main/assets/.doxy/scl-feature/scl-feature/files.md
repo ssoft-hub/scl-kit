@@ -12,6 +12,7 @@ Here is a list of all files with brief descriptions:
                 * **dir** [**feature**](dir_fa8d125dcaa64c120bbbc8d1167944b9.md)     
                     * **file** [**concepts.h**](concepts_8h.md) _ScL Feature C++20 concepts._ 
                     * **dir** [**concepts**](dir_f37dd920b215c7d361cd7dbe8578ca36.md)     
+                        * **file** [**executor.h**](concepts_2executor_8h.md)     
                         * **file** [**wrapper.h**](concepts_2wrapper_8h.md)     
                     * **dir** [**detail**](dir_b3eb4ac5eceab19e0dcca8b4c96aaf20.md)     
                         * **file** [**executor\_access.h**](executor__access_8h.md)     
@@ -29,7 +30,7 @@ Here is a list of all files with brief descriptions:
                         * **file** [**method.h**](method_8h.md) _Compile-time method reflection macros for wrapper types._     
                         * **file** [**type.h**](type_8h.md) _Macro for declaring the wrapper type used by reflection macros._     
                     * **dir** [**type\_traits**](dir_910e174fc0e8c8ed40843bba5172f2f4.md)     
-                        * **file** [**executor.h**](executor_8h.md) _Customization point for locating the executor inside a wrapper type._     
+                        * **file** [**executor.h**](type__traits_2executor_8h.md) _Executor type traits: interface detection and noexcept helpers._     
                         * **file** [**has\_qualified\_method.h**](has__qualified__method_8h.md) _Compile-time predicate macro for cv-ref qualifier detection._     
                         * **file** [**wrapper.h**](type__traits_2wrapper_8h.md)     
                     * **file** [**type\_traits.h**](type__traits_8h.md) _ScL Feature type traits._ 

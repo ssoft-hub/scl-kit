@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptscl_1_1feature_1_1concepts_1_1executor" kind="concept">
+    <compoundname>scl::feature::concepts::executor</compoundname>
+    <includes refid="concepts_2executor_8h" local="no">executor.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename Type&gt;
+concept <ref refid="conceptscl_1_1feature_1_1concepts_1_1executor" kindref="compound">scl::feature::concepts::executor</ref> =  <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_executor_v</ref>&lt;Type&gt;    </initializer>
+    <briefdescription>
+<para>Satisfied when <computeroutput>Type</computeroutput> implements the executor interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An executor is a class template that defines the storage strategy and access policy for an <computeroutput>scl::wrapper</computeroutput>. <computeroutput>Type</computeroutput> must provide the following static methods, callable for <computeroutput>Type&amp;</computeroutput>, <computeroutput>Type&amp;&amp;</computeroutput>, and <computeroutput>Type</computeroutput> const&amp;:</para>
+<para><table rows="3" cols="2"><row>
+<entry thead="yes"><para>Method   </para>
+</entry><entry thead="yes"><para>Role    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>value(Self&amp;&amp;)</computeroutput>   </para>
+</entry><entry thead="no"><para>Returns a reference to the held value.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>execute(Self&amp;&amp;, Func&amp;&amp;)</computeroutput>   </para>
+</entry><entry thead="no"><para>Invokes a callable in executor&apos;s context.   </para>
+</entry></row>
+</table>
+</para>
+<para>Optional methods (<computeroutput>guard</computeroutput>, <computeroutput>unguard</computeroutput>) may be provided to implement RAII locking; their presence is detected separately via <computeroutput>is_guard_noexcept_v</computeroutput> / <computeroutput>is_unguard_noexcept_v</computeroutput>.</para>
+<para>cv-ref qualifiers on <computeroutput>Type</computeroutput> are stripped before the check (<computeroutput>remove_cvref_t</computeroutput>).</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">scl::feature::is_executor_v</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">scl::feature::inplace::plain</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classscl_1_1feature_1_1inplace_1_1uninitialized" kindref="compound">scl::feature::inplace::uninitialized</ref></para>
+</simplesect>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/>executor&lt;feature::inplace::plain&lt;int&gt;&gt;);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<sp/>executor&lt;feature::inplace::plain&lt;int&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&gt;);<sp/><sp/></highlight><highlight class="comment">//<sp/>cv-ref<sp/>stripped</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!executor&lt;int&gt;);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/concepts/executor.h" line="40" column="5"/>
+  </compounddef>
+</doxygen>

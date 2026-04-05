@@ -15,15 +15,10 @@
 #include <scl/feature/detail/value_lock.h>
 #include <scl/feature/type_traits/wrapper.h>
 
-#include <type_traits>
-
 namespace scl
 {
     template <typename Refer>
-    using value_lock = ::scl::feature::detail::value_lock<Refer,
-        ::scl::feature::is_wrapper_v<::std::remove_cvref_t<Refer>>
-            ? ::scl::feature::detail::value_lock_case::wrapper
-            : ::scl::feature::detail::value_lock_case::value>;
+    using value_lock = ::scl::feature::detail::value_lock<Refer>;
 } // namespace scl
 
 #else // DOXYGEN
@@ -44,10 +39,13 @@ namespace scl
         ~value_lock();
 
         template <typename Target>
-        void lock_for();
+        void lock_for()
+            requires ::scl::feature::concepts::convertible_from<Target, Refer>;
 
         template <typename Target>
-        Target value_as() const;
+        [[nodiscard]]
+        Target value_as()
+            requires ::scl::feature::concepts::convertible_from<Target, Refer>;
     };
 
 } // namespace scl

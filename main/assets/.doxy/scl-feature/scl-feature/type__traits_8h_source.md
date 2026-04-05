@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+#include <scl/feature/type_traits/executor.h>
 #include <scl/feature/type_traits/wrapper.h>
 
 ```

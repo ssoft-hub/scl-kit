@@ -2,7 +2,7 @@
 
 # Class scl::feature::inplace::uninitialized
 
-**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;**
+**template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v)&gt;**
 
 
 
@@ -34,7 +34,7 @@ _Executor that holds_ `Value` _in uninitialized aligned storage._[More...](#deta
 
 | Type | Name |
 | ---: | :--- |
-| typedef [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**value\_type**](#typedef-value_type)  <br> |
+| typedef [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v) | [**value\_type**](#typedef-value_type)  <br> |
 
 
 
@@ -59,15 +59,15 @@ _Executor that holds_ `Value` _in uninitialized aligned storage._[More...](#deta
 
 | Type | Name |
 | ---: | :--- |
-|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) | [**uninitialized**](#function-uninitialized) () noexcept<br> |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_executor_v) | [**uninitialized**](#function-uninitialized) () noexcept<br> |
 
 
 ## Public Static Functions
 
 | Type | Name |
 | ---: | :--- |
-|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_wrapper_v)([**auto**](group__scl__feature__type__traits.md#variable-is_wrapper_v)) | [**execute**](#function-execute) ([**Self**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && self, [**Func**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && func, [**Args**](group__scl__feature__type__traits.md#variable-is_wrapper_v) &&... args) <br> |
-|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_wrapper_v)([**auto**](group__scl__feature__type__traits.md#variable-is_wrapper_v)) | [**value**](#function-value) ([**Self**](group__scl__feature__type__traits.md#variable-is_wrapper_v) && self) <br> |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_executor_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_executor_v)([**auto**](group__scl__feature__type__traits.md#variable-is_executor_v)) | [**execute**](#function-execute) ([**Self**](group__scl__feature__type__traits.md#variable-is_executor_v) && self, [**Func**](group__scl__feature__type__traits.md#variable-is_executor_v) && func, [**Args**](group__scl__feature__type__traits.md#variable-is_executor_v) &&... args) <br> |
+|  [**constexpr**](group__scl__feature__type__traits.md#variable-is_executor_v) [**decltype**](group__scl__feature__type__traits.md#variable-is_executor_v)([**auto**](group__scl__feature__type__traits.md#variable-is_executor_v)) | [**value**](#function-value) ([**Self**](group__scl__feature__type__traits.md#variable-is_executor_v) && self) <br> |
 
 
 

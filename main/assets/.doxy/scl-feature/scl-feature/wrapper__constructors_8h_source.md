@@ -32,15 +32,14 @@
     SCL_WRAPPER_CONSTRUCTOR_FOR_SELF_PROTOTYPE(const volatile &&)
 
 // cppcheck-suppress noExplicitConstructor
-#define SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER                                                                       \
-    template <typename Other>                                                                                   \
-    constexpr wrapper(Other && other) noexcept(                                                                 \
-        noexcept(::std::declval<wrapper_constructor_resolver<self_type, Other &&>>().resolve()))                \
-        requires(::scl::feature::is_wrapper_v<::std::remove_cvref_t<Other>> &&                                  \
-            !::std::same_as<::std::remove_cvref_t<Other>, self_type> &&                                         \
-            ::std::constructible_from<executor_type,                                                            \
-                decltype(::std::declval<wrapper_constructor_resolver<self_type, Other &&>>().resolve())>)       \
-        : m_executor{wrapper_constructor_resolver<self_type, Other &&>{::std::forward<Other>(other)}.resolve()} \
+#define SCL_WRAPPER_CONSTRUCTOR_FOR_OTHER                                                                           \
+    template <typename Other>                                                                                       \
+    constexpr wrapper(Other && other) noexcept(                                                                     \
+        noexcept(::std::declval<wrapper_constructor_resolver<self_type, Other &&>>().resolve()))                    \
+        requires(::scl::feature::is_wrapper_v<Other> && !::std::same_as<::std::remove_cvref_t<Other>, self_type> && \
+            ::std::constructible_from<executor_type,                                                                \
+                decltype(::std::declval<wrapper_constructor_resolver<self_type, Other &&>>().resolve())>)           \
+        : m_executor{wrapper_constructor_resolver<self_type, Other &&>{::std::forward<Other>(other)}.resolve()}     \
     {}
 ```
 

@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_wrapper_v) [**Value**](group__scl__feature__type__traits.md#variable-is_wrapper_v)&gt;<br>_Executor that proxies calls directly to the held value with no overhead._  |
+| class | [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v)&gt;<br>_Executor that proxies calls directly to the held value with no overhead._  |
 
 
 

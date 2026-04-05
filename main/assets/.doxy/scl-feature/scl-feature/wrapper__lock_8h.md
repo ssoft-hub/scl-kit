@@ -12,7 +12,6 @@
 
 * `#include <scl/feature/detail/wrapper_lock.h>`
 * `#include <scl/feature/type_traits/wrapper.h>`
-* `#include <type_traits>`
 
 
 

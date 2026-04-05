@@ -309,6 +309,9 @@ namespace scl::feature::concepts
 
     template &lt;typename Expected, typename Type&gt;
     concept part_compatible_with = ::scl::feature::is_part_compatible_with_v&lt;Expected, Type&gt;;
+
+    template &lt;typename Target, typename Refer&gt;
+    concept convertible_from = ::scl::feature::is_convertible_from_v&lt;Target, Refer&gt;;
 } // namespace scl::feature::concepts
 </code></pre>
 

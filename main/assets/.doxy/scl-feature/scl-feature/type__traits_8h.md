@@ -10,6 +10,7 @@
 
 _ScL Feature type traits._ [More...](#detailed-description)
 
+* `#include <scl/feature/type_traits/executor.h>`
 * `#include <scl/feature/type_traits/wrapper.h>`
 
 

@@ -299,15 +299,10 @@
 #include &lt;scl/feature/detail/value_lock.h&gt;
 #include &lt;scl/feature/type_traits/wrapper.h&gt;
 
-#include &lt;type_traits&gt;
-
 namespace scl
 {
     template &lt;typename Refer&gt;
-    using value_lock = ::scl::feature::detail::value_lock&lt;Refer,
-        ::scl::feature::is_wrapper_v&lt;::std::remove_cvref_t&lt;Refer&gt;&gt;
-            ? ::scl::feature::detail::value_lock_case::wrapper
-            : ::scl::feature::detail::value_lock_case::value&gt;;
+    using value_lock = ::scl::feature::detail::value_lock&lt;Refer&gt;;
 } // namespace scl
 
 #else // DOXYGEN
@@ -328,10 +323,13 @@ namespace scl
         ~value_lock();
 
         template &lt;typename Target&gt;
-        void lock_for();
+        void lock_for()
+            requires ::scl::feature::concepts::convertible_from&lt;Target, Refer&gt;;
 
         template &lt;typename Target&gt;
-        Target value_as() const;
+        [[nodiscard]]
+        Target value_as()
+            requires ::scl::feature::concepts::convertible_from&lt;Target, Refer&gt;;
     };
 
 } // namespace scl
