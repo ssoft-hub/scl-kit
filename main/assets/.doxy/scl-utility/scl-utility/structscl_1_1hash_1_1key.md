@@ -10,7 +10,7 @@
 
 
 
-_Strongly-typed FNV-1a hash digest parameterized by a hash function._ [More...](#detailed-description)
+_Strongly-typed hash digest parameterized by a hash function._ [More...](#detailed-description)
 
 * `#include <key.h>`
 
@@ -65,7 +65,7 @@ _Strongly-typed FNV-1a hash digest parameterized by a hash function._ [More...](
 
 | Type | Name |
 | ---: | :--- |
-|  requires ::std::convertible\_to&lt;::std::ranges::range\_value\_t&lt; Range &gt;, ::std::uint8\_t &gt; constexpr | [**key**](#function-key) (Range const & range) noexcept<br>_Constructs the digest by hashing_ `range` _with_`Hasher` _._ |
+|  constexpr | [**key**](#function-key) (Range const & range) noexcept<br>_Constructs the digest by hashing_ `range` _with_`Hasher` _._ |
 |  constexpr | [**operator value\_type**](#function-operator-value_type) () noexcept const<br>_Implicit conversion to the raw integer digest._  |
 
 
@@ -237,7 +237,7 @@ value_type scl::hash::key< Hasher >::value;
 _Constructs the digest by hashing_ `range` _with_`Hasher` _._
 ```C++
 template<::std::ranges::range Range>
-inline explicit requires ::std::convertible_to<::std::ranges::range_value_t< Range >, ::std::uint8_t > constexpr scl::hash::key::key (
+inline explicit constexpr scl::hash::key::key (
     Range const & range
 ) noexcept
 ```

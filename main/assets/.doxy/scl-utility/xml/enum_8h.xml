@@ -65,8 +65,8 @@
     </briefdescription>
     <detaileddescription>
 <para><itemizedlist>
-<listitem><para><ref refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kindref="member">scl::enum_name&lt;V&gt;</ref>: Retrieves the qualified string name of the enum member V. Ensures cross-platform consistency by stripping the &apos;enum &apos; prefix on MSVC.</para>
-</listitem><listitem><para><ref refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kindref="member">scl::enum_short_name&lt;V&gt;</ref>: Retrieves only the identifier of the enum member V without type or namespace qualifiers.</para>
+<listitem><para><ref refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kindref="member">scl::enum_name&lt;V&gt;</ref>: Retrieves the qualified string name of the enum member V. Ensures cross-platform consistency by stripping the &apos;enum &apos; prefix on MSVC.</para>
+</listitem><listitem><para><ref refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" kindref="member">scl::enum_short_name&lt;V&gt;</ref>: Retrieves only the identifier of the enum member V without type or namespace qualifiers.</para>
 </listitem><listitem><para>::scl::Enum: Concept that validates if a type is an enumeration (scoped or unscoped). </para>
 </listitem></itemizedlist>
 </para>
@@ -85,8 +85,8 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scl::detail</highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;auto<sp/>V&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(V)&gt;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/>enum_name_pattern_text()<sp/>noexcept</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/>enum_name_pattern_text()<sp/>noexcept</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;decltype(V)&gt;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__FUNCSIG__;</highlight></codeline>
@@ -122,8 +122,8 @@
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl" kindref="compound">scl</ref></highlight></codeline>
 <codeline lineno="63"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;auto<sp/>V&gt;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(V)&gt;</highlight></codeline>
-<codeline lineno="84" refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/><ref refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kindref="member">enum_name</ref>()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/><ref refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kindref="member">enum_name</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;decltype(V)&gt;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>text<sp/>=<sp/>detail::enum_name_pattern_text&lt;V&gt;();</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>prefix_length<sp/>=<sp/>detail::enum_prefix_lenght();</highlight></codeline>
@@ -139,8 +139,8 @@
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;auto<sp/>V&gt;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(V)&gt;</highlight></codeline>
-<codeline lineno="116" refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/><ref refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kindref="member">enum_short_name</ref>()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::string_view<sp/><ref refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" kindref="member">enum_short_name</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::is_enum_v&lt;decltype(V)&gt;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>enum_name&lt;V&gt;();</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>result.find_last_of(</highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">);</highlight></codeline>

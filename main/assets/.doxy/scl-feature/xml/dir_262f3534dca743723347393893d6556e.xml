@@ -2,7 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_262f3534dca743723347393893d6556e" kind="dir">
     <compoundname>module/feature/src/scl/feature/reflection</compoundname>
+    <innerfile refid="access_8h">access.h</innerfile>
     <innerfile refid="method_8h">method.h</innerfile>
+    <innerfile refid="methods_8h">methods.h</innerfile>
     <innerfile refid="type_8h">type.h</innerfile>
     <briefdescription>
     </briefdescription>

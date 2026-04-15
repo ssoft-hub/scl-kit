@@ -4,6 +4,7 @@
     <compoundname>executor_access.h</compoundname>
     <includes refid="concepts_2wrapper_8h" local="no">scl/feature/concepts/wrapper.h</includes>
     <includes local="no">scl/utility/type_traits/forward_like.h</includes>
+    <includedby refid="detail_2wrapper_8h" local="no">module/feature/src/scl/feature/detail/wrapper.h</includedby>
     <includedby refid="detail_2wrapper__guard_8h" local="no">module/feature/src/scl/feature/detail/wrapper_guard.h</includedby>
     <includedby refid="detail_2wrapper__lock_8h" local="no">module/feature/src/scl/feature/detail/wrapper_lock.h</includedby>
     <incdepgraph>
@@ -65,6 +66,8 @@
         <link refid="executor__access_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
       </node>
@@ -73,13 +76,13 @@
         <link refid="detail_2value__lock_8h_source"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="2">
         <label>module/feature/src/scl/feature/detail/wrapper.h</label>
         <link refid="detail_2wrapper_8h_source"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="10">
@@ -88,16 +91,16 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="7">
         <label>module/feature/src/scl/feature/detail/wrapper_constructor_resolver.h</label>
         <link refid="wrapper__constructor__resolver_8h_source"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="2">
+      <node id="5">
         <label>module/feature/src/scl/feature/detail/wrapper_guard.h</label>
         <link refid="detail_2wrapper__guard_8h_source"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -105,16 +108,28 @@
         <link refid="detail_2wrapper__lock_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="12">
+        <label>module/feature/src/scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>module/feature/src/scl/feature/reflection/methods.h</label>
+        <link refid="methods_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
         <label>module/feature/src/scl/feature/value_lock.h</label>
         <link refid="value__lock_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="3">
         <label>module/feature/src/scl/feature/wrapper.h</label>
         <link refid="wrapper_8h_source"/>
         <childnode refid="4" relation="include">
@@ -125,16 +140,18 @@
         <link refid="wrapper__cast_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="6">
         <label>module/feature/src/scl/feature/wrapper_guard.h</label>
         <link refid="wrapper__guard_8h_source"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="15">
         <label>module/feature/src/scl/feature/wrapper_lock.h</label>
         <link refid="wrapper__lock_8h_source"/>
         <childnode refid="4" relation="include">

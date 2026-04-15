@@ -438,11 +438,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</td>
+<td style="text-align: right;">constexpr ::std::string_view</td>
 <td style="text-align: left;"><a href="#function-enum_name"><strong>enum_name</strong></a> () noexcept<br><em>Retrieves the qualified string name of an enum member at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</td>
+<td style="text-align: right;">constexpr ::std::string_view</td>
 <td style="text-align: left;"><a href="#function-enum_short_name"><strong>enum_short_name</strong></a> () noexcept<br><em>Retrieves the short string name of an enum member at compile-time.</em></td>
 </tr>
 <tr>
@@ -467,7 +467,7 @@
 <h3 id="function-enum_name">function enum_name</h3>
 <p><em>Retrieves the qualified string name of an enum member at compile-time.</em> </p>
 <pre><code>template&lt;auto V&gt;
-requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view enum_name () noexcept
+constexpr ::std::string_view enum_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -486,7 +486,7 @@ constexpr auto name = ::scl::enum_name&lt;Color::Red&gt;(); // Returns &quot;Col
 <h3 id="function-enum_short_name">function enum_short_name</h3>
 <p><em>Retrieves the short string name of an enum member at compile-time.</em> </p>
 <pre><code>template&lt;auto V&gt;
-requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view enum_short_name () noexcept
+constexpr ::std::string_view enum_short_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>

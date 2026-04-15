@@ -21,7 +21,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| file | [**utility.h**](utility_8h.md) <br>_Includes all ScL.Utility headers._  |
+| file | [**utility.h**](utility_8h.md) <br>_Includes all ScL Utility headers._  |
 
 
 ## Directories

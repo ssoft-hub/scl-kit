@@ -8,7 +8,7 @@
 
 
 
-_Callable wrapper around_ [_**jenkins\_ota**_](namespacescl_1_1hash.md#function-jenkins_ota) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._[More...](#detailed-description)
+_Callable wrapper around_ [_**jenkins\_ota**_](group__scl__utility__hash.md#function-jenkins_ota) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._[More...](#detailed-description)
 
 * `#include <jenkins_ota.h>`
 
@@ -57,7 +57,7 @@ _Callable wrapper around_ [_**jenkins\_ota**_](namespacescl_1_1hash.md#function-
 
 | Type | Name |
 | ---: | :--- |
-|  requires ::std::convertible\_to&lt;::std::ranges::range\_value\_t&lt; Range &gt;, ::std::uint8\_t &gt; constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -124,7 +124,7 @@ using scl::hash::jenkins_ota_hasher::result_type =  ::std::uint32_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline requires ::std::convertible_to<::std::ranges::range_value_t< Range >, ::std::uint8_t > constexpr result_type scl::hash::jenkins_ota_hasher::operator() (
+inline constexpr result_type scl::hash::jenkins_ota_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

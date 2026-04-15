@@ -13,13 +13,9 @@
 
 #include <type_traits>
 
-// clang-format off
-
-#define SCL_REFLECT_TYPE(Type, Member)                                                             \
-    using S_c_L_type_ = Type;                                                                      \
-    using S_c_L_executor_type_ = ::std::remove_cvref_t<decltype(Member)>
-
-// clang-format on
+#define SCL_REFLECT_TYPE(type, executor) \
+    using S_c_L_type_ = type;            \
+    using S_c_L_executor_type_ = executor;
 ```
 
 

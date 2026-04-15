@@ -27,7 +27,9 @@ Here is a list of all files with brief descriptions:
                         * **file** [**plain.h**](plain_8h.md)     
                         * **file** [**uninitialized.h**](uninitialized_8h.md)     
                     * **dir** [**reflection**](dir_262f3534dca743723347393893d6556e.md)     
+                        * **file** [**access.h**](access_8h.md)     
                         * **file** [**method.h**](method_8h.md) _Compile-time method reflection macros for wrapper types._     
+                        * **file** [**methods.h**](methods_8h.md)     
                         * **file** [**type.h**](type_8h.md) _Macro for declaring the wrapper type used by reflection macros._     
                     * **dir** [**type\_traits**](dir_910e174fc0e8c8ed40843bba5172f2f4.md)     
                         * **file** [**executor.h**](type__traits_2executor_8h.md) _Executor type traits: interface detection and noexcept helpers._     

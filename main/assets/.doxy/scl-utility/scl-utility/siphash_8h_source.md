@@ -53,8 +53,8 @@ namespace scl::hash
     };
 
     template <::std::ranges::range Range>
-        requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
     constexpr ::std::uint64_t siphash(Range const & range, siphash_key const key = siphash_default_key)
+        requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
     {
         // State initialised from key XOR'd with magic constants spelling
         // "somepseudorandomlygeneratedbytes".
@@ -107,8 +107,8 @@ namespace scl::hash
         using result_type = ::std::uint64_t;
 
         template <::std::ranges::range Range>
-            requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
         constexpr result_type operator()(Range const & range) const noexcept
+            requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
         {
             return ::scl::hash::siphash(range, Key);
         }

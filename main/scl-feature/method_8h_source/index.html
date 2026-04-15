@@ -295,67 +295,152 @@
 <pre><code class="language-C++">#pragma once
 
 
+#include &lt;scl/feature/reflection/access.h&gt;
 #include &lt;scl/feature/reflection/type.h&gt;
 #include &lt;scl/feature/type_traits/executor.h&gt;
 #include &lt;scl/feature/type_traits/has_qualified_method.h&gt;
+#include &lt;scl/feature/wrapper_cast.h&gt;
 #include &lt;scl/utility/preprocessor/forward.h&gt;
 
 #include &lt;type_traits&gt;
 #include &lt;utility&gt;
 
-#define SCL_VALUE_DECLVAL(cv_ref) \
-    S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_ cv_ref&gt;())
+// clang-format off
 
-#define SCL_VALUE_ACCESS(cv_ref)                                                       \
-    S_c_L_executor_type_::value(::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor( \
-        ::std::forward&lt;S_c_L_type_ cv_ref&gt;(*this)))
+#define SCL_EXECUTE_OVERRIDED(method, cv_ref)                                       \
+    S_c_L_executor_type_::execute(SCL_EXECUTOR_ACCESS(cv_ref),                      \
+        [this](A_r_g_s__ &amp;&amp;... values)                                              \
+            -&gt; decltype(SCL_VALUE_ACCESS(cv_ref)                                    \
+                .method(::scl::wrapper_cast(::std::forward&lt;A_r_g_s__&gt;(values))...)) \
+        {                                                                           \
+            return SCL_VALUE_ACCESS(cv_ref).method(                                 \
+                ::scl::wrapper_cast(std::forward&lt;A_r_g_s__&gt;(values))...);           \
+        },  ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...)
 
-#define SCL_REFLECT_METHOD_BASE(method, cv_ref)                                                \
-    requires requires { SCL_VALUE_DECLVAL(cv_ref).method(::std::declval&lt;A_r_g_s__&gt;()...); } &amp;&amp; \
-        method##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL(cv_ref)), A_r_g_s__...&gt;               \
-    {                                                                                          \
-        return SCL_VALUE_ACCESS(cv_ref).method(::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);       \
-    }
+#define SCL_EXECUTOR_METHOD_OVERRIDED(method, cv_ref)  \
+    S_c_L_executor_type_::method_##method(             \
+        SCL_EXECUTOR_ACCESS(cv_ref),                   \
+        ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...)
 
-#define SCL_REFLECT_TEMPLATE_METHOD_BASE(method, CALLER, cv_ref)                                 \
-    requires requires {                                                                          \
-                 CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_DECLVAL(cv_ref), \
-                     ::std::declval&lt;A_r_g_s__&gt;()...);                                            \
-             } {                                                                                 \
-        return CALLER::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(SCL_VALUE_ACCESS(cv_ref),    \
-            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                            \
-    }
+#define SCL_REFLECT_METHOD_EXEC_HELPERS(method)                                             \
+    template &lt;typename S_c_L_E__, typename... S_c_L_A___&gt;                                   \
+    static constexpr bool method##_S_c_L_has_exec_override_ =                               \
+        requires {                                                                          \
+            static_cast&lt;                                                                    \
+                decltype(::std::remove_cvref_t&lt;S_c_L_E__&gt;::method_##method(                 \
+                    ::std::declval&lt;S_c_L_E__&gt;(), ::std::declval&lt;S_c_L_A___&gt;()...))          \
+                (*)(S_c_L_E__, S_c_L_A___...)                                               \
+            &gt;(&amp;::std::remove_cvref_t&lt;S_c_L_E__&gt;::method_##method);                          \
+        };                                                                                  \
+    template &lt;typename S_c_L_E__, typename... S_c_L_A___&gt;                                   \
+    static constexpr bool method##_S_c_L_exec_noexcept_ = []() constexpr noexcept -&gt; bool { \
+        if constexpr (method##_S_c_L_has_exec_override_&lt;S_c_L_E__, S_c_L_A___...&gt;)          \
+            return noexcept(::std::remove_cvref_t&lt;S_c_L_E__&gt;::method_##method(              \
+                ::std::declval&lt;S_c_L_E__&gt;(), ::std::declval&lt;S_c_L_A___&gt;()...));             \
+        return false;                                                                       \
+    }();
 
-#define SCL_REFLECT_METHOD_HELPER(method, CALLER, cv_ref)                                                      \
-    template &lt;typename... A_r_g_s__&gt;                                                                           \
-    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__) cv_ref SCL_REFLECT_METHOD_BASE(method,          \
-        SCL_FORWARD(cv_ref)) template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt; \
-    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__)                                                 \
-        cv_ref SCL_REFLECT_TEMPLATE_METHOD_BASE(SCL_FORWARD(method), CALLER, SCL_FORWARD(cv_ref))
-
-#define SCL_REFLECT_METHOD(method)                                                                              \
+#define SCL_REFLECT_METHOD_CALLER(method)                                                                       \
     struct method##_S_c_L_caller_                                                                               \
     {                                                                                                           \
         template &lt;typename P_a_r_a_m___, typename... P_a_r_a_m_s___, typename O_b_j___, typename... A_r_g_s___&gt; \
         static constexpr auto call(O_b_j___ &amp;&amp; o_b_j___, A_r_g_s___ &amp;&amp;... a_r_g_s___)                           \
             -&gt; decltype(::std::forward&lt;O_b_j___&gt;(o_b_j___).template method&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(    \
-                ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...))                                                     \
+                ::scl::wrapper_cast(::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___))...))                                \
         {                                                                                                       \
             return ::std::forward&lt;O_b_j___&gt;(o_b_j___).template method&lt;P_a_r_a_m___, P_a_r_a_m_s___...&gt;(         \
-                ::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___)...);                                                     \
+                ::scl::wrapper_cast(::std::forward&lt;A_r_g_s___&gt;(a_r_g_s___))...);                                \
         }                                                                                                       \
     };                                                                                                          \
-    template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                                                      \
-    static constexpr bool method##_S_c_L_quals_ = SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(method),                 \
-        S_c_L_V___, S_c_L_A___...);                                                                             \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;)                                   \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;&amp;)                                  \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;)                             \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;&amp;)                            \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;)                          \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;&amp;)                         \
-    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const volatile &amp;)                    \
+
+#define SCL_REFLECT_METHOD_QUALS(method)                                          \
+    template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                        \
+    static constexpr bool method##_S_c_L_quals_ =                                 \
+        SCL_HAS_QUALIFIED_METHOD(SCL_FORWARD(method), S_c_L_V___, S_c_L_A___...); \
+    template &lt;typename S_c_L_P___, typename... S_c_L_Ps___&gt;                       \
+    struct method##_S_c_L_template_quals_                                         \
+    {                                                                             \
+        template &lt;typename S_c_L_V___, typename... S_c_L_A___&gt;                    \
+        static constexpr bool value =                                             \
+            SCL_HAS_QUALIFIED_METHOD(                                             \
+                SCL_FORWARD(template method&lt;S_c_L_P___, S_c_L_Ps___...&gt;),         \
+                S_c_L_V___, S_c_L_A___...);                                       \
+    };
+
+#define SCL_EXECUTE_TEMPLATE_OVERRIDED(caller, cv_ref)                           \
+    S_c_L_executor_type_::execute(SCL_EXECUTOR_ACCESS(cv_ref),                   \
+        [this](A_r_g_s__ &amp;&amp;... values)                                           \
+            -&gt; decltype(caller::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(    \
+                SCL_VALUE_ACCESS(cv_ref), ::std::forward&lt;A_r_g_s__&gt;(values)...)) \
+        {                                                                        \
+            return caller::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(         \
+                SCL_VALUE_ACCESS(cv_ref), ::std::forward&lt;A_r_g_s__&gt;(values)...); \
+        }, ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...)
+
+#define SCL_REFLECT_METHOD_EXECUTOR_OVERRIDE_BASE(method, cv_ref)                      \
+    template &lt;typename S_c_L_E__ = S_c_L_executor_type_ cv_ref, typename... A_r_g_s__&gt; \
+    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__) cv_ref                  \
+    noexcept(method##_S_c_L_exec_noexcept_&lt;S_c_L_E__, A_r_g_s__...&gt;)                   \
+    requires                                                                           \
+        (::std::is_same_v&lt;S_c_L_E__, S_c_L_executor_type_ cv_ref&gt;                      \
+            &amp;&amp; method##_S_c_L_has_exec_override_&lt;S_c_L_E__, A_r_g_s__...&gt;)             \
+    {                                                                                  \
+        return ::std::remove_cvref_t&lt;S_c_L_E__&gt;::method_##method(                      \
+            SCL_EXECUTOR_ACCESS(cv_ref),                                               \
+            ::std::forward&lt;A_r_g_s__&gt;(a_r_g_s__)...);                                  \
+    }
+
+#define SCL_REFLECT_METHOD_BASE(method, cv_ref)                                           \
+    noexcept (noexcept(SCL_EXECUTE_OVERRIDED(SCL_FORWARD(method), cv_ref)))               \
+    requires                                                                              \
+        (!method##_S_c_L_has_exec_override_&lt;S_c_L_executor_type_ cv_ref, A_r_g_s__...&gt; &amp;&amp; \
+        requires                                                                          \
+        {                                                                                 \
+            SCL_VALUE_DECLVAL(cv_ref).method(                                             \
+                ::scl::wrapper_cast(::std::declval&lt;A_r_g_s__&gt;())...);                     \
+        } &amp;&amp; method##_S_c_L_quals_&lt;decltype(SCL_VALUE_DECLVAL(cv_ref)),                   \
+            decltype(::scl::wrapper_cast(::std::declval&lt;A_r_g_s__&gt;()))...&gt;)               \
+    {                                                                                     \
+        return SCL_EXECUTE_OVERRIDED(SCL_FORWARD(method), cv_ref);                        \
+    }
+
+#define SCL_REFLECT_TEMPLATE_METHOD_BASE(method, caller, cv_ref)                    \
+    noexcept(noexcept(SCL_EXECUTE_TEMPLATE_OVERRIDED(caller, cv_ref)))              \
+    requires                                                                        \
+        requires                                                                    \
+        {                                                                           \
+            caller::template call&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;(                   \
+                SCL_VALUE_DECLVAL(cv_ref), ::std::declval&lt;A_r_g_s__&gt;()...);         \
+        } &amp;&amp; method##_S_c_L_template_quals_&lt;P_a_r_a_m__, P_a_r_a_m_s__...&gt;          \
+                 ::template value&lt;decltype(SCL_VALUE_DECLVAL(cv_ref)),              \
+                     decltype(::scl::wrapper_cast(::std::declval&lt;A_r_g_s__&gt;()))...&gt; \
+    {                                                                               \
+        return SCL_EXECUTE_TEMPLATE_OVERRIDED(caller, cv_ref);                      \
+    }
+
+#define SCL_REFLECT_METHOD_HELPER(method, caller, cv_ref)                             \
+    SCL_REFLECT_METHOD_EXECUTOR_OVERRIDE_BASE(method, cv_ref)                         \
+    template &lt;typename... A_r_g_s__&gt;                                                  \
+    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__) cv_ref                 \
+        SCL_REFLECT_METHOD_BASE(method, cv_ref)                                       \
+    template &lt;typename P_a_r_a_m__, typename... P_a_r_a_m_s__, typename... A_r_g_s__&gt; \
+    constexpr decltype(auto) method(A_r_g_s__ &amp;&amp;... a_r_g_s__) cv_ref                 \
+        SCL_REFLECT_TEMPLATE_METHOD_BASE(method, caller, cv_ref)
+
+#define SCL_REFLECT_METHOD(method)                                                           \
+    SCL_REFLECT_METHOD_QUALS(method)                                                         \
+    SCL_REFLECT_METHOD_CALLER(method)                                                        \
+    SCL_REFLECT_METHOD_EXEC_HELPERS(method)                                                  \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;)                \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, &amp;&amp;)               \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;)          \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const &amp;&amp;)         \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;)       \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, volatile &amp;&amp;)      \
+    SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const volatile &amp;) \
     SCL_REFLECT_METHOD_HELPER(SCL_FORWARD(method), method##_S_c_L_caller_, const volatile &amp;&amp;)
+
+// clang-format on
 </code></pre>
 
 

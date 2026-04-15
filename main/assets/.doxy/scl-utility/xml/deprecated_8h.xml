@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="deprecated_8h" kind="file" language="C++">
+    <compoundname>deprecated.h</compoundname>
+    <includedby refid="attribute_8h" local="no">module/utility/src/scl/utility/attribute.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/attribute.h</label>
+        <link refid="attribute_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/attribute/deprecated.h</label>
+        <link refid="deprecated_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <member refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kind="define"><name>SCL_DEPRECATED</name></member>
+      <member refid="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" kind="define"><name>SCL_DEPRECATED_MSG</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Deprecation annotation macros: SCL_DEPRECATED and SCL_DEPRECATED_MSG. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__has_cpp_attribute(deprecated)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED<sp/>[[deprecated]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED_MSG(msg)<sp/>[[deprecated(msg)]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED<sp/>__declspec(deprecated)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED_MSG(msg)<sp/>__declspec(deprecated(msg))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__has_attribute)<sp/>&amp;&amp;<sp/>__has_attribute(deprecated)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED<sp/>__attribute__((deprecated))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED_MSG(msg)<sp/>__attribute__((deprecated(msg)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED_MSG(msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_DEPRECATED_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_DEPRECATED_MSG(msg)<sp/>SCL_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/attribute/deprecated.h"/>
+  </compounddef>
+</doxygen>

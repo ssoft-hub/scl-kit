@@ -6,6 +6,7 @@
     <includes refid="detail_2wrapper__cast_8h" local="no">scl/feature/detail/wrapper_cast.h</includes>
     <includes local="no">utility</includes>
     <includedby refid="feature_8h" local="no">module/feature/src/scl/feature.h</includedby>
+    <includedby refid="method_8h" local="no">module/feature/src/scl/feature/reflection/method.h</includedby>
     <incdepgraph>
       <node id="4">
         <label>scl/feature/concepts/executor.h</label>
@@ -114,10 +115,36 @@
         <label>module/feature/src/scl/feature.h</label>
         <link refid="feature_8h"/>
       </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>module/feature/src/scl/feature/reflection/methods.h</label>
+        <link refid="methods_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>module/feature/src/scl/feature/wrapper_cast.h</label>
         <link refid="wrapper__cast_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

@@ -8,8 +8,9 @@
 
 [Go to the source code of this file](utility_8h_source.md)
 
-_Includes all ScL.Utility headers._ 
+_Includes all ScL Utility headers._ 
 
+* `#include <scl/utility/attribute.h>`
 * `#include <scl/utility/meta.h>`
 * `#include <scl/utility/preprocessor.h>`
 * `#include <scl/utility/type_traits.h>`

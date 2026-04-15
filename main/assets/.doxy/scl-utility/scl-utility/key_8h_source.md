@@ -40,8 +40,8 @@ namespace scl::hash
         value_type value{};
 
         template <::std::ranges::range Range>
-            requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
         explicit constexpr key(Range const & range) noexcept
+            requires ::std::convertible_to<::std::ranges::range_value_t<Range>, ::std::uint8_t>
             : value{Hasher{}(range)}
         {}
 

@@ -16,9 +16,27 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="6">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h"/>
+      </node>
+      <node id="4">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>module/feature/src/scl/feature/reflection/method.h</label>
         <link refid="method_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/reflection/methods.h</label>
+        <link refid="methods_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>module/feature/src/scl/feature/reflection/type.h</label>
@@ -26,37 +44,43 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
     </invincdepgraph>
     <sectiondef kind="define">
-      <memberdef kind="define" id="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" prot="public" static="no">
+      <memberdef kind="define" id="type_8h_1a04334714025d2e271f8c953464c5382d" prot="public" static="no">
         <name>SCL_REFLECT_TYPE</name>
-        <param><defname>Type</defname></param>
-        <param><defname>Member</defname></param>
-        <initializer>    using S_c_L_type_ = Type;                                                                      \
-    using S_c_L_executor_type_ = ::std::remove_cvref_t&lt;decltype(Member)&gt;</initializer>
+        <param><defname>type</defname></param>
+        <param><defname>executor</defname></param>
+        <initializer>    using S_c_L_type_ = type;            \
+    using S_c_L_executor_type_ = executor;</initializer>
         <briefdescription>
-<para>Declares the wrapper type for use by <computeroutput>SCL_REFLECT_METHOD</computeroutput>. </para>
+<para>Declares the wrapper and executor types for use by <computeroutput>SCL_REFLECT_METHOD</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
-<para>Must appear inside the class body <bold>after</bold> the executor member declaration and <bold>before</bold> any <computeroutput>SCL_REFLECT_METHOD</computeroutput> invocations.</para>
-<para>A specialization of <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput> must also be provided for <computeroutput>Type</computeroutput>.</para>
-<para><simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_executor);</highlight></codeline>
+<para>Must appear inside the class body <bold>before</bold> any <computeroutput>SCL_REFLECT_METHOD</computeroutput> invocations.</para>
+<para>A specialization of <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput> must also be provided for <computeroutput>type</computeroutput>.</para>
+<para><simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="type_8h_1a04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>MyExecutor);</highlight></codeline>
 </programlisting></para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>Type</parametername>
+<parametername>type</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The unqualified class name. </para>
+<para>The unqualified wrapper class name. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>Member</parametername>
+<parametername>executor</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Executor data member name.</para>
+<para>The unqualified executor type name.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -66,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/type.h" line="27" column="9" bodyfile="module/feature/src/scl/feature/reflection/type.h" bodystart="27" bodyend="29"/>
+        <location file="module/feature/src/scl/feature/reflection/type.h" line="25" column="9" bodyfile="module/feature/src/scl/feature/reflection/type.h" bodystart="25" bodyend="27"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -80,13 +104,9 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" refkind="member"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_TYPE(Type,<sp/>Member)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_type_<sp/>=<sp/>Type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_executor_type_<sp/>=<sp/>::std::remove_cvref_t&lt;decltype(Member)&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="type_8h_1a04334714025d2e271f8c953464c5382d" refkind="member"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_TYPE(type,<sp/>executor)<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_type_<sp/>=<sp/>type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_executor_type_<sp/>=<sp/>executor;</highlight></codeline>
     </programlisting>
     <location file="module/feature/src/scl/feature/reflection/type.h"/>
   </compounddef>

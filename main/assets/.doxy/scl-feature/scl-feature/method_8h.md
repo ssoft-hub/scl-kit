@@ -10,9 +10,11 @@
 
 _Compile-time method reflection macros for wrapper types._ [More...](#detailed-description)
 
+* `#include <scl/feature/reflection/access.h>`
 * `#include <scl/feature/reflection/type.h>`
 * `#include <scl/feature/type_traits/executor.h>`
 * `#include <scl/feature/type_traits/has_qualified_method.h>`
+* `#include <scl/feature/wrapper_cast.h>`
 * `#include <scl/utility/preprocessor/forward.h>`
 * `#include <type_traits>`
 * `#include <utility>`
@@ -84,17 +86,25 @@ _Compile-time method reflection macros for wrapper types._ [More...](#detailed-d
 
 | Type | Name |
 | ---: | :--- |
+| define  | [**SCL\_EXECUTE\_OVERRIDED**](method_8h.md#define-scl_execute_overrided) (method, cv\_ref) `/* multi line expression */`<br> |
+| define  | [**SCL\_EXECUTE\_TEMPLATE\_OVERRIDED**](method_8h.md#define-scl_execute_template_overrided) (caller, cv\_ref) `/* multi line expression */`<br> |
+| define  | [**SCL\_EXECUTOR\_METHOD\_OVERRIDED**](method_8h.md#define-scl_executor_method_overrided) (method, cv\_ref) `/* multi line expression */`<br> |
 | define  | [**SCL\_REFLECT\_METHOD**](method_8h.md#define-scl_reflect_method) (method) `/* multi line expression */`<br>_Generates proxy methods that reflect_ `method` _from the wrapped object through the executor, for all 8 cv-ref qualifier combinations._ |
 | define  | [**SCL\_REFLECT\_METHOD\_BASE**](method_8h.md#define-scl_reflect_method_base) (method, cv\_ref) `/* multi line expression */`<br> |
-| define  | [**SCL\_REFLECT\_METHOD\_HELPER**](method_8h.md#define-scl_reflect_method_helper) (method, CALLER, cv\_ref) `/* multi line expression */`<br> |
-| define  | [**SCL\_REFLECT\_TEMPLATE\_METHOD\_BASE**](method_8h.md#define-scl_reflect_template_method_base) (method, CALLER, cv\_ref) `/* multi line expression */`<br> |
-| define  | [**SCL\_VALUE\_ACCESS**](method_8h.md#define-scl_value_access) (cv\_ref) `/* multi line expression */`<br> |
-| define  | [**SCL\_VALUE\_DECLVAL**](method_8h.md#define-scl_value_declval) (cv\_ref) `S\_c\_L\_executor\_type\_::value(::std::declval&lt;S\_c\_L\_executor\_type\_ cv\_ref&gt;())`<br> |
+| define  | [**SCL\_REFLECT\_METHOD\_CALLER**](method_8h.md#define-scl_reflect_method_caller) (method) `/* multi line expression */`<br> |
+| define  | [**SCL\_REFLECT\_METHOD\_EXECUTOR\_OVERRIDE\_BASE**](method_8h.md#define-scl_reflect_method_executor_override_base) (method, cv\_ref) `/* multi line expression */`<br> |
+| define  | [**SCL\_REFLECT\_METHOD\_EXEC\_HELPERS**](method_8h.md#define-scl_reflect_method_exec_helpers) (method) `/* multi line expression */`<br> |
+| define  | [**SCL\_REFLECT\_METHOD\_HELPER**](method_8h.md#define-scl_reflect_method_helper) (method, caller, cv\_ref) `/* multi line expression */`<br> |
+| define  | [**SCL\_REFLECT\_METHOD\_QUALS**](method_8h.md#define-scl_reflect_method_quals) (method) `/* multi line expression */`<br> |
+| define  | [**SCL\_REFLECT\_TEMPLATE\_METHOD\_BASE**](method_8h.md#define-scl_reflect_template_method_base) (method, caller, cv\_ref) `/* multi line expression */`<br> |
 
 ## Detailed Description
 
 
 Provides macros to automatically generate proxy methods that forward calls from a wrapper class to the held object through an executor, preserving cv-ref qualifiers exactly.
+
+
+Every generated overload dispatches through `Executor::execute` so that executor strategies (e.g. locking executors) can intercept every call.
 
 
 The executor is located at runtime via `scl::feature::executor_trait`, which must be specialized for each wrapper type.
@@ -108,7 +118,11 @@ The executor is located at runtime via `scl::feature::executor_trait`, which mus
 
 * Declare the wrapper type with `SCL_REFLECT_TYPE(Type,Member)` (after the executor member declaration).
 * Specialize `scl::feature::executor_trait` for the wrapper type.
-* The executor type must provide a static `value(exec)` method that returns a reference to the wrapped object.
+* The executor type must provide:
+  * a static `value(exec)` method that returns a reference to the wrapped object; and
+  * a static `execute(exec, callable, args...)` method that invokes `callable(args...)` in the executor's context and returns its result.
+
+
 
 
 
@@ -148,6 +162,54 @@ struct MyWrapper {
 
 
 
+### define SCL\_EXECUTE\_OVERRIDED 
+
+```C++
+#define SCL_EXECUTE_OVERRIDED (
+    method,
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_EXECUTE\_TEMPLATE\_OVERRIDED 
+
+```C++
+#define SCL_EXECUTE_TEMPLATE_OVERRIDED (
+    caller,
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_EXECUTOR\_METHOD\_OVERRIDED 
+
+```C++
+#define SCL_EXECUTOR_METHOD_OVERRIDED (
+    method,
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
 ### define SCL\_REFLECT\_METHOD 
 
 _Generates proxy methods that reflect_ `method` _from the wrapped object through the executor, for all 8 cv-ref qualifier combinations._
@@ -159,14 +221,15 @@ _Generates proxy methods that reflect_ `method` _from the wrapped object through
 
 
 
-For each of the 8 cv-ref qualifiers (`&`, `&&`, `const&`, `const&&`, `volatile&`, `volatile&&`, `const` `volatile&`, `const` `volatile&&`) two overloads are generated:
-* one with **deduced** template arguments — `template<typename`... A\_r\_g\_s\_\_&gt;
+For each of the 8 cv-ref qualifiers (`&`, `&&`, `const&`, `const&&`, `volatile&`, `volatile&&`, `const` `volatile&`, `const` `volatile&&`) three overloads are generated:
+* one **executor-override** overload — `template<typename`... A\_r\_g\_s\_\_&gt;, active when `Executor::method_##method` exists
+* one **execute-path** overload — `template<typename`... A\_r\_g\_s\_\_&gt;, active when no executor override is found
 * one with **explicit** template arguments — `template<typename\` P\_a\_r\_a\_m\_\_,\ typename... P\_a\_r\_a\_m\_s\_\_,\ typename... A\_r\_g\_s\_\_&gt;
 
 
 
 
-This gives 16 overloads in total (2 × 8).
+This gives 24 overloads in total (3 × 8); the executor-override and execute-path overloads are mutually exclusive via their `requires` clauses, so at most 16 are active for any given executor.
 
 
 
@@ -174,7 +237,21 @@ This gives 16 overloads in total (2 × 8).
 **
 **
 
-The executor is obtained at runtime via `scl::feature::executor_trait <WrapperType>::executor(self)`. The default trait returns `self.m_executor`. Specialize the trait for types that store the executor differently.
+If the executor provides a static `method_##method(Executor cv_ref, args...)` member whose first parameter matches the wrapper's cv-ref qualification **exactly** (detected via a function-pointer cast, the same technique as `has_execute_v`), the reflected method calls that member directly, bypassing `Executor::execute`. This lets the executor provide a custom implementation for specific methods.
+
+
+If no such member exists, the execute-path overload is activated instead.
+
+
+
+
+**
+**
+
+When no executor override is found, the call is routed through `Executor::execute(exec, callable, args...)` so that executor strategies (e.g. locking, tracing) can intercept it. The callable receives the same `args`... and invokes the method on the wrapped value.
+
+
+The executor is obtained at runtime via `scl::feature::executor_trait <WrapperType>::executor(self)`. There is no default implementation of `executor_trait` — every wrapper type must provide an explicit specialization.
 
 
 The wrapped value is then obtained by calling `Executor::value(executor_ref)`.
@@ -185,11 +262,14 @@ The wrapped value is then obtained by calling `Executor::value(executor_ref)`.
 **
 **
 
-Each overload is constrained by two `requires` clauses:
-* The wrapped object's `method` must be callable with the given arguments for the particular cv-ref qualification.
+Each non-template overload has one `requires` clause with two conditions:
+* The wrapped object's `method` must be callable with the given arguments (after `scl::wrapper_cast`) for the particular cv-ref qualification.
 * `SCL_HAS_QUALIFIED_METHOD` must confirm that the wrapped object has a **dedicated** overload for that qualifier (not an implicit cv-widening fallback). This prevents, for example, a `const&` proxy from being generated when only a mutable `&` overload exists on the target.
 
 
+
+
+Explicit-template overloads use `method##_S_c_L_template_quals_` for qualifier discrimination instead of `method##_S_c_L_quals_`. The struct template forwards to `SCL_HAS_QUALIFIED_METHOD` with the token sequence `template` `method<P`,Ps...&gt; (assembled via `SCL_FORWARD`) so it works even for purely-template methods where deduction without explicit arguments would fail — see `SCL_REFLECT_TEMPLATE_METHOD_BASE` for details.
 
 
 
@@ -219,10 +299,18 @@ struct Bad {
 If `method` is a template on the wrapped object (e.g. `template<typename\` T&gt;\ T\ convert()), users can call the reflected method with explicit template arguments: `wrapper.convert<double>`().
 
 
-Internally this is handled by a helper struct (`METHOD_S_c_L_caller_`) generated inside the enclosing class. The struct wraps the ``.template `method<`...&gt; call inside a static function template whose object parameter (`O_b_j___`) is dependent. This ensures that the `template` keyword appears only in a **dependent** context, so the compiler defers name lookup to instantiation time. Without this indirection, ``.template `foo<`...&gt; on a **non-dependent** type where `foo` is not a template would be a hard parse error (not SFINAE), even inside a `requires` expression.
+Internally this is handled by two helper constructs generated inside the enclosing class by `SCL_REFLECT_METHOD_CALLER` and `SCL_REFLECT_METHOD_QUALS:` 
 
 
-When `method` is **not** a template, the helper struct's `call` function fails to instantiate (SFINAE via trailing return type), the `requires` clause evaluates to `false`, and the explicit-template-args overload is silently discarded.
+
+* `method##_S_c_L_caller_` — a struct whose static `call<P`,Ps...&gt;(obj, args...) wraps the ``.template `method<P`,Ps...&gt;(args...) call. The object parameter (`O_b_j___`) is dependent, so the `template` keyword appears only in a **dependent** context and name lookup is deferred to instantiation. Without this indirection, ``.template `foo<`...&gt; on a non-dependent type would be a hard parse error (not SFINAE) when `foo` is not a template.
+* `method##_S_c_L_quals_` — a variable template that computes the qualifier-discrimination predicate for the deduced-args overload.
+* `method##_S_c_L_template_quals_` — a struct template parameterised over `<P`,Ps...&gt; with an inner `value<V`,As...&gt; variable template. Delegates to `SCL_HAS_QUALIFIED_METHOD` with the token sequence `template` `method<P`,Ps...&gt; so that the predicate evaluates the method call with concrete template arguments, handling purely-template methods that do not have any deduction-friendly non-template overload.
+
+
+
+
+When `method` is **not** a template, the `call` function fails to instantiate (SFINAE via trailing return type), the `requires` clause evaluates to `false`, and the explicit-template-args overload is silently discarded.
 
 
 
@@ -254,8 +342,8 @@ struct MyWrapper {
 
     explicit MyWrapper(int v) : m_executor{v} {}
 
-    SCL_REFLECT_METHOD(get)      // 16 overloads, constrained to &, const&, &&
-    SCL_REFLECT_METHOD(convert)  // 16 overloads, only const& survives constraints
+    SCL_REFLECT_METHOD(get)      // 24 generated (3×8), active for &, const&, &&
+    SCL_REFLECT_METHOD(convert)  // 24 generated (3×8), only const& survives constraints
 };
 
 MyWrapper w{42};
@@ -309,13 +397,74 @@ cw.convert<double>();   // calls Target::convert<double>() const &  → 42.0
 
 
 
+### define SCL\_REFLECT\_METHOD\_CALLER 
+
+```C++
+#define SCL_REFLECT_METHOD_CALLER (
+    method
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_REFLECT\_METHOD\_EXECUTOR\_OVERRIDE\_BASE 
+
+```C++
+#define SCL_REFLECT_METHOD_EXECUTOR_OVERRIDE_BASE (
+    method,
+    cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_REFLECT\_METHOD\_EXEC\_HELPERS 
+
+```C++
+#define SCL_REFLECT_METHOD_EXEC_HELPERS (
+    method
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
 ### define SCL\_REFLECT\_METHOD\_HELPER 
 
 ```C++
 #define SCL_REFLECT_METHOD_HELPER (
     method,
-    CALLER,
+    caller,
     cv_ref
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define SCL\_REFLECT\_METHOD\_QUALS 
+
+```C++
+#define SCL_REFLECT_METHOD_QUALS (
+    method
 ) `/* multi line expression */`
 ```
 
@@ -331,39 +480,9 @@ cw.convert<double>();   // calls Target::convert<double>() const &  → 42.0
 ```C++
 #define SCL_REFLECT_TEMPLATE_METHOD_BASE (
     method,
-    CALLER,
+    caller,
     cv_ref
 ) `/* multi line expression */`
-```
-
-
-
-
-<hr>
-
-
-
-### define SCL\_VALUE\_ACCESS 
-
-```C++
-#define SCL_VALUE_ACCESS (
-    cv_ref
-) `/* multi line expression */`
-```
-
-
-
-
-<hr>
-
-
-
-### define SCL\_VALUE\_DECLVAL 
-
-```C++
-#define SCL_VALUE_DECLVAL (
-    cv_ref
-) `S_c_L_executor_type_::value(::std::declval<S_c_L_executor_type_ cv_ref>())`
 ```
 
 

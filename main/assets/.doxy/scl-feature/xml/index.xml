@@ -2,6 +2,12 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="structscl_1_1feature_1_1executor__trait" kind="struct"><name>scl::feature::executor_trait</name>
   </compound>
+  <compound refid="classscl_1_1feature_1_1methods__reflection" kind="class"><name>scl::feature::methods_reflection</name>
+  </compound>
+  <compound refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c" kind="class"><name>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</name>
+  </compound>
+  <compound refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" kind="class"><name>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</name>
+  </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1plain" kind="class"><name>scl::feature::inplace::plain</name>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" kind="typedef"><name>value_type</name></member>
@@ -91,16 +97,28 @@
     <member refid="uninitialized_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
     <member refid="uninitialized_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
   </compound>
+  <compound refid="access_8h" kind="file"><name>access.h</name>
+    <member refid="access_8h_1aa71badc8d48e4455fd8bdade8ce99c31" kind="define"><name>SCL_EXECUTOR_ACCESS</name></member>
+    <member refid="access_8h_1a7f70bf8f117f86c10709529c46fa0eac" kind="define"><name>SCL_VALUE_DECLVAL</name></member>
+    <member refid="access_8h_1a644978629452315a127e366d0199dace" kind="define"><name>SCL_VALUE_ACCESS</name></member>
+  </compound>
   <compound refid="method_8h" kind="file"><name>method.h</name>
-    <member refid="method_8h_1a7f70bf8f117f86c10709529c46fa0eac" kind="define"><name>SCL_VALUE_DECLVAL</name></member>
-    <member refid="method_8h_1a644978629452315a127e366d0199dace" kind="define"><name>SCL_VALUE_ACCESS</name></member>
+    <member refid="method_8h_1a032ce92c8105d0e147b57f10ea626008" kind="define"><name>SCL_EXECUTE_OVERRIDED</name></member>
+    <member refid="method_8h_1adffe4308dc2a75cb7a07dad44755d879" kind="define"><name>SCL_EXECUTOR_METHOD_OVERRIDED</name></member>
+    <member refid="method_8h_1a99bd53b74eb372eb38678988b939ea52" kind="define"><name>SCL_REFLECT_METHOD_EXEC_HELPERS</name></member>
+    <member refid="method_8h_1a69ad10b16e28c1f74bdbb33e9cc408a1" kind="define"><name>SCL_REFLECT_METHOD_CALLER</name></member>
+    <member refid="method_8h_1a173f4e0f47cc3b3297578094550e3ed0" kind="define"><name>SCL_REFLECT_METHOD_QUALS</name></member>
+    <member refid="method_8h_1a9e1a9d4d0a8e9fd8b9f925775629c658" kind="define"><name>SCL_EXECUTE_TEMPLATE_OVERRIDED</name></member>
+    <member refid="method_8h_1aba791c2e1fa5e0a2c80e4eb8c95e465e" kind="define"><name>SCL_REFLECT_METHOD_EXECUTOR_OVERRIDE_BASE</name></member>
     <member refid="method_8h_1ad4f647ae3b444f3dfbfdfe2495ebfdbc" kind="define"><name>SCL_REFLECT_METHOD_BASE</name></member>
-    <member refid="method_8h_1a8f709c5e1202a4d13352c0e8006dbf62" kind="define"><name>SCL_REFLECT_TEMPLATE_METHOD_BASE</name></member>
-    <member refid="method_8h_1acab591bd520aa48fe6c63c096dd7bdc6" kind="define"><name>SCL_REFLECT_METHOD_HELPER</name></member>
+    <member refid="method_8h_1af03d7d0770713c80e4929c3e0aa0e7ec" kind="define"><name>SCL_REFLECT_TEMPLATE_METHOD_BASE</name></member>
+    <member refid="method_8h_1aac0f6137c1784110c52fd00d1ca8ea42" kind="define"><name>SCL_REFLECT_METHOD_HELPER</name></member>
     <member refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kind="define"><name>SCL_REFLECT_METHOD</name></member>
   </compound>
+  <compound refid="methods_8h" kind="file"><name>methods.h</name>
+  </compound>
   <compound refid="type_8h" kind="file"><name>type.h</name>
-    <member refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kind="define"><name>SCL_REFLECT_TYPE</name></member>
+    <member refid="type_8h_1a04334714025d2e271f8c953464c5382d" kind="define"><name>SCL_REFLECT_TYPE</name></member>
   </compound>
   <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
   </compound>

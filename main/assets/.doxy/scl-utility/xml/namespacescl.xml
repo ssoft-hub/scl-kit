@@ -155,8 +155,8 @@
       <member refid="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" kind="variable"><name>overload_cast</name></member>
     </sectiondef>
     <sectiondef kind="func">
-      <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
-      <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
+      <member refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kind="function"><name>enum_name</name></member>
+      <member refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" kind="function"><name>enum_short_name</name></member>
       <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
       <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
       <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
@@ -168,6 +168,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="module/utility/src/scl/utility.h" line="13" column="1"/>
+    <location file="module/utility/src/scl/utility.h" line="14" column="1"/>
   </compounddef>
 </doxygen>

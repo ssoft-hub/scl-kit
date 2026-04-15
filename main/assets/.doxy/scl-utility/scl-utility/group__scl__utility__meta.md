@@ -58,8 +58,8 @@ _Meta-level utilities for C++._
 
 | Type | Name |
 | ---: | :--- |
-|  requires ::std::is\_enum\_v&lt; decltype(V)&gt;constexpr ::std::string\_view | [**enum\_name**](#function-enum_name) () noexcept<br>_Retrieves the qualified string name of an enum member at compile-time._  |
-|  requires ::std::is\_enum\_v&lt; decltype(V)&gt;constexpr ::std::string\_view | [**enum\_short\_name**](#function-enum_short_name) () noexcept<br>_Retrieves the short string name of an enum member at compile-time._  |
+|  constexpr ::std::string\_view | [**enum\_name**](#function-enum_name) () noexcept<br>_Retrieves the qualified string name of an enum member at compile-time._  |
+|  constexpr ::std::string\_view | [**enum\_short\_name**](#function-enum_short_name) () noexcept<br>_Retrieves the short string name of an enum member at compile-time._  |
 |  constexpr ::std::string\_view | [**symbol\_name**](#function-symbol_name) () noexcept<br>_Retrieves the qualified string name of a symbol at compile-time._  |
 |  constexpr ::std::string\_view | [**symbol\_short\_name**](#function-symbol_short_name) () noexcept<br>_Retrieves the short string name of a symbol at compile-time._  |
 |  constexpr auto | [**type\_name**](#function-type_name) () noexcept<br>_Retrieves the string name of the template type T at compile-time._  |
@@ -102,7 +102,7 @@ _Meta-level utilities for C++._
 _Retrieves the qualified string name of an enum member at compile-time._ 
 ```
 template<auto V>
-requires ::std::is_enum_v< decltype(V)>constexpr ::std::string_view enum_name () noexcept
+constexpr ::std::string_view enum_name () noexcept
 ```
 
 
@@ -150,7 +150,7 @@ constexpr auto name = ::scl::enum_name<Color::Red>(); // Returns "Color::Red"
 _Retrieves the short string name of an enum member at compile-time._ 
 ```
 template<auto V>
-requires ::std::is_enum_v< decltype(V)>constexpr ::std::string_view enum_short_name () noexcept
+constexpr ::std::string_view enum_short_name () noexcept
 ```
 
 

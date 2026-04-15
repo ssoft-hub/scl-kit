@@ -39,7 +39,7 @@ _djb2a — Daniel J. Bernstein's hash (XOR variant), 64-bit._
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**djb2\_hasher**](structscl_1_1hash_1_1djb2__hasher.md) <br>_Callable wrapper around_ [_**djb2**_](namespacescl_1_1hash.md#function-djb2) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
+| struct | [**djb2\_hasher**](structscl_1_1hash_1_1djb2__hasher.md) <br>_Callable wrapper around_ [_**djb2**_](group__scl__utility__hash.md#function-djb2) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
 
 
 

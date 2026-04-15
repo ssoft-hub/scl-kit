@@ -40,7 +40,7 @@ _SipHash-2-4: 64-bit keyed hash designed for string hashing in hash tables._
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**siphash\_hasher**](structscl_1_1hash_1_1siphash__hasher.md) &lt;Key&gt;<br>_Callable wrapper around_ [_**siphash**_](namespacescl_1_1hash.md#function-siphash) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
+| struct | [**siphash\_hasher**](structscl_1_1hash_1_1siphash__hasher.md) &lt;Key&gt;<br>_Callable wrapper around_ [_**siphash**_](group__scl__utility__hash.md#function-siphash) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
 | struct | [**siphash\_key**](structscl_1_1hash_1_1siphash__key.md) <br>_128-bit secret key for SipHash._  |
 
 

@@ -82,7 +82,7 @@ _Compile-time predicate macro for cv-ref qualifier detection._
 | ---: | :--- |
 | define  | [**SCL\_HAS\_QUALIFIED\_METHOD**](has__qualified__method_8h.md#define-scl_has_qualified_method) (method, Type, ...) <br>_Compile-time predicate: checks whether_ `Type` _has a_**dedicated** _overload of_`method` _whose cv-ref qualifiers exactly match those of_`Type` _._ |
 | define  | [**SCL\_HQM\_CALL**](has__qualified__method_8h.md#define-scl_hqm_call) (method, quals) `::std::declval&lt;Obj quals&gt;().method(::std::declval&lt;S\_c\_L\_Args\_&gt;()...)`<br> |
-| define  | [**SCL\_HQM\_SAME**](has__qualified__method_8h.md#define-scl_hqm_same) (method, left\_quals, right\_quals) `::std::is\_same\_v&lt;decltype(SCL\_HQM\_CALL(method, left\_quals)), decltype(SCL\_HQM\_CALL(method, right\_quals))&gt;`<br> |
+| define  | [**SCL\_HQM\_SAME**](has__qualified__method_8h.md#define-scl_hqm_same) (method, left\_quals, right\_quals) `/* multi line expression */`<br> |
 
 ## Macro Definition Documentation
 
@@ -241,7 +241,7 @@ static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &&));
     method,
     left_quals,
     right_quals
-) `::std::is_same_v<decltype(SCL_HQM_CALL(method, left_quals)), decltype(SCL_HQM_CALL(method, right_quals))>`
+) `/* multi line expression */`
 ```
 
 

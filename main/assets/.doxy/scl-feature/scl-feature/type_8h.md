@@ -79,7 +79,7 @@ _Macro for declaring the wrapper type used by reflection macros._
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**SCL\_REFLECT\_TYPE**](type_8h.md#define-scl_reflect_type) (Type, Member) `/* multi line expression */`<br>_Declares the wrapper type for use by_ `SCL_REFLECT_METHOD` _._ |
+| define  | [**SCL\_REFLECT\_TYPE**](type_8h.md#define-scl_reflect_type) (type, executor) `/* multi line expression */`<br>_Declares the wrapper and executor types for use by_ `SCL_REFLECT_METHOD` _._ |
 
 ## Macro Definition Documentation
 
@@ -89,20 +89,20 @@ _Macro for declaring the wrapper type used by reflection macros._
 
 ### define SCL\_REFLECT\_TYPE 
 
-_Declares the wrapper type for use by_ `SCL_REFLECT_METHOD` _._
+_Declares the wrapper and executor types for use by_ `SCL_REFLECT_METHOD` _._
 ```C++
 #define SCL_REFLECT_TYPE (
-    Type,
-    Member
+    type,
+    executor
 ) `/* multi line expression */`
 ```
 
 
 
-Must appear inside the class body **after** the executor member declaration and **before** any `SCL_REFLECT_METHOD` invocations.
+Must appear inside the class body **before** any `SCL_REFLECT_METHOD` invocations.
 
 
-A specialization of `scl::feature::executor_trait` must also be provided for `Type`.
+A specialization of `scl::feature::executor_trait` must also be provided for `type`.
 
 
 
@@ -112,7 +112,7 @@ A specialization of `scl::feature::executor_trait` must also be provided for `Ty
 
 
 ```C++
-SCL_REFLECT_TYPE(MyWrapper, m_executor);
+SCL_REFLECT_TYPE(MyWrapper, MyExecutor);
 ```
 
 
@@ -122,8 +122,8 @@ SCL_REFLECT_TYPE(MyWrapper, m_executor);
 **Parameters:**
 
 
-* `Type` The unqualified class name. 
-* `Member` Executor data member name.
+* `type` The unqualified wrapper class name. 
+* `executor` The unqualified executor type name.
 
 
 

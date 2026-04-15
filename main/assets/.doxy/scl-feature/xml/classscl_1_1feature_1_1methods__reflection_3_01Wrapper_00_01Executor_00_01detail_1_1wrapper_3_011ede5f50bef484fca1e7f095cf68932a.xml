@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" kind="class" language="C++" prot="public">
+    <compoundname>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</compoundname>
+    <basecompoundref refid="classscl_1_1feature_1_1methods__reflection" prot="public" virt="non-virtual">scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</basecompoundref>
+    <includes refid="detail_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Value</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">template</ref>&lt; <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> &gt; <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">class</ref></type>
+        <declname>OuterExecutor</declname>
+        <defname>OuterExecutor</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Reflection chain for a plain (non-nested) wrapper. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Delegates to <computeroutput><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;Wrapper_</computeroutput>, Executor_, Value_&gt; so that the outer wrapper exposes all methods reflected for the held value type. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</label>
+        <link refid="classscl_1_1feature_1_1methods__reflection"/>
+      </node>
+      <node id="1">
+        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</label>
+        <link refid="classscl_1_1feature_1_1methods__reflection"/>
+      </node>
+      <node id="1">
+        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="module/feature/src/scl/feature/detail/wrapper.h" line="89" column="5" bodyfile="module/feature/src/scl/feature/detail/wrapper.h" bodystart="91" bodyend="91"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

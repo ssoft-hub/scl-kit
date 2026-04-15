@@ -302,157 +302,158 @@
 #define SCL_HQM_CALL(method, quals) \
     ::std::declval&lt;Obj quals&gt;().method(::std::declval&lt;S_c_L_Args_&gt;()...)
 
-#define SCL_HQM_SAME(method, left_quals, right_quals) \
-    ::std::is_same_v&lt;decltype(SCL_HQM_CALL(method, left_quals)), decltype(SCL_HQM_CALL(method, right_quals))&gt;
+#define SCL_HQM_SAME(method, left_quals, right_quals)                         \
+    ::std::is_same_v&lt;decltype(SCL_HQM_CALL(SCL_FORWARD(method), left_quals)), \
+        decltype(SCL_HQM_CALL(SCL_FORWARD(method), right_quals))&gt;
 
 
-#define SCL_HAS_QUALIFIED_METHOD(method, Type, ...)                                               \
-    ([]&lt;typename S_c_L_Type_, typename... S_c_L_Args_&gt;() -&gt; bool {                                \
-        using Obj = ::std::remove_cvref_t&lt;S_c_L_Type_&gt;;                                           \
-        using Base = ::std::remove_reference_t&lt;S_c_L_Type_&gt;;                                      \
-                                                                                                  \
-        constexpr bool is_obj_rvalue = ::std::is_rvalue_reference_v&lt;S_c_L_Type_&gt;;                 \
-        constexpr bool is_obj_lvalue = ::std::is_lvalue_reference_v&lt;S_c_L_Type_&gt;;                 \
-        constexpr bool is_obj_const = ::std::is_const_v&lt;Base&gt;;                                    \
-        constexpr bool is_obj_volatile = ::std::is_volatile_v&lt;Base&gt;;                              \
-        constexpr bool is_obj_cv = is_obj_const &amp;&amp; is_obj_volatile;                               \
-                                                                                                  \
-        /* --- lvalue callability --- */                                                          \
-        constexpr bool can_lv_m = requires { SCL_HQM_CALL(method, &amp;); };                          \
-        constexpr bool can_lv_c = requires { SCL_HQM_CALL(method, const &amp;); };                    \
-        constexpr bool can_lv_v = requires { SCL_HQM_CALL(method, volatile &amp;); };                 \
-        constexpr bool can_lv_cv = requires { SCL_HQM_CALL(method, const volatile &amp;); };          \
-                                                                                                  \
-        /* --- rvalue callability --- */                                                          \
-        constexpr bool can_rv_m = requires { SCL_HQM_CALL(method, &amp;&amp;); };                         \
-        constexpr bool can_rv_c = requires { SCL_HQM_CALL(method, const &amp;&amp;); };                   \
-        constexpr bool can_rv_v = requires { SCL_HQM_CALL(method, volatile &amp;&amp;); };                \
-        constexpr bool can_rv_cv = requires { SCL_HQM_CALL(method, const volatile &amp;&amp;); };         \
-                                                                                                  \
-        /* --- lvalue qualifier detection --- */                                                  \
-        /* Return-type comparisons (SCL_HQM_SAME) are guarded by if-constexpr */                  \
-        /* callability checks so that decltype is never evaluated on an ill-formed call. */       \
-        if constexpr (is_obj_lvalue)                                                              \
-        {                                                                                         \
-            if constexpr (is_obj_cv)                                                              \
-            {                                                                                     \
-                return can_lv_cv;                                                                 \
-            }                                                                                     \
-            else if constexpr (is_obj_volatile || is_obj_const)                                   \
-            {                                                                                     \
-                constexpr bool can_narrow = is_obj_volatile ? can_lv_v : can_lv_c;                \
-                constexpr bool can_wider = can_lv_cv;                                             \
-                if constexpr (!can_narrow)                                                        \
-                    return false;                                                                 \
-                else if constexpr (!can_wider)                                                    \
-                    return true;                                                                  \
-                else                                                                              \
-                    return !(is_obj_volatile                                                      \
-                            ? SCL_HQM_SAME(method, volatile &amp;, const volatile &amp;)                  \
-                            : SCL_HQM_SAME(method, const &amp;, const volatile &amp;));                   \
-            }                                                                                     \
-            else                                                                                  \
-            {                                                                                     \
-                /* mutable lvalue: must differ from every wider qualifier that is callable. */    \
-                if constexpr (!can_lv_m)                                                          \
-                    return false;                                                                 \
-                else                                                                              \
-                {                                                                                 \
-                    if constexpr (can_lv_c)                                                       \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;, const &amp;))                           \
-                            return false;                                                         \
-                    }                                                                             \
-                    if constexpr (can_lv_v)                                                       \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;, volatile &amp;))                        \
-                            return false;                                                         \
-                    }                                                                             \
-                    if constexpr (can_lv_cv)                                                      \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;, const volatile &amp;))                  \
-                            return false;                                                         \
-                    }                                                                             \
-                    return true;                                                                  \
-                }                                                                                 \
-            }                                                                                     \
-        }                                                                                         \
-        /* --- rvalue qualifier detection --- */                                                  \
-        else if constexpr (is_obj_rvalue)                                                         \
-        {                                                                                         \
-            if constexpr (is_obj_cv)                                                              \
-            {                                                                                     \
-                return can_rv_cv;                                                                 \
-            }                                                                                     \
-            else if constexpr (is_obj_volatile)                                                   \
-            {                                                                                     \
-                if constexpr (!can_rv_v)                                                          \
-                    return false;                                                                 \
-                else if constexpr (!can_rv_cv)                                                    \
-                    return true;                                                                  \
-                else                                                                              \
-                    return !SCL_HQM_SAME(method, volatile &amp;&amp;, const volatile &amp;&amp;);                 \
-            }                                                                                     \
-            else if constexpr (is_obj_const)                                                      \
-            {                                                                                     \
-                /* MSVC cross-category check: const&amp; is callable on rvalues (non-standard). */    \
-                /* Detect implicit binding by comparing return types across categories.     */    \
-                if constexpr (!can_rv_c)                                                          \
-                    return false;                                                                 \
-                else                                                                              \
-                {                                                                                 \
-                    if constexpr (can_rv_cv)                                                      \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, const &amp;&amp;, const volatile &amp;&amp;))          \
-                            return false;                                                         \
-                    }                                                                             \
-                    if constexpr (can_lv_c)                                                       \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, const &amp;&amp;, const &amp;))                    \
-                        {                                                                         \
-                            if constexpr (!can_rv_m)                                              \
-                                return false;                                                     \
-                            else                                                                  \
-                            {                                                                     \
-                                constexpr bool scl_same_rv_ = SCL_HQM_SAME(method, &amp;&amp;, const &amp;&amp;); \
-                                if constexpr (scl_same_rv_)                                       \
-                                    return false;                                                 \
-                            }                                                                     \
-                        }                                                                         \
-                    }                                                                             \
-                    return true;                                                                  \
-                }                                                                                 \
-            }                                                                                     \
-            else                                                                                  \
-            {                                                                                     \
-                /* mutable rvalue: must differ from every wider qualifier that is callable. */    \
-                if constexpr (!can_rv_m)                                                          \
-                    return false;                                                                 \
-                else                                                                              \
-                {                                                                                 \
-                    if constexpr (can_rv_c)                                                       \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;&amp;, const &amp;&amp;))                         \
-                            return false;                                                         \
-                    }                                                                             \
-                    if constexpr (can_rv_v)                                                       \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;&amp;, volatile &amp;&amp;))                      \
-                            return false;                                                         \
-                    }                                                                             \
-                    if constexpr (can_rv_cv)                                                      \
-                    {                                                                             \
-                        if constexpr (SCL_HQM_SAME(method, &amp;&amp;, const volatile &amp;&amp;))                \
-                            return false;                                                         \
-                    }                                                                             \
-                    return true;                                                                  \
-                }                                                                                 \
-            }                                                                                     \
-        }                                                                                         \
-        else                                                                                      \
-        {                                                                                         \
-            return false;                                                                         \
-        }                                                                                         \
+#define SCL_HAS_QUALIFIED_METHOD(method, Type, ...)                                                            \
+    ([]&lt;typename S_c_L_Type_, typename... S_c_L_Args_&gt;() -&gt; bool {                                             \
+        using Obj = ::std::remove_cvref_t&lt;S_c_L_Type_&gt;;                                                        \
+        using Base = ::std::remove_reference_t&lt;S_c_L_Type_&gt;;                                                   \
+                                                                                                               \
+        constexpr bool is_obj_rvalue = ::std::is_rvalue_reference_v&lt;S_c_L_Type_&gt;;                              \
+        constexpr bool is_obj_lvalue = ::std::is_lvalue_reference_v&lt;S_c_L_Type_&gt;;                              \
+        constexpr bool is_obj_const = ::std::is_const_v&lt;Base&gt;;                                                 \
+        constexpr bool is_obj_volatile = ::std::is_volatile_v&lt;Base&gt;;                                           \
+        constexpr bool is_obj_cv = is_obj_const &amp;&amp; is_obj_volatile;                                            \
+                                                                                                               \
+        /* --- lvalue callability --- */                                                                       \
+        constexpr bool can_lv_m = requires { SCL_HQM_CALL(SCL_FORWARD(method), &amp;); };                          \
+        constexpr bool can_lv_c = requires { SCL_HQM_CALL(SCL_FORWARD(method), const &amp;); };                    \
+        constexpr bool can_lv_v = requires { SCL_HQM_CALL(SCL_FORWARD(method), volatile &amp;); };                 \
+        constexpr bool can_lv_cv = requires { SCL_HQM_CALL(SCL_FORWARD(method), const volatile &amp;); };          \
+                                                                                                               \
+        /* --- rvalue callability --- */                                                                       \
+        constexpr bool can_rv_m = requires { SCL_HQM_CALL(SCL_FORWARD(method), &amp;&amp;); };                         \
+        constexpr bool can_rv_c = requires { SCL_HQM_CALL(SCL_FORWARD(method), const &amp;&amp;); };                   \
+        constexpr bool can_rv_v = requires { SCL_HQM_CALL(SCL_FORWARD(method), volatile &amp;&amp;); };                \
+        constexpr bool can_rv_cv = requires { SCL_HQM_CALL(SCL_FORWARD(method), const volatile &amp;&amp;); };         \
+                                                                                                               \
+        /* --- lvalue qualifier detection --- */                                                               \
+        /* Return-type comparisons (SCL_HQM_SAME) are guarded by if-constexpr */                               \
+        /* callability checks so that decltype is never evaluated on an ill-formed call. */                    \
+        if constexpr (is_obj_lvalue)                                                                           \
+        {                                                                                                      \
+            if constexpr (is_obj_cv)                                                                           \
+            {                                                                                                  \
+                return can_lv_cv;                                                                              \
+            }                                                                                                  \
+            else if constexpr (is_obj_volatile || is_obj_const)                                                \
+            {                                                                                                  \
+                constexpr bool can_narrow = is_obj_volatile ? can_lv_v : can_lv_c;                             \
+                constexpr bool can_wider = can_lv_cv;                                                          \
+                if constexpr (!can_narrow)                                                                     \
+                    return false;                                                                              \
+                else if constexpr (!can_wider)                                                                 \
+                    return true;                                                                               \
+                else                                                                                           \
+                    return !(is_obj_volatile                                                                   \
+                            ? SCL_HQM_SAME(SCL_FORWARD(method), volatile &amp;, const volatile &amp;)                  \
+                            : SCL_HQM_SAME(SCL_FORWARD(method), const &amp;, const volatile &amp;));                   \
+            }                                                                                                  \
+            else                                                                                               \
+            {                                                                                                  \
+                /* mutable lvalue: must differ from every wider qualifier that is callable. */                 \
+                if constexpr (!can_lv_m)                                                                       \
+                    return false;                                                                              \
+                else                                                                                           \
+                {                                                                                              \
+                    if constexpr (can_lv_c)                                                                    \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;, const &amp;))                           \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    if constexpr (can_lv_v)                                                                    \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;, volatile &amp;))                        \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    if constexpr (can_lv_cv)                                                                   \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;, const volatile &amp;))                  \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    return true;                                                                               \
+                }                                                                                              \
+            }                                                                                                  \
+        }                                                                                                      \
+        /* --- rvalue qualifier detection --- */                                                               \
+        else if constexpr (is_obj_rvalue)                                                                      \
+        {                                                                                                      \
+            if constexpr (is_obj_cv)                                                                           \
+            {                                                                                                  \
+                return can_rv_cv;                                                                              \
+            }                                                                                                  \
+            else if constexpr (is_obj_volatile)                                                                \
+            {                                                                                                  \
+                if constexpr (!can_rv_v)                                                                       \
+                    return false;                                                                              \
+                else if constexpr (!can_rv_cv)                                                                 \
+                    return true;                                                                               \
+                else                                                                                           \
+                    return !SCL_HQM_SAME(SCL_FORWARD(method), volatile &amp;&amp;, const volatile &amp;&amp;);                 \
+            }                                                                                                  \
+            else if constexpr (is_obj_const)                                                                   \
+            {                                                                                                  \
+                /* MSVC cross-category check: const&amp; is callable on rvalues (non-standard). */                 \
+                /* Detect implicit binding by comparing return types across categories.     */                 \
+                if constexpr (!can_rv_c)                                                                       \
+                    return false;                                                                              \
+                else                                                                                           \
+                {                                                                                              \
+                    if constexpr (can_rv_cv)                                                                   \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), const &amp;&amp;, const volatile &amp;&amp;))          \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    if constexpr (can_lv_c)                                                                    \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), const &amp;&amp;, const &amp;))                    \
+                        {                                                                                      \
+                            if constexpr (!can_rv_m)                                                           \
+                                return false;                                                                  \
+                            else                                                                               \
+                            {                                                                                  \
+                                constexpr bool scl_same_rv_ = SCL_HQM_SAME(SCL_FORWARD(method), &amp;&amp;, const &amp;&amp;); \
+                                if constexpr (scl_same_rv_)                                                    \
+                                    return false;                                                              \
+                            }                                                                                  \
+                        }                                                                                      \
+                    }                                                                                          \
+                    return true;                                                                               \
+                }                                                                                              \
+            }                                                                                                  \
+            else                                                                                               \
+            {                                                                                                  \
+                /* mutable rvalue: must differ from every wider qualifier that is callable. */                 \
+                if constexpr (!can_rv_m)                                                                       \
+                    return false;                                                                              \
+                else                                                                                           \
+                {                                                                                              \
+                    if constexpr (can_rv_c)                                                                    \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;&amp;, const &amp;&amp;))                         \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    if constexpr (can_rv_v)                                                                    \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;&amp;, volatile &amp;&amp;))                      \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    if constexpr (can_rv_cv)                                                                   \
+                    {                                                                                          \
+                        if constexpr (SCL_HQM_SAME(SCL_FORWARD(method), &amp;&amp;, const volatile &amp;&amp;))                \
+                            return false;                                                                      \
+                    }                                                                                          \
+                    return true;                                                                               \
+                }                                                                                              \
+            }                                                                                                  \
+        }                                                                                                      \
+        else                                                                                                   \
+        {                                                                                                      \
+            return false;                                                                                      \
+        }                                                                                                      \
     }).template operator()&lt;SCL_FORWARD(Type), ##__VA_ARGS__&gt;()
 </code></pre>
 

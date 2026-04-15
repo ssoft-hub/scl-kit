@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="nodiscard_8h" kind="file" language="C++">
+    <compoundname>nodiscard.h</compoundname>
+    <includedby refid="attribute_8h" local="no">module/utility/src/scl/utility/attribute.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/attribute.h</label>
+        <link refid="attribute_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/attribute/nodiscard.h</label>
+        <link refid="nodiscard_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <member refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kind="define"><name>SCL_NODISCARD</name></member>
+      <member refid="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" kind="define"><name>SCL_NODISCARD_MSG</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Warn-on-discard annotation macros: SCL_NODISCARD and SCL_NODISCARD_MSG. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_NODISCARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__has_cpp_attribute(nodiscard)<sp/>&gt;=<sp/>201907L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD<sp/>[[nodiscard]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD_MSG(msg)<sp/>[[nodiscard(msg)]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>__has_cpp_attribute(nodiscard)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD<sp/>[[nodiscard]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD_MSG(msg)<sp/>[[nodiscard]]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__has_attribute)<sp/>&amp;&amp;<sp/>__has_attribute(warn_unused_result)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD<sp/>__attribute__((warn_unused_result))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD_MSG(msg)<sp/>__attribute__((warn_unused_result))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD_MSG(msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_NODISCARD_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_NODISCARD_MSG(msg)<sp/>SCL_NODISCARD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/attribute/nodiscard.h"/>
+  </compounddef>
+</doxygen>

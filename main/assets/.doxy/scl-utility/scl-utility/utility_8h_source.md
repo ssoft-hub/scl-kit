@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+#include <scl/utility/attribute.h>
 #include <scl/utility/meta.h>
 #include <scl/utility/preprocessor.h>
 #include <scl/utility/type_traits.h>

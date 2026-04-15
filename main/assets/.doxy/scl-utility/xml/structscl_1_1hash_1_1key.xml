@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="82" column="9" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="82" bodyend="-1"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="85" column="9" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" prot="public" static="no">
         <type>typename Hasher::result_type</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="85" column="9" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="85" bodyend="-1"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="88" column="9" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="88" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -58,11 +58,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="88" column="20" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="88" bodyend="88"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="91" column="20" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="91" bodyend="91"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structscl_1_1hash_1_1key_1afc6110964513f363a9f2ba1315647010" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>::std::ranges::range</type>
@@ -70,8 +70,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr</type>
-        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr scl::hash::key&lt; Hasher &gt;::key</definition>
+        <type>constexpr</type>
+        <definition>constexpr scl::hash::key&lt; Hasher &gt;::key</definition>
         <argsstring>(Range const &amp;range) noexcept</argsstring>
         <name>key</name>
         <qualifiedname>scl::hash::key::key</qualifiedname>
@@ -79,6 +79,7 @@
           <type>Range const &amp;</type>
           <declname>range</declname>
         </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
         <briefdescription>
 <para>Constructs the digest by hashing <computeroutput>range</computeroutput> with <computeroutput>Hasher</computeroutput>. </para>
         </briefdescription>
@@ -105,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="97" column="28" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="97" bodyend="99"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="99" column="28" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="99" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>constexpr</type>
@@ -120,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="102" column="19" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="102" bodyend="102"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="105" column="19" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="105" bodyend="105"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -143,11 +144,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/key.h" line="105" column="26"/>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="108" column="26"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Strongly-typed FNV-1a hash digest parameterized by a hash function. </para>
+<para>Strongly-typed hash digest parameterized by a hash function. </para>
     </briefdescription>
     <detaileddescription>
 <para>Wraps the digest produced by <computeroutput>Hasher</computeroutput> in a named type, preventing accidental mixing of raw integers with hash values. The <computeroutput>value_type</computeroutput> and width of the digest are derived automatically from the hasher&apos;s return type:</para>
@@ -214,10 +215,10 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="module/utility/src/scl/utility/hash/key.h" line="79" column="5" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="80" bodyend="106"/>
+    <location file="module/utility/src/scl/utility/hash/key.h" line="82" column="5" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="83" bodyend="109"/>
     <listofallmembers>
       <member refid="structscl_1_1hash_1_1key_1a1b3c9595487df01e24a494da09ed1c13" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>hasher_type</name></member>
-      <member refid="structscl_1_1hash_1_1key_1afc6110964513f363a9f2ba1315647010" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>key</name></member>
+      <member refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>key</name></member>
       <member refid="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>operator value_type</name></member>
       <member refid="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>operator&lt;=&gt;</name></member>
       <member refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" prot="public" virt="non-virtual"><scope>scl::hash::key</scope><name>value</name></member>

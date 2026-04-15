@@ -16,11 +16,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="59" column="9" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="59" bodyend="-1"/>
+        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="62" column="9" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="62" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structscl_1_1hash_1_1sdbm__hasher_1af5b312d289c657b77df6a7dcda3d7770" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="structscl_1_1hash_1_1sdbm__hasher_1a50c5cacdb8800c2fb8bae5d49fdf648d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>::std::ranges::range</type>
@@ -28,8 +28,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr result_type</type>
-        <definition>requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr result_type scl::hash::sdbm_hasher::operator()</definition>
+        <type>constexpr result_type</type>
+        <definition>constexpr result_type scl::hash::sdbm_hasher::operator()</definition>
         <argsstring>(Range const &amp;range) const noexcept</argsstring>
         <name>operator()</name>
         <qualifiedname>scl::hash::sdbm_hasher::operator()</qualifiedname>
@@ -37,23 +37,24 @@
           <type>Range const &amp;</type>
           <declname>range</declname>
         </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="63" column="31" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="63" bodyend="66"/>
+        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="65" column="31" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="65" bodyend="69"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Callable wrapper around <ref refid="sdbm_8h_1ac49961f320741e81b44da462386bfce3" kindref="member">sdbm</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
+<para>Callable wrapper around <ref refid="group__scl__utility__hash_1gaec361ebf99797481bbe413b6faf9d7e0" kindref="member">sdbm</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="module/utility/src/scl/utility/hash/sdbm.h" line="57" column="5" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="58" bodyend="67"/>
+    <location file="module/utility/src/scl/utility/hash/sdbm.h" line="60" column="5" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="61" bodyend="70"/>
     <listofallmembers>
-      <member refid="structscl_1_1hash_1_1sdbm__hasher_1af5b312d289c657b77df6a7dcda3d7770" prot="public" virt="non-virtual"><scope>scl::hash::sdbm_hasher</scope><name>operator()</name></member>
+      <member refid="structscl_1_1hash_1_1sdbm__hasher_1a50c5cacdb8800c2fb8bae5d49fdf648d" prot="public" virt="non-virtual"><scope>scl::hash::sdbm_hasher</scope><name>operator()</name></member>
       <member refid="structscl_1_1hash_1_1sdbm__hasher_1a2f9e63aef90cd412d9b08df22449ef4d" prot="public" virt="non-virtual"><scope>scl::hash::sdbm_hasher</scope><name>result_type</name></member>
     </listofallmembers>
   </compounddef>

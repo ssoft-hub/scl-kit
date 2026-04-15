@@ -3,6 +3,9 @@
   <compounddef id="namespacescl_1_1feature" kind="namespace" language="C++">
     <compoundname>scl::feature</compoundname>
     <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1methods__reflection" prot="public">scl::feature::methods_reflection</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c" prot="public">scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" prot="public">scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</innerclass>
     <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
     <innernamespace refid="namespacescl_1_1feature_1_1inplace">scl::feature::inplace</innernamespace>
     <sectiondef kind="var">

@@ -7,7 +7,7 @@
     <innerfile refid="symbol_8h">symbol.h</innerfile>
     <innerfile refid="type_8h">type.h</innerfile>
     <sectiondef kind="func">
-      <memberdef kind="function" id="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>auto</type>
@@ -15,11 +15,12 @@
             <defname>V</defname>
           </param>
         </templateparamlist>
-        <type>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</type>
-        <definition>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view scl::enum_name</definition>
+        <type>constexpr ::std::string_view</type>
+        <definition>constexpr ::std::string_view scl::enum_name</definition>
         <argsstring>() noexcept</argsstring>
         <name>enum_name</name>
         <qualifiedname>scl::enum_name</qualifiedname>
+    <requiresclause>::std::is_enum_v&lt;decltype(V)&gt;    </requiresclause>
         <briefdescription>
 <para>Retrieves the qualified string name of an enum member at compile-time. </para>
         </briefdescription>
@@ -44,9 +45,9 @@ Extracts the enum member name from the function signature. On MSVC, it automatic
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/meta/enum.h" line="84" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="84" bodyend="97"/>
+        <location file="module/utility/src/scl/utility/meta/enum.h" line="83" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="83" bodyend="97"/>
       </memberdef>
-      <memberdef kind="function" id="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>auto</type>
@@ -54,11 +55,12 @@ Extracts the enum member name from the function signature. On MSVC, it automatic
             <defname>V</defname>
           </param>
         </templateparamlist>
-        <type>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view</type>
-        <definition>requires ::std::is_enum_v&lt; decltype(V)&gt;constexpr ::std::string_view scl::enum_short_name</definition>
+        <type>constexpr ::std::string_view</type>
+        <definition>constexpr ::std::string_view scl::enum_short_name</definition>
         <argsstring>() noexcept</argsstring>
         <name>enum_short_name</name>
         <qualifiedname>scl::enum_short_name</qualifiedname>
+    <requiresclause>::std::is_enum_v&lt;decltype(V)&gt;    </requiresclause>
         <briefdescription>
 <para>Retrieves the short string name of an enum member at compile-time. </para>
         </briefdescription>
@@ -74,14 +76,14 @@ Extracts the enum member name from the function signature. On MSVC, it automatic
 </parameterlist>
 <simplesect kind="return"><para>A ::std::string_view containing only the member name (e.g., &quot;Red&quot;).</para>
 </simplesect>
-This is a convenience wrapper that takes the result of <ref refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kindref="member">scl::enum_name&lt;V&gt;()</ref> and strips all type and namespace qualifiers.</para>
+This is a convenience wrapper that takes the result of <ref refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kindref="member">scl::enum_name&lt;V&gt;()</ref> and strips all type and namespace qualifiers.</para>
 <para><programlisting><codeline><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gfx<sp/>{<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Mode<sp/>{<sp/>Fast<sp/>};<sp/>}</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>::scl::enum_short_name&lt;gfx::Mode::Fast&gt;();<sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>&quot;Fast&quot;</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/utility/src/scl/utility/meta/enum.h" line="116" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="116" bodyend="124"/>
+        <location file="module/utility/src/scl/utility/meta/enum.h" line="115" column="34" bodyfile="module/utility/src/scl/utility/meta/enum.h" bodystart="115" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
