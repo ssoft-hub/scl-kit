@@ -1,0 +1,957 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Group scl_feature_type_traits - SCL.Feature</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#group-scl_feature_type_traits" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCL.Feature" class="md-header__button md-logo" aria-label="SCL.Feature" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCL.Feature
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Group scl_feature_type_traits
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCL.Feature" class="md-nav__button md-logo" aria-label="SCL.Feature" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SCL.Feature
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Attributes Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_execute_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_execute_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_guard_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_guard_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_unguard_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_unguard_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-has_value_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable has_value_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_compatible_with_part_of_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_compatible_with_part_of_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_compatible_with_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_compatible_with_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_convertible_from_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_convertible_from_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_executor_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_executor_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_guard_noexcept_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_guard_noexcept_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_part_compatible_with_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_part_compatible_with_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_unguard_noexcept_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_unguard_noexcept_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-is_wrapper_v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable is_wrapper_v
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macro-definition-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Definition Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macro Definition Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_has_qualified_method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_HAS_QUALIFIED_METHOD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="group-scl_feature_type_traits">Group scl_feature_type_traits</h1>
+<p><a href="../modules/"><strong>Modules</strong></a> <strong>&gt;</strong> <a href="./"><strong>scl_feature_type_traits</strong></a></p>
+<p><em>Type-level utilities for ScL Feature metaprogramming.</em> </p>
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../has__qualified__method_8h/"><strong>has_qualified_method.h</strong></a> <br><em>Compile-time predicate macro for cv-ref qualifier detection.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../type__traits_8h/"><strong>type_traits.h</strong></a> <br><em>ScL Feature type traits.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> &lt;<a href="./#variable-is_executor_v"><strong>typename</strong></a> <a href="./#variable-is_executor_v"><strong>T</strong></a>&gt;<br><em>Trait that provides access to the executor inside a wrapper.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_execute_v"><strong>has_execute_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>execute()</code> <em>method whose first parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_guard_v"><strong>has_guard_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>guard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_unguard_v"><strong>has_unguard_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>unguard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-has_value_v"><strong>has_value_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>value()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_compatible_with_part_of_v"><strong>is_compatible_with_part_of_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_compatible_with_v"><strong>is_compatible_with_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Test</code> <em>is compatible with (usable in place of)</em><code>Expected</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_convertible_from_v"><strong>is_convertible_from_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Target</code> <em>is convertible from</em><code>Refer</code> <em>directly or through any level of the wrapper chain.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_executor_v"><strong>is_executor_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>Type</code> <em>satisfies the executor interface.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_guard_noexcept_v"><strong>is_guard_noexcept_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType::guard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_part_compatible_with_v"><strong>is_part_compatible_with_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_unguard_noexcept_v"><strong>is_unguard_noexcept_v</strong></a>   = <code>/* multi line expression */</code><br><code>true</code> <em>if</em><code>ExecutorType::unguard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">constexpr bool</td>
+<td style="text-align: left;"><a href="#variable-is_wrapper_v"><strong>is_wrapper_v</strong></a>   = <code>/* multi line expression */</code><br><em>Checks whether</em> <code>Type</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="macros">Macros</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_has_qualified_method"><strong>SCL_HAS_QUALIFIED_METHOD</strong></a> (method, Type, ...) <br><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em> <code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-has_execute_v">variable has_execute_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>execute()</code> <em>method whose first parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_execute_v;
+</code></pre>
+<p>The callable parameter is probed as <code>void(*&amp;)</code>() (lvalue-reference to function pointer) so that template argument deduction for <code>Func&amp;&amp;</code> collapses to an lvalue reference and the cast target type matches exactly. This enforces exact matching on the executor argument while remaining compatible with the universal-reference callable parameter required by the executor interface.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_guard_v">variable has_guard_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>guard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_guard_v;
+</code></pre>
+<p>Detection uses a function-pointer cast, which enforces exact parameter matching — both template (via deduction from cast target) and non-template overloads are supported, but implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) are rejected.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_unguard_v">variable has_unguard_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has an</em><code>unguard()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_unguard_v;
+</code></pre>
+<p>Detection uses a function-pointer cast, which enforces exact parameter matching — both template (via deduction from cast target) and non-template overloads are supported, but implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) are rejected.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type.  </li>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-has_value_v">variable has_value_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType</code> <em>has a</em><code>value()</code> <em>method whose first (and only) parameter type is exactly</em><code>ExecutorRefer</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::has_value_v;
+</code></pre>
+<p>Detection uses a function-pointer cast: the return type is deduced from a trial call, then <code>&amp;ExecutorType::value</code> is cast to that exact pointer type. This rejects implicit conversions (e.g. binding an rvalue to <code>const&amp;</code>) while correctly handling both template and non-template overloads.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-is_compatible_with_part_of_v">variable is_compatible_with_part_of_v</h3>
+<p><em>Checks whether</em> <code>Expected</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Test</code> <em>(also a wrapper).</em></p>
+<pre><code>constexpr bool scl::feature::is_compatible_with_part_of_v;
+</code></pre>
+<p>Peels layers off <code>Expected</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Test</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Expected</code> Outer wrapper whose contents are inspected. </li>
+<li><code>Test</code> Wrapper to match against.</li>
+</ul>
+<pre><code>using W   = wrapper&lt;int,                     feature::inplace::plain&gt;;
+using WW  = wrapper&lt;W,                       feature::inplace::plain&gt;;
+using WWW = wrapper&lt;WW,                      feature::inplace::plain&gt;;
+
+static_assert( is_compatible_with_part_of_v&lt;WW,  W&gt;);   // WW's inner value IS W
+static_assert( is_compatible_with_part_of_v&lt;WWW, W&gt;);   // two levels deep
+static_assert(!is_compatible_with_part_of_v&lt;W,  WW&gt;);   // W does not contain WW
+static_assert(!is_compatible_with_part_of_v&lt;int, W&gt;);   // Expected not a wrapper
+static_assert(!is_compatible_with_part_of_v&lt;W, int&gt;);   // Test not a wrapper
+</code></pre>
+<hr>
+
+<h3 id="variable-is_compatible_with_v">variable is_compatible_with_v</h3>
+<p><em>Checks whether</em> <code>Test</code> <em>is compatible with (usable in place of)</em><code>Expected</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_compatible_with_v;
+</code></pre>
+<p>For non-wrapper types the check is: <code>Test</code> is the same type as <code>Expected</code>, or <code>Test</code> is publicly derived from <code>Expected</code>. For <code>wrapper</code> specializations that share the same template-template argument the check is applied recursively to their value types. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Expected</code> Target type. </li>
+<li><code>Test</code> Type to verify compatibility of.</li>
+</ul>
+<pre><code>using P1 = wrapper&lt;int,    feature::inplace::plain&gt;;
+using P2 = wrapper&lt;double, feature::inplace::plain&gt;;
+using U1 = wrapper&lt;int,    feature::inplace::uninitialized&gt;;
+
+static_assert( is_compatible_with_v&lt;P1, P1&gt;);         // identical types
+static_assert( is_compatible_with_v&lt;P1, P1 const &amp;&gt;); // cv-ref stripped
+static_assert(!is_compatible_with_v&lt;P1, P2&gt;);         // incompatible value types
+static_assert(!is_compatible_with_v&lt;P1, U1&gt;);         // different template param
+static_assert(!is_compatible_with_v&lt;int, P1&gt;);        // non-wrapper vs wrapper
+static_assert( is_compatible_with_v&lt;int, int&gt;);       // same non-wrapper type
+</code></pre>
+<hr>
+
+<h3 id="variable-is_convertible_from_v">variable is_convertible_from_v</h3>
+<p><em>Checks whether</em> <code>Target</code> <em>is convertible from</em><code>Refer</code> <em>directly or through any level of the wrapper chain.</em></p>
+<pre><code>constexpr bool scl::feature::is_convertible_from_v;
+</code></pre>
+<p>Extends <code>std::is_convertible</code> to wrapper chains:
+* base case: <code>Refer</code> is directly convertible to <code>Target</code>, or
+* recursive case: <code>Refer</code> is a wrapper and <code>Target</code> is convertible from the inner value reference type.</p>
+<p>This is the condition under which <code>value_lock&lt;Refer&gt;::lock_for&lt;Target&gt;()</code> and <code>value_lock&lt;Refer&gt;::value_as&lt;Target&gt;()</code> are well-formed.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Target</code> The desired reference type (cv-ref qualified). </li>
+<li><code>Refer</code> The starting reference type (outermost wrapper or plain value). </li>
+</ul>
+<hr>
+
+<h3 id="variable-is_executor_v">variable is_executor_v</h3>
+<p><code>true</code> <em>if</em><code>Type</code> <em>satisfies the executor interface.</em></p>
+<pre><code>constexpr bool scl::feature::is_executor_v;
+</code></pre>
+<p>The check requires that the following static methods are callable for the three primary value categories (<code>Type&amp;</code>, <code>Type&amp;&amp;</code>, <code>Type</code> const&amp;):</p>
+<ul>
+<li><code>Type::value(Self&amp;&amp;)</code> — returns a reference to the held value.</li>
+<li><code>Type::execute(Self&amp;&amp;, Func&amp;&amp;)</code> — invokes a callable in the executor's context; checked with a zero-argument <code>void(*)</code>().</li>
+</ul>
+<p>Optional methods (<code>guard</code>, <code>unguard</code>) are not part of this check. Non-class types (e.g. <code>void</code>, scalars) always yield <code>false</code>. cv-ref qualifiers on <code>Type</code> are stripped before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Type</code> Type to check (cv-ref qualifiers are stripped).</li>
+</ul>
+<p><strong>See also:</strong> scl::feature::concepts::executor</p>
+<pre><code>static_assert( is_executor_v&lt;feature::inplace::plain&lt;int&gt;&gt;);
+static_assert( is_executor_v&lt;feature::inplace::plain&lt;int&gt; const&gt;);  // cv-ref stripped
+static_assert(!is_executor_v&lt;int&gt;);
+static_assert(!is_executor_v&lt;void&gt;);
+
+template &lt;typename T&gt;
+struct MyExecutor {
+    using value_type = T;
+    T m_value{};
+    template &lt;typename Self, typename Func&gt;
+    static constexpr decltype(auto) execute(Self&amp;&amp;, Func&amp;&amp; f) { return f(); }
+    template &lt;typename Self&gt;
+    static constexpr decltype(auto) value(Self&amp;&amp; self) { return forward_like&lt;Self&gt;(self.m_value); }
+};
+static_assert(is_executor_v&lt;MyExecutor&lt;int&gt;&gt;);
+</code></pre>
+<hr>
+
+<h3 id="variable-is_guard_noexcept_v">variable is_guard_noexcept_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType::guard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_guard_noexcept_v;
+</code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-is_part_compatible_with_v">variable is_part_compatible_with_v</h3>
+<p><em>Checks whether</em> <code>Test</code> <em>(a wrapper) recursively contains a value that is compatible with</em><code>Expected</code> <em>(also a wrapper).</em></p>
+<pre><code>constexpr bool scl::feature::is_part_compatible_with_v;
+</code></pre>
+<p>Peels layers off <code>Test</code> one at a time; at each level checks whether the unwrapped value is compatible with the whole of <code>Expected</code> via <code>is_compatible_with_v</code>. Returns <code>false</code> if either argument is not a <code>wrapper</code> specialization. cv-ref qualifiers are stripped from both arguments before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Expected</code> Wrapper to match against. </li>
+<li><code>Test</code> Outer wrapper whose contents are inspected.</li>
+</ul>
+<pre><code>using W   = wrapper&lt;int,                     feature::inplace::plain&gt;;
+using WW  = wrapper&lt;W,                       feature::inplace::plain&gt;;
+using WWW = wrapper&lt;WW,                      feature::inplace::plain&gt;;
+
+static_assert( is_part_compatible_with_v&lt;W,  WW&gt;);    // WW's inner value IS W
+static_assert( is_part_compatible_with_v&lt;W,  WWW&gt;);   // two levels deep
+static_assert(!is_part_compatible_with_v&lt;WW, W&gt;);     // W does not contain WW
+static_assert(!is_part_compatible_with_v&lt;int, W&gt;);    // Expected not a wrapper
+static_assert(!is_part_compatible_with_v&lt;W, int&gt;);    // Test not a wrapper
+</code></pre>
+<hr>
+
+<h3 id="variable-is_unguard_noexcept_v">variable is_unguard_noexcept_v</h3>
+<p><code>true</code> <em>if</em><code>ExecutorType::unguard()</code> <em>for</em><code>ExecutorRefer</code> <em>either does not exist or is</em><code>noexcept</code> <em>.</em></p>
+<pre><code>constexpr bool scl::feature::is_unguard_noexcept_v;
+</code></pre>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>ExecutorType</code> The executor class (cv-unqualified). </li>
+<li><code>ExecutorRefer</code> The cv-ref-qualified executor reference type. </li>
+</ul>
+<hr>
+
+<h3 id="variable-is_wrapper_v">variable is_wrapper_v</h3>
+<p><em>Checks whether</em> <code>Type</code> <em>is a</em><code>wrapper</code> <em>specialization.</em></p>
+<pre><code>constexpr bool scl::feature::is_wrapper_v;
+</code></pre>
+<p>cv-ref qualifiers on <code>Type</code> are stripped before the check (<code>remove_cvref_t</code>).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>Type</code> Type to check.</li>
+</ul>
+<pre><code>static_assert(!is_wrapper_v&lt;int&gt;);
+static_assert( is_wrapper_v&lt;wrapper&lt;int, feature::inplace::plain&gt;&gt;);
+static_assert( is_wrapper_v&lt;wrapper&lt;int, feature::inplace::plain&gt; const&gt;);  // cv-ref stripped
+</code></pre>
+<hr>
+<h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
+<h3 id="define-scl_has_qualified_method">define SCL_HAS_QUALIFIED_METHOD</h3>
+<p><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em> <code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></p>
+<pre><code>#define SCL_HAS_QUALIFIED_METHOD (
+    method,
+    Type,
+    ...
+) 
+</code></pre>
+<p>In C++ a method qualified as <code>const&amp;</code> is implicitly callable on a mutable lvalue, because a mutable reference converts to a const one. A simple <code>requires</code> expression therefore cannot distinguish "the
+class has a @c const&amp; overload" from "the class has a mutable @c &amp;
+overload that is also callable on @c const&amp;".</p>
+<p>This macro solves the problem by comparing <strong>return types</strong> of calls with different cv-ref qualifiers. If the return types differ, the class must have separate overloads; if they are the same, the call is assumed to go through implicit cv-widening and the predicate returns <code>false</code>.</p>
+<p>**
+**</p>
+<p>For each value category (lvalue / rvalue) the macro:
+* Checks callability for all 4 cv combinations (<code>mutable</code>, <code>const</code>, <code>volatile</code>, <code>const</code> <code>volatile</code>).
+* For each pair where the "narrower" qualifier is callable through a "wider" one, compares <code>decltype</code> of the two calls. If both return the same type, the narrower call is considered implicit — the overload does not exist for that qualifier.
+* For the rvalue <code>const</code> case an additional <strong>cross-category</strong> check is performed (see MSVC note below).</p>
+<p>**
+**</p>
+<p>Return-type comparisons (<code>::std::is_same_v</code>) are placed inside <code>if</code> <code>constexpr</code> blocks that first verify callability, ensuring <code>decltype</code> is never evaluated on an ill-formed call expression. This avoids the Clang limitation where <code>requires</code> <code>{</code> <code>requires</code> <code>EXPR</code>; <code>}</code> inside a constexpr-evaluated lambda body is rejected.</p>
+<p>**
+**</p>
+<p>Overloads of the same method name with different cv-ref qualifiers <strong>must</strong> have different return types. If two overloads return the same type, the macro cannot tell them apart and will produce a false negative (report no dedicated overload where one exists). </p>
+<pre><code>struct Good {
+    bool  foo() &amp;;        // bool  ≠ int  → distinguishable
+    int   foo() const &amp;;
+};
+struct Bad {
+    int foo() &amp;;          // int == int → indistinguishable!
+    int foo() const &amp;;
+};
+</code></pre>
+<p>**
+**</p>
+<p><code>volatile</code> overloads follow the same return-type discrimination rules. If the class has both <code>volatile&amp;</code> and <code>const</code> <code>volatile&amp;</code> overloads, their return types must also differ.</p>
+<p>**
+**</p>
+<p>A method without any ref-qualifier (e.g. <code>void</code> foo() const) is callable on both lvalues and rvalues. The macro treats such methods as having dedicated overloads for <strong>both</strong> categories, provided the return-type discrimination passes.</p>
+<p>**
+**</p>
+<p>MSVC (as a non-standard extension, enabled by default) allows <code>const&amp;</code> ref-qualified member functions to be called on rvalues. This means <code>can_rv_c</code> will be <code>true</code> even when no <code>const&amp;&amp;</code> overload exists. To compensate, the macro performs a <strong>cross-category</strong> return-type comparison: it checks whether the return type of calling through <code>const&amp;&amp;</code> differs from calling through <code>const&amp;</code>. If they match and no <code>mutable/const</code> rvalue return-type difference exists, the <code>const&amp;&amp;</code> call is deemed implicit and the predicate returns <code>false</code>.</p>
+<p>**
+**</p>
+<pre><code>struct Target {
+    bool  get() &amp;;
+    int   get() const &amp;;
+    float get() &amp;&amp;;
+};
+
+// true  — dedicated &amp; overload exists (bool ≠ int)
+static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target &amp;));
+// true  — dedicated const&amp; overload exists
+static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target const &amp;));
+// true  — dedicated &amp;&amp; overload exists
+static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target &amp;&amp;));
+// false — no const&amp;&amp; overload; const&amp; is called implicitly
+static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &amp;&amp;));
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>method</code> Unqualified method name (may contain <code>template</code> keyword for explicit template arguments). </li>
+<li><code>Type</code> A cv-ref qualified type, e.g. <code>const</code> MyClass &amp;. </li>
+<li><code>...</code> Parameter types for the method call (may be empty). </li>
+</ul>
+<hr>
+
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

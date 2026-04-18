@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__reflection" kind="group">
+    <compoundname>scl_feature_reflection</compoundname>
+    <title>ScL Feature Reflection</title>
+    <innerfile refid="reflection_8h">reflection.h</innerfile>
+    <innerfile refid="access_8h">access.h</innerfile>
+    <innerfile refid="method_8h">method.h</innerfile>
+    <innerfile refid="reflect_8h">reflect.h</innerfile>
+    <innerfile refid="type_8h">type.h</innerfile>
+    <innerclass refid="classscl_1_1feature_1_1reflect" prot="public">scl::feature::reflect</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" prot="public" static="no">
+        <name>SCL_REFLECT_TYPE</name>
+        <param><defname>type</defname></param>
+        <param><defname>executor</defname></param>
+        <initializer>    using S_c_L_type_ = type;            \
+    using S_c_L_executor_type_ = executor;</initializer>
+        <briefdescription>
+<para>Declares the wrapper and executor types for use by <computeroutput>SCL_REFLECT_METHOD</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Must appear inside the class body <bold>before</bold> any <computeroutput>SCL_REFLECT_METHOD</computeroutput> invocations.</para>
+<para>A specialization of <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput> must also be provided for <computeroutput>type</computeroutput>.</para>
+<para><simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>MyExecutor);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unqualified wrapper class name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>executor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unqualified executor type name.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/reflection/type.h" line="27" column="9" bodyfile="module/feature/src/scl/feature/reflection/type.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Compile-time reflection for wrapper types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides the macros and types needed to generate proxy members that transparently forward calls from a wrapper to the held object through an executor, preserving all cv-ref qualifiers.</para>
+<para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Symbol   </para>
+</entry><entry thead="yes"><para>Purpose    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput><ref refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE(Wrapper, Executor)</ref></computeroutput>   </para>
+</entry><entry thead="no"><para>Declares the type aliases required by <computeroutput>SCL_REFLECT_METHOD</computeroutput>. Must appear first inside the wrapper class body.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD(method)</ref></computeroutput>   </para>
+</entry><entry thead="no"><para>Generates 24 proxy overloads (3 × 8 cv-ref) that dispatch through the executor.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">scl::feature::reflect</ref></computeroutput>   </para>
+</entry><entry thead="no"><para>CRTP mixin base class; specialisations inject reflected members.   </para>
+</entry></row>
+</table>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

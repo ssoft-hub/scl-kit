@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1feature_1_1executor__trait" kind="struct" language="C++" prot="public">
+    <compoundname>scl::feature::executor_trait</compoundname>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">T</ref></type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Trait that provides access to the executor inside a wrapper. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>No default implementation. Each wrapper type must provide a specialization with a static <computeroutput><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">executor(Self&amp;&amp;)</ref></computeroutput> method that returns a reference to the executor, preserving cv-ref qualifiers.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapper type (cv-ref stripped). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/type_traits/executor.h" line="33" column="5" bodyfile="module/feature/src/scl/feature/type_traits/executor.h" bodystart="33" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

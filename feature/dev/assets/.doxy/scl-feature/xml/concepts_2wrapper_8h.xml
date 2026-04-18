@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="concepts_2wrapper_8h" kind="file" language="C++">
+    <compoundname>wrapper.h</compoundname>
+    <includes refid="type__traits_2wrapper_8h" local="no">scl/feature/type_traits/wrapper.h</includes>
+    <includedby refid="concepts_8h" local="no">module/feature/src/scl/feature/concepts.h</includedby>
+    <includedby refid="executor__access_8h" local="no">module/feature/src/scl/feature/detail/executor_access.h</includedby>
+    <includedby refid="detail_2value__lock_8h" local="no">module/feature/src/scl/feature/detail/value_lock.h</includedby>
+    <includedby refid="detail_2wrapper_8h" local="no">module/feature/src/scl/feature/detail/wrapper.h</includedby>
+    <includedby refid="detail_2wrapper__cast_8h" local="no">module/feature/src/scl/feature/detail/wrapper_cast.h</includedby>
+    <includedby refid="detail_2wrapper__guard_8h" local="no">module/feature/src/scl/feature/detail/wrapper_guard.h</includedby>
+    <includedby refid="detail_2wrapper__lock_8h" local="no">module/feature/src/scl/feature/detail/wrapper_lock.h</includedby>
+    <includedby refid="wrapper__cast_8h" local="no">module/feature/src/scl/feature/wrapper_cast.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>scl/feature/concepts/executor.h</label>
+        <link refid="concepts_2executor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/concepts/wrapper.h</label>
+        <link refid="concepts_2wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>scl/feature/type_traits/executor.h</label>
+        <link refid="type__traits_2executor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/type_traits/wrapper.h</label>
+        <link refid="type__traits_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scl/utility/type_traits/forward_like.h</label>
+      </node>
+      <node id="5">
+        <label>type_traits</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h"/>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/concepts.h</label>
+        <link refid="concepts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/concepts/wrapper.h</label>
+        <link refid="concepts_2wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>module/feature/src/scl/feature/detail/executor_access.h</label>
+        <link refid="executor__access_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>module/feature/src/scl/feature/detail/value_lock.h</label>
+        <link refid="detail_2value__lock_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>module/feature/src/scl/feature/detail/wrapper_cast.h</label>
+        <link refid="detail_2wrapper__cast_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>module/feature/src/scl/feature/detail/wrapper_constructor_resolver.h</label>
+        <link refid="wrapper__constructor__resolver_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>module/feature/src/scl/feature/detail/wrapper_guard.h</label>
+        <link refid="detail_2wrapper__guard_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>module/feature/src/scl/feature/detail/wrapper_lock.h</label>
+        <link refid="detail_2wrapper__lock_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>module/feature/src/scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>module/feature/src/scl/feature/value_lock.h</label>
+        <link refid="value__lock_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>module/feature/src/scl/feature/wrapper_cast.h</label>
+        <link refid="wrapper__cast_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>module/feature/src/scl/feature/wrapper_guard.h</label>
+        <link refid="wrapper__guard_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>module/feature/src/scl/feature/wrapper_lock.h</label>
+        <link refid="wrapper__lock_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/type_traits/wrapper.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl_1_1feature_1_1concepts" kindref="compound">scl::feature::concepts</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="19" refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" kindref="compound">wrapper</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_wrapper_v&lt;Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="38" refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with" kindref="compound">compatible_with</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_compatible_with_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="58" refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1compatible__with__part__of" kindref="compound">compatible_with_part_of</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_compatible_with_part_of_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="78" refid="conceptscl_1_1feature_1_1concepts_1_1part__compatible__with" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1part__compatible__with" kindref="compound">part_compatible_with</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_part_compatible_with_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Target,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Refer&gt;</highlight></codeline>
+<codeline lineno="91" refid="conceptscl_1_1feature_1_1concepts_1_1convertible__from" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1convertible__from" kindref="compound">convertible_from</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">::scl::feature::is_convertible_from_v&lt;Target, Refer&gt;</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::feature::concepts</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h"/>
+  </compounddef>
+</doxygen>

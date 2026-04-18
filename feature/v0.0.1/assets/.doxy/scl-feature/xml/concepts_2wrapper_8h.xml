@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="concepts_2wrapper_8h" kind="file" language="C++">
+    <compoundname>wrapper.h</compoundname>
+    <includes refid="type__traits_2wrapper_8h" local="no">scl/feature/type_traits/wrapper.h</includes>
+    <includedby refid="concepts_8h" local="no">module/feature/src/scl/feature/concepts.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/feature/src/scl/feature/concepts/wrapper.h</label>
+        <link refid="concepts_2wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/type_traits/wrapper.h</label>
+        <link refid="type__traits_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h"/>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/concepts.h</label>
+        <link refid="concepts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/concepts/wrapper.h</label>
+        <link refid="concepts_2wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature_1_1concepts">scl::feature::concepts</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/type_traits/wrapper.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl_1_1feature_1_1concepts" kindref="compound">scl::feature::concepts</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="19" refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1feature_1_1concepts_1_1wrapper" kindref="compound">wrapper</ref><sp/>=<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_wrapper_v&lt;Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal">compatible_with<sp/>=<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_compatible_with_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal">compatible_with_part_of<sp/>=<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_compatible_with_part_of_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Expected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal">part_compatible_with<sp/>=<sp/><ref refid="group__scl__feature__type__traits_1gae3debe73bc8e90f8ce2bdd90cd277113" kindref="member">::scl::feature::is_part_compatible_with_v&lt;Expected, Type&gt;</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::feature::concepts</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h"/>
+  </compounddef>
+</doxygen>

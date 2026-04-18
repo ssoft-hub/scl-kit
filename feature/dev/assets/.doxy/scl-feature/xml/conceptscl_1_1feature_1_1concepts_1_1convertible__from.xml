@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptscl_1_1feature_1_1concepts_1_1convertible__from" kind="concept">
+    <compoundname>scl::feature::concepts::convertible_from</compoundname>
+    <includes refid="concepts_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Target</type>
+      </param>
+      <param>
+        <type>typename Refer</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename Target, typename Refer&gt;
+concept <ref refid="conceptscl_1_1feature_1_1concepts_1_1convertible__from" kindref="compound">scl::feature::concepts::convertible_from</ref> =  <ref refid="group__scl__feature__type__traits_1ga77e9bf39c3d5f544b2350152e7f9cc82" kindref="member">::scl::feature::is_convertible_from_v</ref>&lt;Target, Refer&gt;    </initializer>
+    <briefdescription>
+<para>Satisfied when <computeroutput>Target</computeroutput> is convertible from <computeroutput>Refer</computeroutput> directly or through any level of the wrapper chain. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired reference type (cv-ref qualified). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Refer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting reference type (outermost wrapper or plain value).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__scl__feature__type__traits_1ga77e9bf39c3d5f544b2350152e7f9cc82" kindref="member">scl::feature::is_convertible_from_v</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature/concepts/wrapper.h" line="91" column="5"/>
+  </compounddef>
+</doxygen>

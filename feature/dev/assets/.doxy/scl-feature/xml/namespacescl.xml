@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl" kind="namespace" language="C++">
+    <compoundname>scl</compoundname>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacescl_1a4807ba3087c790fa2fdb7f424f96d1bc" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Refer</type>
+          </param>
+        </templateparamlist>
+        <type>::scl::feature::detail::value_lock&lt; Refer &gt;</type>
+        <definition>using scl::value_lock = typedef ::scl::feature::detail::value_lock&lt;Refer&gt;</definition>
+        <argsstring></argsstring>
+        <name>value_lock</name>
+        <qualifiedname>scl::value_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/value_lock.h" line="11" column="5" bodyfile="module/feature/src/scl/feature/value_lock.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1ab893c8447e47ae9e198372c9e400ce42" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Value</type>
+          </param>
+          <param>
+            <type>template&lt; typename &gt; class...</type>
+            <declname>Executors</declname>
+            <defname>Executors</defname>
+          </param>
+        </templateparamlist>
+        <type>::std::conditional_t&lt; sizeof...(Executors)==0, typename ::scl::feature::detail::wrapper_fold&lt; Value, <ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">::scl::feature::inplace::plain</ref> &gt;::type, typename ::scl::feature::detail::wrapper_fold&lt; Value, Executors... &gt;::type &gt;</type>
+        <definition>using scl::wrapper = typedef ::std::conditional_t&lt;sizeof...(Executors) == 0, typename ::scl::feature::detail::wrapper_fold&lt;Value, ::scl::feature::inplace::plain&gt;::type, typename ::scl::feature::detail::wrapper_fold&lt;Value, Executors...&gt;::type&gt;</definition>
+        <argsstring></argsstring>
+        <name>wrapper</name>
+        <qualifiedname>scl::wrapper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper.h" line="34" column="5" bodyfile="module/feature/src/scl/feature/wrapper.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1ab022f660da4a8dca37eccd3bc805a597" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Refer</type>
+          </param>
+        </templateparamlist>
+        <type>::scl::feature::detail::wrapper_caster&lt; Refer &gt;</type>
+        <definition>using scl::wrapper_caster = typedef ::scl::feature::detail::wrapper_caster&lt;Refer&gt;</definition>
+        <argsstring></argsstring>
+        <name>wrapper_caster</name>
+        <qualifiedname>scl::wrapper_caster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper_cast.h" line="13" column="5" bodyfile="module/feature/src/scl/feature/wrapper_cast.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1aa0b8b5649e048d16b57d3977134fe90b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Refer</type>
+          </param>
+        </templateparamlist>
+        <type>::scl::feature::detail::wrapper_guard&lt; Refer &gt;</type>
+        <definition>using scl::wrapper_guard = typedef ::scl::feature::detail::wrapper_guard&lt;Refer&gt;</definition>
+        <argsstring></argsstring>
+        <name>wrapper_guard</name>
+        <qualifiedname>scl::wrapper_guard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper_guard.h" line="11" column="5" bodyfile="module/feature/src/scl/feature/wrapper_guard.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1ab9da34bb029b0bc829e5a4190f742f35" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Refer</type>
+          </param>
+        </templateparamlist>
+        <type>::scl::feature::detail::wrapper_lock&lt; Refer &gt;</type>
+        <definition>using scl::wrapper_lock = typedef ::scl::feature::detail::wrapper_lock&lt;Refer&gt;</definition>
+        <argsstring></argsstring>
+        <name>wrapper_lock</name>
+        <qualifiedname>scl::wrapper_lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper_lock.h" line="11" column="5" bodyfile="module/feature/src/scl/feature/wrapper_lock.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacescl_1a01baa75119fd35fa8a711ff6bdc9b7c0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) scl::wrapper_cast</definition>
+        <argsstring>(Type &amp;&amp;w) noexcept</argsstring>
+        <name>wrapper_cast</name>
+        <qualifiedname>scl::wrapper_cast</qualifiedname>
+        <param>
+          <type>Type &amp;&amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/wrapper_cast.h" line="17" column="24" bodyfile="module/feature/src/scl/feature/wrapper_cast.h" bodystart="17" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Root namespace of the ScL project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/feature/src/scl/feature.h" line="19" column="1"/>
+  </compounddef>
+</doxygen>

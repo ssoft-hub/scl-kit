@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="type_8h" kind="file" language="C++">
+    <compoundname>type.h</compoundname>
+    <includes local="no">type_traits</includes>
+    <includedby refid="method_8h" local="no">module/feature/src/scl/feature/reflection/method.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/feature/src/scl/feature/reflection/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>module/feature/src/scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/reflection/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" prot="public" static="no">
+        <name>SCL_REFLECT_TYPE</name>
+        <param><defname>Type</defname></param>
+        <param><defname>Member</defname></param>
+        <initializer>    using S_c_L_type_ = Type;                                                                      \
+    using S_c_L_executor_type_ = ::std::remove_cvref_t&lt;decltype(Member)&gt;</initializer>
+        <briefdescription>
+<para>Declares the wrapper type for use by <computeroutput>SCL_REFLECT_METHOD</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Must appear inside the class body <bold>after</bold> the executor member declaration and <bold>before</bold> any <computeroutput>SCL_REFLECT_METHOD</computeroutput> invocations.</para>
+<para>A specialization of <computeroutput><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref></computeroutput> must also be provided for <computeroutput>Type</computeroutput>.</para>
+<para><simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" kindref="member">SCL_REFLECT_TYPE</ref>(MyWrapper,<sp/>m_executor);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unqualified class name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Member</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Executor data member name.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structscl_1_1feature_1_1executor__trait" kindref="compound">scl::feature::executor_trait</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/reflection/type.h" line="27" column="9" bodyfile="module/feature/src/scl/feature/reflection/type.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Macro for declaring the wrapper type used by reflection macros. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="type_8h_1af2b5418ef5d9039c7477f64cf9ef1441" refkind="member"><highlight class="preprocessor">#define<sp/>SCL_REFLECT_TYPE(Type,<sp/>Member)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_type_<sp/>=<sp/>Type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>S_c_L_executor_type_<sp/>=<sp/>::std::remove_cvref_t&lt;decltype(Member)&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/reflection/type.h"/>
+  </compounddef>
+</doxygen>

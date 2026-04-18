@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4" kind="class" language="C++" prot="public">
+    <compoundname>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</compoundname>
+    <basecompoundref refid="classscl_1_1feature_1_1reflect" prot="public" virt="non-virtual">scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt;::std::remove_cvref_t&lt; QualifiedInner &gt;, OuterExecutor &gt; &gt;</basecompoundref>
+    <includes refid="detail_2wrapper_8h" local="no">wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref></type>
+      </param>
+      <param>
+        <type><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">template</ref>&lt; <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">typename</ref> &gt; <ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">class</ref></type>
+        <declname>OuterExecutor</declname>
+        <defname>OuterExecutor</defname>
+      </param>
+    </templateparamlist>
+    <requiresclause>(::scl::feature::concepts::wrapper&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref>&gt; &amp;&amp; !::std::same_as&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref>, ::std::remove_cvref_t&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref>&gt;&gt;)    </requiresclause>
+    <briefdescription>
+<para>Strips cv/ref qualifiers from a cv/ref-qualified inner wrapper. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Matches <computeroutput>detail::wrapper&lt;QualifiedInner_</computeroutput>, OuterExecutor_&gt; when <computeroutput>QualifiedInner_</computeroutput> is a cv/ref-qualified wrapper type, and forwards to the unqualified specialization. This collapses all 12 cv/ref variants into one rule so that qualifiers on the stored type do not produce a separate, incompatible reflection chain. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt;::std::remove_cvref_t&lt; QualifiedInner &gt;, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect"/>
+      </node>
+      <node id="1">
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt;::std::remove_cvref_t&lt; QualifiedInner &gt;, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect"/>
+      </node>
+      <node id="1">
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="module/feature/src/scl/feature/detail/wrapper.h" line="79" column="5" bodyfile="module/feature/src/scl/feature/detail/wrapper.h" bodystart="81" bodyend="81"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

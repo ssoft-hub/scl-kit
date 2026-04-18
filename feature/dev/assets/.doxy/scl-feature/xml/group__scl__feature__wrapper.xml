@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__wrapper" kind="group">
+    <compoundname>scl_feature_wrapper</compoundname>
+    <title>ScL Wrapper</title>
+    <briefdescription>
+<para>Composable value wrapper with pluggable executor strategy. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A <computeroutput>wrapper&lt;Value, Executors...&gt;</computeroutput> proxies method calls to the held <computeroutput>Value</computeroutput> through a chain of <emphasis>executors</emphasis>. Each executor is a class template that can transparently add cross-cutting properties such as copy-on-write semantics, thread safety, or deferred invocation without modifying the wrapped type. Multiple executors are composed via left-fold; adjacent duplicates are collapsed automatically. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

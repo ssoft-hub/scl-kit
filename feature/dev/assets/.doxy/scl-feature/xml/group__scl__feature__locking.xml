@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__locking" kind="group">
+    <compoundname>scl_feature_locking</compoundname>
+    <title>ScL Locking Utilities</title>
+    <briefdescription>
+<para>RAII guards and lazy locks for wrapper and plain value types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Three complementary primitives cover the full range of locking needs for <computeroutput>scl::wrapper</computeroutput> chains:</para>
+<para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>Type   </para>
+</entry><entry thead="yes"><para>Acquisition   </para>
+</entry><entry thead="yes"><para>Depth    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>scl::wrapper_guard</computeroutput>   </para>
+</entry><entry thead="no"><para>eager (constructor)   </para>
+</entry><entry thead="no"><para>single layer    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>scl::wrapper_lock</computeroutput>   </para>
+</entry><entry thead="no"><para>lazy (<computeroutput>lock()</computeroutput>)   </para>
+</entry><entry thead="no"><para>single layer    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>scl::value_lock</computeroutput>   </para>
+</entry><entry thead="no"><para>lazy (<computeroutput>lock_for()</computeroutput>)   </para>
+</entry><entry thead="no"><para>entire chain   </para>
+</entry></row>
+</table>
+</para>
+<para>All three are transparent for non-wrapper types: construction, locking, and value access become no-ops or direct reference passes respectively. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
