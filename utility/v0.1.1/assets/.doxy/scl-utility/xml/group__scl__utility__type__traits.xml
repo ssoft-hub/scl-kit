@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__utility__type__traits" kind="group">
+    <compoundname>scl_utility_type_traits</compoundname>
+    <title>ScL Type Traits</title>
+    <innerfile refid="detection_8h">detection.h</innerfile>
+    <innerfile refid="method_8h">method.h</innerfile>
+    <innerfile refid="operator_8h">operator.h</innerfile>
+    <innerfile refid="forward__like_8h">forward_like.h</innerfile>
+    <innerfile refid="member__like_8h">member_like.h</innerfile>
+    <innerfile refid="overload__cast_8h">overload_cast.h</innerfile>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>typename detail::detector&lt; void, void, Operation, Arguments... &gt;::value_t</type>
+        <definition>using scl::is_detected = typedef typename detail::detector&lt;void, void, Operation, Arguments...&gt;::value_t</definition>
+        <argsstring></argsstring>
+        <name>is_detected</name>
+        <qualifiedname>scl::is_detected</qualifiedname>
+        <briefdescription>
+<para>Detects whether Operation&lt;Arguments...&gt; is a valid expression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Alias to std::true_type if Operation&lt;Arguments...&gt; is well-formed, std::false_type otherwise.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">has_foo_t<sp/>=<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;T&gt;().foo());</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<ref refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kindref="member">is_detected&lt;has_foo_t, MyClass&gt;::value</ref>);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="72" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>typename detail::detector&lt; void, void, Operation, Arguments... &gt;::type</type>
+        <definition>using scl::detected_t = typedef typename detail::detector&lt;void, void, Operation, Arguments...&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>detected_t</name>
+        <qualifiedname>scl::detected_t</qualifiedname>
+        <briefdescription>
+<para>Gets the type of Operation&lt;Arguments...&gt; or void if ill-formed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">result<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">detected_t&lt;has_foo_t, MyClass&gt;</ref>;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="98" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Default</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::detector&lt; Default, void, Operation, Arguments... &gt;</type>
+        <definition>using scl::detected_or = typedef detail::detector&lt;Default, void, Operation, Arguments...&gt;</definition>
+        <argsstring></argsstring>
+        <name>detected_or</name>
+        <qualifiedname>scl::detected_or</qualifiedname>
+        <briefdescription>
+<para>Helper for getting detected type or a default. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to use if detection fails </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Provides nested type &apos;type&apos; which is either Operation&lt;Arguments...&gt; if well-formed, or Default otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="111" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Default</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>typename detected_or&lt; Default, Operation, Arguments... &gt;::type</type>
+        <definition>using scl::detected_or_t = typedef typename detected_or&lt;Default, Operation, Arguments...&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>detected_or_t</name>
+        <qualifiedname>scl::detected_or_t</qualifiedname>
+        <briefdescription>
+<para>Gets the type of Operation&lt;Arguments...&gt; or Default if ill-formed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to use if detection fails </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">result<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kindref="member">detected_or_t&lt;int, has_foo_t, MyClass&gt;</ref>;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="125" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Expected</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>::std::is_same&lt; Expected, detected_t&lt; Operation, Arguments... &gt; &gt;</type>
+        <definition>using scl::is_detected_exact = typedef ::std::is_same&lt;Expected, detected_t&lt;Operation, Arguments...&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>is_detected_exact</name>
+        <qualifiedname>scl::is_detected_exact</qualifiedname>
+        <briefdescription>
+<para>Checks if Operation&lt;Arguments...&gt; results in exactly Expected type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type to compare against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(<ref refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kindref="member">is_detected_exact&lt;int, get_value_type_t, MyClass&gt;::value</ref>);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="139" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename To</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>::std::is_convertible&lt; detected_t&lt; Operation, Arguments... &gt;, To &gt;</type>
+        <definition>using scl::is_detected_convertible = typedef ::std::is_convertible&lt;detected_t&lt;Operation, Arguments...&gt;, To&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_detected_convertible</name>
+        <qualifiedname>scl::is_detected_convertible</qualifiedname>
+        <briefdescription>
+<para>Checks if Operation&lt;Arguments... &gt; is convertible to To. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>To</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target type for conversion </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">static_assert</highlight><highlight class="normal">(<ref refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kindref="member">is_detected_convertible&lt;double, get_value_t, MyClass&gt;::value</ref>);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="163" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>::scl::detail::add_reference_like_t&lt; Base, ::scl::detail::add_cv_from_t&lt; Base, ::std::remove_reference_t&lt; Type &gt; &gt; &gt;</type>
+        <definition>using scl::forward_like_t = typedef ::scl::detail::add_reference_like_t&lt;Base, ::scl::detail::add_cv_from_t&lt;Base, ::std::remove_reference_t&lt;Type&gt; &gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>forward_like_t</name>
+        <qualifiedname>scl::forward_like_t</qualifiedname>
+        <briefdescription>
+<para>Make a type <computeroutput>Type</computeroutput> &quot;look like&quot; <computeroutput>Base</computeroutput> for cv-ref qualifiers (matches ::std::forward_like rules). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type providing qualifiers/ref to propagate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to which qualifiers/ref are applied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Semantics:<itemizedlist>
+<listitem><para>CV-qualifiers: Applies <computeroutput>const</computeroutput> and <computeroutput>volatile</computeroutput> from <computeroutput>Base</computeroutput> onto <computeroutput>remove_reference_t&lt;Type&gt;</computeroutput>. (i.e. union of qualifiers, not replacement)</para>
+</listitem><listitem><para>Reference: Applies reference category of <computeroutput>Base</computeroutput> (if any). If <computeroutput>Base</computeroutput> is lvalue ref, result is lvalue ref; if rvalue ref, rvalue ref; else no reference. Reference is omitted for void.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int const &amp;, double&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>const<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int &amp;&amp;, float const&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>const<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int volatile, char&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>char<sp/>volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P3<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int const volatile &amp;, short&gt;</ref><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>short<sp/>const<sp/>volatile<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P4<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kindref="member">forward_like_t&lt;int, double&amp;&amp;&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="68" column="5" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Signature</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_function_like&lt; Type, Signature &gt;::type</type>
+        <definition>using scl::member_function_like_t = typedef typename ::scl::detail::member_function_like&lt;Type, Signature&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_function_like_t</name>
+        <qualifiedname>scl::member_function_like_t</qualifiedname>
+        <briefdescription>
+<para>Pointer-to-member-function type for class Type and function Signature, where the member function&apos;s cv/ref qualifiers are copied from Type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object type whose cv/ref qualifiers will be mirrored onto the member function. The class type itself is decayed with ::::std::remove_cvref_t before forming the pointer-to-member. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-static member function signature as a function type, e.g. <computeroutput>Result(Arguments...)</computeroutput> or <computeroutput>Result(Arguments...) noexcept</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Foo<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t</ref>&lt;Foo,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t</ref>&lt;Foo&amp;,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)<sp/>const</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P3<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;&amp;,<sp/>void()<sp/>noexcept&gt;;<sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)()<sp/>const<sp/>&amp;&amp;<sp/>noexcept</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="189" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Member</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_property_like&lt; Type, Member &gt;::type</type>
+        <definition>using scl::member_property_like_t = typedef typename ::scl::detail::member_property_like&lt;Type, Member&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_property_like_t</name>
+        <qualifiedname>scl::member_property_like_t</qualifiedname>
+        <briefdescription>
+<para>Pointer-to-data-member type for class Type and member type Member. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Forms the type <computeroutput>Member (::std::remove_cvref_t&lt;Type&gt;::*)</computeroutput>. Object cv/ref qualifiers do not change the pointer type for data members; they only affect access expressions.</para>
+<para><simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">scl::member_property_like_t&lt;Foo, int&gt;</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">scl::member_property_like_t&lt;Foo const&amp;, int&gt;</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>const<sp/>&amp;<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">scl::member_property_like_t&lt;Foo, int const&gt;</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="207" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Member</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_like&lt; Type, Member &gt;::type</type>
+        <definition>using scl::member_like_t = typedef typename ::scl::detail::member_like&lt;Type, Member&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_like_t</name>
+        <qualifiedname>scl::member_like_t</qualifiedname>
+        <briefdescription>
+<para>Generic pointer-to-member type selector for class Type and Member. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects the appropriate pointer-to-member type based on whether Member is a function type.<itemizedlist>
+<listitem><para>If Member is a function type like <computeroutput>Result(Arguments...)</computeroutput> or <computeroutput>Result(Arguments...) noexcept</computeroutput>, this aliases to <ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t&lt;Type, Member&gt;</ref>, producing: <computeroutput>Result (::std::remove_cvref_t&lt;Type&gt;::*)(Arguments...) [cv] [ref] [noexcept]</computeroutput> where:<itemizedlist>
+<listitem><para>[cv]/[ref] are mirrored from Type (const/volatile and &amp;/&amp;&amp;),</para>
+</listitem><listitem><para>[noexcept] is mirrored from T.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Otherwise, it aliases to <ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">scl::member_property_like_t&lt;Type, Member&gt;</ref>, producing: <computeroutput>Member (::std::remove_cvref_t&lt;Type&gt;::*)</computeroutput> (see member_property_like_t for details on how object qualifiers may affect Member).</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class (object) type whose cv/ref qualifiers are mirrored for member functions. The class itself is decayed with ::std::remove_cvref_t before forming the pointer type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Member</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either a function type (for member functions) or a non-function type (for data members).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Foo<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">M0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kindref="member">scl::member_like_t</ref>&lt;Foo,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">M1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kindref="member">scl::member_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;,<sp/>void()<sp/>noexcept&gt;;<sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)()<sp/>const<sp/>&amp;<sp/>noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Data<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">using<sp/>M2<sp/>=<sp/><ref refid="namespacescl" kindref="compound">scl</ref>::<ref refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kindref="member">member_like_t</ref>&lt;Foo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">using<sp/>M3<sp/>=<sp/><ref refid="namespacescl" kindref="compound">scl</ref>::<ref refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kindref="member">member_like_t</ref>&lt;Foo<sp/>const,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;;<sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>const<sp/>Foo::*</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="243" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool scl::is_detected_v</definition>
+        <argsstring></argsstring>
+        <name>is_detected_v</name>
+        <qualifiedname>scl::is_detected_v</qualifiedname>
+        <initializer>= is_detected&lt;Operation, Arguments...&gt;::value</initializer>
+        <briefdescription>
+<para>Variable template version of is_detected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(is_detected_v&lt;has_foo_t,<sp/>MyClass&gt;)<sp/>{<sp/>...<sp/>}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="85" column="27" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename Expected</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool scl::is_detected_exact_v</definition>
+        <argsstring></argsstring>
+        <name>is_detected_exact_v</name>
+        <qualifiedname>scl::is_detected_exact_v</qualifiedname>
+        <initializer>= is_detected_exact&lt;Expected, Operation, Arguments...&gt;::value</initializer>
+        <briefdescription>
+<para>Variable template version of is_detected_exact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Expected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type to compare against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="149" column="27" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename To</type>
+          </param>
+          <param>
+            <type>template&lt; typename... &gt; class</type>
+            <declname>Operation</declname>
+            <defname>Operation</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool scl::is_detected_convertible_v</definition>
+        <argsstring></argsstring>
+        <name>is_detected_convertible_v</name>
+        <qualifiedname>scl::is_detected_convertible_v</qualifiedname>
+        <initializer>= is_detected_convertible&lt;To, Operation, Arguments...&gt;::value</initializer>
+        <briefdescription>
+<para>Variable template version of is_detected_convertible. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>To</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target type for conversion </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Template to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments for the template </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection.h" line="173" column="27" bodyfile="module/utility/src/scl/utility/type_traits/detection.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr detail::overload_cast&lt; Args... &gt;</type>
+        <definition>constexpr detail::overload_cast&lt;Args...&gt; scl::overload_cast</definition>
+        <argsstring></argsstring>
+        <name>overload_cast</name>
+        <qualifiedname>scl::overload_cast</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>A helper utility to select a specific overload of a function or member function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This template class provides a set of call operators that disambiguate overloaded functions based on their argument types (Args...) and qualifiers (const, volatile, lvalue/rvalue references, and noexcept).</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exact argument types used to identify the desired overload.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">X<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>foo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>foo(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>foo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;&amp;;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bar(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bar(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pf1<sp/>=<sp/>overload_cast&lt;int&gt;(&amp;X::foo);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>selects<sp/>void<sp/>foo(int)<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pf2<sp/>=<sp/>overload_cast&lt;double&gt;(&amp;X::foo);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>selects<sp/>void<sp/>foo(double)<sp/>const<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f1<sp/><sp/>=<sp/>overload_cast&lt;int&gt;(&amp;bar);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>selects<sp/>void<sp/>bar(int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f2<sp/><sp/>=<sp/>overload_cast&lt;double&gt;(&amp;bar);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>selects<sp/>void<sp/>bar(double)<sp/>noexcept</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/overload_cast.h" line="217" column="44" bodyfile="module/utility/src/scl/utility/type_traits/overload_cast.h" bodystart="217" bodyend="217"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr decltype(auto)</type>
+        <definition>constexpr decltype(auto) scl::forward_like</definition>
+        <argsstring>(T &amp;&amp;t) noexcept</argsstring>
+        <name>forward_like</name>
+        <qualifiedname>scl::forward_like</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Forwards a value with the cv-ref qualifiers of <computeroutput>Base</computeroutput> applied to <computeroutput>T</computeroutput>&apos;s type, matching ::std::forward_like semantics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Example: <computeroutput>forward_like&lt;const T&amp;, x&gt;(some_val)</computeroutput> will forward <computeroutput>some_val</computeroutput> as a <computeroutput>const</computeroutput> lvalue reference if <computeroutput>T</computeroutput> is const. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="80" column="24" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__scl__utility__type__traits_1gad0f78054a955da52ccb646d7b05b929e" prot="public" static="no">
+        <name>SCL_FUNCTION_DETECTION</name>
+        <param><defname>name</defname></param>
+        <initializer>    template &lt;typename... Arguments&gt;                                                      \
+    using name##_function_operation = decltype(name(::std::declval&lt;Arguments&gt;()...));     \
+    template &lt;typename... Arguments&gt;                                                      \
+    inline constexpr auto has_##name##_function_v =                                       \
+        <ref refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kindref="member">::scl::is_detected_v</ref>&lt;name##_function_operation, Arguments...&gt;;                    \
+    template &lt;typename... Arguments&gt;                                                      \
+    using name##_function_t = <ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt;name##_function_operation, Arguments...&gt;; \
+                                                                                          \
+    template &lt;typename... Arguments&gt;                                                      \
+    using name##_function_exact_operation = decltype((                                    \
+        static_cast&lt;name##_function_operation&lt;Arguments...&gt; (*)(Arguments...)&gt;(&amp;name))(   \
+        ::std::declval&lt;Arguments&gt;()...));                                                 \
+    template &lt;typename... Arguments&gt;                                                      \
+    inline constexpr auto has_##name##_function_exact_v =                                 \
+        <ref refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kindref="member">::scl::is_detected_v</ref>&lt;name##_function_exact_operation, Arguments...&gt;;              \
+    template &lt;typename... Arguments&gt;                                                      \
+    using name##_function_exact_t = <ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt;name##_function_exact_operation, Arguments...&gt;;</initializer>
+        <briefdescription>
+<para>Generates a suite of traits to detect the existence of a specific free function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For a given name <computeroutput>foo</computeroutput>, this macro generates:</para>
+<para><orderedlist>
+<listitem><para><bold>Basic Detection</bold> (Supports ADL):<itemizedlist>
+<listitem><para><computeroutput>foo_function_operation&lt;Args...&gt;</computeroutput>: The detection alias using <computeroutput>foo(declval&lt;Args&gt;()...)</computeroutput>.</para>
+</listitem><listitem><para><computeroutput>has_foo_function_v&lt;Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_function_t&lt;Args...&gt;</computeroutput>: Resulting return type.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Exact Detection</bold> (Checks for a specific symbol pointer):<itemizedlist>
+<listitem><para><computeroutput>foo_function_exact_operation&lt;Args...&gt;</computeroutput>: Uses <computeroutput>&amp;foo</computeroutput> to verify a specific function exists.</para>
+</listitem><listitem><para><computeroutput>has_foo_function_exact_v&lt;Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_function_exact_t&lt;Args...&gt;</computeroutput>: Resulting return type.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the function to detect.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>CRITICAL: This macro MUST be invoked AFTER the target function has been declared. Since the macro expansion takes the address of the function (&amp;name), the symbol must be visible to the compiler at the point of expansion, or a compilation error will occur. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/function.h" line="33" column="9" bodyfile="module/utility/src/scl/utility/type_traits/detection/function.h" bodystart="33" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__type__traits_1gaf16fc9819f8128b3998f11ea9de989b3" prot="public" static="no">
+        <name>SCL_METHOD_DETECTION</name>
+        <param><defname>name</defname></param>
+        <briefdescription>
+<para>Generates a suite of traits to detect the existence of a specific member method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For a given name <computeroutput>foo</computeroutput>, this macro generates:</para>
+<para><orderedlist>
+<listitem><para><bold>Basic Detection</bold> (Checks if <computeroutput>val.foo(args...)</computeroutput> is valid):<itemizedlist>
+<listitem><para><computeroutput>foo_method_operation&lt;Type, Args...&gt;</computeroutput>: The detection alias.</para>
+</listitem><listitem><para><computeroutput>has_foo_method_v&lt;Type, Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_method_t&lt;Type, Args...&gt;</computeroutput>: Resulting return type (or nonesuch).</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Exact Member Detection</bold> (Checks <computeroutput>&amp;Type::foo</computeroutput> existence and ref-qualifiers):<itemizedlist>
+<listitem><para><computeroutput>foo_method_exact_operation&lt;Type, Args...&gt;</computeroutput>: The exact detection alias.</para>
+</listitem><listitem><para><computeroutput>has_foo_method_exact_v&lt;Type, Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_method_exact_t&lt;Type, Args...&gt;</computeroutput>: Resulting return type.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Basic Static Detection</bold> (Checks if <computeroutput>Type::foo(args...)</computeroutput> is valid):<itemizedlist>
+<listitem><para><computeroutput>foo_static_method_operation&lt;Type, Args...&gt;</computeroutput>: The detection alias.</para>
+</listitem><listitem><para><computeroutput>has_foo_static_method_v&lt;Type, Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_static_method_t&lt;Type, Args...&gt;</computeroutput>: Resulting return type (or nonesuch).</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Exact Static Member Detection</bold> (Checks <computeroutput>&amp;Type::foo</computeroutput> existence):<itemizedlist>
+<listitem><para><computeroutput>foo_static_method_exact_operation&lt;Type, Args...&gt;</computeroutput>: The exact detection alias.</para>
+</listitem><listitem><para><computeroutput>has_foo_static_method_exact_v&lt;Type, Args...&gt;</computeroutput>: Boolean constant.</para>
+</listitem><listitem><para><computeroutput>foo_static_method_exact_t&lt;Type, Args...&gt;</computeroutput>: Resulting return type.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the member function to detect. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/method.h" line="40" column="9" bodyfile="module/utility/src/scl/utility/type_traits/detection/method.h" bodystart="40" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Type-level utilities for C++ metaprogramming. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

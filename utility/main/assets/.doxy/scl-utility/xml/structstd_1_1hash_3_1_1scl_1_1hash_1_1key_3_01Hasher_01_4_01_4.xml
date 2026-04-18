@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</compoundname>
+    <includes refid="key_8h" local="no">key.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Hasher</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr ::std::size_t</type>
+        <definition>constexpr ::std::size_t std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;::operator()</definition>
+        <argsstring>(::scl::hash::key&lt; Hasher &gt; const &amp;k) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;::operator()</qualifiedname>
+        <param>
+          <type><ref refid="structscl_1_1hash_1_1key" kindref="compound">::scl::hash::key</ref>&lt; Hasher &gt; const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/key.h" line="118" column="29" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><computeroutput>std::hash</computeroutput> partial specialisation for all <computeroutput><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>&lt;Hasher&gt;</computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/key.h" line="116" column="1" bodyfile="module/utility/src/scl/utility/hash/key.h" bodystart="117" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" prot="public" virt="non-virtual"><scope>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

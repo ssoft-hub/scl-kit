@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_ee84acd7aed8e5e3b0eed877408f2d18" kind="dir">
+    <compoundname>module/utility/src/scl/utility/type_traits</compoundname>
+    <innerdir refid="dir_7ae4f81ae30c9db8975b98cdcb7060a6">module/utility/src/scl/utility/type_traits/detection</innerdir>
+    <innerfile refid="detection_8h">detection.h</innerfile>
+    <innerfile refid="forward__like_8h">forward_like.h</innerfile>
+    <innerfile refid="member__like_8h">member_like.h</innerfile>
+    <innerfile refid="overload__cast_8h">overload_cast.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/type_traits/"/>
+  </compounddef>
+</doxygen>

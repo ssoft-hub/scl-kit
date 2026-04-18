@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1hash_1_1fnv1a__hasher" kind="struct" language="C++" prot="public">
+    <compoundname>scl::hash::fnv1a_hasher</compoundname>
+    <includes refid="fnv1a_8h" local="no">fnv1a.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structscl_1_1hash_1_1fnv1a__hasher_1a3a0bee0e7a75155fa26caac74de1e04e" prot="public" static="no">
+        <type>::std::uint64_t</type>
+        <definition>using scl::hash::fnv1a_hasher::result_type =  ::std::uint64_t</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <qualifiedname>scl::hash::fnv1a_hasher::result_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/fnv1a.h" line="67" column="9" bodyfile="module/utility/src/scl/utility/hash/fnv1a.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structscl_1_1hash_1_1fnv1a__hasher_1a69f44265b6850be3ec433e10df8d95c3" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr result_type</type>
+        <definition>constexpr result_type scl::hash::fnv1a_hasher::operator()</definition>
+        <argsstring>(Range const &amp;range) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>scl::hash::fnv1a_hasher::operator()</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/fnv1a.h" line="70" column="31" bodyfile="module/utility/src/scl/utility/hash/fnv1a.h" bodystart="70" bodyend="74"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Callable wrapper around <ref refid="group__scl__utility__hash_1gaa103d3d49c596d4381faca5ebfa8f9ac" kindref="member">fnv1a</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/fnv1a.h" line="65" column="5" bodyfile="module/utility/src/scl/utility/hash/fnv1a.h" bodystart="66" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a69f44265b6850be3ec433e10df8d95c3" prot="public" virt="non-virtual"><scope>scl::hash::fnv1a_hasher</scope><name>operator()</name></member>
+      <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a3a0bee0e7a75155fa26caac74de1e04e" prot="public" virt="non-virtual"><scope>scl::hash::fnv1a_hasher</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

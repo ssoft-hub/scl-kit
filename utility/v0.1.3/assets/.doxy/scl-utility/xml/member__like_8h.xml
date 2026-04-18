@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="member__like_8h" kind="file" language="C++">
+    <compoundname>member_like.h</compoundname>
+    <includes local="no">type_traits</includes>
+    <includedby refid="type__traits_8h" local="no">module/utility/src/scl/utility/type_traits.h</includedby>
+    <includedby refid="method_8h" local="no">module/utility/src/scl/utility/type_traits/detection/method.h</includedby>
+    <includedby refid="operator_8h" local="no">module/utility/src/scl/utility/type_traits/detection/operator.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/utility/src/scl/utility/type_traits/member_like.h</label>
+        <link refid="member__like_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/type_traits.h</label>
+        <link refid="type__traits_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>module/utility/src/scl/utility/type_traits/detection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>module/utility/src/scl/utility/type_traits/detection/operator.h</label>
+        <link refid="operator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/type_traits/member_like.h</label>
+        <link refid="member__like_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <briefdescription>
+<para>Traits to build pointers to class members (C++20). </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">scl::member_function_like_t&lt;Type, Signature&gt;</ref>: Builds a pointer-to-member-function type: Result (::std::remove_cvref_t&lt;Type&gt;::*)(Arguments...) [cv] [ref] [noexcept] where [cv]/[ref] are mirrored from Type and [noexcept] is mirrored from Signature.</para>
+</listitem><listitem><para><ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">scl::member_property_like_t&lt;Type, Member&gt;</ref>: Builds a pointer-to-data-member type: Member (::std::remove_cvref_t&lt;Type&gt;::*) Object cv/ref qualifiers do not affect the pointer type for data members. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scl::detail</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Signature&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_function_like;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>member_function_noexcept<sp/>:<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Common<sp/>builder<sp/>parametrized<sp/>by<sp/>Noex<sp/>(controls<sp/>noexcept<sp/>on<sp/>the<sp/>member<sp/>function)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Type,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Result,<sp/>member_function_noexcept<sp/>Noexcept,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">build_member_function_like</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_class_v&lt;::std::remove_cvref_t&lt;Type&gt;&gt;,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;member_function_like_t<sp/>requires<sp/>Type<sp/>to<sp/>be<sp/>a<sp/>class<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">class_t<sp/>=<sp/>::std::remove_cvref_t&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>cv/ref<sp/>forms<sp/>in<sp/>one<sp/>place;<sp/>noexcept<sp/>is<sp/>controlled<sp/>by<sp/>Noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>&amp;;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>&amp;&amp;;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>&amp;;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>&amp;&amp;;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile<sp/>&amp;;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile<sp/>&amp;&amp;;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile<sp/>&amp;;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile<sp/>&amp;&amp;;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_c<sp/>=<sp/>::std::is_const_v&lt;::std::remove_reference_t&lt;Type&gt;&gt;;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_v<sp/>=<sp/>::std::is_volatile_v&lt;::std::remove_reference_t&lt;Type&gt;&gt;;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_l<sp/>=<sp/>::std::is_lvalue_reference_v&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_r<sp/>=<sp/>::std::is_rvalue_reference_v&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">type<sp/>=<sp/>::std::conditional_t&lt;is_l,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>lvalue-qualified<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv_l,<sp/>::std::conditional_t&lt;is_c,<sp/>c_l,<sp/>::std::conditional_t&lt;is_v,<sp/>v_l,<sp/>un_l&gt;&gt;&gt;,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;is_r,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rvalue-qualified<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv_r,<sp/>::std::conditional_t&lt;is_c,<sp/>c_r,<sp/>::std::conditional_t&lt;is_v,<sp/>v_r,<sp/>un_r&gt;&gt;&gt;,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>ref-qualifier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv,<sp/>::std::conditional_t&lt;is_c,<sp/>c,<sp/>::std::conditional_t&lt;is_v,<sp/>v,<sp/>un&gt;&gt;&gt;&gt;&gt;;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Type,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Result,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">build_member_function_like&lt;Type,<sp/>Result,<sp/>member_function_noexcept::enabled,<sp/>Arguments...&gt;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_class_v&lt;::std::remove_cvref_t&lt;Type&gt;&gt;,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;member_function_like_t<sp/>requires<sp/>Type<sp/>to<sp/>be<sp/>a<sp/>class<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">class_t<sp/>=<sp/>::std::remove_cvref_t&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>cv/ref<sp/>forms<sp/>in<sp/>one<sp/>place;<sp/>noexcept<sp/>is<sp/>controlled<sp/>by<sp/>Noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile<sp/>noexcept;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile<sp/>noexcept;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">un_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>&amp;&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">c_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>&amp;&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile<sp/>&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">v_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>volatile<sp/>&amp;&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv_l<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile<sp/>&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">cv_r<sp/>=<sp/>Result<sp/>(class_t::*)(Arguments...)<sp/>const<sp/>volatile<sp/>&amp;&amp;<sp/>noexcept;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_c<sp/>=<sp/>::std::is_const_v&lt;::std::remove_reference_t&lt;Type&gt;&gt;;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_v<sp/>=<sp/>::std::is_volatile_v&lt;::std::remove_reference_t&lt;Type&gt;&gt;;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_l<sp/>=<sp/>::std::is_lvalue_reference_v&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_r<sp/>=<sp/>::std::is_rvalue_reference_v&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">type<sp/>=<sp/>::std::conditional_t&lt;is_l,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>lvalue-qualified<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv_l,<sp/>::std::conditional_t&lt;is_c,<sp/>c_l,<sp/>::std::conditional_t&lt;is_v,<sp/>v_l,<sp/>un_l&gt;&gt;&gt;,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;is_r,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rvalue-qualified<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv_r,<sp/>::std::conditional_t&lt;is_c,<sp/>c_r,<sp/>::std::conditional_t&lt;is_v,<sp/>v_r,<sp/>un_r&gt;&gt;&gt;,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>ref-qualifier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;(is_c<sp/>&amp;&amp;<sp/>is_v),<sp/>cv,<sp/>::std::conditional_t&lt;is_c,<sp/>c,<sp/>::std::conditional_t&lt;is_v,<sp/>v,<sp/>un&gt;&gt;&gt;&gt;&gt;;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Entry:<sp/>Signature<sp/>without<sp/>noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Type,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Result,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_function_like&lt;Type,<sp/>Result(Arguments...)&gt;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>build_member_function_like&lt;Type,<sp/>Result,<sp/>member_function_noexcept::disabled,<sp/>Arguments...&gt;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Entry:<sp/>Signature<sp/>with<sp/>noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Type,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Result,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Arguments&gt;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_function_like&lt;Type,<sp/>Result(Arguments...)<sp/>noexcept&gt;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>build_member_function_like&lt;Type,<sp/>Result,<sp/>member_function_noexcept::enabled,<sp/>Arguments...&gt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fallback<sp/>for<sp/>non-function<sp/>Signature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Signature&gt;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_function_like</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_function_v&lt;Signature&gt;,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;::scl::member_function_like_t<sp/>requires<sp/>a<sp/>function<sp/>type<sp/>like<sp/>Result(Arguments...)<sp/>or<sp/>Result(Arguments...)<sp/>noexcept&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Member&gt;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_property_like</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">class_t<sp/>=<sp/>::std::remove_cvref_t&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(::std::is_class_v&lt;class_t&gt;<sp/>||<sp/>::std::is_union_v&lt;class_t&gt;,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;member_property_like_t<sp/>requires<sp/>Type<sp/>to<sp/>be<sp/>a<sp/>class<sp/>or<sp/>union<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!::std::is_function_v&lt;Member&gt;,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;member_property_like_t<sp/>expects<sp/>a<sp/>data<sp/>member<sp/>type;<sp/>use<sp/>member_function_like_t<sp/>for<sp/>member<sp/>functions&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">no_ref_t<sp/>=<sp/>::std::remove_reference_t&lt;Type&gt;;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">member_like_c_t<sp/>=</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;::std::is_const_v&lt;no_ref_t&gt;,<sp/>::std::add_const_t&lt;Member&gt;,<sp/>Member&gt;;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">member_like_cv_t<sp/>=</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::std::conditional_t&lt;::std::is_volatile_v&lt;no_ref_t&gt;,<sp/>::std::add_volatile_t&lt;member_like_c_t&gt;,<sp/>member_like_c_t&gt;;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">type<sp/>=<sp/>member_like_cv_t(class_t::*);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsFunction<sp/>=<sp/>::std::is_function_v&lt;T&gt;&gt;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_like;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Signature&gt;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_like&lt;Type,<sp/>Signature,<sp/>true&gt;<sp/>:<sp/>member_function_like&lt;Type,<sp/>Signature&gt;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Member&gt;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">member_like&lt;Type,<sp/>Member,<sp/>false&gt;<sp/>:<sp/>member_property_like&lt;Type,<sp/>Member&gt;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl" kindref="compound">scl</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Signature&gt;</highlight></codeline>
+<codeline lineno="189" refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kindref="member">member_function_like_t</ref><sp/>=<sp/>typename<sp/>::scl::detail::member_function_like&lt;Type,<sp/>Signature&gt;::type;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Member&gt;</highlight></codeline>
+<codeline lineno="207" refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kindref="member">member_property_like_t</ref><sp/>=<sp/>typename<sp/>::scl::detail::member_property_like&lt;Type,<sp/>Member&gt;::type;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Member&gt;</highlight></codeline>
+<codeline lineno="243" refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kindref="member">member_like_t</ref><sp/>=<sp/>typename<sp/>::scl::detail::member_like&lt;Type,<sp/>Member&gt;::type;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/type_traits/member_like.h"/>
+  </compounddef>
+</doxygen>

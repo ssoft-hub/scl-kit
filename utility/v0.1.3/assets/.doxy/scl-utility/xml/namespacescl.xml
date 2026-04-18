@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacescl" kind="namespace" language="C++">
+    <compoundname>scl</compoundname>
+    <innernamespace refid="namespacescl_1_1preprocessor">scl::preprocessor</innernamespace>
+    <sectiondef kind="typedef">
+      <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
+      <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
+      <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
+      <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
+      <memberdef kind="typedef" id="namespacescl_1a563e0978c2340b9d50d9ed1734518f09" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+          <param>
+            <type>typename Argument</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(::std::declval&lt; Type &gt;()[::std::declval&lt; Argument &gt;()])</type>
+        <definition>using scl::subscript_operation = typedef decltype(::std::declval&lt;Type&gt;()[::std::declval&lt;Argument&gt;()])</definition>
+        <argsstring></argsstring>
+        <name>subscript_operation</name>
+        <qualifiedname>scl::subscript_operation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="160" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1aea60675cd99a9894d484d4ec54549de6" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt; subscript_operation, Arguments... &gt;</type>
+        <definition>using scl::subscript_t = typedef ::scl::detected_t&lt;subscript_operation, Arguments...&gt;</definition>
+        <argsstring></argsstring>
+        <name>subscript_t</name>
+        <qualifiedname>scl::subscript_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="164" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1a4d321fbf6d415dbd7bd22bdc0ee5a859" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>decltype(::std::declval&lt; Type &gt;()(::std::declval&lt; Arguments &gt;()...))</type>
+        <definition>using scl::call_operation = typedef decltype(::std::declval&lt;Type&gt;()(::std::declval&lt;Arguments&gt;()...))</definition>
+        <argsstring></argsstring>
+        <name>call_operation</name>
+        <qualifiedname>scl::call_operation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="171" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacescl_1ac692ad135bbe5c36d4eea8a4be353803" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt; call_operation, Arguments... &gt;</type>
+        <definition>using scl::call_t = typedef ::scl::detected_t&lt;call_operation, Arguments...&gt;</definition>
+        <argsstring></argsstring>
+        <name>call_t</name>
+        <qualifiedname>scl::call_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="175" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    </sectiondef>
+    <sectiondef kind="var">
+      <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
+      <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
+      <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
+      <memberdef kind="variable" id="namespacescl_1aee3ad92d7603ba662d4bc368ee0e7356" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto scl::has_subscript_v</definition>
+        <argsstring></argsstring>
+        <name>has_subscript_v</name>
+        <qualifiedname>scl::has_subscript_v</qualifiedname>
+        <initializer>= <ref refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kindref="member">::scl::is_detected_v</ref>&lt;subscript_operation, Arguments...&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="162" column="27" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacescl_1a542d7b080e0816c97d28322b6ddba2e1" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Arguments</declname>
+            <defname>Arguments</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto scl::has_call_v</definition>
+        <argsstring></argsstring>
+        <name>has_call_v</name>
+        <qualifiedname>scl::has_call_v</qualifiedname>
+        <initializer>= <ref refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kindref="member">::scl::is_detected_v</ref>&lt;call_operation, Arguments...&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="173" column="27" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <member refid="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" kind="variable"><name>overload_cast</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
+      <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
+      <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
+      <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
+      <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
+      <member refid="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" kind="function"><name>type_short_name</name></member>
+      <member refid="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Root namespace of ScL project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

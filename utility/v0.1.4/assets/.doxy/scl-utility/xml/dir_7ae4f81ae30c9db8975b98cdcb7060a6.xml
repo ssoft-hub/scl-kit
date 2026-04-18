@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_7ae4f81ae30c9db8975b98cdcb7060a6" kind="dir">
+    <compoundname>module/utility/src/scl/utility/type_traits/detection</compoundname>
+    <innerfile refid="function_8h">function.h</innerfile>
+    <innerfile refid="method_8h">method.h</innerfile>
+    <innerfile refid="operator_8h">operator.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/type_traits/detection/"/>
+  </compounddef>
+</doxygen>

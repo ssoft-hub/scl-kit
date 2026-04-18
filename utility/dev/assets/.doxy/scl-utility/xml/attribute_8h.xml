@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="attribute_8h" kind="file" language="C++">
+    <compoundname>attribute.h</compoundname>
+    <includes refid="assume_8h" local="no">scl/utility/attribute/assume.h</includes>
+    <includes refid="deprecated_8h" local="no">scl/utility/attribute/deprecated.h</includes>
+    <includes refid="fallthrough_8h" local="no">scl/utility/attribute/fallthrough.h</includes>
+    <includes refid="hotcold_8h" local="no">scl/utility/attribute/hotcold.h</includes>
+    <includes refid="indeterminate_8h" local="no">scl/utility/attribute/indeterminate.h</includes>
+    <includes refid="inline_8h" local="no">scl/utility/attribute/inline.h</includes>
+    <includes refid="lifetimebound_8h" local="no">scl/utility/attribute/lifetimebound.h</includes>
+    <includes refid="likely_8h" local="no">scl/utility/attribute/likely.h</includes>
+    <includes refid="maybe__unused_8h" local="no">scl/utility/attribute/maybe_unused.h</includes>
+    <includes refid="no__unique__address_8h" local="no">scl/utility/attribute/no_unique_address.h</includes>
+    <includes refid="nodiscard_8h" local="no">scl/utility/attribute/nodiscard.h</includes>
+    <includes refid="noreturn_8h" local="no">scl/utility/attribute/noreturn.h</includes>
+    <includes refid="unsequenced_8h" local="no">scl/utility/attribute/unsequenced.h</includes>
+    <includedby refid="utility_8h" local="no">module/utility/src/scl/utility.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/utility/src/scl/utility/attribute.h</label>
+        <link refid="attribute_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/utility/attribute/assume.h</label>
+        <link refid="assume_8h"/>
+      </node>
+      <node id="3">
+        <label>scl/utility/attribute/deprecated.h</label>
+        <link refid="deprecated_8h"/>
+      </node>
+      <node id="4">
+        <label>scl/utility/attribute/fallthrough.h</label>
+        <link refid="fallthrough_8h"/>
+      </node>
+      <node id="5">
+        <label>scl/utility/attribute/hotcold.h</label>
+        <link refid="hotcold_8h"/>
+      </node>
+      <node id="6">
+        <label>scl/utility/attribute/indeterminate.h</label>
+        <link refid="indeterminate_8h"/>
+      </node>
+      <node id="7">
+        <label>scl/utility/attribute/inline.h</label>
+        <link refid="inline_8h"/>
+      </node>
+      <node id="8">
+        <label>scl/utility/attribute/lifetimebound.h</label>
+        <link refid="lifetimebound_8h"/>
+      </node>
+      <node id="9">
+        <label>scl/utility/attribute/likely.h</label>
+        <link refid="likely_8h"/>
+      </node>
+      <node id="10">
+        <label>scl/utility/attribute/maybe_unused.h</label>
+        <link refid="maybe__unused_8h"/>
+      </node>
+      <node id="11">
+        <label>scl/utility/attribute/no_unique_address.h</label>
+        <link refid="no__unique__address_8h"/>
+      </node>
+      <node id="12">
+        <label>scl/utility/attribute/nodiscard.h</label>
+        <link refid="nodiscard_8h"/>
+      </node>
+      <node id="13">
+        <label>scl/utility/attribute/noreturn.h</label>
+        <link refid="noreturn_8h"/>
+      </node>
+      <node id="14">
+        <label>scl/utility/attribute/unsequenced.h</label>
+        <link refid="unsequenced_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/attribute.h</label>
+        <link refid="attribute_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>ScL portable compiler attribute macros. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header aggregates all ScL attribute macros. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="assume_8h" kindref="compound">scl/utility/attribute/assume.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="deprecated_8h" kindref="compound">scl/utility/attribute/deprecated.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fallthrough_8h" kindref="compound">scl/utility/attribute/fallthrough.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hotcold_8h" kindref="compound">scl/utility/attribute/hotcold.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="indeterminate_8h" kindref="compound">scl/utility/attribute/indeterminate.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="inline_8h" kindref="compound">scl/utility/attribute/inline.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="lifetimebound_8h" kindref="compound">scl/utility/attribute/lifetimebound.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="likely_8h" kindref="compound">scl/utility/attribute/likely.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="maybe__unused_8h" kindref="compound">scl/utility/attribute/maybe_unused.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="no__unique__address_8h" kindref="compound">scl/utility/attribute/no_unique_address.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="nodiscard_8h" kindref="compound">scl/utility/attribute/nodiscard.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="noreturn_8h" kindref="compound">scl/utility/attribute/noreturn.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="unsequenced_8h" kindref="compound">scl/utility/attribute/unsequenced.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>group<sp/>scl_utility_attribute</highlight>    </programlisting>
+    <location file="module/utility/src/scl/utility/attribute.h"/>
+  </compounddef>
+</doxygen>

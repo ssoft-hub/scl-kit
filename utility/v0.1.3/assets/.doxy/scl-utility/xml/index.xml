@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structp8qim3n2a__t" kind="struct"><name>p8qim3n2a_t</name>
+  </compound>
+  <compound refid="namespacescl" kind="namespace"><name>scl</name>
+    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="namespacescl_1a563e0978c2340b9d50d9ed1734518f09" kind="typedef"><name>subscript_operation</name></member>
+    <member refid="namespacescl_1aea60675cd99a9894d484d4ec54549de6" kind="typedef"><name>subscript_t</name></member>
+    <member refid="namespacescl_1a4d321fbf6d415dbd7bd22bdc0ee5a859" kind="typedef"><name>call_operation</name></member>
+    <member refid="namespacescl_1ac692ad135bbe5c36d4eea8a4be353803" kind="typedef"><name>call_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
+    <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
+    <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
+    <member refid="namespacescl_1aee3ad92d7603ba662d4bc368ee0e7356" kind="variable"><name>has_subscript_v</name></member>
+    <member refid="namespacescl_1a542d7b080e0816c97d28322b6ddba2e1" kind="variable"><name>has_call_v</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" kind="variable"><name>overload_cast</name></member>
+    <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
+    <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
+    <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
+    <member refid="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" kind="function"><name>type_short_name</name></member>
+    <member refid="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
+  </compound>
+  <compound refid="namespacescl_1_1preprocessor" kind="namespace"><name>scl::preprocessor</name>
+  </compound>
+  <compound refid="utility_8h" kind="file"><name>utility.h</name>
+  </compound>
+  <compound refid="meta_8h" kind="file"><name>meta.h</name>
+  </compound>
+  <compound refid="enum_8h" kind="file"><name>enum.h</name>
+    <member refid="enum_8h_1af2fa5790ef83afa2cf07b4f774f79f57" kind="enum"><name>we5r256sg_e</name></member>
+    <member refid="enum_8h_1af2fa5790ef83afa2cf07b4f774f79f57a133bb29a0b2e463888e05becb6352483" kind="enumvalue"><name>we5r256sg_v</name></member>
+  </compound>
+  <compound refid="symbol_8h" kind="file"><name>symbol.h</name>
+    <member refid="symbol_8h_1a16e744220ead389293070806554a4420" kind="function"><name>lah4l4tjla6_f</name></member>
+  </compound>
+  <compound refid="type_8h" kind="file"><name>type.h</name>
+  </compound>
+  <compound refid="preprocessor_8h" kind="file"><name>preprocessor.h</name>
+  </compound>
+  <compound refid="counter_8h" kind="file"><name>counter.h</name>
+    <member refid="counter_8h_1aad8e6780a598d8abf548127d5c5143a5" kind="define"><name>SCL_COUNTER_CRUMB</name></member>
+    <member refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kind="define"><name>SCL_COUNTER_VALUE</name></member>
+    <member refid="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" kind="define"><name>SCL_COUNTER_NEXT</name></member>
+  </compound>
+  <compound refid="forward_8h" kind="file"><name>forward.h</name>
+    <member refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kind="define"><name>SCL_FORWARD</name></member>
+  </compound>
+  <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
+  </compound>
+  <compound refid="detection_8h" kind="file"><name>detection.h</name>
+  </compound>
+  <compound refid="function_8h" kind="file"><name>function.h</name>
+    <member refid="group__scl__utility__type__traits_1gad0f78054a955da52ccb646d7b05b929e" kind="define"><name>SCL_FUNCTION_DETECTION</name></member>
+  </compound>
+  <compound refid="method_8h" kind="file"><name>method.h</name>
+    <member refid="group__scl__utility__type__traits_1gaf16fc9819f8128b3998f11ea9de989b3" kind="define"><name>SCL_METHOD_DETECTION</name></member>
+  </compound>
+  <compound refid="operator_8h" kind="file"><name>operator.h</name>
+    <member refid="operator_8h_1a07767d89b2c77b9cfac0321fb6977657" kind="define"><name>SCL_DETAIL_ARGUMENTS_OPERATOR_DETECTION</name></member>
+    <member refid="operator_8h_1a0964a1b4d458de81c9c54e73f8dda7b6" kind="define"><name>SCL_DETAIL_PREFIX_UNARY_OPERATOR_DETECTION</name></member>
+    <member refid="operator_8h_1a6d19be109852673d4db281bfdf6f00f7" kind="define"><name>SCL_DETAIL_POSTFIX_UNARY_OPERATOR_DETECTION</name></member>
+    <member refid="operator_8h_1a394cd8ebefb6088de76d6e9c47998286" kind="define"><name>SCL_DETAIL_BINARY_OPERATOR_DETECTION</name></member>
+    <member refid="operator_8h_1a08b0e7d7a4c1a24d8057b3f624914646" kind="define"><name>SCL_DETAIL_ARROW_OPERATOR_DETECTION</name></member>
+  </compound>
+  <compound refid="forward__like_8h" kind="file"><name>forward_like.h</name>
+  </compound>
+  <compound refid="member__like_8h" kind="file"><name>member_like.h</name>
+  </compound>
+  <compound refid="overload__cast_8h" kind="file"><name>overload_cast.h</name>
+  </compound>
+  <compound refid="group__scl__utility__meta" kind="group"><name>scl_utility_meta</name>
+    <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
+    <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
+    <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
+    <member refid="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" kind="function"><name>type_short_name</name></member>
+  </compound>
+  <compound refid="group__scl__utility__preprocessor" kind="group"><name>scl_utility_preprocessor</name>
+    <member refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kind="define"><name>SCL_COUNTER_VALUE</name></member>
+    <member refid="group__scl__utility__preprocessor_1gaef4b850a946910de7341123b472bdf60" kind="define"><name>SCL_COUNTER_NEXT</name></member>
+    <member refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kind="define"><name>SCL_FORWARD</name></member>
+  </compound>
+  <compound refid="group__scl__utility__type__traits" kind="group"><name>scl_utility_type_traits</name>
+    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
+    <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
+    <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" kind="variable"><name>overload_cast</name></member>
+    <member refid="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
+    <member refid="group__scl__utility__type__traits_1gad0f78054a955da52ccb646d7b05b929e" kind="define"><name>SCL_FUNCTION_DETECTION</name></member>
+    <member refid="group__scl__utility__type__traits_1gaf16fc9819f8128b3998f11ea9de989b3" kind="define"><name>SCL_METHOD_DETECTION</name></member>
+  </compound>
+  <compound refid="dir_7ae4f81ae30c9db8975b98cdcb7060a6" kind="dir"><name>module/utility/src/scl/utility/type_traits/detection</name>
+  </compound>
+  <compound refid="dir_85c7392cbdcb0ae852d6674ea46dde19" kind="dir"><name>module/utility/src/scl/utility/meta</name>
+  </compound>
+  <compound refid="dir_a7b0466279106ea0b8f86f609f621680" kind="dir"><name>module</name>
+  </compound>
+  <compound refid="dir_a3b1215870dd7b05435314af8f203f78" kind="dir"><name>module/utility/src/scl/utility/preprocessor</name>
+  </compound>
+  <compound refid="dir_ca45970a26780365ec2accbdb8d8d4fe" kind="dir"><name>module/utility/src/scl</name>
+  </compound>
+  <compound refid="dir_ab13fdfb8e4c1ff98b437eee9f69d35c" kind="dir"><name>module/utility/src</name>
+  </compound>
+  <compound refid="dir_ee84acd7aed8e5e3b0eed877408f2d18" kind="dir"><name>module/utility/src/scl/utility/type_traits</name>
+  </compound>
+  <compound refid="dir_cca185d4009e66bf68ef58b617abaf60" kind="dir"><name>module/utility</name>
+  </compound>
+  <compound refid="dir_76f6b7cf5a6cf438d50211f1abeeaae6" kind="dir"><name>module/utility/src/scl/utility</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1hash_1_1siphash__key" kind="struct" language="C++" prot="public">
+    <compoundname>scl::hash::siphash_key</compoundname>
+    <includes refid="siphash_8h" local="no">siphash.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structscl_1_1hash_1_1siphash__key_1ae4c4f18c636557c82de76eeec4725c68" prot="public" static="no" mutable="no">
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::siphash_key::k0</definition>
+        <argsstring></argsstring>
+        <name>k0</name>
+        <qualifiedname>scl::hash::siphash_key::k0</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/siphash.h" line="23" column="25" bodyfile="module/utility/src/scl/utility/hash/siphash.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscl_1_1hash_1_1siphash__key_1a3730dc9270acc26008ec8a500b608ad4" prot="public" static="no" mutable="no">
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::siphash_key::k1</definition>
+        <argsstring></argsstring>
+        <name>k1</name>
+        <qualifiedname>scl::hash::siphash_key::k1</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/siphash.h" line="24" column="25" bodyfile="module/utility/src/scl/utility/hash/siphash.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>128-bit secret key for SipHash. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>For <bold>hash-flooding protection</bold> (e.g. in <computeroutput>std::unordered_map</computeroutput>), initialise with a random value at program startup. For <bold>compile-time identifiers</bold> and <computeroutput>switch</computeroutput>/<computeroutput>case</computeroutput> dispatch, a fixed key is sufficient. </para>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/siphash.h" line="21" column="5" bodyfile="module/utility/src/scl/utility/hash/siphash.h" bodystart="22" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structscl_1_1hash_1_1siphash__key_1ae4c4f18c636557c82de76eeec4725c68" prot="public" virt="non-virtual"><scope>scl::hash::siphash_key</scope><name>k0</name></member>
+      <member refid="structscl_1_1hash_1_1siphash__key_1a3730dc9270acc26008ec8a500b608ad4" prot="public" virt="non-virtual"><scope>scl::hash::siphash_key</scope><name>k1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

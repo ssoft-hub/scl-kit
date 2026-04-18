@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1hash_1_1sdbm__hasher" kind="struct" language="C++" prot="public">
+    <compoundname>scl::hash::sdbm_hasher</compoundname>
+    <includes refid="sdbm_8h" local="no">sdbm.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structscl_1_1hash_1_1sdbm__hasher_1a2f9e63aef90cd412d9b08df22449ef4d" prot="public" static="no">
+        <type>::std::uint64_t</type>
+        <definition>using scl::hash::sdbm_hasher::result_type =  ::std::uint64_t</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <qualifiedname>scl::hash::sdbm_hasher::result_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="62" column="9" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structscl_1_1hash_1_1sdbm__hasher_1a50c5cacdb8800c2fb8bae5d49fdf648d" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr result_type</type>
+        <definition>constexpr result_type scl::hash::sdbm_hasher::operator()</definition>
+        <argsstring>(Range const &amp;range) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>scl::hash::sdbm_hasher::operator()</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/sdbm.h" line="65" column="31" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="65" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Callable wrapper around <ref refid="group__scl__utility__hash_1gaec361ebf99797481bbe413b6faf9d7e0" kindref="member">sdbm</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/sdbm.h" line="60" column="5" bodyfile="module/utility/src/scl/utility/hash/sdbm.h" bodystart="61" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structscl_1_1hash_1_1sdbm__hasher_1a50c5cacdb8800c2fb8bae5d49fdf648d" prot="public" virt="non-virtual"><scope>scl::hash::sdbm_hasher</scope><name>operator()</name></member>
+      <member refid="structscl_1_1hash_1_1sdbm__hasher_1a2f9e63aef90cd412d9b08df22449ef4d" prot="public" virt="non-virtual"><scope>scl::hash::sdbm_hasher</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

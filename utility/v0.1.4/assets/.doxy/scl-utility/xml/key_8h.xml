@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="key_8h" kind="file" language="C++">
+    <compoundname>key.h</compoundname>
+    <includes refid="siphash_8h" local="no">scl/utility/hash/siphash.h</includes>
+    <includes local="no">concepts</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="hash_8h" local="no">module/utility/src/scl/utility/hash.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>module/utility/src/scl/utility/hash/key.h</label>
+        <link refid="key_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/utility/hash/siphash.h</label>
+        <link refid="siphash_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bit</label>
+      </node>
+      <node id="4">
+        <label>concepts</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>ranges</label>
+      </node>
+      <node id="9">
+        <label>type_traits</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>module/utility/src/scl/utility/hash.h</label>
+        <link refid="hash_8h"/>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/hash/key.h</label>
+        <link refid="key_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structscl_1_1hash_1_1key" prot="public">scl::hash::key</innerclass>
+    <innerclass refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" prot="public">std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</innerclass>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <innernamespace refid="namespacescl_1_1hash">scl::hash</innernamespace>
+    <innernamespace refid="namespacescl_1_1hash_1_1concepts">scl::hash::concepts</innernamespace>
+    <briefdescription>
+<para>Strongly-typed hash digest parameterized by a hash function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="siphash_8h" kindref="compound">scl/utility/hash/siphash.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scl::hash::concepts</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>H&gt;</highlight></codeline>
+<codeline lineno="23" refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher" kindref="compound">byte_hasher</ref><sp/>=<sp/>::std::default_initializable&lt;H&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>H::result_type;<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>::std::integral&lt;typename<sp/>H::result_type&gt;;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::hash::concepts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scl::hash</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;concepts::</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">_hasher<sp/>Hasher<sp/>=<sp/>siphash_hasher&lt;&gt;&gt;</highlight></codeline>
+<codeline lineno="82" refid="structscl_1_1hash_1_1key" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85" refid="structscl_1_1hash_1_1key_1a1b3c9595487df01e24a494da09ed1c13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structscl_1_1hash_1_1key_1a1b3c9595487df01e24a494da09ed1c13" kindref="member">hasher_type</ref><sp/>=<sp/>Hasher;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Hasher::result_type;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref><sp/><ref refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kindref="member">value</ref>{};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;::std::ranges::range<sp/>Range&gt;</highlight></codeline>
+<codeline lineno="99" refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" kindref="member">key</ref>(Range<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<sp/>range)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;,<sp/>::std::uint8_t&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kindref="member">value</ref>{Hasher{}(range)}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kindref="member">value</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" kindref="member">operator&lt;=&gt;</ref>(<ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;,<sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Hasher&gt;</highlight></codeline>
+<codeline lineno="116" refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;::<ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>&lt;Hasher&gt;&gt;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/>::std::size_t<sp/>operator()(<ref refid="structscl_1_1hash_1_1key" kindref="compound">::scl::hash::key&lt;Hasher&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<sp/>k)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::std::hash&lt;typename<sp/>::scl::hash::key&lt;Hasher&gt;::value_type&gt;{}(k.<ref refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/hash/key.h"/>
+  </compounddef>
+</doxygen>

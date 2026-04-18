@@ -1,0 +1,634 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__utility__attribute" kind="group">
+    <compoundname>scl_utility_attribute</compoundname>
+    <title>ScL Attribute Macros</title>
+    <innerfile refid="assume_8h">assume.h</innerfile>
+    <innerfile refid="deprecated_8h">deprecated.h</innerfile>
+    <innerfile refid="fallthrough_8h">fallthrough.h</innerfile>
+    <innerfile refid="hotcold_8h">hotcold.h</innerfile>
+    <innerfile refid="indeterminate_8h">indeterminate.h</innerfile>
+    <innerfile refid="inline_8h">inline.h</innerfile>
+    <innerfile refid="lifetimebound_8h">lifetimebound.h</innerfile>
+    <innerfile refid="likely_8h">likely.h</innerfile>
+    <innerfile refid="maybe__unused_8h">maybe_unused.h</innerfile>
+    <innerfile refid="no__unique__address_8h">no_unique_address.h</innerfile>
+    <innerfile refid="nodiscard_8h">nodiscard.h</innerfile>
+    <innerfile refid="noreturn_8h">noreturn.h</innerfile>
+    <innerfile refid="unsequenced_8h">unsequenced.h</innerfile>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga0eec2f1ea4d46be5489129e21d2b780b" prot="public" static="no">
+        <name>SCL_ASSUME</name>
+        <param><defname>expr</defname></param>
+        <initializer>((void)(expr))</initializer>
+        <briefdescription>
+<para>Informs the optimizer that <computeroutput>expr</computeroutput> is always true at this point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On most compilers <computeroutput>expr</computeroutput> is <bold>not</bold> evaluated at runtime. Do NOT pass expressions with side effects.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(assume)</computeroutput> (C++23): <computeroutput></computeroutput>[[assume(expr)]] — standard form, forward-compatible</para>
+</listitem><listitem><para>MSVC native (not Clang-cl): <computeroutput>__assume(expr)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_builtin(__builtin_assume)</computeroutput> (Clang): <computeroutput>__builtin_assume(expr)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_attribute(assume)</computeroutput> (GCC<nonbreakablespace/>13+, C++20-compatible extension): <computeroutput>__attribute__</computeroutput>((assume(expr)))</para>
+</listitem><listitem><para><computeroutput>__has_builtin(__builtin_unreachable)</computeroutput> (GCC<nonbreakablespace/>&lt;<nonbreakablespace/>13 fallback): <computeroutput></computeroutput>(static_cast&lt;bool&gt;(expr) ? (void)0 : __builtin_unreachable())</para>
+</listitem><listitem><para>Fallback: <computeroutput></computeroutput>((void)(expr))</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean expression assumed to be always true.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>process(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>p)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__scl__utility__attribute_1ga0eec2f1ea4d46be5489129e21d2b780b" kindref="member">SCL_ASSUME</ref>(p<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*p<sp/>=<sp/>42;<sp/></highlight><highlight class="comment">//<sp/>optimizer<sp/>may<sp/>elide<sp/>null-check</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/assume.h" line="79" column="10" bodyfile="module/utility/src/scl/utility/attribute/assume.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gae1c323a4bec22dfbf6d266e01524228a" prot="public" static="no">
+        <name>SCL_UNREACHABLE</name>
+        <param></param>
+        <initializer>((void)0)</initializer>
+        <briefdescription>
+<para>Marks the current location as unreachable code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invoking this macro in a code path that IS reached is undefined behaviour. Use it to suppress &quot;not all control paths return a value&quot; warnings and to guide the optimizer in dead-code elimination.</para>
+<para>Detection order:<orderedlist>
+<listitem><para>MSVC native (not Clang-cl): <computeroutput>__assume(false)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_builtin(__builtin_unreachable)</computeroutput> (GCC, Clang): <computeroutput>__builtin_unreachable()</computeroutput> </para>
+</listitem><listitem><para>Fallback: <computeroutput></computeroutput>((void)0)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f(Color<sp/>c)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(c)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Color::Red:<sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Color::Green:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__scl__utility__attribute_1gae1c323a4bec22dfbf6d266e01524228a" kindref="member">SCL_UNREACHABLE</ref>();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/assume.h" line="89" column="10" bodyfile="module/utility/src/scl/utility/attribute/assume.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" prot="public" static="no">
+        <name>SCL_DEPRECATED</name>
+        <briefdescription>
+<para>Marks a declaration as deprecated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Causes the compiler to emit a warning whenever the decorated entity is used. Apply before the entity: function, class, variable, enum, typedef, etc.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(deprecated)</computeroutput> (C++14): <computeroutput></computeroutput>[[deprecated]]</para>
+</listitem><listitem><para>MSVC native (not Clang-cl): <computeroutput>__declspec(deprecated)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_attribute(deprecated)</computeroutput> (GCC, Clang): <computeroutput>__attribute__((deprecated))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no annotation; no warning emitted)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kindref="member">SCL_DEPRECATED</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>old_api();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kindref="member">SCL_DEPRECATED</ref><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">LegacyHandle<sp/>{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd;<sp/>};</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/deprecated.h" line="70" column="10" bodyfile="module/utility/src/scl/utility/attribute/deprecated.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" prot="public" static="no">
+        <name>SCL_DEPRECATED_MSG</name>
+        <param><defname>msg</defname></param>
+        <briefdescription>
+<para>Marks a declaration as deprecated with a custom message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Like <ref refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kindref="member">SCL_DEPRECATED</ref> but includes a string literal <computeroutput>msg</computeroutput> in the compiler diagnostic. On compilers that do not support message-bearing deprecation the macro falls back to <ref refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kindref="member">SCL_DEPRECATED</ref> (warning without message).</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(deprecated)</computeroutput> (C++14): <computeroutput></computeroutput>[[deprecated(msg)]]</para>
+</listitem><listitem><para>MSVC native (not Clang-cl): <computeroutput>__declspec(deprecated(msg))</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_attribute(deprecated)</computeroutput> (GCC, Clang): <computeroutput>__attribute__</computeroutput>((deprecated(msg)))</para>
+</listitem><listitem><para>Fallback: empty</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string literal describing the deprecation reason.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" kindref="member">SCL_DEPRECATED_MSG</ref>(</highlight><highlight class="stringliteral">&quot;Use<sp/>new_api()<sp/>instead&quot;</highlight><highlight class="normal">)<sp/>void<sp/>old_api();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/deprecated.h" line="71" column="9" bodyfile="module/utility/src/scl/utility/attribute/deprecated.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gac5ef58a12db69cd4a2f622a95da5f47a" prot="public" static="no">
+        <name>SCL_FALLTHROUGH</name>
+        <initializer>((void)0)</initializer>
+        <briefdescription>
+<para>Suppresses the implicit fall-through warning in a <computeroutput>switch</computeroutput> statement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Place as a statement at the end of a <computeroutput>case</computeroutput> body that intentionally falls through to the next <computeroutput>case</computeroutput>. This silences <computeroutput>-Wimplicit-fallthrough</computeroutput> and the equivalent MSVC warning C26819.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(fallthrough)</computeroutput> (C++17): <computeroutput></computeroutput>[[fallthrough]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(fallthrough)</computeroutput> (GCC ≥ 7, Clang pre-C++17): <computeroutput>__attribute__((fallthrough))</computeroutput> </para>
+</listitem><listitem><para>Fallback: <computeroutput></computeroutput>((void)0) — silent no-op</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(code)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>prepare();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__scl__utility__attribute_1gac5ef58a12db69cd4a2f622a95da5f47a" kindref="member">SCL_FALLTHROUGH</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>execute();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/fallthrough.h" line="43" column="10" bodyfile="module/utility/src/scl/utility/attribute/fallthrough.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga5614123bb18839129684fb44b614e28c" prot="public" static="no">
+        <name>SCL_HOT</name>
+        <briefdescription>
+<para>Marks a function as called frequently (hot path). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instructs the compiler to optimise the function more aggressively and place it in a section of the binary that improves instruction-cache locality for hot code. Branches toward a <computeroutput>SCL_HOT</computeroutput> call site are implicitly biased as likely.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(gnu::hot)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::hot]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(hot)</computeroutput> (GCC, Clang older): <computeroutput>__attribute__((hot))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no hint)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga5614123bb18839129684fb44b614e28c" kindref="member">SCL_HOT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dispatch(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Event&amp;<sp/>e);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga5614123bb18839129684fb44b614e28c" kindref="member">SCL_HOT</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lookup(std::uint32_t<sp/>key);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/hotcold.h" line="65" column="10" bodyfile="module/utility/src/scl/utility/attribute/hotcold.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gaa718790d1f28888a3c11a95f4a81a592" prot="public" static="no">
+        <name>SCL_COLD</name>
+        <briefdescription>
+<para>Marks a function as called rarely (cold path). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instructs the compiler to optimise the function for size rather than speed and to place it in a cold section of the binary, away from hot code. Branches toward a <computeroutput>SCL_COLD</computeroutput> call site are implicitly biased as unlikely. Combines naturally with <ref refid="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" kindref="member">SCL_NOINLINE</ref> and <ref refid="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" kindref="member">SCL_NORETURN</ref>.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(gnu::cold)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::cold]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(cold)</computeroutput> (GCC, Clang older): <computeroutput>__attribute__((cold))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no hint)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gaa718790d1f28888a3c11a95f4a81a592" kindref="member">SCL_COLD</ref><sp/><ref refid="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" kindref="member">SCL_NOINLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>report_oom(std::size_t<sp/>requested);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gaa718790d1f28888a3c11a95f4a81a592" kindref="member">SCL_COLD</ref><sp/><ref refid="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" kindref="member">SCL_NORETURN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fatal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>msg);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/hotcold.h" line="77" column="10" bodyfile="module/utility/src/scl/utility/attribute/hotcold.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gac1d3b0577ad568b44518ad46965ae11c" prot="public" static="no">
+        <name>SCL_INDETERMINATE</name>
+        <briefdescription>
+<para>Explicitly marks a variable as having an indeterminate value, opting in to uninitialised storage for performance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Corresponds to the C++26 <computeroutput></computeroutput>[[indeterminate]] attribute. Apply it to a variable declaration to tell the compiler that the initial value is intentionally indeterminate — suppressing any mandatory zero- or default-initialisation that would otherwise be inserted.</para>
+<para>Reading the value before writing to it is <bold>undefined</bold> behaviour. Use only when the variable is unconditionally written before its first read.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(indeterminate)</computeroutput> (C++26): <computeroutput></computeroutput>[[indeterminate]]</para>
+</listitem><listitem><para>Fallback: empty (variable is initialised normally; no UB, no benefit)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fill(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dst,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/>std::size_t<sp/>n)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__scl__utility__attribute_1gac1d3b0577ad568b44518ad46965ae11c" kindref="member">SCL_INDETERMINATE</ref><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tmp;<sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>zero-init;<sp/>written<sp/>unconditionally</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/>val<sp/>*<sp/>2.0f;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>++i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst[i]<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/indeterminate.h" line="42" column="10" bodyfile="module/utility/src/scl/utility/attribute/indeterminate.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga93b5ff5a550e807c9986619e56a0d59e" prot="public" static="no">
+        <name>SCL_FORCE_INLINE</name>
+        <initializer>inline</initializer>
+        <briefdescription>
+<para>Requests that the compiler always inline the decorated function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Place before the return type: <computeroutput>SCL_FORCE_INLINE</computeroutput> int foo() { ... } The GCC/Clang branch embeds <computeroutput>inline</computeroutput> in the expansion — do not add it manually.</para>
+<para>Detection order:<orderedlist>
+<listitem><para>MSVC native (not Clang-cl): <computeroutput>__forceinline</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(gnu::always_inline)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::always_inline]] inline</para>
+</listitem><listitem><para>Fallback: <computeroutput>inline</computeroutput> </para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga93b5ff5a550e807c9986619e56a0d59e" kindref="member">SCL_FORCE_INLINE</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>add(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/>b;<sp/>}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/inline.h" line="54" column="10" bodyfile="module/utility/src/scl/utility/attribute/inline.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" prot="public" static="no">
+        <name>SCL_NOINLINE</name>
+        <briefdescription>
+<para>Requests that the compiler never inline the decorated function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Place before the return type: <computeroutput>SCL_NOINLINE</computeroutput> void cold_path();</para>
+<para>Detection order:<orderedlist>
+<listitem><para>MSVC native (not Clang-cl): <computeroutput>__declspec(noinline)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(gnu::noinline)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::noinline]]</para>
+</listitem><listitem><para>Fallback: empty (function compiles without hint)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" kindref="member">SCL_NOINLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cold_path();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/inline.h" line="64" column="10" bodyfile="module/utility/src/scl/utility/attribute/inline.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" prot="public" static="no">
+        <name>SCL_LIFETIMEBOUND</name>
+        <briefdescription>
+<para>Marks a function parameter (or implicit <computeroutput>*this</computeroutput>) as lifetime-bound to the return value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When applied to a parameter, the compiler warns if the returned reference or pointer outlives the annotated argument (dangling reference detection at compile time).</para>
+<para><bold>Placement</bold> — after the parameter declaration or after the cv-qualifier of a member function: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">std::string_view<sp/>first(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>s<sp/><ref refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kindref="member">SCL_LIFETIMEBOUND</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Member<sp/>function<sp/>(*this<sp/>is<sp/>lifetimebound<sp/>to<sp/>return<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Builder<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Builder&amp;<sp/>set(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/><ref refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kindref="member">SCL_LIFETIMEBOUND</ref>;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(clang::lifetimebound)</computeroutput> (Clang): <computeroutput></computeroutput>[[clang::lifetimebound]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(lifetimebound)</computeroutput> (Clang older): <computeroutput>__attribute__((lifetimebound))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no lifetime analysis; no warning)</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="note"><para>GCC and MSVC do not currently support this attribute. The fallback is always empty on those compilers.</para>
+</simplesect>
+<programlisting filename=".cpp"><codeline><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>clamp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>v<sp/><ref refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kindref="member">SCL_LIFETIMEBOUND</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>lo<sp/><ref refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kindref="member">SCL_LIFETIMEBOUND</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>hi<sp/><ref refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kindref="member">SCL_LIFETIMEBOUND</ref>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Dangling<sp/>reference<sp/>—<sp/>Clang<sp/>warns<sp/>with<sp/>SCL_LIFETIMEBOUND:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>r<sp/>=<sp/>clamp(42,<sp/>0,<sp/>100);<sp/><sp/></highlight><highlight class="comment">//<sp/>temporary<sp/>args<sp/>destroyed</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/lifetimebound.h" line="59" column="10" bodyfile="module/utility/src/scl/utility/attribute/lifetimebound.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga0b3d3a2e75d20f336aacf8f53dd5f291" prot="public" static="no">
+        <name>SCL_LIKELY</name>
+        <briefdescription>
+<para>Statement attribute that marks a branch as likely to be taken. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Portable wrapper for the C++20 <computeroutput></computeroutput>[[likely]] statement attribute. Apply it before a statement in an <computeroutput>if</computeroutput> branch or before a label in a <computeroutput>switch</computeroutput> to guide the optimizer&apos;s branch-layout decisions.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(likely)</computeroutput> (C++20): <computeroutput></computeroutput>[[likely]]</para>
+</listitem><listitem><para>Fallback: empty (no hint; compiles without effect)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>if<sp/>branch</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(condition)<sp/><ref refid="group__scl__utility__attribute_1ga0b3d3a2e75d20f336aacf8f53dd5f291" kindref="member">SCL_LIKELY</ref><sp/>{<sp/>fast_path();<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>switch<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(x)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga0b3d3a2e75d20f336aacf8f53dd5f291" kindref="member">SCL_LIKELY</ref><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/likely.h" line="104" column="10" bodyfile="module/utility/src/scl/utility/attribute/likely.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gaf9d1179b4a83033ac8e53b5bb05f7fbd" prot="public" static="no">
+        <name>SCL_UNLIKELY</name>
+        <briefdescription>
+<para>Statement attribute that marks a branch as unlikely to be taken. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Portable wrapper for the C++20 <computeroutput></computeroutput>[[unlikely]] statement attribute.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(unlikely)</computeroutput> (C++20): <computeroutput></computeroutput>[[unlikely]]</para>
+</listitem><listitem><para>Fallback: empty</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error)<sp/><ref refid="group__scl__utility__attribute_1gaf9d1179b4a83033ac8e53b5bb05f7fbd" kindref="member">SCL_UNLIKELY</ref><sp/>{<sp/>handle_error();<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(x)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gaf9d1179b4a83033ac8e53b5bb05f7fbd" kindref="member">SCL_UNLIKELY</ref><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/likely.h" line="112" column="10" bodyfile="module/utility/src/scl/utility/attribute/likely.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga719cbb8e58c2b673a50f22103cad9fbb" prot="public" static="no">
+        <name>SCL_LIKELY_EXPR</name>
+        <param><defname>expr</defname></param>
+        <initializer>(!!(expr))</initializer>
+        <briefdescription>
+<para>Expression wrapper that hints the optimizer <computeroutput>expr</computeroutput> is usually true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Wraps a boolean or integer expression and returns its value unchanged. On GCC and Clang the hint is communicated via <computeroutput>__builtin_expect</computeroutput>. On MSVC (which uses profile-guided optimisation) the expression passes through unmodified.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_builtin(__builtin_expect)</computeroutput> (GCC, Clang): <computeroutput>__builtin_expect</computeroutput>(!!(expr), 1)</para>
+</listitem><listitem><para>Fallback: <computeroutput></computeroutput>(!!(expr))</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An expression convertible to <computeroutput>bool</computeroutput> (or <computeroutput>int</computeroutput>).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__scl__utility__attribute_1ga719cbb8e58c2b673a50f22103cad9fbb" kindref="member">SCL_LIKELY_EXPR</ref>(ptr<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fast<sp/>path<sp/>—<sp/>branch<sp/>predictor<sp/>biased<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/likely.h" line="124" column="10" bodyfile="module/utility/src/scl/utility/attribute/likely.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gae875c9be1f87e5a918f93c9aad1d7d5c" prot="public" static="no">
+        <name>SCL_UNLIKELY_EXPR</name>
+        <param><defname>expr</defname></param>
+        <initializer>(!!(expr))</initializer>
+        <briefdescription>
+<para>Expression wrapper that hints the optimizer <computeroutput>expr</computeroutput> is usually false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Like <ref refid="group__scl__utility__attribute_1ga719cbb8e58c2b673a50f22103cad9fbb" kindref="member">SCL_LIKELY_EXPR</ref> but biases the branch predictor toward the false (zero) outcome.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_builtin(__builtin_expect)</computeroutput> (GCC, Clang): <computeroutput>__builtin_expect</computeroutput>(!!(expr), 0)</para>
+</listitem><listitem><para>Fallback: <computeroutput></computeroutput>(!!(expr))</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An expression convertible to <computeroutput>bool</computeroutput> (or <computeroutput>int</computeroutput>).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__scl__utility__attribute_1gae875c9be1f87e5a918f93c9aad1d7d5c" kindref="member">SCL_UNLIKELY_EXPR</ref>(error_code<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>handle_error(error_code);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/likely.h" line="125" column="9" bodyfile="module/utility/src/scl/utility/attribute/likely.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga927efdaf9bb217b04e588b35832f90a9" prot="public" static="no">
+        <name>SCL_MAYBE_UNUSED</name>
+        <briefdescription>
+<para>Suppresses compiler warnings about unused variables, parameters, functions, and types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply to any named entity that may legitimately go unused depending on build configuration (e.g., debug-only variables, platform-specific params, assert-only values).</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(maybe_unused)</computeroutput> (C++17): <computeroutput></computeroutput>[[maybe_unused]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(unused)</computeroutput> (GCC, Clang pre-C++17): <computeroutput>__attribute__((unused))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (warning may still fire)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>process(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value,<sp/><ref refid="group__scl__utility__attribute_1ga927efdaf9bb217b04e588b35832f90a9" kindref="member">SCL_MAYBE_UNUSED</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>debug_flags)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>debug_flags<sp/>used<sp/>only<sp/>in<sp/>debug<sp/>builds</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>assert(debug_flags<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(void)value;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga927efdaf9bb217b04e588b35832f90a9" kindref="member">SCL_MAYBE_UNUSED</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>helper()<sp/>{<sp/>...<sp/>}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/maybe_unused.h" line="43" column="10" bodyfile="module/utility/src/scl/utility/attribute/maybe_unused.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga4db775c117b8c3b9213ccb26845f36ec" prot="public" static="no">
+        <name>SCL_NO_UNIQUE_ADDRESS</name>
+        <briefdescription>
+<para>Portable [[no_unique_address]] (C++20). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Detection uses <computeroutput>__has_cpp_attribute</computeroutput> to select the right spelling:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(no_unique_address)</computeroutput> <rarr/> <computeroutput></computeroutput>[[no_unique_address]]</para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(msvc::no_unique_address)</computeroutput> <rarr/> <computeroutput></computeroutput>[[msvc::no_unique_address]]</para>
+</listitem><listitem><para>Fallback: empty (no layout optimisation; EBO not guaranteed)</para>
+</listitem></orderedlist>
+</para>
+<para>MSVC &lt; 19.30 (VS<nonbreakablespace/>2019 <le/><nonbreakablespace/>16.9) does not recognise the standard spelling, so step<nonbreakablespace/>1 returns 0 and step<nonbreakablespace/>2 picks up the vendor form. Clang-cl supports the standard attribute; <computeroutput>__has_cpp_attribute</computeroutput> returns non-zero for it and the vendor form is never needed.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Empty<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">S<sp/>{<sp/><ref refid="group__scl__utility__attribute_1ga4db775c117b8c3b9213ccb26845f36ec" kindref="member">SCL_NO_UNIQUE_ADDRESS</ref><sp/>Empty<sp/>e;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;<sp/>};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(S)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/no_unique_address.h" line="36" column="10" bodyfile="module/utility/src/scl/utility/attribute/no_unique_address.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" prot="public" static="no">
+        <name>SCL_NODISCARD</name>
+        <briefdescription>
+<para>Warns if the return value of a function (or an object of a type) is discarded by the caller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply to a function declaration or to a class/struct/enum declaration.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(nodiscard)</computeroutput> ≥ 201907L (C++20): <computeroutput></computeroutput>[[nodiscard]]</para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(nodiscard)</computeroutput> (C++17): <computeroutput></computeroutput>[[nodiscard]]</para>
+</listitem><listitem><para><computeroutput>__has_attribute(warn_unused_result)</computeroutput> (GCC, Clang pre-C++17): <computeroutput>__attribute__((warn_unused_result))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no warning emitted)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kindref="member">SCL_NODISCARD</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>try_connect(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>host);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kindref="member">SCL_NODISCARD</ref><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ErrorCode<sp/>{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;<sp/>};</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/nodiscard.h" line="67" column="10" bodyfile="module/utility/src/scl/utility/attribute/nodiscard.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" prot="public" static="no">
+        <name>SCL_NODISCARD_MSG</name>
+        <param><defname>msg</defname></param>
+        <briefdescription>
+<para>Like <ref refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kindref="member">SCL_NODISCARD</ref> but includes a custom message in the diagnostic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The message <computeroutput>msg</computeroutput> is a string literal describing why the return value must not be ignored. On compilers where the message form is unavailable the macro falls back to <ref refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kindref="member">SCL_NODISCARD</ref> (warning without message).</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(nodiscard)</computeroutput> ≥ 201907L (C++20): <computeroutput></computeroutput>[[nodiscard(msg)]]</para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(nodiscard)</computeroutput> (C++17) or earlier fallback: <computeroutput>SCL_NODISCARD</computeroutput> (message silently dropped)</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string literal stating the discard consequence.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" kindref="member">SCL_NODISCARD_MSG</ref>(</highlight><highlight class="stringliteral">&quot;ignoring<sp/>the<sp/>error<sp/>code<sp/>leaks<sp/>resources&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">ErrorCode<sp/>write(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/>const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/nodiscard.h" line="68" column="9" bodyfile="module/utility/src/scl/utility/attribute/nodiscard.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" prot="public" static="no">
+        <name>SCL_NORETURN</name>
+        <briefdescription>
+<para>Marks a function that never returns to its caller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply before the return type. The compiler may assume that any call to a <computeroutput>SCL_NORETURN</computeroutput> function is a dead end and optimize accordingly. If a decorated function does return, the behaviour is <bold>undefined</bold>.</para>
+<para>Typical uses: <computeroutput>std::terminate</computeroutput> wrappers, <computeroutput>throw</computeroutput> helpers, infinite-loop entry points.</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(noreturn)</computeroutput> (C++11): <computeroutput></computeroutput>[[noreturn]] — standard form</para>
+</listitem><listitem><para>MSVC native (not Clang-cl): <computeroutput>__declspec(noreturn)</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_attribute(noreturn)</computeroutput> (GCC, Clang): <computeroutput>__attribute__((noreturn))</computeroutput> </para>
+</listitem><listitem><para>Fallback: empty (no annotation; compiler warning may fire)</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" kindref="member">SCL_NORETURN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fatal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>msg);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>divide(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b<sp/>==<sp/>0)<sp/>fatal(</highlight><highlight class="stringliteral">&quot;division<sp/>by<sp/>zero&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>/<sp/>b;<sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>&quot;not<sp/>all<sp/>paths<sp/>return&quot;<sp/>warning</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/noreturn.h" line="48" column="10" bodyfile="module/utility/src/scl/utility/attribute/noreturn.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1ga608b7299dde42dd57b73bc1e757aea4b" prot="public" static="no">
+        <name>SCL_UNSEQUENCED</name>
+        <param><defname>...</defname></param>
+        <initializer>__VA_ARGS__</initializer>
+        <briefdescription>
+<para>Wrapping macro that marks a function as having no observable side effects and reading no mutable global state — calls may be freely reordered, deduplicated, or eliminated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Corresponds to the GCC/Clang <computeroutput></computeroutput>[[gnu::const]] / <computeroutput>__attribute__((const))</computeroutput> extension, which is the pre-C++26 equivalent of <computeroutput></computeroutput>[[unsequenced]].</para>
+<para><bold>Usage — wrap the entire return-type + declarator:</bold> <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga608b7299dde42dd57b73bc1e757aea4b" kindref="member">SCL_UNSEQUENCED</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>square(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x))<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>x;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1ga608b7299dde42dd57b73bc1e757aea4b" kindref="member">SCL_UNSEQUENCED</ref>(std::size_t<sp/>popcount(std::uint64_t<sp/>v));</highlight></codeline>
+</programlisting></para>
+<para>The macro inserts the attribute in the position appropriate for each form: <programlisting filename=".cpp"><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>square(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>[[unsequenced]]<sp/>{<sp/>...<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>C++26<sp/><sp/>(suffix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">[[gnu::const]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>square(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/>...<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GCC<sp/>/<sp/>Clang<sp/>(prefix)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">__attribute__((</highlight><highlight class="keyword">const</highlight><highlight class="normal">))<sp/>int<sp/>square(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/>...<sp/>}<sp/></highlight><highlight class="comment">//<sp/>older<sp/>GCC<sp/>/<sp/>Clang</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>square(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/>...<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MSVC<sp/>/<sp/>unknown</highlight></codeline>
+</programlisting></para>
+<para>On C++26 the attribute is appended as a suffix after <computeroutput>__VA_ARGS__</computeroutput> and before the function body — the body <computeroutput>{</computeroutput> ... } is not part of the macro argument, so the expansion is valid in both declaration and definition.</para>
+<para>A function decorated with <computeroutput>SCL_UNSEQUENCED</computeroutput> must satisfy all of:<itemizedlist>
+<listitem><para>Does not modify any state observable outside the function.</para>
+</listitem><listitem><para>Does not read any mutable global or thread-local state.</para>
+</listitem><listitem><para>Return value depends solely on the arguments.</para>
+</listitem></itemizedlist>
+</para>
+<para>Because calls may be deduplicated, do <bold>not</bold> pass arguments with side effects (e.g. <computeroutput>f</computeroutput>(++i)).</para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(unsequenced)</computeroutput> (C++26): <computeroutput></computeroutput>[[unsequenced]] suffix — <computeroutput>__VA_ARGS__</computeroutput> <computeroutput></computeroutput>[[unsequenced]]</para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(gnu::const)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::const]] prefix — <computeroutput></computeroutput>[[gnu::const]] <computeroutput>__VA_ARGS__</computeroutput> </para>
+</listitem><listitem><para><computeroutput>__has_attribute(const)</computeroutput> (GCC, Clang older): <computeroutput>__attribute__((const))</computeroutput> prefix</para>
+</listitem><listitem><para>Fallback: identity — no annotation </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/unsequenced.h" line="93" column="10" bodyfile="module/utility/src/scl/utility/attribute/unsequenced.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__scl__utility__attribute_1gab596dc6bfe3f2ae80c5ddbc6a80194af" prot="public" static="no">
+        <name>SCL_REPRODUCIBLE</name>
+        <param><defname>...</defname></param>
+        <initializer>__VA_ARGS__</initializer>
+        <briefdescription>
+<para>Wrapping macro that marks a function as having no observable side effects but which may read mutable global or pointer-reachable memory — calls with identical visible state may be deduplicated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Corresponds to the C++26 <computeroutput></computeroutput>[[reproducible]] attribute and the GCC/Clang <computeroutput></computeroutput>[[gnu::pure]] / <computeroutput>__attribute__((pure))</computeroutput> extensions. Weaker than SCL_UNSEQUENCED: the function may read global or pointer-reachable memory but must not modify any state observable outside it.</para>
+<para><bold>Usage — wrap the entire return-type + declarator:</bold> <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gab596dc6bfe3f2ae80c5ddbc6a80194af" kindref="member">SCL_REPRODUCIBLE</ref>(std::size_t<sp/>strlen_safe(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>s));</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group__scl__utility__attribute_1gab596dc6bfe3f2ae80c5ddbc6a80194af" kindref="member">SCL_REPRODUCIBLE</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_sorted(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data,<sp/>std::size_t<sp/>n));</highlight></codeline>
+</programlisting></para>
+<para>Detection order:<orderedlist>
+<listitem><para><computeroutput>__has_cpp_attribute(reproducible)</computeroutput> (C++26): <computeroutput></computeroutput>[[reproducible]] suffix — <computeroutput>__VA_ARGS__</computeroutput> <computeroutput></computeroutput>[[reproducible]]</para>
+</listitem><listitem><para><computeroutput>__has_cpp_attribute(gnu::pure)</computeroutput> (GCC, Clang): <computeroutput></computeroutput>[[gnu::pure]] prefix</para>
+</listitem><listitem><para><computeroutput>__has_attribute(pure)</computeroutput> (GCC, Clang older): <computeroutput>__attribute__((pure))</computeroutput> prefix</para>
+</listitem><listitem><para>Fallback: identity — no annotation </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/attribute/unsequenced.h" line="107" column="10" bodyfile="module/utility/src/scl/utility/attribute/unsequenced.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Portable macros for compiler-specific attributes and optimizer hints. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Layout control: SCL_NO_UNIQUE_ADDRESS.</para>
+</listitem><listitem><para>Optimizer hints: SCL_ASSUME, SCL_UNREACHABLE.</para>
+</listitem><listitem><para>Inlining control: SCL_FORCE_INLINE, SCL_NOINLINE.</para>
+</listitem><listitem><para>Control flow: SCL_NORETURN, SCL_FALLTHROUGH.</para>
+</listitem><listitem><para>Diagnostics: SCL_DEPRECATED, SCL_DEPRECATED_MSG, SCL_NODISCARD, SCL_NODISCARD_MSG, SCL_MAYBE_UNUSED.</para>
+</listitem><listitem><para>Branch prediction: SCL_LIKELY, SCL_UNLIKELY, SCL_LIKELY_EXPR, SCL_UNLIKELY_EXPR.</para>
+</listitem><listitem><para>Pure functions: SCL_UNSEQUENCED, SCL_REPRODUCIBLE.</para>
+</listitem><listitem><para>Uninitialised storage: SCL_INDETERMINATE.</para>
+</listitem><listitem><para>Function frequency: SCL_HOT, SCL_COLD.</para>
+</listitem><listitem><para>Lifetime safety: SCL_LIFETIMEBOUND.</para>
+</listitem><listitem><para>All macros degrade gracefully on unknown compilers. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

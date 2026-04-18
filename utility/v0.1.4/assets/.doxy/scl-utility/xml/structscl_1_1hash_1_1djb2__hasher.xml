@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1hash_1_1djb2__hasher" kind="struct" language="C++" prot="public">
+    <compoundname>scl::hash::djb2_hasher</compoundname>
+    <includes refid="djb2_8h" local="no">djb2.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structscl_1_1hash_1_1djb2__hasher_1aa261776e4ef47334a60bcfb8c2dc64f5" prot="public" static="no">
+        <type>::std::uint64_t</type>
+        <definition>using scl::hash::djb2_hasher::result_type =  ::std::uint64_t</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <qualifiedname>scl::hash::djb2_hasher::result_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/djb2.h" line="64" column="9" bodyfile="module/utility/src/scl/utility/hash/djb2.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structscl_1_1hash_1_1djb2__hasher_1a9692ab9269173b938532a15430e33bd8" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr result_type</type>
+        <definition>constexpr result_type scl::hash::djb2_hasher::operator()</definition>
+        <argsstring>(Range const &amp;range) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>scl::hash::djb2_hasher::operator()</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/djb2.h" line="67" column="31" bodyfile="module/utility/src/scl/utility/hash/djb2.h" bodystart="67" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Callable wrapper around <ref refid="group__scl__utility__hash_1ga95922a9f9afab2b892a2c68515390932" kindref="member">djb2</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/djb2.h" line="62" column="5" bodyfile="module/utility/src/scl/utility/hash/djb2.h" bodystart="63" bodyend="72"/>
+    <listofallmembers>
+      <member refid="structscl_1_1hash_1_1djb2__hasher_1a9692ab9269173b938532a15430e33bd8" prot="public" virt="non-virtual"><scope>scl::hash::djb2_hasher</scope><name>operator()</name></member>
+      <member refid="structscl_1_1hash_1_1djb2__hasher_1aa261776e4ef47334a60bcfb8c2dc64f5" prot="public" virt="non-virtual"><scope>scl::hash::djb2_hasher</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

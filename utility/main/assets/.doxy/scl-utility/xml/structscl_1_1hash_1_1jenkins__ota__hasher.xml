@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structscl_1_1hash_1_1jenkins__ota__hasher" kind="struct" language="C++" prot="public">
+    <compoundname>scl::hash::jenkins_ota_hasher</compoundname>
+    <includes refid="jenkins__ota_8h" local="no">jenkins_ota.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structscl_1_1hash_1_1jenkins__ota__hasher_1aab1a29620eeb1632b54c4994d2aeca95" prot="public" static="no">
+        <type>::std::uint32_t</type>
+        <definition>using scl::hash::jenkins_ota_hasher::result_type =  ::std::uint32_t</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <qualifiedname>scl::hash::jenkins_ota_hasher::result_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/jenkins_ota.h" line="77" column="9" bodyfile="module/utility/src/scl/utility/hash/jenkins_ota.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structscl_1_1hash_1_1jenkins__ota__hasher_1ad08d6c4e1e8cb93ef6687be1662ec201" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>::std::ranges::range</type>
+            <declname>Range</declname>
+            <defname>Range</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr result_type</type>
+        <definition>constexpr result_type scl::hash::jenkins_ota_hasher::operator()</definition>
+        <argsstring>(Range const &amp;range) const noexcept</argsstring>
+        <name>operator()</name>
+        <qualifiedname>scl::hash::jenkins_ota_hasher::operator()</qualifiedname>
+        <param>
+          <type>Range const &amp;</type>
+          <declname>range</declname>
+        </param>
+    <requiresclause>::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/hash/jenkins_ota.h" line="80" column="31" bodyfile="module/utility/src/scl/utility/hash/jenkins_ota.h" bodystart="80" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Callable wrapper around <ref refid="group__scl__utility__hash_1gadb19af6bca0433402a2e18ff4760f839" kindref="member">jenkins_ota</ref> for use with <ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para><computeroutput>value_type</computeroutput> deduced as <computeroutput>std::uint32_t</computeroutput> (Jenkins OAT is 32-bit). </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility/hash/jenkins_ota.h" line="75" column="5" bodyfile="module/utility/src/scl/utility/hash/jenkins_ota.h" bodystart="76" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1ad08d6c4e1e8cb93ef6687be1662ec201" prot="public" virt="non-virtual"><scope>scl::hash::jenkins_ota_hasher</scope><name>operator()</name></member>
+      <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1aab1a29620eeb1632b54c4994d2aeca95" prot="public" virt="non-virtual"><scope>scl::hash::jenkins_ota_hasher</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
