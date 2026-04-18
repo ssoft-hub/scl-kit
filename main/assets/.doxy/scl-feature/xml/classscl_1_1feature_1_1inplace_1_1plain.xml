@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="49" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="49" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="54" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="52" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="52" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="57" column="9" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="78" column="20" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="78" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="83" column="20" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="56" column="28" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="56" bodyend="58"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="61" column="28" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="61" bodyend="63"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="64" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="64" bodyend="68"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="69" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="69" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/plain.h" line="71" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="71" bodyend="75"/>
+        <location file="module/feature/src/scl/feature/inplace/plain.h" line="76" column="35" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="76" bodyend="80"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -166,7 +166,7 @@
 <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">wrapper&lt;int, feature::inplace::plain&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">w</ref>{42};</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/inplace/plain.h" line="47" column="5" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="48" bodyend="79"/>
+    <location file="module/feature/src/scl/feature/inplace/plain.h" line="52" column="5" bodyfile="module/feature/src/scl/feature/inplace/plain.h" bodystart="53" bodyend="84"/>
     <listofallmembers>
       <member refid="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" prot="public" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>execute</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a1f79b3bd457334974f6316aab1ca21ec" prot="private" virt="non-virtual"><scope>scl::feature::inplace::plain</scope><name>m_value</name></member>

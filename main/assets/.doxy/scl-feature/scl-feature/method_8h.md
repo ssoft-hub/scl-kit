@@ -368,7 +368,7 @@ cw.convert<double>();   // calls Target::convert<double>() const &  → 42.0
 
 
 
-**See also:** [**SCL\_REFLECT\_TYPE**](type_8h.md#define-scl_reflect_type) 
+**See also:** [**SCL\_REFLECT\_TYPE**](group__scl__feature__reflection.md#define-scl_reflect_type) 
 
 
 **See also:** [**scl::feature::executor\_trait**](structscl_1_1feature_1_1executor__trait.md) 

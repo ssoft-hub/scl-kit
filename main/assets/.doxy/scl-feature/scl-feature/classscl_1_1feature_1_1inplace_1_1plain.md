@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**scl**](namespacescl.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md) **>** [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md)
+[**ClassList**](annotated.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md) **>** [**plain**](classscl_1_1feature_1_1inplace_1_1plain.md)
 
 
 
@@ -139,7 +139,7 @@ using scl::feature::inplace::plain< Value >::value_type =  Value;
 
 ```C++
 template<typename... Args>
-inline explicit constexpr scl::feature::inplace::plain::plain (
+inline explicit constexpr feature::inplace::plain::plain (
     Args &&... args
 ) 
 ```
@@ -157,7 +157,7 @@ inline explicit constexpr scl::feature::inplace::plain::plain (
 
 ```C++
 template<typename  Self, typename  Func, typename... Args>
-static inline constexpr  decltype ( auto ) scl::feature::inplace::plain::execute (
+static inline constexpr  decltype ( auto ) feature::inplace::plain::execute (
     Self && self,
     Func && func,
     Args &&... args
@@ -175,7 +175,7 @@ static inline constexpr  decltype ( auto ) scl::feature::inplace::plain::execute
 
 ```C++
 template<typename  Self>
-static inline constexpr  decltype ( auto ) scl::feature::inplace::plain::value (
+static inline constexpr  decltype ( auto ) feature::inplace::plain::value (
     Self && self
 ) 
 ```

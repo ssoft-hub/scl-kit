@@ -296,10 +296,8 @@
 
 
 #include &lt;scl/feature/type_traits/executor.h&gt;
-#include &lt;scl/utility/preprocessor/forward.h&gt;
 
 #include &lt;type_traits&gt;
-#include &lt;utility&gt;
 
 #define SCL_EXECUTOR_ACCESS(cv_ref) \
     ::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor(static_cast&lt;S_c_L_type_ cv_ref&gt;(*this))

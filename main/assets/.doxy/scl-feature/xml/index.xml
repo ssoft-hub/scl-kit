@@ -2,12 +2,6 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="structscl_1_1feature_1_1executor__trait" kind="struct"><name>scl::feature::executor_trait</name>
   </compound>
-  <compound refid="classscl_1_1feature_1_1methods__reflection" kind="class"><name>scl::feature::methods_reflection</name>
-  </compound>
-  <compound refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c" kind="class"><name>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</name>
-  </compound>
-  <compound refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" kind="class"><name>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</name>
-  </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1plain" kind="class"><name>scl::feature::inplace::plain</name>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1afd66e58cebf2a1baa681355a90288aa1" kind="typedef"><name>self_type</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a8e0920ce87ee4807c6a2fd6a85924dc6" kind="typedef"><name>value_type</name></member>
@@ -15,6 +9,12 @@
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a84e81a1b6cd32139331bfbeb8deb662d" kind="function"><name>plain</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1ab777f820e603ccc3eb2cc1b9aedd987f" kind="function"><name>execute</name></member>
     <member refid="classscl_1_1feature_1_1inplace_1_1plain_1a5fa65db652d8d0305f99486706d2fffd" kind="function"><name>value</name></member>
+  </compound>
+  <compound refid="classscl_1_1feature_1_1reflect" kind="class"><name>scl::feature::reflect</name>
+  </compound>
+  <compound refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4" kind="class"><name>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</name>
+  </compound>
+  <compound refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4" kind="class"><name>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</name>
   </compound>
   <compound refid="classscl_1_1feature_1_1inplace_1_1uninitialized" kind="class"><name>scl::feature::inplace::uninitialized</name>
     <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1aa9257586cc156f36696a286dd78db642" kind="typedef"><name>self_type</name></member>
@@ -89,6 +89,8 @@
   </compound>
   <compound refid="wrapper__lock_8h" kind="file"><name>wrapper_lock.h</name>
   </compound>
+  <compound refid="executors_8h" kind="file"><name>executors.h</name>
+  </compound>
   <compound refid="plain_8h" kind="file"><name>plain.h</name>
     <member refid="plain_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
     <member refid="plain_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
@@ -96,6 +98,8 @@
   <compound refid="uninitialized_8h" kind="file"><name>uninitialized.h</name>
     <member refid="uninitialized_8h_1aeb609f53778ca78fb923e9a69e82388a" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF_PROTOTYPE</name></member>
     <member refid="uninitialized_8h_1aa7a63c1217c753a85c855b557fd3fddf" kind="define"><name>SCL_EXECUTOR_CONSTRUCTOR_FOR_SELF</name></member>
+  </compound>
+  <compound refid="reflection_8h" kind="file"><name>reflection.h</name>
   </compound>
   <compound refid="access_8h" kind="file"><name>access.h</name>
     <member refid="access_8h_1aa71badc8d48e4455fd8bdade8ce99c31" kind="define"><name>SCL_EXECUTOR_ACCESS</name></member>
@@ -115,17 +119,17 @@
     <member refid="method_8h_1aac0f6137c1784110c52fd00d1ca8ea42" kind="define"><name>SCL_REFLECT_METHOD_HELPER</name></member>
     <member refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kind="define"><name>SCL_REFLECT_METHOD</name></member>
   </compound>
-  <compound refid="methods_8h" kind="file"><name>methods.h</name>
+  <compound refid="reflect_8h" kind="file"><name>reflect.h</name>
   </compound>
   <compound refid="type_8h" kind="file"><name>type.h</name>
-    <member refid="type_8h_1a04334714025d2e271f8c953464c5382d" kind="define"><name>SCL_REFLECT_TYPE</name></member>
+    <member refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kind="define"><name>SCL_REFLECT_TYPE</name></member>
   </compound>
   <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
   </compound>
   <compound refid="has__qualified__method_8h" kind="file"><name>has_qualified_method.h</name>
     <member refid="has__qualified__method_8h_1a76c6cd4c0c4e08c190692868bc57d669" kind="define"><name>SCL_HQM_CALL</name></member>
     <member refid="has__qualified__method_8h_1ab0a002b5920b883fed894aabb21ca800" kind="define"><name>SCL_HQM_SAME</name></member>
-    <member refid="has__qualified__method_8h_1affc992f5435cddcb5e4da82a61cf75e0" kind="define"><name>SCL_HAS_QUALIFIED_METHOD</name></member>
+    <member refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kind="define"><name>SCL_HAS_QUALIFIED_METHOD</name></member>
   </compound>
   <compound refid="detail_2value__lock_8h" kind="file"><name>value_lock.h</name>
   </compound>
@@ -151,6 +155,11 @@
   </compound>
   <compound refid="group__scl__feature__concepts" kind="group"><name>scl_feature_concepts</name>
   </compound>
+  <compound refid="group__scl__feature__executors" kind="group"><name>scl_feature_executors</name>
+  </compound>
+  <compound refid="group__scl__feature__reflection" kind="group"><name>scl_feature_reflection</name>
+    <member refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kind="define"><name>SCL_REFLECT_TYPE</name></member>
+  </compound>
   <compound refid="group__scl__feature__type__traits" kind="group"><name>scl_feature_type_traits</name>
     <member refid="group__scl__feature__type__traits_1ga4918f2e40fea41040a634e37cf9f124d" kind="variable"><name>has_value_v</name></member>
     <member refid="group__scl__feature__type__traits_1gab49fef2045de0ab7b65247c1a94e51fd" kind="variable"><name>has_execute_v</name></member>
@@ -164,6 +173,7 @@
     <member refid="group__scl__feature__type__traits_1gabf1d9a783e2c33a3c5d23df001183a80" kind="variable"><name>is_compatible_with_part_of_v</name></member>
     <member refid="group__scl__feature__type__traits_1ga8a936ff61f12bd2269ad4f546165e89e" kind="variable"><name>is_part_compatible_with_v</name></member>
     <member refid="group__scl__feature__type__traits_1ga77e9bf39c3d5f544b2350152e7f9cc82" kind="variable"><name>is_convertible_from_v</name></member>
+    <member refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kind="define"><name>SCL_HAS_QUALIFIED_METHOD</name></member>
   </compound>
   <compound refid="dir_f37dd920b215c7d361cd7dbe8578ca36" kind="dir"><name>module/feature/src/scl/feature/concepts</name>
   </compound>

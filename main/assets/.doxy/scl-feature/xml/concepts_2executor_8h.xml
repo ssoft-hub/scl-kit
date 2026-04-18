@@ -84,7 +84,7 @@
         <link refid="detail_2value__lock_8h_source"/>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -116,7 +116,13 @@
         <link refid="detail_2wrapper__lock_8h_source"/>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -124,14 +130,18 @@
         <link refid="method_8h"/>
         <childnode refid="17" relation="include">
         </childnode>
-      </node>
-      <node id="17">
-        <label>module/feature/src/scl/feature/reflection/methods.h</label>
-        <link refid="methods_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="18">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
         <label>module/feature/src/scl/feature/type_traits.h</label>
         <link refid="type__traits_8h"/>
         <childnode refid="3" relation="include">
@@ -150,16 +160,16 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>module/feature/src/scl/feature/value_lock.h</label>
         <link refid="value__lock_8h_source"/>
         <childnode refid="3" relation="include">
@@ -187,7 +197,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>module/feature/src/scl/feature/wrapper_lock.h</label>
         <link refid="wrapper__lock_8h_source"/>
         <childnode refid="3" relation="include">

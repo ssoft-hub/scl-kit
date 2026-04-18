@@ -21,7 +21,7 @@
     
     
       
-        <title>File methods.h - ScL Toolkit</title>
+        <title>Group scl_feature_reflection - ScL Toolkit</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#file-methodsh" class="md-skip">
+        <a href="#group-scl_feature_reflection" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File methods.h
+              Group scl_feature_reflection
             
           </span>
         </div>
@@ -274,6 +274,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macro-definition-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macro Definition Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macro Definition Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-scl_reflect_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        define SCL_REFLECT_TYPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -289,22 +369,117 @@
 
 
 
-<h1 id="file-methodsh">File methods.h</h1>
-<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_262f3534dca743723347393893d6556e/"><strong>reflection</strong></a> <strong>&gt;</strong> <a href="../methods_8h/"><strong>methods.h</strong></a></p>
-<p><a href="../methods_8h/">Go to the documentation of this file</a></p>
-<pre><code class="language-C++">#pragma once
-
-
-#include &lt;scl/feature/reflection/method.h&gt;
-
-namespace scl::feature
-{
-    template &lt;typename Wrapper, typename Executor, typename Type&gt;
-    class methods_reflection
-    {};
-
-} // namespace scl::feature
+<h1 id="group-scl_feature_reflection">Group scl_feature_reflection</h1>
+<p><a href="../modules/"><strong>Modules</strong></a> <strong>&gt;</strong> <a href="./"><strong>scl_feature_reflection</strong></a></p>
+<p><em>Compile-time reflection for wrapper types.</em> <a href="#detailed-description">More...</a></p>
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../access_8h/"><strong>access.h</strong></a> <br><em>Internal accessor macros for executor and value access in reflected methods.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../method_8h/"><strong>method.h</strong></a> <br><em>Compile-time method reflection macros for wrapper types.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../reflect_8h/"><strong>reflect.h</strong></a> <br><em>Primary template for the reflection mixin chain.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../reflection_8h/"><strong>reflection.h</strong></a> <br><em>ScL Feature compile-time method reflection utilities.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../type_8h/"><strong>type.h</strong></a> <br><em>Macro for declaring the wrapper type used by reflection macros.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classscl_1_1feature_1_1reflect/"><strong>scl::feature::reflect</strong></a> &lt;<a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Wrapper</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Executor</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Type</strong></a>&gt;<br><em>Primary (terminal) template for the reflection mixin chain.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="macros">Macros</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">define</td>
+<td style="text-align: left;"><a href="./#define-scl_reflect_type"><strong>SCL_REFLECT_TYPE</strong></a> (type, executor) <code>/* multi line expression */</code><br><em>Declares the wrapper and executor types for use by</em> <code>SCL_REFLECT_METHOD</code> <em>.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description</h2>
+<p>Provides the macros and types needed to generate proxy members that transparently forward calls from a wrapper to the held object through an executor, preserving all cv-ref qualifiers.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SCL_REFLECT_TYPE(Wrapper, Executor)</code></td>
+<td>Declares the type aliases required by <code>SCL_REFLECT_METHOD</code>. Must appear first inside the wrapper class body.</td>
+</tr>
+<tr>
+<td><code>SCL_REFLECT_METHOD(method)</code></td>
+<td>Generates 24 proxy overloads (3 × 8 cv-ref) that dispatch through the executor.</td>
+</tr>
+<tr>
+<td><code>scl::feature::reflect</code></td>
+<td>CRTP mixin base class; specialisations inject reflected members.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
+<h3 id="define-scl_reflect_type">define SCL_REFLECT_TYPE</h3>
+<p><em>Declares the wrapper and executor types for use by</em> <code>SCL_REFLECT_METHOD</code> <em>.</em></p>
+<pre><code>#define SCL_REFLECT_TYPE (
+    type,
+    executor
+) `/* multi line expression */`
 </code></pre>
+<p>Must appear inside the class body <strong>before</strong> any <code>SCL_REFLECT_METHOD</code> invocations.</p>
+<p>A specialization of <code>scl::feature::executor_trait</code> must also be provided for <code>type</code>.</p>
+<p>**
+**</p>
+<pre><code>SCL_REFLECT_TYPE(MyWrapper, MyExecutor);
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>type</code> The unqualified wrapper class name. </li>
+<li><code>executor</code> The unqualified executor type name.</li>
+</ul>
+<p><strong>See also:</strong> <a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> </p>
+<hr>
+
+<hr />
 
 
 

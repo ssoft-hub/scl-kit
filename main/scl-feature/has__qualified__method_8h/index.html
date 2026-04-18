@@ -304,17 +304,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-scl_has_qualified_method" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        define SCL_HAS_QUALIFIED_METHOD
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#define-scl_hqm_call" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -377,10 +366,6 @@
 <tbody>
 <tr>
 <td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_has_qualified_method"><strong>SCL_HAS_QUALIFIED_METHOD</strong></a> (method, Type, ...) <br><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">define</td>
 <td style="text-align: left;"><a href="./#define-scl_hqm_call"><strong>SCL_HQM_CALL</strong></a> (method, quals) <code>::std::declval&amp;lt;Obj quals&amp;gt;().method(::std::declval&amp;lt;S\_c\_L\_Args\_&amp;gt;()...)</code><br></td>
 </tr>
 <tr>
@@ -390,73 +375,6 @@
 </tbody>
 </table>
 <h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
-<h3 id="define-scl_has_qualified_method">define SCL_HAS_QUALIFIED_METHOD</h3>
-<p><em>Compile-time predicate: checks whether</em> <code>Type</code> <em>has a</em><strong>dedicated</strong> <em>overload of</em><code>method</code> <em>whose cv-ref qualifiers exactly match those of</em><code>Type</code> <em>.</em></p>
-<pre><code class="language-C++">#define SCL_HAS_QUALIFIED_METHOD (
-    method,
-    Type,
-    ...
-) 
-</code></pre>
-<p>In C++ a method qualified as <code>const&amp;</code> is implicitly callable on a mutable lvalue, because a mutable reference converts to a const one. A simple <code>requires</code> expression therefore cannot distinguish "the
-class has a @c const&amp; overload" from "the class has a mutable @c &amp;
-overload that is also callable on @c const&amp;".</p>
-<p>This macro solves the problem by comparing <strong>return types</strong> of calls with different cv-ref qualifiers. If the return types differ, the class must have separate overloads; if they are the same, the call is assumed to go through implicit cv-widening and the predicate returns <code>false</code>.</p>
-<p>**
-**</p>
-<p>For each value category (lvalue / rvalue) the macro:
-* Checks callability for all 4 cv combinations (<code>mutable</code>, <code>const</code>, <code>volatile</code>, <code>const</code> <code>volatile</code>).
-* For each pair where the "narrower" qualifier is callable through a "wider" one, compares <code>decltype</code> of the two calls. If both return the same type, the narrower call is considered implicit — the overload does not exist for that qualifier.
-* For the rvalue <code>const</code> case an additional <strong>cross-category</strong> check is performed (see MSVC note below).</p>
-<p>**
-**</p>
-<p>Return-type comparisons (<code>::std::is_same_v</code>) are placed inside <code>if</code> <code>constexpr</code> blocks that first verify callability, ensuring <code>decltype</code> is never evaluated on an ill-formed call expression. This avoids the Clang limitation where <code>requires</code> <code>{</code> <code>requires</code> <code>EXPR</code>; <code>}</code> inside a constexpr-evaluated lambda body is rejected.</p>
-<p>**
-**</p>
-<p>Overloads of the same method name with different cv-ref qualifiers <strong>must</strong> have different return types. If two overloads return the same type, the macro cannot tell them apart and will produce a false negative (report no dedicated overload where one exists). </p>
-<pre><code class="language-C++">struct Good {
-    bool  foo() &amp;;        // bool  ≠ int  → distinguishable
-    int   foo() const &amp;;
-};
-struct Bad {
-    int foo() &amp;;          // int == int → indistinguishable!
-    int foo() const &amp;;
-};
-</code></pre>
-<p>**
-**</p>
-<p><code>volatile</code> overloads follow the same return-type discrimination rules. If the class has both <code>volatile&amp;</code> and <code>const</code> <code>volatile&amp;</code> overloads, their return types must also differ.</p>
-<p>**
-**</p>
-<p>A method without any ref-qualifier (e.g. <code>void</code> foo() const) is callable on both lvalues and rvalues. The macro treats such methods as having dedicated overloads for <strong>both</strong> categories, provided the return-type discrimination passes.</p>
-<p>**
-**</p>
-<p>MSVC (as a non-standard extension, enabled by default) allows <code>const&amp;</code> ref-qualified member functions to be called on rvalues. This means <code>can_rv_c</code> will be <code>true</code> even when no <code>const&amp;&amp;</code> overload exists. To compensate, the macro performs a <strong>cross-category</strong> return-type comparison: it checks whether the return type of calling through <code>const&amp;&amp;</code> differs from calling through <code>const&amp;</code>. If they match and no <code>mutable/const</code> rvalue return-type difference exists, the <code>const&amp;&amp;</code> call is deemed implicit and the predicate returns <code>false</code>.</p>
-<p>**
-**</p>
-<pre><code class="language-C++">struct Target {
-    bool  get() &amp;;
-    int   get() const &amp;;
-    float get() &amp;&amp;;
-};
-
-// true  — dedicated &amp; overload exists (bool ≠ int)
-static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target &amp;));
-// true  — dedicated const&amp; overload exists
-static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target const &amp;));
-// true  — dedicated &amp;&amp; overload exists
-static_assert( SCL_HAS_QUALIFIED_METHOD(get, Target &amp;&amp;));
-// false — no const&amp;&amp; overload; const&amp; is called implicitly
-static_assert(!SCL_HAS_QUALIFIED_METHOD(get, Target const &amp;&amp;));
-</code></pre>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>method</code> Unqualified method name (may contain <code>template</code> keyword for explicit template arguments). </li>
-<li><code>Type</code> A cv-ref qualified type, e.g. <code>const</code> MyClass &amp;. </li>
-<li><code>...</code> Parameter types for the method call (may be empty). </li>
-</ul>
-<hr>
-
 <h3 id="define-scl_hqm_call">define SCL_HQM_CALL</h3>
 <pre><code class="language-C++">#define SCL_HQM_CALL (
     method,

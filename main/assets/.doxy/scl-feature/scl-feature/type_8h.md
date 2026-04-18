@@ -75,65 +75,7 @@ _Macro for declaring the wrapper type used by reflection macros._
 
 
 
-## Macros
 
-| Type | Name |
-| ---: | :--- |
-| define  | [**SCL\_REFLECT\_TYPE**](type_8h.md#define-scl_reflect_type) (type, executor) `/* multi line expression */`<br>_Declares the wrapper and executor types for use by_ `SCL_REFLECT_METHOD` _._ |
-
-## Macro Definition Documentation
-
-
-
-
-
-### define SCL\_REFLECT\_TYPE 
-
-_Declares the wrapper and executor types for use by_ `SCL_REFLECT_METHOD` _._
-```C++
-#define SCL_REFLECT_TYPE (
-    type,
-    executor
-) `/* multi line expression */`
-```
-
-
-
-Must appear inside the class body **before** any `SCL_REFLECT_METHOD` invocations.
-
-
-A specialization of `scl::feature::executor_trait` must also be provided for `type`.
-
-
-
-
-**
-**
-
-
-```C++
-SCL_REFLECT_TYPE(MyWrapper, MyExecutor);
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `type` The unqualified wrapper class name. 
-* `executor` The unqualified executor type name.
-
-
-
-**See also:** [**scl::feature::executor\_trait**](structscl_1_1feature_1_1executor__trait.md) 
-
-
-
-        
-
-<hr>
 
 ------------------------------
 The documentation for this class was generated from the following file `module/feature/src/scl/feature/reflection/type.h`

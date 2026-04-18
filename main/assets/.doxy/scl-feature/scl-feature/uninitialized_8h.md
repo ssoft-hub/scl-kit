@@ -8,7 +8,7 @@
 
 [Go to the source code of this file](uninitialized_8h_source.md)
 
-
+_Executor that holds a value in uninitialized aligned storage._ 
 
 * `#include <concepts>`
 * `#include <cstddef>`

@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="45" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="45" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="50" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="48" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="48" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="53" column="9" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="73" column="28" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="73" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="78" column="28" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="78" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="51" column="19"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="56" column="19"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="57" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="57" bodyend="61"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="62" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="62" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classscl_1_1feature_1_1inplace_1_1uninitialized_1a725f5aede3a2f9a517f827aaf166d402" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="64" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="64" bodyend="70"/>
+        <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="69" column="35" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="69" bodyend="75"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -155,7 +155,7 @@
 <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">wrapper&lt;int, feature::inplace::uninitialized&gt;</ref><sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">w</ref>{};</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="43" column="5" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="44" bodyend="74"/>
+    <location file="module/feature/src/scl/feature/inplace/uninitialized.h" line="48" column="5" bodyfile="module/feature/src/scl/feature/inplace/uninitialized.h" bodystart="49" bodyend="79"/>
     <listofallmembers>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1a3611a72d709414265b1097ade90b342d" prot="public" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>execute</name></member>
       <member refid="classscl_1_1feature_1_1inplace_1_1uninitialized_1abc28e8132b80f4ff55e34cda76dc0ad3" prot="private" virt="non-virtual"><scope>scl::feature::inplace::uninitialized</scope><name>m_storage</name></member>

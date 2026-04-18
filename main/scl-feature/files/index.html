@@ -299,6 +299,7 @@
 <li><strong>file</strong> <a href="../feature_8h/"><strong>feature.h</strong></a> <em>Includes all ScL Feature headers.</em>     </li>
 <li><strong>dir</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a>     <ul>
 <li><strong>file</strong> <a href="../concepts_8h/"><strong>concepts.h</strong></a> <em>ScL Feature C++20 concepts.</em> </li>
+<li><strong>file</strong> <a href="../executors_8h/"><strong>executors.h</strong></a> <em>ScL Feature built-in executor implementations.</em> </li>
 <li><strong>dir</strong> <a href="../dir_f37dd920b215c7d361cd7dbe8578ca36/"><strong>concepts</strong></a>     <ul>
 <li><strong>file</strong> <a href="../concepts_2executor_8h/"><strong>executor.h</strong></a>     </li>
 <li><strong>file</strong> <a href="../concepts_2wrapper_8h/"><strong>wrapper.h</strong></a>     </li>
@@ -316,15 +317,15 @@
 </ul>
 </li>
 <li><strong>dir</strong> <a href="../dir_a84fae2e5328daedf40681be880e8335/"><strong>inplace</strong></a>     <ul>
-<li><strong>file</strong> <a href="../plain_8h/"><strong>plain.h</strong></a>     </li>
-<li><strong>file</strong> <a href="../uninitialized_8h/"><strong>uninitialized.h</strong></a>     </li>
+<li><strong>file</strong> <a href="../plain_8h/"><strong>plain.h</strong></a> <em>Executor that proxies calls directly to the held value with no overhead.</em>     </li>
+<li><strong>file</strong> <a href="../uninitialized_8h/"><strong>uninitialized.h</strong></a> <em>Executor that holds a value in uninitialized aligned storage.</em>     </li>
 </ul>
 </li>
 <li><strong>dir</strong> <a href="../dir_262f3534dca743723347393893d6556e/"><strong>reflection</strong></a>     <ul>
-<li><strong>file</strong> <a href="../access_8h/"><strong>access.h</strong></a>     </li>
+<li><strong>file</strong> <a href="../access_8h/"><strong>access.h</strong></a> <em>Internal accessor macros for executor and value access in reflected methods.</em>     </li>
 <li><strong>file</strong> <a href="../method_8h/"><strong>method.h</strong></a> <em>Compile-time method reflection macros for wrapper types.</em>     </li>
-<li><strong>file</strong> <a href="../methods_8h/"><strong>methods.h</strong></a>     </li>
-<li><strong>file</strong> <a href="../type_8h/"><strong>type.h</strong></a> <em>Macro for declaring the wrapper type used by reflection macros.</em>     </li>
+<li><strong>file</strong> <a href="../reflect_8h/"><strong>reflect.h</strong></a> <em>Primary template for the reflection mixin chain.</em>     </li>
+<li><strong>file</strong> <a href="../type_8h/"><strong>type.h</strong></a> <em>Macro for declaring the wrapper type used by reflection macros.</em> </li>
 </ul>
 </li>
 <li><strong>dir</strong> <a href="../dir_910e174fc0e8c8ed40843bba5172f2f4/"><strong>type_traits</strong></a>     <ul>
@@ -333,6 +334,7 @@
 <li><strong>file</strong> <a href="../type__traits_2wrapper_8h/"><strong>wrapper.h</strong></a>     </li>
 </ul>
 </li>
+<li><strong>file</strong> <a href="../reflection_8h/"><strong>reflection.h</strong></a> <em>ScL Feature compile-time method reflection utilities.</em> </li>
 <li><strong>file</strong> <a href="../type__traits_8h/"><strong>type_traits.h</strong></a> <em>ScL Feature type traits.</em> </li>
 <li><strong>file</strong> <a href="../value__lock_8h/"><strong>value_lock.h</strong></a>     </li>
 <li><strong>file</strong> <a href="../wrapper_8h/"><strong>wrapper.h</strong></a>     </li>

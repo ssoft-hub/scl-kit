@@ -8,6 +8,8 @@
     <innerdir refid="dir_262f3534dca743723347393893d6556e">module/feature/src/scl/feature/reflection</innerdir>
     <innerdir refid="dir_910e174fc0e8c8ed40843bba5172f2f4">module/feature/src/scl/feature/type_traits</innerdir>
     <innerfile refid="concepts_8h">concepts.h</innerfile>
+    <innerfile refid="executors_8h">executors.h</innerfile>
+    <innerfile refid="reflection_8h">reflection.h</innerfile>
     <innerfile refid="type__traits_8h">type_traits.h</innerfile>
     <innerfile refid="value__lock_8h">value_lock.h</innerfile>
     <innerfile refid="wrapper_8h">wrapper.h</innerfile>

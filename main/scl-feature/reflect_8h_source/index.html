@@ -21,7 +21,7 @@
     
     
       
-        <title>Class scl::feature::methods_reflection< Wrapper, Executor, detail::wrapper< Value, OuterExecutor > > - ScL Toolkit</title>
+        <title>File reflect.h - ScL Toolkit</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-sclfeaturemethods_reflection-wrapper-executor-detailwrapper-value-outerexecutor" class="md-skip">
+        <a href="#file-reflecth" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;
+              File reflect.h
             
           </span>
         </div>
@@ -274,25 +274,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detailed Description
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -308,18 +289,22 @@
 
 
 
-<h1 id="class-sclfeaturemethods_reflection-wrapper-executor-detailwrapper-value-outerexecutor">Class scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</h1>
-<p><strong>template &lt;<a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Wrapper</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Executor</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Value</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>template</strong></a>&lt; <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> &gt; <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>class</strong></a> OuterExecutor&gt;</strong></p>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="./"><strong>methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</strong></a></p>
-<p><em>Reflection chain for a plain (non-nested) wrapper.</em> <a href="#detailed-description">More...</a></p>
-<ul>
-<li><code>#include &lt;wrapper.h&gt;</code></li>
-</ul>
-<p>Inherits the following classes: <a href="../classscl_1_1feature_1_1methods__reflection/">scl::feature::methods_reflection</a></p>
-<h2 id="detailed-description">Detailed Description</h2>
-<p>Delegates to <code>methods_reflection &lt;Wrapper_</code>, Executor_, Value_&gt; so that the outer wrapper exposes all methods reflected for the held value type. </p>
-<hr />
-<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/detail/wrapper.h</code></p>
+<h1 id="file-reflecth">File reflect.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0353163fedb9ed52d00571e05b9d7425/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_128cb90ac92ab15b1b3598556d036c00/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../dir_3cb8c5947ec40e9fe62f293d8773d742/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../dir_fa8d125dcaa64c120bbbc8d1167944b9/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="../dir_262f3534dca743723347393893d6556e/"><strong>reflection</strong></a> <strong>&gt;</strong> <a href="../reflect_8h/"><strong>reflect.h</strong></a></p>
+<p><a href="../reflect_8h/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">#pragma once
+
+
+#include &lt;scl/feature/reflection/method.h&gt;
+
+namespace scl::feature
+{
+    template &lt;typename Wrapper, typename Executor, typename Type&gt;
+    class reflect
+    {};
+
+} // namespace scl::feature
+</code></pre>
 
 
 

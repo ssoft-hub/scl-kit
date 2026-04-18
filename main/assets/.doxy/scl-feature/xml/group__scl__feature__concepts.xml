@@ -3,6 +3,7 @@
   <compounddef id="group__scl__feature__concepts" kind="group">
     <compoundname>scl_feature_concepts</compoundname>
     <title>ScL Feature Concepts</title>
+    <innerfile refid="concepts_8h">concepts.h</innerfile>
     <briefdescription>
 <para>C++20 concepts for ScL Feature types. </para>
     </briefdescription>

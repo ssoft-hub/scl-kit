@@ -274,53 +274,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Macros
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#macro-definition-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Macro Definition Documentation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Macro Definition Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-scl_reflect_type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        define SCL_REFLECT_TYPE
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -343,43 +296,6 @@
 <ul>
 <li><code>#include &lt;type_traits&gt;</code></li>
 </ul>
-<h2 id="macros">Macros</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-scl_reflect_type"><strong>SCL_REFLECT_TYPE</strong></a> (type, executor) <code>/* multi line expression */</code><br><em>Declares the wrapper and executor types for use by</em> <code>SCL_REFLECT_METHOD</code> <em>.</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
-<h3 id="define-scl_reflect_type">define SCL_REFLECT_TYPE</h3>
-<p><em>Declares the wrapper and executor types for use by</em> <code>SCL_REFLECT_METHOD</code> <em>.</em></p>
-<pre><code class="language-C++">#define SCL_REFLECT_TYPE (
-    type,
-    executor
-) `/* multi line expression */`
-</code></pre>
-<p>Must appear inside the class body <strong>before</strong> any <code>SCL_REFLECT_METHOD</code> invocations.</p>
-<p>A specialization of <code>scl::feature::executor_trait</code> must also be provided for <code>type</code>.</p>
-<p>**
-**</p>
-<pre><code class="language-C++">SCL_REFLECT_TYPE(MyWrapper, MyExecutor);
-</code></pre>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>type</code> The unqualified wrapper class name. </li>
-<li><code>executor</code> The unqualified executor type name.</li>
-</ul>
-<p><strong>See also:</strong> <a href="../structscl_1_1feature_1_1executor__trait/"><strong>scl::feature::executor_trait</strong></a> </p>
-<hr>
-
 <hr />
 <p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/reflection/type.h</code></p>
 

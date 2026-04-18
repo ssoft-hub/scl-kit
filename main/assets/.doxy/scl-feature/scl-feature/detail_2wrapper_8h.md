@@ -15,7 +15,7 @@
 * `#include <scl/feature/detail/executor_access.h>`
 * `#include <scl/feature/detail/wrapper_constructor_resolver.h>`
 * `#include <scl/feature/detail/wrapper_constructors.h>`
-* `#include <scl/feature/reflection/methods.h>`
+* `#include <scl/feature/reflection/reflect.h>`
 * `#include <scl/utility/attribute.h>`
 * `#include <utility>`
 
@@ -43,8 +43,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**methods\_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Wrapper**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Executor**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**QualifiedInner**](group__scl__feature__type__traits.md#variable-is_executor_v), OuterExecutor&gt;<br>_Strips cv/ref qualifiers from a cv/ref-qualified inner wrapper._  |
-| class | [**methods\_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Wrapper**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Executor**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v), OuterExecutor&gt;<br>_Reflection chain for a plain (non-nested) wrapper._  |
+| class | [**reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Wrapper**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Executor**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**QualifiedInner**](group__scl__feature__type__traits.md#variable-is_executor_v), OuterExecutor&gt;<br>_Strips cv/ref qualifiers from a cv/ref-qualified inner wrapper._  |
+| class | [**reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4.md) &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Wrapper**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Executor**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v), OuterExecutor&gt;<br>_Reflection chain for a plain (non-nested) wrapper._  |
 
 
 

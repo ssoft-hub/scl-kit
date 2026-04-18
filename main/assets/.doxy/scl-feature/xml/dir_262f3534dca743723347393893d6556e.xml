@@ -4,7 +4,7 @@
     <compoundname>module/feature/src/scl/feature/reflection</compoundname>
     <innerfile refid="access_8h">access.h</innerfile>
     <innerfile refid="method_8h">method.h</innerfile>
-    <innerfile refid="methods_8h">methods.h</innerfile>
+    <innerfile refid="reflect_8h">reflect.h</innerfile>
     <innerfile refid="type_8h">type.h</innerfile>
     <briefdescription>
     </briefdescription>

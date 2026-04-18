@@ -4,7 +4,7 @@
 
 
 
-[**Namespace List**](namespaces.md) **>** [**scl**](namespacescl.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md)
+[**Namespace List**](namespaces.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md)
 
 
 

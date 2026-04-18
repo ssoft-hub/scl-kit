@@ -22,10 +22,12 @@
 <title>Features</title>
 <para><itemizedlist>
 <listitem><para><bold>Wrapper</bold> — <computeroutput>scl::wrapper&lt;Value, Tools...&gt;</computeroutput>, a composable adapter with orthogonal tool-based features.</para>
+</listitem><listitem><para><bold>Executors</bold> (<ref refid="group__scl__feature__executors" kindref="compound">ScL Feature Executors</ref>) — built-in executor strategies: <computeroutput>inplace::plain</computeroutput> (direct) and <computeroutput>inplace::uninitialized</computeroutput> (raw storage).</para>
 </listitem><listitem><para><bold>Type traits</bold> (<ref refid="group__scl__feature__type__traits" kindref="compound">ScL Feature Type Traits</ref>) — <computeroutput>is_wrapper</computeroutput>, <computeroutput>is_executor</computeroutput>, and related metaprogramming utilities.</para>
 </listitem><listitem><para><bold>Concepts</bold> (<ref refid="group__scl__feature__concepts" kindref="compound">ScL Feature Concepts</ref>) — C++20 concepts such as <computeroutput>concepts::wrapper</computeroutput> and <computeroutput>concepts::executor</computeroutput>.</para>
 </listitem><listitem><para><bold>Locking utilities</bold> (<ref refid="group__scl__feature__locking" kindref="compound">ScL Locking Utilities</ref>) — <computeroutput>wrapper_guard</computeroutput>, <computeroutput>wrapper_lock</computeroutput>, and <computeroutput>value_lock</computeroutput> for RAII access to wrapper chains.</para>
-</listitem><listitem><para><bold>Cast</bold> (<ref refid="group__scl__feature__wrapper__cast" kindref="compound">ScL Wrapper Cast</ref>) — <computeroutput>wrapper_cast()</computeroutput> lazy-locking cast proxy for uniform access through wrapper and plain value references. </para>
+</listitem><listitem><para><bold>Cast</bold> (<ref refid="group__scl__feature__wrapper__cast" kindref="compound">ScL Wrapper Cast</ref>) — <computeroutput>wrapper_cast()</computeroutput> lazy-locking cast proxy for uniform access through wrapper and plain value references.</para>
+</listitem><listitem><para><bold>Reflection</bold> (<ref refid="group__scl__feature__reflection" kindref="compound">ScL Feature Reflection</ref>) — <computeroutput>SCL_REFLECT_TYPE</computeroutput> / <computeroutput>SCL_REFLECT_METHOD</computeroutput> macros and <computeroutput>reflect</computeroutput> mixin for compile-time proxy-member generation. </para>
 </listitem></itemizedlist>
 </para>
 </sect1>

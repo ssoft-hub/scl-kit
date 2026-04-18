@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**scl**](namespacescl.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md) **>** [**uninitialized**](classscl_1_1feature_1_1inplace_1_1uninitialized.md)
+[**ClassList**](annotated.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**inplace**](namespacescl_1_1feature_1_1inplace.md) **>** [**uninitialized**](classscl_1_1feature_1_1inplace_1_1uninitialized.md)
 
 
 
@@ -138,7 +138,7 @@ using scl::feature::inplace::uninitialized< Value >::value_type =  Value;
 ### function uninitialized 
 
 ```C++
-constexpr scl::feature::inplace::uninitialized::uninitialized () noexcept
+constexpr feature::inplace::uninitialized::uninitialized () noexcept
 ```
 
 
@@ -154,7 +154,7 @@ constexpr scl::feature::inplace::uninitialized::uninitialized () noexcept
 
 ```C++
 template<typename  Self, typename  Func, typename... Args>
-static inline constexpr  decltype ( auto ) scl::feature::inplace::uninitialized::execute (
+static inline constexpr  decltype ( auto ) feature::inplace::uninitialized::execute (
     Self && self,
     Func && func,
     Args &&... args
@@ -172,7 +172,7 @@ static inline constexpr  decltype ( auto ) scl::feature::inplace::uninitialized:
 
 ```C++
 template<typename  Self>
-static inline constexpr  decltype ( auto ) scl::feature::inplace::uninitialized::value (
+static inline constexpr  decltype ( auto ) feature::inplace::uninitialized::value (
     Self && self
 ) 
 ```

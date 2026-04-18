@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__scl__feature__executors" kind="group">
+    <compoundname>scl_feature_executors</compoundname>
+    <title>ScL Feature Executors</title>
+    <innerfile refid="executors_8h">executors.h</innerfile>
+    <innerfile refid="plain_8h">plain.h</innerfile>
+    <innerfile refid="uninitialized_8h">uninitialized.h</innerfile>
+    <innerclass refid="classscl_1_1feature_1_1inplace_1_1plain" prot="public">scl::feature::inplace::plain</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1inplace_1_1uninitialized" prot="public">scl::feature::inplace::uninitialized</innerclass>
+    <briefdescription>
+<para>Built-in executor strategies for <computeroutput>scl::wrapper</computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An executor is a class template that controls how the wrapper stores the held value and dispatches method calls to it. Each executor must provide two static member function templates:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>execute(self, func, args...)</computeroutput> — runs <computeroutput>func</computeroutput> with <computeroutput>args</computeroutput> and returns its result; may add cross-cutting behaviour around the call.</para>
+</listitem><listitem><para><computeroutput>value(self)</computeroutput> — returns a reference to the held value, propagating the cv-ref qualifiers of <computeroutput>self</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>Executor   </para>
+</entry><entry thead="yes"><para>Storage   </para>
+</entry><entry thead="yes"><para>Overhead    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput><ref refid="classscl_1_1feature_1_1inplace_1_1plain" kindref="compound">scl::feature::inplace::plain</ref></computeroutput>   </para>
+</entry><entry thead="no"><para>in-place, direct   </para>
+</entry><entry thead="no"><para>none    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput><ref refid="classscl_1_1feature_1_1inplace_1_1uninitialized" kindref="compound">scl::feature::inplace::uninitialized</ref></computeroutput>   </para>
+</entry><entry thead="no"><para>in-place, raw aligned storage   </para>
+</entry><entry thead="no"><para>none   </para>
+</entry></row>
+</table>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

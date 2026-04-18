@@ -7,7 +7,7 @@
     <includes refid="executor__access_8h" local="no">scl/feature/detail/executor_access.h</includes>
     <includes refid="wrapper__constructor__resolver_8h" local="no">scl/feature/detail/wrapper_constructor_resolver.h</includes>
     <includes refid="wrapper__constructors_8h" local="no">scl/feature/detail/wrapper_constructors.h</includes>
-    <includes refid="methods_8h" local="no">scl/feature/reflection/methods.h</includes>
+    <includes refid="reflect_8h" local="no">scl/feature/reflection/reflect.h</includes>
     <includes local="no">scl/utility/attribute.h</includes>
     <includes local="no">utility</includes>
     <includedby refid="wrapper_8h" local="no">module/feature/src/scl/feature/wrapper.h</includedby>
@@ -141,11 +141,7 @@
         <link refid="access_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -153,15 +149,15 @@
         <link refid="method_8h"/>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -169,12 +165,12 @@
         </childnode>
       </node>
       <node id="15">
-        <label>scl/feature/reflection/methods.h</label>
-        <link refid="methods_8h"/>
+        <label>scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="18">
         <label>scl/feature/reflection/type.h</label>
         <link refid="type_8h"/>
         <childnode refid="4" relation="include">
@@ -188,10 +184,10 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="19">
         <label>scl/feature/type_traits/has_qualified_method.h</label>
         <link refid="has__qualified__method_8h"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -230,7 +226,7 @@
       <node id="25">
         <label>scl/utility/attribute.h</label>
       </node>
-      <node id="18">
+      <node id="20">
         <label>scl/utility/preprocessor/forward.h</label>
       </node>
       <node id="8">
@@ -261,8 +257,8 @@
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c" prot="public">scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</innerclass>
-    <innerclass refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" prot="public">scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4" prot="public">scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</innerclass>
+    <innerclass refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4" prot="public">scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</innerclass>
     <innernamespace refid="namespacescl">scl</innernamespace>
     <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
     <briefdescription>
@@ -277,7 +273,7 @@
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/detail/executor_access.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/detail/wrapper_constructor_resolver.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/feature/detail/wrapper_constructors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="methods_8h" kindref="compound">scl/feature/reflection/methods.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect_8h" kindref="compound">scl/feature/reflection/reflect.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/utility/attribute.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -288,7 +284,7 @@
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>&gt;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requires<sp/>::scl::feature::concepts::executor&lt;Executor&lt;Value&gt;&gt;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">wrapper</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">::scl::feature::methods_reflection</ref>&lt;wrapper&lt;Value,<sp/>Executor&gt;,<sp/>Executor&lt;Value&gt;,<sp/>wrapper&lt;Value,<sp/>Executor&gt;&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">::scl::feature::reflect</ref>&lt;wrapper&lt;Value,<sp/>Executor&gt;,<sp/>Executor&lt;Value&gt;,<sp/>wrapper&lt;Value,<sp/>Executor&gt;&gt;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">self_type<sp/>=<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">wrapper&lt;Value, Executor&gt;</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
@@ -309,7 +305,7 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="type_8h_1a04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE</ref>(self_type,<sp/>executor_type)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE</ref>(self_type,<sp/>executor_type)</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cppcheck-suppress<sp/>noExplicitConstructor</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_WRAPPER_CONSTRUCTOR_FOR_SELF<sp/></highlight><highlight class="comment">//<sp/>NOLINT(performance-noexcept-move-constructor)</highlight><highlight class="normal"></highlight></codeline>
@@ -335,13 +331,13 @@
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Wrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Executor,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>QualifiedInner,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">OuterExecutor</ref>&gt;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(::scl::feature::concepts::wrapper&lt;QualifiedInner&gt;<sp/>&amp;&amp;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!::std::same_as&lt;QualifiedInner,<sp/>::std::remove_cvref_t&lt;QualifiedInner&gt;&gt;)</highlight></codeline>
-<codeline lineno="79" refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_017e67822b7ef392bfca477912a301ec6c" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;QualifiedInner,<sp/>OuterExecutor&gt;&gt;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">public</ref><sp/><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;::std::<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">remove_cvref_t</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref>&gt;,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">OuterExecutor</ref>&gt;&gt;</highlight></codeline>
+<codeline lineno="79" refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01QualifiedInner_00_01OuterExecutor_01_4_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">reflect</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;QualifiedInner,<sp/>OuterExecutor&gt;&gt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">public</ref><sp/><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">reflect</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;::std::<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">remove_cvref_t</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">QualifiedInner</ref>&gt;,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">OuterExecutor</ref>&gt;&gt;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Wrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Executor,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">OuterExecutor</ref>&gt;</highlight></codeline>
-<codeline lineno="89" refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;Value,<sp/>OuterExecutor&gt;&gt;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;Wrapper,<sp/>Executor,<sp/>Value&gt;</highlight></codeline>
+<codeline lineno="89" refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">reflect</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/>detail::wrapper&lt;Value,<sp/>OuterExecutor&gt;&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">reflect</ref>&lt;Wrapper,<sp/>Executor,<sp/>Value&gt;</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
 <codeline lineno="92"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::feature</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>

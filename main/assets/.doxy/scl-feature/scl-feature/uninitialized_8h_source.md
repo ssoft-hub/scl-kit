@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+
 #include <concepts>
 #include <cstddef>
 #include <functional>

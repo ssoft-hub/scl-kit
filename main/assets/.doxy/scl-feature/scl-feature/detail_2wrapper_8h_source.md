@@ -15,7 +15,7 @@
 #include <scl/feature/detail/executor_access.h>
 #include <scl/feature/detail/wrapper_constructor_resolver.h>
 #include <scl/feature/detail/wrapper_constructors.h>
-#include <scl/feature/reflection/methods.h>
+#include <scl/feature/reflection/reflect.h>
 #include <scl/utility/attribute.h>
 
 #include <utility>
@@ -26,7 +26,7 @@ namespace scl::feature::detail
     template <typename Value, template <typename> class Executor>
         requires ::scl::feature::concepts::executor<Executor<Value>>
     class wrapper
-        : public ::scl::feature::methods_reflection<wrapper<Value, Executor>, Executor<Value>, wrapper<Value, Executor>>
+        : public ::scl::feature::reflect<wrapper<Value, Executor>, Executor<Value>, wrapper<Value, Executor>>
     {
         using self_type = wrapper<Value, Executor>;
 
@@ -73,13 +73,13 @@ namespace scl::feature
     template <typename Wrapper, typename Executor, typename QualifiedInner, template <typename> class OuterExecutor>
         requires(::scl::feature::concepts::wrapper<QualifiedInner> &&
             !::std::same_as<QualifiedInner, ::std::remove_cvref_t<QualifiedInner>>)
-    class methods_reflection<Wrapper, Executor, detail::wrapper<QualifiedInner, OuterExecutor>>
-        : public methods_reflection<Wrapper, Executor, detail::wrapper<::std::remove_cvref_t<QualifiedInner>, OuterExecutor>>
+    class reflect<Wrapper, Executor, detail::wrapper<QualifiedInner, OuterExecutor>>
+        : public reflect<Wrapper, Executor, detail::wrapper<::std::remove_cvref_t<QualifiedInner>, OuterExecutor>>
     {};
 
     template <typename Wrapper, typename Executor, typename Value, template <typename> class OuterExecutor>
-    class methods_reflection<Wrapper, Executor, detail::wrapper<Value, OuterExecutor>>
-        : public methods_reflection<Wrapper, Executor, Value>
+    class reflect<Wrapper, Executor, detail::wrapper<Value, OuterExecutor>>
+        : public reflect<Wrapper, Executor, Value>
     {};
 } // namespace scl::feature
 ```

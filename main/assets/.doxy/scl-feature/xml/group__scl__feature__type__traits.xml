@@ -3,6 +3,8 @@
   <compounddef id="group__scl__feature__type__traits" kind="group">
     <compoundname>scl_feature_type_traits</compoundname>
     <title>ScL Feature Type Traits</title>
+    <innerfile refid="type__traits_8h">type_traits.h</innerfile>
+    <innerfile refid="has__qualified__method_8h">has_qualified_method.h</innerfile>
     <innerclass refid="structscl_1_1feature_1_1executor__trait" prot="public">scl::feature::executor_trait</innerclass>
     <sectiondef kind="var">
       <memberdef kind="variable" id="group__scl__feature__type__traits_1ga4918f2e40fea41040a634e37cf9f124d" prot="public" static="no" constexpr="yes" mutable="no">
@@ -606,6 +608,94 @@
         <inbodydescription>
         </inbodydescription>
         <location file="module/feature/src/scl/feature/type_traits/wrapper.h" line="211" column="27" bodyfile="module/feature/src/scl/feature/type_traits/wrapper.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" prot="public" static="no">
+        <name>SCL_HAS_QUALIFIED_METHOD</name>
+        <param><defname>method</defname></param>
+        <param><defname>Type</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+<para>Compile-time predicate: checks whether <computeroutput>Type</computeroutput> has a <bold>dedicated</bold></para>
+<para>overload of <computeroutput>method</computeroutput> whose cv-ref qualifiers exactly match those of <computeroutput>Type</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In C++ a method qualified as <computeroutput>const&amp;</computeroutput> is implicitly callable on a mutable lvalue, because a mutable reference converts to a const one. A simple <computeroutput>requires</computeroutput> expression therefore cannot distinguish &quot;the
+class has a @c const&amp; overload&quot; from &quot;the class has a mutable @c &amp;
+overload that is also callable on @c const&amp;&quot;.</para>
+<para>This macro solves the problem by comparing <bold>return types</bold> of calls with different cv-ref qualifiers. If the return types differ, the class must have separate overloads; if they are the same, the call is assumed to go through implicit cv-widening and the predicate returns <computeroutput>false</computeroutput>.</para>
+<para><simplesect kind="par"><title>Algorithm</title><para>For each value category (lvalue / rvalue) the macro:<orderedlist>
+<listitem><para>Checks callability for all 4 cv combinations (<computeroutput>mutable</computeroutput>, <computeroutput>const</computeroutput>, <computeroutput>volatile</computeroutput>, <computeroutput>const</computeroutput> <computeroutput>volatile</computeroutput>).</para>
+</listitem><listitem><para>For each pair where the &quot;narrower&quot; qualifier is callable through a &quot;wider&quot; one, compares <computeroutput>decltype</computeroutput> of the two calls. If both return the same type, the narrower call is considered implicit — the overload does not exist for that qualifier.</para>
+</listitem><listitem><para>For the rvalue <computeroutput>const</computeroutput> case an additional <bold>cross-category</bold> check is performed (see MSVC note below).</para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+<simplesect kind="par"><title>Implementation note — <computeroutput>if</computeroutput> <computeroutput>constexpr</computeroutput> guards</title><para>Return-type comparisons (<computeroutput>::std::is_same_v</computeroutput>) are placed inside <computeroutput>if</computeroutput> <computeroutput>constexpr</computeroutput> blocks that first verify callability, ensuring <computeroutput>decltype</computeroutput> is never evaluated on an ill-formed call expression. This avoids the Clang limitation where <computeroutput>requires</computeroutput> <computeroutput>{</computeroutput> <computeroutput>requires</computeroutput> <computeroutput>EXPR</computeroutput>; <computeroutput>}</computeroutput> inside a constexpr-evaluated lambda body is rejected.</para>
+</simplesect>
+<simplesect kind="par"><title>Constraints — different return types required</title><para>Overloads of the same method name with different cv-ref qualifiers <bold>must</bold> have different return types. If two overloads return the same type, the macro cannot tell them apart and will produce a false negative (report no dedicated overload where one exists). <programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Good<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/>foo()<sp/>&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bool<sp/><sp/>≠<sp/>int<sp/><sp/>→<sp/>distinguishable</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>foo()<sp/>const<sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/>Bad<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>foo()<sp/>&amp;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>==<sp/>int<sp/>→<sp/>indistinguishable!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>foo()<sp/>const<sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<simplesect kind="par"><title>Constraints — volatile qualifiers</title><para><computeroutput>volatile</computeroutput> overloads follow the same return-type discrimination rules. If the class has both <computeroutput>volatile&amp;</computeroutput> and <computeroutput>const</computeroutput> <computeroutput>volatile&amp;</computeroutput> overloads, their return types must also differ.</para>
+</simplesect>
+<simplesect kind="par"><title>Constraints — non-ref-qualified methods</title><para>A method without any ref-qualifier (e.g. <computeroutput>void</computeroutput> foo() const) is callable on both lvalues and rvalues. The macro treats such methods as having dedicated overloads for <bold>both</bold> categories, provided the return-type discrimination passes.</para>
+</simplesect>
+<simplesect kind="par"><title>MSVC note — const&amp; callable on rvalues</title><para>MSVC (as a non-standard extension, enabled by default) allows <computeroutput>const&amp;</computeroutput> ref-qualified member functions to be called on rvalues. This means <computeroutput>can_rv_c</computeroutput> will be <computeroutput>true</computeroutput> even when no <computeroutput>const&amp;&amp;</computeroutput> overload exists. To compensate, the macro performs a <bold>cross-category</bold> return-type comparison: it checks whether the return type of calling through <computeroutput>const&amp;&amp;</computeroutput> differs from calling through <computeroutput>const&amp;</computeroutput>. If they match and no <computeroutput>mutable/const</computeroutput> rvalue return-type difference exists, the <computeroutput>const&amp;&amp;</computeroutput> call is deemed implicit and the predicate returns <computeroutput>false</computeroutput>.</para>
+</simplesect>
+<simplesect kind="par"><title>Example</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Target<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/>get()<sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>get()<sp/>const<sp/>&amp;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>get()<sp/>&amp;&amp;;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>true<sp/><sp/>—<sp/>dedicated<sp/>&amp;<sp/>overload<sp/>exists<sp/>(bool<sp/>≠<sp/>int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">static_assert(<sp/><ref refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(get,<sp/>Target<sp/>&amp;));</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>true<sp/><sp/>—<sp/>dedicated<sp/>const&amp;<sp/>overload<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">static_assert(<sp/><ref refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(get,<sp/>Target<sp/>const<sp/>&amp;));</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>true<sp/><sp/>—<sp/>dedicated<sp/>&amp;&amp;<sp/>overload<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">static_assert(<sp/><ref refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(get,<sp/>Target<sp/>&amp;&amp;));</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>false<sp/>—<sp/>no<sp/>const&amp;&amp;<sp/>overload;<sp/>const&amp;<sp/>is<sp/>called<sp/>implicitly</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">static_assert(!<ref refid="group__scl__feature__type__traits_1gaffc992f5435cddcb5e4da82a61cf75e0" kindref="member">SCL_HAS_QUALIFIED_METHOD</ref>(get,<sp/>Target<sp/>const<sp/>&amp;&amp;));</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unqualified method name (may contain <computeroutput>template</computeroutput> keyword for explicit template arguments). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A cv-ref qualified type, e.g. <computeroutput>const</computeroutput> MyClass &amp;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter types for the method call (may be empty). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/feature/src/scl/feature/type_traits/has_qualified_method.h" line="127" column="9" bodyfile="module/feature/src/scl/feature/type_traits/has_qualified_method.h" bodystart="127" bodyend="274"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

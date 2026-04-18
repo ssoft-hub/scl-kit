@@ -36,10 +36,12 @@ scl::wrapper<int> w{42};
 
 
 * **Wrapper** — `scl::wrapper<Value, Tools...>`, a composable adapter with orthogonal tool-based features.
+* **Executors** ([**ScL Feature Executors**](group__scl__feature__executors.md)) — built-in executor strategies: `inplace::plain` (direct) and `inplace::uninitialized` (raw storage).
 * **Type traits** ([**ScL Feature Type Traits**](group__scl__feature__type__traits.md)) — `is_wrapper`, `is_executor`, and related metaprogramming utilities.
 * **Concepts** ([**ScL Feature Concepts**](group__scl__feature__concepts.md)) — C++20 concepts such as `concepts::wrapper` and `concepts::executor`.
 * **Locking utilities** ([**ScL Locking Utilities**](group__scl__feature__locking.md)) — `wrapper_guard`, `wrapper_lock`, and `value_lock` for RAII access to wrapper chains.
-* **Cast** ([**ScL Wrapper Cast**](group__scl__feature__wrapper__cast.md)) — `wrapper_cast()` lazy-locking cast proxy for uniform access through wrapper and plain value references. 
+* **Cast** ([**ScL Wrapper Cast**](group__scl__feature__wrapper__cast.md)) — `wrapper_cast()` lazy-locking cast proxy for uniform access through wrapper and plain value references.
+* **Reflection** ([**ScL Feature Reflection**](group__scl__feature__reflection.md)) — `SCL_REFLECT_TYPE` / `SCL_REFLECT_METHOD` macros and `reflect` mixin for compile-time proxy-member generation. 
 
 
 

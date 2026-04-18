@@ -8,12 +8,10 @@
 
 [Go to the source code of this file](access_8h_source.md)
 
-
+_Internal accessor macros for executor and value access in reflected methods._ 
 
 * `#include <scl/feature/type_traits/executor.h>`
-* `#include <scl/utility/preprocessor/forward.h>`
 * `#include <type_traits>`
-* `#include <utility>`
 
 
 

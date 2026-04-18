@@ -24,8 +24,6 @@
 * **SCL\_REFLECT\_METHOD\_HELPER** ([**method.h**](method_8h.md))
 * **SCL\_REFLECT\_METHOD\_QUALS** ([**method.h**](method_8h.md))
 * **SCL\_REFLECT\_TEMPLATE\_METHOD\_BASE** ([**method.h**](method_8h.md))
-* **SCL\_REFLECT\_TYPE** ([**type.h**](type_8h.md))
-* **SCL\_HAS\_QUALIFIED\_METHOD** ([**has\_qualified\_method.h**](has__qualified__method_8h.md))
 * **SCL\_HQM\_CALL** ([**has\_qualified\_method.h**](has__qualified__method_8h.md))
 * **SCL\_HQM\_SAME** ([**has\_qualified\_method.h**](has__qualified__method_8h.md))
 

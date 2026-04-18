@@ -3,9 +3,8 @@
   <compounddef id="access_8h" kind="file" language="C++">
     <compoundname>access.h</compoundname>
     <includes refid="type__traits_2executor_8h" local="no">scl/feature/type_traits/executor.h</includes>
-    <includes local="no">scl/utility/preprocessor/forward.h</includes>
     <includes local="no">type_traits</includes>
-    <includes local="no">utility</includes>
+    <includedby refid="reflection_8h" local="no">module/feature/src/scl/feature/reflection.h</includedby>
     <includedby refid="method_8h" local="no">module/feature/src/scl/feature/reflection/method.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -13,11 +12,7 @@
         <link refid="access_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -28,9 +23,6 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>scl/utility/preprocessor/forward.h</label>
-      </node>
       <node id="3">
         <label>type_traits</label>
       </node>
@@ -39,14 +31,20 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="3">
         <label>module/feature/src/scl/feature.h</label>
         <link refid="feature_8h"/>
       </node>
-      <node id="4">
+      <node id="6">
         <label>module/feature/src/scl/feature/detail/wrapper.h</label>
         <link refid="detail_2wrapper_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -54,23 +52,29 @@
         <link refid="access_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>module/feature/src/scl/feature/reflection/method.h</label>
-        <link refid="method_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>module/feature/src/scl/feature/reflection/methods.h</label>
-        <link refid="methods_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>module/feature/src/scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="5">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
         <label>module/feature/src/scl/feature/wrapper.h</label>
         <link refid="wrapper_8h_source"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -97,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/access.h" line="39" column="9" bodyfile="module/feature/src/scl/feature/reflection/access.h" bodystart="39" bodyend="40"/>
+        <location file="module/feature/src/scl/feature/reflection/access.h" line="40" column="9" bodyfile="module/feature/src/scl/feature/reflection/access.h" bodystart="40" bodyend="41"/>
       </memberdef>
       <memberdef kind="define" id="access_8h_1a644978629452315a127e366d0199dace" prot="public" static="no">
         <name>SCL_VALUE_ACCESS</name>
@@ -109,30 +113,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="module/feature/src/scl/feature/reflection/access.h" line="50" column="9" bodyfile="module/feature/src/scl/feature/reflection/access.h" bodystart="50" bodyend="-1"/>
+        <location file="module/feature/src/scl/feature/reflection/access.h" line="52" column="9" bodyfile="module/feature/src/scl/feature/reflection/access.h" bodystart="52" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Internal accessor macros for executor and value access in reflected methods. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="type__traits_2executor_8h" kindref="compound">scl/feature/type_traits/executor.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;scl/utility/preprocessor/forward.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="type__traits_2executor_8h" kindref="compound">scl/feature/type_traits/executor.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="preprocessor">#define<sp/>SCL_EXECUTOR_ACCESS(cv_ref)<sp/>\</highlight></codeline>
 <codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>::scl::feature::executor_trait&lt;S_c_L_type_&gt;::executor(static_cast&lt;S_c_L_type_<sp/>cv_ref&gt;(*this))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="preprocessor">#define<sp/>SCL_VALUE_DECLVAL(cv_ref)<sp/>\</highlight></codeline>
-<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_<sp/>cv_ref&gt;())</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="preprocessor">#define<sp/>SCL_VALUE_ACCESS(cv_ref)<sp/>S_c_L_executor_type_::value(SCL_EXECUTOR_ACCESS(cv_ref))</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#define<sp/>SCL_VALUE_DECLVAL(cv_ref)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>S_c_L_executor_type_::value(::std::declval&lt;S_c_L_executor_type_<sp/>cv_ref&gt;())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">#define<sp/>SCL_VALUE_ACCESS(cv_ref)<sp/>S_c_L_executor_type_::value(SCL_EXECUTOR_ACCESS(cv_ref))</highlight></codeline>
     </programlisting>
     <location file="module/feature/src/scl/feature/reflection/access.h"/>
   </compounddef>

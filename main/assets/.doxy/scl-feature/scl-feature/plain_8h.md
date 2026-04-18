@@ -8,7 +8,7 @@
 
 [Go to the source code of this file](plain_8h_source.md)
 
-
+_Executor that proxies calls directly to the held value with no overhead._ 
 
 * `#include <concepts>`
 * `#include <functional>`

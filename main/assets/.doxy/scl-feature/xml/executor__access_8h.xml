@@ -76,7 +76,7 @@
         <link refid="detail_2value__lock_8h_source"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -108,7 +108,13 @@
         <link refid="detail_2wrapper__lock_8h_source"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -116,14 +122,18 @@
         <link refid="method_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
-      </node>
-      <node id="13">
-        <label>module/feature/src/scl/feature/reflection/methods.h</label>
-        <link refid="methods_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="14">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
         <label>module/feature/src/scl/feature/value_lock.h</label>
         <link refid="value__lock_8h_source"/>
         <childnode refid="4" relation="include">
@@ -151,7 +161,7 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>module/feature/src/scl/feature/wrapper_lock.h</label>
         <link refid="wrapper__lock_8h_source"/>
         <childnode refid="4" relation="include">

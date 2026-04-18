@@ -21,7 +21,7 @@
     
     
       
-        <title>Class scl::feature::methods_reflection< Wrapper, Executor, detail::wrapper< QualifiedInner, OuterExecutor > > - ScL Toolkit</title>
+        <title>Group scl_feature_executors - ScL Toolkit</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-sclfeaturemethods_reflection-wrapper-executor-detailwrapper-qualifiedinner-outerexecutor" class="md-skip">
+        <a href="#group-scl_feature_executors" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;
+              Group scl_feature_executors
             
           </span>
         </div>
@@ -281,6 +281,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -308,18 +330,79 @@
 
 
 
-<h1 id="class-sclfeaturemethods_reflection-wrapper-executor-detailwrapper-qualifiedinner-outerexecutor">Class scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</h1>
-<p><strong>template &lt;<a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Wrapper</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Executor</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>QualifiedInner</strong></a>, <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>template</strong></a>&lt; <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> &gt; <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>class</strong></a> OuterExecutor&gt;</strong></p>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1feature/"><strong>feature</strong></a> <strong>&gt;</strong> <a href="./"><strong>methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; QualifiedInner, OuterExecutor &gt; &gt;</strong></a></p>
-<p><em>Strips cv/ref qualifiers from a cv/ref-qualified inner wrapper.</em> <a href="#detailed-description">More...</a></p>
-<ul>
-<li><code>#include &lt;wrapper.h&gt;</code></li>
-</ul>
-<p>Inherits the following classes: <a href="../classscl_1_1feature_1_1methods__reflection/">scl::feature::methods_reflection</a></p>
+<h1 id="group-scl_feature_executors">Group scl_feature_executors</h1>
+<p><a href="../modules/"><strong>Modules</strong></a> <strong>&gt;</strong> <a href="./"><strong>scl_feature_executors</strong></a></p>
+<p><em>Built-in executor strategies for</em> <code>scl::wrapper</code> <em>.</em><a href="#detailed-description">More...</a></p>
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../executors_8h/"><strong>executors.h</strong></a> <br><em>ScL Feature built-in executor implementations.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../plain_8h/"><strong>plain.h</strong></a> <br><em>Executor that proxies calls directly to the held value with no overhead.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">file</td>
+<td style="text-align: left;"><a href="../uninitialized_8h/"><strong>uninitialized.h</strong></a> <br><em>Executor that holds a value in uninitialized aligned storage.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classscl_1_1feature_1_1inplace_1_1plain/"><strong>scl::feature::inplace::plain</strong></a> &lt;<a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Value</strong></a>&gt;<br><em>Executor that proxies calls directly to the held value with no overhead.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classscl_1_1feature_1_1inplace_1_1uninitialized/"><strong>scl::feature::inplace::uninitialized</strong></a> &lt;<a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>typename</strong></a> <a href="../group__scl__feature__type__traits/#variable-is_executor_v"><strong>Value</strong></a>&gt;<br><em>Executor that holds</em> <code>Value</code> <em>in uninitialized aligned storage.</em></td>
+</tr>
+</tbody>
+</table>
 <h2 id="detailed-description">Detailed Description</h2>
-<p>Matches <code>detail::wrapper&lt;QualifiedInner_</code>, OuterExecutor_&gt; when <code>QualifiedInner_</code> is a cv/ref-qualified wrapper type, and forwards to the unqualified specialization. This collapses all 12 cv/ref variants into one rule so that qualifiers on the stored type do not produce a separate, incompatible reflection chain. </p>
+<p>An executor is a class template that controls how the wrapper stores the held value and dispatches method calls to it. Each executor must provide two static member function templates:</p>
+<ul>
+<li><code>execute(self, func, args...)</code> — runs <code>func</code> with <code>args</code> and returns its result; may add cross-cutting behaviour around the call.</li>
+<li><code>value(self)</code> — returns a reference to the held value, propagating the cv-ref qualifiers of <code>self</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Executor</th>
+<th>Storage</th>
+<th>Overhead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scl::feature::inplace::plain</code></td>
+<td>in-place, direct</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>scl::feature::inplace::uninitialized</code></td>
+<td>in-place, raw aligned storage</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p>The documentation for this class was generated from the following file <code>module/feature/src/scl/feature/detail/wrapper.h</code></p>
 
 
 

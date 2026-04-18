@@ -11,6 +11,7 @@ Here is a list of all files with brief descriptions:
                 * **file** [**feature.h**](feature_8h.md) _Includes all ScL Feature headers._     
                 * **dir** [**feature**](dir_fa8d125dcaa64c120bbbc8d1167944b9.md)     
                     * **file** [**concepts.h**](concepts_8h.md) _ScL Feature C++20 concepts._ 
+                    * **file** [**executors.h**](executors_8h.md) _ScL Feature built-in executor implementations._ 
                     * **dir** [**concepts**](dir_f37dd920b215c7d361cd7dbe8578ca36.md)     
                         * **file** [**executor.h**](concepts_2executor_8h.md)     
                         * **file** [**wrapper.h**](concepts_2wrapper_8h.md)     
@@ -24,17 +25,18 @@ Here is a list of all files with brief descriptions:
                         * **file** [**wrapper\_guard.h**](detail_2wrapper__guard_8h.md)     
                         * **file** [**wrapper\_lock.h**](detail_2wrapper__lock_8h.md)     
                     * **dir** [**inplace**](dir_a84fae2e5328daedf40681be880e8335.md)     
-                        * **file** [**plain.h**](plain_8h.md)     
-                        * **file** [**uninitialized.h**](uninitialized_8h.md)     
+                        * **file** [**plain.h**](plain_8h.md) _Executor that proxies calls directly to the held value with no overhead._     
+                        * **file** [**uninitialized.h**](uninitialized_8h.md) _Executor that holds a value in uninitialized aligned storage._     
                     * **dir** [**reflection**](dir_262f3534dca743723347393893d6556e.md)     
-                        * **file** [**access.h**](access_8h.md)     
+                        * **file** [**access.h**](access_8h.md) _Internal accessor macros for executor and value access in reflected methods._     
                         * **file** [**method.h**](method_8h.md) _Compile-time method reflection macros for wrapper types._     
-                        * **file** [**methods.h**](methods_8h.md)     
-                        * **file** [**type.h**](type_8h.md) _Macro for declaring the wrapper type used by reflection macros._     
+                        * **file** [**reflect.h**](reflect_8h.md) _Primary template for the reflection mixin chain._     
+                        * **file** [**type.h**](type_8h.md) _Macro for declaring the wrapper type used by reflection macros._ 
                     * **dir** [**type\_traits**](dir_910e174fc0e8c8ed40843bba5172f2f4.md)     
                         * **file** [**executor.h**](type__traits_2executor_8h.md) _Executor type traits: interface detection and noexcept helpers._     
                         * **file** [**has\_qualified\_method.h**](has__qualified__method_8h.md) _Compile-time predicate macro for cv-ref qualifier detection._     
                         * **file** [**wrapper.h**](type__traits_2wrapper_8h.md)     
+                    * **file** [**reflection.h**](reflection_8h.md) _ScL Feature compile-time method reflection utilities._ 
                     * **file** [**type\_traits.h**](type__traits_8h.md) _ScL Feature type traits._ 
                     * **file** [**value\_lock.h**](value__lock_8h.md)     
                     * **file** [**wrapper.h**](wrapper_8h.md)     

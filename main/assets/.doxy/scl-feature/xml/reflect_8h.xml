@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="reflect_8h" kind="file" language="C++">
+    <compoundname>reflect.h</compoundname>
+    <includes refid="method_8h" local="no">scl/feature/reflection/method.h</includes>
+    <includedby refid="detail_2wrapper_8h" local="no">module/feature/src/scl/feature/detail/wrapper.h</includedby>
+    <includedby refid="reflection_8h" local="no">module/feature/src/scl/feature/reflection.h</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>scl/feature/concepts/executor.h</label>
+        <link refid="concepts_2executor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scl/feature/concepts/wrapper.h</label>
+        <link refid="concepts_2wrapper_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>scl/feature/detail/executor_access.h</label>
+        <link refid="executor__access_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>scl/feature/detail/value_lock.h</label>
+        <link refid="detail_2value__lock_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>scl/feature/detail/wrapper_cast.h</label>
+        <link refid="detail_2wrapper__cast_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>scl/feature/detail/wrapper_lock.h</label>
+        <link refid="detail_2wrapper__lock_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl/feature/reflection/access.h</label>
+        <link refid="access_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl/feature/reflection/method.h</label>
+        <link refid="method_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scl/feature/reflection/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>scl/feature/type_traits/executor.h</label>
+        <link refid="type__traits_2executor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>scl/feature/type_traits/has_qualified_method.h</label>
+        <link refid="has__qualified__method_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scl/feature/type_traits/wrapper.h</label>
+        <link refid="type__traits_2wrapper_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>scl/feature/wrapper_cast.h</label>
+        <link refid="wrapper__cast_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>scl/utility/preprocessor/forward.h</label>
+      </node>
+      <node id="14">
+        <label>scl/utility/type_traits/forward_like.h</label>
+      </node>
+      <node id="5">
+        <label>type_traits</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>module/feature/src/scl/feature.h</label>
+        <link refid="feature_8h"/>
+      </node>
+      <node id="2">
+        <label>module/feature/src/scl/feature/detail/wrapper.h</label>
+        <link refid="detail_2wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>module/feature/src/scl/feature/reflection.h</label>
+        <link refid="reflection_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/feature/src/scl/feature/reflection/reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>module/feature/src/scl/feature/wrapper.h</label>
+        <link refid="wrapper_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classscl_1_1feature_1_1reflect" prot="public">scl::feature::reflect</innerclass>
+    <innernamespace refid="namespacescl">scl</innernamespace>
+    <innernamespace refid="namespacescl_1_1feature">scl::feature</innernamespace>
+    <briefdescription>
+<para>Primary template for the reflection mixin chain. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines <computeroutput><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">scl::feature::reflect</ref>&lt;Wrapper, Executor, Type&gt;</computeroutput> — the CRTP mixin base that <computeroutput>detail::wrapper</computeroutput> inherits from to acquire all proxy members reflected for the held value type.</para>
+<sect2 id="reflect_8h_1autotoc_md0">
+<title>How the chain works</title>
+<para><computeroutput>detail::wrapper&lt;Value, Executor&gt;</computeroutput> publicly inherits: <programlisting filename=".cpp"><codeline><highlight class="normal">reflect&lt;wrapper&lt;Value,Executor&gt;,<sp/>Executor&lt;Value&gt;,<sp/>wrapper&lt;Value,Executor&gt;&gt;</highlight></codeline>
+</programlisting></para>
+<para>Two partial specialisations (defined in <computeroutput><ref refid="detail_2wrapper_8h_source" kindref="compound">detail/wrapper.h</ref></computeroutput>) peel the <computeroutput>detail::wrapper</computeroutput> layer off the third parameter:</para>
+<para><orderedlist>
+<listitem><para><bold>cv/ref-strip</bold> — <computeroutput>detail::wrapper&lt;QualifiedInner, E&gt;</computeroutput> (where <computeroutput>QualifiedInner</computeroutput> carries cv/ref qualifiers) delegates to the unqualified form, collapsing all 12 variants into one rule.</para>
+</listitem><listitem><para><bold>Chain delegation</bold> — <computeroutput>detail::wrapper&lt;Value, E&gt;</computeroutput> (unqualified inner) inherits from <computeroutput>reflect&lt;Wrapper, Executor, Value&gt;</computeroutput>, propagating all members reflected for <computeroutput>Value</computeroutput> up to the outer wrapper.</para>
+</listitem></orderedlist>
+</para>
+<para>The <bold>primary template</bold> (this file) is the terminal case: when <computeroutput>Type</computeroutput> is neither a <computeroutput>detail::wrapper</computeroutput> specialisation nor any other specialised form, the class body is empty. User-provided specialisations extend this chain for concrete value types.</para>
+</sect2>
+<sect2 id="reflect_8h_1autotoc_md1">
+<title>Extending for a custom type</title>
+<para>Specialise <computeroutput>reflect</computeroutput> for your value type. <computeroutput>SCL_REFLECT_TYPE</computeroutput> must appear first to introduce the <computeroutput>S_c_L_type_</computeroutput> / <computeroutput>S_c_L_executor_type_</computeroutput> aliases that <computeroutput>SCL_REFLECT_METHOD</computeroutput> depends on:</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Wrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Executor&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">scl::feature::reflect</ref>&lt;<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">MyValue</ref>&gt;</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__scl__feature__reflection_1ga04334714025d2e271f8c953464c5382d" kindref="member">SCL_REFLECT_TYPE</ref>(<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Wrapper</ref>,<sp/><ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">Executor</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="method_8h_1ad31abde82c30312cad7dc6b7bb5ae532" kindref="member">SCL_REFLECT_METHOD</ref>(<ref refid="group__scl__feature__type__traits_1ga4b4a83fa2f91118b959d5566a2a782c7" kindref="member">my_method</ref>)</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> </para>
+</sect2>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="method_8h" kindref="compound">scl/feature/reflection/method.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacescl_1_1feature" kindref="compound">scl::feature</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Wrapper,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Executor,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="75" refid="classscl_1_1feature_1_1reflect" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscl_1_1feature_1_1reflect" kindref="compound">reflect</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scl::feature</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="module/feature/src/scl/feature/reflection/reflect.h"/>
+  </compounddef>
+</doxygen>

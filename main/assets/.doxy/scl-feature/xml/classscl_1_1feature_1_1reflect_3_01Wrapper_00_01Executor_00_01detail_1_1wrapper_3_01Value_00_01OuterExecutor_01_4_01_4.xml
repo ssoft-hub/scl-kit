@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
-  <compounddef id="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a" kind="class" language="C++" prot="public">
-    <compoundname>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</compoundname>
-    <basecompoundref refid="classscl_1_1feature_1_1methods__reflection" prot="public" virt="non-virtual">scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</basecompoundref>
+  <compounddef id="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4" kind="class" language="C++" prot="public">
+    <compoundname>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</compoundname>
+    <basecompoundref refid="classscl_1_1feature_1_1reflect" prot="public" virt="non-virtual">scl::feature::reflect&lt; Wrapper, Executor, Value &gt;</basecompoundref>
     <includes refid="detail_2wrapper_8h" local="no">wrapper.h</includes>
     <templateparamlist>
       <param>
@@ -24,28 +24,28 @@
 <para>Reflection chain for a plain (non-nested) wrapper. </para>
     </briefdescription>
     <detaileddescription>
-<para>Delegates to <computeroutput><ref refid="classscl_1_1feature_1_1methods__reflection" kindref="compound">methods_reflection</ref>&lt;Wrapper_</computeroutput>, Executor_, Value_&gt; so that the outer wrapper exposes all methods reflected for the held value type. </para>
+<para>Delegates to <computeroutput>reflect&lt;Wrapper_</computeroutput>, Executor_, Value_&gt; so that the outer wrapper exposes all methods reflected for the held value type. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
-        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</label>
-        <link refid="classscl_1_1feature_1_1methods__reflection"/>
+        <label>scl::feature::reflect&lt; Wrapper, Executor, Value &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect"/>
       </node>
       <node id="1">
-        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
-        <link refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a"/>
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
       <node id="2">
-        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, Value &gt;</label>
-        <link refid="classscl_1_1feature_1_1methods__reflection"/>
+        <label>scl::feature::reflect&lt; Wrapper, Executor, Value &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect"/>
       </node>
       <node id="1">
-        <label>scl::feature::methods_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
-        <link refid="classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a"/>
+        <label>scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;</label>
+        <link refid="classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>

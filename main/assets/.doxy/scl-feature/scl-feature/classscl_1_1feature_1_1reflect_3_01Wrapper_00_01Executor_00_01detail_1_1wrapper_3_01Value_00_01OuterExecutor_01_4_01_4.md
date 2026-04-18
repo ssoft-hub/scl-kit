@@ -1,12 +1,12 @@
 
 
-# Class scl::feature::methods\_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;
+# Class scl::feature::reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;
 
 **template &lt;[**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Wrapper**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Executor**](group__scl__feature__type__traits.md#variable-is_executor_v), [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) [**Value**](group__scl__feature__type__traits.md#variable-is_executor_v), [**template**](group__scl__feature__type__traits.md#variable-is_executor_v)&lt; [**typename**](group__scl__feature__type__traits.md#variable-is_executor_v) &gt; [**class**](group__scl__feature__type__traits.md#variable-is_executor_v) OuterExecutor&gt;**
 
 
 
-[**ClassList**](annotated.md) **>** [**scl**](namespacescl.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**methods\_reflection&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1methods__reflection_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_011ede5f50bef484fca1e7f095cf68932a.md)
+[**ClassList**](annotated.md) **>** [**feature**](namespacescl_1_1feature.md) **>** [**reflect&lt; Wrapper, Executor, detail::wrapper&lt; Value, OuterExecutor &gt; &gt;**](classscl_1_1feature_1_1reflect_3_01Wrapper_00_01Executor_00_01detail_1_1wrapper_3_01Value_00_01OuterExecutor_01_4_01_4.md)
 
 
 
@@ -16,7 +16,7 @@ _Reflection chain for a plain (non-nested) wrapper._ [More...](#detailed-descrip
 
 
 
-Inherits the following classes: [scl::feature::methods\_reflection](classscl_1_1feature_1_1methods__reflection.md)
+Inherits the following classes: [scl::feature::reflect](classscl_1_1feature_1_1reflect.md)
 
 
 
@@ -130,7 +130,7 @@ Inherits the following classes: [scl::feature::methods\_reflection](classscl_1_1
 ## Detailed Description
 
 
-Delegates to `methods_reflection <Wrapper_`, Executor\_, Value\_&gt; so that the outer wrapper exposes all methods reflected for the held value type. 
+Delegates to `reflect<Wrapper_`, Executor\_, Value\_&gt; so that the outer wrapper exposes all methods reflected for the held value type. 
 
 
     

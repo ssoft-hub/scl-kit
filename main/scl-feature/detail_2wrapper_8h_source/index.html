@@ -299,7 +299,7 @@
 #include &lt;scl/feature/detail/executor_access.h&gt;
 #include &lt;scl/feature/detail/wrapper_constructor_resolver.h&gt;
 #include &lt;scl/feature/detail/wrapper_constructors.h&gt;
-#include &lt;scl/feature/reflection/methods.h&gt;
+#include &lt;scl/feature/reflection/reflect.h&gt;
 #include &lt;scl/utility/attribute.h&gt;
 
 #include &lt;utility&gt;
@@ -310,7 +310,7 @@ namespace scl::feature::detail
     template &lt;typename Value, template &lt;typename&gt; class Executor&gt;
         requires ::scl::feature::concepts::executor&lt;Executor&lt;Value&gt;&gt;
     class wrapper
-        : public ::scl::feature::methods_reflection&lt;wrapper&lt;Value, Executor&gt;, Executor&lt;Value&gt;, wrapper&lt;Value, Executor&gt;&gt;
+        : public ::scl::feature::reflect&lt;wrapper&lt;Value, Executor&gt;, Executor&lt;Value&gt;, wrapper&lt;Value, Executor&gt;&gt;
     {
         using self_type = wrapper&lt;Value, Executor&gt;;
 
@@ -357,13 +357,13 @@ namespace scl::feature
     template &lt;typename Wrapper, typename Executor, typename QualifiedInner, template &lt;typename&gt; class OuterExecutor&gt;
         requires(::scl::feature::concepts::wrapper&lt;QualifiedInner&gt; &amp;&amp;
             !::std::same_as&lt;QualifiedInner, ::std::remove_cvref_t&lt;QualifiedInner&gt;&gt;)
-    class methods_reflection&lt;Wrapper, Executor, detail::wrapper&lt;QualifiedInner, OuterExecutor&gt;&gt;
-        : public methods_reflection&lt;Wrapper, Executor, detail::wrapper&lt;::std::remove_cvref_t&lt;QualifiedInner&gt;, OuterExecutor&gt;&gt;
+    class reflect&lt;Wrapper, Executor, detail::wrapper&lt;QualifiedInner, OuterExecutor&gt;&gt;
+        : public reflect&lt;Wrapper, Executor, detail::wrapper&lt;::std::remove_cvref_t&lt;QualifiedInner&gt;, OuterExecutor&gt;&gt;
     {};
 
     template &lt;typename Wrapper, typename Executor, typename Value, template &lt;typename&gt; class OuterExecutor&gt;
-    class methods_reflection&lt;Wrapper, Executor, detail::wrapper&lt;Value, OuterExecutor&gt;&gt;
-        : public methods_reflection&lt;Wrapper, Executor, Value&gt;
+    class reflect&lt;Wrapper, Executor, detail::wrapper&lt;Value, OuterExecutor&gt;&gt;
+        : public reflect&lt;Wrapper, Executor, Value&gt;
     {};
 } // namespace scl::feature
 </code></pre>
