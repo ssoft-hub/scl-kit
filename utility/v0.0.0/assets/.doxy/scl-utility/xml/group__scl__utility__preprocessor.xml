@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="group__scl__utility__preprocessor" kind="group">
+    <compoundname>scl_utility_preprocessor</compoundname>
+    <title>SCL Preprocessor Utilities (C++)</title>
+    <innerfile refid="expand__macros_8h">expand_macros.h</innerfile>
+    <briefdescription>
+<para>Helper macros for the C/C++ preprocessor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Utilities for macro expansion and safe forwarding of tokens.</para>
+</listitem><listitem><para>Building blocks for more complex preprocessor metaprogramming patterns.</para>
+</listitem><listitem><para>Designed to be portable and minimal. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_FORCE_INLINE
 #if defined(_MSC_VER) && !defined(__clang__)
 #define SCL_FORCE_INLINE __forceinline

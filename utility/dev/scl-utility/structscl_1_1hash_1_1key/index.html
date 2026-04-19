@@ -476,7 +476,7 @@
 <h1 id="struct-sclhashkey">Struct scl::hash::key</h1>
 <p><strong>template &lt;concepts::byte_hasher Hasher&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1hash/"><strong>hash</strong></a> <strong>&gt;</strong> <a href="./"><strong>key</strong></a></p>
-<p><em>Strongly-typed hash digest parameterized by a hash function.</em> <a href="#detailed-description">More...</a></p>
+<p><em>Strongly-typed FNV-1a hash digest parameterized by a hash function.</em> <a href="#detailed-description">More...</a></p>
 <ul>
 <li><code>#include &lt;key.h&gt;</code></li>
 </ul>
@@ -524,7 +524,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr</td>
+<td style="text-align: right;">requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr</td>
 <td style="text-align: left;"><a href="#function-key"><strong>key</strong></a> (Range const &amp; range) noexcept<br><em>Constructs the digest by hashing</em> <code>range</code> <em>with</em><code>Hasher</code> <em>.</em></td>
 </tr>
 <tr>
@@ -566,10 +566,10 @@
 </tbody>
 </table>
 <p>Key properties:
-* **<code>constexpr</code>** — digest computed at compile time.
+* <strong><code>constexpr</code></strong> — digest computed at compile time.
 * <strong>Comparable</strong> — <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> via defaulted <code>&lt;=&gt;</code>.
-* **<code>switch</code>/<code>case</code> label** — implicit conversion to <code>value_type</code> enables string-dispatching without <code>if</code>-<code>else</code> chains.
-* <strong>STL-compatible</strong> — <code>std::hash&lt;key&lt;Hasher&gt;&gt;</code> is specialised for use in <code>std::unordered_map</code> / <code>std::unordered_set</code>.</p>
+* <strong><code>switch</code>/<code>case</code> label</strong> — implicit conversion to <code>value_type</code> enables string-dispatching without <code>if</code>-<code>else</code> chains.
+* <strong>STL-compatible</strong> — <code>std::hash&lt; key &lt;Hasher&gt;&gt;</code> is specialised for use in <code>std::unordered_map</code> / <code>std::unordered_set</code>.</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>Hasher</code> A type satisfying scl::hash::byte_hasher. Defaults to <code>fnv1a_hasher</code>.</li>
@@ -618,7 +618,7 @@ constexpr sip_key id{&quot;my_event&quot;};
 <h3 id="function-key">function key</h3>
 <p><em>Constructs the digest by hashing</em> <code>range</code> <em>with</em><code>Hasher</code> <em>.</em></p>
 <pre><code class="language-C++">template&lt;::std::ranges::range Range&gt;
-inline explicit constexpr scl::hash::key::key (
+inline explicit requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr scl::hash::key::key (
     Range const &amp; range
 ) noexcept
 </code></pre>
@@ -640,7 +640,7 @@ inline explicit constexpr scl::hash::key::key (
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-operator">friend operator&lt;=&gt;</h3>
 <p><em>Three-way comparison (generates ==, !=, &lt;, &lt;=, &gt;, &gt;=).</em> </p>
-<pre><code class="language-C++">constexpr auto scl::hash::key::operator&lt;=&gt; (
+<pre><code class="language-C++">auto scl::hash::key::operator&lt;=&gt; (
     key const &amp;,
     key const &amp;
 ) noexcept

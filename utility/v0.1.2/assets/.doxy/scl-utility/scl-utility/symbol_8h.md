@@ -90,8 +90,8 @@ _Compile-time symbol (function, method, property) name extraction (C++20)._ [Mor
 
 
 
-* [**scl::symbol\_name&lt;S&gt;**](group__scl__utility__meta.md#function-symbol_name): Extracts the fully qualified name of the symbol S (global function, class method, or data member). Performs aggressive cleanup of compiler decorations, address operators (&), parentheses, and whitespace.
-* [**scl::symbol\_short\_name&lt;S&gt;**](group__scl__utility__meta.md#function-symbol_short_name): Extracts only the terminal identifier of the symbol S. Useful for reflection-like tasks where only the member or function name is required. 
+* [**scl::symbol\_name**](group__scl__utility__meta.md#function-symbol_name)
+* 
 
 
 

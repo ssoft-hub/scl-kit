@@ -10,13 +10,15 @@
 ```C++
 #pragma once
 
+
+
 #include <scl/utility/hash/djb2.h>
 #include <scl/utility/hash/fnv1a.h>
 #include <scl/utility/hash/jenkins_ota.h>
 #include <scl/utility/hash/key.h>
 #include <scl/utility/hash/sdbm.h>
 #include <scl/utility/hash/siphash.h>
-
+ // end of group scl_utility_hash
 ```
 
 

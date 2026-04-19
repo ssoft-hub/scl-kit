@@ -375,7 +375,7 @@
 
 <h1 id="struct-sclhashdjb2_hasher">Struct scl::hash::djb2_hasher</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespacescl/"><strong>scl</strong></a> <strong>&gt;</strong> <a href="../namespacescl_1_1hash/"><strong>hash</strong></a> <strong>&gt;</strong> <a href="./"><strong>djb2_hasher</strong></a></p>
-<p><em>Callable wrapper around</em> <a href="../group__scl__utility__hash/#function-djb2"><em><strong>djb2</strong></em></a> <em>for use with</em><a href="../structscl_1_1hash_1_1key/"><em><strong>scl::hash::key</strong></em></a> <em>.</em></p>
+<p><em>Callable wrapper around</em> <a href="../namespacescl_1_1hash/#function-djb2"><em><strong>djb2</strong></em></a> <em>for use with</em><a href="../structscl_1_1hash_1_1key/"><em><strong>scl::hash::key</strong></em></a> <em>.</em></p>
 <ul>
 <li><code>#include &lt;djb2.h&gt;</code></li>
 </ul>
@@ -404,7 +404,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr result_type</td>
+<td style="text-align: right;">requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr result_type</td>
 <td style="text-align: left;"><a href="#function-operator"><strong>operator()</strong></a> (Range const &amp; range) noexcept const<br></td>
 </tr>
 </tbody>
@@ -417,7 +417,7 @@
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-operator">function operator()</h3>
 <pre><code class="language-C++">template&lt;::std::ranges::range Range&gt;
-inline constexpr result_type scl::hash::djb2_hasher::operator() (
+inline requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt; Range &gt;, ::std::uint8_t &gt; constexpr result_type scl::hash::djb2_hasher::operator() (
     Range const &amp; range
 ) noexcept const
 </code></pre>

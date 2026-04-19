@@ -10,6 +10,8 @@
 ```C++
 #pragma once
 
+
+
 #ifndef SCL_INDETERMINATE
 #if __has_cpp_attribute(indeterminate)
 #define SCL_INDETERMINATE [[indeterminate]]

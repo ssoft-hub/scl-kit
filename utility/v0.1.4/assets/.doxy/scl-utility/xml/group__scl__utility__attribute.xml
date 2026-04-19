@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="group__scl__utility__attribute" kind="group">
     <compoundname>scl_utility_attribute</compoundname>
     <title>ScL Attribute Macros</title>
@@ -462,7 +462,7 @@
 <para>MSVC &lt; 19.30 (VS<nonbreakablespace/>2019 <le/><nonbreakablespace/>16.9) does not recognise the standard spelling, so step<nonbreakablespace/>1 returns 0 and step<nonbreakablespace/>2 picks up the vendor form. Clang-cl supports the standard attribute; <computeroutput>__has_cpp_attribute</computeroutput> returns non-zero for it and the vendor form is never needed.</para>
 <para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Empty<sp/>{};</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">S<sp/>{<sp/><ref refid="group__scl__utility__attribute_1ga4db775c117b8c3b9213ccb26845f36ec" kindref="member">SCL_NO_UNIQUE_ADDRESS</ref><sp/>Empty<sp/>e;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;<sp/>};</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(S)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(S)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int));</highlight></codeline>
 </programlisting> </para>
         </detaileddescription>
         <inbodydescription>

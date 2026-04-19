@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="group__scl__utility__preprocessor" kind="group">
     <compoundname>scl_utility_preprocessor</compoundname>
     <title>ScL Preprocessor Utilities (C++)</title>
@@ -61,7 +61,7 @@
 <para>Increments a compile-time counter. </para>
         </briefdescription>
         <detaileddescription>
-<para>This macro defines a new <computeroutput>crumb</computeroutput> function overload in the <computeroutput>scl</computeroutput> namespace. This new function is a better match for overload resolution for a specific bit-rank, effectively &quot;setting&quot; that bit and incrementing the counter&apos;s value for subsequent reads via <computeroutput>SCL_COUNTER_VALUE</computeroutput>.</para>
+<para>This macro defines a new <computeroutput>crumb</computeroutput> function overload in the <computeroutput><ref refid="namespacescl" kindref="compound">scl</ref></computeroutput> namespace. This new function is a better match for overload resolution for a specific bit-rank, effectively &quot;setting&quot; that bit and incrementing the counter&apos;s value for subsequent reads via <computeroutput><ref refid="group__scl__utility__preprocessor_1ga6f202c846d606a19e89b145d38288aba" kindref="member">SCL_COUNTER_VALUE</ref></computeroutput>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>Tag</parametername>

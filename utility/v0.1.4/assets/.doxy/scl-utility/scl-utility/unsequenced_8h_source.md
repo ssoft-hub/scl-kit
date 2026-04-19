@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_UNSEQUENCED
 #if __has_cpp_attribute(unsequenced)
 #define SCL_UNSEQUENCED(...) __VA_ARGS__ [[unsequenced]]

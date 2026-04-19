@@ -328,9 +328,9 @@
 
   <h1>Index</h1>
 
-<p>ScL Utility</p>
+<p>ScL.Utility</p>
 <h2 id="overview">Overview</h2>
-<p>ScL Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.</p>
+<p>ScL.Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.</p>
 <h2 id="quick-start">Quick start</h2>
 <p>Include the umbrella header and link against the CMake target: </p>
 <pre><code>target_link_libraries(your_target PRIVATE scl::utility)
@@ -343,8 +343,7 @@ static_assert(scl::type_name&lt;int&gt;() == &quot;int&quot;);
 <ul>
 <li><strong>Meta</strong> (<a href="group__scl__utility__meta/"><strong>ScL Meta Infos</strong></a>) — compile-time type, enum, and symbol name extraction without RTTI.</li>
 <li><strong>Preprocessor</strong> (<a href="group__scl__utility__preprocessor/"><strong>ScL Preprocessor Utilities (C++)</strong></a>) — macro utilities including token forwarding (SCL_FORWARD) and a compile-time counter (SCL_COUNTER_VALUE / SCL_COUNTER_NEXT).</li>
-<li><strong>Type traits</strong> (<a href="group__scl__utility__type__traits/"><strong>ScL Type Traits</strong></a>) — detection idiom, forward_like, member pointer decomposition, and overload_cast.</li>
-<li><strong>Attribute</strong> (<a href="group__scl__utility__attribute/"><strong>ScL Attribute Macros</strong></a>) — portable macros for [[no_unique_address]], optimizer hints (SCL_ASSUME, SCL_UNREACHABLE), and inlining control (SCL_FORCE_INLINE, SCL_NOINLINE). </li>
+<li><strong>Type traits</strong> (<a href="group__scl__utility__type__traits/"><strong>ScL Type Traits</strong></a>) — detection idiom, forward_like, member pointer decomposition, and overload_cast. </li>
 </ul>
 
 

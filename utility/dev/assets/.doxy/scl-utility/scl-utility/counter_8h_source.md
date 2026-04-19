@@ -15,6 +15,7 @@
 #include <cstdint>
 #include <type_traits>
 
+
 namespace scl::preprocessor::detail
 {
     template <::std::uint_fast32_t N>

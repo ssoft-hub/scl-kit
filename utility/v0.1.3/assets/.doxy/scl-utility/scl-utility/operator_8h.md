@@ -8,7 +8,7 @@
 
 [Go to the source code of this file](operator_8h_source.md)
 
-_Operator detection traits: compile-time aliases and value checks (Detection Idiom)_ [More...](#detailed-description)
+_Operator detection traits: compile-time aliases and value checks (Detection Idiom)._ [More...](#detailed-description)
 
 * `#include <scl/utility/preprocessor/forward.h>`
 * `#include <scl/utility/type_traits/detection.h>`

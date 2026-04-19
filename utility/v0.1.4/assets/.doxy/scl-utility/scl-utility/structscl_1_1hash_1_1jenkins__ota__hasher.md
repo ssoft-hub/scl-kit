@@ -57,7 +57,7 @@ _Callable wrapper around_ [_**jenkins\_ota**_](group__scl__utility__hash.md#func
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -124,7 +124,7 @@ using scl::hash::jenkins_ota_hasher::result_type =  ::std::uint32_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline constexpr result_type scl::hash::jenkins_ota_hasher::operator() (
+inline result_type scl::hash::jenkins_ota_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

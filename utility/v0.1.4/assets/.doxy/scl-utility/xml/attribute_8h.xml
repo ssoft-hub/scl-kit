@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="attribute_8h" kind="file" language="C++">
     <compoundname>attribute.h</compoundname>
     <includes refid="assume_8h" local="no">scl/utility/attribute/assume.h</includes>
@@ -121,6 +121,8 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="assume_8h" kindref="compound">scl/utility/attribute/assume.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="deprecated_8h" kindref="compound">scl/utility/attribute/deprecated.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fallthrough_8h" kindref="compound">scl/utility/attribute/fallthrough.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -134,8 +136,8 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="nodiscard_8h" kindref="compound">scl/utility/attribute/nodiscard.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="noreturn_8h" kindref="compound">scl/utility/attribute/noreturn.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="unsequenced_8h" kindref="compound">scl/utility/attribute/unsequenced.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<sp/><highlight class="comment">//<sp/>end<sp/>of<sp/>group<sp/>scl_utility_attribute</highlight>    </programlisting>
+<codeline lineno="42"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>group<sp/>scl_utility_attribute</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
     <location file="module/utility/src/scl/utility/attribute.h"/>
   </compounddef>
 </doxygen>

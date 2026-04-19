@@ -57,7 +57,7 @@ _Callable wrapper around_ [_**fnv1a**_](group__scl__utility__hash.md#function-fn
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -110,7 +110,7 @@ using scl::hash::fnv1a_hasher::result_type =  ::std::uint64_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline constexpr result_type scl::hash::fnv1a_hasher::operator() (
+inline result_type scl::hash::fnv1a_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

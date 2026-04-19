@@ -635,7 +635,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">file</td>
-<td style="text-align: left;"><a href="../operator_8h/"><strong>operator.h</strong></a> <br><em>Operator detection traits: compile-time aliases and value checks (Detection Idiom)</em></td>
+<td style="text-align: left;"><a href="../operator_8h/"><strong>operator.h</strong></a> <br><em>Operator detection traits: compile-time aliases and value checks (Detection Idiom).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">file</td>
@@ -704,19 +704,19 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr bool</td>
-<td style="text-align: left;"><a href="#variable-is_detected_convertible_v"><strong>is_detected_convertible_v</strong></a>   = <code>is\_detected\_convertible&amp;lt;To, Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of is_detected_convertible.</em></td>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#variable-is_detected_convertible_v"><strong>is_detected_convertible_v</strong></a>   = <code>is\_detected\_convertible&amp;lt;To, Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of</em> <a href="./#typedef-is_detected_convertible"><em><strong>is_detected_convertible</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr bool</td>
-<td style="text-align: left;"><a href="#variable-is_detected_exact_v"><strong>is_detected_exact_v</strong></a>   = <code>is\_detected\_exact&amp;lt;Expected, Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of is_detected_exact.</em></td>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#variable-is_detected_exact_v"><strong>is_detected_exact_v</strong></a>   = <code>is\_detected\_exact&amp;lt;Expected, Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of</em> <a href="./#typedef-is_detected_exact"><em><strong>is_detected_exact</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr bool</td>
-<td style="text-align: left;"><a href="#variable-is_detected_v"><strong>is_detected_v</strong></a>   = <code>is\_detected&amp;lt;Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of is_detected.</em></td>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#variable-is_detected_v"><strong>is_detected_v</strong></a>   = <code>is\_detected&amp;lt;Operation, Arguments...&amp;gt;::value</code><br><em>Variable template version of</em> <a href="./#typedef-is_detected"><em><strong>is_detected</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr detail::overload_cast&lt; Args... &gt;</td>
+<td style="text-align: right;">detail::overload_cast&lt; Args... &gt;</td>
 <td style="text-align: left;"><a href="#variable-overload_cast"><strong>overload_cast</strong></a>   = <code>{}</code><br><em>A helper utility to select a specific overload of a function or member function.</em></td>
 </tr>
 </tbody>
@@ -731,7 +731,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr decltype(auto)</td>
+<td style="text-align: right;">decltype(auto)</td>
 <td style="text-align: left;"><a href="#function-forward_like"><strong>forward_like</strong></a> (T &amp;&amp; t) noexcept<br><em>Forwards a value with the cv-ref qualifiers of</em> <code>Base</code> <em>applied to</em><code>T</code> <em>'s type, matching ::std::forward_like semantics.</em></td>
 </tr>
 </tbody>
@@ -758,7 +758,7 @@
 <h2 id="public-types-documentation">Public Types Documentation</h2>
 <h3 id="typedef-detected_or">typedef detected_or</h3>
 <p><em>Helper for getting detected type or a default.</em> </p>
-<pre><code>using scl::detected_or = typedef detail::detector&lt;Default, void, Operation, Arguments...&gt;;
+<pre><code>using scl::detected_or =  detail::detector&lt;Default, void, Operation, Arguments...&gt;;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -771,7 +771,7 @@
 
 <h3 id="typedef-detected_or_t">typedef detected_or_t</h3>
 <p><em>Gets the type of Operation&lt;Arguments...&gt; or Default if ill-formed.</em> </p>
-<pre><code>using scl::detected_or_t = typedef typename detected_or&lt;Default, Operation, Arguments...&gt;::type;
+<pre><code>using scl::detected_or_t =  typename detected_or&lt;Default, Operation, Arguments...&gt;::type;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -785,7 +785,7 @@
 
 <h3 id="typedef-detected_t">typedef detected_t</h3>
 <p><em>Gets the type of Operation&lt;Arguments...&gt; or void if ill-formed.</em> </p>
-<pre><code>using scl::detected_t = typedef typename detail::detector&lt;void, void, Operation, Arguments...&gt;::type;
+<pre><code>using scl::detected_t =  typename detail::detector&lt;void, void, Operation, Arguments...&gt;::type;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -798,7 +798,8 @@
 
 <h3 id="typedef-forward_like_t">typedef forward_like_t</h3>
 <p><em>Make a type</em> <code>Type</code> <em>"look like"</em><code>Base</code> <em>for cv-ref qualifiers (matches ::std::forward_like rules).</em></p>
-<pre><code>using scl::forward_like_t = typedef ::scl::detail::add_reference_like_t&lt;Base, ::scl::detail::add_cv_from_t&lt;Base, ::std::remove_reference_t&lt;Type&gt; &gt;&gt;;
+<pre><code>using scl::forward_like_t =  ::scl::detail::add_reference_like_t&lt;Base,
+        ::scl::detail::add_cv_from_t&lt;Base, ::std::remove_reference_t&lt;Type&gt;&gt;&gt;;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -820,7 +821,7 @@ using P4 = forward_like_t&lt;int, double&amp;&amp;&gt;                  // doubl
 
 <h3 id="typedef-is_detected">typedef is_detected</h3>
 <p><em>Detects whether Operation&lt;Arguments...&gt; is a valid expression.</em> </p>
-<pre><code>using scl::is_detected = typedef typename detail::detector&lt;void, void, Operation, Arguments...&gt;::value_t;
+<pre><code>using scl::is_detected =  typename detail::detector&lt;void, void, Operation, Arguments...&gt;::value_t;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -837,7 +838,7 @@ static_assert(is_detected&lt;has_foo_t, MyClass&gt;::value);
 
 <h3 id="typedef-is_detected_convertible">typedef is_detected_convertible</h3>
 <p><em>Checks if Operation&lt;Arguments... &gt; is convertible to To.</em> </p>
-<pre><code>using scl::is_detected_convertible = typedef ::std::is_convertible&lt;detected_t&lt;Operation, Arguments...&gt;, To&gt;;
+<pre><code>using scl::is_detected_convertible =  ::std::is_convertible&lt;detected_t&lt;Operation, Arguments...&gt;, To&gt;;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -851,7 +852,7 @@ static_assert(is_detected&lt;has_foo_t, MyClass&gt;::value);
 
 <h3 id="typedef-is_detected_exact">typedef is_detected_exact</h3>
 <p><em>Checks if Operation&lt;Arguments...&gt; results in exactly Expected type.</em> </p>
-<pre><code>using scl::is_detected_exact = typedef ::std::is_same&lt;Expected, detected_t&lt;Operation, Arguments...&gt; &gt;;
+<pre><code>using scl::is_detected_exact =  ::std::is_same&lt;Expected, detected_t&lt;Operation, Arguments...&gt;&gt;;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -865,7 +866,7 @@ static_assert(is_detected&lt;has_foo_t, MyClass&gt;::value);
 
 <h3 id="typedef-member_function_like_t">typedef member_function_like_t</h3>
 <p><em>Pointer-to-member-function type for class Type and function Signature, where the member function's cv/ref qualifiers are copied from Type.</em> </p>
-<pre><code>using scl::member_function_like_t = typedef typename ::scl::detail::member_function_like&lt;Type, Signature&gt;::type;
+<pre><code>using scl::member_function_like_t =  typename ::scl::detail::member_function_like&lt;Type, Signature&gt;::type;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -884,14 +885,14 @@ using P3 = scl::member_function_like_t&lt;Foo const&amp;&amp;, void() noexcept&g
 
 <h3 id="typedef-member_like_t">typedef member_like_t</h3>
 <p><em>Generic pointer-to-member type selector for class Type and Member.</em> </p>
-<pre><code>using scl::member_like_t = typedef typename ::scl::detail::member_like&lt;Type, Member&gt;::type;
+<pre><code>using scl::member_like_t =  typename ::scl::detail::member_like&lt;Type, Member&gt;::type;
 </code></pre>
 <p>Selects the appropriate pointer-to-member type based on whether Member is a function type.
 * If Member is a function type like <code>Result(Arguments...)</code> or <code>Result(Arguments...) noexcept</code>, this aliases to <a href="./#typedef-member_function_like_t"><strong>scl::member_function_like_t&lt;Type, Member&gt;</strong></a>, producing: <code>Result (::std::remove_cvref_t&lt;Type&gt;::*)(Arguments...) [cv] [ref] [noexcept]</code> where:
   * [cv]/[ref] are mirrored from Type (const/volatile and &amp;/&amp;&amp;),
   * [noexcept] is mirrored from T.</p>
 <ul>
-<li>Otherwise, it aliases to <a href="./#typedef-member_property_like_t"><strong>scl::member_property_like_t&lt;Type, Member&gt;</strong></a>, producing: <code>Member (::std::remove_cvref_t&lt;Type&gt;::*)</code> (see member_property_like_t for details on how object qualifiers may affect Member).</li>
+<li>Otherwise, it aliases to <a href="./#typedef-member_property_like_t"><strong>scl::member_property_like_t&lt;Type, Member&gt;</strong></a>, producing: <code>Member (::std::remove_cvref_t&lt;Type&gt;::*)</code> (see <a href="./#typedef-member_property_like_t"><strong>member_property_like_t</strong></a> for details on how object qualifiers may affect Member).</li>
 </ul>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -914,7 +915,7 @@ using M3 = scl::member_like_t&lt;Foo const, int&gt;;  // int const Foo::*
 
 <h3 id="typedef-member_property_like_t">typedef member_property_like_t</h3>
 <p><em>Pointer-to-data-member type for class Type and member type Member.</em> </p>
-<pre><code>using scl::member_property_like_t = typedef typename ::scl::detail::member_property_like&lt;Type, Member&gt;::type;
+<pre><code>using scl::member_property_like_t =  typename ::scl::detail::member_property_like&lt;Type, Member&gt;::type;
 </code></pre>
 <p>Forms the type <code>Member (::std::remove_cvref_t&lt;Type&gt;::*)</code>. Object cv/ref qualifiers do not change the pointer type for data members; they only affect access expressions.</p>
 <p>**
@@ -926,8 +927,8 @@ using P2 = scl::member_property_like_t&lt;Foo, int const&gt;;   // int Foo::*
 <hr>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-is_detected_convertible_v">variable is_detected_convertible_v</h3>
-<p><em>Variable template version of is_detected_convertible.</em> </p>
-<pre><code>constexpr bool scl::is_detected_convertible_v;
+<p><em>Variable template version of</em> <a href="./#typedef-is_detected_convertible"><em><strong>is_detected_convertible</strong></em></a> <em>.</em></p>
+<pre><code>bool scl::is_detected_convertible_v;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -938,8 +939,8 @@ using P2 = scl::member_property_like_t&lt;Foo, int const&gt;;   // int Foo::*
 <hr>
 
 <h3 id="variable-is_detected_exact_v">variable is_detected_exact_v</h3>
-<p><em>Variable template version of is_detected_exact.</em> </p>
-<pre><code>constexpr bool scl::is_detected_exact_v;
+<p><em>Variable template version of</em> <a href="./#typedef-is_detected_exact"><em><strong>is_detected_exact</strong></em></a> <em>.</em></p>
+<pre><code>bool scl::is_detected_exact_v;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -950,8 +951,8 @@ using P2 = scl::member_property_like_t&lt;Foo, int const&gt;;   // int Foo::*
 <hr>
 
 <h3 id="variable-is_detected_v">variable is_detected_v</h3>
-<p><em>Variable template version of is_detected.</em> </p>
-<pre><code>constexpr bool scl::is_detected_v;
+<p><em>Variable template version of</em> <a href="./#typedef-is_detected"><em><strong>is_detected</strong></em></a> <em>.</em></p>
+<pre><code>bool scl::is_detected_v;
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -964,7 +965,7 @@ using P2 = scl::member_property_like_t&lt;Foo, int const&gt;;   // int Foo::*
 
 <h3 id="variable-overload_cast">variable overload_cast</h3>
 <p><em>A helper utility to select a specific overload of a function or member function.</em> </p>
-<pre><code>constexpr detail::overload_cast&lt;Args...&gt; scl::overload_cast;
+<pre><code>detail::overload_cast&lt;Args...&gt; scl::overload_cast;
 </code></pre>
 <p>This template class provides a set of call operators that disambiguate overloaded functions based on their argument types (Args...) and qualifiers (const, volatile, lvalue/rvalue references, and noexcept).</p>
 <p><strong>Template parameters:</strong></p>
@@ -990,11 +991,11 @@ auto f2  = overload_cast&lt;double&gt;(&amp;bar);        // selects void bar(dou
 <h3 id="function-forward_like">function forward_like</h3>
 <p><em>Forwards a value with the cv-ref qualifiers of</em> <code>Base</code> <em>applied to</em><code>T</code> <em>'s type, matching ::std::forward_like semantics.</em></p>
 <pre><code>template&lt;typename Base, typename T&gt;
-constexpr decltype(auto) forward_like (
+decltype(auto) forward_like (
     T &amp;&amp; t
 ) noexcept
 </code></pre>
-<p>Example: <code>forward_like&lt;const T&amp;, x&gt;(some_val)</code> will forward <code>some_val</code> as a <code>const</code> lvalue reference if <code>T</code> is const. </p>
+<p>Example: <code>forward_like &lt;const T&amp;, x&gt;(some_val)</code> will forward <code>some_val</code> as a <code>const</code> lvalue reference if <code>T</code> is const. </p>
 <hr>
 <h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
 <h3 id="define-scl_function_detection">define SCL_FUNCTION_DETECTION</h3>

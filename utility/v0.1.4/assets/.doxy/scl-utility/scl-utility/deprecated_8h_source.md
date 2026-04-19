@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_DEPRECATED
 #if __has_cpp_attribute(deprecated)
 #define SCL_DEPRECATED [[deprecated]]

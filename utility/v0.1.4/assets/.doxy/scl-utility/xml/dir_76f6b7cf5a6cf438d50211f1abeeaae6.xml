@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="dir_76f6b7cf5a6cf438d50211f1abeeaae6" kind="dir">
     <compoundname>module/utility/src/scl/utility</compoundname>
     <innerdir refid="dir_329a2a35dc2fa6e7b16bddbfbc08f988">module/utility/src/scl/utility/attribute</innerdir>

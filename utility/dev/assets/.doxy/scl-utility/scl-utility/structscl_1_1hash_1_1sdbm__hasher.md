@@ -8,7 +8,7 @@
 
 
 
-_Callable wrapper around_ [_**sdbm**_](group__scl__utility__hash.md#function-sdbm) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._
+_Callable wrapper around_ [_**sdbm**_](namespacescl_1_1hash.md#function-sdbm) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._
 
 * `#include <sdbm.h>`
 
@@ -57,7 +57,7 @@ _Callable wrapper around_ [_**sdbm**_](group__scl__utility__hash.md#function-sdb
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  requires ::std::convertible\_to&lt;::std::ranges::range\_value\_t&lt; Range &gt;, ::std::uint8\_t &gt; constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -110,7 +110,7 @@ using scl::hash::sdbm_hasher::result_type =  ::std::uint64_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline constexpr result_type scl::hash::sdbm_hasher::operator() (
+inline requires ::std::convertible_to<::std::ranges::range_value_t< Range >, ::std::uint8_t > constexpr result_type scl::hash::sdbm_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

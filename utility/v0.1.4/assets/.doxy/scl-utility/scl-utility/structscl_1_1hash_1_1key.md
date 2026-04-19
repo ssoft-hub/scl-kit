@@ -102,13 +102,13 @@ Wraps the digest produced by `Hasher` in a named type, preventing accidental mix
 
 
 
-|Hasher   |`value_type`    |
+|Hasher  |`value_type`  |
 |-----|-----|
-|`fnv1a_hasher`   |`std::uint64_t`    |
-|`djb2_hasher`   |`std::uint64_t`    |
-|`sdbm_hasher`   |`std::uint64_t`    |
-|`siphash_hasher <Key>`   |`std::uint64_t`    |
-|`jenkins_ota_hasher`   |`std::uint32_t`   |
+|`fnv1a_hasher`  |`std::uint64_t`  |
+|`djb2_hasher`  |`std::uint64_t`  |
+|`sdbm_hasher`  |`std::uint64_t`  |
+|`siphash_hasher <Key>`  |`std::uint64_t`  |
+|`jenkins_ota_hasher`  |`std::uint32_t`  |
 
 
 
@@ -116,10 +116,10 @@ Wraps the digest produced by `Hasher` in a named type, preventing accidental mix
 
 
 Key properties:
-* \*\*`constexpr`\*\* — digest computed at compile time.
+* **`constexpr`** — digest computed at compile time.
 * **Comparable** — `==`, `!=`, `<`, `<=`, `>`, `>=` via defaulted `<=>`.
-* \*\*`switch`/`case` label\*\* — implicit conversion to `value_type` enables string-dispatching without `if`-`else` chains.
-* **STL-compatible** — `std::hash<key<Hasher>>` is specialised for use in `std::unordered_map` / `std::unordered_set`.
+* **`switch`/`case` label** — implicit conversion to `value_type` enables string-dispatching without `if`-`else` chains.
+* **STL-compatible** — `std::hash< key <Hasher>>` is specialised for use in `std::unordered_map` / `std::unordered_set`.
 
 
 
@@ -287,7 +287,7 @@ inline constexpr scl::hash::key::operator value_type () noexcept const
 
 _Three-way comparison (generates ==, !=, &lt;, &lt;=, &gt;, &gt;=)._ 
 ```C++
-constexpr auto scl::hash::key::operator<=> (
+auto scl::hash::key::operator<=> (
     key const &,
     key const &
 ) noexcept

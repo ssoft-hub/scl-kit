@@ -57,7 +57,7 @@ _Callable wrapper around_ [_**djb2**_](group__scl__utility__hash.md#function-djb
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -110,7 +110,7 @@ using scl::hash::djb2_hasher::result_type =  ::std::uint64_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline constexpr result_type scl::hash::djb2_hasher::operator() (
+inline result_type scl::hash::djb2_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

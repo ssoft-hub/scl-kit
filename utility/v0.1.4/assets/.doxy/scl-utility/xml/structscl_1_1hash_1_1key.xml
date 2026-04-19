@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="structscl_1_1hash_1_1key" kind="struct" language="C++" prot="public">
     <compoundname>scl::hash::key</compoundname>
     <includes refid="key_8h" local="no">key.h</includes>
@@ -71,7 +71,7 @@
           </param>
         </templateparamlist>
         <type>constexpr</type>
-        <definition>constexpr scl::hash::key&lt; Hasher &gt;::key</definition>
+        <definition>scl::hash::key&lt; Hasher &gt;::key</definition>
         <argsstring>(Range const &amp;range) noexcept</argsstring>
         <name>key</name>
         <qualifiedname>scl::hash::key::key</qualifiedname>
@@ -110,7 +110,7 @@
       </memberdef>
       <memberdef kind="function" id="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>constexpr</type>
-        <definition>constexpr scl::hash::key&lt; Hasher &gt;::operator value_type</definition>
+        <definition>scl::hash::key&lt; Hasher &gt;::operator value_type</definition>
         <argsstring>() const noexcept</argsstring>
         <name>operator value_type</name>
         <qualifiedname>scl::hash::key::operator value_type</qualifiedname>
@@ -126,16 +126,16 @@
     </sectiondef>
     <sectiondef kind="friend">
       <memberdef kind="friend" id="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;=&gt;</definition>
+        <type>auto</type>
+        <definition>auto operator&lt;=&gt;</definition>
         <argsstring>(key const &amp;, key const &amp;) noexcept=default</argsstring>
         <name>operator&lt;=&gt;</name>
         <qualifiedname>scl::hash::key::operator&lt;=&gt;</qualifiedname>
         <param>
-          <type><ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref> const &amp;</type>
+          <type><ref refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" kindref="member">key</ref> const &amp;</type>
         </param>
         <param>
-          <type><ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref> const &amp;</type>
+          <type><ref refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" kindref="member">key</ref> const &amp;</type>
         </param>
         <briefdescription>
 <para>Three-way comparison (generates ==, !=, &lt;, &lt;=, &gt;, &gt;=). </para>
@@ -151,38 +151,38 @@
 <para>Strongly-typed hash digest parameterized by a hash function. </para>
     </briefdescription>
     <detaileddescription>
-<para>Wraps the digest produced by <computeroutput>Hasher</computeroutput> in a named type, preventing accidental mixing of raw integers with hash values. The <computeroutput>value_type</computeroutput> and width of the digest are derived automatically from the hasher&apos;s return type:</para>
+<para>Wraps the digest produced by <computeroutput>Hasher</computeroutput> in a named type, preventing accidental mixing of raw integers with hash values. The <computeroutput><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref></computeroutput> and width of the digest are derived automatically from the hasher&apos;s return type:</para>
 <para><table rows="6" cols="2"><row>
-<entry thead="yes"><para>Hasher   </para>
-</entry><entry thead="yes"><para><computeroutput>value_type</computeroutput>    </para>
+<entry thead="yes"><para>Hasher  </para>
+</entry><entry thead="yes"><para><computeroutput><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref></computeroutput>  </para>
 </entry></row>
 <row>
-<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1fnv1a__hasher" kindref="compound">fnv1a_hasher</ref></computeroutput>   </para>
-</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>    </para>
+<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1fnv1a__hasher" kindref="compound">fnv1a_hasher</ref></computeroutput>  </para>
+</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>  </para>
 </entry></row>
 <row>
-<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1djb2__hasher" kindref="compound">djb2_hasher</ref></computeroutput>   </para>
-</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>    </para>
+<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1djb2__hasher" kindref="compound">djb2_hasher</ref></computeroutput>  </para>
+</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>  </para>
 </entry></row>
 <row>
-<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1sdbm__hasher" kindref="compound">sdbm_hasher</ref></computeroutput>   </para>
-</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>    </para>
+<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1sdbm__hasher" kindref="compound">sdbm_hasher</ref></computeroutput>  </para>
+</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>  </para>
 </entry></row>
 <row>
-<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1siphash__hasher" kindref="compound">siphash_hasher</ref>&lt;Key&gt;</computeroutput>   </para>
-</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>    </para>
+<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1siphash__hasher" kindref="compound">siphash_hasher</ref>&lt;Key&gt;</computeroutput>  </para>
+</entry><entry thead="no"><para><computeroutput>std::uint64_t</computeroutput>  </para>
 </entry></row>
 <row>
-<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1jenkins__ota__hasher" kindref="compound">jenkins_ota_hasher</ref></computeroutput>   </para>
-</entry><entry thead="no"><para><computeroutput>std::uint32_t</computeroutput>   </para>
+<entry thead="no"><para><computeroutput><ref refid="structscl_1_1hash_1_1jenkins__ota__hasher" kindref="compound">jenkins_ota_hasher</ref></computeroutput>  </para>
+</entry><entry thead="no"><para><computeroutput>std::uint32_t</computeroutput>  </para>
 </entry></row>
 </table>
 </para>
 <para>Key properties:<itemizedlist>
-<listitem><para>**<computeroutput>constexpr</computeroutput>** — digest computed at compile time.</para>
+<listitem><para><bold><computeroutput>constexpr</computeroutput></bold> — digest computed at compile time.</para>
 </listitem><listitem><para><bold>Comparable</bold> — <computeroutput>==</computeroutput>, <computeroutput>!=</computeroutput>, <computeroutput>&lt;</computeroutput>, <computeroutput>&lt;=</computeroutput>, <computeroutput>&gt;</computeroutput>, <computeroutput>&gt;=</computeroutput> via defaulted <computeroutput>&lt;=&gt;</computeroutput>.</para>
-</listitem><listitem><para>**<computeroutput>switch</computeroutput>/<computeroutput>case</computeroutput> label** — implicit conversion to <computeroutput>value_type</computeroutput> enables string-dispatching without <computeroutput>if</computeroutput>-<computeroutput>else</computeroutput> chains.</para>
-</listitem><listitem><para><bold>STL-compatible</bold> — <computeroutput>std::hash&lt;key&lt;Hasher&gt;&gt;</computeroutput> is specialised for use in <computeroutput>std::unordered_map</computeroutput> / <computeroutput>std::unordered_set</computeroutput>.</para>
+</listitem><listitem><para><bold><computeroutput>switch</computeroutput>/<computeroutput>case</computeroutput> label</bold> — implicit conversion to <computeroutput><ref refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kindref="member">value_type</ref></computeroutput> enables string-dispatching without <computeroutput>if</computeroutput>-<computeroutput>else</computeroutput> chains.</para>
+</listitem><listitem><para><bold>STL-compatible</bold> — <computeroutput>std::hash&lt;<ref refid="structscl_1_1hash_1_1key" kindref="compound">key</ref>&lt;Hasher&gt;&gt;</computeroutput> is specialised for use in <computeroutput>std::unordered_map</computeroutput> / <computeroutput>std::unordered_set</computeroutput>.</para>
 </listitem></itemizedlist>
 </para>
 <para><parameterlist kind="templateparam"><parameteritem>
@@ -194,20 +194,20 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="par"><title>Compile-time example (default FNV-1a hasher)</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;my_event&quot;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>==<sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>{</highlight><highlight class="stringliteral">&quot;my_event&quot;</highlight><highlight class="normal">});</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>!=<sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key</ref>{</highlight><highlight class="stringliteral">&quot;other&quot;</highlight><highlight class="normal">});</highlight></codeline>
+<simplesect kind="par"><title>Compile-time example (default FNV-1a hasher)</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>scl::hash::key<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;my_event&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>==<sp/>scl::hash::key{</highlight><highlight class="stringliteral">&quot;my_event&quot;</highlight><highlight class="normal">});</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>!=<sp/>scl::hash::key{</highlight><highlight class="stringliteral">&quot;other&quot;</highlight><highlight class="normal">});</highlight></codeline>
 </programlisting></para>
 </simplesect>
-<simplesect kind="par"><title>Compile-time example (SipHash hasher)</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1siphash__key" kindref="compound">scl::hash::siphash_key</ref><sp/>my_key{0xdeadbeefull,<sp/>0xcafebabeull};</highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">sip_key<sp/>=<sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key&lt;scl::hash::siphash_hasher&lt;my_key&gt;</ref>&gt;;</highlight></codeline>
+<simplesect kind="par"><title>Compile-time example (SipHash hasher)</title><para><programlisting><codeline><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>scl::hash::siphash_key<sp/>my_key{0xdeadbeefull,<sp/>0xcafebabeull};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">sip_key<sp/>=<sp/>scl::hash::key&lt;scl::hash::siphash_hasher&lt;my_key&gt;&gt;;</highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>sip_key<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;my_event&quot;</highlight><highlight class="normal">};</highlight></codeline>
 </programlisting></para>
 </simplesect>
-<simplesect kind="par"><title>Switch/case dispatching</title><para><programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>handle(<ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key&lt;&gt;</ref><sp/>cmd)<sp/>{</highlight></codeline>
+<simplesect kind="par"><title>Switch/case dispatching</title><para><programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>handle(scl::hash::key&lt;&gt;<sp/>cmd)<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(cmd)<sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key&lt;&gt;</ref>{</highlight><highlight class="stringliteral">&quot;start&quot;</highlight><highlight class="normal">}:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="structscl_1_1hash_1_1key" kindref="compound">scl::hash::key&lt;&gt;</ref>{</highlight><highlight class="stringliteral">&quot;stop&quot;</highlight><highlight class="normal">}:<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>scl::hash::key&lt;&gt;{</highlight><highlight class="stringliteral">&quot;start&quot;</highlight><highlight class="normal">}:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>scl::hash::key&lt;&gt;{</highlight><highlight class="stringliteral">&quot;stop&quot;</highlight><highlight class="normal">}:<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>

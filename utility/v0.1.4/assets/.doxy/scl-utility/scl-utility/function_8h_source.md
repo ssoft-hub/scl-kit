@@ -9,6 +9,7 @@
 
 ```C++
 
+
 #pragma once
 
 #include <scl/utility/type_traits/detection.h>

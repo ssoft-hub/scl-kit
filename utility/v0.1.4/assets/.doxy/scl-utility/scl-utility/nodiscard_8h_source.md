@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_NODISCARD
 #if __has_cpp_attribute(nodiscard) >= 201907L
 #define SCL_NODISCARD [[nodiscard]]

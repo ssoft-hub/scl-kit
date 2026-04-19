@@ -10,6 +10,8 @@
 ```C++
 #pragma once
 
+
+
 #ifndef SCL_LIFETIMEBOUND
 #if defined(_MSC_VER) && !defined(__clang__)
 #define SCL_LIFETIMEBOUND

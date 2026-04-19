@@ -322,8 +322,8 @@ namespace scl::hash
         value_type value{};
 
         template &lt;::std::ranges::range Range&gt;
-        explicit constexpr key(Range const &amp; range) noexcept
             requires ::std::convertible_to&lt;::std::ranges::range_value_t&lt;Range&gt;, ::std::uint8_t&gt;
+        explicit constexpr key(Range const &amp; range) noexcept
             : value{Hasher{}(range)}
         {}
 

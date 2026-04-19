@@ -16,7 +16,7 @@
 
 ## h
 
-* [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4.md)
+* [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4.md)
 ([**std**](namespacestd.md))
 
 

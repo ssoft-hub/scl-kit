@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="structscl_1_1hash_1_1siphash__hasher" kind="struct" language="C++" prot="public">
     <compoundname>scl::hash::siphash_hasher</compoundname>
     <includes refid="siphash_8h" local="no">siphash.h</includes>
@@ -36,8 +36,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr result_type</type>
-        <definition>constexpr result_type scl::hash::siphash_hasher&lt; Key &gt;::operator()</definition>
+        <type>result_type</type>
+        <definition>result_type scl::hash::siphash_hasher&lt; Key &gt;::operator()</definition>
         <argsstring>(Range const &amp;range) const noexcept</argsstring>
         <name>operator()</name>
         <qualifiedname>scl::hash::siphash_hasher::operator()</qualifiedname>

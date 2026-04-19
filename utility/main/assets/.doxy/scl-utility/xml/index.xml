@@ -1,152 +1,39 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
-  <compound refid="structscl_1_1hash_1_1djb2__hasher" kind="struct"><name>scl::hash::djb2_hasher</name>
-    <member refid="structscl_1_1hash_1_1djb2__hasher_1aa261776e4ef47334a60bcfb8c2dc64f5" kind="typedef"><name>result_type</name></member>
-    <member refid="structscl_1_1hash_1_1djb2__hasher_1a9692ab9269173b938532a15430e33bd8" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structscl_1_1hash_1_1fnv1a__hasher" kind="struct"><name>scl::hash::fnv1a_hasher</name>
-    <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a3a0bee0e7a75155fa26caac74de1e04e" kind="typedef"><name>result_type</name></member>
-    <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a69f44265b6850be3ec433e10df8d95c3" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" kind="struct"><name>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</name>
-    <member refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structscl_1_1hash_1_1jenkins__ota__hasher" kind="struct"><name>scl::hash::jenkins_ota_hasher</name>
-    <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1aab1a29620eeb1632b54c4994d2aeca95" kind="typedef"><name>result_type</name></member>
-    <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1ad08d6c4e1e8cb93ef6687be1662ec201" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structscl_1_1hash_1_1key" kind="struct"><name>scl::hash::key</name>
-    <member refid="structscl_1_1hash_1_1key_1a1b3c9595487df01e24a494da09ed1c13" kind="typedef"><name>hasher_type</name></member>
-    <member refid="structscl_1_1hash_1_1key_1ad60b74acdf6bfae33682d6027055c4db" kind="typedef"><name>value_type</name></member>
-    <member refid="structscl_1_1hash_1_1key_1a0dafeb3eec5d69a2d3b650aae8654b09" kind="variable"><name>value</name></member>
-    <member refid="structscl_1_1hash_1_1key_1a685722b2b43f3dba15ed5f36d7af6508" kind="function"><name>key</name></member>
-    <member refid="structscl_1_1hash_1_1key_1aac490a8f1492c6e9715d753663376fe3" kind="function"><name>operator value_type</name></member>
-    <member refid="structscl_1_1hash_1_1key_1a8dbbf4fc0d592d1384e2c1a5860d212e" kind="friend"><name>operator&lt;=&gt;</name></member>
-  </compound>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
   <compound refid="structp8qim3n2a__t" kind="struct"><name>p8qim3n2a_t</name>
   </compound>
-  <compound refid="structscl_1_1hash_1_1sdbm__hasher" kind="struct"><name>scl::hash::sdbm_hasher</name>
-    <member refid="structscl_1_1hash_1_1sdbm__hasher_1a2f9e63aef90cd412d9b08df22449ef4d" kind="typedef"><name>result_type</name></member>
-    <member refid="structscl_1_1hash_1_1sdbm__hasher_1a50c5cacdb8800c2fb8bae5d49fdf648d" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structscl_1_1hash_1_1siphash__hasher" kind="struct"><name>scl::hash::siphash_hasher</name>
-    <member refid="structscl_1_1hash_1_1siphash__hasher_1a4d627afc36f451e38261077afceae2fc" kind="typedef"><name>result_type</name></member>
-    <member refid="structscl_1_1hash_1_1siphash__hasher_1a2ae8942bc861ba4e0b9389085f803089" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structscl_1_1hash_1_1siphash__key" kind="struct"><name>scl::hash::siphash_key</name>
-    <member refid="structscl_1_1hash_1_1siphash__key_1ae4c4f18c636557c82de76eeec4725c68" kind="variable"><name>k0</name></member>
-    <member refid="structscl_1_1hash_1_1siphash__key_1a3730dc9270acc26008ec8a500b608ad4" kind="variable"><name>k1</name></member>
-  </compound>
-  <compound refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher" kind="concept"><name>scl::hash::concepts::byte_hasher</name>
-  </compound>
   <compound refid="namespacescl" kind="namespace"><name>scl</name>
-    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
-    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
-    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
-    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
-    <member refid="namespacescl_1a563e0978c2340b9d50d9ed1734518f09" kind="typedef"><name>subscript_operation</name></member>
-    <member refid="namespacescl_1aea60675cd99a9894d484d4ec54549de6" kind="typedef"><name>subscript_t</name></member>
-    <member refid="namespacescl_1a4d321fbf6d415dbd7bd22bdc0ee5a859" kind="typedef"><name>call_operation</name></member>
-    <member refid="namespacescl_1ac692ad135bbe5c36d4eea8a4be353803" kind="typedef"><name>call_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga795c9a1c5ce343c875138aa5d56514cc" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga77a8364d0ef86e5a97bd682c7a95637e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gafa937af35443ec975fcd1d711d269856" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga821fc8b9efbba4cd92305b67653a80e5" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6ec02997b8c50aad20166f5c502579a5" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="namespacescl_1a0e875c6e1006ec08d01e98edfe0476e4" kind="typedef"><name>subscript_operation</name></member>
+    <member refid="namespacescl_1a5336d71ee27d5b4c6de3de7931348788" kind="typedef"><name>subscript_t</name></member>
+    <member refid="namespacescl_1a6c0a2d40df027b76bdeca56361a9616d" kind="typedef"><name>call_operation</name></member>
+    <member refid="namespacescl_1a49a055e4766b2107b648fff5cc4f2370" kind="typedef"><name>call_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7ee69f7c247c4868aea21d6a8f5f81b8" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
     <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
     <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
     <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
     <member refid="namespacescl_1aee3ad92d7603ba662d4bc368ee0e7356" kind="variable"><name>has_subscript_v</name></member>
     <member refid="namespacescl_1a542d7b080e0816c97d28322b6ddba2e1" kind="variable"><name>has_call_v</name></member>
     <member refid="group__scl__utility__type__traits_1ga7036edacc866c9a2a24afb712713c968" kind="variable"><name>overload_cast</name></member>
-    <member refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kind="function"><name>enum_name</name></member>
-    <member refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" kind="function"><name>enum_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
+    <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
     <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
     <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
     <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
     <member refid="group__scl__utility__meta_1ga13ec89ceacddc4a549c5335e23dfd5e1" kind="function"><name>type_short_name</name></member>
     <member refid="group__scl__utility__type__traits_1gafea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
   </compound>
-  <compound refid="namespacescl_1_1hash" kind="namespace"><name>scl::hash</name>
-    <member refid="group__scl__utility__hash_1gab979dd272fd5c019680e8693a53609d8" kind="variable"><name>siphash_default_key</name></member>
-    <member refid="group__scl__utility__hash_1ga95922a9f9afab2b892a2c68515390932" kind="function"><name>djb2</name></member>
-    <member refid="group__scl__utility__hash_1gaa103d3d49c596d4381faca5ebfa8f9ac" kind="function"><name>fnv1a</name></member>
-    <member refid="group__scl__utility__hash_1gadb19af6bca0433402a2e18ff4760f839" kind="function"><name>jenkins_ota</name></member>
-    <member refid="group__scl__utility__hash_1gaec361ebf99797481bbe413b6faf9d7e0" kind="function"><name>sdbm</name></member>
-    <member refid="group__scl__utility__hash_1gadbe3977698981d37259b8802b2dea9e9" kind="function"><name>siphash</name></member>
-  </compound>
-  <compound refid="namespacescl_1_1hash_1_1concepts" kind="namespace"><name>scl::hash::concepts</name>
-  </compound>
   <compound refid="namespacescl_1_1preprocessor" kind="namespace"><name>scl::preprocessor</name>
   </compound>
-  <compound refid="namespacestd" kind="namespace"><name>std</name>
-  </compound>
   <compound refid="utility_8h" kind="file"><name>utility.h</name>
-  </compound>
-  <compound refid="attribute_8h" kind="file"><name>attribute.h</name>
-  </compound>
-  <compound refid="assume_8h" kind="file"><name>assume.h</name>
-    <member refid="group__scl__utility__attribute_1ga0eec2f1ea4d46be5489129e21d2b780b" kind="define"><name>SCL_ASSUME</name></member>
-    <member refid="group__scl__utility__attribute_1gae1c323a4bec22dfbf6d266e01524228a" kind="define"><name>SCL_UNREACHABLE</name></member>
-  </compound>
-  <compound refid="deprecated_8h" kind="file"><name>deprecated.h</name>
-    <member refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kind="define"><name>SCL_DEPRECATED</name></member>
-    <member refid="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" kind="define"><name>SCL_DEPRECATED_MSG</name></member>
-  </compound>
-  <compound refid="fallthrough_8h" kind="file"><name>fallthrough.h</name>
-    <member refid="group__scl__utility__attribute_1gac5ef58a12db69cd4a2f622a95da5f47a" kind="define"><name>SCL_FALLTHROUGH</name></member>
-  </compound>
-  <compound refid="hotcold_8h" kind="file"><name>hotcold.h</name>
-    <member refid="group__scl__utility__attribute_1ga5614123bb18839129684fb44b614e28c" kind="define"><name>SCL_HOT</name></member>
-    <member refid="group__scl__utility__attribute_1gaa718790d1f28888a3c11a95f4a81a592" kind="define"><name>SCL_COLD</name></member>
-  </compound>
-  <compound refid="indeterminate_8h" kind="file"><name>indeterminate.h</name>
-    <member refid="group__scl__utility__attribute_1gac1d3b0577ad568b44518ad46965ae11c" kind="define"><name>SCL_INDETERMINATE</name></member>
-  </compound>
-  <compound refid="inline_8h" kind="file"><name>inline.h</name>
-    <member refid="group__scl__utility__attribute_1ga93b5ff5a550e807c9986619e56a0d59e" kind="define"><name>SCL_FORCE_INLINE</name></member>
-    <member refid="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" kind="define"><name>SCL_NOINLINE</name></member>
-  </compound>
-  <compound refid="lifetimebound_8h" kind="file"><name>lifetimebound.h</name>
-    <member refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kind="define"><name>SCL_LIFETIMEBOUND</name></member>
-  </compound>
-  <compound refid="likely_8h" kind="file"><name>likely.h</name>
-    <member refid="group__scl__utility__attribute_1ga0b3d3a2e75d20f336aacf8f53dd5f291" kind="define"><name>SCL_LIKELY</name></member>
-    <member refid="group__scl__utility__attribute_1gaf9d1179b4a83033ac8e53b5bb05f7fbd" kind="define"><name>SCL_UNLIKELY</name></member>
-    <member refid="group__scl__utility__attribute_1ga719cbb8e58c2b673a50f22103cad9fbb" kind="define"><name>SCL_LIKELY_EXPR</name></member>
-    <member refid="group__scl__utility__attribute_1gae875c9be1f87e5a918f93c9aad1d7d5c" kind="define"><name>SCL_UNLIKELY_EXPR</name></member>
-  </compound>
-  <compound refid="maybe__unused_8h" kind="file"><name>maybe_unused.h</name>
-    <member refid="group__scl__utility__attribute_1ga927efdaf9bb217b04e588b35832f90a9" kind="define"><name>SCL_MAYBE_UNUSED</name></member>
-  </compound>
-  <compound refid="no__unique__address_8h" kind="file"><name>no_unique_address.h</name>
-    <member refid="group__scl__utility__attribute_1ga4db775c117b8c3b9213ccb26845f36ec" kind="define"><name>SCL_NO_UNIQUE_ADDRESS</name></member>
-  </compound>
-  <compound refid="nodiscard_8h" kind="file"><name>nodiscard.h</name>
-    <member refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kind="define"><name>SCL_NODISCARD</name></member>
-    <member refid="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" kind="define"><name>SCL_NODISCARD_MSG</name></member>
-  </compound>
-  <compound refid="noreturn_8h" kind="file"><name>noreturn.h</name>
-    <member refid="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" kind="define"><name>SCL_NORETURN</name></member>
-  </compound>
-  <compound refid="unsequenced_8h" kind="file"><name>unsequenced.h</name>
-    <member refid="group__scl__utility__attribute_1ga608b7299dde42dd57b73bc1e757aea4b" kind="define"><name>SCL_UNSEQUENCED</name></member>
-    <member refid="group__scl__utility__attribute_1gab596dc6bfe3f2ae80c5ddbc6a80194af" kind="define"><name>SCL_REPRODUCIBLE</name></member>
-  </compound>
-  <compound refid="hash_8h" kind="file"><name>hash.h</name>
-  </compound>
-  <compound refid="djb2_8h" kind="file"><name>djb2.h</name>
-  </compound>
-  <compound refid="fnv1a_8h" kind="file"><name>fnv1a.h</name>
-  </compound>
-  <compound refid="jenkins__ota_8h" kind="file"><name>jenkins_ota.h</name>
-  </compound>
-  <compound refid="key_8h" kind="file"><name>key.h</name>
-  </compound>
-  <compound refid="sdbm_8h" kind="file"><name>sdbm.h</name>
-  </compound>
-  <compound refid="siphash_8h" kind="file"><name>siphash.h</name>
   </compound>
   <compound refid="meta_8h" kind="file"><name>meta.h</name>
   </compound>
@@ -192,41 +79,9 @@
   </compound>
   <compound refid="overload__cast_8h" kind="file"><name>overload_cast.h</name>
   </compound>
-  <compound refid="group__scl__utility__attribute" kind="group"><name>scl_utility_attribute</name>
-    <member refid="group__scl__utility__attribute_1ga0eec2f1ea4d46be5489129e21d2b780b" kind="define"><name>SCL_ASSUME</name></member>
-    <member refid="group__scl__utility__attribute_1gae1c323a4bec22dfbf6d266e01524228a" kind="define"><name>SCL_UNREACHABLE</name></member>
-    <member refid="group__scl__utility__attribute_1ga0098e0e267aacea6ae0dddb103610b11" kind="define"><name>SCL_DEPRECATED</name></member>
-    <member refid="group__scl__utility__attribute_1ga6c9c4777cbb7ad9024d16298c97f0289" kind="define"><name>SCL_DEPRECATED_MSG</name></member>
-    <member refid="group__scl__utility__attribute_1gac5ef58a12db69cd4a2f622a95da5f47a" kind="define"><name>SCL_FALLTHROUGH</name></member>
-    <member refid="group__scl__utility__attribute_1ga5614123bb18839129684fb44b614e28c" kind="define"><name>SCL_HOT</name></member>
-    <member refid="group__scl__utility__attribute_1gaa718790d1f28888a3c11a95f4a81a592" kind="define"><name>SCL_COLD</name></member>
-    <member refid="group__scl__utility__attribute_1gac1d3b0577ad568b44518ad46965ae11c" kind="define"><name>SCL_INDETERMINATE</name></member>
-    <member refid="group__scl__utility__attribute_1ga93b5ff5a550e807c9986619e56a0d59e" kind="define"><name>SCL_FORCE_INLINE</name></member>
-    <member refid="group__scl__utility__attribute_1gac574d25a2529a34e2daf3407c4b862df" kind="define"><name>SCL_NOINLINE</name></member>
-    <member refid="group__scl__utility__attribute_1ga6f4d9e2c90e5f8879ea23eff6210427a" kind="define"><name>SCL_LIFETIMEBOUND</name></member>
-    <member refid="group__scl__utility__attribute_1ga0b3d3a2e75d20f336aacf8f53dd5f291" kind="define"><name>SCL_LIKELY</name></member>
-    <member refid="group__scl__utility__attribute_1gaf9d1179b4a83033ac8e53b5bb05f7fbd" kind="define"><name>SCL_UNLIKELY</name></member>
-    <member refid="group__scl__utility__attribute_1ga719cbb8e58c2b673a50f22103cad9fbb" kind="define"><name>SCL_LIKELY_EXPR</name></member>
-    <member refid="group__scl__utility__attribute_1gae875c9be1f87e5a918f93c9aad1d7d5c" kind="define"><name>SCL_UNLIKELY_EXPR</name></member>
-    <member refid="group__scl__utility__attribute_1ga927efdaf9bb217b04e588b35832f90a9" kind="define"><name>SCL_MAYBE_UNUSED</name></member>
-    <member refid="group__scl__utility__attribute_1ga4db775c117b8c3b9213ccb26845f36ec" kind="define"><name>SCL_NO_UNIQUE_ADDRESS</name></member>
-    <member refid="group__scl__utility__attribute_1ga898c917944065bf759a849fa523b770d" kind="define"><name>SCL_NODISCARD</name></member>
-    <member refid="group__scl__utility__attribute_1ga0a67f15db04880cb6f28470d5ebf7456" kind="define"><name>SCL_NODISCARD_MSG</name></member>
-    <member refid="group__scl__utility__attribute_1ga929064213722aa3dc4412dd1699c1e8e" kind="define"><name>SCL_NORETURN</name></member>
-    <member refid="group__scl__utility__attribute_1ga608b7299dde42dd57b73bc1e757aea4b" kind="define"><name>SCL_UNSEQUENCED</name></member>
-    <member refid="group__scl__utility__attribute_1gab596dc6bfe3f2ae80c5ddbc6a80194af" kind="define"><name>SCL_REPRODUCIBLE</name></member>
-  </compound>
-  <compound refid="group__scl__utility__hash" kind="group"><name>scl_utility_hash</name>
-    <member refid="group__scl__utility__hash_1gab979dd272fd5c019680e8693a53609d8" kind="variable"><name>siphash_default_key</name></member>
-    <member refid="group__scl__utility__hash_1ga95922a9f9afab2b892a2c68515390932" kind="function"><name>djb2</name></member>
-    <member refid="group__scl__utility__hash_1gaa103d3d49c596d4381faca5ebfa8f9ac" kind="function"><name>fnv1a</name></member>
-    <member refid="group__scl__utility__hash_1gadb19af6bca0433402a2e18ff4760f839" kind="function"><name>jenkins_ota</name></member>
-    <member refid="group__scl__utility__hash_1gaec361ebf99797481bbe413b6faf9d7e0" kind="function"><name>sdbm</name></member>
-    <member refid="group__scl__utility__hash_1gadbe3977698981d37259b8802b2dea9e9" kind="function"><name>siphash</name></member>
-  </compound>
   <compound refid="group__scl__utility__meta" kind="group"><name>scl_utility_meta</name>
-    <member refid="group__scl__utility__meta_1ga1b81632bb84741f0f44962e76c87b942" kind="function"><name>enum_name</name></member>
-    <member refid="group__scl__utility__meta_1ga6d22e94c4ce5785929c906a1aac65b4e" kind="function"><name>enum_short_name</name></member>
+    <member refid="group__scl__utility__meta_1ga50aa874b8493527a1fbd63de780b4e46" kind="function"><name>enum_name</name></member>
+    <member refid="group__scl__utility__meta_1gae8e8c1edb4b8d857029e94c96bdfaaad" kind="function"><name>enum_short_name</name></member>
     <member refid="group__scl__utility__meta_1ga57797b17b886b7dcd0491838fcdbf2dd" kind="function"><name>symbol_name</name></member>
     <member refid="group__scl__utility__meta_1ga6aa2c7828c23a2917f5b6e5073f74887" kind="function"><name>symbol_short_name</name></member>
     <member refid="group__scl__utility__meta_1ga055394371dc16156764b81978f91ebe8" kind="function"><name>type_name</name></member>
@@ -238,16 +93,16 @@
     <member refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kind="define"><name>SCL_FORWARD</name></member>
   </compound>
   <compound refid="group__scl__utility__type__traits" kind="group"><name>scl_utility_type_traits</name>
-    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
-    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
-    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
-    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
-    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga795c9a1c5ce343c875138aa5d56514cc" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga77a8364d0ef86e5a97bd682c7a95637e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gafa937af35443ec975fcd1d711d269856" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga821fc8b9efbba4cd92305b67653a80e5" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6ec02997b8c50aad20166f5c502579a5" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7ee69f7c247c4868aea21d6a8f5f81b8" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
     <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
     <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
     <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
@@ -256,11 +111,7 @@
     <member refid="group__scl__utility__type__traits_1gad0f78054a955da52ccb646d7b05b929e" kind="define"><name>SCL_FUNCTION_DETECTION</name></member>
     <member refid="group__scl__utility__type__traits_1gaf16fc9819f8128b3998f11ea9de989b3" kind="define"><name>SCL_METHOD_DETECTION</name></member>
   </compound>
-  <compound refid="dir_329a2a35dc2fa6e7b16bddbfbc08f988" kind="dir"><name>module/utility/src/scl/utility/attribute</name>
-  </compound>
   <compound refid="dir_7ae4f81ae30c9db8975b98cdcb7060a6" kind="dir"><name>module/utility/src/scl/utility/type_traits/detection</name>
-  </compound>
-  <compound refid="dir_cc128476db6d6d60652f2f6242c2398d" kind="dir"><name>module/utility/src/scl/utility/hash</name>
   </compound>
   <compound refid="dir_85c7392cbdcb0ae852d6674ea46dde19" kind="dir"><name>module/utility/src/scl/utility/meta</name>
   </compound>

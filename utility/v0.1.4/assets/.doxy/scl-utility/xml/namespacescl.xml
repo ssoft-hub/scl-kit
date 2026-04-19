@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="namespacescl" kind="namespace" language="C++">
     <compoundname>scl</compoundname>
     <innernamespace refid="namespacescl_1_1hash">scl::hash</innernamespace>
     <innernamespace refid="namespacescl_1_1preprocessor">scl::preprocessor</innernamespace>
     <sectiondef kind="typedef">
-      <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
-      <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
-      <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
-      <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
-      <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
-      <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
-      <memberdef kind="typedef" id="namespacescl_1a563e0978c2340b9d50d9ed1734518f09" prot="public" static="no">
+      <member refid="group__scl__utility__type__traits_1ga795c9a1c5ce343c875138aa5d56514cc" kind="typedef"><name>is_detected</name></member>
+      <member refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kind="typedef"><name>detected_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga77a8364d0ef86e5a97bd682c7a95637e" kind="typedef"><name>detected_or</name></member>
+      <member refid="group__scl__utility__type__traits_1gafa937af35443ec975fcd1d711d269856" kind="typedef"><name>detected_or_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga821fc8b9efbba4cd92305b67653a80e5" kind="typedef"><name>is_detected_exact</name></member>
+      <member refid="group__scl__utility__type__traits_1ga6ec02997b8c50aad20166f5c502579a5" kind="typedef"><name>is_detected_convertible</name></member>
+      <memberdef kind="typedef" id="namespacescl_1a0e875c6e1006ec08d01e98edfe0476e4" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename Type</type>
@@ -21,7 +21,7 @@
           </param>
         </templateparamlist>
         <type>decltype(::std::declval&lt; Type &gt;()[::std::declval&lt; Argument &gt;()])</type>
-        <definition>using scl::subscript_operation = typedef decltype(::std::declval&lt;Type&gt;()[::std::declval&lt;Argument&gt;()])</definition>
+        <definition>using scl::subscript_operation =  decltype(::std::declval&lt;Type&gt;()[::std::declval&lt;Argument&gt;()])</definition>
         <argsstring></argsstring>
         <name>subscript_operation</name>
         <qualifiedname>scl::subscript_operation</qualifiedname>
@@ -33,7 +33,7 @@
         </inbodydescription>
         <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="160" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="160" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespacescl_1aea60675cd99a9894d484d4ec54549de6" prot="public" static="no">
+      <memberdef kind="typedef" id="namespacescl_1a5336d71ee27d5b4c6de3de7931348788" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -41,8 +41,8 @@
             <defname>Arguments</defname>
           </param>
         </templateparamlist>
-        <type><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt; subscript_operation, Arguments... &gt;</type>
-        <definition>using scl::subscript_t = typedef ::scl::detected_t&lt;subscript_operation, Arguments...&gt;</definition>
+        <type><ref refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kindref="member">::scl::detected_t</ref>&lt; subscript_operation, Arguments... &gt;</type>
+        <definition>using scl::subscript_t =  ::scl::detected_t&lt;subscript_operation, Arguments...&gt;</definition>
         <argsstring></argsstring>
         <name>subscript_t</name>
         <qualifiedname>scl::subscript_t</qualifiedname>
@@ -54,7 +54,7 @@
         </inbodydescription>
         <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="164" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="164" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespacescl_1a4d321fbf6d415dbd7bd22bdc0ee5a859" prot="public" static="no">
+      <memberdef kind="typedef" id="namespacescl_1a6c0a2d40df027b76bdeca56361a9616d" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename Type</type>
@@ -66,7 +66,7 @@
           </param>
         </templateparamlist>
         <type>decltype(::std::declval&lt; Type &gt;()(::std::declval&lt; Arguments &gt;()...))</type>
-        <definition>using scl::call_operation = typedef decltype(::std::declval&lt;Type&gt;()(::std::declval&lt;Arguments&gt;()...))</definition>
+        <definition>using scl::call_operation =  decltype(::std::declval&lt;Type&gt;()(::std::declval&lt;Arguments&gt;()...))</definition>
         <argsstring></argsstring>
         <name>call_operation</name>
         <qualifiedname>scl::call_operation</qualifiedname>
@@ -78,7 +78,7 @@
         </inbodydescription>
         <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="171" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="171" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespacescl_1ac692ad135bbe5c36d4eea8a4be353803" prot="public" static="no">
+      <memberdef kind="typedef" id="namespacescl_1a49a055e4766b2107b648fff5cc4f2370" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -86,8 +86,8 @@
             <defname>Arguments</defname>
           </param>
         </templateparamlist>
-        <type><ref refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kindref="member">::scl::detected_t</ref>&lt; call_operation, Arguments... &gt;</type>
-        <definition>using scl::call_t = typedef ::scl::detected_t&lt;call_operation, Arguments...&gt;</definition>
+        <type><ref refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kindref="member">::scl::detected_t</ref>&lt; call_operation, Arguments... &gt;</type>
+        <definition>using scl::call_t =  ::scl::detected_t&lt;call_operation, Arguments...&gt;</definition>
         <argsstring></argsstring>
         <name>call_t</name>
         <qualifiedname>scl::call_t</qualifiedname>
@@ -99,10 +99,10 @@
         </inbodydescription>
         <location file="module/utility/src/scl/utility/type_traits/detection/operator.h" line="175" column="5" bodyfile="module/utility/src/scl/utility/type_traits/detection/operator.h" bodystart="175" bodyend="-1"/>
       </memberdef>
-      <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
-      <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
-      <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
-      <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga7ee69f7c247c4868aea21d6a8f5f81b8" kind="typedef"><name>forward_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
     </sectiondef>
     <sectiondef kind="var">
       <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
@@ -116,8 +116,8 @@
             <defname>Arguments</defname>
           </param>
         </templateparamlist>
-        <type>constexpr auto</type>
-        <definition>constexpr auto scl::has_subscript_v</definition>
+        <type>auto</type>
+        <definition>auto scl::has_subscript_v</definition>
         <argsstring></argsstring>
         <name>has_subscript_v</name>
         <qualifiedname>scl::has_subscript_v</qualifiedname>
@@ -138,8 +138,8 @@
             <defname>Arguments</defname>
           </param>
         </templateparamlist>
-        <type>constexpr auto</type>
-        <definition>constexpr auto scl::has_call_v</definition>
+        <type>auto</type>
+        <definition>auto scl::has_call_v</definition>
         <argsstring></argsstring>
         <name>has_call_v</name>
         <qualifiedname>scl::has_call_v</qualifiedname>

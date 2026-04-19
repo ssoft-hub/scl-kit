@@ -60,10 +60,10 @@ _Meta-level utilities for C++._
 | ---: | :--- |
 |  requires ::std::is\_enum\_v&lt; decltype(V)&gt;constexpr ::std::string\_view | [**enum\_name**](#function-enum_name) () noexcept<br>_Retrieves the qualified string name of an enum member at compile-time._  |
 |  requires ::std::is\_enum\_v&lt; decltype(V)&gt;constexpr ::std::string\_view | [**enum\_short\_name**](#function-enum_short_name) () noexcept<br>_Retrieves the short string name of an enum member at compile-time._  |
-|  constexpr ::std::string\_view | [**symbol\_name**](#function-symbol_name) () noexcept<br>_Retrieves the qualified string name of a symbol at compile-time._  |
-|  constexpr ::std::string\_view | [**symbol\_short\_name**](#function-symbol_short_name) () noexcept<br>_Retrieves the short string name of a symbol at compile-time._  |
-|  constexpr auto | [**type\_name**](#function-type_name) () noexcept<br>_Retrieves the string name of the template type T at compile-time._  |
-|  constexpr auto | [**type\_short\_name**](#function-type_short_name) () noexcept<br>_Retrieves the short name of the template type T at compile-time._  |
+|  ::std::string\_view | [**symbol\_name**](#function-symbol_name) () noexcept<br>_Retrieves the qualified string name of a symbol at compile-time._  |
+|  ::std::string\_view | [**symbol\_short\_name**](#function-symbol_short_name) () noexcept<br>_Retrieves the short string name of a symbol at compile-time._  |
+|  auto | [**type\_name**](#function-type_name) () noexcept<br>_Retrieves the string name of the template type T at compile-time._  |
+|  auto | [**type\_short\_name**](#function-type_short_name) () noexcept<br>_Retrieves the short name of the template type T at compile-time._  |
 
 
 
@@ -191,7 +191,7 @@ constexpr auto name = ::scl::enum_short_name<gfx::Mode::Fast>(); // Returns "Fas
 _Retrieves the qualified string name of a symbol at compile-time._ 
 ```
 template<auto S>
-constexpr ::std::string_view symbol_name () noexcept
+::std::string_view symbol_name () noexcept
 ```
 
 
@@ -240,7 +240,7 @@ constexpr auto var_name = ::scl::symbol_name<&global_var>(); // "global_var"
 _Retrieves the short string name of a symbol at compile-time._ 
 ```
 template<auto S>
-constexpr ::std::string_view symbol_short_name () noexcept
+::std::string_view symbol_short_name () noexcept
 ```
 
 
@@ -281,7 +281,7 @@ constexpr auto name = ::scl::symbol_short_name<sys::Clock::tick>(); // "tick"
 _Retrieves the string name of the template type T at compile-time._ 
 ```
 template<typename T>
-constexpr auto type_name () noexcept
+auto type_name () noexcept
 ```
 
 
@@ -332,7 +332,7 @@ constexpr auto int_name = ::scl::type_name<int>(); // Returns "int" on all compi
 _Retrieves the short name of the template type T at compile-time._ 
 ```
 template<typename T>
-constexpr auto type_short_name () noexcept
+auto type_short_name () noexcept
 ```
 
 

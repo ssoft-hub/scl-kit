@@ -46,7 +46,7 @@ _Non-cryptographic compile-time hash functions and digest types._
 | struct | [**scl::hash::sdbm\_hasher**](structscl_1_1hash_1_1sdbm__hasher.md) <br>_Callable wrapper around_ [_**sdbm**_](group__scl__utility__hash.md#function-sdbm) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
 | struct | [**scl::hash::siphash\_hasher**](structscl_1_1hash_1_1siphash__hasher.md) &lt;Key&gt;<br>_Callable wrapper around_ [_**siphash**_](group__scl__utility__hash.md#function-siphash) _for use with_[_**scl::hash::key**_](structscl_1_1hash_1_1key.md) _._ |
 | struct | [**scl::hash::siphash\_key**](structscl_1_1hash_1_1siphash__key.md) <br>_128-bit secret key for SipHash._  |
-| struct | [**std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4.md) &lt;typename Hasher&gt;<br>`std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._ |
+| struct | [**std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4.md) &lt;typename Hasher&gt;<br>`std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._ |
 
 
 
@@ -57,7 +57,7 @@ _Non-cryptographic compile-time hash functions and digest types._
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr siphash\_key | [**siphash\_default\_key**](#variable-siphash_default_key)   = `/* multi line expression */`<br>_Default key for non-security-sensitive use._  |
+|  siphash\_key | [**siphash\_default\_key**](#variable-siphash_default_key)   = `/* multi line expression */`<br>_Default key for non-security-sensitive use._  |
 
 
 
@@ -78,11 +78,11 @@ _Non-cryptographic compile-time hash functions and digest types._
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr ::std::uint64\_t | [**djb2**](#function-djb2) (Range const & range, ::std::uint64\_t h=5381ull) <br>_Computes a djb2a 64-bit hash over an arbitrary byte range._  |
-|  constexpr ::std::uint64\_t | [**fnv1a**](#function-fnv1a) (Range const & range, ::std::uint64\_t h=14695981039346656037ull) <br>_Computes an FNV-1a 64-bit hash over an arbitrary byte range._  |
-|  constexpr ::std::uint32\_t | [**jenkins\_ota**](#function-jenkins_ota) (Range const & range) <br>_Computes a Jenkins one-at-a-time (OTA) 32-bit hash._  |
-|  constexpr ::std::uint64\_t | [**sdbm**](#function-sdbm) (Range const & range, ::std::uint64\_t h=0ull) <br>_Computes an SDBM 64-bit hash over an arbitrary byte range._  |
-|  constexpr ::std::uint64\_t | [**siphash**](#function-siphash) (Range const & range, siphash\_key const key=siphash\_default\_key) <br>_Computes a SipHash-2-4 64-bit hash over an arbitrary byte range._  |
+|  ::std::uint64\_t | [**djb2**](#function-djb2) (Range const & range, ::std::uint64\_t h=5381ull) <br>_Computes a djb2a 64-bit hash over an arbitrary byte range._  |
+|  ::std::uint64\_t | [**fnv1a**](#function-fnv1a) (Range const & range, ::std::uint64\_t h=14695981039346656037ull) <br>_Computes an FNV-1a 64-bit hash over an arbitrary byte range._  |
+|  ::std::uint32\_t | [**jenkins\_ota**](#function-jenkins_ota) (Range const & range) <br>_Computes a Jenkins one-at-a-time (OTA) 32-bit hash._  |
+|  ::std::uint64\_t | [**sdbm**](#function-sdbm) (Range const & range, ::std::uint64\_t h=0ull) <br>_Computes an SDBM 64-bit hash over an arbitrary byte range._  |
+|  ::std::uint64\_t | [**siphash**](#function-siphash) (Range const & range, siphash\_key const key=siphash\_default\_key) <br>_Computes a SipHash-2-4 64-bit hash over an arbitrary byte range._  |
 
 
 
@@ -120,7 +120,7 @@ _Non-cryptographic compile-time hash functions and digest types._
 
 _Default key for non-security-sensitive use._ 
 ```
-constexpr siphash_key scl::hash::siphash_default_key;
+siphash_key scl::hash::siphash_default_key;
 ```
 
 
@@ -141,7 +141,7 @@ These are the standard test-vector key bytes from the SipHash paper (Aumasson & 
 _Computes a djb2a 64-bit hash over an arbitrary byte range._ 
 ```
 template<::std::ranges::range Range>
-constexpr ::std::uint64_t djb2 (
+::std::uint64_t djb2 (
     Range const & range,
     ::std::uint64_t h=5381ull
 ) 
@@ -237,7 +237,7 @@ static_assert(h != 0);
 _Computes an FNV-1a 64-bit hash over an arbitrary byte range._ 
 ```
 template<::std::ranges::range Range>
-constexpr ::std::uint64_t fnv1a (
+::std::uint64_t fnv1a (
     Range const & range,
     ::std::uint64_t h=14695981039346656037ull
 ) 
@@ -330,7 +330,7 @@ static_assert(h != 0);
 _Computes a Jenkins one-at-a-time (OTA) 32-bit hash._ 
 ```
 template<::std::ranges::range Range>
-constexpr ::std::uint32_t jenkins_ota (
+::std::uint32_t jenkins_ota (
     Range const & range
 ) 
 ```
@@ -417,7 +417,7 @@ static_assert(h != 0);
 _Computes an SDBM 64-bit hash over an arbitrary byte range._ 
 ```
 template<::std::ranges::range Range>
-constexpr ::std::uint64_t sdbm (
+::std::uint64_t sdbm (
     Range const & range,
     ::std::uint64_t h=0ull
 ) 
@@ -512,7 +512,7 @@ static_assert(h != 0);
 _Computes a SipHash-2-4 64-bit hash over an arbitrary byte range._ 
 ```
 template<::std::ranges::range Range>
-constexpr ::std::uint64_t siphash (
+::std::uint64_t siphash (
     Range const & range,
     siphash_key const key=siphash_default_key
 ) 

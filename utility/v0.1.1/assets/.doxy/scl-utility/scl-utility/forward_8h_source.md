@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+
 #ifndef SCL_FORWARD
 #define SCL_FORWARD(...) __VA_ARGS__
 #endif

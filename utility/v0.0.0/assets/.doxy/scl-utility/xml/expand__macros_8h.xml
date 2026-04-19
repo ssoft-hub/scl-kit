@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="expand__macros_8h" kind="file" language="C++">
+    <compoundname>expand_macros.h</compoundname>
+    <includedby refid="preprocessor_8h" local="no">module/utility/src/scl/utility/preprocessor.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>module/utility/src/scl/utility.h</label>
+        <link refid="utility_8h"/>
+      </node>
+      <node id="2">
+        <label>module/utility/src/scl/utility/preprocessor.h</label>
+        <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>module/utility/src/scl/utility/preprocessor/expand_macros.h</label>
+        <link refid="expand__macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" prot="public" static="no">
+        <name>SCL_EXPAND</name>
+        <param><defname>...</defname></param>
+        <initializer>__VA_ARGS__</initializer>
+        <briefdescription>
+<para>Identity macro that forwards variadic arguments unchanged and can force expansion of nested macros. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro simply expands to its variadic arguments. It is useful when:<itemizedlist>
+<listitem><para>You need to forward comma-separated tokens as-is into another macro, function call, or template parameter list.</para>
+</listitem><listitem><para>You want to force expansion in macro chaining scenarios where another macro yields comma-separated tokens.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variadic tokens to forward unchanged.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>This macro does not add parentheses or alter tokenization; it only forwards tokens.</para>
+</listitem><listitem><para>It is safe to use in both C and C++ code. In C++ contexts, it is commonly used with template parameter packs and function calls.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>Example<sp/>1:<sp/>Forwarding<sp/>arguments<sp/>to<sp/>a<sp/>function<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALL(fn,<sp/>...)<sp/>fn(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>add(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/>b;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>CALL(add,<sp/><ref refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" kindref="member">SCL_EXPAND</ref>(1,<sp/>2));<sp/></highlight><highlight class="comment">//<sp/>expands<sp/>to<sp/>add(1,<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>2:<sp/>Forcing<sp/>expansion<sp/>for<sp/>template<sp/>parameter<sp/>lists</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASIC_TYPES<sp/>int,<sp/>long,<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">type_list<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">tl<sp/>=<sp/>type_list&lt;<ref refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" kindref="member">SCL_EXPAND</ref>(BASIC_TYPES)&gt;;<sp/></highlight><highlight class="comment">//<sp/>expands<sp/>to<sp/>type_list&lt;int,<sp/>long,<sp/>double&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>3:<sp/>Chaining<sp/>macros<sp/>that<sp/>produce<sp/>comma-separated<sp/>tokens</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAKE_PAIR(a,<sp/>b)<sp/>a,<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>std::pair&lt;<ref refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" kindref="member">SCL_EXPAND</ref>(MAKE_PAIR(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">))&gt;{1,<sp/>2.0};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example<sp/>4:<sp/>Forwarding<sp/>arguments<sp/>through<sp/>another<sp/>macro<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORWARD_TO_EMPLACE(obj,<sp/>...)<sp/>obj.emplace_back(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">std::vector&lt;std::pair&lt;int,<sp/>std::string&gt;&gt;<sp/>v;</highlight></codeline>
+<codeline><highlight class="normal">FORWARD_TO_EMPLACE(v,<sp/><ref refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" kindref="member">SCL_EXPAND</ref>(42,<sp/></highlight><highlight class="stringliteral">&quot;answer&quot;</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//<sp/>emplace_back(42,<sp/>&quot;answer&quot;)</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="warning"><para><itemizedlist>
+<listitem><para>Be mindful of operator precedence; if you need grouping, use parentheses in the call sites.</para>
+</listitem><listitem><para>Since macros are global, avoid generic names to reduce collision risk (SCL_ prefix is used for this reason). </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/preprocessor/expand_macros.h" line="62" column="9" bodyfile="module/utility/src/scl/utility/preprocessor/expand_macros.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides a utility macro for forcing the expansion of other macros. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides small helper macros for token forwarding and macro expansion in C++ codebases. These macros operate at preprocessing time and do not introduce runtime overhead. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCL_EXPAND</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_EXPAND(...)<sp/>__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="module/utility/src/scl/utility/preprocessor/expand_macros.h"/>
+  </compounddef>
+</doxygen>

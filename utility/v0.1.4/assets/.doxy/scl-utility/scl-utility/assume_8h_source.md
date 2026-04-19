@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_ASSUME
 #if __has_cpp_attribute(assume)
 #define SCL_ASSUME(expr) [[assume(expr)]]

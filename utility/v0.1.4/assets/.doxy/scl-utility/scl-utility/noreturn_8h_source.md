@@ -10,6 +10,8 @@
 ```C++
 #pragma once
 
+
+
 #ifndef SCL_NORETURN
 #if __has_cpp_attribute(noreturn)
 #define SCL_NORETURN [[noreturn]]

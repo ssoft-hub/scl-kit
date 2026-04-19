@@ -7,13 +7,11 @@ ScL.Utility
 ## Overview
 
 
-
 ScL.Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.
 
 
 
 ## Quick start
-
 
 
 Include the umbrella header and link against the CMake target: 
@@ -31,7 +29,6 @@ static_assert(scl::type_name<int>() == "int");
 
 
 ## Features
-
 
 
 

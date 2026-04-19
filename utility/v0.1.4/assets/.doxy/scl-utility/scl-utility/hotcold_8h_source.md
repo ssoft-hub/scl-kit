@@ -10,6 +10,9 @@
 ```C++
 #pragma once
 
+
+
+
 #ifndef SCL_HOT
 #if defined(_MSC_VER) && !defined(__clang__)
 #define SCL_HOT

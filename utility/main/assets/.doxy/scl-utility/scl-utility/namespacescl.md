@@ -27,7 +27,6 @@ _Root namespace of ScL project._
 
 | Type | Name |
 | ---: | :--- |
-| namespace | [**hash**](namespacescl_1_1hash.md) <br> |
 | namespace | [**preprocessor**](namespacescl_1_1preprocessor.md) <br> |
 
 
@@ -49,8 +48,8 @@ _Root namespace of ScL project._
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr auto | [**has\_call\_v**](#variable-has_call_v)   = `[**::scl::is\_detected\_v**](group__scl__utility__type__traits.md#variable-is_detected_v)&lt;call\_operation, Arguments...&gt;`<br> |
-|  constexpr auto | [**has\_subscript\_v**](#variable-has_subscript_v)   = `[**::scl::is\_detected\_v**](group__scl__utility__type__traits.md#variable-is_detected_v)&lt;subscript\_operation, Arguments...&gt;`<br> |
+|  auto | [**has\_call\_v**](#variable-has_call_v)   = `[**::scl::is\_detected\_v**](group__scl__utility__type__traits.md#variable-is_detected_v)&lt;call\_operation, Arguments...&gt;`<br> |
+|  auto | [**has\_subscript\_v**](#variable-has_subscript_v)   = `[**::scl::is\_detected\_v**](group__scl__utility__type__traits.md#variable-is_detected_v)&lt;subscript\_operation, Arguments...&gt;`<br> |
 
 
 
@@ -103,7 +102,7 @@ _Root namespace of ScL project._
 ### typedef call\_operation 
 
 ```C++
-using scl::call_operation = typedef decltype(::std::declval<Type>()(::std::declval<Arguments>()...));
+using scl::call_operation =  decltype(::std::declval<Type>()(::std::declval<Arguments>()...));
 ```
 
 
@@ -116,7 +115,7 @@ using scl::call_operation = typedef decltype(::std::declval<Type>()(::std::declv
 ### typedef call\_t 
 
 ```C++
-using scl::call_t = typedef ::scl::detected_t<call_operation, Arguments...>;
+using scl::call_t =  ::scl::detected_t<call_operation, Arguments...>;
 ```
 
 
@@ -129,7 +128,7 @@ using scl::call_t = typedef ::scl::detected_t<call_operation, Arguments...>;
 ### typedef subscript\_operation 
 
 ```C++
-using scl::subscript_operation = typedef decltype(::std::declval<Type>()[::std::declval<Argument>()]);
+using scl::subscript_operation =  decltype(::std::declval<Type>()[::std::declval<Argument>()]);
 ```
 
 
@@ -142,7 +141,7 @@ using scl::subscript_operation = typedef decltype(::std::declval<Type>()[::std::
 ### typedef subscript\_t 
 
 ```C++
-using scl::subscript_t = typedef ::scl::detected_t<subscript_operation, Arguments...>;
+using scl::subscript_t =  ::scl::detected_t<subscript_operation, Arguments...>;
 ```
 
 
@@ -157,7 +156,7 @@ using scl::subscript_t = typedef ::scl::detected_t<subscript_operation, Argument
 ### variable has\_call\_v 
 
 ```C++
-constexpr auto scl::has_call_v;
+auto scl::has_call_v;
 ```
 
 
@@ -170,7 +169,7 @@ constexpr auto scl::has_call_v;
 ### variable has\_subscript\_v 
 
 ```C++
-constexpr auto scl::has_subscript_v;
+auto scl::has_subscript_v;
 ```
 
 

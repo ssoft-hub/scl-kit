@@ -1,19 +1,17 @@
 
 
-ScL Utility
+ScL.Utility
 
 
 
 ## Overview
 
 
-
-ScL Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.
+ScL.Utility is a header-only C++20 module providing common utilities not available in the standard library. It is part of the ScL Toolkit and has no external dependencies.
 
 
 
 ## Quick start
-
 
 
 Include the umbrella header and link against the CMake target: 
@@ -34,11 +32,9 @@ static_assert(scl::type_name<int>() == "int");
 
 
 
-
 * **Meta** ([**ScL Meta Infos**](group__scl__utility__meta.md)) — compile-time type, enum, and symbol name extraction without RTTI.
 * **Preprocessor** ([**ScL Preprocessor Utilities (C++)**](group__scl__utility__preprocessor.md)) — macro utilities including token forwarding (SCL\_FORWARD) and a compile-time counter (SCL\_COUNTER\_VALUE / SCL\_COUNTER\_NEXT).
-* **Type traits** ([**ScL Type Traits**](group__scl__utility__type__traits.md)) — detection idiom, forward\_like, member pointer decomposition, and overload\_cast.
-* **Attribute** ([**ScL Attribute Macros**](group__scl__utility__attribute.md)) — portable macros for [[no\_unique\_address]], optimizer hints (SCL\_ASSUME, SCL\_UNREACHABLE), and inlining control (SCL\_FORCE\_INLINE, SCL\_NOINLINE). 
+* **Type traits** ([**ScL Type Traits**](group__scl__utility__type__traits.md)) — detection idiom, forward\_like, member pointer decomposition, and overload\_cast. 
 
 
 

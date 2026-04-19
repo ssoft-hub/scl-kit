@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="group__scl__utility__hash" kind="group">
     <compoundname>scl_utility_hash</compoundname>
     <title>ScL Hash Utilities</title>
@@ -13,14 +13,15 @@
     <innerclass refid="structscl_1_1hash_1_1fnv1a__hasher" prot="public">scl::hash::fnv1a_hasher</innerclass>
     <innerclass refid="structscl_1_1hash_1_1jenkins__ota__hasher" prot="public">scl::hash::jenkins_ota_hasher</innerclass>
     <innerclass refid="structscl_1_1hash_1_1key" prot="public">scl::hash::key</innerclass>
-    <innerclass refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" prot="public">std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4" prot="public">std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</innerclass>
     <innerclass refid="structscl_1_1hash_1_1sdbm__hasher" prot="public">scl::hash::sdbm_hasher</innerclass>
     <innerclass refid="structscl_1_1hash_1_1siphash__key" prot="public">scl::hash::siphash_key</innerclass>
     <innerclass refid="structscl_1_1hash_1_1siphash__hasher" prot="public">scl::hash::siphash_hasher</innerclass>
+    <innerconcept refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher">scl::hash::concepts::byte_hasher</innerconcept>
     <sectiondef kind="var">
       <memberdef kind="variable" id="group__scl__utility__hash_1gab979dd272fd5c019680e8693a53609d8" prot="public" static="no" constexpr="yes" mutable="no">
-        <type>constexpr siphash_key</type>
-        <definition>constexpr siphash_key scl::hash::siphash_default_key</definition>
+        <type>siphash_key</type>
+        <definition>siphash_key scl::hash::siphash_default_key</definition>
         <argsstring></argsstring>
         <name>siphash_default_key</name>
         <qualifiedname>scl::hash::siphash_default_key</qualifiedname>
@@ -48,8 +49,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr ::std::uint64_t</type>
-        <definition>constexpr ::std::uint64_t scl::hash::djb2</definition>
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::djb2</definition>
         <argsstring>(Range const &amp;range, ::std::uint64_t h=5381ull)</argsstring>
         <name>djb2</name>
         <qualifiedname>scl::hash::djb2</qualifiedname>
@@ -94,7 +95,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>"hello"</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{"hello"}</computeroutput> to hash only the characters. </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -125,8 +126,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr ::std::uint64_t</type>
-        <definition>constexpr ::std::uint64_t scl::hash::fnv1a</definition>
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::fnv1a</definition>
         <argsstring>(Range const &amp;range, ::std::uint64_t h=14695981039346656037ull)</argsstring>
         <name>fnv1a</name>
         <qualifiedname>scl::hash::fnv1a</qualifiedname>
@@ -170,7 +171,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>"hello"</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{"hello"}</computeroutput> to hash only the characters. </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -201,8 +202,8 @@
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr ::std::uint32_t</type>
-        <definition>constexpr ::std::uint32_t scl::hash::jenkins_ota</definition>
+        <type>::std::uint32_t</type>
+        <definition>::std::uint32_t scl::hash::jenkins_ota</definition>
         <argsstring>(Range const &amp;range)</argsstring>
         <name>jenkins_ota</name>
         <qualifiedname>scl::hash::jenkins_ota</qualifiedname>
@@ -246,7 +247,7 @@ The function is <computeroutput>constexpr</computeroutput>, allowing compile-tim
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>"hello"</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{"hello"}</computeroutput> to hash only the characters. </para>
 </simplesect>
 <simplesect kind="return"><para>32-bit Jenkins OAT digest of the input range.</para>
 </simplesect>
@@ -268,8 +269,8 @@ The function is <computeroutput>constexpr</computeroutput>, allowing compile-tim
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr ::std::uint64_t</type>
-        <definition>constexpr ::std::uint64_t scl::hash::sdbm</definition>
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::sdbm</definition>
         <argsstring>(Range const &amp;range, ::std::uint64_t h=0ull)</argsstring>
         <name>sdbm</name>
         <qualifiedname>scl::hash::sdbm</qualifiedname>
@@ -313,7 +314,7 @@ The function is <computeroutput>constexpr</computeroutput>, allowing compile-tim
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>"hello"</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{"hello"}</computeroutput> to hash only the characters. </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -344,8 +345,8 @@ The function is <computeroutput>constexpr</computeroutput>, allowing compile-tim
             <defname>Range</defname>
           </param>
         </templateparamlist>
-        <type>constexpr ::std::uint64_t</type>
-        <definition>constexpr ::std::uint64_t scl::hash::siphash</definition>
+        <type>::std::uint64_t</type>
+        <definition>::std::uint64_t scl::hash::siphash</definition>
         <argsstring>(Range const &amp;range, siphash_key const key=siphash_default_key)</argsstring>
         <name>siphash</name>
         <qualifiedname>scl::hash::siphash</qualifiedname>
@@ -394,7 +395,7 @@ The function is <computeroutput>constexpr</computeroutput>, allowing compile-tim
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>String literals (e.g. <computeroutput>&quot;hello&quot;</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{&quot;hello&quot;}</computeroutput> to hash only the characters. </para>
+<simplesect kind="note"><para>String literals (e.g. <computeroutput>"hello"</computeroutput>) include the null terminator in the hash. Use <computeroutput>std::string_view{"hello"}</computeroutput> to hash only the characters. </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>

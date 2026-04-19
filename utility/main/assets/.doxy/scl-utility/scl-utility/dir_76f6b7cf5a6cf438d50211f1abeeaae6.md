@@ -21,8 +21,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| file | [**attribute.h**](attribute_8h.md) <br>_ScL portable compiler attribute macros._  |
-| file | [**hash.h**](hash_8h.md) <br>_ScL non-cryptographic hash utilities._  |
 | file | [**meta.h**](meta_8h.md) <br>_ScL meta infos for C++._  |
 | file | [**preprocessor.h**](preprocessor_8h.md) <br>_ScL preprocessor utilities for C++._  |
 | file | [**type\_traits.h**](type__traits_8h.md) <br>_ScL type traits for C++._  |
@@ -32,8 +30,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| dir | [**attribute**](dir_329a2a35dc2fa6e7b16bddbfbc08f988.md) <br> |
-| dir | [**hash**](dir_cc128476db6d6d60652f2f6242c2398d.md) <br> |
 | dir | [**meta**](dir_85c7392cbdcb0ae852d6674ea46dde19.md) <br> |
 | dir | [**preprocessor**](dir_a3b1215870dd7b05435314af8f203f78.md) <br> |
 | dir | [**type\_traits**](dir_ee84acd7aed8e5e3b0eed877408f2d18.md) <br> |

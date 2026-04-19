@@ -10,7 +10,7 @@
 
 
 
-_Strongly-typed hash digest parameterized by a hash function._ [More...](#detailed-description)
+_Strongly-typed FNV-1a hash digest parameterized by a hash function._ [More...](#detailed-description)
 
 * `#include <key.h>`
 
@@ -65,7 +65,7 @@ _Strongly-typed hash digest parameterized by a hash function._ [More...](#detail
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr | [**key**](#function-key) (Range const & range) noexcept<br>_Constructs the digest by hashing_ `range` _with_`Hasher` _._ |
+|  requires ::std::convertible\_to&lt;::std::ranges::range\_value\_t&lt; Range &gt;, ::std::uint8\_t &gt; constexpr | [**key**](#function-key) (Range const & range) noexcept<br>_Constructs the digest by hashing_ `range` _with_`Hasher` _._ |
 |  constexpr | [**operator value\_type**](#function-operator-value_type) () noexcept const<br>_Implicit conversion to the raw integer digest._  |
 
 
@@ -102,13 +102,13 @@ Wraps the digest produced by `Hasher` in a named type, preventing accidental mix
 
 
 
-|Hasher   |`value_type`    |
+|Hasher  |`value_type`  |
 |-----|-----|
-|`fnv1a_hasher`   |`std::uint64_t`    |
-|`djb2_hasher`   |`std::uint64_t`    |
-|`sdbm_hasher`   |`std::uint64_t`    |
-|`siphash_hasher <Key>`   |`std::uint64_t`    |
-|`jenkins_ota_hasher`   |`std::uint32_t`   |
+|`fnv1a_hasher`  |`std::uint64_t`  |
+|`djb2_hasher`  |`std::uint64_t`  |
+|`sdbm_hasher`  |`std::uint64_t`  |
+|`siphash_hasher <Key>`  |`std::uint64_t`  |
+|`jenkins_ota_hasher`  |`std::uint32_t`  |
 
 
 
@@ -116,10 +116,10 @@ Wraps the digest produced by `Hasher` in a named type, preventing accidental mix
 
 
 Key properties:
-* \*\*`constexpr`\*\* — digest computed at compile time.
+* **`constexpr`** — digest computed at compile time.
 * **Comparable** — `==`, `!=`, `<`, `<=`, `>`, `>=` via defaulted `<=>`.
-* \*\*`switch`/`case` label\*\* — implicit conversion to `value_type` enables string-dispatching without `if`-`else` chains.
-* **STL-compatible** — `std::hash<key<Hasher>>` is specialised for use in `std::unordered_map` / `std::unordered_set`.
+* **`switch`/`case` label** — implicit conversion to `value_type` enables string-dispatching without `if`-`else` chains.
+* **STL-compatible** — `std::hash< key <Hasher>>` is specialised for use in `std::unordered_map` / `std::unordered_set`.
 
 
 
@@ -237,7 +237,7 @@ value_type scl::hash::key< Hasher >::value;
 _Constructs the digest by hashing_ `range` _with_`Hasher` _._
 ```C++
 template<::std::ranges::range Range>
-inline explicit constexpr scl::hash::key::key (
+inline explicit requires ::std::convertible_to<::std::ranges::range_value_t< Range >, ::std::uint8_t > constexpr scl::hash::key::key (
     Range const & range
 ) noexcept
 ```
@@ -287,7 +287,7 @@ inline constexpr scl::hash::key::operator value_type () noexcept const
 
 _Three-way comparison (generates ==, !=, &lt;, &lt;=, &gt;, &gt;=)._ 
 ```C++
-constexpr auto scl::hash::key::operator<=> (
+auto scl::hash::key::operator<=> (
     key const &,
     key const &
 ) noexcept

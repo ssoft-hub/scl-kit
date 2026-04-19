@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
   <compound refid="structscl_1_1hash_1_1djb2__hasher" kind="struct"><name>scl::hash::djb2_hasher</name>
     <member refid="structscl_1_1hash_1_1djb2__hasher_1aa261776e4ef47334a60bcfb8c2dc64f5" kind="typedef"><name>result_type</name></member>
     <member refid="structscl_1_1hash_1_1djb2__hasher_1a9692ab9269173b938532a15430e33bd8" kind="function"><name>operator()</name></member>
@@ -8,8 +8,8 @@
     <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a3a0bee0e7a75155fa26caac74de1e04e" kind="typedef"><name>result_type</name></member>
     <member refid="structscl_1_1hash_1_1fnv1a__hasher_1a69f44265b6850be3ec433e10df8d95c3" kind="function"><name>operator()</name></member>
   </compound>
-  <compound refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4" kind="struct"><name>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</name>
-    <member refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" kind="function"><name>operator()</name></member>
+  <compound refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4" kind="struct"><name>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</name>
+    <member refid="structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4_1a01e8aceac184846da46a5c82751e524f" kind="function"><name>operator()</name></member>
   </compound>
   <compound refid="structscl_1_1hash_1_1jenkins__ota__hasher" kind="struct"><name>scl::hash::jenkins_ota_hasher</name>
     <member refid="structscl_1_1hash_1_1jenkins__ota__hasher_1aab1a29620eeb1632b54c4994d2aeca95" kind="typedef"><name>result_type</name></member>
@@ -40,20 +40,20 @@
   <compound refid="conceptscl_1_1hash_1_1concepts_1_1byte__hasher" kind="concept"><name>scl::hash::concepts::byte_hasher</name>
   </compound>
   <compound refid="namespacescl" kind="namespace"><name>scl</name>
-    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
-    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
-    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
-    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
-    <member refid="namespacescl_1a563e0978c2340b9d50d9ed1734518f09" kind="typedef"><name>subscript_operation</name></member>
-    <member refid="namespacescl_1aea60675cd99a9894d484d4ec54549de6" kind="typedef"><name>subscript_t</name></member>
-    <member refid="namespacescl_1a4d321fbf6d415dbd7bd22bdc0ee5a859" kind="typedef"><name>call_operation</name></member>
-    <member refid="namespacescl_1ac692ad135bbe5c36d4eea8a4be353803" kind="typedef"><name>call_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga795c9a1c5ce343c875138aa5d56514cc" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga77a8364d0ef86e5a97bd682c7a95637e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gafa937af35443ec975fcd1d711d269856" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga821fc8b9efbba4cd92305b67653a80e5" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6ec02997b8c50aad20166f5c502579a5" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="namespacescl_1a0e875c6e1006ec08d01e98edfe0476e4" kind="typedef"><name>subscript_operation</name></member>
+    <member refid="namespacescl_1a5336d71ee27d5b4c6de3de7931348788" kind="typedef"><name>subscript_t</name></member>
+    <member refid="namespacescl_1a6c0a2d40df027b76bdeca56361a9616d" kind="typedef"><name>call_operation</name></member>
+    <member refid="namespacescl_1a49a055e4766b2107b648fff5cc4f2370" kind="typedef"><name>call_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7ee69f7c247c4868aea21d6a8f5f81b8" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
     <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
     <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
     <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>
@@ -238,16 +238,16 @@
     <member refid="group__scl__utility__preprocessor_1ga0754b276155ba49607e834c88c2c5887" kind="define"><name>SCL_FORWARD</name></member>
   </compound>
   <compound refid="group__scl__utility__type__traits" kind="group"><name>scl_utility_type_traits</name>
-    <member refid="group__scl__utility__type__traits_1gafa07769576e32854d82db263b794f694" kind="typedef"><name>is_detected</name></member>
-    <member refid="group__scl__utility__type__traits_1ga4cc44437013cbceefce9e09b4f4f00ed" kind="typedef"><name>detected_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga368029337728225259c3a4f2e87e437e" kind="typedef"><name>detected_or</name></member>
-    <member refid="group__scl__utility__type__traits_1gaf474fe720a46269a468c8f00998a2543" kind="typedef"><name>detected_or_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga5330714cbce36efe2a7645de2a96e0fe" kind="typedef"><name>is_detected_exact</name></member>
-    <member refid="group__scl__utility__type__traits_1ga25c06142de67df4a75bbe64f60b708de" kind="typedef"><name>is_detected_convertible</name></member>
-    <member refid="group__scl__utility__type__traits_1ga6626ddd304ddf167830de1003491bd4b" kind="typedef"><name>forward_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga42ae241437ea3ab17efbce7b7cbce4e1" kind="typedef"><name>member_function_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga50022dbd23ebbe9bba86abde1bffbfeb" kind="typedef"><name>member_property_like_t</name></member>
-    <member refid="group__scl__utility__type__traits_1ga757169ccc995a51e461f3023a6bc8273" kind="typedef"><name>member_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga795c9a1c5ce343c875138aa5d56514cc" kind="typedef"><name>is_detected</name></member>
+    <member refid="group__scl__utility__type__traits_1ga1d52151a487cf31ad1e333dfed8c3167" kind="typedef"><name>detected_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga77a8364d0ef86e5a97bd682c7a95637e" kind="typedef"><name>detected_or</name></member>
+    <member refid="group__scl__utility__type__traits_1gafa937af35443ec975fcd1d711d269856" kind="typedef"><name>detected_or_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga821fc8b9efbba4cd92305b67653a80e5" kind="typedef"><name>is_detected_exact</name></member>
+    <member refid="group__scl__utility__type__traits_1ga6ec02997b8c50aad20166f5c502579a5" kind="typedef"><name>is_detected_convertible</name></member>
+    <member refid="group__scl__utility__type__traits_1ga7ee69f7c247c4868aea21d6a8f5f81b8" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
     <member refid="group__scl__utility__type__traits_1ga658066f75434f0a98d2aaf5ef22363b1" kind="variable"><name>is_detected_v</name></member>
     <member refid="group__scl__utility__type__traits_1gac29b98564a98b952243ea690f91b5941" kind="variable"><name>is_detected_exact_v</name></member>
     <member refid="group__scl__utility__type__traits_1ga718c248c55f3354fe39f2cebdf80462a" kind="variable"><name>is_detected_convertible_v</name></member>

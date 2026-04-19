@@ -9,6 +9,7 @@
 
 ```C++
 
+
 #pragma once
 
 #include <scl/utility/preprocessor/forward.h>
@@ -22,7 +23,7 @@
     {                                                                                                                    \
         template <typename Type, typename... Arguments>                                                                  \
         using name##_member_operation =                                                                                  \
-            decltype(::std::declval<Type>().operator op  (::std::declval<Arguments>()...));                          \
+            decltype(::std::declval<Type>().operator op /**/ (::std::declval<Arguments>()...));                          \
         template <typename... Arguments>                                                                                 \
         inline constexpr auto has_##name##_member_v =                                                                    \
             ::scl::is_detected_v<name##_member_operation, Arguments...>;                                                 \
@@ -34,7 +35,7 @@
         template <typename Type, typename... Arguments>                                                                  \
         using name##_member_exact_operation = decltype((::std::declval<Type>().*                                         \
             static_cast<::scl::member_function_like_t<Type, name##_member_operation<Type, Arguments...>(Arguments...)>>( \
-                &::std::remove_cvref_t<Type>::operator op ))(::std::declval<Arguments>()...));                       \
+                &::std::remove_cvref_t<Type>::operator op /**/))(::std::declval<Arguments>()...));                       \
         template <typename... Arguments>                                                                                 \
         inline constexpr auto has_##name##_member_exact_v =                                                              \
             ::scl::is_detected_v<name##_member_exact_operation, Arguments...>;                                           \
@@ -46,7 +47,7 @@
     namespace scl                                                                                    \
     {                                                                                                \
         template <typename Type>                                                                     \
-        using name##_operation = decltype(op  ::std::declval<Type>());                           \
+        using name##_operation = decltype(op /**/ ::std::declval<Type>());                           \
         template <typename... Arguments>                                                             \
         inline constexpr auto has_##name##_v = ::scl::is_detected_v<name##_operation, Arguments...>; \
         template <typename... Arguments>                                                             \
@@ -58,7 +59,7 @@
     namespace scl                                                                                          \
     {                                                                                                      \
         template <typename Type>                                                                           \
-        using name##_operation = decltype(::std::declval<Type>() op );                                 \
+        using name##_operation = decltype(::std::declval<Type>() op /**/);                                 \
         template <typename... Arguments>                                                                   \
         inline constexpr auto has_##name##_v = ::scl::is_detected_v<name##_operation, Arguments...>;       \
         template <typename... Arguments>                                                                   \
@@ -68,7 +69,7 @@
     {                                                                                                      \
         template <typename Type>                                                                           \
         using name##_member_operation =                                                                    \
-            decltype(::std::declval<Type>().operator op  (::std::declval<int>()));                     \
+            decltype(::std::declval<Type>().operator op /**/ (::std::declval<int>()));                     \
         template <typename Type>                                                                           \
         inline constexpr auto has_##name##_member_v = ::scl::is_detected_v<name##_member_operation, Type>; \
         template <typename Type>                                                                           \
@@ -79,7 +80,7 @@
         template <typename Type>                                                                           \
         using name##_member_exact_operation = decltype((::std::declval<Type>().*                           \
             static_cast<::scl::member_function_like_t<Type, name##_member_operation<Type>(int)>>(          \
-                &::std::remove_cvref_t<Type>::operator op ))(::std::declval<int>()));                  \
+                &::std::remove_cvref_t<Type>::operator op /**/))(::std::declval<int>()));                  \
         template <typename Type>                                                                           \
         inline constexpr auto has_##name##_member_exact_v =                                                \
             ::scl::is_detected_v<name##_member_exact_operation, Type>;                                     \
@@ -91,7 +92,7 @@
     namespace scl                                                                                    \
     {                                                                                                \
         template <typename Left, typename Right>                                                     \
-        using name##_operation = decltype(::std::declval<Left>() op  ::std::declval<Right>());   \
+        using name##_operation = decltype(::std::declval<Left>() op /**/ ::std::declval<Right>());   \
         template <typename... Arguments>                                                             \
         inline constexpr auto has_##name##_v = ::scl::is_detected_v<name##_operation, Arguments...>; \
         template <typename... Arguments>                                                             \
@@ -104,7 +105,7 @@
     {                                                                                                \
         template <typename Type, typename... Arguments>                                              \
         using name##_operation =                                                                     \
-            decltype(::std::declval<Type>().operator op  (::std::declval<Arguments>()...));      \
+            decltype(::std::declval<Type>().operator op /**/ (::std::declval<Arguments>()...));      \
         template <typename... Arguments>                                                             \
         inline constexpr auto has_##name##_v = ::scl::is_detected_v<name##_operation, Arguments...>; \
         template <typename... Arguments>                                                             \
@@ -196,9 +197,11 @@ SCL_DETAIL_BINARY_OPERATOR_DETECTION(^=, bitwise_xor_assign)
 
 namespace scl
 {
+
     // ============================================================================
     // PREFIX UNARY OPERATORS: &, *, +, -, ++, --, ~, !
     // ============================================================================
+
 
     template <typename Type>
     using address_of_operation = /* implementation defined */;
@@ -352,9 +355,11 @@ namespace scl
     template <typename... Arguments>
     using logical_not_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // POSTFIX UNARY OPERATORS: ++, -- (postfix)
     // ============================================================================
+
 
     template <typename Type>
     using postfix_increment_operation = /* implementation defined */;
@@ -394,9 +399,11 @@ namespace scl
     template <typename Type>
     using postfix_decrement_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // BINARY COMPARISON OPERATORS: ==, !=, <, <=, >, >=
     // ============================================================================
+
 
     template <typename Left, typename Right>
     using equal_to_operation = /* implementation defined */;
@@ -512,9 +519,11 @@ namespace scl
     template <typename Type, typename Argument>
     using greater_equal_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // BINARY ARITHMETIC & BITWISE: *, /, %, +, -, <<, >>, &, |, ^
     // ============================================================================
+
 
     template <typename Left, typename Right>
     using multiply_operation = /* implementation defined */;
@@ -706,9 +715,11 @@ namespace scl
     template <typename Type, typename Argument>
     using bitwise_xor_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // LOGICAL BINARY: &&, ||
     // ============================================================================
+
 
     template <typename Left, typename Right>
     using logical_and_operation = /* implementation defined */;
@@ -748,9 +759,11 @@ namespace scl
     template <typename Type, typename Argument>
     using logical_or_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // ASSIGNMENT OPERATORS: =, +=, -=, *=, /=, %=, <<=, >>=, &=, |=, ^=
     // ============================================================================
+
 
     template <typename Left, typename Right>
     using assign_operation = /* implementation defined */;
@@ -961,9 +974,11 @@ namespace scl
     template <typename Type, typename Argument>
     using bitwise_xor_assign_member_exact_t = /* implementation defined */;
 
+
     // ============================================================================
     // SPECIAL OPERATORS: ->*, ->, ,, [], ()
     // ============================================================================
+
 
     template <typename Type, typename... Arguments>
     using arrow_to_pointer_member_operation = /* implementation defined */;
@@ -1048,6 +1063,7 @@ namespace scl
     template <typename... Arguments>
     using call_member_exact_t = /* implementation defined */;
 
+ // end of scl_utility_operator_detection
 
 } // namespace scl
 

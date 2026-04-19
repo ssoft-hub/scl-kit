@@ -436,27 +436,27 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr ::std::string_view</td>
+<td style="text-align: right;">::std::string_view</td>
 <td style="text-align: left;"><a href="#function-enum_name"><strong>enum_name</strong></a> () noexcept<br><em>Retrieves the qualified string name of an enum member at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::string_view</td>
+<td style="text-align: right;">::std::string_view</td>
 <td style="text-align: left;"><a href="#function-enum_short_name"><strong>enum_short_name</strong></a> () noexcept<br><em>Retrieves the short string name of an enum member at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::string_view</td>
+<td style="text-align: right;">::std::string_view</td>
 <td style="text-align: left;"><a href="#function-symbol_name"><strong>symbol_name</strong></a> () noexcept<br><em>Retrieves the qualified string name of a symbol at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::string_view</td>
+<td style="text-align: right;">::std::string_view</td>
 <td style="text-align: left;"><a href="#function-symbol_short_name"><strong>symbol_short_name</strong></a> () noexcept<br><em>Retrieves the short string name of a symbol at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: right;">auto</td>
 <td style="text-align: left;"><a href="#function-type_name"><strong>type_name</strong></a> () noexcept<br><em>Retrieves the string name of the template type T at compile-time.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr auto</td>
+<td style="text-align: right;">auto</td>
 <td style="text-align: left;"><a href="#function-type_short_name"><strong>type_short_name</strong></a> () noexcept<br><em>Retrieves the short name of the template type T at compile-time.</em></td>
 </tr>
 </tbody>
@@ -465,7 +465,7 @@
 <h3 id="function-enum_name">function enum_name</h3>
 <p><em>Retrieves the qualified string name of an enum member at compile-time.</em> </p>
 <pre><code>template&lt;auto V&gt;
-constexpr ::std::string_view enum_name () noexcept
+::std::string_view enum_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -484,7 +484,7 @@ constexpr auto name = ::scl::enum_name&lt;Color::Red&gt;(); // Returns &quot;Col
 <h3 id="function-enum_short_name">function enum_short_name</h3>
 <p><em>Retrieves the short string name of an enum member at compile-time.</em> </p>
 <pre><code>template&lt;auto V&gt;
-constexpr ::std::string_view enum_short_name () noexcept
+::std::string_view enum_short_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -501,7 +501,7 @@ constexpr auto name = ::scl::enum_short_name&lt;gfx::Mode::Fast&gt;(); // Return
 <h3 id="function-symbol_name">function symbol_name</h3>
 <p><em>Retrieves the qualified string name of a symbol at compile-time.</em> </p>
 <pre><code>template&lt;auto S&gt;
-constexpr ::std::string_view symbol_name () noexcept
+::std::string_view symbol_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -524,7 +524,7 @@ constexpr auto var_name = ::scl::symbol_name&lt;&amp;global_var&gt;(); // &quot;
 <h3 id="function-symbol_short_name">function symbol_short_name</h3>
 <p><em>Retrieves the short string name of a symbol at compile-time.</em> </p>
 <pre><code>template&lt;auto S&gt;
-constexpr ::std::string_view symbol_short_name () noexcept
+::std::string_view symbol_short_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -541,7 +541,7 @@ constexpr auto name = ::scl::symbol_short_name&lt;sys::Clock::tick&gt;(); // &qu
 <h3 id="function-type_name">function type_name</h3>
 <p><em>Retrieves the string name of the template type T at compile-time.</em> </p>
 <pre><code>template&lt;typename T&gt;
-constexpr auto type_name () noexcept
+auto type_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>
@@ -563,7 +563,7 @@ constexpr auto int_name = ::scl::type_name&lt;int&gt;(); // Returns &quot;int&qu
 <h3 id="function-type_short_name">function type_short_name</h3>
 <p><em>Retrieves the short name of the template type T at compile-time.</em> </p>
 <pre><code>template&lt;typename T&gt;
-constexpr auto type_short_name () noexcept
+auto type_short_name () noexcept
 </code></pre>
 <p><strong>Template parameters:</strong></p>
 <ul>

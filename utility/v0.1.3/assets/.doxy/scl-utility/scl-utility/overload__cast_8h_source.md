@@ -12,6 +12,7 @@
 
 #include <type_traits>
 
+
 namespace scl::detail
 {
     template <class... Args>

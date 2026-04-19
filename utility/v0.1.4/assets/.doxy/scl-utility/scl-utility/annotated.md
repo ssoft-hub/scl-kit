@@ -17,5 +17,5 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **struct** [**siphash\_key**](structscl_1_1hash_1_1siphash__key.md) _128-bit secret key for SipHash._     
     * **namespace** [**preprocessor**](namespacescl_1_1preprocessor.md) 
 * **namespace** [**std**](namespacestd.md)     
-    * **struct** [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4.md) `std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._    
+    * **struct** [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4.md) `std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._    
 

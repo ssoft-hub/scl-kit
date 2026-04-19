@@ -10,6 +10,11 @@
 ```C++
 #pragma once
 
+
+
+
+
+
 #ifndef SCL_LIKELY
 #if __has_cpp_attribute(likely)
 #define SCL_LIKELY [[likely]]

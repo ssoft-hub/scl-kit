@@ -24,7 +24,7 @@ Here is a list of all files with brief descriptions:
                         * **dir** [**detection**](dir_7ae4f81ae30c9db8975b98cdcb7060a6.md)     
                             * **file** [**function.h**](function_8h.md) 
                             * **file** [**method.h**](method_8h.md) _Provides macros for generating member function detection traits._ 
-                            * **file** [**operator.h**](operator_8h.md) _Operator detection traits: compile-time aliases and value checks (Detection Idiom)_     
+                            * **file** [**operator.h**](operator_8h.md) _Operator detection traits: compile-time aliases and value checks (Detection Idiom)._     
                         * **file** [**overload\_cast.h**](overload__cast_8h.md) _Utility for disambiguating function and member function overloads._     
                     * **file** [**preprocessor.h**](preprocessor_8h.md) _ScL preprocessor utilities for C++._ 
                     * **file** [**type\_traits.h**](type__traits_8h.md) _ScL type traits for C++._ 

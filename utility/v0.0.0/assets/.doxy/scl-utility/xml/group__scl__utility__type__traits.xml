@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="group__scl__utility__type__traits" kind="group">
+    <compoundname>scl_utility_type_traits</compoundname>
+    <title>SCL Type Traits</title>
+    <innerfile refid="forward__like_8h">forward_like.h</innerfile>
+    <innerfile refid="member__like_8h">member_like.h</innerfile>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>scl::detail::add_reference_like_t&lt; Base, scl::detail::add_cv_from_t&lt; Base, ::std::remove_reference_t&lt; Type &gt; &gt; &gt;</type>
+        <definition>using scl::forward_like_t =  scl::detail::add_reference_like_t&lt;Base,
+        scl::detail::add_cv_from_t&lt;Base, ::std::remove_reference_t&lt;Type&gt;&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>forward_like_t</name>
+        <qualifiedname>scl::forward_like_t</qualifiedname>
+        <briefdescription>
+<para>Make a type <computeroutput>Type</computeroutput> &quot;look like&quot; <computeroutput>Base</computeroutput> for cv-ref qualifiers (matches ::std::forward_like rules). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type providing qualifiers/ref to propagate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to which qualifiers/ref are applied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Semantics:<itemizedlist>
+<listitem><para>CV-qualifiers: Applies <computeroutput>const</computeroutput> and <computeroutput>volatile</computeroutput> from <computeroutput>Base</computeroutput> onto <computeroutput>remove_reference_t&lt;Type&gt;</computeroutput>. (i.e. union of qualifiers, not replacement)</para>
+</listitem><listitem><para>Reference: Applies reference category of <computeroutput>Base</computeroutput> (if any). If <computeroutput>Base</computeroutput> is lvalue ref, result is lvalue ref; if rvalue ref, rvalue ref; else no reference. Reference is omitted for void.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kindref="member">forward_like_t&lt;int const &amp;, double&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>const<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kindref="member">forward_like_t&lt;int &amp;&amp;, float const&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>const<sp/>&amp;&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kindref="member">forward_like_t&lt;int volatile, char&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>char<sp/>volatile</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P3<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kindref="member">forward_like_t&lt;int const volatile &amp;, short&gt;</ref><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>short<sp/>const<sp/>volatile<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P4<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kindref="member">forward_like_t&lt;int, double&amp;&amp;&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="68" column="5" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Signature</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_function_like&lt; Type, Signature &gt;::type</type>
+        <definition>using scl::member_function_like_t =  typename ::scl::detail::member_function_like&lt;Type, Signature&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_function_like_t</name>
+        <qualifiedname>scl::member_function_like_t</qualifiedname>
+        <briefdescription>
+<para>Pointer-to-member-function type for class Type and function Signature, where the member function&apos;s cv/ref qualifiers are copied from Type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object type whose cv/ref qualifiers will be mirrored onto the member function. The class type itself is decayed with ::::std::remove_cvref_t before forming the pointer-to-member. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-static member function signature as a function type, e.g. <computeroutput>Result(Arguments...)</computeroutput> or <computeroutput>Result(Arguments...) noexcept</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Foo<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kindref="member">scl::member_function_like_t</ref>&lt;Foo,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kindref="member">scl::member_function_like_t</ref>&lt;Foo&amp;,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)<sp/>&amp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kindref="member">scl::member_function_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)<sp/>const</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P3<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kindref="member">scl::member_function_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;&amp;,<sp/>void()<sp/>noexcept&gt;;<sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)()<sp/>const<sp/>&amp;&amp;<sp/>noexcept</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="150" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Member</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_property_like&lt; Type, Member &gt;::type</type>
+        <definition>using scl::member_property_like_t =  typename ::scl::detail::member_property_like&lt;Type, Member&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_property_like_t</name>
+        <qualifiedname>scl::member_property_like_t</qualifiedname>
+        <briefdescription>
+<para>Pointer-to-data-member type for class Type and member type Member. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Forms the type <computeroutput>Member (::std::remove_cvref_t&lt;Type&gt;::*)</computeroutput>. Object cv/ref qualifiers do not change the pointer type for data members; they only affect access expressions.</para>
+<para><simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">using<sp/></highlight><highlight class="normal">P0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kindref="member">scl::member_property_like_t&lt;Foo, int&gt;</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kindref="member">scl::member_property_like_t&lt;Foo const&amp;, int&gt;</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>const<sp/>&amp;<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">P2<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kindref="member">scl::member_property_like_t&lt;Foo, int const&gt;</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="168" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class Type</type>
+          </param>
+          <param>
+            <type>class Member</type>
+          </param>
+        </templateparamlist>
+        <type>typename ::scl::detail::member_like&lt; Type, Member &gt;::type</type>
+        <definition>using scl::member_like_t =  typename ::scl::detail::member_like&lt;Type, Member&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>member_like_t</name>
+        <qualifiedname>scl::member_like_t</qualifiedname>
+        <briefdescription>
+<para>Generic pointer-to-member type selector for class Type and Member. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects the appropriate pointer-to-member type based on whether Member is a function type.<itemizedlist>
+<listitem><para>If Member is a function type like <computeroutput>Result(Arguments...)</computeroutput> or <computeroutput>Result(Arguments...) noexcept</computeroutput>, this aliases to <ref refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kindref="member">scl::member_function_like_t&lt;Type, Member&gt;</ref>, producing: <computeroutput>Result (::std::remove_cvref_t&lt;Type&gt;::*)(Arguments...) [cv] [ref] [noexcept]</computeroutput> where:<itemizedlist>
+<listitem><para>[cv]/[ref] are mirrored from Type (const/volatile and &amp;/&amp;&amp;),</para>
+</listitem><listitem><para>[noexcept] is mirrored from T.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Otherwise, it aliases to <ref refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kindref="member">scl::member_property_like_t&lt;Type, Member&gt;</ref>, producing: <computeroutput>Member (::std::remove_cvref_t&lt;Type&gt;::*)</computeroutput> (see <ref refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kindref="member">member_property_like_t</ref> for details on how object qualifiers may affect Member).</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class (object) type whose cv/ref qualifiers are mirrored for member functions. The class itself is decayed with ::std::remove_cvref_t before forming the pointer type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Member</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either a function type (for member functions) or a non-function type (for data members).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Examples</title><para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Foo<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">M0<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kindref="member">scl::member_like_t</ref>&lt;Foo,<sp/>void(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)(int)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">M1<sp/>=<sp/><ref refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kindref="member">scl::member_like_t</ref>&lt;Foo<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;,<sp/>void()<sp/>noexcept&gt;;<sp/></highlight><highlight class="comment">//<sp/>void<sp/>(Foo::*)()<sp/>const<sp/>&amp;<sp/>noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Data<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">using<sp/>M2<sp/>=<sp/><ref refid="namespacescl" kindref="compound">scl</ref>::<ref refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kindref="member">member_like_t</ref>&lt;Foo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>Foo::*</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">using<sp/>M3<sp/>=<sp/><ref refid="namespacescl" kindref="compound">scl</ref>::<ref refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kindref="member">member_like_t</ref>&lt;Foo<sp/>const,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;;<sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>const<sp/>Foo::*</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/member_like.h" line="204" column="5" bodyfile="module/utility/src/scl/utility/type_traits/member_like.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Type-level utilities for C++ metaprogramming. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

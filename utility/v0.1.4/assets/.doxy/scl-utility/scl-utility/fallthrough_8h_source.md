@@ -10,6 +10,8 @@
 ```C++
 #pragma once
 
+
+
 #ifndef SCL_FALLTHROUGH
 #if __has_cpp_attribute(fallthrough)
 #define SCL_FALLTHROUGH [[fallthrough]]

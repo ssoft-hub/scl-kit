@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 
+
 #ifndef SCL_NO_UNIQUE_ADDRESS
 #if __has_cpp_attribute(no_unique_address)
 #define SCL_NO_UNIQUE_ADDRESS [[no_unique_address]]

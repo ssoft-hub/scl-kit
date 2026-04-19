@@ -10,6 +10,8 @@
 ```C++
 #pragma once
 
+
+
 #ifndef SCL_MAYBE_UNUSED
 #if __has_cpp_attribute(maybe_unused)
 #define SCL_MAYBE_UNUSED [[maybe_unused]]

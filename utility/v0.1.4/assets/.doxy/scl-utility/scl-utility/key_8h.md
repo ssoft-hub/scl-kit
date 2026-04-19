@@ -42,7 +42,7 @@ _Strongly-typed hash digest parameterized by a hash function._
 | Type | Name |
 | ---: | :--- |
 | struct | [**key**](structscl_1_1hash_1_1key.md) &lt;Hasher&gt;<br>_Strongly-typed hash digest parameterized by a hash function._  |
-| struct | [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4.md) &lt;typename Hasher&gt;<br>`std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._ |
+| struct | [**hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;**](structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4.md) &lt;typename Hasher&gt;<br>`std::hash` _partial specialisation for all_`scl::hash::key <Hasher>` _._ |
 
 
 

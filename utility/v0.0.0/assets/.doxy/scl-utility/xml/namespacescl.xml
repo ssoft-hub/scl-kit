@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacescl" kind="namespace" language="C++">
+    <compoundname>scl</compoundname>
+    <sectiondef kind="typedef">
+      <member refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kind="typedef"><name>forward_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+      <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacescl_1afea308ad380ebb8db22344ee1a923967" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) scl::forward_like</definition>
+        <argsstring>(T &amp;&amp;t) noexcept</argsstring>
+        <name>forward_like</name>
+        <qualifiedname>scl::forward_like</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Forwards a value with the cv-ref qualifiers of <computeroutput>Base</computeroutput> applied to <computeroutput>T</computeroutput>&apos;s type, matching ::std::forward_like semantics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Example: <computeroutput><ref refid="namespacescl_1afea308ad380ebb8db22344ee1a923967" kindref="member">forward_like</ref>&lt;const T&amp;, x&gt;(some_val)</computeroutput> will forward <computeroutput>some_val</computeroutput> as a <computeroutput>const</computeroutput> lvalue reference if <computeroutput>T</computeroutput> is const. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="module/utility/src/scl/utility/type_traits/forward_like.h" line="79" column="24" bodyfile="module/utility/src/scl/utility/type_traits/forward_like.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Root namespace of SCL project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="module/utility/src/scl/utility.h" line="12" column="1"/>
+  </compounddef>
+</doxygen>

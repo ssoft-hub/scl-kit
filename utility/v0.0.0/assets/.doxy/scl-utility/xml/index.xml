@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="namespacescl" kind="namespace"><name>scl</name>
+    <member refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
+    <member refid="namespacescl_1afea308ad380ebb8db22344ee1a923967" kind="function"><name>forward_like</name></member>
+  </compound>
+  <compound refid="utility_8h" kind="file"><name>utility.h</name>
+  </compound>
+  <compound refid="preprocessor_8h" kind="file"><name>preprocessor.h</name>
+  </compound>
+  <compound refid="expand__macros_8h" kind="file"><name>expand_macros.h</name>
+    <member refid="expand__macros_8h_1a8fb2169fda1909a6c145e3f9d6efff8e" kind="define"><name>SCL_EXPAND</name></member>
+  </compound>
+  <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
+  </compound>
+  <compound refid="forward__like_8h" kind="file"><name>forward_like.h</name>
+  </compound>
+  <compound refid="member__like_8h" kind="file"><name>member_like.h</name>
+  </compound>
+  <compound refid="group__scl__utility__preprocessor" kind="group"><name>scl_utility_preprocessor</name>
+  </compound>
+  <compound refid="group__scl__utility__type__traits" kind="group"><name>scl_utility_type_traits</name>
+    <member refid="group__scl__utility__type__traits_1ga0a5fb51d0478df1ba1b0dcdd6bf9ec91" kind="typedef"><name>forward_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga97c25df90f9a032ba5c428207bd3f37d" kind="typedef"><name>member_function_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga135911f636d4fe8ebd3106732569b40f" kind="typedef"><name>member_property_like_t</name></member>
+    <member refid="group__scl__utility__type__traits_1ga55a3942eab200c2b562e67bb318eabdc" kind="typedef"><name>member_like_t</name></member>
+  </compound>
+  <compound refid="dir_a7b0466279106ea0b8f86f609f621680" kind="dir"><name>module</name>
+  </compound>
+  <compound refid="dir_a3b1215870dd7b05435314af8f203f78" kind="dir"><name>module/utility/src/scl/utility/preprocessor</name>
+  </compound>
+  <compound refid="dir_ca45970a26780365ec2accbdb8d8d4fe" kind="dir"><name>module/utility/src/scl</name>
+  </compound>
+  <compound refid="dir_ab13fdfb8e4c1ff98b437eee9f69d35c" kind="dir"><name>module/utility/src</name>
+  </compound>
+  <compound refid="dir_ee84acd7aed8e5e3b0eed877408f2d18" kind="dir"><name>module/utility/src/scl/utility/type_traits</name>
+  </compound>
+  <compound refid="dir_cca185d4009e66bf68ef58b617abaf60" kind="dir"><name>module/utility</name>
+  </compound>
+  <compound refid="dir_76f6b7cf5a6cf438d50211f1abeeaae6" kind="dir"><name>module/utility/src/scl/utility</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

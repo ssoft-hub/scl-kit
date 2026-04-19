@@ -59,7 +59,7 @@ _Callable wrapper around_ [_**siphash**_](group__scl__utility__hash.md#function-
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
+|  result\_type | [**operator()**](#function-operator) (Range const & range) noexcept const<br> |
 
 
 
@@ -129,7 +129,7 @@ using scl::hash::siphash_hasher< Key >::result_type =  ::std::uint64_t;
 
 ```C++
 template<::std::ranges::range Range>
-inline constexpr result_type scl::hash::siphash_hasher::operator() (
+inline result_type scl::hash::siphash_hasher::operator() (
     Range const & range
 ) noexcept const
 ```

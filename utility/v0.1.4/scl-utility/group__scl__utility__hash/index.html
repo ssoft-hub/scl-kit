@@ -516,7 +516,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">struct</td>
-<td style="text-align: left;"><a href="../structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01Hasher_01_4_01_4/"><strong>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</strong></a> &lt;typename Hasher&gt;<br><code>std::hash</code> <em>partial specialisation for all</em><code>scl::hash::key &lt;Hasher&gt;</code> <em>.</em></td>
+<td style="text-align: left;"><a href="../structstd_1_1hash_3_1_1scl_1_1hash_1_1key_3_01_hasher_01_4_01_4/"><strong>std::hash&lt;::scl::hash::key&lt; Hasher &gt; &gt;</strong></a> &lt;typename Hasher&gt;<br><code>std::hash</code> <em>partial specialisation for all</em><code>scl::hash::key &lt;Hasher&gt;</code> <em>.</em></td>
 </tr>
 </tbody>
 </table>
@@ -530,7 +530,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr siphash_key</td>
+<td style="text-align: right;">siphash_key</td>
 <td style="text-align: left;"><a href="#variable-siphash_default_key"><strong>siphash_default_key</strong></a>   = <code>/* multi line expression */</code><br><em>Default key for non-security-sensitive use.</em></td>
 </tr>
 </tbody>
@@ -545,23 +545,23 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">constexpr ::std::uint64_t</td>
+<td style="text-align: right;">::std::uint64_t</td>
 <td style="text-align: left;"><a href="#function-djb2"><strong>djb2</strong></a> (Range const &amp; range, ::std::uint64_t h=5381ull) <br><em>Computes a djb2a 64-bit hash over an arbitrary byte range.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::uint64_t</td>
+<td style="text-align: right;">::std::uint64_t</td>
 <td style="text-align: left;"><a href="#function-fnv1a"><strong>fnv1a</strong></a> (Range const &amp; range, ::std::uint64_t h=14695981039346656037ull) <br><em>Computes an FNV-1a 64-bit hash over an arbitrary byte range.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::uint32_t</td>
+<td style="text-align: right;">::std::uint32_t</td>
 <td style="text-align: left;"><a href="#function-jenkins_ota"><strong>jenkins_ota</strong></a> (Range const &amp; range) <br><em>Computes a Jenkins one-at-a-time (OTA) 32-bit hash.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::uint64_t</td>
+<td style="text-align: right;">::std::uint64_t</td>
 <td style="text-align: left;"><a href="#function-sdbm"><strong>sdbm</strong></a> (Range const &amp; range, ::std::uint64_t h=0ull) <br><em>Computes an SDBM 64-bit hash over an arbitrary byte range.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">constexpr ::std::uint64_t</td>
+<td style="text-align: right;">::std::uint64_t</td>
 <td style="text-align: left;"><a href="#function-siphash"><strong>siphash</strong></a> (Range const &amp; range, siphash_key const key=siphash_default_key) <br><em>Computes a SipHash-2-4 64-bit hash over an arbitrary byte range.</em></td>
 </tr>
 </tbody>
@@ -569,7 +569,7 @@
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-siphash_default_key">variable siphash_default_key</h3>
 <p><em>Default key for non-security-sensitive use.</em> </p>
-<pre><code>constexpr siphash_key scl::hash::siphash_default_key;
+<pre><code>siphash_key scl::hash::siphash_default_key;
 </code></pre>
 <p>These are the standard test-vector key bytes from the SipHash paper (Aumasson &amp; Bernstein, 2012): bytes 0x00–0x0f in little-endian order. <strong>Do not use this key where hash-flooding resistance is required.</strong> </p>
 <hr>
@@ -577,7 +577,7 @@
 <h3 id="function-djb2">function djb2</h3>
 <p><em>Computes a djb2a 64-bit hash over an arbitrary byte range.</em> </p>
 <pre><code>template&lt;::std::ranges::range Range&gt;
-constexpr ::std::uint64_t djb2 (
+::std::uint64_t djb2 (
     Range const &amp; range,
     ::std::uint64_t h=5381ull
 ) 
@@ -619,7 +619,7 @@ static_assert(h != 0);
 <h3 id="function-fnv1a">function fnv1a</h3>
 <p><em>Computes an FNV-1a 64-bit hash over an arbitrary byte range.</em> </p>
 <pre><code>template&lt;::std::ranges::range Range&gt;
-constexpr ::std::uint64_t fnv1a (
+::std::uint64_t fnv1a (
     Range const &amp; range,
     ::std::uint64_t h=14695981039346656037ull
 ) 
@@ -660,7 +660,7 @@ static_assert(h != 0);
 <h3 id="function-jenkins_ota">function jenkins_ota</h3>
 <p><em>Computes a Jenkins one-at-a-time (OTA) 32-bit hash.</em> </p>
 <pre><code>template&lt;::std::ranges::range Range&gt;
-constexpr ::std::uint32_t jenkins_ota (
+::std::uint32_t jenkins_ota (
     Range const &amp; range
 ) 
 </code></pre>
@@ -700,7 +700,7 @@ static_assert(h != 0);
 <h3 id="function-sdbm">function sdbm</h3>
 <p><em>Computes an SDBM 64-bit hash over an arbitrary byte range.</em> </p>
 <pre><code>template&lt;::std::ranges::range Range&gt;
-constexpr ::std::uint64_t sdbm (
+::std::uint64_t sdbm (
     Range const &amp; range,
     ::std::uint64_t h=0ull
 ) 
@@ -741,7 +741,7 @@ static_assert(h != 0);
 <h3 id="function-siphash">function siphash</h3>
 <p><em>Computes a SipHash-2-4 64-bit hash over an arbitrary byte range.</em> </p>
 <pre><code>template&lt;::std::ranges::range Range&gt;
-constexpr ::std::uint64_t siphash (
+::std::uint64_t siphash (
     Range const &amp; range,
     siphash_key const key=siphash_default_key
 ) 
