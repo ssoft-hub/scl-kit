@@ -1,6 +1,7 @@
 # Reserved path
 /bin
 /build
+/doc/sphinx
 /.claude
 /.vscode
 

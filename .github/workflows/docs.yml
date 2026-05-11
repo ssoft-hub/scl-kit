@@ -6,28 +6,18 @@ on:
     tags: ['v*']
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y doxygen graphviz
-          pip install -r requirements-docs.txt
-
-      - name: Configure git
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git fetch origin gh-pages 2>/dev/null || true
 
       - name: Fetch submodule tags and full history
         run: |
@@ -36,6 +26,25 @@ jobs:
             git fetch --tags
           '
 
-      - name: Deploy unified Sphinx docs
+      - name: Install dependencies
         run: |
-          sh script/ci/deploy_sphinx_docs.sh gh-pages
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+          pip install -r requirements-docs.txt
+
+      - name: Build Sphinx docs
+        run: sh script/ci/deploy_sphinx_docs.sh public
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

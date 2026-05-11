@@ -59,15 +59,8 @@ pages:
     - git submodule foreach 'git fetch --unshallow 2>/dev/null || true; git fetch --tags'
     - apt-get update && apt-get install -y doxygen graphviz
     - pip install -r requirements-docs.txt
-    - git config user.email "ci@gitlab.com"
-    - git config user.name "GitLab CI"
-    - git remote set-url origin "https://oauth2:${GITLAB_PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
-    - git fetch origin pages:pages 2>/dev/null || true
   script:
-    - sh script/ci/deploy_sphinx_docs.sh pages
-    - git fetch origin pages:pages
-    - mkdir -p public
-    - git archive pages | tar -x -C public
+    - sh script/ci/deploy_sphinx_docs.sh public
   artifacts:
     paths:
       - public
