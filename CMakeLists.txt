@@ -97,6 +97,30 @@ endif()
 add_subdirectory(project/cmake)
 
 # -----------------------------
+# Mirror compile_commands.json to source root (for clangd / LSP)
+# -----------------------------
+# CMAKE_EXPORT_COMPILE_COMMANDS writes the database into CMAKE_BINARY_DIR,
+# which varies per compiler/config (build/<toolchain>/, IDE shadow builds).
+# clangd searches the source tree, not the build tree, so copy the active
+# build's database to the source root on every build. Last build wins, which
+# matches the configuration the developer is currently working in.
+#
+# Only Ninja and Makefile generators emit compile_commands.json; the Visual
+# Studio generator does not, so the copy would fail and break the build. Gate
+# the target on a supporting generator instead of trying to copy a file that
+# was never produced.
+if (CMAKE_EXPORT_COMPILE_COMMANDS AND
+    (CMAKE_GENERATOR MATCHES "Ninja" OR CMAKE_GENERATOR MATCHES "Makefiles"))
+    add_custom_target(scl_export_compile_commands ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${CMAKE_BINARY_DIR}/compile_commands.json"
+            "${CMAKE_SOURCE_DIR}/compile_commands.json"
+        COMMENT "Mirroring compile_commands.json to source root for clangd"
+        VERBATIM
+    )
+endif()
+
+# -----------------------------
 # Install / Export package
 # -----------------------------
 if (SCL_INSTALL)
