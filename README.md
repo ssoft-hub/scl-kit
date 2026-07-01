@@ -7,9 +7,19 @@ non-commercial, with no attribution required for binary use.
 
 ## Modules
 
-The toolkit is a super-project organised as independent, header-only modules,
-each maintained as a git submodule under `module/`. Modules are added
-incrementally — see the `module/` directory for those currently available.
+The toolkit is a super-project of independent, header-only modules, each
+maintained as a git submodule under `module/`. Modules are added incrementally;
+those currently available:
+
+- **[utility](module/utility)** — common C++20 utilities missing from the
+  standard library: compile-time meta-programming helpers, preprocessor
+  utilities, extended type traits, and non-cryptographic hashing.
+  Umbrella header `<scl/utility.h>`.
+- **[feature](module/feature)** — `scl::wrapper<Value, Executors...>`, a
+  composable proxy that delegates calls to the wrapped value through a chain of
+  executor templates, transparently adding cross-cutting behaviour such as
+  copy-on-write, thread safety, or deferred invocation.
+  Umbrella header `<scl/feature.h>`.
 
 ## Usage
 
