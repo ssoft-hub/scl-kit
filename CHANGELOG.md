@@ -32,3 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   on both publish a Release with the matching `CHANGELOG.md` section as notes
   — the toolkit is header-only, so there is no binary artifact to attach.
   README badges report the GitLab pipeline and GitHub build status.
+- `mirror:github` GitLab CI job pushing a one-way, force-pruned mirror of every
+  branch and tag to `https://github.com/ssoft-hub/scl-kit`, plus a
+  `close-mirror-prs.yml` GitHub workflow that closes any PR opened there with
+  a pointer back to GitLab.
