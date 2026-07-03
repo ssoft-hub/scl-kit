@@ -1,0 +1,49 @@
+stages: [build, release]
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_DEPTH: 1
+
+# ---------------------
+# Build matrix
+# ---------------------
+# Linux only: GitLab.com's shared runners are Linux-only. macOS lives in
+# .github/workflows/build.yml, on GitHub's free hosted macOS runners instead.
+build:clang-x64:
+  stage: build
+  image: silkeh/clang:21
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
+  script:
+    - script/ci/build.sh clang-x64 Debug
+    - script/ci/run_tests.sh clang-x64 Debug
+
+build:gcc-x64:
+  stage: build
+  image: ubuntu:24.04
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git
+  script:
+    - script/ci/build.sh gcc-x64 Debug
+    - script/ci/run_tests.sh gcc-x64 Debug
+
+# ---------------------
+# Release
+# ---------------------
+# Header-only toolkit: nothing to build for a release, just publish a GitLab
+# Release with the CHANGELOG.md section for this tag as its description.
+release:
+  stage: release
+  image: alpine:latest
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v[0-9]/
+  before_script:
+    - apk add --no-cache bash curl jq
+  script:
+    - bash script/ci/create_gitlab_release.sh

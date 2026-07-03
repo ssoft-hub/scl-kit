@@ -1,0 +1,32 @@
+name: Build (macOS)
+
+# GitHub gives free macOS runners (Apple Silicon + Intel), which GitLab.com's
+# shared runners don't. Linux (clang/gcc) is covered in .gitlab-ci.yml.
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: ['*']
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-14
+            preset: macos-arm64
+          - os: macos-13
+            preset: macos-x64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Configure and build
+        run: script/ci/build.sh ${{ matrix.preset }} Debug
+
+      - name: Test
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug

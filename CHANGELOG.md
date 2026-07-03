@@ -26,3 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   drove the build, while different compilers stay isolated. An optional
   `-DSCL_BUILD_VARIANT=<tag>` and machine-local `CMakeUserPresets.json` entries
   keep builds independent across compiler versions or option sets too.
+- `.gitlab-ci.yml` build matrix (`clang-x64`, `gcc-x64`) on GitLab's free Linux
+  runners, and `.github/workflows/build.yml` covering macOS (Apple Silicon and
+  Intel) on GitHub's free hosted runners instead. Tag-triggered `release` jobs
+  on both publish a Release with the matching `CHANGELOG.md` section as notes
+  — the toolkit is header-only, so there is no binary artifact to attach.
+  README badges report the GitLab pipeline and GitHub build status.
