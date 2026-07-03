@@ -1,0 +1,361 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        },
+        {
+            "name": "base-not-darwin",
+            "hidden": true,
+            "inherits": "base",
+            "condition": {
+                "type": "notEquals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "base-windows",
+            "hidden": true,
+            "inherits": "base",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "base-darwin",
+            "hidden": true,
+            "inherits": "base",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "default",
+            "displayName": "Default (host generator)",
+            "description": "Host default generator, single-config Debug. Portable fallback.",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "clang-x64",
+            "displayName": "Clang (x64)",
+            "description": "Clang, native x86_64, Ninja Multi-Config. Build tree: build/clang-x64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        },
+        {
+            "name": "clang-arm64",
+            "displayName": "Clang (arm64, cross)",
+            "description": "Clang cross-compile to aarch64. Requires -DSCL_SYSROOT=<path>. Build tree: build/clang-arm64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/clang-generic.cmake",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "SCL_TARGET_TRIPLET": "aarch64-linux-gnu"
+            }
+        },
+        {
+            "name": "clang-x86",
+            "displayName": "Clang (x86, 32-bit)",
+            "description": "Clang, 32-bit (-m32). Requires 32-bit runtime/libs. Build tree: build/clang-x86.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_C_FLAGS": "-m32",
+                "CMAKE_CXX_FLAGS": "-m32"
+            }
+        },
+        {
+            "name": "gcc-x64",
+            "displayName": "GCC (x64)",
+            "description": "GCC, native x86_64, Ninja Multi-Config. Build tree: build/gcc-x64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++"
+            }
+        },
+        {
+            "name": "gcc-arm64",
+            "displayName": "GCC (arm64, cross)",
+            "description": "GCC cross-compile to aarch64. Requires -DSCL_SYSROOT=<path> (and an aarch64 toolchain). Build tree: build/gcc-arm64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/gcc-generic.cmake",
+            "cacheVariables": {
+                "SCL_TARGET_TRIPLET": "aarch64-linux-gnu"
+            }
+        },
+        {
+            "name": "gcc-x86",
+            "displayName": "GCC (x86, 32-bit)",
+            "description": "GCC, 32-bit (-m32). Requires gcc-multilib / 32-bit libs. Build tree: build/gcc-x86.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_C_FLAGS": "-m32",
+                "CMAKE_CXX_FLAGS": "-m32"
+            }
+        },
+        {
+            "name": "msvc-x64",
+            "displayName": "MSVC (x64)",
+            "description": "MSVC, native x64, Visual Studio 17 2022. Build tree: build/msvc-x64.",
+            "inherits": "base-windows",
+            "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "x64"
+            }
+        },
+        {
+            "name": "msvc-x86",
+            "displayName": "MSVC (x86)",
+            "description": "MSVC, 32-bit x86, Visual Studio 17 2022. Build tree: build/msvc-x86.",
+            "inherits": "base-windows",
+            "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "Win32"
+            }
+        },
+        {
+            "name": "msvc-arm64",
+            "displayName": "MSVC (arm64)",
+            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 17 2022. Build tree: build/msvc-arm64.",
+            "inherits": "base-windows",
+            "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "ARM64"
+            }
+        },
+        {
+            "name": "macos-arm64",
+            "displayName": "macOS (Apple Silicon, arm64)",
+            "description": "AppleClang, arm64, Ninja Multi-Config. Build tree: build/macos-arm64.",
+            "inherits": "base-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_OSX_ARCHITECTURES": "arm64"
+            }
+        },
+        {
+            "name": "macos-x64",
+            "displayName": "macOS (Intel, x86_64)",
+            "description": "AppleClang, x86_64, Ninja Multi-Config. Build tree: build/macos-x64.",
+            "inherits": "base-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_OSX_ARCHITECTURES": "x86_64"
+            }
+        },
+        {
+            "name": "macos-universal",
+            "displayName": "macOS (universal arm64 + x86_64)",
+            "description": "AppleClang, universal binary, Ninja Multi-Config. Build tree: build/macos-universal.",
+            "inherits": "base-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_OSX_ARCHITECTURES": "arm64;x86_64"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build-not-darwin",
+            "hidden": true,
+            "condition": {
+                "type": "notEquals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "build-windows",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "build-darwin",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "default",
+            "configurePreset": "default"
+        },
+        {
+            "name": "clang-x64",
+            "configurePreset": "clang-x64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "clang-x86",
+            "configurePreset": "clang-x86",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "clang-arm64",
+            "configurePreset": "clang-arm64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "gcc-x64",
+            "configurePreset": "gcc-x64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "gcc-x86",
+            "configurePreset": "gcc-x86",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "gcc-arm64",
+            "configurePreset": "gcc-arm64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "msvc-x64",
+            "configurePreset": "msvc-x64",
+            "inherits": "build-windows"
+        },
+        {
+            "name": "msvc-x86",
+            "configurePreset": "msvc-x86",
+            "inherits": "build-windows"
+        },
+        {
+            "name": "msvc-arm64",
+            "configurePreset": "msvc-arm64",
+            "inherits": "build-windows"
+        },
+        {
+            "name": "macos-arm64",
+            "configurePreset": "macos-arm64",
+            "inherits": "build-darwin"
+        },
+        {
+            "name": "macos-x64",
+            "configurePreset": "macos-x64",
+            "inherits": "build-darwin"
+        },
+        {
+            "name": "macos-universal",
+            "configurePreset": "macos-universal",
+            "inherits": "build-darwin"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "test-base",
+            "hidden": true,
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "test-not-darwin",
+            "hidden": true,
+            "inherits": "test-base",
+            "condition": {
+                "type": "notEquals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "test-windows",
+            "hidden": true,
+            "inherits": "test-base",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "test-darwin",
+            "hidden": true,
+            "inherits": "test-base",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "default",
+            "configurePreset": "default",
+            "inherits": "test-base"
+        },
+        {
+            "name": "clang-x64",
+            "configurePreset": "clang-x64",
+            "inherits": "test-not-darwin"
+        },
+        {
+            "name": "gcc-x64",
+            "configurePreset": "gcc-x64",
+            "inherits": "test-not-darwin"
+        },
+        {
+            "name": "msvc-x64",
+            "configurePreset": "msvc-x64",
+            "inherits": "test-windows"
+        },
+        {
+            "name": "msvc-x86",
+            "configurePreset": "msvc-x86",
+            "inherits": "test-windows"
+        },
+        {
+            "name": "macos-arm64",
+            "configurePreset": "macos-arm64",
+            "inherits": "test-darwin"
+        },
+        {
+            "name": "macos-x64",
+            "configurePreset": "macos-x64",
+            "inherits": "test-darwin"
+        },
+        {
+            "name": "macos-universal",
+            "configurePreset": "macos-universal",
+            "inherits": "test-darwin"
+        }
+    ]
+}
