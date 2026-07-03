@@ -1,0 +1,9 @@
+# Normalize line endings. Let git decide text vs binary by default.
+* text=auto
+
+# Shell scripts must stay LF so they run on POSIX CI regardless of host OS.
+*.sh text eol=lf
+
+# CMake inputs are consumed cross-platform; keep them LF for consistency.
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf

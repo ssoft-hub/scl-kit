@@ -1,0 +1,49 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "gcc-12-x64",
+            "displayName": "GCC 12 (x64)",
+            "description": "Pins a specific GCC install instead of whatever 'gcc' resolves to on PATH. Build tree: build/gcc-12-x64.",
+            "inherits": "gcc-x64",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-12",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-12"
+            }
+        },
+        {
+            "name": "gcc-x64-notests",
+            "displayName": "GCC (x64), tests disabled",
+            "description": "Same compiler as gcc-x64 but with tests off. SCL_BUILD_VARIANT keeps its bin/ output from colliding with a plain gcc-x64 build; the separate preset name keeps the build/ tree independent too. Build tree: build/gcc-x64-notests.",
+            "inherits": "gcc-x64",
+            "cacheVariables": {
+                "SCL_BUILD_VARIANT": "notests",
+                "SCL_BUILD_TESTS": "OFF"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "gcc-12-x64",
+            "configurePreset": "gcc-12-x64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "gcc-x64-notests",
+            "configurePreset": "gcc-x64-notests",
+            "inherits": "build-not-darwin"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "gcc-12-x64",
+            "configurePreset": "gcc-12-x64",
+            "inherits": "test-not-darwin"
+        },
+        {
+            "name": "gcc-x64-notests",
+            "configurePreset": "gcc-x64-notests",
+            "inherits": "test-not-darwin"
+        }
+    ]
+}

@@ -33,6 +33,41 @@ Each module is header-only: add its `src` directory to your include path and
 include the module's umbrella header. All public entities live in namespace
 `scl`.
 
+## Building from source
+
+Building is only needed to run the tests and examples or to install the
+toolkit as a CMake package — consuming the headers requires no build step.
+Requirements: CMake 3.23+ and a C++20 compiler.
+
+```sh
+git clone --recurse-submodules <repository-url>
+cd scl-kit
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --parallel
+ctest --test-dir build --output-on-failure
+```
+
+To install the toolkit and consume it from another CMake project:
+
+```sh
+cmake --install build --prefix <install-prefix>
+```
+
+```cmake
+find_package(scl CONFIG REQUIRED COMPONENTS utility feature)
+target_link_libraries(app PRIVATE scl::utility scl::feature)
+```
+
+Or use a CMake preset (shared by IDEs and the helper scripts), which keeps a
+separate build tree per compiler and architecture:
+
+```sh
+cmake --preset clang-x64 && cmake --build --preset clang-x64 --config Debug
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full preset list, build options,
+and the convenience scripts under `script/ci/`.
+
 ## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the
