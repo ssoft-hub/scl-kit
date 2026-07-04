@@ -50,3 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   branch and tag to `https://github.com/ssoft-hub/scl-kit`, plus a
   `close-mirror-prs.yml` GitHub workflow that closes any PR opened there with
   a pointer back to GitLab.
+- A build-time mirror of `compile_commands.json` to the source root, so
+  clangd finds it without a build-dir argument: `CMAKE_EXPORT_COMPILE_COMMANDS`
+  writes into `build/<toolchain>/`, which clangd and IDE shadow builds don't
+  search. Last build wins; a no-op (not an error) on generators that don't
+  produce the database at all (`msvc-*`'s Visual Studio generator).
