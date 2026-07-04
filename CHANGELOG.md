@@ -8,8 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Project skeleton: README, license, contribution guide, changelog, agent
-  instructions, and baseline ignore rules.
+- Project skeleton: README, license, contribution guide, changelog, baseline
+  ignore rules, and `AGENTS.md` documenting repository layout, branching,
+  commit format, and the issue/PR workflow for automated contributors.
 - Git submodules wiring the `utility` and `feature` modules and the bundled
   `googletest` and `doctest` test frameworks under `module/` and `3rdparty/`.
 - Cross-platform CMake build system aggregating the modules, their tests, and
