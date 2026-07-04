@@ -1,7 +1,25 @@
-name: Build (macOS)
+name: Build (macOS & Windows)
 
-# GitHub gives free macOS runners (Apple Silicon + Intel), which GitLab.com's
-# shared runners don't. Linux (clang/gcc) is covered in .gitlab-ci.yml.
+# GitHub gives free macOS and Windows runners, which GitLab.com's shared
+# runners don't (or charge extra for). Linux (clang/gcc, all archs) is
+# covered in .gitlab-ci.yml instead.
+#
+# Windows is pinned to windows-2022, not windows-latest: the presets use the
+# "Visual Studio 17 2022" CMake generator by name, and windows-latest is not
+# guaranteed to keep shipping that VS version once GitHub rolls the alias
+# forward to a newer runner image.
+#
+# msvc-arm64 runs on windows-11-arm (a genuine ARM64 host), not
+# windows-2022 (x64): an ARM64 binary cannot execute on an x64 runner at
+# all, so testing it needs actual ARM64 hardware, not the x64 host the
+# CONTRIBUTING.md preset table describes as "cross-only". Experimental:
+# revert to windows-2022 + build-only if this runner label isn't actually
+# available or lacks a working VS install.
+#
+# No native macos-x64 job: GitHub's Intel-hosted macos-13 runners are
+# retired (jobs requesting that label queue forever, never getting a
+# runner assigned). x86_64 is still covered at the binary level through
+# macos-universal.
 
 on:
   push:
@@ -17,8 +35,19 @@ jobs:
         include:
           - os: macos-14
             preset: macos-arm64
-          - os: macos-13
-            preset: macos-x64
+            test: true
+          - os: macos-14
+            preset: macos-universal
+            test: true
+          - os: windows-2022
+            preset: msvc-x64
+            test: true
+          - os: windows-2022
+            preset: msvc-x86
+            test: true
+          - os: windows-11-arm
+            preset: msvc-arm64
+            test: true
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
@@ -26,7 +55,10 @@ jobs:
           submodules: recursive
 
       - name: Configure and build
+        shell: bash
         run: script/ci/build.sh ${{ matrix.preset }} Debug
 
       - name: Test
+        if: matrix.test
+        shell: bash
         run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
