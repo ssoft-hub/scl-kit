@@ -333,6 +333,16 @@
             "inherits": "test-not-darwin"
         },
         {
+            "name": "clang-x86",
+            "configurePreset": "clang-x86",
+            "inherits": "test-not-darwin"
+        },
+        {
+            "name": "gcc-x86",
+            "configurePreset": "gcc-x86",
+            "inherits": "test-not-darwin"
+        },
+        {
             "name": "msvc-x64",
             "configurePreset": "msvc-x64",
             "inherits": "test-windows"

@@ -7,14 +7,22 @@ variables:
 # ---------------------
 # Build matrix
 # ---------------------
-# Linux only: GitLab.com's shared runners are Linux-only. macOS lives in
-# .github/workflows/build.yml, on GitHub's free hosted macOS runners instead.
-build:clang-x64:
-  stage: build
-  image: silkeh/clang:21
+# Linux only: GitLab.com's shared runners are Linux-only. Windows/macOS live
+# in .github/workflows/build.yml, on GitHub's free hosted runners instead.
+#
+# arm64 (cross) jobs are build-only: CMakePresets.json ships no test preset
+# for them, since arm64 binaries cannot execute on an x64 runner at all.
+# x86 (32-bit) binaries run fine on an x64 host given the multilib runtime,
+# so those jobs configure, build, and test like x64 does.
+.build_rules:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+
+build:clang-x64:
+  stage: build
+  image: silkeh/clang:21
+  extends: .build_rules
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
   script:
@@ -24,14 +32,50 @@ build:clang-x64:
 build:gcc-x64:
   stage: build
   image: ubuntu:24.04
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+  extends: .build_rules
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git
   script:
     - script/ci/build.sh gcc-x64 Debug
     - script/ci/run_tests.sh gcc-x64 Debug
+
+build:clang-x86:
+  stage: build
+  image: silkeh/clang:21
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build git gcc-multilib g++-multilib
+  script:
+    - script/ci/build.sh clang-x86 Debug
+    - script/ci/run_tests.sh clang-x86 Debug
+
+build:gcc-x86:
+  stage: build
+  image: ubuntu:24.04
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git gcc-multilib g++-multilib
+  script:
+    - script/ci/build.sh gcc-x86 Debug
+    - script/ci/run_tests.sh gcc-x86 Debug
+
+build:clang-arm64:
+  stage: build
+  image: silkeh/clang:21
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build git crossbuild-essential-arm64
+  script:
+    - script/ci/build.sh clang-arm64 Debug
+
+build:gcc-arm64:
+  stage: build
+  image: ubuntu:24.04
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build git crossbuild-essential-arm64
+  script:
+    - script/ci/build.sh gcc-arm64 Debug
 
 # ---------------------
 # Release
