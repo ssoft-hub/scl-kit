@@ -121,7 +121,7 @@ at once.
 |--------|------|------------|-------|
 | `default` | any | `build/default` | Portable single-config Debug |
 | `clang-x64` / `gcc-x64` | Windows, Linux | `build/{clang,gcc}-x64` | Native 64-bit |
-| `clang-x86` / `gcc-x86` | Windows, Linux | `build/{clang,gcc}-x86` | 32-bit; needs 32-bit libs/multilib (build-only) |
+| `clang-x86` / `gcc-x86` | Windows, Linux | `build/{clang,gcc}-x86` | 32-bit; needs 32-bit libs/multilib |
 | `clang-arm64` / `gcc-arm64` | Windows, Linux | `build/{clang,gcc}-arm64` | Cross; need `-DSCL_SYSROOT=<path>` (build-only) |
 | `msvc-x64` / `msvc-x86` | Windows | `build/msvc-{x64,x86}` | Native, via Visual Studio 2022 |
 | `msvc-arm64` | Windows | `build/msvc-arm64` | Cross on an x64 host (build-only) |

@@ -1,7 +1,36 @@
-name: Build (macOS)
+name: Build (macOS, Windows, Linux & MinGW)
 
-# GitHub gives free macOS runners (Apple Silicon + Intel), which GitLab.com's
-# shared runners don't. Linux (clang/gcc) is covered in .gitlab-ci.yml.
+# GitHub gives free macOS and Windows runners, which GitLab.com's shared
+# runners don't (or charge extra for). The `build` job covers those:
+# msvc (x64/x86/arm64) and macos (arm64/universal).
+#
+# `build-linux` duplicates .gitlab-ci.yml's clang/gcc matrix here too, so the
+# full matrix is verifiable on GitHub alone (no dependency on GitLab CI being
+# up) and via the throwaway-mirror-PR trick used to pre-verify this file.
+#
+# `build-mingw` covers gcc and clang targeting the mingw-w64 (GNU) ABI on
+# Windows, via MSYS2 — a genuinely different environment from `msvc-*`
+# (different runtime/ABI), not a duplicate of it. Only the x64 pair is
+# covered: MSYS2's 32-bit MINGW32/CLANG32 toolchains are not multilib, so the
+# `clang-x86`/`gcc-x86` presets' `-m32` flag (needed to select 32-bit output
+# from the 64-bit-capable Linux/MSVC toolchains) does not apply there and
+# would need a dedicated preset instead.
+#
+# Windows is pinned to windows-2022, not windows-latest: the presets use the
+# "Visual Studio 17 2022" CMake generator by name, and windows-latest is not
+# guaranteed to keep shipping that VS version once GitHub rolls the alias
+# forward to a newer runner image.
+#
+# msvc-arm64 runs on windows-11-arm (a genuine ARM64 host), not
+# windows-2022 (x64): an ARM64 binary cannot execute on an x64 runner at
+# all. Since GitHub's ARM64 Windows runners come with VS preinstalled,
+# this preset is not cross/build-only in CI the way CONTRIBUTING.md's
+# preset table describes it for a plain x64 dev machine.
+#
+# No native macos-x64 job: GitHub's Intel-hosted macos-13 runners are
+# retired (jobs requesting that label queue forever, never getting a
+# runner assigned). x86_64 is still covered at the binary level through
+# macos-universal.
 
 on:
   push:
@@ -17,13 +46,111 @@ jobs:
         include:
           - os: macos-14
             preset: macos-arm64
-          - os: macos-13
-            preset: macos-x64
+            test: true
+          - os: macos-14
+            preset: macos-universal
+            test: true
+          - os: windows-2022
+            preset: msvc-x64
+            test: true
+          - os: windows-2022
+            preset: msvc-x86
+            test: true
+          - os: windows-11-arm
+            preset: msvc-arm64
+            test: true
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
         with:
           submodules: recursive
+
+      - name: Configure and build
+        shell: bash
+        run: script/ci/build.sh ${{ matrix.preset }} Debug
+
+      - name: Test
+        if: matrix.test
+        shell: bash
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
+
+  build-linux:
+    # Same images as .gitlab-ci.yml's Linux jobs, for the same reason: Ubuntu's
+    # default `clang` package (18) crashes (SIGSEGV in Sema::SubstInitializer)
+    # instantiating module/feature's detection-idiom templates, so clang jobs
+    # pin the same silkeh/clang:21 image instead of ubuntu-latest's default.
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - preset: clang-x64
+            image: silkeh/clang:21
+            packages: ""
+            test: true
+          - preset: gcc-x64
+            image: ubuntu:24.04
+            packages: g++
+            test: true
+          - preset: clang-x86
+            image: silkeh/clang:21
+            packages: gcc-multilib g++-multilib
+            test: true
+          - preset: gcc-x86
+            image: ubuntu:24.04
+            packages: g++ gcc-multilib g++-multilib
+            test: true
+          - preset: clang-arm64
+            image: silkeh/clang:21
+            packages: crossbuild-essential-arm64
+            test: false
+          - preset: gcc-arm64
+            image: ubuntu:24.04
+            packages: crossbuild-essential-arm64
+            test: false
+    runs-on: ubuntu-latest
+    container: ${{ matrix.image }}
+    steps:
+      # Runs before checkout: neither image ships git, which actions/checkout
+      # needs for the recursive-submodule fetch.
+      - name: Install toolchain
+        run: apt-get update -qq && apt-get install -y -qq cmake ninja-build git ${{ matrix.packages }}
+
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Configure and build
+        run: script/ci/build.sh ${{ matrix.preset }} Debug
+
+      - name: Test
+        if: matrix.test
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
+
+  build-mingw:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - preset: gcc-x64
+            msystem: MINGW64
+            packages: mingw-w64-x86_64-toolchain
+          - preset: clang-x64
+            msystem: CLANG64
+            packages: mingw-w64-clang-x86_64-toolchain
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: ${{ matrix.msystem }}
+          update: true
+          install: ${{ matrix.packages }} cmake ninja git
 
       - name: Configure and build
         run: script/ci/build.sh ${{ matrix.preset }} Debug
