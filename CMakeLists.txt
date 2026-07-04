@@ -124,6 +124,25 @@ if (PROJECT_IS_TOP_LEVEL)
 endif()
 
 # -----------------------------
+# Mirror compile_commands.json to the source root for clangd
+# -----------------------------
+# CMAKE_EXPORT_COMPILE_COMMANDS writes into build/<toolchain>/, but clangd (and
+# IDE shadow builds) only search the source tree. Only for the top-level
+# project: an embedding consumer's own tree is not touched. A no-op (not an
+# error) on generators that don't produce compile_commands.json at all, e.g.
+# Visual Studio (msvc-* presets) — see MirrorCompileCommands.cmake.
+if (PROJECT_IS_TOP_LEVEL)
+    add_custom_target(mirror_compile_commands ALL
+        COMMAND ${CMAKE_COMMAND}
+            "-DSRC=${CMAKE_BINARY_DIR}/compile_commands.json"
+            "-DDST=${CMAKE_SOURCE_DIR}/compile_commands.json"
+            -P "${CMAKE_SOURCE_DIR}/project/cmake/MirrorCompileCommands.cmake"
+        COMMENT "Mirroring compile_commands.json to source root for clangd"
+        VERBATIM
+    )
+endif()
+
+# -----------------------------
 # CTest in root so subdirs can register tests
 # -----------------------------
 if (SCL_BUILD_TESTS)

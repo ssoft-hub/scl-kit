@@ -5,6 +5,7 @@
 /.claude
 /.qtcreator
 /.vscode
+/compile_commands.json
 
 # Temporary files
 *.tmp.*
