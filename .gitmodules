@@ -1,9 +1,9 @@
 [submodule "module/utility"]
 	path = module/utility
-	url = git@gitlab.com:ssoft-scl/scl-utility.git
+	url = ../scl-utility.git
 [submodule "module/feature"]
 	path = module/feature
-	url = git@gitlab.com:ssoft-scl/scl-feature.git
+	url = ../scl-feature.git
 [submodule "3rdparty/googletest"]
 	path = 3rdparty/googletest
 	url = https://github.com/google/googletest.git

@@ -1,5 +1,8 @@
 # ScL Toolkit
 
+[![GitLab Pipeline](https://gitlab.com/ssoft-scl/scl-kit/badges/dev/pipeline.svg)](https://gitlab.com/ssoft-scl/scl-kit/-/pipelines)
+[![GitHub Build](https://github.com/ssoft-hub/scl-kit/actions/workflows/build.yml/badge.svg?branch=dev)](https://github.com/ssoft-hub/scl-kit/actions/workflows/build.yml)
+
 ScL is a free, header-only C++20 toolkit. It bundles small, independent
 modules that simplify everyday C++ development. Licensed under
 [The Unlicense](LICENSE.md): free for any purpose, commercial or

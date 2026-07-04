@@ -1,0 +1,26 @@
+name: Release
+
+# Header-only toolkit: nothing to build for a release, just publish a GitHub
+# Release with the CHANGELOG.md section for this tag as its body. Mirrors
+# the "release" job in .gitlab-ci.yml.
+
+on:
+  push:
+    tags: ['v[0-9]*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Extract release notes
+        run: script/ci/changelog_section.sh "${GITHUB_REF_NAME#v}" > release_notes.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release_notes.md
