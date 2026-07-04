@@ -26,12 +26,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   drove the build, while different compilers stay isolated. An optional
   `-DSCL_BUILD_VARIANT=<tag>` and machine-local `CMakeUserPresets.json` entries
   keep builds independent across compiler versions or option sets too.
-- `.gitlab-ci.yml` build matrix (`clang-x64`, `gcc-x64`) on GitLab's free Linux
-  runners, and `.github/workflows/build.yml` covering macOS (Apple Silicon and
-  Intel) on GitHub's free hosted runners instead. Tag-triggered `release` jobs
-  on both publish a Release with the matching `CHANGELOG.md` section as notes
-  — the toolkit is header-only, so there is no binary artifact to attach.
-  README badges report the GitLab pipeline and GitHub build status.
+- `.gitlab-ci.yml` build matrix (`clang`/`gcc`, each `x64`, `x86`, and cross
+  `arm64`) on GitLab's free Linux runners, and `.github/workflows/build.yml`
+  covering `msvc` (`x64`, `x86`, `arm64`) and `macos` (`arm64`, `universal`)
+  on GitHub's free hosted Windows and macOS runners instead. Linux `arm64` is
+  build-only (cross-compiled, cannot execute on an x64 runner); `msvc-arm64`
+  configures, builds, and tests like the other Windows jobs, on GitHub's
+  native `windows-11-arm` runner. 32-bit (`x86`) jobs configure, build, and
+  test like their 64-bit siblings. No native `macos-x64` job: GitHub's
+  Intel-hosted macOS runners are retired, so `x86_64` is covered at the
+  binary level through `macos-universal` instead.
+  `.github/workflows/build.yml` also duplicates the `clang`/`gcc` Linux
+  matrix (redundant coverage independent of GitLab), and adds a `mingw-w64`
+  matrix (`gcc` and `clang` targeting the mingw-w64/GNU ABI on Windows, via
+  MSYS2) — a genuinely different environment from `msvc-*`, not a duplicate
+  of it.
+  Tag-triggered `release` jobs on both publish a Release with the matching
+  `CHANGELOG.md` section as notes — the toolkit is header-only, so there is
+  no binary artifact to attach. README badges report the GitLab pipeline and
+  GitHub build status.
 - `mirror:github` GitLab CI job pushing a one-way, force-pruned mirror of every
   branch and tag to `https://github.com/ssoft-hub/scl-kit`, plus a
   `close-mirror-prs.yml` GitHub workflow that closes any PR opened there with
