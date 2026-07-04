@@ -36,3 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   branch and tag to `https://github.com/ssoft-hub/scl-kit`, plus a
   `close-mirror-prs.yml` GitHub workflow that closes any PR opened there with
   a pointer back to GitLab.
+
+### Fixed
+- `close-mirror-prs.yml` failed to close mirror PRs: the default `GITHUB_TOKEN`
+  lacked `pull-requests: write`, so `pulls.update(...)` 403'd and the PR was
+  never actually closed. Added the missing `permissions:` block.
