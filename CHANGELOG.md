@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed the macOS CI job (`build`, GitHub Actions), which was failing on
+  every push: the bundled Xcode clang crashes compiling an NTTP example,
+  blocking everything after it in the build. The job now builds with a
+  pinned Homebrew LLVM instead.
+
 ### Added
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,
