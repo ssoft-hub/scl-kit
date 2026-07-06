@@ -31,6 +31,14 @@ name: Build (macOS, Windows, Linux & MinGW)
 # retired (jobs requesting that label queue forever, never getting a
 # runner assigned). x86_64 is still covered at the binary level through
 # macos-universal.
+#
+# macos-14's bundled Xcode clang (AppleClang 15.0.0) segfaults compiling
+# module/utility's key_nttp.cpp example (a known AppleClang 15/16 frontend
+# bug around C++20 class-type NTTPs used in template specializations) --
+# the same class of crash `build-linux` already works around by pinning
+# silkeh/clang:21 instead of Ubuntu's stock clang. macOS has no Docker
+# image option, so the `build` job installs Homebrew LLVM instead and
+# points CC/CXX at it for the macos-14 matrix entries.
 
 on:
   push:
@@ -65,9 +73,18 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install LLVM (macOS)
+        if: runner.os == 'macOS'
+        run: brew install llvm
+
       - name: Configure and build
         shell: bash
-        run: script/ci/build.sh ${{ matrix.preset }} Debug
+        run: |
+          if [ "${{ runner.os }}" = "macOS" ]; then
+            export CC=/opt/homebrew/opt/llvm/bin/clang
+            export CXX=/opt/homebrew/opt/llvm/bin/clang++
+          fi
+          script/ci/build.sh ${{ matrix.preset }} Debug
 
       - name: Test
         if: matrix.test
