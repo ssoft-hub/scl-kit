@@ -133,6 +133,10 @@
             "generator": "Visual Studio 17 2022",
             "architecture": {
                 "value": "x64"
+            },
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "/MP",
+                "CMAKE_CXX_FLAGS": "/MP"
             }
         },
         {
@@ -143,6 +147,10 @@
             "generator": "Visual Studio 17 2022",
             "architecture": {
                 "value": "Win32"
+            },
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "/MP",
+                "CMAKE_CXX_FLAGS": "/MP"
             }
         },
         {
@@ -153,6 +161,10 @@
             "generator": "Visual Studio 17 2022",
             "architecture": {
                 "value": "ARM64"
+            },
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "/MP",
+                "CMAKE_CXX_FLAGS": "/MP"
             }
         },
         {
@@ -251,17 +263,20 @@
         {
             "name": "msvc-x64",
             "configurePreset": "msvc-x64",
-            "inherits": "build-windows"
+            "inherits": "build-windows",
+            "jobs": 0
         },
         {
             "name": "msvc-x86",
             "configurePreset": "msvc-x86",
-            "inherits": "build-windows"
+            "inherits": "build-windows",
+            "jobs": 0
         },
         {
             "name": "msvc-arm64",
             "configurePreset": "msvc-arm64",
-            "inherits": "build-windows"
+            "inherits": "build-windows",
+            "jobs": 0
         },
         {
             "name": "macos-arm64",
