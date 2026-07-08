@@ -39,11 +39,6 @@
             "name": "gcc-12-x64",
             "configurePreset": "gcc-12-x64",
             "inherits": "test-not-darwin"
-        },
-        {
-            "name": "gcc-x64-notests",
-            "configurePreset": "gcc-x64-notests",
-            "inherits": "test-not-darwin"
         }
     ]
 }

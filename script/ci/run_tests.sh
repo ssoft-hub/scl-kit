@@ -14,7 +14,7 @@
 # Examples:
 #   script/ci/run_tests.sh
 #   script/ci/run_tests.sh clang-x64 Release
-#   script/ci/run_tests.sh msvc-x64 Debug
+#   script/ci/run_tests.sh msvc-x64-2022 Debug
 
 set -eu
 

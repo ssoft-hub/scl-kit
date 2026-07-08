@@ -9,7 +9,7 @@
 #   script/ci/build.sh [PRESET] [CONFIG] [extra cmake configure args...]
 #
 #   PRESET   CMake configure/build preset  (default: default)
-#            e.g. default, clang-x64, gcc-x64, msvc-x64, msvc-x86,
+#            e.g. default, clang-x64, gcc-x64, msvc-x64-2022, msvc-x86-2022,
 #                 clang-arm64 / gcc-arm64 (cross, need SCL_SYSROOT)
 #   CONFIG   build configuration (default: Debug). Multi-config presets pick
 #            it at build time; single-config presets (e.g. `default`) bake it
@@ -22,7 +22,7 @@
 # Examples:
 #   script/ci/build.sh                    # default preset, Debug
 #   script/ci/build.sh clang-x64 Release
-#   script/ci/build.sh msvc-x64 Debug
+#   script/ci/build.sh msvc-x64-2022 Debug
 
 set -eu
 

@@ -85,9 +85,11 @@
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_C_FLAGS": "-m32",
-                "CMAKE_CXX_FLAGS": "-m32"
+                "CMAKE_CXX_COMPILER": "clang++"
+            },
+            "environment": {
+                "CFLAGS": "-m32",
+                "CXXFLAGS": "-m32"
             }
         },
         {
@@ -120,51 +122,85 @@
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "gcc",
-                "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_C_FLAGS": "-m32",
-                "CMAKE_CXX_FLAGS": "-m32"
+                "CMAKE_CXX_COMPILER": "g++"
+            },
+            "environment": {
+                "CFLAGS": "-m32",
+                "CXXFLAGS": "-m32"
             }
         },
         {
-            "name": "msvc-x64",
-            "displayName": "MSVC (x64)",
-            "description": "MSVC, native x64, Visual Studio 17 2022. Build tree: build/msvc-x64.",
+            "name": "msvc-2022",
+            "hidden": true,
             "inherits": "base-windows",
             "generator": "Visual Studio 17 2022",
+            "environment": {
+                "CFLAGS": "/MP",
+                "CXXFLAGS": "/MP"
+            }
+        },
+        {
+            "name": "msvc-2026",
+            "hidden": true,
+            "inherits": "base-windows",
+            "generator": "Visual Studio 18 2026",
+            "environment": {
+                "CFLAGS": "/MP",
+                "CXXFLAGS": "/MP"
+            }
+        },
+        {
+            "name": "msvc-x64-2022",
+            "displayName": "MSVC 2022 (x64)",
+            "description": "MSVC, native x64, Visual Studio 17 2022. Build tree: build/msvc-x64-2022.",
+            "inherits": "msvc-2022",
             "architecture": {
                 "value": "x64"
-            },
-            "cacheVariables": {
-                "CMAKE_C_FLAGS": "/MP",
-                "CMAKE_CXX_FLAGS": "/MP"
             }
         },
         {
-            "name": "msvc-x86",
-            "displayName": "MSVC (x86)",
-            "description": "MSVC, 32-bit x86, Visual Studio 17 2022. Build tree: build/msvc-x86.",
-            "inherits": "base-windows",
-            "generator": "Visual Studio 17 2022",
+            "name": "msvc-x64-2026",
+            "displayName": "MSVC 2026 (x64)",
+            "description": "MSVC, native x64, Visual Studio 18 2026. Build tree: build/msvc-x64-2026.",
+            "inherits": "msvc-2026",
+            "architecture": {
+                "value": "x64"
+            }
+        },
+        {
+            "name": "msvc-x86-2022",
+            "displayName": "MSVC 2022 (x86)",
+            "description": "MSVC, 32-bit x86, Visual Studio 17 2022. Build tree: build/msvc-x86-2022.",
+            "inherits": "msvc-2022",
             "architecture": {
                 "value": "Win32"
-            },
-            "cacheVariables": {
-                "CMAKE_C_FLAGS": "/MP",
-                "CMAKE_CXX_FLAGS": "/MP"
             }
         },
         {
-            "name": "msvc-arm64",
-            "displayName": "MSVC (arm64)",
-            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 17 2022. Build tree: build/msvc-arm64.",
-            "inherits": "base-windows",
-            "generator": "Visual Studio 17 2022",
+            "name": "msvc-x86-2026",
+            "displayName": "MSVC 2026 (x86)",
+            "description": "MSVC, 32-bit x86, Visual Studio 18 2026. Build tree: build/msvc-x86-2026.",
+            "inherits": "msvc-2026",
+            "architecture": {
+                "value": "Win32"
+            }
+        },
+        {
+            "name": "msvc-arm64-2022",
+            "displayName": "MSVC 2022 (arm64)",
+            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 17 2022. Build tree: build/msvc-arm64-2022.",
+            "inherits": "msvc-2022",
             "architecture": {
                 "value": "ARM64"
-            },
-            "cacheVariables": {
-                "CMAKE_C_FLAGS": "/MP",
-                "CMAKE_CXX_FLAGS": "/MP"
+            }
+        },
+        {
+            "name": "msvc-arm64-2026",
+            "displayName": "MSVC 2026 (arm64)",
+            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 18 2026. Build tree: build/msvc-arm64-2026.",
+            "inherits": "msvc-2026",
+            "architecture": {
+                "value": "ARM64"
             }
         },
         {
@@ -195,6 +231,39 @@
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
                 "CMAKE_OSX_ARCHITECTURES": "arm64;x86_64"
+            }
+        },
+        {
+            "name": "osxcross-arm64",
+            "displayName": "macOS (arm64, osxcross cross-compile)",
+            "description": "Cross-compile for Darwin arm64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only: the binary can't run on the build host. Build tree: build/osxcross-arm64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",
+            "cacheVariables": {
+                "SCL_APPLE_ARCH": "arm64"
+            }
+        },
+        {
+            "name": "osxcross-x64",
+            "displayName": "macOS (x86_64, osxcross cross-compile)",
+            "description": "Cross-compile for Darwin x86_64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only. Build tree: build/osxcross-x64.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",
+            "cacheVariables": {
+                "SCL_APPLE_ARCH": "x86_64"
+            }
+        },
+        {
+            "name": "osxcross-universal",
+            "displayName": "macOS (universal arm64 + x86_64, osxcross cross-compile)",
+            "description": "Cross-compile a fat Darwin binary via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only. Build tree: build/osxcross-universal.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",
+            "cacheVariables": {
+                "SCL_APPLE_ARCH": "arm64;x86_64"
             }
         }
     ],
@@ -261,22 +330,40 @@
             "inherits": "build-not-darwin"
         },
         {
-            "name": "msvc-x64",
-            "configurePreset": "msvc-x64",
+            "name": "msvc-x64-2022",
+            "configurePreset": "msvc-x64-2022",
             "inherits": "build-windows",
-            "jobs": 0
+            "nativeToolOptions": ["/m"]
         },
         {
-            "name": "msvc-x86",
-            "configurePreset": "msvc-x86",
+            "name": "msvc-x64-2026",
+            "configurePreset": "msvc-x64-2026",
             "inherits": "build-windows",
-            "jobs": 0
+            "nativeToolOptions": ["/m"]
         },
         {
-            "name": "msvc-arm64",
-            "configurePreset": "msvc-arm64",
+            "name": "msvc-x86-2022",
+            "configurePreset": "msvc-x86-2022",
             "inherits": "build-windows",
-            "jobs": 0
+            "nativeToolOptions": ["/m"]
+        },
+        {
+            "name": "msvc-x86-2026",
+            "configurePreset": "msvc-x86-2026",
+            "inherits": "build-windows",
+            "nativeToolOptions": ["/m"]
+        },
+        {
+            "name": "msvc-arm64-2022",
+            "configurePreset": "msvc-arm64-2022",
+            "inherits": "build-windows",
+            "nativeToolOptions": ["/m"]
+        },
+        {
+            "name": "msvc-arm64-2026",
+            "configurePreset": "msvc-arm64-2026",
+            "inherits": "build-windows",
+            "nativeToolOptions": ["/m"]
         },
         {
             "name": "macos-arm64",
@@ -292,6 +379,21 @@
             "name": "macos-universal",
             "configurePreset": "macos-universal",
             "inherits": "build-darwin"
+        },
+        {
+            "name": "osxcross-arm64",
+            "configurePreset": "osxcross-arm64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "osxcross-x64",
+            "configurePreset": "osxcross-x64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "osxcross-universal",
+            "configurePreset": "osxcross-universal",
+            "inherits": "build-not-darwin"
         }
     ],
     "testPresets": [
@@ -306,6 +408,7 @@
             "name": "test-not-darwin",
             "hidden": true,
             "inherits": "test-base",
+            "configuration": "Debug",
             "condition": {
                 "type": "notEquals",
                 "lhs": "${hostSystemName}",
@@ -316,6 +419,7 @@
             "name": "test-windows",
             "hidden": true,
             "inherits": "test-base",
+            "configuration": "Debug",
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
@@ -326,6 +430,7 @@
             "name": "test-darwin",
             "hidden": true,
             "inherits": "test-base",
+            "configuration": "Debug",
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
@@ -358,18 +463,33 @@
             "inherits": "test-not-darwin"
         },
         {
-            "name": "msvc-x64",
-            "configurePreset": "msvc-x64",
+            "name": "msvc-x64-2022",
+            "configurePreset": "msvc-x64-2022",
             "inherits": "test-windows"
         },
         {
-            "name": "msvc-x86",
-            "configurePreset": "msvc-x86",
+            "name": "msvc-x64-2026",
+            "configurePreset": "msvc-x64-2026",
             "inherits": "test-windows"
         },
         {
-            "name": "msvc-arm64",
-            "configurePreset": "msvc-arm64",
+            "name": "msvc-x86-2022",
+            "configurePreset": "msvc-x86-2022",
+            "inherits": "test-windows"
+        },
+        {
+            "name": "msvc-x86-2026",
+            "configurePreset": "msvc-x86-2026",
+            "inherits": "test-windows"
+        },
+        {
+            "name": "msvc-arm64-2022",
+            "configurePreset": "msvc-arm64-2022",
+            "inherits": "test-windows"
+        },
+        {
+            "name": "msvc-arm64-2026",
+            "configurePreset": "msvc-arm64-2026",
             "inherits": "test-windows"
         },
         {

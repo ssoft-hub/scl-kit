@@ -62,13 +62,13 @@ jobs:
             preset: macos-universal
             test: true
           - os: windows-2022
-            preset: msvc-x64
+            preset: msvc-x64-2022
             test: true
           - os: windows-2022
-            preset: msvc-x86
+            preset: msvc-x86-2022
             test: true
           - os: windows-11-arm
-            preset: msvc-arm64
+            preset: msvc-arm64-2022
             test: true
     runs-on: ${{ matrix.os }}
     steps:

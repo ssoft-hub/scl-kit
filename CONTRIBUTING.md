@@ -71,10 +71,10 @@ Four axes can vary between builds, and each is isolated differently:
   architecture, not version (CMake only learns the version after
   configuring), so two installs of the same family share one preset name and
   would reconfigure the same tree. Fix: add a preset to
-  **[`CMakeUserPresets.json`](CMakeUserPresets.json.example)**
-  (git-ignored, machine-local — copy the example and adjust the paths for
-  your machine) that inherits a shipped preset and pins the compiler by
-  absolute path:
+  **[`CMakeUserPresets.json`](project/cmake/CMakeUserPresets.json.example)**
+  (git-ignored, machine-local — copy the example into the repository root as
+  `CMakeUserPresets.json` and adjust the paths for your machine) that
+  inherits a shipped preset and pins the compiler by absolute path:
 
   ```json
   {
@@ -108,7 +108,7 @@ Four axes can vary between builds, and each is isolated differently:
     configured at a time.
   - *Output and build tree* — give the option set its own preset name in
     `CMakeUserPresets.json` too (see
-    [`CMakeUserPresets.json.example`](CMakeUserPresets.json.example)),
+    [`CMakeUserPresets.json.example`](project/cmake/CMakeUserPresets.json.example)),
     setting `SCL_BUILD_VARIANT` and the differing options as `cacheVariables`.
     Both variants then have independent `build/<preset>` trees and can stay
     configured side by side.
@@ -123,10 +123,12 @@ at once.
 | `clang-x64` / `gcc-x64` | Windows, Linux | `build/{clang,gcc}-x64` | Native 64-bit |
 | `clang-x86` / `gcc-x86` | Windows, Linux | `build/{clang,gcc}-x86` | 32-bit; needs 32-bit libs/multilib |
 | `clang-arm64` / `gcc-arm64` | Windows, Linux | `build/{clang,gcc}-arm64` | Cross; need `-DSCL_SYSROOT=<path>` (build-only) |
-| `msvc-x64` / `msvc-x86` | Windows | `build/msvc-{x64,x86}` | Native, via Visual Studio 2022 |
-| `msvc-arm64` | Windows | `build/msvc-arm64` | Cross on an x64 host (build-only) |
+| `msvc-x64-2022` / `msvc-x86-2022` | Windows | `build/msvc-{x64,x86}-2022` | Native, via Visual Studio 2022 |
+| `msvc-x64-2026` / `msvc-x86-2026` | Windows | `build/msvc-{x64,x86}-2026` | Native, via Visual Studio 2026 |
+| `msvc-arm64-2022` / `msvc-arm64-2026` | Windows | `build/msvc-arm64-{2022,2026}` | Cross on an x64 host (build-only) |
 | `macos-arm64` / `macos-x64` | macOS | `build/macos-{arm64,x64}` | AppleClang, single arch |
 | `macos-universal` | macOS | `build/macos-universal` | AppleClang, universal binary |
+| `osxcross-arm64` / `-x64` / `-universal` | Linux, WSL | `build/osxcross-*` | Cross to Darwin via osxcross; needs `osxcross-conf` on `PATH` (build-only) |
 
 ```sh
 cmake --preset clang-x64
