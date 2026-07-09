@@ -69,7 +69,10 @@ cmake --preset clang-x64 && cmake --build --preset clang-x64 --config Debug
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full preset list, build options,
-and the convenience scripts under `script/ci/`.
+and the convenience scripts under `script/ci/`, and the
+[IDE build guides](doc/md/en/build/cmake/README.md) for step-by-step setup in
+Qt Creator, VS Code, Visual Studio, CLion, and the command line.
+Full documentation index: [doc/md](doc/md/README.md).
 
 ## Contributing
 

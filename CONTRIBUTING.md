@@ -34,7 +34,9 @@ ctest --test-dir build --output-on-failure
 
 The shipped `CMakePresets.json` is consumed both by IDEs (VS Code, Visual
 Studio, Qt Creator, CLion) and by the convenience scripts, so an IDE and a
-script that pick the same preset share the **same** build tree.
+script that pick the same preset share the **same** build tree. For
+step-by-step, per-IDE setup, see the
+[IDE build guides](doc/md/en/build/cmake/README.md).
 
 The build tree is keyed by **compiler + architecture** — `build/<preset>/` —
 so different compilers land in different sub-directories while the same
