@@ -12,10 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   every push: the bundled Xcode clang crashes compiling an NTTP example,
   blocking everything after it in the build. The job now builds with a
   pinned Homebrew LLVM instead.
-- Fixed the `msvc-x64`/`msvc-x86`/`msvc-arm64` presets building
-  single-threaded: MSBuild needs `/MP` for per-project file parallelism
-  and an explicit job count for parallelism across projects, neither of
-  which was set.
+- Fixed the `msvc-*` presets building single-threaded: MSBuild needs `/MP`
+  for per-project file parallelism and an explicit job count for parallelism
+  across projects, neither of which was set. `/MP` is injected through the
+  preset `CFLAGS`/`CXXFLAGS` environment rather than the `CMAKE_<LANG>_FLAGS`
+  cache variables: overriding the cache variable silently discarded CMake's
+  default MSVC flags, so every target compiled without exception handling
+  (`/EHsc`) and warned with C4530 wherever a standard header used try/catch.
+- Fixed `ctest --preset <name>` failing on the multi-config presets when no
+  `-C` was passed: test presets now default to the `Debug` configuration
+  (override with `-C <config>` as before).
 
 ### Added
 - Project skeleton: README, license, contribution guide, changelog, baseline
@@ -31,17 +37,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   testing locally and in CI.
 - `CMakePresets.json` with configure/build/test presets keyed by compiler and
   architecture, gated per host OS: `clang`/`gcc` (`x64`, `x86`, cross `arm64`),
-  `msvc` (`x64`, `x86`, `arm64`) on Windows, and `macos` (`arm64`, `x64`,
-  `universal`) on macOS. IDEs and the helper scripts share the same
-  `build/<preset>/` tree, so one compiler builds in one place regardless of what
-  drove the build, while different compilers stay isolated. An optional
+  `msvc` (`x64`, `x86`, `arm64`, each in a Visual Studio 2022 and a 2026
+  flavour, e.g. `msvc-x64-2022`/`msvc-x64-2026`) on Windows, and `macos`
+  (`arm64`, `x64`, `universal`) on macOS. IDEs and the helper scripts share the
+  same `build/<preset>/` tree, so one compiler builds in one place regardless of
+  what drove the build, while different compilers stay isolated. An optional
   `-DSCL_BUILD_VARIANT=<tag>` and machine-local `CMakeUserPresets.json` entries
   keep builds independent across compiler versions or option sets too.
+- `osxcross-arm64`/`osxcross-x64`/`osxcross-universal` presets that
+  cross-compile the toolkit to macOS (Darwin) from a Linux or WSL host via
+  an [osxcross](https://github.com/tpoechtrager/osxcross) install, so the macOS
+  build is verifiable without Apple hardware (build-only). Backed by a new
+  `project/cmake/toolchain/osxcross.cmake` that discovers the SDK path and
+  target triple from `osxcross-conf` on `PATH`, so no machine-specific paths
+  live in the preset.
 - `.gitlab-ci.yml` build matrix (`clang`/`gcc`, each `x64`, `x86`, and cross
   `arm64`) on GitLab's free Linux runners, and `.github/workflows/build.yml`
   covering `msvc` (`x64`, `x86`, `arm64`) and `macos` (`arm64`, `universal`)
   on GitHub's free hosted Windows and macOS runners instead. Linux `arm64` is
-  build-only (cross-compiled, cannot execute on an x64 runner); `msvc-arm64`
+  build-only (cross-compiled, cannot execute on an x64 runner); `msvc-arm64-2022`
   configures, builds, and tests like the other Windows jobs, on GitHub's
   native `windows-11-arm` runner. 32-bit (`x86`) jobs configure, build, and
   test like their 64-bit siblings. No native `macos-x64` job: GitHub's
