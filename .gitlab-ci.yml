@@ -39,6 +39,26 @@ build:gcc-x64:
     - script/ci/build.sh gcc-x64 Debug
     - script/ci/run_tests.sh gcc-x64 Debug
 
+build:clang-x64-no-rtti:
+  stage: build
+  image: silkeh/clang:21
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
+  script:
+    - script/ci/build.sh clang-x64-no-rtti Debug
+    - script/ci/run_tests.sh clang-x64-no-rtti Debug
+
+build:gcc-x64-no-rtti:
+  stage: build
+  image: ubuntu:24.04
+  extends: .build_rules
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git
+  script:
+    - script/ci/build.sh gcc-x64-no-rtti Debug
+    - script/ci/run_tests.sh gcc-x64-no-rtti Debug
+
 build:clang-x86:
   stage: build
   image: silkeh/clang:21

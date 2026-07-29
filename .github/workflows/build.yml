@@ -116,6 +116,14 @@ jobs:
             image: ubuntu:24.04
             packages: g++
             test: true
+          - preset: clang-x64-no-rtti
+            image: silkeh/clang:21
+            packages: ""
+            test: true
+          - preset: gcc-x64-no-rtti
+            image: ubuntu:24.04
+            packages: g++
+            test: true
           - preset: clang-x86
             image: silkeh/clang:21
             packages: gcc-multilib g++-multilib

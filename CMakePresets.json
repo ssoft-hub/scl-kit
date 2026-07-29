@@ -45,6 +45,16 @@
             }
         },
         {
+            "name": "base-linux",
+            "hidden": true,
+            "inherits": "base",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
             "name": "default",
             "displayName": "Default (host generator)",
             "description": "Host default generator, single-config Debug. Portable fallback.",
@@ -93,6 +103,21 @@
             }
         },
         {
+            "name": "clang-x64-no-rtti",
+            "displayName": "Clang (x64, -fno-rtti)",
+            "description": "Clang, native x86_64, RTTI disabled, so modules building with -fno-rtti get the same build and test coverage as the RTTI-on presets. Linux only: on Windows clang targets the MSVC ABI, whose standard library declares std::any only under _HAS_STATIC_RTTI, while GoogleTest instantiates a printer for it whenever <any> is includable — the test build fails before any ScL code is reached. Use gcc-x64-no-rtti for RTTI-off coverage on Windows. Build tree: build/clang-x64-no-rtti.",
+            "inherits": "base-linux",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "SCL_BUILD_VARIANT": "no-rtti"
+            },
+            "environment": {
+                "CXXFLAGS": "-fno-rtti"
+            }
+        },
+        {
             "name": "gcc-x64",
             "displayName": "GCC (x64)",
             "description": "GCC, native x86_64, Ninja Multi-Config. Build tree: build/gcc-x64.",
@@ -127,6 +152,21 @@
             "environment": {
                 "CFLAGS": "-m32",
                 "CXXFLAGS": "-m32"
+            }
+        },
+        {
+            "name": "gcc-x64-no-rtti",
+            "displayName": "GCC (x64, -fno-rtti)",
+            "description": "GCC, native x86_64, RTTI disabled, so modules building with -fno-rtti get the same build and test coverage as the RTTI-on presets. Build tree: build/gcc-x64-no-rtti.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "SCL_BUILD_VARIANT": "no-rtti"
+            },
+            "environment": {
+                "CXXFLAGS": "-fno-rtti"
             }
         },
         {
@@ -269,6 +309,15 @@
     ],
     "buildPresets": [
         {
+            "name": "build-linux",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
             "name": "build-not-darwin",
             "hidden": true,
             "condition": {
@@ -310,6 +359,11 @@
             "inherits": "build-not-darwin"
         },
         {
+            "name": "clang-x64-no-rtti",
+            "configurePreset": "clang-x64-no-rtti",
+            "inherits": "build-linux"
+        },
+        {
             "name": "clang-arm64",
             "configurePreset": "clang-arm64",
             "inherits": "build-not-darwin"
@@ -322,6 +376,11 @@
         {
             "name": "gcc-x86",
             "configurePreset": "gcc-x86",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "gcc-x64-no-rtti",
+            "configurePreset": "gcc-x64-no-rtti",
             "inherits": "build-not-darwin"
         },
         {
@@ -405,6 +464,17 @@
             }
         },
         {
+            "name": "test-linux",
+            "hidden": true,
+            "inherits": "test-base",
+            "configuration": "Debug",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
             "name": "test-not-darwin",
             "hidden": true,
             "inherits": "test-base",
@@ -460,6 +530,16 @@
         {
             "name": "gcc-x86",
             "configurePreset": "gcc-x86",
+            "inherits": "test-not-darwin"
+        },
+        {
+            "name": "clang-x64-no-rtti",
+            "configurePreset": "clang-x64-no-rtti",
+            "inherits": "test-linux"
+        },
+        {
+            "name": "gcc-x64-no-rtti",
+            "configurePreset": "gcc-x64-no-rtti",
             "inherits": "test-not-darwin"
         },
         {
