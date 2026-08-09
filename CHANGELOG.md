@@ -28,6 +28,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `SCL_BUILD_BENCHMARKS` (off by default) and `SCL_ENABLE_GBENCH` to control
   it, and routing for a module's `benchmark/` tree. A module without one is
   skipped rather than failing the configure step.
+- An `arm-none-eabi` preset and toolchain file, cross-compiling to bare metal so
+  the code size of a change can be measured. Nothing built there runs: tests,
+  examples and install are off, and the compiler check builds a static library
+  because a freestanding target has no startup code to link against.
+  `script/ci/run_size.sh` reports the `.text` figure.
 - `script/ci/run_benchmarks.sh`, beside `run_tests.sh`. It reads the output
   directory out of the build tree's cache, fixes the repetition count so two
   runs of a suite are comparable, and fails rather than reporting an empty
