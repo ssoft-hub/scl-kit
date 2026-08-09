@@ -25,10 +25,18 @@ option(SCL_BUILD_EXAMPLES "Build examples" ${PROJECT_IS_TOP_LEVEL})
 option(SCL_BUILD_TESTS    "Build tests"    ${PROJECT_IS_TOP_LEVEL})
 option(SCL_INSTALL        "Enable install/export packaging" ${PROJECT_IS_TOP_LEVEL})
 
+# Off even at top level, unlike the three above: a benchmark run is long and
+# its numbers are only meaningful in a Release build, so it is asked for
+# explicitly rather than joining the ordinary build.
+option(SCL_BUILD_BENCHMARKS "Build benchmarks" OFF)
+
 # Test framework toggles
 option(SCL_ENABLE_GTEST   "Enable GoogleTest-based tests (if available)"   ON)
 option(SCL_ENABLE_DOCTEST "Enable doctest-based tests (if available)"      ON)
 option(SCL_ENABLE_CATCH2  "Enable Catch2-based tests (if available)"       ON)
+
+# Benchmark framework toggle
+option(SCL_ENABLE_GBENCH  "Enable Google Benchmark based benchmarks (if available)" ON)
 
 # Optional variant tag: keeps bin/ outputs of same-toolchain builds with
 # different options apart (e.g. -DSCL_BUILD_VARIANT=notests). Build trees are

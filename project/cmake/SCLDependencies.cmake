@@ -1,4 +1,4 @@
-# Unified discovery for test frameworks.
+# Unified discovery for test and benchmark frameworks.
 # Policy:
 # 1) Try find_package (CONFIG mode).
 # 2) If not found, fallback to in-tree 3rdparty submodules (add_subdirectory).
@@ -10,7 +10,7 @@ include_guard(GLOBAL)
 # GoogleTest
 # -----------------------------
 set(GTEST_FOUND FALSE)
-if (SCL_ENABLE_GTEST)
+if (SCL_BUILD_TESTS AND SCL_ENABLE_GTEST)
     find_package(GTest QUIET CONFIG)
     if (GTest_FOUND)
         set(GTEST_FOUND TRUE)
@@ -36,7 +36,7 @@ endif()
 # doctest
 # -----------------------------
 set(DOCTEST_FOUND FALSE)
-if (SCL_ENABLE_DOCTEST)
+if (SCL_BUILD_TESTS AND SCL_ENABLE_DOCTEST)
     find_package(doctest QUIET CONFIG) # Prefer a config package if available
     if (TARGET doctest::doctest)
         set(DOCTEST_FOUND TRUE)
@@ -58,7 +58,7 @@ endif()
 # Catch2
 # -----------------------------
 set(CATCH2_FOUND FALSE)
-if (SCL_ENABLE_CATCH2)
+if (SCL_BUILD_TESTS AND SCL_ENABLE_CATCH2)
     # First try v3 (preferred)
     find_package(Catch2 3 QUIET CONFIG)
     if (TARGET Catch2::Catch2WithMain)
@@ -77,6 +77,36 @@ if (SCL_ENABLE_CATCH2)
                 if (TARGET Catch2::Catch2WithMain OR TARGET Catch2::Catch2)
                     set(CATCH2_FOUND TRUE)
                 endif()
+            endif()
+        endif()
+    endif()
+endif()
+
+# -----------------------------
+# Google Benchmark
+# -----------------------------
+set(BENCHMARK_FOUND FALSE)
+if (SCL_BUILD_BENCHMARKS AND SCL_ENABLE_GBENCH)
+    find_package(benchmark QUIET CONFIG)
+    if (TARGET benchmark::benchmark_main)
+        set(BENCHMARK_FOUND TRUE)
+    else()
+        if (EXISTS "${PROJECT_SOURCE_DIR}/3rdparty/benchmark/CMakeLists.txt")
+            message(STATUS "Using bundled Google Benchmark from 3rdparty.")
+            # Same FORCE rationale as GoogleTest above: a plain CACHE set is a
+            # no-op once the variable is cached.
+            set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Enable testing of the benchmark library." FORCE)
+            # Without this the bundled copy pulls in a GoogleTest of its own,
+            # beside the one 3rdparty/googletest already provides.
+            set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "Enable building the unit tests which depend on gtest" FORCE)
+            set(BENCHMARK_ENABLE_INSTALL OFF CACHE BOOL "Enable installation of benchmark." FORCE)
+            set(BENCHMARK_INSTALL_DOCS OFF CACHE BOOL "Enable installation of documentation." FORCE)
+            # Defaults to ON upstream, which turns any new compiler's warnings
+            # into a build failure of a dependency this project does not own.
+            set(BENCHMARK_ENABLE_WERROR OFF CACHE BOOL "Build Release candidates with -Werror." FORCE)
+            add_subdirectory(${PROJECT_SOURCE_DIR}/3rdparty/benchmark ${PROJECT_BINARY_DIR}/3rdparty/benchmark EXCLUDE_FROM_ALL)
+            if (TARGET benchmark::benchmark_main)
+                set(BENCHMARK_FOUND TRUE)
             endif()
         endif()
     endif()

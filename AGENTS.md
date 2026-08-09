@@ -7,8 +7,8 @@ across independent modules, each maintained as its own git submodule under
 
 ## Repository Layout
 - `module/` — independent modules (e.g. `utility`, `feature`, more added over time), each its own git submodule
-- `3rdparty/` — bundled third-party test frameworks (read-only)
-- `script/ci/` — build/test/release scripts shared by GitLab CI and GitHub Actions
+- `3rdparty/` — bundled third-party test and benchmark frameworks (read-only)
+- `script/ci/` — build/test/benchmark/release scripts shared by GitLab CI and GitHub Actions
 - `CMakeLists.txt` / `CMakePresets.json` — build entry point; see CONTRIBUTING.md for the full preset table
 
 ```sh

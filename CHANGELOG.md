@@ -24,6 +24,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (override with `-C <config>` as before).
 
 ### Added
+- Google Benchmark as a bundled dependency under `3rdparty/benchmark`, with
+  `SCL_BUILD_BENCHMARKS` (off by default) and `SCL_ENABLE_GBENCH` to control
+  it, and routing for a module's `benchmark/` tree. A module without one is
+  skipped rather than failing the configure step.
+- `script/ci/run_benchmarks.sh`, beside `run_tests.sh`. It reads the output
+  directory out of the build tree's cache, fixes the repetition count so two
+  runs of a suite are comparable, and fails rather than reporting an empty
+  success when a build has no benchmark in it. There is deliberately no
+  benchmark preset: every preset names a toolchain, and "build the benchmarks"
+  is a separate axis, so the options are passed to an existing preset instead.
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,
   commit format, and the issue/PR workflow for automated contributors.
