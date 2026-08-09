@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Google Benchmark under `3rdparty/benchmark`, behind `SCL_BUILD_BENCHMARKS`, off by
   default.
+- An `arm-none-eabi` preset and toolchain file, cross-compiling to bare metal to
+  measure code size.
+- `script/ci/run_size.sh`, reporting the `.text` figure of a bare-metal build.
 - `script/ci/run_benchmarks.sh`, which fixes the repetition count.
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,

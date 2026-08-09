@@ -130,6 +130,22 @@
             }
         },
         {
+            "name": "arm-none-eabi",
+            "displayName": "GCC (arm-none-eabi, bare metal, size only)",
+            "description": "Cross-compile the freestanding groups for bare-metal ARM to measure code size. Nothing here runs: no tests, no examples, no install. Requires gcc-arm-none-eabi. Build tree: build/arm-none-eabi.",
+            "inherits": "base-not-darwin",
+            "generator": "Ninja Multi-Config",
+            "toolchainFile": "${sourceDir}/project/cmake/toolchain/arm-none-eabi.cmake",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "MinSizeRel;Release;Debug",
+                "SCL_BUILD_TESTS": "OFF",
+                "SCL_BUILD_EXAMPLES": "OFF",
+                "SCL_BUILD_BENCHMARKS": "ON",
+                "SCL_ENABLE_GBENCH": "OFF",
+                "SCL_INSTALL": "OFF"
+            }
+        },
+        {
             "name": "msvc-2022",
             "hidden": true,
             "inherits": "base-windows",
@@ -327,6 +343,11 @@
         {
             "name": "gcc-arm64",
             "configurePreset": "gcc-arm64",
+            "inherits": "build-not-darwin"
+        },
+        {
+            "name": "arm-none-eabi",
+            "configurePreset": "arm-none-eabi",
             "inherits": "build-not-darwin"
         },
         {

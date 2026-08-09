@@ -123,6 +123,7 @@ at once.
 | `clang-x64` / `gcc-x64` | Windows, Linux | `build/{clang,gcc}-x64` | Native 64-bit |
 | `clang-x86` / `gcc-x86` | Windows, Linux | `build/{clang,gcc}-x86` | 32-bit; needs 32-bit libs/multilib |
 | `clang-arm64` / `gcc-arm64` | Windows, Linux | `build/{clang,gcc}-arm64` | Cross; need `-DSCL_SYSROOT=<path>` (build-only) |
+| `arm-none-eabi` | Linux, WSL | `build/arm-none-eabi` | Cross to bare metal, to measure code size; needs `gcc-arm-none-eabi`. Nothing here runs |
 | `msvc-x64-2022` / `msvc-x86-2022` | Windows | `build/msvc-{x64,x86}-2022` | Native, via Visual Studio 2022 |
 | `msvc-x64-2026` / `msvc-x86-2026` | Windows | `build/msvc-{x64,x86}-2026` | Native, via Visual Studio 2026 |
 | `msvc-arm64-2022` / `msvc-arm64-2026` | Windows | `build/msvc-arm64-{2022,2026}` | Cross on an x64 host (build-only) |
@@ -157,6 +158,17 @@ script/ci/run_benchmarks.sh clang-x64    # runs every *_gbench in the build tree
 `run_benchmarks.sh` defaults to `Release` rather than `Debug`, and fixes the repetition
 count, so two runs of a suite are directly comparable — which is what a before/after
 figure quoted in an issue or MR has to be.
+
+The other half of a speed-for-size trade is measured on a bare-metal target. The
+`*_size` libraries are compiled to be measured and never linked or run, so they build
+where no startup code exists:
+
+```sh
+cmake --preset arm-none-eabi && cmake --build --preset arm-none-eabi
+script/ci/run_size.sh arm-none-eabi
+```
+
+The preset needs `gcc-arm-none-eabi` (`apt install gcc-arm-none-eabi`).
 
 Build artifacts are written under `bin/<toolchain-triplet>/` and are ignored by
 git. Useful CMake options:
