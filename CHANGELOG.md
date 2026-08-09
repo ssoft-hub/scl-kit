@@ -24,6 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (override with `-C <config>` as before).
 
 ### Added
+- Google Benchmark under `3rdparty/benchmark`, behind `SCL_BUILD_BENCHMARKS`, off by
+  default.
+- `script/ci/run_benchmarks.sh`, which fixes the repetition count.
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,
   commit format, and the issue/PR workflow for automated contributors.

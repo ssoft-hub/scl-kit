@@ -143,7 +143,20 @@ script/ci/build.sh clang-x64 Debug       # cmake --preset + --build --preset
 script/ci/run_tests.sh clang-x64 Debug   # ctest --preset
 ```
 
-Both default to the `default` preset when no argument is given.
+All the scripts default to the `default` preset when no argument is given.
+
+Benchmarks are off by default and have no preset of their own: every preset names a
+toolchain, and "build the benchmarks" is a separate axis, so the options go to whichever
+preset you want to measure. A benchmark is not a CTest test, so it has its own runner:
+
+```sh
+script/ci/build.sh clang-x64 Release -DSCL_BUILD_BENCHMARKS=ON -DSCL_BUILD_TESTS=OFF
+script/ci/run_benchmarks.sh clang-x64    # runs every *_gbench in the build tree
+```
+
+`run_benchmarks.sh` defaults to `Release` rather than `Debug`, and fixes the repetition
+count, so two runs of a suite are directly comparable — which is what a before/after
+figure quoted in an issue or MR has to be.
 
 Build artifacts are written under `bin/<toolchain-triplet>/` and are ignored by
 git. Useful CMake options:
@@ -152,8 +165,10 @@ git. Useful CMake options:
 |--------|---------|--------|
 | `SCL_BUILD_TESTS` | `ON` | Build and register the module tests |
 | `SCL_BUILD_EXAMPLES` | `ON` | Build the module examples |
+| `SCL_BUILD_BENCHMARKS` | `OFF` | Build the module benchmarks |
 | `SCL_INSTALL` | `ON` | Generate the install/export package (`find_package(scl)`) |
 | `SCL_ENABLE_GTEST` / `SCL_ENABLE_DOCTEST` / `SCL_ENABLE_CATCH2` | `ON` | Toggle a test framework |
+| `SCL_ENABLE_GBENCH` | `ON` | Toggle Google Benchmark |
 
 Consuming the installed package from another CMake project:
 
