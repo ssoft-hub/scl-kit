@@ -3,8 +3,8 @@
 #
 # Runs every *_gbench in a tree built with -DSCL_BUILD_BENCHMARKS=ON. The
 # repetition count is fixed here, a before/after pair being comparable only at
-# one count. CONFIG defaults to Release. SCL_BENCHMARK_TAG names the run,
-# SCL_BENCHMARK_OUT_DIR moves the JSON.
+# one count; SCL_BENCHMARK_REPETITIONS raises it for both. SCL_BENCHMARK_TAG
+# names the run, SCL_BENCHMARK_OUT_DIR moves the JSON.
 
 set -eu
 
@@ -45,7 +45,8 @@ for binary in "${BIN_DIR}"/*_gbench "${BIN_DIR}"/*_gbench.exe; do
     name="$(basename "${binary}" .exe)"
     result="${RESULTS_DIR}/${name}-${SCL_BENCHMARK_TAG:-latest}.json"
     set -x
-    "${binary}" --benchmark_repetitions=5 --benchmark_report_aggregates_only=true \
+    "${binary}" --benchmark_repetitions="${SCL_BENCHMARK_REPETITIONS:-5}" \
+        --benchmark_report_aggregates_only=true \
         --benchmark_out="${result}" --benchmark_out_format=json "$@"
     set +x
 done

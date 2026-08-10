@@ -155,9 +155,11 @@ script/ci/build.sh clang-x64 Release -DSCL_BUILD_BENCHMARKS=ON -DSCL_BUILD_TESTS
 script/ci/run_benchmarks.sh clang-x64    # runs every *_gbench in the build tree
 ```
 
-`run_benchmarks.sh` defaults to `Release` rather than `Debug`, and fixes the repetition
-count, so two runs of a suite are directly comparable — which is what a before/after
-figure quoted in an issue or MR has to be. Every run is also written as JSON under
+`run_benchmarks.sh` defaults to `Release` rather than `Debug`, and sets the repetition
+count for every suite it runs, so two runs are directly comparable — which is what a
+before/after figure quoted in an issue or MR has to be. Raise it with
+`SCL_BENCHMARK_REPETITIONS` when a case's coefficient of variation is too wide to resolve
+the difference being looked for. Every run is also written as JSON under
 `build/<preset>/benchmark-results/`; set `SCL_BENCHMARK_TAG` to keep one under its own
 name, so a pair survives switching branches:
 
