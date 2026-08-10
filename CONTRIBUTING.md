@@ -157,7 +157,23 @@ script/ci/run_benchmarks.sh clang-x64    # runs every *_gbench in the build tree
 
 `run_benchmarks.sh` defaults to `Release` rather than `Debug`, and fixes the repetition
 count, so two runs of a suite are directly comparable — which is what a before/after
-figure quoted in an issue or MR has to be.
+figure quoted in an issue or MR has to be. Every run is also written as JSON under
+`build/<preset>/benchmark-results/`; set `SCL_BENCHMARK_TAG` to keep one under its own
+name, so a pair survives switching branches:
+
+```sh
+SCL_BENCHMARK_TAG=before script/ci/run_benchmarks.sh clang-x64
+# ... change something, rebuild ...
+SCL_BENCHMARK_TAG=after  script/ci/run_benchmarks.sh clang-x64
+
+python 3rdparty/benchmark/tools/compare.py benchmarks \
+    build/clang-x64/benchmark-results/utility_hash_gbench-before.json \
+    build/clang-x64/benchmark-results/utility_hash_gbench-after.json
+```
+
+`compare.py` ships with Google Benchmark and reports the per-case difference with a
+significance test; it needs `numpy` and `scipy`. Without them the files are still plain
+JSON.
 
 The other half of a speed-for-size trade is measured on a bare-metal target. The
 `*_size` libraries are compiled to be measured and never linked or run, so they build

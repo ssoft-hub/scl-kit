@@ -29,7 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - An `arm-none-eabi` preset and toolchain file, cross-compiling to bare metal to
   measure code size.
 - `script/ci/run_size.sh`, reporting the `.text` figure of a bare-metal build.
-- `script/ci/run_benchmarks.sh`, which fixes the repetition count.
+- `script/ci/run_benchmarks.sh`, which fixes the repetition count and keeps each run
+  as JSON.
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,
   commit format, and the issue/PR workflow for automated contributors.

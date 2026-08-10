@@ -3,8 +3,8 @@
 #
 # Runs every *_gbench in a tree built with -DSCL_BUILD_BENCHMARKS=ON. The
 # repetition count is fixed here, a before/after pair being comparable only at
-# one count. CONFIG defaults to Release: a Debug timing measures the absence of
-# optimisation.
+# one count. CONFIG defaults to Release. SCL_BENCHMARK_TAG names the run,
+# SCL_BENCHMARK_OUT_DIR moves the JSON.
 
 set -eu
 
@@ -34,12 +34,19 @@ if [ ! -d "${BIN_DIR}" ]; then
     exit 1
 fi
 
+# A figure only in scrollback feeds no comparison tool, so each run is kept.
+RESULTS_DIR="${SCL_BENCHMARK_OUT_DIR:-build/${PRESET}/benchmark-results}"
+mkdir -p "${RESULTS_DIR}"
+
 FOUND=0
 for binary in "${BIN_DIR}"/*_gbench "${BIN_DIR}"/*_gbench.exe; do
     [ -f "${binary}" ] || continue
     FOUND=$((FOUND + 1))
+    name="$(basename "${binary}" .exe)"
+    result="${RESULTS_DIR}/${name}-${SCL_BENCHMARK_TAG:-latest}.json"
     set -x
-    "${binary}" --benchmark_repetitions=5 --benchmark_report_aggregates_only=true "$@"
+    "${binary}" --benchmark_repetitions=5 --benchmark_report_aggregates_only=true \
+        --benchmark_out="${result}" --benchmark_out_format=json "$@"
     set +x
 done
 
@@ -49,3 +56,9 @@ if [ "${FOUND}" -eq 0 ]; then
     echo "  configure with -DSCL_BUILD_BENCHMARKS=ON and rebuild" >&2
     exit 1
 fi
+
+echo
+echo "Results written to ${RESULTS_DIR}/"
+echo "Set SCL_BENCHMARK_TAG to keep a run under its own name, then compare two of them:"
+echo "  python 3rdparty/benchmark/tools/compare.py benchmarks <before>.json <after>.json"
+echo "  (that tool needs numpy and scipy; the files are plain JSON without them)"
