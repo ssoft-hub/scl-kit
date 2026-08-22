@@ -1,3 +1,12 @@
+# A pipeline runs for a merge request, for main and dev, and for a tag. A plain branch
+# push starts nothing, and the matrix answers for what a merge request proposes: the same
+# commits reach dev through one, and GitHub rebuilds the whole matrix there for nothing.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
+    - if: $CI_COMMIT_TAG
+
 stages: [build, release, publish]
 
 variables:
@@ -17,7 +26,6 @@ variables:
 .build_rules:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
 
 build:clang-x64:
   stage: build
@@ -100,8 +108,11 @@ mirror:github:
   image:
     name: alpine/git
     entrypoint: [""]
+  # One run carries every branch and tag across, so dev or main moving is enough for a
+  # branch. The tag entry is not spare: GitHub builds the documentation of a version
+  # from the mirrored tag.
   rules:
-    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_BRANCH =~ /^(main|dev)$/
     - if: $CI_COMMIT_TAG
   variables:
     GIT_STRATEGY: clone

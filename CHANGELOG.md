@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### CI
+
+- The GitLab pipeline runs for a merge request, for `dev` and `main`, and for a version
+  tag. A plain branch push started one before: the build matrix filtered itself out, but
+  the GitHub mirror took any branch, so pushing a topic branch spent runner minutes
+  copying the whole repository. The matrix now answers for a merge request alone — the
+  same commits reach `dev` through one, where GitHub rebuilds the identical Linux matrix
+  for free, on top of the Windows, macOS and MinGW jobs only it can run — while the
+  mirror waits for `dev` or `main` to move, or for a tag, and carries every branch and
+  tag across in that one run.
+
 ### Fixed
 - Fixed the macOS CI job (`build`, GitHub Actions), which was failing on
   every push: the bundled Xcode clang crashes compiling an NTTP example,
