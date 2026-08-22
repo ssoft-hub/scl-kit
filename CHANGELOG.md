@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CI
 
+- The GitHub workflows name the current majors of the actions they run:
+  `actions/checkout@v7` in place of `v6`, and `softprops/action-gh-release@v3` in place of
+  `v2`, whose difference is the Node 24 runtime the hosted runners already provide.
 - The GitLab pipeline runs for a merge request, for `dev` and `main`, and for a version
   tag. A plain branch push started one before: the build matrix filtered itself out, but
   the GitHub mirror took any branch, so pushing a topic branch spent runner minutes

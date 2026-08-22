@@ -72,7 +72,7 @@ jobs:
             test: true
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -140,7 +140,7 @@ jobs:
       - name: Install toolchain
         run: apt-get update -qq && apt-get install -y -qq cmake ninja-build git ${{ matrix.packages }}
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -167,7 +167,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
 
