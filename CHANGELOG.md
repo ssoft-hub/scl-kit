@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Fixed
+- The cached `HAVE_STD_REGEX` probe that keeps Google Benchmark from configuring
+  is documented.
 - Fixed the macOS CI job (`build`, GitHub Actions), which was failing on
   every push: the bundled Xcode clang crashes compiling an NTTP example,
   blocking everything after it in the build. The job now builds with a

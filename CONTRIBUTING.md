@@ -177,6 +177,14 @@ python 3rdparty/benchmark/tools/compare.py benchmarks \
 significance test; it needs `numpy` and `scipy`. Without them the files are still plain
 JSON.
 
+On Windows with the MinGW GCC, a first configure that cannot run a compiled probe caches
+`HAVE_STD_REGEX:BOOL=FALSE`, and every later configure of that tree then fails with
+"Failed to determine the source files for the regular expression backend" from the bundled
+Google Benchmark. The probe result is cached, so fixing the environment alone changes
+nothing: delete the `HAVE_STD_REGEX`, `HAVE_GNU_POSIX_REGEX` and `HAVE_POSIX_REGEX` lines
+from `build/<preset>/CMakeCache.txt`, or the tree, and configure again with the compiler's
+runtime directory on `PATH`.
+
 The other half of a speed-for-size trade is measured on a bare-metal target. The
 `*_size` libraries are compiled to be measured and never linked or run, so they build
 where no startup code exists:
