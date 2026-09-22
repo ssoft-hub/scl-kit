@@ -21,9 +21,9 @@ stages: [build, release]
 
 build:clang-x64:
   extends: .build_job
-  # Ubuntu's default clang crashes instantiating module/feature's
-  # detection-idiom templates.
-  image: silkeh/clang:21
+  # A published release rather than the base image's default, so a raised image
+  # cannot move the compiler under the job.
+  image: silkeh/clang:22
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
   script:
