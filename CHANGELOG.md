@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (override with `-C <config>` as before).
 
 ### Added
+- `SCL_ENABLE_RTTI` and `SCL_ENABLE_EXCEPTIONS` options, both `ON`.
+- `--no-rtti`, `--no-exceptions` and `--benchmarks` flags on the `script/ci/`
+  helpers, each variant building in its own tree and `bin/` directory.
 - Google Benchmark under `3rdparty/benchmark`, behind `SCL_BUILD_BENCHMARKS`, off by
   default.
 - An `arm-none-eabi` preset and toolchain file, cross-compiling to bare metal to
@@ -89,3 +92,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   writes into `build/<toolchain>/`, which clangd and IDE shadow builds don't
   search. Last build wins; a no-op (not an error) on generators that don't
   produce the database at all (`msvc-*`'s Visual Studio generator).
+
+### CI
+- Every job builds and tests `Release`, not `Debug`.
+- `.github/workflows/build.yml` builds every branch and cancels superseded runs.
+- Linux entries for the RTTI-off build, and a Windows clang entry that builds
+  without tests.

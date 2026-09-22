@@ -35,10 +35,10 @@ option(SCL_ENABLE_CATCH2  "Enable Catch2-based tests (if available)"       ON)
 
 option(SCL_ENABLE_GBENCH  "Enable Google Benchmark based benchmarks (if available)" ON)
 
-# Optional variant tag: keeps bin/ outputs of same-toolchain builds with
-# different options apart (e.g. -DSCL_BUILD_VARIANT=notests). Build trees are
-# already separated per preset; see CONTRIBUTING.md "Independent builds".
-set(SCL_BUILD_VARIANT "" CACHE STRING "Suffix appended to the toolchain triplet to isolate option variants")
+option(SCL_ENABLE_RTTI       "Compile with RTTI"       ON)
+option(SCL_ENABLE_EXCEPTIONS "Compile with exceptions" ON)
+
+set(SCL_BUILD_VARIANT "" CACHE STRING "Suffix appended to the toolchain triplet, after the one composed from the options above")
 
 # -----------------------------
 # C++ standard and common settings
@@ -52,6 +52,25 @@ set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(SCL_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+
+if (NOT SCL_ENABLE_RTTI)
+    if (MSVC)
+        string(REGEX REPLACE "(^| )[-/]GR-?( |$)" " " CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+        add_compile_options($<$<COMPILE_LANGUAGE:CXX>:/GR->)
+    else()
+        add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>)
+    endif()
+endif()
+
+if (NOT SCL_ENABLE_EXCEPTIONS)
+    if (MSVC)
+        string(REGEX REPLACE "(^| )[-/]EHs?c?-?( |$)" " " CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+        add_compile_options($<$<COMPILE_LANGUAGE:CXX>:/EHs-c->)
+        add_compile_definitions($<$<COMPILE_LANGUAGE:CXX>:_HAS_EXCEPTIONS=0>)
+    else()
+        add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>)
+    endif()
+endif()
 
 # -----------------------------
 # One place building (unified output directories)
@@ -92,6 +111,19 @@ elseif (_proc MATCHES "^(aarch64|arm64)$")
 endif()
 
 set(_scl_toolchain "${CMAKE_SYSTEM_NAME}-${CMAKE_CXX_COMPILER_ID}.${CMAKE_CXX_COMPILER_VERSION}-${_proc}")
+set(_scl_variant "")
+if (NOT SCL_ENABLE_RTTI)
+    list(APPEND _scl_variant "nortti")
+endif()
+if (NOT SCL_ENABLE_EXCEPTIONS)
+    list(APPEND _scl_variant "noexc")
+endif()
+if (SCL_BUILD_BENCHMARKS)
+    list(APPEND _scl_variant "bench")
+endif()
+foreach(_part IN LISTS _scl_variant)
+    string(APPEND _scl_toolchain "-${_part}")
+endforeach()
 # STREQUAL "" rather than `if (SCL_BUILD_VARIANT)`: CMake's if() treats
 # "0"/"OFF"/"NO" as false too, which would silently drop a variant tag
 # literally named that.
@@ -99,7 +131,7 @@ if (NOT SCL_BUILD_VARIANT STREQUAL "")
     string(APPEND _scl_toolchain "-${SCL_BUILD_VARIANT}")
 endif()
 # FORCE: reconfiguring an existing tree with a different compiler, arch, or
-# SCL_BUILD_VARIANT must update the triplet — a plain CACHE set is a no-op once
+# option set must update the triplet — a plain CACHE set is a no-op once
 # the cache entry already exists, silently keeping the stale directory layout.
 set(SCL_TOOLCHAIN "${_scl_toolchain}" CACHE STRING "Toolchain triplet used for output directory layout" FORCE)
 

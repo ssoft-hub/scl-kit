@@ -1,9 +1,11 @@
 #!/usr/bin/env sh
 # Configure and build the ScL Toolkit through a CMake preset.
 #
-# Delegating to a preset means scripts and IDEs share the exact same build tree
-# (build/<preset>/), keyed by compiler + architecture. The compiler version and
-# architecture appear on the artifacts under bin/<OS>-<Compiler>.<Version>-<arch>/.
+# Delegating to a preset means scripts and IDEs share the exact same build tree,
+# keyed by compiler + architecture: build/<preset>/ by default, and
+# build/<preset><variant>/ where a variant flag is given. The compiler version
+# and architecture appear on the artifacts under
+# bin/<OS>-<Compiler>.<Version>-<arch>/.
 #
 # Usage:
 #   script/ci/build.sh [PRESET] [CONFIG] [extra cmake configure args...]
@@ -16,6 +18,9 @@
 #            in at configure time via CMAKE_BUILD_TYPE, so the requested
 #            CONFIG is honored either way. May be omitted even when passing
 #            extra args, since a "-..." argument is never mistaken for it.
+#   --no-rtti, --no-exceptions, --benchmarks select a build variant; each gets
+#            its own build tree and its own bin/ directory, so it never
+#            reconfigures the default build. See script/ci/variant.sh.
 #   Extra arguments are forwarded to the configure step, e.g.
 #            script/ci/build.sh gcc-arm64 -DSCL_SYSROOT=/opt/aarch64-sysroot
 #
@@ -23,8 +28,13 @@
 #   script/ci/build.sh                    # default preset, Debug
 #   script/ci/build.sh clang-x64 Release
 #   script/ci/build.sh msvc-x64-2022 Debug
+#   script/ci/build.sh clang-x64 Release --no-rtti
+#   script/ci/build.sh clang-x64 Release --no-exceptions -DSCL_BUILD_TESTS=OFF
 
 set -eu
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+. "${SCRIPT_DIR}/variant.sh"
 
 PRESET="${1:-default}"
 [ $# -gt 0 ] && shift
@@ -37,9 +47,8 @@ case "${1-}" in
     *) CONFIG="$1"; shift ;;
 esac
 
-SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 cd "${SCRIPT_DIR}/../.."
 
 set -x
-cmake --preset "${PRESET}" -DCMAKE_BUILD_TYPE="${CONFIG}" "$@"
+cmake --preset "${PRESET}" -DCMAKE_BUILD_TYPE="${CONFIG}" ${SCL_VARIANT_DEFS} "$@"
 cmake --build --preset "${PRESET}" --config "${CONFIG}"

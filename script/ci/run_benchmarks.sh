@@ -1,12 +1,15 @@
 #!/usr/bin/env sh
-# Usage: script/ci/run_benchmarks.sh [PRESET] [CONFIG] [benchmark args...]
+# Usage: script/ci/run_benchmarks.sh [PRESET] [CONFIG] --benchmarks [benchmark args...]
 #
-# Runs every *_gbench in a tree built with -DSCL_BUILD_BENCHMARKS=ON. The
-# repetition count is fixed here, a before/after pair being comparable only at
-# one count; SCL_BENCHMARK_REPETITIONS raises it for both. SCL_BENCHMARK_TAG
-# names the run, SCL_BENCHMARK_OUT_DIR moves the JSON.
+# Runs every *_gbench in the tree script/ci/build.sh --benchmarks populated, so the
+# flag goes here too. The repetition count is fixed here, since a before/after pair
+# is comparable only at one count; SCL_BENCHMARK_REPETITIONS raises it for both.
+# SCL_BENCHMARK_TAG names the run, SCL_BENCHMARK_OUT_DIR moves the JSON.
 
 set -eu
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+. "${SCRIPT_DIR}/variant.sh"
 
 PRESET="${1:-default}"
 [ $# -gt 0 ] && shift
@@ -18,13 +21,13 @@ case "${1-}" in
     *) CONFIG="$1"; shift ;;
 esac
 
-SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 cd "${SCRIPT_DIR}/../.."
 
-CACHE="build/${PRESET}/CMakeCache.txt"
+CACHE="build/${PRESET}${SCL_BUILD_SUFFIX}/CMakeCache.txt"
 if [ ! -f "${CACHE}" ]; then
-    echo "run_benchmarks.sh: no build tree for preset '${PRESET}'." >&2
-    echo "  script/ci/build.sh ${PRESET} ${CONFIG} -DSCL_BUILD_BENCHMARKS=ON -DSCL_BUILD_TESTS=OFF" >&2
+    echo "run_benchmarks.sh: no build tree '${PRESET}${SCL_BUILD_SUFFIX}'." >&2
+    echo "  script/ci/build.sh          ${PRESET} ${CONFIG} --benchmarks" >&2
+    echo "  script/ci/run_benchmarks.sh ${PRESET} ${CONFIG} --benchmarks" >&2
     exit 1
 fi
 
@@ -35,7 +38,7 @@ if [ ! -d "${BIN_DIR}" ]; then
 fi
 
 # A figure only in scrollback feeds no comparison tool, so each run is kept.
-RESULTS_DIR="${SCL_BENCHMARK_OUT_DIR:-build/${PRESET}/benchmark-results}"
+RESULTS_DIR="${SCL_BENCHMARK_OUT_DIR:-build/${PRESET}${SCL_BUILD_SUFFIX}/benchmark-results}"
 mkdir -p "${RESULTS_DIR}"
 
 FOUND=0
@@ -54,7 +57,7 @@ done
 # An empty run means benchmarks were off, which is the default; do not pass.
 if [ "${FOUND}" -eq 0 ]; then
     echo "run_benchmarks.sh: no *_gbench binary in '${BIN_DIR}'." >&2
-    echo "  configure with -DSCL_BUILD_BENCHMARKS=ON and rebuild" >&2
+    echo "  build with --benchmarks and run this again" >&2
     exit 1
 fi
 

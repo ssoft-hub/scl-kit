@@ -2,11 +2,15 @@ name: Build (macOS, Windows, Linux & MinGW)
 
 # GitHub gives free macOS and Windows runners, which GitLab.com's shared
 # runners don't (or charge extra for). The `build` job covers those:
-# msvc (x64/x86/arm64) and macos (arm64/universal).
+# msvc (x64/x86/arm64), macos (arm64/universal), and a Windows clang entry
+# targeting the MSVC ABI. That entry builds without tests: its standard library
+# declares std::any only under _HAS_STATIC_RTTI, while the vendored GoogleTest
+# specialises UniversalPrinter<std::any> unconditionally, so every translation
+# unit including gtest.h fails to compile once RTTI is off.
 #
-# `build-linux` duplicates .gitlab-ci.yml's clang/gcc matrix here too, so the
+# `build-linux` carries .gitlab-ci.yml's clang/gcc matrix here too, so the
 # full matrix is verifiable on GitHub alone (no dependency on GitLab CI being
-# up) and via the throwaway-mirror-PR trick used to pre-verify this file.
+# up). It also carries the RTTI-off entries, which GitLab does not.
 #
 # `build-mingw` covers gcc and clang targeting the mingw-w64 (GNU) ABI on
 # Windows, via MSYS2 — a genuinely different environment from `msvc-*`
@@ -45,9 +49,11 @@ name: Build (macOS, Windows, Linux & MinGW)
 
 on:
   push:
-    branches: [main, dev]
-  pull_request:
-    branches: ['*']
+    branches: ['**']
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -70,6 +76,10 @@ jobs:
           - os: windows-11-arm
             preset: msvc-arm64-2022
             test: true
+          - os: windows-2022
+            preset: clang-x64
+            flags: --no-rtti -DSCL_BUILD_TESTS=OFF
+            test: false
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
@@ -88,16 +98,16 @@ jobs:
             export CXX=/opt/homebrew/opt/llvm/bin/clang++
             # Homebrew LLVM's llvm-ar produces archives Apple's ld can't read
             # for fat (multi-arch) binaries -- keep Apple's native archiver.
-            script/ci/build.sh ${{ matrix.preset }} Debug \
+            script/ci/build.sh ${{ matrix.preset }} Release ${{ matrix.flags }} \
               -DCMAKE_AR=/usr/bin/ar -DCMAKE_RANLIB=/usr/bin/ranlib
           else
-            script/ci/build.sh ${{ matrix.preset }} Debug
+            script/ci/build.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
           fi
 
       - name: Test
         if: matrix.test
         shell: bash
-        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
 
   build-linux:
     # Same images as .gitlab-ci.yml's Linux jobs, for the same reason: a clang job
@@ -132,6 +142,16 @@ jobs:
             image: ubuntu:24.04
             packages: crossbuild-essential-arm64
             test: false
+          - preset: clang-x64
+            image: silkeh/clang:22
+            packages: ""
+            flags: --no-rtti
+            test: true
+          - preset: gcc-x64
+            image: ubuntu:24.04
+            packages: g++
+            flags: --no-rtti
+            test: true
     runs-on: ubuntu-latest
     container: ${{ matrix.image }}
     steps:
@@ -145,11 +165,11 @@ jobs:
           submodules: recursive
 
       - name: Configure and build
-        run: script/ci/build.sh ${{ matrix.preset }} Debug
+        run: script/ci/build.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
 
       - name: Test
         if: matrix.test
-        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
 
   build-mingw:
     strategy:
@@ -178,7 +198,7 @@ jobs:
           install: ${{ matrix.packages }} cmake ninja git
 
       - name: Configure and build
-        run: script/ci/build.sh ${{ matrix.preset }} Debug
+        run: script/ci/build.sh ${{ matrix.preset }} Release
 
       - name: Test
-        run: script/ci/run_tests.sh ${{ matrix.preset }} Debug
+        run: script/ci/run_tests.sh ${{ matrix.preset }} Release

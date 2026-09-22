@@ -96,26 +96,38 @@ Four axes can vary between builds, and each is isolated differently:
   of `build/gcc-x64`. The same trick works for pinning a specific Clang/MSVC
   install instead of whatever bare `clang`/`cl` resolves to on `PATH`.
 
-- **Different options, same compiler and version** (e.g. tests on vs. off) —
-  two levels of isolation, pick what you need:
+- **Different options, same compiler and version** — a flag, not a preset:
 
-  - *Output only* — set `-DSCL_BUILD_VARIANT=<tag>` at configure time. It is
-    appended to the toolchain triplet, so
-    `cmake --preset gcc-x64 -DSCL_BUILD_VARIANT=notests -DSCL_BUILD_TESTS=OFF`
-    builds into `bin/<toolchain>-notests/` instead of colliding with the
-    default `bin/<toolchain>/`. The `build/gcc-x64` cache itself is still
-    shared between the plain and `-notests` runs, so only one of them can be
-    configured at a time.
-  - *Output and build tree* — give the option set its own preset name in
-    `CMakeUserPresets.json` too (see
-    [`CMakeUserPresets.json.example`](project/cmake/CMakeUserPresets.json.example)),
-    setting `SCL_BUILD_VARIANT` and the differing options as `cacheVariables`.
-    Both variants then have independent `build/<preset>` trees and can stay
-    configured side by side.
+  ```sh
+  script/ci/build.sh          clang-x64 Debug --no-rtti
+  script/ci/run_tests.sh      clang-x64 Debug --no-rtti
+  script/ci/build.sh          clang-x64 Release --benchmarks
+  script/ci/run_benchmarks.sh clang-x64 Release --benchmarks
+  ```
 
-These compose: a `CMakeUserPresets.json` preset can pin both a compiler
-version *and* a variant tag in the same entry if you need both axes isolated
-at once.
+  `--no-rtti` builds in `build/clang-x64-nortti/` and writes to
+  `bin/<toolchain>-nortti/`, so it stands beside the plain build rather than
+  reconfiguring it. `--no-exceptions` and `--benchmarks` work the same way, and
+  the flags compose in a fixed order, so `--no-rtti --no-exceptions` and
+  `--no-exceptions --no-rtti` name one tree. A flag names the tree rather than
+  the command, so it goes to every script in the sequence, the runner included.
+
+  Without the scripts, the environment variable `SCL_BUILD_SUFFIX` picks the tree,
+  since every preset's `binaryDir` ends in it:
+  `SCL_BUILD_SUFFIX=-nortti cmake --preset clang-x64 -DSCL_ENABLE_RTTI=OFF`
+  configures the tree `--no-rtti` does, and `cmake --build --preset` and
+  `ctest --preset` reach it with the same variable set.
+
+  `--no-exceptions` also needs `-DSCL_BUILD_EXAMPLES=OFF -DSCL_BUILD_TESTS=OFF`
+  on a hosted target. The library reacts to the option through `SCL_HAS_RTTI` and
+  `SCL_HAS_EXCEPTIONS`, which `<scl/utility/preprocessor/rtti.h>` and
+  `<scl/utility/preprocessor/exceptions.h>` derive from the compiler, and drops
+  the throwing overloads of `any_cast` with them; the examples and several tests
+  call those overloads without guarding on the macro. The `arm-none-eabi` preset
+  builds with both options off.
+
+A `CMakeUserPresets.json` preset pinning a compiler version takes the variant
+flags like any shipped preset does.
 
 | Preset | Host | Build tree | Notes |
 |--------|------|------------|-------|
@@ -207,6 +219,8 @@ git. Useful CMake options:
 | `SCL_INSTALL` | `ON` | Generate the install/export package (`find_package(scl)`) |
 | `SCL_ENABLE_GTEST` / `SCL_ENABLE_DOCTEST` / `SCL_ENABLE_CATCH2` | `ON` | Toggle a test framework |
 | `SCL_ENABLE_GBENCH` | `ON` | Toggle Google Benchmark |
+| `SCL_ENABLE_RTTI` | `ON` | Compile with RTTI (`--no-rtti` turns it off) |
+| `SCL_ENABLE_EXCEPTIONS` | `ON` | Compile with exceptions (`--no-exceptions` turns it off) |
 
 Consuming the installed package from another CMake project:
 

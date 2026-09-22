@@ -27,8 +27,8 @@ build:clang-x64:
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
   script:
-    - script/ci/build.sh clang-x64 Debug
-    - script/ci/run_tests.sh clang-x64 Debug
+    - script/ci/build.sh clang-x64 Release
+    - script/ci/run_tests.sh clang-x64 Release
 
 build:gcc-x64:
   extends: .build_job
@@ -36,8 +36,8 @@ build:gcc-x64:
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git
   script:
-    - script/ci/build.sh gcc-x64 Debug
-    - script/ci/run_tests.sh gcc-x64 Debug
+    - script/ci/build.sh gcc-x64 Release
+    - script/ci/run_tests.sh gcc-x64 Release
 
 # ---------------------
 # Release

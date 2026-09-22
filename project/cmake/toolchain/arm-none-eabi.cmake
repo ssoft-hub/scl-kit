@@ -26,10 +26,9 @@ if (NOT DEFINED SCL_ARM_CPU OR SCL_ARM_CPU STREQUAL "")
 endif()
 
 # Per-symbol sections, so .text reflects what a firmware link would keep.
-# Exceptions and RTTI are off: that is the profile these targets build in.
 set(_SCL_ARM_FLAGS "-mcpu=${SCL_ARM_CPU} -mthumb -ffunction-sections -fdata-sections")
 set(CMAKE_C_FLAGS_INIT   "${_SCL_ARM_FLAGS}")
-set(CMAKE_CXX_FLAGS_INIT "${_SCL_ARM_FLAGS} -fno-exceptions -fno-rtti")
+set(CMAKE_CXX_FLAGS_INIT "${_SCL_ARM_FLAGS}")
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
