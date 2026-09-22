@@ -1,22 +1,9 @@
-# Consume the build-variant flags from a caller's arguments.
-#
-# Sourced without arguments, before the caller reads "$@":
-#   SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-#   . "${SCRIPT_DIR}/variant.sh"
-#
-# Recognised anywhere in the argument list:
-#   --no-rtti         -DSCL_ENABLE_RTTI=OFF
-#   --no-exceptions   -DSCL_ENABLE_EXCEPTIONS=OFF
-#   --benchmarks      -DSCL_BUILD_BENCHMARKS=ON -DSCL_BUILD_TESTS=OFF
-#
-# Leaves the other arguments in "$@", sets SCL_VARIANT_DEFS to the configure
-# arguments the flags stand for, and exports SCL_BUILD_SUFFIX, which every
-# preset's binaryDir ends in - so the four scripts address one build tree and a
-# variant never reconfigures the default one.
-#
-# The suffix is composed in the same fixed order CMakeLists.txt composes the
-# toolchain triplet's variant tag in, so one option set names one build tree
-# and one bin/ directory whatever order the flags are written in.
+# Sourced by the four script/ci helpers before they read "$@". Consumes
+# --no-rtti, --no-exceptions and --benchmarks from anywhere in the list, leaves
+# the rest in "$@", sets SCL_VARIANT_DEFS and exports SCL_BUILD_SUFFIX, which
+# every preset's binaryDir ends in. The suffix is composed in the fixed order
+# CMakeLists.txt composes the triplet's variant tag in, so one option set names
+# one tree and one bin/ whatever order the flags are written in.
 
 SCL_VARIANT_DEFS=""
 _scl_nortti=0

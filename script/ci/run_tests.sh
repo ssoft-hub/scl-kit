@@ -1,23 +1,8 @@
 #!/usr/bin/env sh
-# Run the ScL Toolkit test suite through a CMake test preset.
+# Usage: script/ci/run_tests.sh [PRESET] [CONFIG] [--no-rtti|--no-exceptions]
 #
-# Uses the same preset and the same variant flags as script/ci/build.sh, so it
-# drives CTest in the exact build tree the build populated. Cross presets (e.g.
-# clang-arm64) have no test preset: their binaries do not run on the host.
-#
-# Usage:
-#   script/ci/run_tests.sh [PRESET] [CONFIG]
-#
-#   PRESET   CMake test preset            (default: default)
-#   CONFIG   configuration to test for multi-config presets (default: Debug)
-#   --no-rtti, --no-exceptions name the variant to test, and must match the
-#            ones script/ci/build.sh was given.
-#
-# Examples:
-#   script/ci/run_tests.sh
-#   script/ci/run_tests.sh clang-x64 Release
-#   script/ci/run_tests.sh msvc-x64-2022 Debug
-#   script/ci/run_tests.sh clang-x64 Debug --no-rtti
+# Drives CTest in the tree script/ci/build.sh populated, so the flags must match.
+# A cross preset has no test preset: its binaries do not run on the host.
 
 set -eu
 

@@ -1,52 +1,5 @@
 name: Build (macOS, Windows, Linux & MinGW)
 
-# GitHub gives free macOS and Windows runners, which GitLab.com's shared
-# runners don't (or charge extra for). The `build` job covers those:
-# msvc (x64/x86/arm64), macos (arm64/universal), and a Windows clang entry
-# targeting the MSVC ABI. That entry builds without tests: its standard library
-# declares std::any only under _HAS_STATIC_RTTI, while the vendored GoogleTest
-# specialises UniversalPrinter<std::any> unconditionally, so every translation
-# unit including gtest.h fails to compile once RTTI is off.
-#
-# `build-linux` carries .gitlab-ci.yml's clang/gcc matrix here too, so the
-# full matrix is verifiable on GitHub alone (no dependency on GitLab CI being
-# up). It also carries the RTTI-off entries, which GitLab does not.
-#
-# `build-mingw` covers gcc and clang targeting the mingw-w64 (GNU) ABI on
-# Windows, via MSYS2 — a genuinely different environment from `msvc-*`
-# (different runtime/ABI), not a duplicate of it. Only the x64 pair is
-# covered: MSYS2's 32-bit MINGW32/CLANG32 toolchains are not multilib, so the
-# `clang-x86`/`gcc-x86` presets' `-m32` flag (needed to select 32-bit output
-# from the 64-bit-capable Linux/MSVC toolchains) does not apply there and
-# would need a dedicated preset instead.
-#
-# Windows is pinned to windows-2022, not windows-latest: the presets use the
-# "Visual Studio 17 2022" CMake generator by name, and windows-latest is not
-# guaranteed to keep shipping that VS version once GitHub rolls the alias
-# forward to a newer runner image.
-#
-# msvc-arm64 runs on windows-11-arm (a genuine ARM64 host), not
-# windows-2022 (x64): an ARM64 binary cannot execute on an x64 runner at
-# all. Since GitHub's ARM64 Windows runners come with VS preinstalled,
-# this preset is not cross/build-only in CI the way CONTRIBUTING.md's
-# preset table describes it for a plain x64 dev machine.
-#
-# No native macos-x64 job: GitHub's Intel-hosted macos-13 runners are
-# retired (jobs requesting that label queue forever, never getting a
-# runner assigned). x86_64 is still covered at the binary level through
-# macos-universal.
-#
-# macos-14's bundled Xcode clang (AppleClang 15.0.0) segfaults compiling
-# module/utility's key_nttp.cpp example (a known AppleClang 15/16 frontend
-# bug around C++20 class-type NTTPs used in template specializations) --
-# the same class of crash `build-linux` avoids by pinning a published
-# Clang release instead of Ubuntu's stock one. macOS has no Docker
-# image option, so the `build` job installs Homebrew LLVM instead and
-# points CC/CXX at it for the macos-14 matrix entries. CMAKE_AR/RANLIB
-# stay pinned to Apple's native /usr/bin/ar and /usr/bin/ranlib though --
-# Homebrew LLVM's llvm-ar writes archives Apple's ld can't read back for
-# fat (multi-arch) binaries, which macos-universal needs.
-
 on:
   push:
     branches: ['**']
@@ -76,6 +29,9 @@ jobs:
           - os: windows-11-arm
             preset: msvc-arm64-2022
             test: true
+          # No tests: the MSVC STL declares std::any only under _HAS_STATIC_RTTI,
+          # and the vendored GoogleTest specialises UniversalPrinter<std::any> for it
+          # unconditionally, so gtest.h stops compiling once RTTI is off.
           - os: windows-2022
             preset: clang-x64
             flags: --no-rtti -DSCL_BUILD_TESTS=OFF
@@ -86,6 +42,7 @@ jobs:
         with:
           submodules: recursive
 
+      # macos-14's Xcode clang segfaults on a C++20 class-type NTTP in an example.
       - name: Install LLVM (macOS)
         if: runner.os == 'macOS'
         run: brew install llvm
@@ -96,8 +53,7 @@ jobs:
           if [ "${{ runner.os }}" = "macOS" ]; then
             export CC=/opt/homebrew/opt/llvm/bin/clang
             export CXX=/opt/homebrew/opt/llvm/bin/clang++
-            # Homebrew LLVM's llvm-ar produces archives Apple's ld can't read
-            # for fat (multi-arch) binaries -- keep Apple's native archiver.
+            # llvm-ar writes archives Apple's ld cannot read back for a fat binary.
             script/ci/build.sh ${{ matrix.preset }} Release ${{ matrix.flags }} \
               -DCMAKE_AR=/usr/bin/ar -DCMAKE_RANLIB=/usr/bin/ranlib
           else
@@ -110,10 +66,7 @@ jobs:
         run: script/ci/run_tests.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
 
   build-linux:
-    # Same images as .gitlab-ci.yml's Linux jobs, for the same reason: a clang job
-    # pins a published release rather than take ubuntu-latest's default, so a
-    # raised base image cannot move the compiler under the matrix. 22 is the
-    # newest release that image publishes.
+    # A pinned image, so a raised base image cannot move the compiler under the matrix.
     strategy:
       fail-fast: false
       matrix:
@@ -155,8 +108,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ${{ matrix.image }}
     steps:
-      # Runs before checkout: neither image ships git, which actions/checkout
-      # needs for the recursive-submodule fetch.
+      # Before checkout: neither image ships the git that actions/checkout needs.
       - name: Install toolchain
         run: apt-get update -qq && apt-get install -y -qq cmake ninja-build git ${{ matrix.packages }}
 
@@ -172,6 +124,7 @@ jobs:
         run: script/ci/run_tests.sh ${{ matrix.preset }} Release ${{ matrix.flags }}
 
   build-mingw:
+    # x64 only: MSYS2's 32-bit toolchains are not multilib, so -m32 does not apply.
     strategy:
       fail-fast: false
       matrix:

@@ -7,20 +7,10 @@ project(ScL
     DESCRIPTION "ScL C++ Toolkit"
 )
 
-# Modules composed into the toolkit. This list drives the module/example/test
-# subdirectories, the installed target set, and the find_package() component
-# list in SCLConfig.cmake.in — wiring a new module means extending it here only.
-# Order matters: a module may fall back to find_package(scl COMPONENTS ...)
-# for a dependency not yet built in-tree (see module/feature's scl::utility
-# guard), so a dependency must be listed before its dependents.
+# Order matters: a dependency is listed before its dependents.
 set(SCL_MODULES utility feature)
 
-# -----------------------------
-# Global options
-# -----------------------------
-# Default to OFF when scl-kit is consumed via add_subdirectory()/FetchContent:
-# an embedding consumer gets just the scl targets, without our tests, examples,
-# or install rules.
+# OFF for an embedding consumer, which wants the scl targets alone.
 option(SCL_BUILD_EXAMPLES "Build examples" ${PROJECT_IS_TOP_LEVEL})
 option(SCL_BUILD_TESTS    "Build tests"    ${PROJECT_IS_TOP_LEVEL})
 option(SCL_INSTALL        "Enable install/export packaging" ${PROJECT_IS_TOP_LEVEL})
@@ -28,7 +18,6 @@ option(SCL_INSTALL        "Enable install/export packaging" ${PROJECT_IS_TOP_LEV
 # Off even at top level: a run is long and means nothing outside Release.
 option(SCL_BUILD_BENCHMARKS "Build benchmarks" OFF)
 
-# Test framework toggles
 option(SCL_ENABLE_GTEST   "Enable GoogleTest-based tests (if available)"   ON)
 option(SCL_ENABLE_DOCTEST "Enable doctest-based tests (if available)"      ON)
 option(SCL_ENABLE_CATCH2  "Enable Catch2-based tests (if available)"       ON)
@@ -40,14 +29,9 @@ option(SCL_ENABLE_EXCEPTIONS "Compile with exceptions" ON)
 
 set(SCL_BUILD_VARIANT "" CACHE STRING "Suffix appended to the toolchain triplet, after the one composed from the options above")
 
-# -----------------------------
-# C++ standard and common settings
-# -----------------------------
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-# Keep compiler extensions on: on macOS some libc/system facilities are only
-# exposed under the GNU dialect (e.g. -std=gnu++20), so a strict -std=c++20
-# fails to pull them in.
+# macOS exposes some libc facilities only under the GNU dialect.
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -72,33 +56,19 @@ if (NOT SCL_ENABLE_EXCEPTIONS)
     endif()
 endif()
 
-# -----------------------------
-# One place building (unified output directories)
-# -----------------------------
-# Compose a toolchain "triplet": <OS>-<Compiler>.<Version>-<Arch>
-# Examples:
-#   Linux-GNU.13.2.0-x64
-#   Windows-MSVC.19.41-x64
-#   Darwin-AppleClang.15.0.0-arm64
-#
-# The arch component must describe the *target*, not the host:
-# CMAKE_SYSTEM_PROCESSOR keeps reporting the host for VS `-A`, `-m32`, and
-# CMAKE_OSX_ARCHITECTURES builds, which would fold different-architecture
-# builds into one bin/ directory.
+# The arch component describes the target: CMAKE_SYSTEM_PROCESSOR reports the
+# host for a VS -A, an -m32 and a CMAKE_OSX_ARCHITECTURES build alike.
 if (CMAKE_OSX_ARCHITECTURES)
     string(REPLACE ";" "+" _proc "${CMAKE_OSX_ARCHITECTURES}")
 elseif (CMAKE_GENERATOR_PLATFORM)
     set(_proc "${CMAKE_GENERATOR_PLATFORM}")
 else()
-    # Also the path taken for cross builds: the toolchain files set
-    # CMAKE_SYSTEM_PROCESSOR from SCL_TARGET_TRIPLET before this runs.
     set(_proc "${CMAKE_SYSTEM_PROCESSOR}")
 endif()
 
 string(TOLOWER "${_proc}" _proc)
 if (_proc MATCHES "^(amd64|x86_64|x64)$")
-    # -m32 builds keep the host CMAKE_SYSTEM_PROCESSOR; pointer size tells
-    # the actual target width.
+    # An -m32 build keeps the host processor; the pointer size tells the width.
     if (CMAKE_SIZEOF_VOID_P EQUAL 4)
         set(_proc "x86")
     else()
@@ -124,21 +94,16 @@ endif()
 foreach(_part IN LISTS _scl_variant)
     string(APPEND _scl_toolchain "-${_part}")
 endforeach()
-# STREQUAL "" rather than `if (SCL_BUILD_VARIANT)`: CMake's if() treats
-# "0"/"OFF"/"NO" as false too, which would silently drop a variant tag
-# literally named that.
+# STREQUAL "": if() reads "0", "OFF" and "NO" as false and would drop such a tag.
 if (NOT SCL_BUILD_VARIANT STREQUAL "")
     string(APPEND _scl_toolchain "-${SCL_BUILD_VARIANT}")
 endif()
-# FORCE: reconfiguring an existing tree with a different compiler, arch, or
-# option set must update the triplet — a plain CACHE set is a no-op once
-# the cache entry already exists, silently keeping the stale directory layout.
+# FORCE: a plain CACHE set is a no-op once the entry exists, keeping a stale tag.
 set(SCL_TOOLCHAIN "${_scl_toolchain}" CACHE STRING "Toolchain triplet used for output directory layout" FORCE)
 
 set(SCL_TARGET_BASE_DIR "${PROJECT_SOURCE_DIR}/bin/${SCL_TOOLCHAIN}" CACHE PATH "Base dir for target outputs" FORCE)
 
-# Plain directory-scoped variables, applied only when scl-kit is the top-level
-# project: an embedding consumer keeps its own output layout and cache.
+# Top level only: an embedding consumer keeps its own output layout.
 if (PROJECT_IS_TOP_LEVEL)
     if (DEFINED CMAKE_BUILD_TYPE AND NOT CMAKE_BUILD_TYPE STREQUAL "")
         set(_cfg "${CMAKE_BUILD_TYPE}")
@@ -146,12 +111,10 @@ if (PROJECT_IS_TOP_LEVEL)
         set(_cfg "Debug")
     endif()
 
-    # Single-config generators
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${SCL_TARGET_BASE_DIR}/${_cfg}")
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${SCL_TARGET_BASE_DIR}/${_cfg}")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${SCL_TARGET_BASE_DIR}/${_cfg}")
 
-    # Multi-config generators
     foreach(conf IN ITEMS Debug Release RelWithDebInfo MinSizeRel)
         string(TOUPPER "${conf}" CONFU)
         set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${CONFU} "${SCL_TARGET_BASE_DIR}/${conf}")
@@ -160,14 +123,8 @@ if (PROJECT_IS_TOP_LEVEL)
     endforeach()
 endif()
 
-# -----------------------------
-# Mirror compile_commands.json to the source root for clangd
-# -----------------------------
-# CMAKE_EXPORT_COMPILE_COMMANDS writes into build/<toolchain>/, but clangd (and
-# IDE shadow builds) only search the source tree. Only for the top-level
-# project: an embedding consumer's own tree is not touched. A no-op (not an
-# error) on generators that don't produce compile_commands.json at all, e.g.
-# Visual Studio (msvc-* presets) — see MirrorCompileCommands.cmake.
+# clangd searches the source tree, which CMAKE_EXPORT_COMPILE_COMMANDS does not
+# write to. A no-op where the generator produces no database at all.
 if (PROJECT_IS_TOP_LEVEL)
     add_custom_target(mirror_compile_commands ALL
         COMMAND ${CMAKE_COMMAND}
@@ -179,25 +136,15 @@ if (PROJECT_IS_TOP_LEVEL)
     )
 endif()
 
-# -----------------------------
-# CTest in root so subdirs can register tests
-# -----------------------------
 if (SCL_BUILD_TESTS)
     include(CTest)
 endif()
 
-# -----------------------------
-# Central project logic (routes to modules/examples/tests)
-# -----------------------------
 add_subdirectory(project/cmake)
 
-# -----------------------------
-# Install / Export package
-# -----------------------------
 if (SCL_INSTALL)
     include(CMakePackageConfigHelpers)
 
-    # Install the HEADERS file sets from the interface targets into include/
     foreach(_module IN LISTS SCL_MODULES)
         install(TARGETS scl-${_module}
             EXPORT sclTargets
@@ -205,15 +152,12 @@ if (SCL_INSTALL)
         )
     endforeach()
 
-    # Exported targets with namespace scl::
     install(EXPORT sclTargets
         NAMESPACE scl::
         DESTINATION lib/cmake/scl
     )
 
-    # Package config files. Lowercase "scl" so that the documented
-    # find_package(scl ...) resolves sclConfig.cmake on case-sensitive
-    # filesystems too.
+    # Lowercase "scl": find_package(scl) must resolve on a case-sensitive filesystem.
     configure_package_config_file(
         ${SCL_ROOT_DIR}/project/cmake/SCLConfig.cmake.in
         ${CMAKE_CURRENT_BINARY_DIR}/sclConfig.cmake

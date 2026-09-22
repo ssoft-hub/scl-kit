@@ -1,5 +1,4 @@
-# The full matrix runs in .github/workflows/build.yml, which every branch reaches
-# through a push mirror configured on the project rather than through a job here.
+# The full matrix runs on GitHub, which every branch reaches through a push mirror.
 workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -39,11 +38,7 @@ build:gcc-x64:
     - script/ci/build.sh gcc-x64 Release
     - script/ci/run_tests.sh gcc-x64 Release
 
-# ---------------------
-# Release
-# ---------------------
-# Header-only toolkit: nothing to build for a release, just publish a GitLab
-# Release with the CHANGELOG.md section for this tag as its description.
+# Header-only: a release publishes the CHANGELOG.md section, there is no artifact.
 release:
   stage: release
   image: alpine:latest

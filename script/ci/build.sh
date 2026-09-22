@@ -1,35 +1,9 @@
 #!/usr/bin/env sh
-# Configure and build the ScL Toolkit through a CMake preset.
+# Usage: script/ci/build.sh [PRESET] [CONFIG] [--no-rtti|--no-exceptions|--benchmarks]
+#        [extra configure args...]
 #
-# Delegating to a preset means scripts and IDEs share the exact same build tree,
-# keyed by compiler + architecture: build/<preset>/ by default, and
-# build/<preset><variant>/ where a variant flag is given. The compiler version
-# and architecture appear on the artifacts under
-# bin/<OS>-<Compiler>.<Version>-<arch>/.
-#
-# Usage:
-#   script/ci/build.sh [PRESET] [CONFIG] [extra cmake configure args...]
-#
-#   PRESET   CMake configure/build preset  (default: default)
-#            e.g. default, clang-x64, gcc-x64, msvc-x64-2022, msvc-x86-2022,
-#                 clang-arm64 / gcc-arm64 (cross, need SCL_SYSROOT)
-#   CONFIG   build configuration (default: Debug). Multi-config presets pick
-#            it at build time; single-config presets (e.g. `default`) bake it
-#            in at configure time via CMAKE_BUILD_TYPE, so the requested
-#            CONFIG is honored either way. May be omitted even when passing
-#            extra args, since a "-..." argument is never mistaken for it.
-#   --no-rtti, --no-exceptions, --benchmarks select a build variant; each gets
-#            its own build tree and its own bin/ directory, so it never
-#            reconfigures the default build. See script/ci/variant.sh.
-#   Extra arguments are forwarded to the configure step, e.g.
-#            script/ci/build.sh gcc-arm64 -DSCL_SYSROOT=/opt/aarch64-sysroot
-#
-# Examples:
-#   script/ci/build.sh                    # default preset, Debug
-#   script/ci/build.sh clang-x64 Release
-#   script/ci/build.sh msvc-x64-2022 Debug
-#   script/ci/build.sh clang-x64 Release --no-rtti
-#   script/ci/build.sh clang-x64 Release --no-exceptions -DSCL_BUILD_TESTS=OFF
+# PRESET defaults to `default`, CONFIG to Debug. A variant flag builds in a tree
+# and a bin/ directory of its own; pass the same flags to every script in the run.
 
 set -eu
 
@@ -39,8 +13,7 @@ SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 PRESET="${1:-default}"
 [ $# -gt 0 ] && shift
 
-# A CONFIG name never starts with "-"; a leading "-" means the caller omitted
-# CONFIG and this is already an extra configure argument to forward as-is.
+# A CONFIG never starts with "-", so a leading "-" is already an extra argument.
 CONFIG="Debug"
 case "${1-}" in
     -*|"") ;;
