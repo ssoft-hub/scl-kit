@@ -123,6 +123,7 @@ at once.
 | `clang-x64` / `gcc-x64` | Windows, Linux | `build/{clang,gcc}-x64` | Native 64-bit |
 | `clang-x86` / `gcc-x86` | Windows, Linux | `build/{clang,gcc}-x86` | 32-bit; needs 32-bit libs/multilib |
 | `clang-arm64` / `gcc-arm64` | Windows, Linux | `build/{clang,gcc}-arm64` | Cross; need `-DSCL_SYSROOT=<path>` (build-only) |
+| `arm-none-eabi` | Linux, WSL | `build/arm-none-eabi` | Cross to bare metal, to measure code size; needs `gcc-arm-none-eabi`. Nothing here runs |
 | `msvc-x64-2022` / `msvc-x86-2022` | Windows | `build/msvc-{x64,x86}-2022` | Native, via Visual Studio 2022 |
 | `msvc-x64-2026` / `msvc-x86-2026` | Windows | `build/msvc-{x64,x86}-2026` | Native, via Visual Studio 2026 |
 | `msvc-arm64-2022` / `msvc-arm64-2026` | Windows | `build/msvc-arm64-{2022,2026}` | Cross on an x64 host (build-only) |
@@ -143,7 +144,57 @@ script/ci/build.sh clang-x64 Debug       # cmake --preset + --build --preset
 script/ci/run_tests.sh clang-x64 Debug   # ctest --preset
 ```
 
-Both default to the `default` preset when no argument is given.
+All the scripts default to the `default` preset when no argument is given.
+
+Benchmarks are off by default and have no preset of their own: every preset names a
+toolchain, and "build the benchmarks" is a separate axis, so the options go to whichever
+preset you want to measure. A benchmark is not a CTest test, so it has its own runner:
+
+```sh
+script/ci/build.sh clang-x64 Release -DSCL_BUILD_BENCHMARKS=ON -DSCL_BUILD_TESTS=OFF
+script/ci/run_benchmarks.sh clang-x64    # runs every *_gbench in the build tree
+```
+
+`run_benchmarks.sh` defaults to `Release` rather than `Debug`, and sets the repetition
+count for every suite it runs, so two runs are directly comparable — which is what a
+before/after figure quoted in an issue or MR has to be. Raise it with
+`SCL_BENCHMARK_REPETITIONS` when a case's coefficient of variation is too wide to resolve
+the difference being looked for. Every run is also written as JSON under
+`build/<preset>/benchmark-results/`; set `SCL_BENCHMARK_TAG` to keep one under its own
+name, so a pair survives switching branches:
+
+```sh
+SCL_BENCHMARK_TAG=before script/ci/run_benchmarks.sh clang-x64
+# ... change something, rebuild ...
+SCL_BENCHMARK_TAG=after  script/ci/run_benchmarks.sh clang-x64
+
+python 3rdparty/benchmark/tools/compare.py benchmarks \
+    build/clang-x64/benchmark-results/utility_hash_gbench-before.json \
+    build/clang-x64/benchmark-results/utility_hash_gbench-after.json
+```
+
+`compare.py` ships with Google Benchmark and reports the per-case difference with a
+significance test; it needs `numpy` and `scipy`. Without them the files are still plain
+JSON.
+
+On Windows with the MinGW GCC, a first configure that cannot run a compiled probe caches
+`HAVE_STD_REGEX:BOOL=FALSE`, and every later configure of that tree then fails with
+"Failed to determine the source files for the regular expression backend" from the bundled
+Google Benchmark. The probe result is cached, so fixing the environment alone changes
+nothing: delete the `HAVE_STD_REGEX`, `HAVE_GNU_POSIX_REGEX` and `HAVE_POSIX_REGEX` lines
+from `build/<preset>/CMakeCache.txt`, or the tree, and configure again with the compiler's
+runtime directory on `PATH`.
+
+The other half of a speed-for-size trade is measured on a bare-metal target. The
+`*_size` libraries are compiled to be measured and never linked or run, so they build
+where no startup code exists:
+
+```sh
+cmake --preset arm-none-eabi && cmake --build --preset arm-none-eabi
+script/ci/run_size.sh arm-none-eabi
+```
+
+The preset needs `gcc-arm-none-eabi` (`apt install gcc-arm-none-eabi`).
 
 Build artifacts are written under `bin/<toolchain-triplet>/` and are ignored by
 git. Useful CMake options:
@@ -152,8 +203,10 @@ git. Useful CMake options:
 |--------|---------|--------|
 | `SCL_BUILD_TESTS` | `ON` | Build and register the module tests |
 | `SCL_BUILD_EXAMPLES` | `ON` | Build the module examples |
+| `SCL_BUILD_BENCHMARKS` | `OFF` | Build the module benchmarks |
 | `SCL_INSTALL` | `ON` | Generate the install/export package (`find_package(scl)`) |
 | `SCL_ENABLE_GTEST` / `SCL_ENABLE_DOCTEST` / `SCL_ENABLE_CATCH2` | `ON` | Toggle a test framework |
+| `SCL_ENABLE_GBENCH` | `ON` | Toggle Google Benchmark |
 
 Consuming the installed package from another CMake project:
 

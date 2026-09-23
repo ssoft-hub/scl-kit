@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Fixed
+- The cached `HAVE_STD_REGEX` probe that keeps Google Benchmark from configuring
+  is documented.
 - Fixed the macOS CI job (`build`, GitHub Actions), which was failing on
   every push: the bundled Xcode clang crashes compiling an NTTP example,
   blocking everything after it in the build. The job now builds with a
@@ -24,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (override with `-C <config>` as before).
 
 ### Added
+- Google Benchmark under `3rdparty/benchmark`, behind `SCL_BUILD_BENCHMARKS`, off by
+  default.
+- An `arm-none-eabi` preset and toolchain file, cross-compiling to bare metal to
+  measure code size.
+- `script/ci/run_size.sh`, reporting the `.text` figure of a bare-metal build.
+- `script/ci/run_benchmarks.sh`, which fixes the repetition count and keeps each run
+  as JSON.
 - Project skeleton: README, license, contribution guide, changelog, baseline
   ignore rules, and `AGENTS.md` documenting repository layout, branching,
   commit format, and the issue/PR workflow for automated contributors.
