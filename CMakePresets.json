@@ -9,10 +9,7 @@
         {
             "name": "base",
             "hidden": true,
-            "binaryDir": "${sourceDir}/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
-            }
+            "binaryDir": "${sourceDir}/build/${presetName}$env{SCL_BUILD_SUFFIX}"
         },
         {
             "name": "base-not-darwin",
@@ -56,7 +53,7 @@
         {
             "name": "clang-x64",
             "displayName": "Clang (x64)",
-            "description": "Clang, native x86_64, Ninja Multi-Config. Build tree: build/clang-x64.",
+            "description": "Clang, native x86_64, Ninja Multi-Config.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -67,7 +64,7 @@
         {
             "name": "clang-arm64",
             "displayName": "Clang (arm64, cross)",
-            "description": "Clang cross-compile to aarch64. Requires -DSCL_SYSROOT=<path>. Build tree: build/clang-arm64.",
+            "description": "Clang cross-compile to aarch64. Requires -DSCL_SYSROOT=<path>.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/clang-generic.cmake",
@@ -80,7 +77,7 @@
         {
             "name": "clang-x86",
             "displayName": "Clang (x86, 32-bit)",
-            "description": "Clang, 32-bit (-m32). Requires 32-bit runtime/libs. Build tree: build/clang-x86.",
+            "description": "Clang, 32-bit (-m32). Requires 32-bit runtime/libs.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -95,7 +92,7 @@
         {
             "name": "gcc-x64",
             "displayName": "GCC (x64)",
-            "description": "GCC, native x86_64, Ninja Multi-Config. Build tree: build/gcc-x64.",
+            "description": "GCC, native x86_64, Ninja Multi-Config.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -106,7 +103,7 @@
         {
             "name": "gcc-arm64",
             "displayName": "GCC (arm64, cross)",
-            "description": "GCC cross-compile to aarch64. Requires -DSCL_SYSROOT=<path> (and an aarch64 toolchain). Build tree: build/gcc-arm64.",
+            "description": "GCC cross-compile to aarch64. Requires -DSCL_SYSROOT=<path> (and an aarch64 toolchain).",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/gcc-generic.cmake",
@@ -117,7 +114,7 @@
         {
             "name": "gcc-x86",
             "displayName": "GCC (x86, 32-bit)",
-            "description": "GCC, 32-bit (-m32). Requires gcc-multilib / 32-bit libs. Build tree: build/gcc-x86.",
+            "description": "GCC, 32-bit (-m32). Requires gcc-multilib / 32-bit libs.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -132,7 +129,7 @@
         {
             "name": "arm-none-eabi",
             "displayName": "GCC (arm-none-eabi, bare metal, size only)",
-            "description": "Cross-compile the freestanding groups for bare-metal ARM to measure code size. Nothing here runs: no tests, no examples, no install. Requires gcc-arm-none-eabi. Build tree: build/arm-none-eabi.",
+            "description": "Cross-compile the freestanding groups for bare-metal ARM to measure code size. Nothing here runs: no tests, no examples, no install. Requires gcc-arm-none-eabi.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/arm-none-eabi.cmake",
@@ -142,6 +139,8 @@
                 "SCL_BUILD_EXAMPLES": "OFF",
                 "SCL_BUILD_BENCHMARKS": "ON",
                 "SCL_ENABLE_GBENCH": "OFF",
+                "SCL_ENABLE_RTTI": "OFF",
+                "SCL_ENABLE_EXCEPTIONS": "OFF",
                 "SCL_INSTALL": "OFF"
             }
         },
@@ -168,7 +167,7 @@
         {
             "name": "msvc-x64-2022",
             "displayName": "MSVC 2022 (x64)",
-            "description": "MSVC, native x64, Visual Studio 17 2022. Build tree: build/msvc-x64-2022.",
+            "description": "MSVC, native x64, Visual Studio 17 2022.",
             "inherits": "msvc-2022",
             "architecture": {
                 "value": "x64"
@@ -177,7 +176,7 @@
         {
             "name": "msvc-x64-2026",
             "displayName": "MSVC 2026 (x64)",
-            "description": "MSVC, native x64, Visual Studio 18 2026. Build tree: build/msvc-x64-2026.",
+            "description": "MSVC, native x64, Visual Studio 18 2026.",
             "inherits": "msvc-2026",
             "architecture": {
                 "value": "x64"
@@ -186,7 +185,7 @@
         {
             "name": "msvc-x86-2022",
             "displayName": "MSVC 2022 (x86)",
-            "description": "MSVC, 32-bit x86, Visual Studio 17 2022. Build tree: build/msvc-x86-2022.",
+            "description": "MSVC, 32-bit x86, Visual Studio 17 2022.",
             "inherits": "msvc-2022",
             "architecture": {
                 "value": "Win32"
@@ -195,7 +194,7 @@
         {
             "name": "msvc-x86-2026",
             "displayName": "MSVC 2026 (x86)",
-            "description": "MSVC, 32-bit x86, Visual Studio 18 2026. Build tree: build/msvc-x86-2026.",
+            "description": "MSVC, 32-bit x86, Visual Studio 18 2026.",
             "inherits": "msvc-2026",
             "architecture": {
                 "value": "Win32"
@@ -204,7 +203,7 @@
         {
             "name": "msvc-arm64-2022",
             "displayName": "MSVC 2022 (arm64)",
-            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 17 2022. Build tree: build/msvc-arm64-2022.",
+            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 17 2022.",
             "inherits": "msvc-2022",
             "architecture": {
                 "value": "ARM64"
@@ -213,7 +212,7 @@
         {
             "name": "msvc-arm64-2026",
             "displayName": "MSVC 2026 (arm64)",
-            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 18 2026. Build tree: build/msvc-arm64-2026.",
+            "description": "MSVC, ARM64 (cross on an x64 host), Visual Studio 18 2026.",
             "inherits": "msvc-2026",
             "architecture": {
                 "value": "ARM64"
@@ -222,7 +221,7 @@
         {
             "name": "macos-arm64",
             "displayName": "macOS (Apple Silicon, arm64)",
-            "description": "AppleClang, arm64, Ninja Multi-Config. Build tree: build/macos-arm64.",
+            "description": "AppleClang, arm64, Ninja Multi-Config.",
             "inherits": "base-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -232,7 +231,7 @@
         {
             "name": "macos-x64",
             "displayName": "macOS (Intel, x86_64)",
-            "description": "AppleClang, x86_64, Ninja Multi-Config. Build tree: build/macos-x64.",
+            "description": "AppleClang, x86_64, Ninja Multi-Config.",
             "inherits": "base-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -242,7 +241,7 @@
         {
             "name": "macos-universal",
             "displayName": "macOS (universal arm64 + x86_64)",
-            "description": "AppleClang, universal binary, Ninja Multi-Config. Build tree: build/macos-universal.",
+            "description": "AppleClang, universal binary, Ninja Multi-Config.",
             "inherits": "base-darwin",
             "generator": "Ninja Multi-Config",
             "cacheVariables": {
@@ -252,7 +251,7 @@
         {
             "name": "osxcross-arm64",
             "displayName": "macOS (arm64, osxcross cross-compile)",
-            "description": "Cross-compile for Darwin arm64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only: the binary can't run on the build host. Build tree: build/osxcross-arm64.",
+            "description": "Cross-compile for Darwin arm64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only: the binary can't run on the build host.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",
@@ -263,7 +262,7 @@
         {
             "name": "osxcross-x64",
             "displayName": "macOS (x86_64, osxcross cross-compile)",
-            "description": "Cross-compile for Darwin x86_64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only. Build tree: build/osxcross-x64.",
+            "description": "Cross-compile for Darwin x86_64 via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",
@@ -274,7 +273,7 @@
         {
             "name": "osxcross-universal",
             "displayName": "macOS (universal arm64 + x86_64, osxcross cross-compile)",
-            "description": "Cross-compile a fat Darwin binary via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only. Build tree: build/osxcross-universal.",
+            "description": "Cross-compile a fat Darwin binary via osxcross from a non-Darwin host. Requires osxcross-conf and the <triple>-clang tools on PATH (osxcross target/bin). Build-only.",
             "inherits": "base-not-darwin",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/project/cmake/toolchain/osxcross.cmake",

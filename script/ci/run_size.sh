@@ -1,19 +1,21 @@
 #!/usr/bin/env sh
-# Usage: script/ci/run_size.sh [PRESET] [CONFIG]
+# Usage: script/ci/run_size.sh [PRESET] [CONFIG] --benchmarks
 #
-# Reports the .text of every *_size library in a build tree. Those libraries are
-# compiled to be measured and never linked, so nothing else drives them. CONFIG
-# defaults to MinSizeRel.
+# Reports the .text of every *_size library in the tree script/ci/build.sh
+# --benchmarks populated. Those libraries are compiled to be measured and never
+# linked, so nothing else drives them.
 
 set -eu
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+. "${SCRIPT_DIR}/variant.sh"
 
 PRESET="${1:-default}"
 CONFIG="${2:-MinSizeRel}"
 
-SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 cd "${SCRIPT_DIR}/../.."
 
-CACHE="build/${PRESET}/CMakeCache.txt"
+CACHE="build/${PRESET}${SCL_BUILD_SUFFIX}/CMakeCache.txt"
 if [ ! -f "${CACHE}" ]; then
     echo "run_size.sh: no build tree for preset '${PRESET}'." >&2
     echo "  cmake --preset ${PRESET} && cmake --build --preset ${PRESET}" >&2
@@ -41,6 +43,6 @@ done
 # An empty run means benchmarks were off, which is the default; do not pass.
 if [ "${FOUND}" -eq 0 ]; then
     echo "run_size.sh: no *_size library in '${BIN_DIR}'." >&2
-    echo "  configure with -DSCL_BUILD_BENCHMARKS=ON and rebuild" >&2
+    echo "  build with --benchmarks and run this again" >&2
     exit 1
 fi

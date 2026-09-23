@@ -1,5 +1,4 @@
-# The full matrix runs in .github/workflows/build.yml, which every branch reaches
-# through a push mirror configured on the project rather than through a job here.
+# The full matrix runs on GitHub, which every branch reaches through a push mirror.
 workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -21,14 +20,14 @@ stages: [build, release]
 
 build:clang-x64:
   extends: .build_job
-  # Ubuntu's default clang crashes instantiating module/feature's
-  # detection-idiom templates.
-  image: silkeh/clang:21
+  # A published release rather than the base image's default, so a raised image
+  # cannot move the compiler under the job.
+  image: silkeh/clang:22
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build git
   script:
-    - script/ci/build.sh clang-x64 Debug
-    - script/ci/run_tests.sh clang-x64 Debug
+    - script/ci/build.sh clang-x64 Release
+    - script/ci/run_tests.sh clang-x64 Release
 
 build:gcc-x64:
   extends: .build_job
@@ -36,14 +35,10 @@ build:gcc-x64:
   before_script:
     - apt-get update -qq && apt-get install -y -qq cmake ninja-build g++ git
   script:
-    - script/ci/build.sh gcc-x64 Debug
-    - script/ci/run_tests.sh gcc-x64 Debug
+    - script/ci/build.sh gcc-x64 Release
+    - script/ci/run_tests.sh gcc-x64 Release
 
-# ---------------------
-# Release
-# ---------------------
-# Header-only toolkit: nothing to build for a release, just publish a GitLab
-# Release with the CHANGELOG.md section for this tag as its description.
+# Header-only: a release publishes the CHANGELOG.md section, there is no artifact.
 release:
   stage: release
   image: alpine:latest
